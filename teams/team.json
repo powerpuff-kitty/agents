@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "id": "team",
+  "title": "General task team",
+  "description": "Select relevant available specialists for any scoped task: research, review, implementation, or explicitly authorized actions.",
+  "coordinator": "team-lead",
+  "intent": "Complete the user's actual task using the smallest useful specialist team. These are conditional candidates, not an all-agent run. Infer action boundaries from the request and existing authorization; selecting this preset alone does not authorize source changes or external actions.",
+  "mode": "adaptive",
+  "max_parallel": 3,
+  "stages": [
+    {
+      "id": "context",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "researcher",
+          "task": "Gather cited current sources and compare options against the project decision criteria. Return an evidence packet for later validation.",
+          "when": "The task needs external research, current or niche facts, a technology/product/market comparison, or source discovery."
+        },
+        {
+          "agent": "project-auditor",
+          "task": "Map accepted requirements, actual implementation states, relevant gates, and evidence gaps without updating trackers.",
+          "when": "The task asks about scope, progress, readiness, or a broad project review."
+        },
+        {
+          "agent": "system-architect",
+          "task": "Review structural options, contracts, ownership, failure paths, and consequential trade-offs.",
+          "when": "The task asks for architecture or changes public contracts, persistence, or system boundaries."
+        },
+        {
+          "agent": "designer",
+          "task": "Assess project/product fit, flows, design-system conformance, UI states, contrast, spacing, and accessible interactions.",
+          "when": "The task asks for design or changes a user-facing interface."
+        },
+        {
+          "agent": "quality-engineer",
+          "task": "Review existing correctness and test evidence without editing; identify meaningful checks for the requested task.",
+          "when": "The task requests a correctness/test audit or needs a defect reproduced before implementation."
+        },
+        {
+          "agent": "security-auditor",
+          "task": "Review relevant trust boundaries, reachable weaknesses, and secure requirements using scoped evidence.",
+          "when": "The task requests security review or concerns sensitive data, authorization, tenancy, or untrusted inputs."
+        },
+        {
+          "agent": "performance-engineer",
+          "task": "Inspect existing measurements, reproduce scoped bottlenecks where authorized, and establish comparable budgets.",
+          "when": "The task asks about performance, resource cost, or an optimization that needs baseline evidence."
+        },
+        {
+          "agent": "evidence-validator",
+          "task": "Independently check existing claims, calculations, datasets, and provenance. Do not validate unfinished results from parallel research.",
+          "when": "The task primarily questions existing evidence, factual claims, or calculations."
+        },
+        {
+          "agent": "release-engineer",
+          "task": "Establish release gates, artifact scope, compatibility, rollback, and action boundaries without publishing.",
+          "when": "The task concerns a release, artifacts, deployment readiness, or recovery."
+        }
+      ]
+    },
+    {
+      "id": "implement",
+      "execution": "exclusive-write",
+      "assignments": [
+        {
+          "agent": "feature-developer",
+          "task": "Implement requested code/configuration/test/documentation changes, preserve user edits, and run applicable checks. Use prior specialist findings; keep unrequested external operations out of this stage.",
+          "when": "The user requests implementation, fixes, refactoring, or a saved non-release artifact; research or review alone does not satisfy this condition."
+        }
+      ]
+    },
+    {
+      "id": "prepare-release",
+      "execution": "exclusive-write",
+      "assignments": [
+        {
+          "agent": "release-engineer",
+          "task": "Prepare the explicitly requested version/changelog/artifacts and run release checks after any implementation writer has finished. Do not tag, publish, or deploy in this stage.",
+          "when": "The user explicitly requests release preparation or execution requiring release artifact changes."
+        }
+      ]
+    },
+    {
+      "id": "verify",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "quality-engineer",
+          "task": "Independently review the completed changed snapshot and actual correctness/regression checks without editing.",
+          "when": "Meaningful code or release-artifact changes need verification, or the user requests an independent quality check."
+        },
+        {
+          "agent": "designer",
+          "task": "Review the completed UI snapshot against accepted flows, system components, states, and accessibility evidence.",
+          "when": "Implementation changed a user-facing interface and a design check is relevant."
+        },
+        {
+          "agent": "security-auditor",
+          "task": "Review completed changes at affected trust/data boundaries.",
+          "when": "Implementation changed security-sensitive boundaries or controls."
+        },
+        {
+          "agent": "performance-engineer",
+          "task": "Verify performance claims or budgets against comparable baseline evidence.",
+          "when": "Implementation changes a measured hot path or claims an optimization/budget outcome."
+        },
+        {
+          "agent": "evidence-validator",
+          "task": "Check material research conclusions, citations, calculations, or public claims after the evidence packet or changed artifact is complete.",
+          "when": "New material factual, comparative, quantitative, or provenance claims affect the requested decision or deliverable."
+        },
+        {
+          "agent": "release-engineer",
+          "task": "Reconcile artifact/check evidence and readiness gates before any authorized release action.",
+          "when": "A release was prepared or the task requests readiness assessment or execution."
+        }
+      ]
+    },
+    {
+      "id": "requested-actions",
+      "execution": "serial-action",
+      "assignments": [
+        {
+          "agent": "feature-developer",
+          "task": "Perform only explicitly requested commit or push operations for verified changes, respecting repository instructions and checking resulting state.",
+          "when": "The user explicitly authorizes the specified commit/push and its prerequisite checks are complete."
+        },
+        {
+          "agent": "release-engineer",
+          "task": "Execute only explicitly authorized tagging, publication, or deployment after required readiness gates pass; verify actual external state and recovery information.",
+          "when": "The user explicitly authorizes the specific release operation, target, and scope, and its prerequisites are verified."
+        },
+        {
+          "agent": "project-auditor",
+          "task": "Update only explicitly authorized tracker entries backed by completed acceptance evidence; verify saved state.",
+          "when": "The user explicitly authorizes the specific tracker update and its completion evidence is available."
+        }
+      ]
+    }
+  ],
+  "completion": [
+    "The requested research answer, review, implementation, or authorized action is complete with actual evidence; irrelevant stages are skipped.",
+    "Selected specialists are available and scoped; additional project specialists honor the same limits and action boundaries.",
+    "New research is validated after gathering, changed source is checked after writing, and dependent actions wait for verified prerequisites.",
+    "Applicable findings and contradictions are reconciled; unfinished, failed, or unavailable checks remain explicit.",
+    "Report a concise result, selected roles, material changes/checks, and unresolved gaps without claiming every candidate ran."
+  ]
+}

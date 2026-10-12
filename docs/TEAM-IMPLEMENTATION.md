@@ -2,7 +2,7 @@
 
 On 12 October 2026 the suite gained a portable team-lead profile and four canonical
 team presets: project audit, feature delivery, UI review, and release readiness.
-There are now ten profiles, four team briefs/slash commands, and 31 behavioral
+At that point there were ten profiles, four team briefs/slash commands, and 31 behavioral
 acceptance specifications.
 
 ## Implemented behavior
@@ -57,3 +57,36 @@ The command registry exposes names/descriptions, not its complete resolved templ
 Template/coordinator/parent mapping is checked in generated files against the
 published host schema; registration proves discovery rather than full execution.
 Use [team usage](TEAMS.md) for invocation and expected workflow behavior.
+
+## Research and general routing addition
+
+Later on 12 October 2026 the suite gained the portable researcher role, the
+research preset, and the adaptive general preset. The current suite has eleven
+profiles, six team briefs/commands, and 37 unrun behavioral specifications.
+Team-lead now includes task-based role selection and discovery of relevant
+available project specialists. The general roster is conditional, and the research
+workflow gathers evidence before independent claim/domain checks. The broad audit
+can request source research before its domain reviews.
+
+The team schema accepts adaptive mode and serial-action stages. Review presets
+reject writer/action stages; exclusive writers remain single-owner, and adaptive
+mutations cannot declare unconditional applicability. These checks validate prompt
+contracts, not runtime authorization or scheduling enforcement.
+
+Verification completed:
+
+- Source validation passed for eleven profiles, six teams, and 37 specifications.
+- Both adapters built and generated-content drift checks passed.
+- All eighteen regression tests passed, including adaptive mutation conditions,
+  review-action rejection, recursive-assignment rejection, candidate coverage, and
+  gather-before-validation stage ordering.
+- The global installation added researcher, `/team`, and `/team-research`, and
+  updated team-lead and `/team-audit`. Existing changed files were backed up;
+  unrelated profiles/commands and other specialist profiles were preserved.
+- Configuration reload succeeded. OpenCode 2.0.27 loaded every complete profile
+  prompt, description, and mode, and its project-scoped registry exposed all six
+  command names/descriptions in this repository and Patchmancer.
+
+No command was executed as a model workflow during these checks. All 37 scenarios
+remain `not_run`; observed selective routing and research quality still require
+retained evaluated sessions.

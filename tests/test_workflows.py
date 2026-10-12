@@ -40,7 +40,7 @@ class WorkflowTests(unittest.TestCase):
             result = run("install.py", "--target", target, "--dry-run")
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertFalse(target.exists())
-            self.assertEqual(len(json.loads(result.stdout)["changed"]), 14)
+            self.assertEqual(len(json.loads(result.stdout)["changed"]), 17)
             self.assertFalse((Path(temporary) / "commands").exists())
 
     def test_install_preserves_other_profiles_and_is_idempotent(self):
@@ -96,7 +96,7 @@ class WorkflowTests(unittest.TestCase):
             result = run("build.py", "--adapter", "portable", "--output", output)
             self.assertEqual(result.returncode, 0, result.stderr)
             files = list((output / "agents").glob("*.md"))
-            self.assertEqual(len(files), 10)
+            self.assertEqual(len(files), 11)
             for path in files:
                 body = path.read_text()
                 self.assertEqual(body.count("## Operating contract"), 1)
@@ -142,7 +142,7 @@ class WorkflowTests(unittest.TestCase):
             result = run("build.py", "--adapter", "opencode", "--output", output)
             self.assertEqual(result.returncode, 0, result.stderr)
             commands = list((output / "commands").glob("*.md"))
-            self.assertEqual(len(commands), 4)
+            self.assertEqual(len(commands), 6)
             for command in commands:
                 front, body = command.read_text()[4:].split("\n---\n", 1)
                 self.assertIn("agent: team-lead", front.splitlines())
@@ -180,7 +180,7 @@ class WorkflowTests(unittest.TestCase):
             base = Path(temporary)
             result = run("install.py", "--target", base / "profiles", "--agents-only")
             self.assertEqual(result.returncode, 0, result.stderr)
-            self.assertEqual(len(json.loads(result.stdout)["changed"]), 10)
+            self.assertEqual(len(json.loads(result.stdout)["changed"]), 11)
             self.assertFalse((base / "commands").exists())
 
     def test_nested_profile_and_command_destinations_are_rejected(self):
@@ -206,7 +206,7 @@ class WorkflowTests(unittest.TestCase):
             wrong_mode = json.loads(json.dumps(original))
             wrong_mode["mode"] = "review"
             path.write_text(json.dumps(wrong_mode))
-            with patch.object(build, "ROOT", root), self.assertRaisesRegex(ValueError, "Writing requires delivery"):
+            with patch.object(build, "ROOT", root), self.assertRaisesRegex(ValueError, "Writing requires delivery or adaptive"):
                 build.load_teams(agents)
             two_writers = json.loads(json.dumps(original))
             two_writers["stages"][1]["assignments"].append(two_writers["stages"][1]["assignments"][0])
@@ -220,13 +220,61 @@ class WorkflowTests(unittest.TestCase):
             result = run("build.py", "--adapter", "portable", "--output", output)
             self.assertEqual(result.returncode, 0, result.stderr)
             teams = list((output / "teams").glob("*.md"))
-            self.assertEqual(len(teams), 4)
+            self.assertEqual(len(teams), 6)
             for team in teams:
                 body = team.read_text()
                 self.assertNotIn("OpenCode", body)
                 self.assertNotIn("$ARGUMENTS", body)
                 self.assertNotIn("subagent: false", body)
                 self.assertIn("Completion evidence", body)
+
+    def test_adaptive_team_mutations_are_conditional_and_review_actions_rejected(self):
+        agents, _ = build.load_agents()
+        original = json.loads((ROOT / "teams/team.json").read_text())
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / "teams").mkdir()
+            path = root / "teams/team.json"
+            path.write_text(json.dumps(original))
+            with patch.object(build, "ROOT", root):
+                teams, _ = build.load_teams(agents)
+            self.assertIn("candidate roster", teams[0]["instructions"])
+            self.assertIn("user's actual request and existing authorization", teams[0]["instructions"])
+            for index, stage in enumerate(original["stages"]):
+                if stage["execution"] not in {"exclusive-write", "serial-action"}:
+                    continue
+                with self.subTest(stage=stage["id"]):
+                    invalid = json.loads(json.dumps(original))
+                    invalid["stages"][index]["assignments"][0]["when"] = " ALWAYS "
+                    path.write_text(json.dumps(invalid))
+                    with patch.object(build, "ROOT", root), self.assertRaisesRegex(ValueError, "task authorization condition"):
+                        build.load_teams(agents)
+            invalid = json.loads(json.dumps(original))
+            invalid["mode"] = "review"
+            invalid["stages"] = [original["stages"][-1]]
+            path.write_text(json.dumps(invalid))
+            with patch.object(build, "ROOT", root), self.assertRaisesRegex(ValueError, "Actions require delivery or adaptive"):
+                build.load_teams(agents)
+            invalid = json.loads(json.dumps(original))
+            invalid["stages"][-1]["assignments"][0]["agent"] = original["coordinator"]
+            path.write_text(json.dumps(invalid))
+            with patch.object(build, "ROOT", root), self.assertRaisesRegex(ValueError, "Unknown or recursive"):
+                build.load_teams(agents)
+
+    def test_general_routing_and_research_evidence_dependencies(self):
+        agents, _ = build.load_agents()
+        teams, _ = build.load_teams(agents)
+        metadata = {team["metadata"]["id"]: team["metadata"] for team in teams}
+        general = metadata["team"]
+        candidates = {a["agent"] for stage in general["stages"] for a in stage["assignments"]}
+        self.assertEqual(candidates, {a["metadata"]["id"] for a in agents} - {"team-lead"})
+        self.assertTrue(all(a["when"] != "always" for stage in general["stages"] for a in stage["assignments"]))
+        research = metadata["team-research"]
+        self.assertEqual(research["mode"], "review")
+        self.assertEqual(research["stages"][0]["execution"], "serial-review")
+        self.assertEqual([a["agent"] for a in research["stages"][0]["assignments"]], ["researcher"])
+        self.assertEqual(research["stages"][1]["assignments"][0]["agent"], "evidence-validator")
+        self.assertTrue(all(stage["execution"] in {"serial-review", "parallel-review"} for stage in research["stages"]))
 
     def test_command_validation_queries_current_project_and_rejects_other_location(self):
         agents, _ = build.load_agents()

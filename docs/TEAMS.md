@@ -7,16 +7,49 @@ These are reusable workflow instructions, not a new runtime or a multi-select UI
 
 | Command | Default intent | Workflow |
 | --- | --- | --- |
-| `/team-audit <scope>` | Review only | Project-auditor scopes accepted work, then all eight other specialists review bounded domains; team-lead consolidates all nine results |
+| `/team <task>` | Derived from the request | Select the smallest useful set of available specialists, with conditional research/review, serialized implementation, verification, and explicitly authorized actions |
+| `/team-research <question>` | Research/review only | Researcher gathers cited evidence, then evidence-validator and applicable domain specialists assess it; team-lead reconciles the answer |
+| `/team-audit <scope>` | Review only | Project-auditor scopes accepted work, researcher gathers references when needed, then eight core specialists review bounded domains; team-lead consolidates results |
 | `/team-feature <feature>` | Implement the described feature | Applicable architecture/design framing, one feature-developer source writer, then independent quality and relevant conditional reviews |
 | `/team-ui <screens or journey>` | Review only | Designer establishes representative coverage, followed by quality/evidence checks and performance review when relevant |
 | `/team-release <target>` | Readiness review | Release-engineer establishes gates, specialists assess applicable evidence, and release-engineer reconciles the readiness matrix |
 
-The audit preset is the explicit all-specialists entry point. Every assignment
+The audit preset is the broad core-specialist entry point. Every applicable assignment
 must produce an actual result or an explicit failed/blocked state. Other presets
 explain conditional inclusions and skips instead of invoking every role for every
 small task. If scope is empty, a clear current task can supply it; otherwise the
 coordinator asks only for the missing critical input.
+
+## General and research teams
+
+Use `/team` when the work does not fit a fixed preset. Team-lead inspects available
+role descriptions and project context, selects relevant specialists, and explains
+the brief plan. It can use additional registered project specialists within the
+same scope and limits; it cannot invent roles or recursively invoke other teams.
+A small task can use one specialist or feasible coordinator checks.
+
+The general preset's roster is conditional. Research goes to researcher, claim
+checking to evidence-validator, structural decisions to system-architect, UI work
+to designer, implementation to feature-developer, correctness to quality-engineer,
+security to security-auditor, profiling to performance-engineer, scope/progress to
+project-auditor, and release work to release-engineer. Irrelevant assignments and
+empty stages are skipped. This is model-interpreted routing, not a classifier.
+
+The request determines whether source changes are authorized. A research or audit
+question does not become an implementation task merely because a writer is listed.
+Requested changes run with one source writer at a time, then applicable checks.
+Requested release preparation has a separate serialized writer stage; explicitly
+authorized commit/push, release operations, and tracker updates occur sequentially
+after their prerequisites pass. Existing authorization persists.
+
+Use `/team-research` for technical comparisons, product/market questions, data
+research, or decision evidence. It first gathers an evidence packet, then checks
+citations, freshness, calculations, uncertainty, and relevant domain implications.
+Domain review is conditional. Researcher is one broad role, complemented by existing
+specialists rather than duplicated into narrow research profiles. Browsing and
+source access depend on the host; unavailable evidence stays explicit. Research
+answers distinguish facts, vendor assertions, observations, and inference, and
+do not authorize implementation or vendor contact by default.
 
 ## Coordination rules
 
@@ -49,7 +82,7 @@ python3 scripts/install.py --tool opencode
 python3 scripts/validate.py --opencode ~/.opencode/bin/opencode
 ```
 
-The installer writes ten profiles and four commands by default. Team-lead is a
+The installer writes eleven profiles and six commands by default. Team-lead is a
 primary profile, while specialists retain both primary and child eligibility.
 Command frontmatter selects team-lead and uses `subagent: false`, keeping the
 coordinator in the parent session so specialists can be its children. No selected
@@ -73,6 +106,6 @@ serially and must label them coordinator-performed rather than independent runs.
 The command registry verifies that the host discovers the slash commands; source
 and rendering tests verify their coordinator, scope placeholder, and parent-session
 mapping. No actual end-to-end model team run is established by these checks.
-The 31 behavioral scenarios remain unrun until evaluated sessions and artifacts
+The 37 behavioral scenarios remain unrun until evaluated sessions and artifacts
 are retained. Parallel limits and review-only rules are prompt contracts rather
 than runtime-enforced semaphores or read-only permissions.

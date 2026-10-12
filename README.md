@@ -1,6 +1,6 @@
 # Reusable agents
 
-Nine specialist profiles and a team lead share one operating contract. Portable role
+Ten specialist profiles and a team lead share one operating contract. Portable role
 instructions are the source of truth; adapters produce tool-specific versions.
 The repository currently supports plain Markdown bundles and OpenCode profiles.
 
@@ -15,6 +15,7 @@ The repository currently supports plain Markdown bundles and OpenCode profiles.
 | release-engineer | Prepare, review, or execute an authorized release |
 | performance-engineer | Profile cost and verify optimizations |
 | evidence-validator | Validate provenance, calculations, findings, and claims |
+| researcher | Gather cited sources and compare technical, product, market, or data options |
 | team-lead | Coordinate a requested team workflow and reconcile its evidence |
 
 These are instruction profiles. They use the host's selected model, available
@@ -85,21 +86,29 @@ Select a profile or ask OpenCode to use it for a concrete task, for example:
 Type these custom slash commands in OpenCode with the requested scope:
 
 ```text
+/team research alternatives for our current storage layer
+/team fix the settings keyboard navigation and verify it
+/team-research compare these libraries against our project constraints
 /team-audit review this project's readiness
 /team-feature add the described feature
 /team-ui review the dashboard and settings flow
 /team-release assess version 1.2.0 readiness
 ```
 
-Commands select team-lead in the current session. The audit preset includes all
-nine specialists; other presets select relevant and conditional assignments.
+Commands select team-lead in the current session. `/team` selects the smallest
+useful set of available specialists based on the actual task, including relevant
+project-specific roles. `/team-research` gathers sources, then independently checks
+claims and relevant domain implications. The audit preset includes nine core
+specialists plus research when needed; other presets use conditional assignments.
 They specify ordered stages, a requested maximum of three independent active
 assignments, serialized source writers, and consolidated evidence.
 
 These are instruction-based workflows using the host's delegation tools, not a
 separate deterministic scheduler. Review commands do not implicitly authorize
 source fixes, tracker changes, publication, or deployment. Feature delivery
-authorizes the described implementation. See [team behavior](docs/TEAMS.md).
+authorizes the described implementation. The general team derives action scope
+from the request and existing authorization; selecting it alone permits no source
+or external mutations. See [team behavior](docs/TEAMS.md).
 
 ## Use outside OpenCode
 
@@ -128,7 +137,7 @@ python3 -m unittest discover -s tests -v
 ```
 
 Source validation, deterministic rendering, installer tests, and actual host
-profile/command loading are distinct from model behavior. The 31 scenarios in
+profile/command loading are distinct from model behavior. The 37 scenarios in
 [evals](evals/README.md) remain `not_run` until an actual evaluated session is
 retained. Do not report passing instruction-file checks as agent reliability.
 

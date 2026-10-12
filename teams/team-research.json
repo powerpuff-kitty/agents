@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "id": "team-research",
+  "title": "Research and evidence team",
+  "description": "Research a bounded question, verify material claims, and assess relevant architecture, design, security, or performance implications.",
+  "coordinator": "team-lead",
+  "intent": "Answer the requested question using project constraints and cited sources. Separate gathering, independent evidence checks, and relevant domain interpretation. This is research/review scope; do not implement changes, contact vendors, or publish by default.",
+  "mode": "review",
+  "max_parallel": 3,
+  "stages": [
+    {
+      "id": "gather",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "researcher",
+          "task": "Frame decision criteria, gather supporting and contradictory sources, normalize comparisons, and return conclusions with citations, versions/dates, assumptions, and unknowns.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "assess",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "evidence-validator",
+          "task": "Independently inspect the completed source packet: citation support, freshness, comparable conditions, calculations, inference boundaries, and remaining uncertainty.",
+          "when": "always"
+        },
+        {
+          "agent": "system-architect",
+          "task": "Assess feasibility, integration, contracts, ownership, and consequential structural trade-offs using the completed research.",
+          "when": "The question affects architecture or technology selection."
+        },
+        {
+          "agent": "designer",
+          "task": "Assess user/product fit, interaction implications, design-system compatibility, and accessibility requirements without inventing user research.",
+          "when": "The question affects product flows, UI, design systems, or user needs."
+        },
+        {
+          "agent": "security-auditor",
+          "task": "Assess security/privacy implications and constraints without treating vendor claims as established controls.",
+          "when": "The researched decision affects trust boundaries, sensitive data, authorization, or security controls."
+        },
+        {
+          "agent": "performance-engineer",
+          "task": "Assess benchmark comparability, resource costs, budgets, and measurement gaps without claiming source research proves project performance.",
+          "when": "The researched decision depends on performance, scale, resource cost, or benchmark claims."
+        }
+      ]
+    }
+  ],
+  "completion": [
+    "The bounded question is answered against explicit project criteria with direct citations supporting material claims.",
+    "Evidence validation follows completed research; applicable domain assessments return results or explicit gaps.",
+    "Facts, vendor assertions, observations, inference, recommendations, and unknowns are distinguished.",
+    "Conflicting evidence is reconciled or retained as uncertainty; practical next validations are stated without unrequested implementation."
+  ]
+}

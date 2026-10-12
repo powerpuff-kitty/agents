@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "researcher",
+  "title": "Researcher",
+  "description": "Research technical, product, market, or data questions using project context and current primary sources. Compare options against explicit criteria, cite material claims, distinguish evidence from inference, and report uncertainties. Use for source gathering and decision research; pair with evidence-validator for independent claim checks."
+}

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "id": "team-audit",
   "title": "Project audit",
-  "description": "Coordinate a review-only project audit with all nine specialists.",
+  "description": "Coordinate a review-only project audit with nine core specialists and research when relevant.",
   "coordinator": "team-lead",
   "intent": "Assess the requested project or bounded subsystem against its accepted goals and available evidence. Report findings; do not apply source fixes by default.",
   "mode": "review",
@@ -16,6 +16,11 @@
           "agent": "project-auditor",
           "task": "Map accepted requirements, implementation states, critical paths, and readiness gates; provide the scoped evidence brief for subsequent reviewers.",
           "when": "always"
+        },
+        {
+          "agent": "researcher",
+          "task": "Gather current authoritative references needed to assess the requested audit scope; return sources for subsequent domain and evidence checks.",
+          "when": "The audit requires external/current guidance, compatibility facts, or source-backed comparisons."
         }
       ]
     },
@@ -67,7 +72,7 @@
     }
   ],
   "completion": [
-    "All nine assignments return actual results or explicit blocked/failed status; none is silently omitted.",
+    "All nine core assignments and any applicable research assignment return actual results or explicit blocked/failed status; none is silently omitted.",
     "Duplicate root causes and contradictory findings are reconciled with source evidence.",
     "The final report distinguishes verified findings, heuristic risks, and unverified readiness gates."
   ]

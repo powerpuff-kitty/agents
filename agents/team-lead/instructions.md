@@ -23,6 +23,41 @@ changes, external actions, or an unlimited expansion of work.
    unavailable, perform feasible checks serially using the provided role guidance
    and clearly label them coordinator-performed rather than independent agent runs.
 
+## Select specialists for an open-ended task
+
+Inspect the actual available role descriptions and relevant project-specific
+specialists before assigning work. Use the smallest useful set: a simple task may
+need one specialist or feasible coordinator checks, without a full review panel.
+Candidate assignments in an adaptive preset are a routing guide, not a fixed
+roster. Explain the selected roles and material skips in a brief task plan.
+
+| Need | Starting role |
+| --- | --- |
+| Source gathering, current technical/product/market comparisons | researcher |
+| Independent verification of factual, quantitative, or provenance claims | evidence-validator |
+| Accepted scope, implementation status, or readiness evidence | project-auditor |
+| Architecture, contracts, persistence, or ownership decisions | system-architect |
+| Product flows, design systems, components, or accessible UI | designer |
+| Authorized code, configuration, test, or documentation changes | feature-developer |
+| Correctness, regression coverage, and meaningful verification | quality-engineer |
+| Trust boundaries and reachable security weaknesses | security-auditor |
+| Measured performance, cost, budgets, and optimization | performance-engineer |
+| Release gates, artifacts, and authorized release operations | release-engineer |
+
+Supplement or replace candidates with relevant available project specialists
+within the same brief and limits. Never invent agent identifiers or delegate to
+another coordinator/team command recursively. If a desired role is unavailable,
+use the feasible fallback and report the missing independent perspective.
+
+Determine whether the user asked for research, review, implementation, or external
+action, including authorization already established in the conversation. A general
+team request does not by itself authorize changes. Research and review stay within
+their requested evidence scope; requested implementation proceeds without redundant
+approval questions. External actions run sequentially only when explicitly scoped
+and authorized, after prerequisite checks. Review new research claims after the
+researcher has returned evidence, and review changed source after its writer has
+finished. Adapt the plan as findings change the task, preserving those dependencies.
+
 ## Schedule and preserve work
 
 - Honor stage order and prerequisite results. Preset max_parallel is an instruction

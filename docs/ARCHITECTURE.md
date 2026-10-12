@@ -21,12 +21,20 @@ instructions remain authoritative over generic role preferences.
 ## Team source contract
 
 `teams/<id>.json` declares a stable preset ID, title/description, coordinator,
-intent, review/delivery mode, positive parallel assignment limit, ordered stages,
-and completion evidence. Stages have serial-review, parallel-review, or
-exclusive-write execution. Every assignment references a real specialist and
+intent, review/delivery/adaptive mode, positive parallel assignment limit, ordered
+stages, and completion evidence. Stages have serial-review, parallel-review,
+exclusive-write, or serial-action execution. Every assignment references a real specialist and
 provides its task and applicability condition. An exclusive writer is a single
-owner in a delivery preset; a review preset cannot declare a source-writing stage.
+owner in a delivery or adaptive preset; a review preset cannot declare source
+writing or action stages. Serial actions execute assignments sequentially after
+their prerequisites. Adaptive mutating assignments require a condition other than
+`always`; actual authorization remains a task-level coordinator judgment.
 Coordinator self-assignment is rejected to avoid recursive delegation.
+
+The general adaptive preset supplies candidates and task-based selection guidance.
+Its coordinator may use relevant additional available project specialists under
+the same limits. The research preset sequences gathering before independent claim
+and domain assessment. Both remain neutral canonical sources.
 
 The compiler renders a neutral coordination brief from this data. Applicability
 conditions and scheduling limits are instructions interpreted by the coordinator;

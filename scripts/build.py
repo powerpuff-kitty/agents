@@ -51,6 +51,15 @@ def render_team_prompt(team):
              "serialize source writers, and gather actual results before the final verdict.",
              "This preset requests scoped delegation; it does not authorize unrelated",
              "external actions or claim that any model has already run the workflow."]
+    if team["mode"] == "adaptive":
+        lines.extend(["", "This is a candidate roster, not a requirement to invoke every role.",
+                      "Derive research, review, implementation, and external-action scope from",
+                      "the user's actual request and existing authorization. Select the smallest",
+                      "useful set of available specialists; skip irrelevant assignments and empty",
+                      "stages. Additional available project specialists may replace or supplement",
+                      "candidates within the same scope, dependencies, and ownership rules.",
+                      "Mutation conditions require task authorization; serial-action assignments",
+                      "run one at a time and only after their prerequisites are verified."])
     for number, stage in enumerate(team["stages"], 1):
         lines.extend(["", f"## Stage {number}: {stage['id']}", "", f"Execution: {stage['execution']}"])
         for assignment in stage["assignments"]:
@@ -80,7 +89,7 @@ def load_teams(agents):
         if any(not isinstance(team[field], str) or not team[field].strip()
                for field in ("title", "description", "intent")):
             raise ValueError(f"Empty team text: {path.name}")
-        if team["coordinator"] not in names or team["mode"] not in {"review", "delivery"}:
+        if team["coordinator"] not in names or team["mode"] not in {"review", "delivery", "adaptive"}:
             raise ValueError(f"Invalid coordinator or mode: {path.name}")
         if type(team["max_parallel"]) is not int or not 1 <= team["max_parallel"] <= len(names):
             raise ValueError(f"Invalid parallel assignment limit: {path.name}")
@@ -93,13 +102,15 @@ def load_teams(agents):
             if not isinstance(stage["id"], str) or not ID.fullmatch(stage["id"]) or stage["id"] in stages:
                 raise ValueError(f"Invalid or duplicate stage: {path.name}")
             stages.add(stage["id"])
-            if stage["execution"] not in {"serial-review", "parallel-review", "exclusive-write"}:
+            if stage["execution"] not in {"serial-review", "parallel-review", "exclusive-write", "serial-action"}:
                 raise ValueError(f"Invalid stage execution: {path.name}")
             assignments = stage["assignments"]
             if not isinstance(assignments, list) or not assignments:
                 raise ValueError(f"Missing stage assignments: {path.name}")
-            if stage["execution"] == "exclusive-write" and (team["mode"] != "delivery" or len(assignments) != 1):
-                raise ValueError(f"Writing requires delivery mode and one owner: {path.name}")
+            if stage["execution"] == "exclusive-write" and (team["mode"] not in {"delivery", "adaptive"} or len(assignments) != 1):
+                raise ValueError(f"Writing requires delivery or adaptive mode and one owner: {path.name}")
+            if stage["execution"] == "serial-action" and team["mode"] == "review":
+                raise ValueError(f"Actions require delivery or adaptive mode: {path.name}")
             for assignment in assignments:
                 if set(assignment) != {"agent", "task", "when"}:
                     raise ValueError(f"Invalid assignment fields: {path.name}")
@@ -108,6 +119,9 @@ def load_teams(agents):
                 if any(not isinstance(assignment[field], str) or not assignment[field].strip()
                        for field in ("task", "when")):
                     raise ValueError(f"Empty assignment: {path.name}")
+                if (team["mode"] == "adaptive" and stage["execution"] in {"exclusive-write", "serial-action"}
+                        and assignment["when"].strip().lower() == "always"):
+                    raise ValueError(f"Adaptive mutations require a task authorization condition: {path.name}")
         if not isinstance(team["completion"], list) or not team["completion"] or any(
             not isinstance(item, str) or not item.strip() for item in team["completion"]
         ):
