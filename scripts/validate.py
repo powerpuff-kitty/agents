@@ -3,6 +3,7 @@
 import argparse
 from datetime import datetime, timezone
 import json
+from pathlib import Path
 import subprocess
 import sys
 import time
@@ -71,8 +72,13 @@ def validate(opencode=None):
                 raise ValueError(f"Loaded metadata drift: {name}")
         result["host_loading"] = "passed"
         for attempt in range(3):
-            output = subprocess.check_output([opencode, "api", "command.list"], text=True, timeout=30)
+            directory = str(Path.cwd().resolve())
+            output = subprocess.check_output(
+                [opencode, "api", "command.list", "--param", "location[directory]=" + directory],
+                text=True, timeout=30)
             registry = json.loads(output)
+            if registry.get("location", {}).get("directory") != directory:
+                raise ValueError("Command registry returned a different project location")
             commands = {command["name"]: command for command in registry["data"]}
             if team_names <= commands.keys() or attempt == 2:
                 break

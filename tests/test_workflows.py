@@ -9,6 +9,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import build
+import validate as validator
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -226,6 +227,44 @@ class WorkflowTests(unittest.TestCase):
                 self.assertNotIn("$ARGUMENTS", body)
                 self.assertNotIn("subagent: false", body)
                 self.assertIn("Completion evidence", body)
+
+    def test_command_validation_queries_current_project_and_rejects_other_location(self):
+        agents, _ = build.load_agents()
+        teams, _ = build.load_teams(agents)
+        profiles = build.compile_profiles("opencode")
+        config = json.loads((ROOT / "adapters/opencode/adapter.json").read_text())
+        host_agents = []
+        for agent in agents:
+            metadata = agent["metadata"]
+            body = profiles[f"agents/{metadata['id']}.md"][4:].split("\n---\n", 1)[1]
+            host_agents.append({"id": metadata["id"], "description": metadata["description"],
+                                "mode": config.get("mode_overrides", {}).get(metadata["id"], config["mode"]),
+                                "system": body})
+        current = str(Path.cwd().resolve())
+
+        def response(command, **kwargs):
+            if command[1:] == ["--version"]:
+                return "opencode v2.0.27"
+            if command[1:] == ["debug", "agents"]:
+                return json.dumps(host_agents)
+            self.assertEqual(command[1:], ["api", "command.list", "--param", "location[directory]=" + current])
+            return json.dumps({"location": {"directory": current},
+                               "data": [{"name": t["metadata"]["id"], "description": t["metadata"]["description"]} for t in teams]})
+
+        with patch.object(validator.subprocess, "check_output", side_effect=response):
+            self.assertEqual(validator.validate("fixture-host")["command_loading"], "passed")
+
+        def wrong_location(command, **kwargs):
+            result = response(command, **kwargs)
+            if "command.list" in command:
+                decoded = json.loads(result)
+                decoded["location"]["directory"] = "/another/project"
+                return json.dumps(decoded)
+            return result
+
+        with patch.object(validator.subprocess, "check_output", side_effect=wrong_location):
+            with self.assertRaisesRegex(ValueError, "different project location"):
+                validator.validate("fixture-host")
 
 
 if __name__ == "__main__":

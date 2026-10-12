@@ -28,14 +28,17 @@ existing nine specialist files, selected model, and global permissions were unch
 
 - Source validation passed for ten profiles, four teams, and 31 case specifications.
 - Both adapters built successfully and generated-output drift checks passed.
-- Fifteen regression tests passed, including parent coordinator mapping, one
+- Sixteen regression tests passed, including parent coordinator mapping, one
   argument placeholder per command, absence of pre-executed shell blocks,
   command conflict preflight, command edit/backup protection, agents-only install,
   unknown team members, invalid review writers, multiple source writers, and
   host-neutral portable briefs, non-overlapping install destinations, and the
-  existing build/installer checks.
+  project-scoped command registry validation, and existing build/installer checks.
 - OpenCode 2.0.27 loaded every full profile prompt, description, and intended mode.
-- The actual command registry exposed all four team command names/descriptions.
+- The project-scoped command registry exposed all four team names/descriptions
+  in the suite repository and two existing projects. Validation passes an explicit
+  directory and rejects a response for another location, avoiding default-location
+  false positives when a project overrides a global command.
   This registry check did not execute a command or call a model.
 - Configuration reload completed successfully. An initial reload encountered a
   stale location from an earlier temporary-clone verification; invalidation removed

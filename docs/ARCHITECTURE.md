@@ -83,6 +83,8 @@ conflict protection, backups, and idempotence. Optional host validation checks
 actual loaded profile prompts, descriptions, and modes with an explicit executable,
 plus names/descriptions from the host command registry. Registry discovery does
 not execute a command or prove its model workflow completed.
+Command queries explicitly target the current project location and validate the
+returned location so global defaults cannot hide a project-specific override.
 It retries missing IDs briefly during service initialization, while prompt or
 metadata mismatches fail immediately.
 
