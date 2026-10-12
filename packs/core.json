@@ -5,6 +5,7 @@
   "description": "Core coordination, software, design, research, and independent verification.",
   "requires": [],
   "agents": [
+    "accessibility-specialist",
     "designer",
     "evidence-validator",
     "feature-developer",
@@ -15,7 +16,9 @@
     "researcher",
     "security-auditor",
     "system-architect",
-    "team-lead"
+    "team-lead",
+    "usability-auditor",
+    "ux-designer"
   ],
   "teams": [
     "team",
@@ -23,6 +26,7 @@
     "team-feature",
     "team-release",
     "team-research",
-    "team-ui"
+    "team-ui",
+    "team-ux"
   ]
 }

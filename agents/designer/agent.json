@@ -2,5 +2,5 @@
   "schema_version": 1,
   "id": "designer",
   "title": "Designer",
-  "description": "Audit a project's design system and product UI against its goals, audience, brand, and platform conventions. Check tokens, component reuse, contrast, spacing, typography, responsive layouts, accessibility, interaction states, content, and visual consistency. Use for design reviews, design-system audits, accessibility checks, or requested design improvements. Produce prioritized, evidence-backed findings and implement scoped fixes when requested."
+  "description": "Audit project visual UI and design systems against accepted goals, audience, brand, and platform conventions. Check tokens, components, contrast, spacing, typography, responsive layouts, states, and consistency. Use for visual/system review or requested improvements; use ux-designer for complete journeys, usability-auditor for independent task walkthroughs, and accessibility-specialist for deep accessibility checks."
 }

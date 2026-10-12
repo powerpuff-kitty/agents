@@ -29,7 +29,7 @@
         },
         {
           "agent": "designer",
-          "task": "Assess project/product fit, flows, design-system conformance, UI states, contrast, spacing, and accessible interactions.",
+          "task": "Assess visual/system fit, components, UI states, contrast, spacing, and responsive consistency; complete journey design belongs to ux-designer.",
           "when": "The task asks for design or changes a user-facing interface."
         },
         {
@@ -126,6 +126,21 @@
           "agent": "technical-artist",
           "task": "Review art/runtime integration, shaders, asset pipelines, rendering constraints, and actual budgets.",
           "when": "The task concerns visual-runtime integration or rendering/asset tooling."
+        },
+        {
+          "agent": "ux-designer",
+          "task": "Map or design requested complete task journeys, transitions, information hierarchy, continuity, and recovery from actual project context.",
+          "when": "The task concerns user experience, navigation, coherent flows, decision burden, or journey design."
+        },
+        {
+          "agent": "usability-auditor",
+          "task": "Independently walk through existing tasks and identify evidence-linked confusion, repeated work, dead ends, context loss, or recovery failures.",
+          "when": "The task asks for usability review or reproduced task friction."
+        },
+        {
+          "agent": "accessibility-specialist",
+          "task": "Assess scoped semantics, keyboard/focus, assistive use, contrast, targets, motion, and reflow with actual evidence and declared criteria.",
+          "when": "The task requests deep accessibility review or involves consequential access barriers."
         }
       ]
     },
@@ -189,6 +204,16 @@
           "agent": "technical-artist",
           "task": "Check completed 3D/runtime/shader assets or integration against actual compatible tool outputs.",
           "when": "Implementation created or changed visual runtime assets/integration and an independent domain check is relevant."
+        },
+        {
+          "agent": "usability-auditor",
+          "task": "Independently walk through completed changed task paths, checking feedback, continuity, alternatives, and recovery without editing.",
+          "when": "Implementation materially changes user task journeys or an independent usability check is requested."
+        },
+        {
+          "agent": "accessibility-specialist",
+          "task": "Check affected completed UI states with declared criteria and actual keyboard/assistive evidence where available.",
+          "when": "Implementation affects semantics, focus, forms, accessible interaction, targets, reflow, or another meaningful access boundary."
         }
       ]
     },

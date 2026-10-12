@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "id": "team-ux",
+  "title": "User experience and usability",
+  "description": "Review or design coherent user journeys, align UI/copy and accessibility, implement requested changes, then independently assess task usability.",
+  "coordinator": "team-lead",
+  "intent": "Complete the requested journey review, flow design, or scoped UX implementation against project goals and actual evidence. User studies, source changes, and external actions require their requested scope; fewer clicks or polished visuals do not prove usability.",
+  "mode": "adaptive",
+  "max_parallel": 3,
+  "stages": [
+    {
+      "id": "scope",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "ux-designer",
+          "task": "Establish intended users/tasks, current entry-to-outcome journeys, relevant states, project goals, snapshot, coverage, and review/design/implementation boundaries.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "user-evidence",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "user-researcher",
+          "task": "Analyze supplied approved user evidence or provide a bounded study plan; distinguish actual observations from assumptions. Do not recruit or contact users.",
+          "when": "User evidence is available or a study plan is requested and this role is installed."
+        },
+        {
+          "agent": "data-analyst",
+          "task": "Assess approved actual task/funnel/cohort evidence with explicit grain, denominators, and uncertainty; do not fabricate task-success metrics.",
+          "when": "Relevant approved data or quantitative interpretation is in scope and this role is installed."
+        }
+      ]
+    },
+    {
+      "id": "journey",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "ux-designer",
+          "task": "Use completed evidence to assess the existing journey or design the requested bounded flow. Specify entry/exit conditions, transitions, feedback, context persistence, alternatives, and recovery; keep review-only scope read-only.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "ui-copy-and-access",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "designer",
+          "task": "Align the completed journey specification with project components, visual hierarchy, states, themes, spacing, and responsive behavior.",
+          "when": "Visual/component choices are relevant to the requested journey."
+        },
+        {
+          "agent": "copywriter",
+          "task": "Return requested supported labels, instructions, validation, empty/error/success, and recovery copy against the completed flow.",
+          "when": "Copy design is requested or material to the scoped flow and this role is installed."
+        },
+        {
+          "agent": "accessibility-specialist",
+          "task": "Assess the completed journey requirements and available current interface evidence for keyboard/focus, semantics, assistive use, and applicable accessibility constraints.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "implement",
+      "execution": "exclusive-write",
+      "assignments": [
+        {
+          "agent": "feature-developer",
+          "task": "Implement only requested scoped UI/flow/content changes or saved artifacts from the accepted brief, preserving user edits and running meaningful checks. A capable domain role may own requested specialist artifacts under the same exclusive-writer rules.",
+          "when": "The user requests implementation, fixes, or saved artifacts; review/design in the response alone does not authorize source changes."
+        }
+      ]
+    },
+    {
+      "id": "independent-checks",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "usability-auditor",
+          "task": "Independently walk through representative tasks against the completed current/proposed/changed snapshot; report reproduced barriers, source-supported risks, heuristics, and missing user evidence distinctly.",
+          "when": "always"
+        },
+        {
+          "agent": "accessibility-specialist",
+          "task": "Check the completed relevant interface or proposal against the declared target, using actual available automation/manual evidence and preserving unverified AT checks.",
+          "when": "always"
+        },
+        {
+          "agent": "quality-engineer",
+          "task": "Review changed behavior, state transitions, preservation/recovery, and actual regression checks without editing.",
+          "when": "Source or executable UI behavior changed, or correctness verification is explicitly requested."
+        },
+        {
+          "agent": "evidence-validator",
+          "task": "Check material task-success, friction, contrast, coverage, or improvement claims against completed evidence; no invented usability metrics.",
+          "when": "The deliverable includes consequential quantitative or empirical claims."
+        }
+      ]
+    },
+    {
+      "id": "reconcile",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "ux-designer",
+          "task": "Reconcile completed independent findings with the intended journey and project constraints. Return revised recommendations or acceptance gaps; requested source corrections go through the assigned writer and affected checks rerun.",
+          "when": "always"
+        }
+      ]
+    }
+  ],
+  "completion": [
+    "The requested review/design/implementation covers explicit user tasks, transitions, meaningful alternatives, and recovery with evidence and assumptions distinguished.",
+    "User evidence precedes journey conclusions, completed flows precede UI/copy alignment, and source writing precedes dependent independent checks.",
+    "Observed barriers, source-supported risks, heuristic concerns, visual preferences, accessibility criteria, and unperformed checks remain separate.",
+    "Requested changes preserve user context/work and required guardrails; fewer clicks, automation success, or aesthetics are not claimed as proof of user validation.",
+    "Optional installed roles are selected only when relevant; unavailable research, browser, analytics, or assistive access remains explicit."
+  ]
+}

@@ -41,7 +41,7 @@ class WorkflowTests(unittest.TestCase):
             result = run("install.py", "--target", target, "--dry-run")
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertFalse(target.exists())
-            self.assertEqual(len(json.loads(result.stdout)["changed"]), 40)
+            self.assertEqual(len(json.loads(result.stdout)["changed"]), 44)
             self.assertFalse((Path(temporary) / "commands").exists())
 
     def test_install_preserves_other_profiles_and_is_idempotent(self):
@@ -97,7 +97,7 @@ class WorkflowTests(unittest.TestCase):
             result = run("build.py", "--adapter", "portable", "--output", output)
             self.assertEqual(result.returncode, 0, result.stderr)
             files = list((output / "agents").glob("*.md"))
-            self.assertEqual(len(files), 25)
+            self.assertEqual(len(files), 28)
             for path in files:
                 body = path.read_text()
                 self.assertEqual(body.count("## Operating contract"), 1)
@@ -143,7 +143,7 @@ class WorkflowTests(unittest.TestCase):
             result = run("build.py", "--adapter", "opencode", "--output", output)
             self.assertEqual(result.returncode, 0, result.stderr)
             commands = list((output / "commands").glob("*.md"))
-            self.assertEqual(len(commands), 15)
+            self.assertEqual(len(commands), 16)
             for command in commands:
                 front, body = command.read_text()[4:].split("\n---\n", 1)
                 self.assertIn("agent: team-lead", front.splitlines())
@@ -181,7 +181,7 @@ class WorkflowTests(unittest.TestCase):
             base = Path(temporary)
             result = run("install.py", "--target", base / "profiles", "--agents-only")
             self.assertEqual(result.returncode, 0, result.stderr)
-            self.assertEqual(len(json.loads(result.stdout)["changed"]), 25)
+            self.assertEqual(len(json.loads(result.stdout)["changed"]), 28)
             self.assertFalse((base / "commands").exists())
 
     def test_nested_profile_and_command_destinations_are_rejected(self):
@@ -221,7 +221,7 @@ class WorkflowTests(unittest.TestCase):
             result = run("build.py", "--adapter", "portable", "--output", output)
             self.assertEqual(result.returncode, 0, result.stderr)
             teams = list((output / "teams").glob("*.md"))
-            self.assertEqual(len(teams), 15)
+            self.assertEqual(len(teams), 16)
             for team in teams:
                 body = team.read_text()
                 self.assertNotIn("OpenCode", body)
@@ -316,9 +316,9 @@ class WorkflowTests(unittest.TestCase):
                 validator.validate("fixture-host")
 
     def test_pack_selection_resolves_dependencies_and_filters_candidates(self):
-        for requested, agent_count, team_count in ((["core"], 11, 6), (["science-data"], 14, 8),
-                                                  (["product-growth"], 22, 13), (["game-3d"], 17, 10),
-                                                  (["product-growth", "game-3d"], 25, 15)):
+        for requested, agent_count, team_count in ((["core"], 14, 7), (["science-data"], 17, 9),
+                                                  (["product-growth"], 25, 14), (["game-3d"], 20, 11),
+                                                  (["product-growth", "game-3d"], 28, 16)):
             with self.subTest(packs=requested):
                 files = build.compile_profiles("portable", requested)
                 manifest = json.loads(files["build-manifest.json"])
@@ -373,7 +373,7 @@ class WorkflowTests(unittest.TestCase):
             self.assertFalse(target.exists())
             first = run("install.py", "--target", target, "--pack", "core")
             self.assertEqual(first.returncode, 0, first.stderr)
-            self.assertEqual(len(json.loads(first.stdout)["changed"]), 17)
+            self.assertEqual(len(json.loads(first.stdout)["changed"]), 21)
             self.assertFalse((target / "scientist.md").exists())
             more = run("install.py", "--target", target, "--pack", "game-3d")
             self.assertEqual(more.returncode, 0, more.stderr)
@@ -386,6 +386,29 @@ class WorkflowTests(unittest.TestCase):
             again = run("install.py", "--target", target, "--pack", "core")
             self.assertEqual(again.returncode, 0, again.stderr)
             self.assertEqual(json.loads(again.stdout)["changed"], [])
+
+    def test_ux_workflow_filters_optional_roles_and_orders_dependent_checks(self):
+        agents, _ = build.load_agents()
+        teams, _ = build.load_teams(agents)
+        selected, workflows, _, _ = build.select_catalog(agents, teams, ["core"])
+        ux = next(t["metadata"] for t in workflows if t["metadata"]["id"] == "team-ux")
+        members = {a["agent"] for stage in ux["stages"] for a in stage["assignments"]}
+        self.assertTrue({"ux-designer", "usability-auditor", "accessibility-specialist"} <= members)
+        self.assertFalse({"user-researcher", "data-analyst", "copywriter"} & members)
+        self.assertNotIn("user-evidence", [s["id"] for s in ux["stages"]])
+        full = next(t["metadata"] for t in teams if t["metadata"]["id"] == "team-ux")
+        stages = {stage["id"]: index for index, stage in enumerate(full["stages"])}
+        self.assertLess(stages["user-evidence"], stages["journey"])
+        self.assertLess(stages["journey"], stages["ui-copy-and-access"])
+        self.assertLess(stages["ui-copy-and-access"], stages["implement"])
+        self.assertLess(stages["implement"], stages["independent-checks"])
+        writer = full["stages"][stages["implement"]]
+        self.assertEqual(writer["execution"], "exclusive-write")
+        self.assertEqual(len(writer["assignments"]), 1)
+        self.assertNotEqual(writer["assignments"][0]["when"], "always")
+        checks = full["stages"][stages["independent-checks"]]
+        self.assertNotIn("ux-designer", {a["agent"] for a in checks["assignments"]})
+        self.assertIn("usability-auditor", {a["agent"] for a in checks["assignments"]})
 
     def test_pack_builds_have_separate_default_destinations(self):
         with tempfile.TemporaryDirectory() as temporary:

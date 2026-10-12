@@ -1,6 +1,6 @@
 # Agent catalog
 
-The suite contains 24 specialists and one coordinator. Portable identity and
+The suite contains 27 specialists and one coordinator. Portable identity and
 procedure live in each linked source directory; generated outputs combine them
 with the shared operating contract. Profiles depend on actual host tools, data,
 permissions, and project instructions. See [packs](PACKS.md) for installation and
@@ -14,7 +14,10 @@ permissions, and project instructions. See [packs](PACKS.md) for installation an
 | [project-auditor](../agents/project-auditor/instructions.md) | Accepted scope, implementation status, progress, and readiness evidence | core |
 | [quality-engineer](../agents/quality-engineer/instructions.md) | Correctness, meaningful tests, regressions, and reliability | core |
 | [security-auditor](../agents/security-auditor/instructions.md) | Reachable weaknesses, privacy, and trust boundaries | core |
-| [designer](../agents/designer/instructions.md) | Product/UI fit, design systems, states, and accessibility | core |
+| [designer](../agents/designer/instructions.md) | Visual UI, design systems, components, states, and responsive consistency | core |
+| [ux-designer](../agents/ux-designer/instructions.md) | Complete journeys, task sequence, hierarchy, continuity, and recovery | core |
+| [usability-auditor](../agents/usability-auditor/instructions.md) | Independent task walkthroughs, confusion, friction, and evidence-linked repairs | core |
+| [accessibility-specialist](../agents/accessibility-specialist/instructions.md) | Deep semantics, keyboard/focus, assistive checks, and declared accessibility criteria | core |
 | [performance-engineer](../agents/performance-engineer/instructions.md) | Measured bottlenecks, resource budgets, and comparable optimizations | core |
 | [release-engineer](../agents/release-engineer/instructions.md) | Artifacts, readiness, authorized release operations, and recovery | core |
 | [researcher](../agents/researcher/instructions.md) | Current cited sources and decision comparisons | core |
@@ -45,6 +48,13 @@ foundations while measuring different surfaces. Localization adapts approved mea
 Artist-3d owns assets and technical-artist integration, with separate serialized
 writing when both are requested. Modeling/rendering access is not provisioned by
 the profile and missing tools remain explicit.
+
+UX-designer owns the flow specification, designer visual/system alignment,
+usability-auditor independent task assessment, accessibility-specialist deep access
+checks, and user-researcher actual user evidence. Copywriter supports labels and
+recovery wording. A heuristic walkthrough or automated scan is not a participant
+study or proof of complete accessibility. Optional information-architecture and
+interaction-design roles are not separate profiles in this catalog.
 
 There is no generic engineer or optimizer profile. Team-lead chooses the owner
 and method for the actual objective: software behavior, resource cost, game balance,

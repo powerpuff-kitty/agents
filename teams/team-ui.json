@@ -16,6 +16,11 @@
           "agent": "designer",
           "task": "Establish critical journeys and a representative route/component/state/viewport/theme coverage matrix; inspect project design sources and reference behavior.",
           "when": "always"
+        },
+        {
+          "agent": "ux-designer",
+          "task": "Map relevant current tasks, transitions, context persistence, and recovery against the requested coverage without redesigning or editing.",
+          "when": "The UI review includes navigation, forms, or an end-to-end journey."
         }
       ]
     },
@@ -36,6 +41,16 @@
         {
           "agent": "evidence-validator",
           "task": "Validate measurement provenance, contrast/target/reflow claims, coverage, and distinctions between screenshots, source evidence, and actual interaction checks.",
+          "when": "always"
+        },
+        {
+          "agent": "usability-auditor",
+          "task": "Independently walk through covered tasks and report evidence-linked friction, dead ends, confusing actions, and recovery defects.",
+          "when": "The scope includes meaningful interactions or task journeys."
+        },
+        {
+          "agent": "accessibility-specialist",
+          "task": "Assess covered states using declared criteria, actual keyboard/assistive checks where available, and interpreted automation; retain manual gaps.",
           "when": "always"
         }
       ]

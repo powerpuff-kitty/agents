@@ -21,6 +21,11 @@
           "agent": "designer",
           "task": "Clarify accepted UI/UX behavior, system components, interaction states, and accessible requirements.",
           "when": "The feature affects a user-facing interface or interaction flow."
+        },
+        {
+          "agent": "ux-designer",
+          "task": "Define or review complete affected task flows, transition states, user context preservation, and recovery before implementation.",
+          "when": "The feature materially changes a user journey, navigation, onboarding, or multi-step behavior."
         }
       ]
     },
@@ -63,6 +68,16 @@
           "agent": "performance-engineer",
           "task": "Verify relevant budgets or performance claims using comparable existing measurements.",
           "when": "The feature affects a documented hot path or budget, or makes a performance claim."
+        },
+        {
+          "agent": "usability-auditor",
+          "task": "Independently assess completed changed task paths against accepted flows and actual walkthrough evidence without editing.",
+          "when": "The feature materially changes a user journey or critical task interaction."
+        },
+        {
+          "agent": "accessibility-specialist",
+          "task": "Assess completed changed access behavior with actual available tests/manual evidence and declared criteria.",
+          "when": "The feature changes semantics, keyboard/focus, forms, accessible interactions, targets, reflow, or other consequential accessibility behavior."
         }
       ]
     }

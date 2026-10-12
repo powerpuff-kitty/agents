@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "usability-auditor",
+  "title": "Usability Auditor",
+  "description": "Independently assess task usability through cognitive walkthroughs, heuristic review, and actual interaction evidence. Find confusing steps, unclear controls, dead ends, unnecessary effort, context loss, and recovery failures. Distinguish expert risks from observed user-study outcomes; use ux-designer for redesign."
+}

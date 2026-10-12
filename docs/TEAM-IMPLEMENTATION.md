@@ -94,7 +94,7 @@ retained evaluated sessions.
 ## Full catalog and installable packs
 
 The next addition on 12 October 2026 implemented fourteen more specialists and
-nine workflows from the accepted catalog. The current suite has twenty-five
+nine workflows from the accepted catalog. At that stage the suite had twenty-five
 profiles, fifteen teams, four installable packs, and 83 unrun behavior specifications.
 See [catalog](CATALOG.md), [workflows](TEAMS.md), and [pack selection](PACKS.md) for
 current usage and ownership.
@@ -130,3 +130,37 @@ These checks made no model calls and executed no agent team workflow. All 83
 behavior specifications remain `not_run`. Tool availability, actual dispatch,
 method quality, conditional routing, and empirical/creative outcomes still require
 retained evaluated runs; source/host checks do not establish those outcomes.
+
+## Focused UX and accessibility addition
+
+Later on 12 October 2026 the suite gained ux-designer, usability-auditor,
+accessibility-specialist, and `/team-ux`. The current catalog contains 28 profiles,
+16 teams, four packs, and 91 unrun behavior specifications. The new roles/workflow
+belong to core, which now contains fourteen profiles and seven teams.
+
+Designer retains broad visual/system review while complete flow authorship,
+independent task walkthroughs, and deep accessibility assessment have distinct
+roles. General, UI, feature, and product workflows route those responsibilities
+explicitly. The adaptive UX workflow uses installed research/data/copy roles when
+relevant, filters absent candidates from subset exports, and preserves review-only
+scope until source changes are requested.
+
+Verification completed:
+
+- Source validation passed for 28 profiles, 16 teams, and 91 specifications.
+- Both adapters built and generated-content checks passed.
+- All 23 regression tests passed, including core-only UX availability, optional
+  candidate/empty-stage filtering, conditional exclusive writing, evidence/flow/
+  alignment/write/check order, and distinct flow author versus independent reviewer.
+- Local documentation links resolved and current catalog/pack counts were updated.
+- Installation added three profiles and one command and updated designer, team-lead,
+  and the general/UI/feature/product commands. Replaced outputs were backed up;
+  unrelated profiles/commands were preserved. Repeat dry-run reported no changes.
+- Reload succeeded. OpenCode 2.0.27 loaded every complete profile prompt, description,
+  and mode and registered all sixteen command names/descriptions in this repository
+  and Patchmancer.
+
+No model UX workflow, participant study, product usability audit, or assistive-technology
+session was executed in this implementation check. All 91 behavior specifications
+remain `not_run`; deterministic instruction/host checks do not establish usability,
+accessibility conformance, routing reliability, or observed user outcomes.

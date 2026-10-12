@@ -55,8 +55,8 @@
           "when": "always"
         },
         {
-          "agent": "designer",
-          "task": "Develop or assess relevant flows, hierarchy, UI states, and accessibility requirements against the completed evidence brief.",
+          "agent": "ux-designer",
+          "task": "Develop or assess complete task flows, information hierarchy, transitions, continuity, and recovery requirements against the completed evidence brief.",
           "when": "The scope includes user-facing behavior."
         }
       ]
@@ -74,6 +74,11 @@
           "agent": "evidence-validator",
           "task": "Check material factual/quantitative claims and the distinction between assumptions and findings.",
           "when": "The deliverable relies on consequential factual or quantitative claims."
+        },
+        {
+          "agent": "designer",
+          "task": "Review completed flow/requirements for visual-system, component, state, and responsive alignment.",
+          "when": "The proposal includes concrete UI/component choices."
         }
       ]
     }

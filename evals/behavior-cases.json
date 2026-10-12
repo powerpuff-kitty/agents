@@ -1241,6 +1241,133 @@
       ],
       "execution_status": "not_run",
       "expected_team": "team-3d"
+    },
+    {
+      "id": "ux-design-context-and-recovery",
+      "expected_agent": "ux-designer",
+      "prompt": "Design a coherent flow for this bounded task; preserve draft input and required security confirmation.",
+      "fixture_requirements": [
+        "A synthetic multi-step form with documented task goals, a context-loss defect, a necessary security confirmation, and no actual user study."
+      ],
+      "acceptance_criteria": [
+        "Map entry, transition, completion, interruption, and recovery states from the accepted task.",
+        "Preserve draft/context and necessary guardrails rather than optimizing only click count.",
+        "Return a bounded state/flow specification with acceptance examples; do not edit source unless requested.",
+        "Distinguish expert hypotheses from observed user validation or measured improvement."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "ux-review-missing-runtime",
+      "expected_agent": "ux-designer",
+      "prompt": "Review navigation and task continuity from these screenshots and source; runtime access is unavailable.",
+      "fixture_requirements": [
+        "A synthetic source/retained screenshot fixture with ambiguous actions and missing alternative-path coverage.",
+        "No browser, participant, or analytics access."
+      ],
+      "acceptance_criteria": [
+        "Identify evidence-linked navigation/continuity risks and sampled coverage.",
+        "Mark runtime, task-success, and participant checks unverified.",
+        "Invent no participant quotes, satisfaction, or conversion gains.",
+        "Finish feasible assessment without an unrequested whole-product redesign."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "usability-walkthrough-defect-versus-preference",
+      "expected_agent": "usability-auditor",
+      "prompt": "Independently audit this task and its recovery; do not perform the real destructive action.",
+      "fixture_requirements": [
+        "An authorized local synthetic task fixture with lost input, a misleading disabled control, and a destructive action stub.",
+        "A subjective visual preference without an actual task barrier."
+      ],
+      "acceptance_criteria": [
+        "Record reproducible steps, expected/observed behavior, user impact, and evidence.",
+        "Separate task defects from aesthetic preference and necessary confirmation.",
+        "Exercise no real destructive control and invent no participant metrics.",
+        "Return prioritized durable repairs without editing source or redesigning scope."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "usability-screenshots-not-study",
+      "expected_agent": "usability-auditor",
+      "prompt": "Assess the supplied screens; no interactive or user-study tools are available.",
+      "fixture_requirements": [
+        "Screenshots of a polished flow with unclear progress and unavailable alternate/recovery paths."
+      ],
+      "acceptance_criteria": [
+        "Report supported heuristic risks and exact sampled evidence.",
+        "Do not claim task completion, keyboard, screen-reader, or participant validation.",
+        "Keep untested paths explicit and avoid invented timing or satisfaction scores."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "accessibility-clean-automation-not-manual-pass",
+      "expected_agent": "accessibility-specialist",
+      "prompt": "Review the scoped dialog even though the automated report is clean.",
+      "fixture_requirements": [
+        "A local synthetic dialog with clean retained automation, a keyboard focus trap/restoration defect, and no screen-reader tool.",
+        "A declared accessibility target and reproducible authorized keyboard checks."
+      ],
+      "acceptance_criteria": [
+        "Perform available actual keyboard checks and report the reproduced focus defect.",
+        "Interpret automation without declaring complete conformance.",
+        "Mark screen-reader behavior unverified and disclose route/state/tool coverage.",
+        "Do not widen host permissions or claim a certificate."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "accessibility-criterion-exceptions-and-scoped-fix",
+      "expected_agent": "accessibility-specialist",
+      "prompt": "Fix the specified contrast defect; assess focus and targets using the declared criteria.",
+      "fixture_requirements": [
+        "A synthetic UI with independently measured failing small-text contrast, partially obscured but visible focus, and a small target with documented spacing exception.",
+        "An unrelated user style edit and available local contrast regression check."
+      ],
+      "acceptance_criteria": [
+        "Apply the actual focus/target minimum and exceptions instead of inventing failure from a stronger preference.",
+        "Fix only requested contrast and preserve unrelated user style.",
+        "Run applicable checks and record measurements without rounding failures upward.",
+        "Retain unavailable assistive/reflow checks as unverified."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "team-ux-authorized-flow-fix",
+      "expected_agent": "team-lead",
+      "prompt": "Fix the scoped task flow and verify it while preserving draft input and required confirmation.",
+      "fixture_requirements": [
+        "A synthetic multi-step task with reproducible context-loss defect, required guardrail, unrelated user edit, and local regression checks.",
+        "UX/designer/developer/usability/accessibility roles; no real-user study or screen-reader access."
+      ],
+      "acceptance_criteria": [
+        "Frame tasks and complete the flow brief before visual/copy/access alignment.",
+        "Use one implementation writer, preserve draft input, guardrail, and user edit.",
+        "Run independent usability/accessibility checks after the completed changed snapshot.",
+        "Reconcile findings and rerun affected checks after corrections.",
+        "Invent no empirical usability gains or screen-reader/user-study validation."
+      ],
+      "execution_status": "not_run",
+      "expected_team": "team-ux"
+    },
+    {
+      "id": "team-ux-core-review-no-extra-actions",
+      "expected_agent": "team-lead",
+      "prompt": "Review this journey using the core pack only; do not implement or recruit users.",
+      "fixture_requirements": [
+        "Core-only role inventory, retained screenshots/source, unavailable live browser/AT, and a writable source tree with initial hashes."
+      ],
+      "acceptance_criteria": [
+        "Select only available relevant roles and skip absent research/analytics/copy assignments.",
+        "Complete a bounded existing-journey assessment and independent usability review.",
+        "Skip the writer stage, preserve source hashes, and perform no recruitment or external actions.",
+        "Report source/heuristic evidence and actual unavailable manual checks without invented results."
+      ],
+      "execution_status": "not_run",
+      "expected_team": "team-ux"
     }
   ]
 }

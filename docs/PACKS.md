@@ -2,14 +2,19 @@
 
 Pack declarations in `packs/*.json` select canonical profiles and teams without
 forking their instructions. Builds, installation, and optional host validation
-default to the full catalog: 25 profiles and 15 teams.
+default to the full catalog: 28 profiles and 16 teams.
 
 | Pack | Owned profiles | Owned teams | Dependencies | Total with dependencies |
 | --- | --- | --- | --- | --- |
-| core | 11 | 6 | None | 11 profiles, 6 teams |
-| science-data | 3 | 2 | core | 14 profiles, 8 teams |
-| product-growth | 8 | 5 | core, science-data | 22 profiles, 13 teams |
-| game-3d | 3 | 2 | core, science-data | 17 profiles, 10 teams |
+| core | 14 | 7 | None | 14 profiles, 7 teams |
+| science-data | 3 | 2 | core | 17 profiles, 9 teams |
+| product-growth | 8 | 5 | core, science-data | 25 profiles, 14 teams |
+| game-3d | 3 | 2 | core, science-data | 20 profiles, 11 teams |
+
+Core includes ux-designer, usability-auditor, accessibility-specialist, and `/team-ux`.
+The core UX workflow remains usable without product-growth: optional user-researcher,
+data-analyst, and copywriter candidates are omitted when unavailable. Installing
+science-data adds analytics support; product-growth adds user research and copy.
 
 Science/data supports quantitative growth evaluation and game balance. Combining
 product-growth and game-3d includes the full catalog. Dependency closure is
@@ -52,6 +57,6 @@ python3 scripts/install.py --pack core --target /path/to/project/.opencode/agent
 ```
 
 The sibling `.opencode/commands` is selected automatically. Source validation checks
-the full catalog and all 83 behavior specifications even with `--pack`; reported
+the full catalog and all 91 behavior specifications even with `--pack`; reported
 profile/team counts and optional host checks concern the selected closure. Host
 checks allow unrelated additional profiles/commands and do not execute model workflows.

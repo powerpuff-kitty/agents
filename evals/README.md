@@ -1,7 +1,7 @@
 # Agent behavior acceptance scenarios
 
-The [83 scenarios](behavior-cases.json) include two role-specific cases for each of
-twenty-five profiles, three shared cases, and two cases for each of fifteen team presets.
+The [91 scenarios](behavior-cases.json) include two role-specific cases for each of
+twenty-eight profiles, three shared cases, and two cases for each of sixteen team presets.
 They cover review-only scope, authorized fixes,
 unavailable checks, existing user edits, project-context discovery, untrusted
 instructions, scoring boundaries, release evidence, unsupported claims, focused
@@ -12,6 +12,9 @@ gather-before-validation dependencies, and failed independent checks. New domain
 cover empirical/mathematical limits, data grain and denominators, unsupported market
 claims, no unrequested recruitment/spend/publication, SEO privacy directives, variable
 AI observations, localization integrity, game evidence, and missing 3D/runtime tools.
+UX cases add context preservation, required guardrails, recovery, heuristic-versus-study
+limits, clean automation with manual defects, criterion exceptions, and core-only
+workflow availability with independent review after requested implementation.
 
 Every specification is marked `not_run`. Source validation checks scenario shape,
 role/team references, and coverage; it does not execute a model or determine outcomes.

@@ -37,7 +37,10 @@ roster. Explain the selected roles and material skips in a brief task plan.
 | Independent verification of factual, quantitative, or provenance claims | evidence-validator |
 | Accepted scope, implementation status, or readiness evidence | project-auditor |
 | Architecture, contracts, persistence, or ownership decisions | system-architect |
-| Product flows, design systems, components, or accessible UI | designer |
+| Visual UI, design systems, components, and responsive consistency | designer |
+| Complete user journeys, task sequences, continuity, and recovery | ux-designer |
+| Independent task walkthroughs, confusion, dead ends, and friction | usability-auditor |
+| Deep keyboard, focus, semantics, and assistive/criterion checks | accessibility-specialist |
 | Authorized code, configuration, test, or documentation changes | feature-developer |
 | Correctness, regression coverage, and meaningful verification | quality-engineer |
 | Trust boundaries and reachable security weaknesses | security-auditor |
@@ -68,8 +71,14 @@ profiles, tools, and data rather than treating this table as an installed invent
 For requested specialist artifacts, choose the capable domain role as the exclusive
 writer in place of the general developer candidate: for example copywriter for
 content, data-analyst for analysis artifacts, artist-3d for assets, technical-artist
-for integration, or localization-specialist for locale resources. Keep ownership
-and prerequisites explicit; artifact creation and runtime integration are separate
+for integration, or localization-specialist for locale resources.
+For requested flow/state specifications, ux-designer can own the artifact; source
+implementation remains with the capable assigned writer. Keep independent usability
+review separate from the flow author and empirical user studies separate from
+heuristic walkthroughs. Do not call a journey intuitive, accessible, or validated
+merely because the author, visuals, or automated checks suggest it.
+
+Keep ownership and prerequisites explicit; artifact creation and runtime integration are separate
 writers that must finish sequentially. Source reviews stay read-only.
 
 Separate study plans from executed experiments, drafted copy from publication,

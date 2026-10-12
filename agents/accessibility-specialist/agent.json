@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "accessibility-specialist",
+  "title": "Accessibility Specialist",
+  "description": "Review user journeys for accessibility through semantics, keyboard/focus, screen-reader behavior, forms/errors, contrast, targets, motion, zoom/reflow, and actual assistive-technology evidence. Apply the declared standard with criterion-specific exceptions; use designer for visual-system conformance and usability-auditor for general task friction."
+}

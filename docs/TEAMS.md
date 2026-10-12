@@ -11,7 +11,8 @@ These are reusable workflow instructions, not a new runtime or a multi-select UI
 | `/team-research <question>` | Research/review only | Researcher gathers cited evidence, then evidence-validator and applicable domain specialists assess it; team-lead reconciles the answer |
 | `/team-audit <scope>` | Review only | Project-auditor scopes accepted work, researcher gathers references when needed, then eight core specialists review bounded domains; team-lead consolidates results |
 | `/team-feature <feature>` | Implement the described feature | Applicable architecture/design framing, one feature-developer source writer, then independent quality and relevant conditional reviews |
-| `/team-ui <screens or journey>` | Review only | Designer establishes representative coverage, followed by quality/evidence checks and performance review when relevant |
+| `/team-ui <screens or journey>` | Review only | Designer establishes coverage, UX-designer maps relevant journeys, then quality, usability, accessibility, evidence, and applicable performance reviews follow |
+| `/team-ux <task or journey>` | Derived from the request | Frame task scope, use available user evidence, assess/design journeys, align UI/copy/access, implement only requested changes, then independently check and reconcile |
 | `/team-release <target>` | Readiness review | Release-engineer establishes gates, specialists assess applicable evidence, and release-engineer reconciles the readiness matrix |
 | `/team-product <scope>` | Product definition/review | Product-manager frames the problem, evidence/feasibility roles assess it, then requirements/flows and acceptance checks follow |
 | `/team-science <question>` | Derived from the request | Scientist frames the question, methods are reviewed, the protocol is finalized, requested implementation/execution is serialized, then results are interpreted and independently checked |
@@ -74,6 +75,35 @@ source access depend on the host; unavailable evidence stays explicit. Research
 answers distinguish facts, vendor assertions, observations, and inference, and
 do not authorize implementation or vendor contact by default.
 
+## UX, usability, and accessibility
+
+`/team-ux` focuses on complete user tasks rather than visual consistency alone.
+UX-designer maps entry points, prerequisites, transitions, completion, alternatives,
+context preservation, and recovery. Designer aligns visual/components, copywriter
+supports requested wording when installed, and independent usability-auditor checks
+recognition, feedback, confusion, repeated work, dead ends, and guardrails.
+Accessibility-specialist checks relevant semantics, keyboard/focus, assistive use,
+and declared criteria with actual evidence.
+
+All three specialist roles and the workflow belong to core. User-researcher,
+data-analyst, and copywriter are conditional candidates from other packs; filtered
+exports skip absent roles and empty evidence stages. Available evidence precedes
+journey conclusions, completed flow specifications precede UI/copy alignment, and
+requested writing completes before dependent independent checks. Review/design
+in a response does not authorize source edits, recruitment, or live experiments.
+
+Usability findings distinguish reproduced barriers, source-supported risks,
+heuristics, visual preferences, and actual participant observations. Accessibility
+reports distinguish source checks, interpreted automation, actual keyboard/assistive
+checks, and unavailable coverage. No task-success rates or screen-reader passes
+are invented. [WAI evaluation guidance](https://www.w3.org/WAI/test-evaluate/) explains
+why automated tools alone cannot establish complete accessibility.
+
+`/team-ui` and `/team-feature` also use the focused roles when relevant; product
+requirements route complete flow design to UX-designer and visual alignment to
+designer. Numeric usability or accessibility scores require a disclosed rubric
+and actual evidence rather than an aggregate guess.
+
 ## Coordination rules
 
 The coordinator provides isolated children with scope, accepted requirements,
@@ -105,7 +135,7 @@ python3 scripts/install.py --tool opencode
 python3 scripts/validate.py --opencode ~/.opencode/bin/opencode
 ```
 
-The installer writes twenty-five profiles and fifteen commands by default.
+The installer writes twenty-eight profiles and sixteen commands by default.
 Use repeatable `--pack` options for a smaller dependency-complete set. Team-lead is a
 primary profile, while specialists retain both primary and child eligibility.
 Command frontmatter selects team-lead and uses `subagent: false`, keeping the
@@ -130,6 +160,6 @@ serially and must label them coordinator-performed rather than independent runs.
 The command registry verifies that the host discovers the slash commands; source
 and rendering tests verify their coordinator, scope placeholder, and parent-session
 mapping. No actual end-to-end model team run is established by these checks.
-The 83 behavioral scenarios remain unrun until evaluated sessions and artifacts
+The 91 behavioral scenarios remain unrun until evaluated sessions and artifacts
 are retained. Parallel limits and review-only rules are prompt contracts rather
 than runtime-enforced semaphores or read-only permissions.
