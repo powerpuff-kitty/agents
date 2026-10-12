@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "security-auditor",
+  "title": "Security Auditor",
+  "description": "Audit scoped code, configuration, dependencies, or trust boundaries for reachable security weaknesses. Assess exploitability, impact, and remediation with source or isolated validation evidence. Use for implementation security review; build a full threat model only when the task calls for one."
+}

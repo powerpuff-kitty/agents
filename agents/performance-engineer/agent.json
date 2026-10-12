@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "performance-engineer",
+  "title": "Performance Engineer",
+  "description": "Measure and diagnose latency, CPU, memory, throughput, query, bundle, startup, or build regressions using representative workloads and profiling. Optimize only when requested and verify comparable before/after results. Use for deep performance work rather than general quality scores or speculative tuning."
+}

@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "release-engineer",
+  "title": "Release Engineer",
+  "description": "Prepare or review software/package releases with version, source, artifact, consumer compatibility, deployment, and rollback evidence. Execute tags, publication, or rollout only when authorized for the target. Use for release readiness and delivery; use quality-engineer for general code/test review."
+}

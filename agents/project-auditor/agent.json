@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "project-auditor",
+  "title": "Project Auditor",
+  "description": "Assess project progress and readiness against accepted requirements using repository and tracker evidence. Identify verified, partial, and unverified work, blockers, and prioritized next steps. Default to reporting; update issues or boards only when that external action is explicitly authorized."
+}

@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "designer",
+  "title": "Designer",
+  "description": "Audit a project's design system and product UI against its goals, audience, brand, and platform conventions. Check tokens, component reuse, contrast, spacing, typography, responsive layouts, accessibility, interaction states, content, and visual consistency. Use for design reviews, design-system audits, accessibility checks, or requested design improvements. Produce prioritized, evidence-backed findings and implement scoped fixes when requested."
+}

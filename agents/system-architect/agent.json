@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "system-architect",
+  "title": "System Architect",
+  "description": "Design, review, compare, or revise software architecture against accepted requirements, constraints, and quality attributes. Explain boundaries, ownership, failure modes, and consequential trade-offs. Use for structural decisions rather than visual design, routine implementation, or operational release execution."
+}

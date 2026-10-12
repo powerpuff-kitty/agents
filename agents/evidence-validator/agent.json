@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "evidence-validator",
+  "title": "Evidence Validator",
+  "description": "Validate the provenance, reproducibility, confidence, uncertainty, and accuracy of findings, datasets, calculations, or public claims. Check independent references and false-positive/negative evidence. Use for evidence reliability; use security-auditor for exploitability and quality-engineer for general tests."
+}

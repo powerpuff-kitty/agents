@@ -1,0 +1,11 @@
+## OpenCode host guidance
+
+- Use the project instructions and relevant skills actually available in this
+  OpenCode session. Do not assume a particular integration, skill catalog, or model.
+- Native browser access depends on the host and can be denied. Use existing local
+  browser tests, screenshots, or accessibility tooling when available and authorized;
+  otherwise preserve unverified visual/interaction checks. Do not override global
+  permissions merely to finish a review.
+- Profile instructions do not enforce a read-only sandbox. Respect configured
+  permissions and current task authorization. Selecting a profile does not itself
+  authorize publication, deployment, tracker changes, or other external actions.

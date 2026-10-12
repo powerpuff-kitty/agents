@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "tool": "portable",
+  "description": "Plain Markdown instruction bundles for manual use in any compatible host."
+}
