@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "id": "team-iteration",
+  "title": "Iteration releasability",
+  "description": "Assess each integrated increment against its accepted Definition of Done, apply requested scoped fixes, verify artifacts, and report ready, blocked, or unverified.",
+  "coordinator": "team-lead",
+  "intent": "Assess whether the named product increment remains usable and releasable for its target after the iteration. Reuse accepted gates and current evidence. Review alone authorizes no source/tracker changes or publication; implement only requested remediation, then recheck the final snapshot.",
+  "mode": "adaptive",
+  "max_parallel": 3,
+  "stages": [
+    {
+      "id": "scope-and-done",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "iteration-reviewer",
+          "task": "Identify accepted goals, integrated product boundaries, named target, revision/dirty-state/artifact identity, Definition of Done basis, applicable required gates, existing evidence, and requested review/remediation scope.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "context",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "project-auditor",
+          "task": "Map accepted delivered/partial/deferred requirements and dependencies without changing trackers.",
+          "when": "Multiple work items, milestone completeness, scope drift, or accepted exception status need clarification."
+        },
+        {
+          "agent": "product-manager",
+          "task": "Clarify accepted user outcomes and testable acceptance criteria; distinguish proposals from commitments.",
+          "when": "Product acceptance decisions are material and this role is installed."
+        },
+        {
+          "agent": "system-architect",
+          "task": "Assess relevant integration, rollout order, compatibility, or consequential boundary constraints before requested repairs.",
+          "when": "The increment changes consequential contracts, persistence, or system boundaries."
+        },
+        {
+          "agent": "ux-designer",
+          "task": "Map affected complete journeys, context preservation, alternatives, and recovery against the accepted scope.",
+          "when": "End-to-end user behavior or partially exposed flows are material to the increment."
+        }
+      ]
+    },
+    {
+      "id": "remediate",
+      "execution": "exclusive-write",
+      "assignments": [
+        {
+          "agent": "feature-developer",
+          "task": "Apply only requested scoped Definition of Done/iteration fixes, reproduce defects, preserve unrelated work and baseline failures, and run applicable checks. Do not weaken criteria, change rollout scope, or publish.",
+          "when": "The user requests remediation or implementation of the identified increment; readiness assessment alone does not satisfy this condition."
+        }
+      ]
+    },
+    {
+      "id": "specialist-checks",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "quality-engineer",
+          "task": "Check completed acceptance behavior, existing critical regressions, integration/state transitions, and actual check results for the stable snapshot.",
+          "when": "always"
+        },
+        {
+          "agent": "security-auditor",
+          "task": "Assess applicable changed trust/data boundaries and required security gates.",
+          "when": "Security/privacy boundaries or an accepted security gate are affected."
+        },
+        {
+          "agent": "usability-auditor",
+          "task": "Independently walk through meaningful existing/new task paths and recovery using actual available evidence.",
+          "when": "The increment changes user-facing task behavior or requires a usability gate."
+        },
+        {
+          "agent": "accessibility-specialist",
+          "task": "Assess affected semantics, keyboard/focus, forms, reflow, and actual assistive/automation evidence against accepted criteria.",
+          "when": "Meaningful access behavior or an accepted accessibility gate is affected."
+        },
+        {
+          "agent": "designer",
+          "task": "Review affected completed UI/component/theme states against the project system and accepted behavior.",
+          "when": "Visual/system UI changes or a relevant design gate are part of the increment."
+        },
+        {
+          "agent": "performance-engineer",
+          "task": "Check required performance budgets with comparable actual evidence; avoid unrequested load or new benchmark programs.",
+          "when": "The increment affects a documented hot path/budget or makes a material performance claim."
+        },
+        {
+          "agent": "evidence-validator",
+          "task": "Check material public/calculation/provenance claims and supporting check/source identities.",
+          "when": "The increment includes consequential quantitative, factual, provenance, or improvement claims."
+        }
+      ]
+    },
+    {
+      "id": "artifact-evidence",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "release-engineer",
+          "task": "Verify applicable built artifact identity, isolated consumer installation/startup/smoke behavior, configuration, compatibility, migrations, and recovery evidence. Reuse current retained checks where valid; do not bump versions, tag, publish, deploy, or perform destructive recovery.",
+          "when": "The accepted target requires artifact/consumer/startup or operational gates; missing access remains unverified rather than a skipped requirement."
+        }
+      ]
+    },
+    {
+      "id": "readiness-verdict",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "iteration-reviewer",
+          "task": "Reconcile completed specialist/artifact results against required gates for the final snapshot. Report ready, blocked, or unverified, accepted exceptions, stale/missing evidence, and next actions. Requested corrections return to the single writer and affected checks rerun before a fresh verdict.",
+          "when": "always"
+        }
+      ]
+    }
+  ],
+  "completion": [
+    "The named increment, integrated product boundary, Definition of Done basis, target, and reviewed snapshot are explicit.",
+    "Requested fixes precede dependent independent checks; artifact/consumer evidence and specialist results precede the final verdict.",
+    "Ready requires all applicable required gates to pass with current evidence; confirmed required failure means blocked, otherwise required unknowns mean unverified.",
+    "Existing critical behavior and exposed new flows remain part of acceptance; unfinished work is isolated only with supporting evidence.",
+    "Accepted exceptions have an actual policy/authorization basis; criteria are not lowered to hide failures.",
+    "Review-only scope preserves source/trackers, and readiness neither publishes nor claims automatic CI/host enforcement."
+  ]
+}

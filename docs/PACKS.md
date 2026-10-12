@@ -2,19 +2,23 @@
 
 Pack declarations in `packs/*.json` select canonical profiles and teams without
 forking their instructions. Builds, installation, and optional host validation
-default to the full catalog: 28 profiles and 16 teams.
+default to the full catalog: 29 profiles and 17 teams.
 
 | Pack | Owned profiles | Owned teams | Dependencies | Total with dependencies |
 | --- | --- | --- | --- | --- |
-| core | 14 | 7 | None | 14 profiles, 7 teams |
-| science-data | 3 | 2 | core | 17 profiles, 9 teams |
-| product-growth | 8 | 5 | core, science-data | 25 profiles, 14 teams |
-| game-3d | 3 | 2 | core, science-data | 20 profiles, 11 teams |
+| core | 15 | 8 | None | 15 profiles, 8 teams |
+| science-data | 3 | 2 | core | 18 profiles, 10 teams |
+| product-growth | 8 | 5 | core, science-data | 26 profiles, 15 teams |
+| game-3d | 3 | 2 | core, science-data | 21 profiles, 12 teams |
 
 Core includes ux-designer, usability-auditor, accessibility-specialist, and `/team-ux`.
 The core UX workflow remains usable without product-growth: optional user-researcher,
 data-analyst, and copywriter candidates are omitted when unavailable. Installing
 science-data adds analytics support; product-growth adds user research and copy.
+
+Core also owns iteration-reviewer and `/team-iteration`; feature/general workflows
+use it to assess integrated product increments against accepted gates. See
+[iteration readiness](ITERATION-READINESS.md) for evidence and trigger boundaries.
 
 Science/data supports quantitative growth evaluation and game balance. Combining
 product-growth and game-3d includes the full catalog. Dependency closure is
@@ -57,6 +61,6 @@ python3 scripts/install.py --pack core --target /path/to/project/.opencode/agent
 ```
 
 The sibling `.opencode/commands` is selected automatically. Source validation checks
-the full catalog and all 91 behavior specifications even with `--pack`; reported
+the full catalog and all 95 behavior specifications even with `--pack`; reported
 profile/team counts and optional host checks concern the selected closure. Host
 checks allow unrelated additional profiles/commands and do not execute model workflows.

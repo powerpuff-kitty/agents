@@ -55,6 +55,17 @@
           "when": "always"
         }
       ]
+    },
+    {
+      "id": "integrated-product",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "iteration-reviewer",
+          "task": "Assess usable integrated behavior and accepted Definition of Done using completed technical/specialist evidence; report target/snapshot readiness and unresolved gates without publication.",
+          "when": "The scope asks for iteration closure or integrated product releasability beyond artifact readiness."
+        }
+      ]
     }
   ],
   "completion": [

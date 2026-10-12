@@ -141,6 +141,11 @@
           "agent": "accessibility-specialist",
           "task": "Assess scoped semantics, keyboard/focus, assistive use, contrast, targets, motion, and reflow with actual evidence and declared criteria.",
           "when": "The task requests deep accessibility review or involves consequential access barriers."
+        },
+        {
+          "agent": "iteration-reviewer",
+          "task": "Establish relevant accepted Definition of Done, integrated behavior, target, baseline, and gate evidence requirements without source/tracker changes.",
+          "when": "The task requests increment releasability, iteration closure, or implementation of a product increment."
         }
       ]
     },
@@ -197,8 +202,8 @@
         },
         {
           "agent": "release-engineer",
-          "task": "Reconcile artifact/check evidence and readiness gates before any authorized release action.",
-          "when": "A release was prepared or the task requests readiness assessment or execution."
+          "task": "Inspect or run applicable isolated artifact/consumer/startup checks or reuse current retained evidence, then reconcile required technical gates. Avoid shared output collisions and preserve source; do not publish in this review stage.",
+          "when": "A release was prepared, readiness/execution is requested, or the product increment has applicable accepted artifact/consumer/startup gates."
         },
         {
           "agent": "technical-artist",
@@ -218,6 +223,17 @@
       ]
     },
     {
+      "id": "iteration-readiness",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "iteration-reviewer",
+          "task": "Reconcile completed specialist and artifact results for the integrated product after verification. Report ready, blocked, or unverified for the named target/snapshot and recheck affected gates after corrections before dependent delivery actions.",
+          "when": "The task requests integrated product readiness/iteration closure or implements a product increment; unrelated research or draft artifacts do not require this stage."
+        }
+      ]
+    },
+    {
       "id": "requested-actions",
       "execution": "serial-action",
       "assignments": [
@@ -229,7 +245,7 @@
         {
           "agent": "release-engineer",
           "task": "Execute only explicitly authorized tagging, publication, or deployment after required readiness gates pass; verify actual external state and recovery information.",
-          "when": "The user explicitly authorizes the specific release operation, target, and scope, and its prerequisites are verified."
+          "when": "The user explicitly authorizes the specific release operation, target, and scope, and required technical/integrated readiness gates pass for its actual snapshot; blocked or unverified required gates prevent this dependent delivery."
         },
         {
           "agent": "project-auditor",
@@ -244,6 +260,7 @@
     "Selected specialists are available and scoped; additional project specialists honor the same limits and action boundaries.",
     "New research is validated after gathering, changed source is checked after writing, and dependent actions wait for verified prerequisites.",
     "Applicable findings and contradictions are reconciled; unfinished, failed, or unavailable checks remain explicit.",
-    "Report a concise result, selected roles, material changes/checks, and unresolved gaps without claiming every candidate ran."
+    "Report a concise result, selected roles, material changes/checks, and unresolved gaps without claiming every candidate ran.",
+    "Product-increment readiness is reconciled after completed checks and before dependent delivery; existing evidence is reused only while current, and no automatic CI trigger is claimed."
   ]
 }

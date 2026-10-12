@@ -134,7 +134,7 @@ retained evaluated runs; source/host checks do not establish those outcomes.
 ## Focused UX and accessibility addition
 
 Later on 12 October 2026 the suite gained ux-designer, usability-auditor,
-accessibility-specialist, and `/team-ux`. The current catalog contains 28 profiles,
+accessibility-specialist, and `/team-ux`. At that stage the catalog contained 28 profiles,
 16 teams, four packs, and 91 unrun behavior specifications. The new roles/workflow
 belong to core, which now contains fourteen profiles and seven teams.
 
@@ -164,3 +164,44 @@ No model UX workflow, participant study, product usability audit, or assistive-t
 session was executed in this implementation check. All 91 behavior specifications
 remain `not_run`; deterministic instruction/host checks do not establish usability,
 accessibility conformance, routing reliability, or observed user outcomes.
+
+## Iteration releasability addition
+
+The next addition on 12 October 2026 implemented iteration-reviewer and
+`/team-iteration` in core. The current suite contains 29 profiles, 17 workflows,
+four packs, and 95 unrun behavior specifications. Core contains fifteen profiles
+and eight workflows.
+
+The reviewer evaluates integrated product behavior against the accepted Definition
+of Done, named target, and current source/artifact identity. It reconciles required
+gates into ready, blocked, or unverified; stale checks, baseline failures, accepted
+exceptions, and missing evidence stay explicit. Remediation is conditional and
+serialized, followed by affected independent and artifact rechecks. Readiness does
+not imply publication or live deployment.
+
+Feature workflows establish gates before implementation and add artifact/readiness
+closure after verification. General product delivery reviews readiness before
+dependent release actions; release review can include integrated increment scope.
+Solo developer guidance distinguishes feasible self-checks from an independent
+review. The package documents per-project CI integration without installing a
+watcher, automatic model calls, branch protection, or a universal CI executor.
+
+Verification completed:
+
+- Source validation passed for 29 profiles, 17 teams, and 95 specifications.
+- Both adapters built and generated-content checks passed.
+- All 24 regression tests passed, including core-only iteration availability,
+  conditional single-writer remediation, source/review/artifact/verdict ordering,
+  early feature criteria, and general readiness before dependent external actions.
+- Local documentation links resolved and current catalog/pack counts were updated.
+- Installation added iteration-reviewer and `/team-iteration` and updated developer,
+  coordinator, and feature/general/release workflow guidance. Existing replaced files
+  were backed up; unrelated profiles/commands were preserved. Repeat dry-run reported
+  no changes across all forty-six managed profiles/commands.
+- Reload succeeded. OpenCode 2.0.27 loaded all complete profile prompts, descriptions,
+  and modes and registered all seventeen command names/descriptions in this repository
+  and Patchmancer.
+
+No model iteration workflow or actual product release assessment was executed by
+these implementation checks. All 95 behavior specifications remain `not_run`;
+source/host checks establish neither product releasability nor actual CI enforcement.

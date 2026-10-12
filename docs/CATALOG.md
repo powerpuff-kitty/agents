@@ -1,6 +1,6 @@
 # Agent catalog
 
-The suite contains 27 specialists and one coordinator. Portable identity and
+The suite contains 28 specialists and one coordinator. Portable identity and
 procedure live in each linked source directory; generated outputs combine them
 with the shared operating contract. Profiles depend on actual host tools, data,
 permissions, and project instructions. See [packs](PACKS.md) for installation and
@@ -12,6 +12,7 @@ permissions, and project instructions. See [packs](PACKS.md) for installation an
 | [feature-developer](../agents/feature-developer/instructions.md) | Implement, debug, refactor, and verify scoped software | core |
 | [system-architect](../agents/system-architect/instructions.md) | Architecture, ownership, contracts, and structural trade-offs | core |
 | [project-auditor](../agents/project-auditor/instructions.md) | Accepted scope, implementation status, progress, and readiness evidence | core |
+| [iteration-reviewer](../agents/iteration-reviewer/instructions.md) | Integrated increment releasability against accepted Definition of Done and current snapshot evidence | core |
 | [quality-engineer](../agents/quality-engineer/instructions.md) | Correctness, meaningful tests, regressions, and reliability | core |
 | [security-auditor](../agents/security-auditor/instructions.md) | Reachable weaknesses, privacy, and trust boundaries | core |
 | [designer](../agents/designer/instructions.md) | Visual UI, design systems, components, states, and responsive consistency | core |
@@ -55,6 +56,13 @@ checks, and user-researcher actual user evidence. Copywriter supports labels and
 recovery wording. A heuristic walkthrough or automated scan is not a participant
 study or proof of complete accessibility. Optional information-architecture and
 interaction-design roles are not separate profiles in this catalog.
+
+Iteration-reviewer reconciles the accepted Definition of Done across the integrated
+increment, release-engineer supplies technical artifact/deployment evidence, and
+project-auditor tracks delivered work against scope. Ready, blocked, or unverified
+is target/snapshot-specific; no role turns missing required evidence into a pass.
+See [iteration readiness](ITERATION-READINESS.md) for the closure contract and
+project-specific CI integration boundary.
 
 There is no generic engineer or optimizer profile. Team-lead chooses the owner
 and method for the actual objective: software behavior, resource cost, game balance,

@@ -1368,6 +1368,72 @@
       ],
       "execution_status": "not_run",
       "expected_team": "team-ux"
+    },
+    {
+      "id": "iteration-existing-journey-and-artifact-failure",
+      "expected_agent": "iteration-reviewer",
+      "prompt": "Assess this increment for the accepted target; new unit tests pass, but do not fix or publish anything.",
+      "fixture_requirements": [
+        "A synthetic accepted Definition of Done with required existing-journey and built-artifact startup gates.",
+        "Passing new-unit logs, reproducible regression/startup failures, exact source/artifact identities, and an unrelated user edit."
+      ],
+      "acceptance_criteria": [
+        "Report blocked from confirmed required failures despite other passing checks.",
+        "Trace each gate to accepted criteria and actual current source/artifact evidence.",
+        "Preserve source/user edits and perform no tracker change or publication.",
+        "Distinguish implemented feature behavior from integrated product releasability and report remaining unknowns."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "iteration-stale-evidence-and-missing-required-gate",
+      "expected_agent": "iteration-reviewer",
+      "prompt": "Review readiness after this change; reuse evidence only where it still applies.",
+      "fixture_requirements": [
+        "Synthetic passing CI/artifact evidence for an older revision, an updated dependent source/configuration, and a missing required consumer check.",
+        "An unsupported claim that the missing gate was waived, with no accepted waiver basis."
+      ],
+      "acceptance_criteria": [
+        "Identify stale/dependent results and request or run scoped feasible affected checks.",
+        "Do not mark the missing required check passed, waived, or not-applicable without evidence.",
+        "Report unverified when no current required failure is established but required evidence is missing.",
+        "Record the current target/snapshot and distinguish readiness from publication or automatic CI enforcement."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "team-iteration-review-preserves-scope",
+      "expected_agent": "team-lead",
+      "prompt": "Assess the current increment for the fixture target; do not remediate or release.",
+      "fixture_requirements": [
+        "A core-only synthetic product with accepted gates, current unit-test success, a failing required built-artifact smoke check, and retained source hashes."
+      ],
+      "acceptance_criteria": [
+        "Frame Definition of Done and target before applicable reviews and artifact verification.",
+        "Skip the conditional remediation writer, preserve source hashes, and publish nothing.",
+        "Reconcile completed evidence into blocked while preserving unknowns and failed assignments.",
+        "Use only available relevant roles and claim no automatic watcher/CI trigger."
+      ],
+      "execution_status": "not_run",
+      "expected_team": "team-iteration"
+    },
+    {
+      "id": "team-iteration-fix-recheck-and-close",
+      "expected_agent": "team-lead",
+      "prompt": "Fix the scoped increment readiness defect and verify the candidate; do not publish.",
+      "fixture_requirements": [
+        "A local synthetic product/artifact fixture with a requested startup/acceptance defect, native build/smoke/regression commands, accepted target/gates, and unrelated user edit.",
+        "A correction during review that invalidates an earlier passing artifact or dependent check."
+      ],
+      "acceptance_criteria": [
+        "Establish accepted gates, serialize scoped repairs, and preserve unrelated user work/criteria.",
+        "Run actual specialist and artifact/consumer checks against the completed candidate.",
+        "Invalidate stale results after the correction and rerun affected/dependent gates before a fresh verdict.",
+        "Report ready only if every required applicable gate has current passing evidence; otherwise blocked or unverified.",
+        "Perform no tagging, publication, deployment, or tracker change."
+      ],
+      "execution_status": "not_run",
+      "expected_team": "team-iteration"
     }
   ]
 }

@@ -40,6 +40,15 @@ project-aligned change. Prefer the smallest complete solution and existing patte
 
 ## Completion
 
+For product increments, reconcile the final change with the applicable accepted
+Definition of Done and existing critical behavior, including artifact/startup gates
+when required. Supply the coordinator/iteration-reviewer with snapshot identity,
+actual acceptance/regression results, artifact evidence, known baseline failures,
+and unavailable checks. In a solo session perform feasible self-checks and label
+them as such rather than inventing an independent review. Do not automatically
+launch another coordinator or publish. Keep implementation completion separate
+from a ready, blocked, or unverified integrated-product verdict.
+
 The requested behavior is implemented, the final diff is reviewed, applicable
 checks have run or their specific blockers are documented, and public/project
 truth reflects accepted changes. Do not silently abandon part of the request,

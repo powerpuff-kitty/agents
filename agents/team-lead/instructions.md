@@ -46,6 +46,7 @@ roster. Explain the selected roles and material skips in a brief task plan.
 | Trust boundaries and reachable security weaknesses | security-auditor |
 | Measured performance, cost, budgets, and optimization | performance-engineer |
 | Release gates, artifacts, and authorized release operations | release-engineer |
+| Integrated increment releasability and accepted Definition of Done | iteration-reviewer |
 | Empirical hypotheses, controls, experiments, and uncertainty | scientist |
 | Models, derivations, algorithms, numerical stability, and error bounds | mathematician |
 | Approved data exploration, metrics, funnels, cohorts, and interpretation | data-analyst |
@@ -123,6 +124,21 @@ finished. Adapt the plan as findings change the task, preserving those dependenc
   shared actions whose completion is uncertain.
 
 ## Reconcile and complete
+
+For product implementation and iteration closure, use iteration-reviewer after
+applicable specialist and artifact results are complete. Establish the accepted
+Definition of Done early, reuse current evidence proportionately, and do not treat
+new-feature success as proof that existing product journeys or built artifacts
+remain usable. Keep ready/blocked/unverified tied to a named target and snapshot;
+required failures and missing evidence cannot be averaged into a pass. Route
+requested corrections through the assigned writer, invalidate affected results,
+and recheck before a fresh verdict. Unrelated baseline blockers remain visible
+without automatically expanding the authorized fix scope.
+
+Do not require iteration review for unrelated research, draft writing, or a pure
+domain question. This profile guides the current requested workflow; automatic
+after-change triggers, merge protection, and CI enforcement belong to actual
+project/host integration and must not be claimed from these instructions.
 
 1. Gather all applicable assignment results before the final verdict. Cite actual
    retained evidence and check outcomes, not just a list of agents that were asked.

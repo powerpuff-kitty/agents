@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "iteration-reviewer",
+  "title": "Iteration Reviewer",
+  "description": "Assess whether each integrated product increment meets its accepted Definition of Done and remains releasable for a named target. Reconcile requirement, regression, artifact/startup, UX/accessibility, security, compatibility, documentation, and recovery evidence into ready, blocked, or unverified. Use for iteration/feature closure; use release-engineer for artifact operations and authorized publication."
+}

@@ -10,10 +10,11 @@ These are reusable workflow instructions, not a new runtime or a multi-select UI
 | `/team <task>` | Derived from the request | Select the smallest useful set of available specialists, with conditional research/review, serialized implementation, verification, and explicitly authorized actions |
 | `/team-research <question>` | Research/review only | Researcher gathers cited evidence, then evidence-validator and applicable domain specialists assess it; team-lead reconciles the answer |
 | `/team-audit <scope>` | Review only | Project-auditor scopes accepted work, researcher gathers references when needed, then eight core specialists review bounded domains; team-lead consolidates results |
-| `/team-feature <feature>` | Implement the described feature | Applicable architecture/design framing, one feature-developer source writer, then independent quality and relevant conditional reviews |
+| `/team-feature <feature>` | Implement the described feature | Establish accepted Definition of Done, frame relevant domains, implement with one writer, independently verify, check applicable artifact evidence, then assess integrated readiness |
 | `/team-ui <screens or journey>` | Review only | Designer establishes coverage, UX-designer maps relevant journeys, then quality, usability, accessibility, evidence, and applicable performance reviews follow |
 | `/team-ux <task or journey>` | Derived from the request | Frame task scope, use available user evidence, assess/design journeys, align UI/copy/access, implement only requested changes, then independently check and reconcile |
 | `/team-release <target>` | Readiness review | Release-engineer establishes gates, specialists assess applicable evidence, and release-engineer reconciles the readiness matrix |
+| `/team-iteration <increment or target>` | Derived from the request | Establish accepted gates and snapshot, gather relevant context, apply only requested fixes, complete specialist/artifact checks, then report ready, blocked, or unverified |
 | `/team-product <scope>` | Product definition/review | Product-manager frames the problem, evidence/feasibility roles assess it, then requirements/flows and acceptance checks follow |
 | `/team-science <question>` | Derived from the request | Scientist frames the question, methods are reviewed, the protocol is finalized, requested implementation/execution is serialized, then results are interpreted and independently checked |
 | `/team-data <question>` | Derived from the request | Data-analyst checks scope/provenance, relevant methods are reviewed, approved data is analyzed, requested artifacts are saved, and results are independently checked |
@@ -104,6 +105,32 @@ requirements route complete flow design to UX-designer and visual alignment to
 designer. Numeric usability or accessibility scores require a disclosed rubric
 and actual evidence rather than an aggregate guess.
 
+## Releasability and iteration closure
+
+Iteration-reviewer owns integrated-product Definition of Done assessment;
+release-engineer owns technical artifact/consumer evidence and authorized delivery.
+`/team-iteration` assesses a named increment and target, with conditional remediation
+through one writer followed by applicable independent and artifact checks. It works
+in core-only exports and omits the optional product-manager candidate when absent.
+
+`/team-feature` establishes applicable gates before writing and closes with a
+readiness assessment after verification/artifact evidence. `/team` reviews product
+increments after applicable checks and before dependent release actions. Other
+coordinated product implementations use the same closure guidance; solo developers
+report feasible self-checks without inventing an independent review.
+
+Every required applicable gate needs current supporting evidence for ready.
+A confirmed required failure means blocked; required unknowns without an established
+failure mean unverified. Keep baseline failures, accepted exceptions, and stale
+results explicit. Requested corrections invalidate affected results and require
+rechecks. Implementation completion may coexist with blocked or unverified product
+readiness and must be reported separately.
+
+These prompts do not automatically run after changes or enforce CI/merge protection.
+Use the actual product's checks and completion process for enforcement. See
+[iteration readiness](ITERATION-READINESS.md) for the evidence contract and practical
+integration sequence. Review alone authorizes neither fixes nor publication.
+
 ## Coordination rules
 
 The coordinator provides isolated children with scope, accepted requirements,
@@ -135,7 +162,7 @@ python3 scripts/install.py --tool opencode
 python3 scripts/validate.py --opencode ~/.opencode/bin/opencode
 ```
 
-The installer writes twenty-eight profiles and sixteen commands by default.
+The installer writes twenty-nine profiles and seventeen commands by default.
 Use repeatable `--pack` options for a smaller dependency-complete set. Team-lead is a
 primary profile, while specialists retain both primary and child eligibility.
 Command frontmatter selects team-lead and uses `subagent: false`, keeping the
@@ -160,6 +187,6 @@ serially and must label them coordinator-performed rather than independent runs.
 The command registry verifies that the host discovers the slash commands; source
 and rendering tests verify their coordinator, scope placeholder, and parent-session
 mapping. No actual end-to-end model team run is established by these checks.
-The 91 behavioral scenarios remain unrun until evaluated sessions and artifacts
+The 95 behavioral scenarios remain unrun until evaluated sessions and artifacts
 are retained. Parallel limits and review-only rules are prompt contracts rather
 than runtime-enforced semaphores or read-only permissions.

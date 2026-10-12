@@ -1,7 +1,7 @@
 # Agent behavior acceptance scenarios
 
-The [91 scenarios](behavior-cases.json) include two role-specific cases for each of
-twenty-eight profiles, three shared cases, and two cases for each of sixteen team presets.
+The [95 scenarios](behavior-cases.json) include two role-specific cases for each of
+twenty-nine profiles, three shared cases, and two cases for each of seventeen team presets.
 They cover review-only scope, authorized fixes,
 unavailable checks, existing user edits, project-context discovery, untrusted
 instructions, scoring boundaries, release evidence, unsupported claims, focused
@@ -15,6 +15,9 @@ AI observations, localization integrity, game evidence, and missing 3D/runtime t
 UX cases add context preservation, required guardrails, recovery, heuristic-versus-study
 limits, clean automation with manual defects, criterion exceptions, and core-only
 workflow availability with independent review after requested implementation.
+Iteration cases cover regressions despite new-test success, built-artifact startup
+failures, stale evidence, missing required gates, invented waivers, review-only scope,
+and rechecking dependent gates after scoped corrections.
 
 Every specification is marked `not_run`. Source validation checks scenario shape,
 role/team references, and coverage; it does not execute a model or determine outcomes.

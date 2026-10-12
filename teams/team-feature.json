@@ -2,7 +2,7 @@
   "schema_version": 1,
   "id": "team-feature",
   "title": "Feature delivery",
-  "description": "Coordinate scoped feature implementation followed by independent verification.",
+  "description": "Deliver a scoped feature, independently verify it, and assess integrated product releasability against the accepted Definition of Done.",
   "coordinator": "team-lead",
   "intent": "Deliver the described feature against accepted requirements, preserving project boundaries and existing user edits. Source changes are authorized for the described feature; external delivery is not implied.",
   "mode": "delivery",
@@ -12,6 +12,11 @@
       "id": "frame",
       "execution": "parallel-review",
       "assignments": [
+        {
+          "agent": "iteration-reviewer",
+          "task": "Establish the applicable accepted Definition of Done, integrated critical behavior, target/snapshot, and required acceptance/artifact gates before implementation. Scale checks to the change; label proposed criteria and unresolved evidence.",
+          "when": "always"
+        },
         {
           "agent": "system-architect",
           "task": "Review relevant contracts, ownership, and structural trade-offs before implementation.",
@@ -80,12 +85,35 @@
           "when": "The feature changes semantics, keyboard/focus, forms, accessible interactions, targets, reflow, or other consequential accessibility behavior."
         }
       ]
+    },
+    {
+      "id": "artifact-evidence",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "release-engineer",
+          "task": "Inspect or run applicable isolated built-artifact/consumer/startup checks and relevant configuration/compatibility/recovery evidence from the completed source. Do not change release metadata, publish, or deploy.",
+          "when": "The accepted Definition of Done or target requires artifact/startup/operational gates; retained evidence is reused only when current and applicable."
+        }
+      ]
+    },
+    {
+      "id": "iteration-readiness",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "iteration-reviewer",
+          "task": "Assess integrated acceptance and current specialist/artifact evidence after verification. Report ready, blocked, or unverified for the final target/snapshot; preserve baseline failures and route scoped corrections through the writer before affected rechecks.",
+          "when": "always"
+        }
+      ]
     }
   ],
   "completion": [
     "The described feature is implemented, and independent verification follows the completed writer snapshot.",
     "Applicable conditional reviews are completed or explicitly unverified; skipped assignments have reasons.",
     "Corrections are serialized through the implementation owner and affected checks are re-run.",
-    "Source changes and check results are reported; commit, publication, or deployment is not inferred from delivery intent."
+    "Source changes and check results are reported; commit, publication, or deployment is not inferred from delivery intent.",
+    "Feature implementation completion and integrated releasability are reported separately; no required failure or unknown is converted to ready, and readiness does not authorize publication."
   ]
 }

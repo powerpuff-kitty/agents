@@ -1,10 +1,10 @@
 # Reusable agents
 
-Twenty-seven specialist profiles and a team lead share one operating contract. Portable role
+Twenty-eight specialist profiles and a team lead share one operating contract. Portable role
 instructions are the source of truth; adapters produce tool-specific versions.
 The repository currently supports plain Markdown bundles and OpenCode profiles.
 
-The [agent catalog](docs/CATALOG.md) lists all 28 roles. Sixteen [team workflows](docs/TEAMS.md)
+The [agent catalog](docs/CATALOG.md) lists all 29 roles. Seventeen [team workflows](docs/TEAMS.md)
 cover general tasks, engineering, research, science/data, product/growth, and game/3D
 work. Four [installable packs](docs/PACKS.md) share the same canonical sources.
 
@@ -55,7 +55,7 @@ is supplied; replacements are backed up
 under the target's parent `backups/` directory. Reinstallation without changes
 does not rewrite the profiles. Obsolete files are not silently deleted.
 
-Without `--pack`, builds and installation include all 28 profiles and 16 commands.
+Without `--pack`, builds and installation include all 29 profiles and 17 commands.
 For a smaller installation, select packs; dependencies are included automatically:
 
 ```sh
@@ -100,6 +100,8 @@ Type these custom slash commands in OpenCode with the requested scope:
 /team-ux review navigation, task continuity, and recovery
 /team-ux fix the scoped onboarding flow and verify it
 /team-release assess version 1.2.0 readiness
+/team-iteration assess whether this increment is releasable
+/team-iteration fix the scoped readiness defects and verify the increment
 /team-data analyze the supplied cohort dataset
 /team-science design an experiment protocol without running it
 /team-launch plan the launch from our approved product facts
@@ -116,6 +118,11 @@ claims and relevant domain implications. The audit preset includes nine core
 specialists plus research when needed; other presets use conditional assignments.
 The UX team adds focused journey design, independent task walkthroughs, and deep
 accessibility checks, with optional research/data/copy roles when installed.
+`/team-feature` establishes the accepted Definition of Done before implementation
+and adds artifact/integrated readiness after verification. `/team-iteration` returns
+ready, blocked, or unverified for a named target and snapshot, with fixes only when
+requested. See [iteration readiness](docs/ITERATION-READINESS.md). These instructions
+do not install automatic CI or after-change triggers.
 They specify ordered stages, a requested maximum of three independent active
 assignments, serialized source writers, and consolidated evidence.
 
@@ -153,7 +160,7 @@ python3 -m unittest discover -s tests -v
 ```
 
 Source validation, deterministic rendering, installer tests, and actual host
-profile/command loading are distinct from model behavior. The 91 scenarios in
+profile/command loading are distinct from model behavior. The 95 scenarios in
 [evals](evals/README.md) remain `not_run` until an actual evaluated session is
 retained. Do not report passing instruction-file checks as agent reliability.
 
