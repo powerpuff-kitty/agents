@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "id": "team-launch",
+  "title": "Go-to-market planning",
+  "description": "Coordinate evidence-backed positioning, launch sequencing, copy/design assets, and commercial/technical readiness.",
+  "coordinator": "team-lead",
+  "intent": "Produce the requested GTM plan, draft assets, and readiness assessment from approved product facts. Planning does not authorize spend, outreach, publication, pricing changes, or deployment.",
+  "mode": "review",
+  "max_parallel": 3,
+  "stages": [
+    {
+      "id": "frame",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "gtm-strategist",
+          "task": "Establish target market, accepted product scope, resources, launch objective, constraints, and readiness criteria.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "research",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "researcher",
+          "task": "Gather current market, competitor, channel, and pricing evidence against the bounded brief.",
+          "when": "always"
+        },
+        {
+          "agent": "product-manager",
+          "task": "Check capability truth, user problem, scope, onboarding, and acceptance gaps.",
+          "when": "always"
+        },
+        {
+          "agent": "data-analyst",
+          "task": "Inspect actual traction/baselines and define measurable outcomes; preserve unknowns.",
+          "when": "Approved data is available or quantitative launch assumptions must be assessed."
+        }
+      ]
+    },
+    {
+      "id": "position",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "marketing-strategist",
+          "task": "Define evidence-backed audience, positioning, value propositions, objections, and message hierarchy.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "plan-and-drafts",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "gtm-strategist",
+          "task": "Build launch sequencing, distribution/sales motion, pricing hypotheses, dependencies, and measurement from completed positioning.",
+          "when": "always"
+        },
+        {
+          "agent": "copywriter",
+          "task": "Return requested launch/landing/email drafts using approved positioning and supported claims.",
+          "when": "Copy assets are in the requested scope."
+        },
+        {
+          "agent": "designer",
+          "task": "Assess or propose user-facing launch assets and onboarding flows against approved positioning.",
+          "when": "The requested plan includes visual assets or user-facing launch flows."
+        },
+        {
+          "agent": "localization-specialist",
+          "task": "Assess specified locale adaptations and terminology for the completed positioning brief.",
+          "when": "The launch targets specified additional locales."
+        }
+      ]
+    },
+    {
+      "id": "readiness",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "evidence-validator",
+          "task": "Check completed marketing, pricing, market, and projected-outcome claims; distinguish assumptions from observations.",
+          "when": "always"
+        },
+        {
+          "agent": "release-engineer",
+          "task": "Assess applicable technical artifact/deployment gates without releasing.",
+          "when": "A software launch includes technical release readiness."
+        },
+        {
+          "agent": "seo-specialist",
+          "task": "Assess search discovery readiness and site/content gaps.",
+          "when": "Search discovery is material to the launch."
+        },
+        {
+          "agent": "geo-specialist",
+          "task": "Assess available AI-answer visibility evidence and factual representation gaps.",
+          "when": "AI-answer visibility is explicitly in launch scope."
+        }
+      ]
+    }
+  ],
+  "completion": [
+    "The plan and requested drafts reflect approved product facts, evidence, constraints, and ownership.",
+    "Commercial and technical readiness are separate, with unresolved gates and unverified metrics explicit.",
+    "No launch execution, publication, account change, or spend is inferred from planning."
+  ]
+}

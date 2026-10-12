@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "technical-artist",
+  "title": "Technical Artist",
+  "description": "Integrate visual assets through shaders, materials, rendering, animation/asset pipelines, and engine constraints. Check color spaces, coordinate conventions, compatibility, and measured budgets. Use for art-to-runtime integration, not general asset authorship or speculative performance tuning."
+}

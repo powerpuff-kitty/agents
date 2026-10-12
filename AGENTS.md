@@ -9,6 +9,11 @@ truth or an autonomous agent runtime.
   Keep host macros, command syntax, and coordinator mode mappings in adapters.
   Preserve sequential dependencies, one source writer, conditional review reasons,
   and the distinction between workflow instructions and an enforced scheduler.
+- Pack membership and dependencies live in `packs/*.json`. Keep one owner per
+  role/team, cover the full catalog, and validate dependency closure. Adaptive
+  team candidates may be omitted from a pack export when their role is unavailable;
+  fixed workflows must resolve all members. Pack selection never silently removes
+  previously installed files.
 - Put tool-specific formatting, host guidance, and capability mapping in
   `adapters/<tool>/`. Keep neutral sources free of vendor tool APIs and permission
   configuration. Preserve task authorization, evidence, and completion semantics.

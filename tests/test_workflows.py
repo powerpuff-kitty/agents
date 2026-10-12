@@ -1,6 +1,7 @@
 """Behavioral contracts for building and installing profiles, without model calls."""
 import json
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -40,7 +41,7 @@ class WorkflowTests(unittest.TestCase):
             result = run("install.py", "--target", target, "--dry-run")
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertFalse(target.exists())
-            self.assertEqual(len(json.loads(result.stdout)["changed"]), 17)
+            self.assertEqual(len(json.loads(result.stdout)["changed"]), 40)
             self.assertFalse((Path(temporary) / "commands").exists())
 
     def test_install_preserves_other_profiles_and_is_idempotent(self):
@@ -96,7 +97,7 @@ class WorkflowTests(unittest.TestCase):
             result = run("build.py", "--adapter", "portable", "--output", output)
             self.assertEqual(result.returncode, 0, result.stderr)
             files = list((output / "agents").glob("*.md"))
-            self.assertEqual(len(files), 11)
+            self.assertEqual(len(files), 25)
             for path in files:
                 body = path.read_text()
                 self.assertEqual(body.count("## Operating contract"), 1)
@@ -142,7 +143,7 @@ class WorkflowTests(unittest.TestCase):
             result = run("build.py", "--adapter", "opencode", "--output", output)
             self.assertEqual(result.returncode, 0, result.stderr)
             commands = list((output / "commands").glob("*.md"))
-            self.assertEqual(len(commands), 6)
+            self.assertEqual(len(commands), 15)
             for command in commands:
                 front, body = command.read_text()[4:].split("\n---\n", 1)
                 self.assertIn("agent: team-lead", front.splitlines())
@@ -180,7 +181,7 @@ class WorkflowTests(unittest.TestCase):
             base = Path(temporary)
             result = run("install.py", "--target", base / "profiles", "--agents-only")
             self.assertEqual(result.returncode, 0, result.stderr)
-            self.assertEqual(len(json.loads(result.stdout)["changed"]), 11)
+            self.assertEqual(len(json.loads(result.stdout)["changed"]), 25)
             self.assertFalse((base / "commands").exists())
 
     def test_nested_profile_and_command_destinations_are_rejected(self):
@@ -220,7 +221,7 @@ class WorkflowTests(unittest.TestCase):
             result = run("build.py", "--adapter", "portable", "--output", output)
             self.assertEqual(result.returncode, 0, result.stderr)
             teams = list((output / "teams").glob("*.md"))
-            self.assertEqual(len(teams), 6)
+            self.assertEqual(len(teams), 15)
             for team in teams:
                 body = team.read_text()
                 self.assertNotIn("OpenCode", body)
@@ -313,6 +314,87 @@ class WorkflowTests(unittest.TestCase):
         with patch.object(validator.subprocess, "check_output", side_effect=wrong_location):
             with self.assertRaisesRegex(ValueError, "different project location"):
                 validator.validate("fixture-host")
+
+    def test_pack_selection_resolves_dependencies_and_filters_candidates(self):
+        for requested, agent_count, team_count in ((["core"], 11, 6), (["science-data"], 14, 8),
+                                                  (["product-growth"], 22, 13), (["game-3d"], 17, 10),
+                                                  (["product-growth", "game-3d"], 25, 15)):
+            with self.subTest(packs=requested):
+                files = build.compile_profiles("portable", requested)
+                manifest = json.loads(files["build-manifest.json"])
+                self.assertEqual(len(manifest["agents"]), agent_count)
+                self.assertEqual(len(manifest["teams"]), team_count)
+                self.assertIn("core", manifest["packs"])
+                agents, _ = build.load_agents()
+                teams, _ = build.load_teams(agents)
+                selected, workflows, _, _ = build.select_catalog(agents, teams, requested)
+                names = {a["metadata"]["id"] for a in selected}
+                for team in workflows:
+                    self.assertTrue({a["agent"] for stage in team["metadata"]["stages"]
+                                     for a in stage["assignments"]} <= names)
+        core = build.compile_profiles("opencode", ["core"])
+        self.assertNotIn("Agent: geo-specialist", core["commands/team.md"])
+        self.assertNotIn("commands/team-geo.md", core)
+        full = build.compile_profiles("opencode")
+        self.assertIn("Agent: geo-specialist", full["commands/team.md"])
+        self.assertIn("commands/team-geo.md", full)
+
+    def test_pack_graph_rejects_cycles_unknowns_missing_dependencies_and_ownership(self):
+        agents, _ = build.load_agents()
+        teams, _ = build.load_teams(agents)
+        for kind, expected in (("cycle", "dependency cycle"), ("unknown", "Unknown pack dependency"),
+                               ("duplicate", "multiply owned"), ("unowned", "cover every"),
+                               ("missing", "cannot resolve team")):
+            with self.subTest(kind=kind), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary)
+                shutil.copytree(ROOT / "packs", root / "packs")
+                path = root / "packs" / ("product-growth.json" if kind == "missing" else "core.json")
+                value = json.loads(path.read_text())
+                if kind == "cycle":
+                    value["requires"] = ["science-data"]
+                elif kind == "unknown":
+                    value["requires"] = ["missing-pack"]
+                elif kind == "duplicate":
+                    value["agents"].append("scientist")
+                elif kind == "unowned":
+                    value["agents"].remove("designer")
+                else:
+                    value["requires"] = ["core"]
+                path.write_text(json.dumps(value))
+                with patch.object(build, "ROOT", root), self.assertRaisesRegex(ValueError, expected):
+                    build.load_packs(agents, teams)
+
+    def test_partial_install_preserves_other_packs_and_rejects_unknown_pack_before_writes(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            base = Path(temporary)
+            target = base / "agents"
+            invalid = run("install.py", "--target", target, "--pack", "unknown-pack")
+            self.assertNotEqual(invalid.returncode, 0)
+            self.assertFalse(target.exists())
+            first = run("install.py", "--target", target, "--pack", "core")
+            self.assertEqual(first.returncode, 0, first.stderr)
+            self.assertEqual(len(json.loads(first.stdout)["changed"]), 17)
+            self.assertFalse((target / "scientist.md").exists())
+            more = run("install.py", "--target", target, "--pack", "game-3d")
+            self.assertEqual(more.returncode, 0, more.stderr)
+            asset = target / "artist-3d.md"
+            before = asset.read_bytes(), asset.stat().st_mtime_ns
+            narrower = run("install.py", "--target", target, "--pack", "core")
+            self.assertEqual(narrower.returncode, 0, narrower.stderr)
+            self.assertEqual((asset.read_bytes(), asset.stat().st_mtime_ns), before)
+            self.assertTrue((base / "commands/team-3d.md").exists())
+            again = run("install.py", "--target", target, "--pack", "core")
+            self.assertEqual(again.returncode, 0, again.stderr)
+            self.assertEqual(json.loads(again.stdout)["changed"], [])
+
+    def test_pack_builds_have_separate_default_destinations(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            with patch.object(build, "ROOT", root), patch.object(build, "compile_profiles", return_value={"test.md": "body"}):
+                full = build.build("portable")
+                partial = build.build("portable", packs=["core"])
+                self.assertNotEqual(full, partial)
+                self.assertEqual(partial.name, "portable-core")
 
 
 if __name__ == "__main__":

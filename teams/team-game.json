@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "id": "team-game",
+  "title": "Game systems and prototype",
+  "description": "Design scoped mechanics, model balance when relevant, build requested prototypes, and check actual playtest/quality evidence.",
+  "coordinator": "team-lead",
+  "intent": "Complete the requested game design, prototype, or balance assessment against the intended player experience. Do not invent fun, retention, telemetry, real playtests, or production economy changes.",
+  "mode": "adaptive",
+  "max_parallel": 3,
+  "stages": [
+    {
+      "id": "design",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "game-designer",
+          "task": "Establish experience goals, rules, loops, state transitions, tuning parameters, constraints, and acceptance/playtest hypotheses.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "feasibility",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "mathematician",
+          "task": "Review consequential economy/probability/balance models and numerical assumptions.",
+          "when": "The mechanics rely on nontrivial quantitative models."
+        },
+        {
+          "agent": "system-architect",
+          "task": "Assess runtime/state/multiplayer/persistence boundaries.",
+          "when": "Consequential engine or structural choices are involved."
+        },
+        {
+          "agent": "designer",
+          "task": "Review interface/input/accessibility requirements and states.",
+          "when": "The scope includes a user-facing interface or input flow."
+        },
+        {
+          "agent": "technical-artist",
+          "task": "Assess asset/shader/rendering integration constraints and budgets.",
+          "when": "Visual runtime integration affects the requested scope."
+        }
+      ]
+    },
+    {
+      "id": "prototype",
+      "execution": "exclusive-write",
+      "assignments": [
+        {
+          "agent": "feature-developer",
+          "task": "Implement only the requested bounded game prototype or tuning change with reproducible fixtures and applicable checks.",
+          "when": "The user requests prototype implementation or scoped source/tuning changes."
+        }
+      ]
+    },
+    {
+      "id": "evaluate",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "game-designer",
+          "task": "Assess completed design/prototype and actual supplied or authorized local playtest evidence; distinguish predictions from observed experience.",
+          "when": "always"
+        },
+        {
+          "agent": "quality-engineer",
+          "task": "Review applicable correctness, edge states, deterministic checks, and regressions.",
+          "when": "A runnable prototype or changed source is available."
+        },
+        {
+          "agent": "performance-engineer",
+          "task": "Verify relevant measured budgets using comparable scenes/workloads.",
+          "when": "Performance budgets or claims matter to the prototype."
+        },
+        {
+          "agent": "data-analyst",
+          "task": "Analyze actual approved gameplay telemetry/results without inventing players or enjoyment.",
+          "when": "Approved gameplay data is available."
+        },
+        {
+          "agent": "evidence-validator",
+          "task": "Check material balance/probability/experience claims against completed evidence.",
+          "when": "The deliverable makes consequential quantitative or empirical claims."
+        }
+      ]
+    }
+  ],
+  "completion": [
+    "The bounded design/prototype and requested checks are complete against explicit experience goals.",
+    "Real observations, simulations, models, and predicted experience are distinguished.",
+    "Implementation is serialized and no real-user study, live economy, monetization, or publication is inferred."
+  ]
+}

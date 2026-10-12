@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "product-growth",
+  "title": "Product and growth",
+  "description": "Product/user research, messaging, go-to-market, search/AI visibility, and localization.",
+  "requires": [
+    "core",
+    "science-data"
+  ],
+  "agents": [
+    "copywriter",
+    "geo-specialist",
+    "gtm-strategist",
+    "localization-specialist",
+    "marketing-strategist",
+    "product-manager",
+    "seo-specialist",
+    "user-researcher"
+  ],
+  "teams": [
+    "team-geo",
+    "team-growth",
+    "team-launch",
+    "team-product",
+    "team-seo"
+  ]
+}

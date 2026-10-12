@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "id": "team-geo",
+  "title": "AI-answer visibility",
+  "description": "Assess observed AI mentions/citations and factual representation, implement requested improvements, and independently check claims.",
+  "coordinator": "team-lead",
+  "intent": "Complete the requested GEO assessment or scoped changes from actual observed/provided evidence. Distinguish platform-specific behavior, variable samples, hypotheses, and measured results; no inclusion guarantee or unrequested external testing.",
+  "mode": "adaptive",
+  "max_parallel": 3,
+  "stages": [
+    {
+      "id": "baseline",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "geo-specialist",
+          "task": "Define prompts/platforms/locale, inspect authorized actual observations or provided results, and record sampling/access gaps.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "assess",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "seo-specialist",
+          "task": "Assess relevant shared crawl/index/content foundations and current technical requirements.",
+          "when": "always"
+        },
+        {
+          "agent": "researcher",
+          "task": "Gather authoritative current platform rules and supporting public sources.",
+          "when": "Current or niche platform facts need verification."
+        },
+        {
+          "agent": "marketing-strategist",
+          "task": "Review identity/positioning consistency against approved public facts.",
+          "when": "Public identity or messaging gaps affect the requested assessment."
+        },
+        {
+          "agent": "copywriter",
+          "task": "Return requested supported content drafts addressing representation/source gaps.",
+          "when": "Content drafts are requested."
+        },
+        {
+          "agent": "data-analyst",
+          "task": "Assess available sampling, denominators, repeated observations, and comparable measurement conditions.",
+          "when": "Quantitative visibility comparisons or outcome rates are requested."
+        }
+      ]
+    },
+    {
+      "id": "implement",
+      "execution": "exclusive-write",
+      "assignments": [
+        {
+          "agent": "feature-developer",
+          "task": "Implement only requested public-source/content changes with relevant checks; disclose no private project information.",
+          "when": "The user requests source/content implementation."
+        }
+      ]
+    },
+    {
+      "id": "reassess",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "geo-specialist",
+          "task": "Review completed deliverable; repeat measurements only within actual authorization/access and mark unavailable post-change evidence.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "validate",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "evidence-validator",
+          "task": "Check completed citations, representation claims, numerical denominators, freshness, and causal-inference limits.",
+          "when": "always"
+        }
+      ]
+    }
+  ],
+  "completion": [
+    "The scope, actual observations, platform conditions, citations, and access gaps are reported.",
+    "New evidence/content is checked after completion; unsupported causal or guaranteed-visibility claims are excluded.",
+    "Private data, external query/spend, account, and publication boundaries follow task authority."
+  ]
+}

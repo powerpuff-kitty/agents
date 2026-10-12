@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "localization-specialist",
+  "title": "Localization Specialist",
+  "description": "Adapt language, terminology, formats, cultural context, and UI behavior for specified locales. Check message completeness, pluralization, directionality, layout, and meaning. Use for localization rather than inventing product facts or certifying legal translations."
+}

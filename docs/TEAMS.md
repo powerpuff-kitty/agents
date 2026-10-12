@@ -13,11 +13,21 @@ These are reusable workflow instructions, not a new runtime or a multi-select UI
 | `/team-feature <feature>` | Implement the described feature | Applicable architecture/design framing, one feature-developer source writer, then independent quality and relevant conditional reviews |
 | `/team-ui <screens or journey>` | Review only | Designer establishes representative coverage, followed by quality/evidence checks and performance review when relevant |
 | `/team-release <target>` | Readiness review | Release-engineer establishes gates, specialists assess applicable evidence, and release-engineer reconciles the readiness matrix |
+| `/team-product <scope>` | Product definition/review | Product-manager frames the problem, evidence/feasibility roles assess it, then requirements/flows and acceptance checks follow |
+| `/team-science <question>` | Derived from the request | Scientist frames the question, methods are reviewed, the protocol is finalized, requested implementation/execution is serialized, then results are interpreted and independently checked |
+| `/team-data <question>` | Derived from the request | Data-analyst checks scope/provenance, relevant methods are reviewed, approved data is analyzed, requested artifacts are saved, and results are independently checked |
+| `/team-launch <product>` | GTM planning/review | Gather evidence, define positioning, create requested plan/drafts, and reconcile commercial/technical readiness without launching |
+| `/team-growth <goal>` | Derived from the request | Establish actual baselines, diagnose hypotheses, implement only requested changes, run only authorized experiments, and assess actual outcomes |
+| `/team-seo <scope>` | Derived from the request | Audit search eligibility/content, gather relevant support, apply requested fixes, then verify completed outputs and evidence |
+| `/team-geo <scope>` | Derived from the request | Establish observed/provided AI visibility, assess source/representation gaps, apply requested improvements, then reassess and validate claims |
+| `/team-game <scope>` | Derived from the request | Define mechanics/experience, assess balance/feasibility, implement a requested prototype, then check actual design/quality/playtest evidence |
+| `/team-3d <brief>` | Derived from the request | Establish the brief/runtime constraints, create requested assets, integrate requested completed assets sequentially, then check actual visual/runtime evidence |
 
 The audit preset is the broad core-specialist entry point. Every applicable assignment
 must produce an actual result or an explicit failed/blocked state. Other presets
 explain conditional inclusions and skips instead of invoking every role for every
-small task. If scope is empty, a clear current task can supply it; otherwise the
+small task. New domain workflows belong to their [packs](PACKS.md); the core audit
+does not automatically invoke every marketing or art role. If scope is empty, a clear current task can supply it; otherwise the
 coordinator asks only for the missing critical input.
 
 ## General and research teams
@@ -33,7 +43,20 @@ checking to evidence-validator, structural decisions to system-architect, UI wor
 to designer, implementation to feature-developer, correctness to quality-engineer,
 security to security-auditor, profiling to performance-engineer, scope/progress to
 project-auditor, and release work to release-engineer. Irrelevant assignments and
-empty stages are skipped. This is model-interpreted routing, not a classifier.
+empty stages are skipped. The [full catalog](CATALOG.md) adds science, mathematics,
+data analysis, product/user research, copy, marketing/GTM, SEO/GEO, localization,
+game design, 3D assets, and technical art. Team-lead selects those only when relevant
+and available. This is model-interpreted routing, not a classifier.
+
+For requested specialist artifacts, a capable domain role may replace the general
+developer as the exclusive writer. A copywriter can own saved content, data-analyst
+analysis artifacts, artist-3d assets, and technical-artist integration. Asset creation
+and integration run sequentially. Review-only stages return findings or drafts;
+source mutations require the requested scope and an explicit serialized owner.
+
+Plans are not executed studies; draft assets are not publications; simulated results
+are not observed real-world outcomes; visuals are not valid 3D exports; unavailable
+search/AI metrics are not measured visibility. Each workflow preserves those limits.
 
 The request determines whether source changes are authorized. A research or audit
 question does not become an implementation task merely because a writer is listed.
@@ -82,7 +105,8 @@ python3 scripts/install.py --tool opencode
 python3 scripts/validate.py --opencode ~/.opencode/bin/opencode
 ```
 
-The installer writes eleven profiles and six commands by default. Team-lead is a
+The installer writes twenty-five profiles and fifteen commands by default.
+Use repeatable `--pack` options for a smaller dependency-complete set. Team-lead is a
 primary profile, while specialists retain both primary and child eligibility.
 Command frontmatter selects team-lead and uses `subagent: false`, keeping the
 coordinator in the parent session so specialists can be its children. No selected
@@ -106,6 +130,6 @@ serially and must label them coordinator-performed rather than independent runs.
 The command registry verifies that the host discovers the slash commands; source
 and rendering tests verify their coordinator, scope placeholder, and parent-session
 mapping. No actual end-to-end model team run is established by these checks.
-The 37 behavioral scenarios remain unrun until evaluated sessions and artifacts
+The 83 behavioral scenarios remain unrun until evaluated sessions and artifacts
 are retained. Parallel limits and review-only rules are prompt contracts rather
 than runtime-enforced semaphores or read-only permissions.

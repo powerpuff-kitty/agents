@@ -8,15 +8,15 @@ import subprocess
 import sys
 import time
 
-from build import ROOT, compile_profiles, load_agents, load_teams
+from build import ROOT, compile_profiles, load_agents, load_teams, select_catalog
 
 
-def validate(opencode=None):
+def validate(opencode=None, packs=None):
     agents, _ = load_agents()
     names = {agent["metadata"]["id"] for agent in agents}
     teams, _ = load_teams(agents)
     team_names = {team["metadata"]["id"] for team in teams}
-    files = compile_profiles("opencode")
+    files = compile_profiles("opencode", packs)
     cases = json.loads((ROOT / "evals/behavior-cases.json").read_text())
     if cases.get("format_version") != 1:
         raise ValueError("Unsupported evaluation format")
@@ -44,7 +44,10 @@ def validate(opencode=None):
         raise ValueError("Every role needs at least two role-specific acceptance scenarios")
     if any(count < 2 for count in team_coverage.values()):
         raise ValueError("Every team needs at least two acceptance scenarios")
-    result = {"status": "passed", "validated_at_utc": datetime.now(timezone.utc).isoformat(),
+    agents, teams, _, selected_packs = select_catalog(agents, teams, packs)
+    names = {a["metadata"]["id"] for a in agents}
+    team_names = {t["metadata"]["id"] for t in teams}
+    result = {"status": "passed", "packs": selected_packs, "validated_at_utc": datetime.now(timezone.utc).isoformat(),
               "agent_count": len(names), "scenario_count": len(ids),
               "team_count": len(team_names), "host_loading": "not_checked",
               "command_loading": "not_checked", "model_behavior": "not_run"}
@@ -96,9 +99,10 @@ def validate(opencode=None):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--opencode", help="Explicit host executable; omit for source-only checks")
+    parser.add_argument("--pack", action="append", help="Check selected pack outputs and loading; default: all packs")
     args = parser.parse_args()
     try:
-        print(json.dumps(validate(args.opencode), indent=2))
+        print(json.dumps(validate(args.opencode, args.pack), indent=2))
         return 0
     except (OSError, ValueError, KeyError, TypeError, ImportError, subprocess.SubprocessError) as error:
         print(f"Validation failed: {error}", file=sys.stderr)

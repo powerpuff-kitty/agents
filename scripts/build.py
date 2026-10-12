@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build tool profiles deterministically from portable agent sources."""
 import argparse
+import copy
 import hashlib
 import importlib.util
 import json
@@ -133,7 +134,86 @@ def load_teams(agents):
     return teams, sources
 
 
-def compile_profiles(adapter="opencode"):
+def load_packs(agents, teams):
+    """Validate catalog ownership, dependency cycles, and workflow availability."""
+    agent_names = {a["metadata"]["id"] for a in agents}
+    team_map = {t["metadata"]["id"]: t for t in teams}
+    packs, sources = {}, []
+    owners = {"agents": {}, "teams": {}}
+    for path in sorted((ROOT / "packs").iterdir()):
+        if path.suffix != ".json" or not path.is_file():
+            raise ValueError(f"Unexpected pack entry: {path.name}")
+        pack = json.loads(path.read_text())
+        if set(pack) != {"schema_version", "id", "title", "description", "requires", "agents", "teams"} or pack["schema_version"] != 1:
+            raise ValueError(f"Invalid pack metadata: {path.name}")
+        if not isinstance(pack["id"], str) or not ID.fullmatch(pack["id"]) or pack["id"] != path.stem:
+            raise ValueError(f"Pack ID/file mismatch: {path.name}")
+        if any(not isinstance(pack[k], str) or not pack[k].strip() for k in ("title", "description")):
+            raise ValueError(f"Empty pack text: {path.name}")
+        for kind in ("requires", "agents", "teams"):
+            values = pack[kind]
+            if not isinstance(values, list) or any(not isinstance(v, str) or not ID.fullmatch(v) for v in values) or len(set(values)) != len(values):
+                raise ValueError(f"Invalid pack {kind}: {path.name}")
+        for kind, known in (("agents", agent_names), ("teams", set(team_map))):
+            for name in pack[kind]:
+                if name not in known or name in owners[kind]:
+                    raise ValueError(f"Unknown or multiply owned pack {kind}: {name}")
+                owners[kind][name] = pack["id"]
+        packs[pack["id"]] = pack
+        sources.append(path)
+    if set(owners["agents"]) != agent_names or set(owners["teams"]) != set(team_map):
+        raise ValueError("Packs must cover every agent and team")
+    closures = {}
+
+    def closure(name, visiting):
+        if name not in packs:
+            raise ValueError(f"Unknown pack dependency: {name}")
+        if name in visiting:
+            raise ValueError(f"Pack dependency cycle: {name}")
+        if name not in closures:
+            included = {name}
+            for dependency in packs[name]["requires"]:
+                included.update(closure(dependency, visiting | {name}))
+            closures[name] = included
+        return closures[name]
+
+    for name, pack in packs.items():
+        available = {agent for dependency in closure(name, set()) for agent in packs[dependency]["agents"]}
+        for team_id in pack["teams"]:
+            team = team_map[team_id]["metadata"]
+            required = {team["coordinator"]}
+            if team["mode"] != "adaptive":
+                required.update(a["agent"] for stage in team["stages"] for a in stage["assignments"])
+            if not required <= available:
+                raise ValueError(f"Pack dependencies cannot resolve team: {team_id}")
+    return packs, closures, sources
+
+
+def select_catalog(agents, teams, requested=None):
+    packs, closures, sources = load_packs(agents, teams)
+    selected = set(packs) if requested is None else set()
+    for name in requested or []:
+        if name not in packs:
+            raise ValueError(f"Unknown pack: {name}; available: {', '.join(sorted(packs))}")
+        selected.update(closures[name])
+    if not selected:
+        raise ValueError("At least one pack is required")
+    names = {name for pack in selected for name in packs[pack]["agents"]}
+    team_ids = {name for pack in selected for name in packs[pack]["teams"]}
+    selected_teams = []
+    for original in teams:
+        if original["metadata"]["id"] not in team_ids:
+            continue
+        team = copy.deepcopy(original["metadata"])
+        if team["mode"] == "adaptive":
+            for stage in team["stages"]:
+                stage["assignments"] = [a for a in stage["assignments"] if a["agent"] in names]
+            team["stages"] = [stage for stage in team["stages"] if stage["assignments"]]
+        selected_teams.append({"metadata": team, "instructions": render_team_prompt(team)})
+    return ([a for a in agents if a["metadata"]["id"] in names], selected_teams, sources, sorted(selected))
+
+
+def compile_profiles(adapter="opencode", packs=None):
     if not ID.fullmatch(adapter):
         raise ValueError("Invalid adapter ID")
     directory = ROOT / "adapters" / adapter
@@ -146,6 +226,8 @@ def compile_profiles(adapter="opencode"):
     agents, sources = load_agents()
     teams, team_sources = load_teams(agents)
     sources.extend(team_sources)
+    agents, teams, pack_sources, selected_packs = select_catalog(agents, teams, packs)
+    sources.extend(pack_sources)
     contract_path = ROOT / "shared/operating-contract.md"
     contract = contract_path.read_text()
     if not contract.strip():
@@ -162,6 +244,7 @@ def compile_profiles(adapter="opencode"):
     manifest = {
         "schema_version": 1,
         "adapter": adapter,
+        "packs": selected_packs,
         "agents": [agent["metadata"]["id"] for agent in agents],
         "teams": [team["metadata"]["id"] for team in teams],
         "source_sha256": {str(path.relative_to(ROOT)): hashlib.sha256(path.read_bytes()).hexdigest()
@@ -173,9 +256,10 @@ def compile_profiles(adapter="opencode"):
     return files
 
 
-def build(adapter, output=None, check=False):
-    files = compile_profiles(adapter)
-    destination = Path(output) if output else ROOT / "dist" / adapter
+def build(adapter, output=None, check=False, packs=None):
+    files = compile_profiles(adapter, packs)
+    suffix = "-" + "-".join(sorted(set(packs))) if packs else ""
+    destination = Path(output) if output else ROOT / "dist" / (adapter + suffix)
     expected = set(files)
     if destination.is_symlink() or any(path.is_symlink() for path in destination.rglob("*")):
         raise ValueError("Refusing symlinks in build output")
@@ -206,9 +290,10 @@ def main():
     parser.add_argument("--adapter", default="opencode")
     parser.add_argument("--output", type=Path)
     parser.add_argument("--check", action="store_true")
+    parser.add_argument("--pack", action="append", help="Select a pack plus dependencies; repeat to combine. Default: all packs")
     args = parser.parse_args()
     try:
-        path = build(args.adapter, args.output, args.check)
+        path = build(args.adapter, args.output, args.check, args.pack)
         print(f"{'Verified' if args.check else 'Built'} {args.adapter}: {path}")
         return 0
     except (OSError, ValueError, KeyError, TypeError, ImportError) as error:

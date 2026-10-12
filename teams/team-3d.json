@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "id": "team-3d",
+  "title": "3D assets and runtime integration",
+  "description": "Create or review requested 3D assets, integrate when requested, and verify actual visual/runtime artifacts and measured budgets.",
+  "coordinator": "team-lead",
+  "intent": "Complete the scoped asset brief, requested asset creation, or requested integration using actual available tools. Missing modeling/rendering access means a useful specification or review with explicit unperformed checks.",
+  "mode": "adaptive",
+  "max_parallel": 3,
+  "stages": [
+    {
+      "id": "brief",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "artist-3d",
+          "task": "Establish visual intent, references, units/axes/pivots, topology/material/animation budgets, formats, tools, provenance, and requested deliverables.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "constraints",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "technical-artist",
+          "task": "Assess actual runtime/import/shader/color-space/animation conventions and compatible pipeline constraints.",
+          "when": "always"
+        },
+        {
+          "agent": "performance-engineer",
+          "task": "Establish relevant existing measured budgets or clearly identify measurement gaps.",
+          "when": "Runtime/resource budgets are part of the scope."
+        }
+      ]
+    },
+    {
+      "id": "create",
+      "execution": "exclusive-write",
+      "assignments": [
+        {
+          "agent": "artist-3d",
+          "task": "Create/edit only requested assets with available authorized tools, preserving source originals and recording export settings; otherwise return the specified fallback.",
+          "when": "The user requests asset creation or editing."
+        }
+      ]
+    },
+    {
+      "id": "integrate",
+      "execution": "exclusive-write",
+      "assignments": [
+        {
+          "agent": "technical-artist",
+          "task": "Integrate only requested completed assets or shaders into the runtime and run applicable import/build checks after asset writing finishes.",
+          "when": "The user requests runtime integration or pipeline changes."
+        }
+      ]
+    },
+    {
+      "id": "verify",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "artist-3d",
+          "task": "Inspect actual available assets/previews for visual intent, geometry/material/animation correctness, and provenance limitations.",
+          "when": "always"
+        },
+        {
+          "agent": "quality-engineer",
+          "task": "Check applicable changed integration, import, build, and regression evidence.",
+          "when": "Executable integration or pipeline code changed."
+        },
+        {
+          "agent": "performance-engineer",
+          "task": "Verify claimed runtime costs against comparable measured scenes/settings.",
+          "when": "A performance budget or optimization claim is material."
+        },
+        {
+          "agent": "evidence-validator",
+          "task": "Check asset/source identity, supported compatibility/provenance statements, and claimed artifact/measurement outcomes.",
+          "when": "Consequential provenance, compatibility, or quantitative claims are included."
+        }
+      ]
+    }
+  ],
+  "completion": [
+    "The requested assets/integration or explicit tooling fallback is delivered with actual artifact identity.",
+    "Asset writing precedes dependent integration, and final checks reference completed artifacts.",
+    "Visual previews, valid 3D exports, runtime compatibility, and measured performance are reported separately.",
+    "Unperformed tool checks, unknown rights, and external purchase/upload/publication boundaries remain explicit."
+  ]
+}

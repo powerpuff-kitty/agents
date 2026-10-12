@@ -1,18 +1,23 @@
 # Agent behavior acceptance scenarios
 
-The [37 scenarios](behavior-cases.json) include two role-specific cases for each of
-eleven profiles, three shared cases, and two cases for each of six team presets.
+The [83 scenarios](behavior-cases.json) include two role-specific cases for each of
+twenty-five profiles, three shared cases, and two cases for each of fifteen team presets.
 They cover review-only scope, authorized fixes,
 unavailable checks, existing user edits, project-context discovery, untrusted
 instructions, scoring boundaries, release evidence, unsupported claims, focused
 child contexts, stage ordering, source ownership, and failed or stale team findings.
 Research/general-team cases add current-source qualification, unavailable sources,
 untrusted research instructions, selective routing, existing action authorization,
-gather-before-validation dependencies, and failed independent checks.
+gather-before-validation dependencies, and failed independent checks. New domain cases
+cover empirical/mathematical limits, data grain and denominators, unsupported market
+claims, no unrequested recruitment/spend/publication, SEO privacy directives, variable
+AI observations, localization integrity, game evidence, and missing 3D/runtime tools.
 
 Every specification is marked `not_run`. Source validation checks scenario shape,
 role/team references, and coverage; it does not execute a model or determine outcomes.
-Keep observed results separate from specifications.
+Keep observed results separate from specifications. Pack validation still checks
+coverage across the full canonical catalog; optional host checks target the selected
+pack closure and report its profile/team counts.
 
 For an actual evaluation, prepare an isolated synthetic fixture meeting the stated
 requirements, retain initial file hashes, select a fresh authorized session and

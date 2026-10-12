@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "id": "team-growth",
+  "title": "Measured growth improvement",
+  "description": "Diagnose actual funnel/retention evidence, design a bounded improvement, implement when requested, and verify outcomes.",
+  "coordinator": "team-lead",
+  "intent": "Complete the requested growth diagnosis, experiment plan, or scoped implementation using actual measurement. Do not infer ad spend, production experiments, outreach, or fabricated conversion/retention gains.",
+  "mode": "adaptive",
+  "max_parallel": 3,
+  "stages": [
+    {
+      "id": "baseline",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "data-analyst",
+          "task": "Define the outcome and metric/denominator, inspect approved funnel/cohort evidence, and identify uncertainty or absent data.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "diagnose-and-plan",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "marketing-strategist",
+          "task": "Assess audience/channel/message fit and form supported improvement hypotheses.",
+          "when": "always"
+        },
+        {
+          "agent": "product-manager",
+          "task": "Review activation/retention requirements and dependencies.",
+          "when": "Product behavior or onboarding contributes to the requested growth question."
+        },
+        {
+          "agent": "user-researcher",
+          "task": "Analyze actual supplied user evidence or propose a bounded study.",
+          "when": "User friction needs empirical clarification."
+        },
+        {
+          "agent": "scientist",
+          "task": "Design the relevant experiment/control/analysis plan and distinguish causal claims from observational evidence.",
+          "when": "An experiment or causal interpretation is requested."
+        },
+        {
+          "agent": "designer",
+          "task": "Assess interaction and accessibility friction against observed evidence.",
+          "when": "The scope affects a user-facing flow."
+        },
+        {
+          "agent": "copywriter",
+          "task": "Return scoped message variants grounded in approved claims.",
+          "when": "Copy variants are requested."
+        }
+      ]
+    },
+    {
+      "id": "implement",
+      "execution": "exclusive-write",
+      "assignments": [
+        {
+          "agent": "feature-developer",
+          "task": "Implement only requested scoped product/content/instrumentation changes and relevant checks; preserve existing user work.",
+          "when": "The user requests source or content implementation."
+        }
+      ]
+    },
+    {
+      "id": "authorized-experiment",
+      "execution": "serial-action",
+      "assignments": [
+        {
+          "agent": "scientist",
+          "task": "Run only the explicitly authorized bounded experiment after prerequisites, recording actual conditions/results.",
+          "when": "The user explicitly authorizes the specific experiment, environment, data, and execution scope."
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "data-analyst",
+          "task": "Assess completed outputs/results and actual measurement if available; absent post-change data means no demonstrated growth gain.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "verify",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "evidence-validator",
+          "task": "Check completed baseline/outcome claims, metric definitions, comparable conditions, and inference limitations.",
+          "when": "always"
+        },
+        {
+          "agent": "quality-engineer",
+          "task": "Independently check changed behavior/instrumentation and actual regressions.",
+          "when": "Source or executable instrumentation changed."
+        }
+      ]
+    }
+  ],
+  "completion": [
+    "The requested diagnosis, plan, or implementation is complete with actual baselines and evidence gaps.",
+    "Changes precede dependent execution/measurement, and growth gains are stated only with supporting observations.",
+    "Experiment, source-write, spend, and external-action boundaries follow the actual request."
+  ]
+}

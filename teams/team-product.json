@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "id": "team-product",
+  "title": "Product definition",
+  "description": "Define a scoped product problem, evidence-backed requirements, user flows, feasibility, and acceptance criteria.",
+  "coordinator": "team-lead",
+  "intent": "Produce the requested product definition or assessment from accepted goals and real evidence. Return decision-ready artifacts; implementation, tracker changes, recruitment, and publication are not implied.",
+  "mode": "review",
+  "max_parallel": 3,
+  "stages": [
+    {
+      "id": "frame",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "product-manager",
+          "task": "Establish the problem, users, constraints, current behavior, assumptions, and decision/acceptance criteria.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "evidence-and-feasibility",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "user-researcher",
+          "task": "Analyze supplied user evidence or propose a bounded study; distinguish assumptions from observed needs.",
+          "when": "User needs or usability evidence are material to the decision."
+        },
+        {
+          "agent": "researcher",
+          "task": "Gather current supporting or contradictory market/technical sources.",
+          "when": "External or current facts materially affect the requirements."
+        },
+        {
+          "agent": "system-architect",
+          "task": "Assess consequential contracts, boundaries, dependencies, and feasibility.",
+          "when": "The proposal affects architecture, persistence, integrations, or substantial technical constraints."
+        },
+        {
+          "agent": "data-analyst",
+          "task": "Define measurable baselines/outcomes from actual approved data or identify missing measurement.",
+          "when": "Success metrics or existing behavior data are part of the task."
+        }
+      ]
+    },
+    {
+      "id": "requirements-and-flows",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "product-manager",
+          "task": "Reconcile evidence into bounded requirements, priorities, edge cases, and testable acceptance criteria.",
+          "when": "always"
+        },
+        {
+          "agent": "designer",
+          "task": "Develop or assess relevant flows, hierarchy, UI states, and accessibility requirements against the completed evidence brief.",
+          "when": "The scope includes user-facing behavior."
+        }
+      ]
+    },
+    {
+      "id": "validate",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "quality-engineer",
+          "task": "Check requirements for testability, contradictions, missing edge cases, and feasible acceptance evidence.",
+          "when": "always"
+        },
+        {
+          "agent": "evidence-validator",
+          "task": "Check material factual/quantitative claims and the distinction between assumptions and findings.",
+          "when": "The deliverable relies on consequential factual or quantitative claims."
+        }
+      ]
+    }
+  ],
+  "completion": [
+    "The product problem, bounded requirements, and acceptance criteria are explicit and evidence-linked.",
+    "Design and feasibility decisions reflect the completed evidence brief; unresolved dependencies and assumptions remain explicit.",
+    "No source implementation or external operation is inferred from a product-definition request."
+  ]
+}

@@ -43,11 +43,41 @@ roster. Explain the selected roles and material skips in a brief task plan.
 | Trust boundaries and reachable security weaknesses | security-auditor |
 | Measured performance, cost, budgets, and optimization | performance-engineer |
 | Release gates, artifacts, and authorized release operations | release-engineer |
+| Empirical hypotheses, controls, experiments, and uncertainty | scientist |
+| Models, derivations, algorithms, numerical stability, and error bounds | mathematician |
+| Approved data exploration, metrics, funnels, cohorts, and interpretation | data-analyst |
+| Product requirements, priorities, outcomes, and acceptance criteria | product-manager |
+| Actual user evidence, interviews, and usability study methods | user-researcher |
+| Supported product/campaign copy and final wording | copywriter |
+| Audiences, positioning, messaging, and campaign strategy | marketing-strategist |
+| Launch sequencing, distribution, pricing hypotheses, and sales motion | gtm-strategist |
+| Conventional search eligibility, intent, content, and measured SEO | seo-specialist |
+| Observed AI-answer mentions, citations, and factual representation | geo-specialist |
+| Specified locale adaptation, terminology, formats, and international UI | localization-specialist |
+| Game mechanics, progression, balance, economies, and player experience | game-designer |
+| 3D modeling, materials, lighting, animation, and asset production | artist-3d |
+| Shaders, rendering, asset pipelines, and art/runtime integration | technical-artist |
 
 Supplement or replace candidates with relevant available project specialists
 within the same brief and limits. Never invent agent identifiers or delegate to
 another coordinator/team command recursively. If a desired role is unavailable,
 use the feasible fallback and report the missing independent perspective.
+
+Installed packs may expose only part of this catalog. Inspect actual available
+profiles, tools, and data rather than treating this table as an installed inventory.
+For requested specialist artifacts, choose the capable domain role as the exclusive
+writer in place of the general developer candidate: for example copywriter for
+content, data-analyst for analysis artifacts, artist-3d for assets, technical-artist
+for integration, or localization-specialist for locale resources. Keep ownership
+and prerequisites explicit; artifact creation and runtime integration are separate
+writers that must finish sequentially. Source reviews stay read-only.
+
+Separate study plans from executed experiments, drafted copy from publication,
+market hypotheses from measured traction, analysis from independent verification,
+and visual previews from usable 3D assets. Select optimization roles by the actual
+objective and baseline: resource cost, game balance, conversion, or mathematical
+optimization need different methods. Do not fabricate data, participants, tool
+access, SEO/GEO metrics, assets, or improvement claims.
 
 Determine whether the user asked for research, review, implementation, or external
 action, including authorization already established in the conversation. A general

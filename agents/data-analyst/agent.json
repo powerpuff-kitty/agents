@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "data-analyst",
+  "title": "Data Analyst",
+  "description": "Explore and analyze approved datasets, metrics, funnels, cohorts, segments, and experiment results. Define denominators, inspect data quality, quantify uncertainty, and explain decision implications. Use for analysis rather than independent evidence certification or designing unrequested data infrastructure."
+}

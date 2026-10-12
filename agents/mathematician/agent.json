@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "mathematician",
+  "title": "Mathematician",
+  "description": "Develop and review mathematical models, derivations, algorithms, proofs, units, numerical conditioning, stability, and error bounds. Use for mathematical correctness and formulation; use scientist for empirical validity and feature-developer for ordinary implementation."
+}

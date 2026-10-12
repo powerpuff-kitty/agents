@@ -93,8 +93,8 @@ def apply_target(tool, plan):
     return str(backup) if backup else None
 
 
-def install(tool, target, replace=False, dry_run=False, commands_target=None, agents_only=False):
-    profiles = compile_profiles(tool)
+def install(tool, target, replace=False, dry_run=False, commands_target=None, agents_only=False, packs=None):
+    profiles = compile_profiles(tool, packs)
     groups = {"agents": (Path(target).expanduser(), {})}
     if not agents_only:
         destination = Path(commands_target).expanduser() if commands_target else groups["agents"][0].parent / "commands"
@@ -111,7 +111,7 @@ def install(tool, target, replace=False, dry_run=False, commands_target=None, ag
     # Inspect every destination before writing either agents or commands.
     plans = {kind: plan_target(tool, destination, desired, replace)
              for kind, (destination, desired) in groups.items()}
-    result = {"tool": tool, "target": str(groups["agents"][0]),
+    result = {"tool": tool, "packs": json.loads(profiles["build-manifest.json"])["packs"], "target": str(groups["agents"][0]),
               "commands_target": str(groups["commands"][0]) if "commands" in groups else None,
               "changed": [], "unchanged": [], "dry_run": dry_run, "backup": None, "backups": {}}
     for kind, plan in plans.items():
@@ -135,12 +135,13 @@ def main():
     parser.add_argument("--agents-only", action="store_true", help="Install profiles without team commands")
     parser.add_argument("--replace", action="store_true", help="Back up and replace conflicting profiles")
     parser.add_argument("--dry-run", action="store_true", help="Plan without writing anything")
+    parser.add_argument("--pack", action="append", help="Select a pack plus dependencies; repeat to combine. Default: all packs")
     args = parser.parse_args()
     try:
         if args.agents_only and args.commands_target:
             raise ValueError("--agents-only and --commands-target cannot be combined")
         result = install(args.tool, args.target, args.replace, args.dry_run,
-                         args.commands_target, args.agents_only)
+                         args.commands_target, args.agents_only, args.pack)
         print(json.dumps(result, indent=2))
         return 0
     except (OSError, ValueError, KeyError, TypeError, ImportError) as error:

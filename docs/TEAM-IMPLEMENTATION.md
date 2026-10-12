@@ -61,7 +61,7 @@ Use [team usage](TEAMS.md) for invocation and expected workflow behavior.
 ## Research and general routing addition
 
 Later on 12 October 2026 the suite gained the portable researcher role, the
-research preset, and the adaptive general preset. The current suite has eleven
+research preset, and the adaptive general preset. At that stage the suite had eleven
 profiles, six team briefs/commands, and 37 unrun behavioral specifications.
 Team-lead now includes task-based role selection and discovery of relevant
 available project specialists. The general roster is conditional, and the research
@@ -90,3 +90,43 @@ Verification completed:
 No command was executed as a model workflow during these checks. All 37 scenarios
 remain `not_run`; observed selective routing and research quality still require
 retained evaluated sessions.
+
+## Full catalog and installable packs
+
+The next addition on 12 October 2026 implemented fourteen more specialists and
+nine workflows from the accepted catalog. The current suite has twenty-five
+profiles, fifteen teams, four installable packs, and 83 unrun behavior specifications.
+See [catalog](CATALOG.md), [workflows](TEAMS.md), and [pack selection](PACKS.md) for
+current usage and ownership.
+
+Team-lead routes science, mathematics, data, product/user research, copy, marketing,
+GTM, SEO/GEO, localization, games, and technical art work to distinct available
+roles. Requested specialist artifacts can use a domain owner in the exclusive
+writer stage. New presets preserve methods/results dependencies and task authority;
+creation and integration stages are sequential when both are requested.
+
+Packs own sources without duplication. Build/install/validation selection resolves
+dependencies, rejects cycles and missing fixed-team members, filters unavailable
+adaptive candidates, and preserves previously installed outputs. Full selection
+remains the default. Models, global permissions, subscriptions, and modeling/rendering
+tools are not provisioned or changed by the profiles.
+
+Verification completed:
+
+- Full source validation passed for 25 profiles, 15 teams, and 83 specifications.
+- Both full adapters built successfully and generated-content checks passed.
+- All 22 regression tests passed, including pack closure counts, adaptive candidate
+  filtering, cycles/ownership/dependency rejection, unknown-pack preflight, preservation
+  of other installed packs, and separate selected-build destinations.
+- All 49 local documentation links resolved.
+- Installation added fourteen profiles and nine commands and updated team-lead and
+  `/team`. Changed existing outputs were backed up. The subsequent dry-run reported
+  no changes across all forty managed profiles/commands.
+- Configuration reload succeeded. OpenCode 2.0.27 loaded all complete profile
+  prompts, descriptions, and modes and registered all fifteen command names and
+  descriptions in this repository and Patchmancer.
+
+These checks made no model calls and executed no agent team workflow. All 83
+behavior specifications remain `not_run`. Tool availability, actual dispatch,
+method quality, conditional routing, and empirical/creative outcomes still require
+retained evaluated runs; source/host checks do not establish those outcomes.

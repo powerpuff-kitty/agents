@@ -40,6 +40,22 @@ The compiler renders a neutral coordination brief from this data. Applicability
 conditions and scheduling limits are instructions interpreted by the coordinator;
 they are not an automatic classifier, sandbox, or deterministic task executor.
 
+## Pack source contract
+
+`packs/<id>.json` owns membership, not duplicate instructions. Its version 1
+fields are ID/title/description, required pack IDs, and agent/team ID lists.
+Each role and team has exactly one owning pack and the pack catalog covers all
+sources. Validation rejects unknown references, duplicate ownership, dependency
+cycles, and fixed workflows whose members cannot resolve through dependencies.
+
+Selection includes dependency closure. Adaptive workflows omit candidates whose
+profiles are unavailable in the selected closure and omit empty stages; fixed
+workflows retain their complete roster. Team-lead can still discover actual
+additional project profiles at runtime. Selected pack IDs and all source hashes
+are recorded in the build manifest. `--pack` is shared by build, install, and
+validation; omitted selection means all packs. Pack-specific default build paths
+are separate from the full export, and installation never prunes previous packs.
+
 ## Adapter contract
 
 An adapter directory contains:

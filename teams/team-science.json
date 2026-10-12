@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "id": "team-science",
+  "title": "Scientific evaluation",
+  "description": "Plan or execute a scoped empirical evaluation with mathematical review and independent evidence checks.",
+  "coordinator": "team-lead",
+  "intent": "Complete the requested research protocol or explicitly authorized experiment. Distinguish plans, simulations, actual observations, mathematical validity, and empirical validity. Selecting the team does not authorize real-user or production experiments.",
+  "mode": "adaptive",
+  "max_parallel": 3,
+  "stages": [
+    {
+      "id": "frame",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "scientist",
+          "task": "Define the question, hypotheses, outcomes, population, constraints, and requested plan/execution boundary.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "methods",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "researcher",
+          "task": "Gather applicable methods, independent baselines, and contradictory sources.",
+          "when": "External sources or current domain methods are needed."
+        },
+        {
+          "agent": "mathematician",
+          "task": "Assess model assumptions, derivations, numerical methods, and proposed error/tolerance reasoning.",
+          "when": "The protocol depends on mathematical models or consequential calculations."
+        },
+        {
+          "agent": "data-analyst",
+          "task": "Inspect approved input data, measurement definitions, missingness, sampling, and leakage risks.",
+          "when": "A dataset or analysis pipeline is available or must be specified."
+        }
+      ]
+    },
+    {
+      "id": "protocol",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "scientist",
+          "task": "Reconcile the methods into a bounded protocol with controls, analysis plan, uncertainty, and stopping rules.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "implement-experiment",
+      "execution": "exclusive-write",
+      "assignments": [
+        {
+          "agent": "feature-developer",
+          "task": "Implement only requested isolated experiment fixtures/scripts with reproducible inputs and meaningful checks.",
+          "when": "The user requests experiment software or a reproducible implementation."
+        }
+      ]
+    },
+    {
+      "id": "execute",
+      "execution": "serial-action",
+      "assignments": [
+        {
+          "agent": "scientist",
+          "task": "Run only the authorized experiment after required inputs/protocol/tooling are ready; record actual observations, deviations, versions, and outputs.",
+          "when": "The user explicitly requests execution in the specified approved or isolated environment."
+        }
+      ]
+    },
+    {
+      "id": "interpret",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "scientist",
+          "task": "Interpret completed results if an experiment ran; otherwise deliver the protocol with explicit unperformed execution.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "validate",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "evidence-validator",
+          "task": "Independently check the completed claims, reference independence, uncertainty, and whether evidence supports the conclusion.",
+          "when": "always"
+        },
+        {
+          "agent": "data-analyst",
+          "task": "Check completed aggregates, denominators, filters, and sensitivity independently of the interpretation.",
+          "when": "Actual experiment results are available."
+        },
+        {
+          "agent": "quality-engineer",
+          "task": "Review experiment implementation and actual reproducibility/regression checks.",
+          "when": "Experiment software was changed."
+        }
+      ]
+    }
+  ],
+  "completion": [
+    "The requested protocol or authorized evaluation is complete with assumptions and actual check evidence.",
+    "Implementation precedes execution, results precede interpretation, and independent checks follow completed conclusions.",
+    "Plans, simulations, observations, mathematical arguments, and empirical conclusions are distinguished.",
+    "Missing data, unavailable tools, failed assignments, and unperformed experiments remain explicit."
+  ]
+}

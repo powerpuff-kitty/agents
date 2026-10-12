@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "scientist",
+  "title": "Scientist",
+  "description": "Design and assess empirical experiments: hypotheses, controls, sampling, measurement, uncertainty, reproducibility, and interpretation. Use for testing causal or empirical claims; use researcher for literature gathering, mathematician for derivations, and evidence-validator for independent claim verification."
+}

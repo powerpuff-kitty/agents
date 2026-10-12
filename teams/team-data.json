@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "id": "team-data",
+  "title": "Data analysis",
+  "description": "Analyze approved data with provenance, quality, mathematical review when relevant, and independent result verification.",
+  "coordinator": "team-lead",
+  "intent": "Answer the bounded data question using actual approved inputs, or deliver a clearly labeled analysis plan when inputs are unavailable. Preserve raw data; production writes and external uploads are not implied.",
+  "mode": "adaptive",
+  "max_parallel": 3,
+  "stages": [
+    {
+      "id": "scope-and-data",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "data-analyst",
+          "task": "Define the decision, grain, time window, metrics, denominators, provenance, and data-quality checks.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "methods",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "mathematician",
+          "task": "Review consequential formulas, numerical assumptions, and comparison tolerances.",
+          "when": "The analysis needs nontrivial mathematical modeling or numerical methods."
+        },
+        {
+          "agent": "scientist",
+          "task": "Review causal identification, experimental assumptions, bias, and uncertainty.",
+          "when": "The question concerns causal effects, experiments, or inferential conclusions."
+        },
+        {
+          "agent": "security-auditor",
+          "task": "Review privacy, access, and disclosure boundaries without accessing unrelated records.",
+          "when": "The data or requested outputs include sensitive or restricted information."
+        }
+      ]
+    },
+    {
+      "id": "analyze",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "data-analyst",
+          "task": "Perform scoped read-only/local analysis on approved inputs; return traceable tables/charts, interpretation, methods, and gaps.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "save-artifacts",
+      "execution": "exclusive-write",
+      "assignments": [
+        {
+          "agent": "data-analyst",
+          "task": "Save only requested reports/queries/notebooks/visualizations, preserving raw inputs and user edits; verify artifact contents.",
+          "when": "The user requests saved reproducible analysis artifacts."
+        }
+      ]
+    },
+    {
+      "id": "verify",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "evidence-validator",
+          "task": "Check the completed analysis claims, provenance, transformations, totals, denominators, uncertainty, and independent references.",
+          "when": "always"
+        },
+        {
+          "agent": "quality-engineer",
+          "task": "Check executable analysis artifacts for reproducibility and meaningful edge cases without editing.",
+          "when": "Executable analysis artifacts were created or changed."
+        }
+      ]
+    }
+  ],
+  "completion": [
+    "The answer is supported by actual approved data or explicitly limited to a plan/provided evidence.",
+    "Definitions, filters, time windows, denominators, transformations, and uncertainty are disclosed.",
+    "Independent checks follow completed analysis/artifacts, and source data is preserved."
+  ]
+}

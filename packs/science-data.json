@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "science-data",
+  "title": "Science and data",
+  "description": "Empirical evaluation, mathematical reasoning, and data analysis.",
+  "requires": [
+    "core"
+  ],
+  "agents": [
+    "data-analyst",
+    "mathematician",
+    "scientist"
+  ],
+  "teams": [
+    "team-data",
+    "team-science"
+  ]
+}

@@ -56,6 +56,76 @@
           "agent": "release-engineer",
           "task": "Establish release gates, artifact scope, compatibility, rollback, and action boundaries without publishing.",
           "when": "The task concerns a release, artifacts, deployment readiness, or recovery."
+        },
+        {
+          "agent": "scientist",
+          "task": "Design/review the empirical method, hypotheses, controls, uncertainty, and requested execution boundary; do not run unrequested experiments.",
+          "when": "The task asks for experiments, empirical evaluation, or causal interpretation."
+        },
+        {
+          "agent": "mathematician",
+          "task": "Develop or check the mathematical formulation, derivation, assumptions, numerical stability, and error bounds.",
+          "when": "The task requires mathematical reasoning, quantitative algorithms, or consequential formulas."
+        },
+        {
+          "agent": "data-analyst",
+          "task": "Analyze approved data with explicit grain, metrics, denominators, provenance, and uncertainty; return results without mutating datasets.",
+          "when": "The task asks about datasets, behavior metrics, funnels, cohorts, or quantitative interpretation."
+        },
+        {
+          "agent": "product-manager",
+          "task": "Define bounded requirements, priorities, acceptance criteria, and measurable outcomes from accepted goals.",
+          "when": "The task asks for product definition, prioritization, or acceptance criteria."
+        },
+        {
+          "agent": "user-researcher",
+          "task": "Analyze supplied user evidence or design a bounded study; preserve the distinction between assumptions and observations.",
+          "when": "The task needs user-needs or usability research."
+        },
+        {
+          "agent": "copywriter",
+          "task": "Return requested copy/drafts using approved facts, voice, channel, and supported claims.",
+          "when": "The task asks for writing, editing, product copy, or campaign wording."
+        },
+        {
+          "agent": "marketing-strategist",
+          "task": "Develop evidence-backed positioning, audience/message strategy, or campaign hypotheses.",
+          "when": "The task asks for marketing direction, positioning, segmentation, or campaign strategy."
+        },
+        {
+          "agent": "gtm-strategist",
+          "task": "Plan distribution, launch sequencing, pricing hypotheses, acquisition/sales motion, readiness, and measurement.",
+          "when": "The task asks for go-to-market or commercial launch planning."
+        },
+        {
+          "agent": "seo-specialist",
+          "task": "Review search eligibility, technical/content SEO, and available measured discovery evidence.",
+          "when": "The task concerns conventional search discoverability or SEO."
+        },
+        {
+          "agent": "geo-specialist",
+          "task": "Review actual/provided AI-answer visibility, citations, factual representation, sampling, and access gaps.",
+          "when": "The task concerns generative-engine optimization or AI-answer visibility."
+        },
+        {
+          "agent": "localization-specialist",
+          "task": "Assess or draft the specified locale adaptation, terminology, formats, and UI behavior.",
+          "when": "The task requests translation/localization or international UI behavior."
+        },
+        {
+          "agent": "game-designer",
+          "task": "Define or review mechanics, progression, balance, economies, and player-experience hypotheses.",
+          "when": "The task concerns game systems or gameplay design."
+        },
+        {
+          "agent": "artist-3d",
+          "task": "Establish or review the requested asset brief, actual artifacts, tool availability, visual intent, export, and provenance.",
+          "when": "The task concerns 3D modeling, materials, lighting, animation, or asset creation."
+        },
+        {
+          "agent": "technical-artist",
+          "task": "Review art/runtime integration, shaders, asset pipelines, rendering constraints, and actual budgets.",
+          "when": "The task concerns visual-runtime integration or rendering/asset tooling."
         }
       ]
     },
@@ -65,8 +135,8 @@
       "assignments": [
         {
           "agent": "feature-developer",
-          "task": "Implement requested code/configuration/test/documentation changes, preserve user edits, and run applicable checks. Use prior specialist findings; keep unrequested external operations out of this stage.",
-          "when": "The user requests implementation, fixes, refactoring, or a saved non-release artifact; research or review alone does not satisfy this condition."
+          "task": "Implement requested code/configuration/test/documentation changes with checks and preserved user work. For specialist assets, content, localization, or analysis artifacts, the coordinator may replace this candidate with the capable domain owner under the same exclusive-writer rules.",
+          "when": "The user requests implementation, fixes, refactoring, or saved/created artifacts; research or review alone does not satisfy this condition. Use the appropriate available domain specialist as the exclusive owner for specialist artifacts."
         }
       ]
     },
@@ -114,6 +184,11 @@
           "agent": "release-engineer",
           "task": "Reconcile artifact/check evidence and readiness gates before any authorized release action.",
           "when": "A release was prepared or the task requests readiness assessment or execution."
+        },
+        {
+          "agent": "technical-artist",
+          "task": "Check completed 3D/runtime/shader assets or integration against actual compatible tool outputs.",
+          "when": "Implementation created or changed visual runtime assets/integration and an independent domain check is relevant."
         }
       ]
     },

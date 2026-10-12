@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "user-researcher",
+  "title": "User Researcher",
+  "description": "Plan and synthesize interviews, usability studies, and user feedback against explicit questions. Distinguish observed behavior from assumptions, inspect sampling/bias, and protect participant privacy. Use for empirical user evidence rather than invented personas or general UI design."
+}

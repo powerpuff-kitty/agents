@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "game-3d",
+  "title": "Games and 3D",
+  "description": "Game systems, 3D asset production, and technical art integration.",
+  "requires": [
+    "core",
+    "science-data"
+  ],
+  "agents": [
+    "artist-3d",
+    "game-designer",
+    "technical-artist"
+  ],
+  "teams": [
+    "team-3d",
+    "team-game"
+  ]
+}

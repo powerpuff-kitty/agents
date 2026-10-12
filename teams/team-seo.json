@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "id": "team-seo",
+  "title": "Search discoverability",
+  "description": "Audit technical/content SEO, implement requested bounded fixes, and verify actual outputs and available search evidence.",
+  "coordinator": "team-lead",
+  "intent": "Complete the requested SEO audit or scoped remediation. Search metrics require actual sources; selecting this team does not authorize publication, account writes, outreach, or paid tooling.",
+  "mode": "adaptive",
+  "max_parallel": 3,
+  "stages": [
+    {
+      "id": "audit",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "seo-specialist",
+          "task": "Establish scope and inspect technical eligibility, site structure, intent/content, structured data, and available search measurements.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "support",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "researcher",
+          "task": "Gather current authoritative search/platform references or bounded competitor evidence.",
+          "when": "Current or niche facts need verification."
+        },
+        {
+          "agent": "copywriter",
+          "task": "Return requested metadata/content drafts aligned with actual page behavior and intent.",
+          "when": "Content/copy improvements are requested."
+        },
+        {
+          "agent": "performance-engineer",
+          "task": "Assess available page-performance measurements without speculative tuning.",
+          "when": "Performance evidence is relevant to the requested audit or fix."
+        },
+        {
+          "agent": "localization-specialist",
+          "task": "Assess specified locale content, language routing, and translation consistency.",
+          "when": "International search/localization is in scope."
+        },
+        {
+          "agent": "geo-specialist",
+          "task": "Assess shared discovery foundations and available AI representation evidence.",
+          "when": "AI-answer visibility is also explicitly in scope."
+        }
+      ]
+    },
+    {
+      "id": "implement",
+      "execution": "exclusive-write",
+      "assignments": [
+        {
+          "agent": "feature-developer",
+          "task": "Implement only requested source/content SEO changes, preserving intentional privacy/indexing boundaries and user edits.",
+          "when": "The user requests implementation or remediation."
+        }
+      ]
+    },
+    {
+      "id": "verify",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "seo-specialist",
+          "task": "Recheck completed findings or changed outputs, directives, canonicals, links, markup, and measurement limitations.",
+          "when": "always"
+        },
+        {
+          "agent": "quality-engineer",
+          "task": "Check changed routes/content/rendering for actual regressions.",
+          "when": "Implementation changed product source or executable behavior."
+        },
+        {
+          "agent": "evidence-validator",
+          "task": "Check material numerical claims, supported content/markup, and claimed outcomes.",
+          "when": "The final deliverable includes consequential quantitative or factual claims."
+        }
+      ]
+    }
+  ],
+  "completion": [
+    "Findings and requested fixes are scoped and evidence-linked, with intentional private/noindex boundaries preserved.",
+    "Changed outputs are checked after writing; crawl/index/rank outcomes are not inferred from source checks.",
+    "Actual search metrics and unavailable data remain distinct; publication and account actions are not implied."
+  ]
+}

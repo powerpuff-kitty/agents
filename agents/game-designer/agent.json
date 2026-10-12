@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "game-designer",
+  "title": "Game Designer",
+  "description": "Design and review mechanics, progression, economies, balance, difficulty, feedback, and player experience against project goals. Use for game systems and playtest hypotheses; use designer for interface systems and developer for implementation."
+}

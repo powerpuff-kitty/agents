@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "core",
+  "title": "Core engineering and research",
+  "description": "Core coordination, software, design, research, and independent verification.",
+  "requires": [],
+  "agents": [
+    "designer",
+    "evidence-validator",
+    "feature-developer",
+    "performance-engineer",
+    "project-auditor",
+    "quality-engineer",
+    "release-engineer",
+    "researcher",
+    "security-auditor",
+    "system-architect",
+    "team-lead"
+  ],
+  "teams": [
+    "team",
+    "team-audit",
+    "team-feature",
+    "team-release",
+    "team-research",
+    "team-ui"
+  ]
+}
