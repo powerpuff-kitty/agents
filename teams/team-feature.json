@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "team-feature",
+  "title": "Feature delivery",
+  "description": "Coordinate scoped feature implementation followed by independent verification.",
+  "coordinator": "team-lead",
+  "intent": "Deliver the described feature against accepted requirements, preserving project boundaries and existing user edits. Source changes are authorized for the described feature; external delivery is not implied.",
+  "mode": "delivery",
+  "max_parallel": 3,
+  "stages": [
+    {
+      "id": "frame",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "system-architect",
+          "task": "Review relevant contracts, ownership, and structural trade-offs before implementation.",
+          "when": "The feature changes public contracts, persistence, deployment boundaries, or consequential architecture."
+        },
+        {
+          "agent": "designer",
+          "task": "Clarify accepted UI/UX behavior, system components, interaction states, and accessible requirements.",
+          "when": "The feature affects a user-facing interface or interaction flow."
+        }
+      ]
+    },
+    {
+      "id": "implement",
+      "execution": "exclusive-write",
+      "assignments": [
+        {
+          "agent": "feature-developer",
+          "task": "Implement the accepted feature, its meaningful tests, and affected documentation. Preserve user edits and run relevant checks before review.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "verify",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "quality-engineer",
+          "task": "Independently review the completed source snapshot and applicable correctness/regression results without editing.",
+          "when": "always"
+        },
+        {
+          "agent": "security-auditor",
+          "task": "Review the changed trust/data boundaries and realistic risks without intrusive shared-system tests.",
+          "when": "Authentication, authorization, tenant isolation, untrusted inputs, persistence, or sensitive data are affected."
+        },
+        {
+          "agent": "designer",
+          "task": "Review implemented UI states and design/accessibility evidence against the accepted intent.",
+          "when": "The feature affects a user-facing interface or interaction flow."
+        },
+        {
+          "agent": "evidence-validator",
+          "task": "Validate calculation, dataset, provenance, and claim correctness against independent references where available.",
+          "when": "The feature changes calculations, datasets, confidence labels, or public factual claims."
+        },
+        {
+          "agent": "performance-engineer",
+          "task": "Verify relevant budgets or performance claims using comparable existing measurements.",
+          "when": "The feature affects a documented hot path or budget, or makes a performance claim."
+        }
+      ]
+    }
+  ],
+  "completion": [
+    "The described feature is implemented, and independent verification follows the completed writer snapshot.",
+    "Applicable conditional reviews are completed or explicitly unverified; skipped assignments have reasons.",
+    "Corrections are serialized through the implementation owner and affected checks are re-run.",
+    "Source changes and check results are reported; commit, publication, or deployment is not inferred from delivery intent."
+  ]
+}

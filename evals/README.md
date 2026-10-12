@@ -1,12 +1,14 @@
 # Agent behavior acceptance scenarios
 
-The [21 scenarios](behavior-cases.json) define two role-specific cases for each of
-nine agents plus three shared cases. They cover review-only scope, authorized fixes,
+The [31 scenarios](behavior-cases.json) include two role-specific cases for each of
+ten profiles, three shared cases, and two cases for each of four team presets.
+They cover review-only scope, authorized fixes,
 unavailable checks, existing user edits, project-context discovery, untrusted
-instructions, scoring boundaries, release evidence, and unsupported claims.
+instructions, scoring boundaries, release evidence, unsupported claims, focused
+child contexts, stage ordering, source ownership, and failed or stale team findings.
 
 Every specification is marked `not_run`. Source validation checks scenario shape,
-role references, and coverage; it does not execute a model or determine outcomes.
+role/team references, and coverage; it does not execute a model or determine outcomes.
 Keep observed results separate from specifications.
 
 For an actual evaluation, prepare an isolated synthetic fixture meeting the stated

@@ -18,13 +18,27 @@ host supports them, but must not require a vendor tool name, API, model, permiss
 schema, or directory for routine work. The actual project's accepted goals and
 instructions remain authoritative over generic role preferences.
 
+## Team source contract
+
+`teams/<id>.json` declares a stable preset ID, title/description, coordinator,
+intent, review/delivery mode, positive parallel assignment limit, ordered stages,
+and completion evidence. Stages have serial-review, parallel-review, or
+exclusive-write execution. Every assignment references a real specialist and
+provides its task and applicability condition. An exclusive writer is a single
+owner in a delivery preset; a review preset cannot declare a source-writing stage.
+Coordinator self-assignment is rejected to avoid recursive delegation.
+
+The compiler renders a neutral coordination brief from this data. Applicability
+conditions and scheduling limits are instructions interpreted by the coordinator;
+they are not an automatic classifier, sandbox, or deterministic task executor.
+
 ## Adapter contract
 
 An adapter directory contains:
 
 - `adapter.json`: version and output target, plus target-specific settings.
 - `instructions.md`: additive host guidance without redefining portable role rules.
-- `render.py`: a `render(agents, contract, host_instructions, config)` function
+- `render.py`: a `render(agents, teams, contract, host_instructions, config)` function
   returning relative output paths and their UTF-8 text.
 
 The shared compiler validates canonical metadata, invokes the selected renderer,
@@ -32,10 +46,15 @@ and creates a manifest with input and output hashes. Builds have no timestamps o
 machine-specific paths. `--check` detects missing, stale, or altered outputs.
 Unexpected output files are not silently deleted.
 
-OpenCode maps the neutral description to folded YAML and selects `mode: all` in
-its adapter. The generated body includes the specialist instructions, common
+OpenCode maps the neutral description to folded YAML and selects `mode: all` for
+specialists, with an adapter-only `primary` override for team-lead.
+The generated body includes the specialist instructions, common
 contract, and OpenCode host guidance. Its profiles inherit model and permissions.
-The portable adapter emits complete plain Markdown without host metadata.
+OpenCode also emits team command templates selecting team-lead, forcing the
+current session with `subagent: false`, and inserting the user's `$ARGUMENTS`
+as the requested scope. Generated templates contain no pre-executed shell blocks.
+The portable adapter emits complete role Markdown and neutral team briefs
+without host metadata or macros.
 
 The installer currently knows only the OpenCode destination convention. Adding
 a renderer alone does not establish installation support or host compatibility.
@@ -44,11 +63,12 @@ is appropriate; otherwise document manual loading explicitly.
 
 ## Installation boundaries
 
-Installation compiles from current sources, checks all known filename conflicts,
-backs up changed existing profiles, and writes individual files atomically.
+Installation compiles from current sources, checks all known conflicts in both
+profile and command destinations before writing either, backs up changed existing
+files, and writes individual files atomically.
 The local management state records installed hashes so subsequent changes to a
 managed profile are recognized as user edits. `--replace` is an explicit request
-to back up and overwrite conflicts. Unrelated profiles are preserved and stale
+to back up and overwrite conflicts. Unrelated profiles and commands are preserved and stale
 managed profiles are not pruned automatically.
 
 The installation is not a directory-wide transaction: a filesystem failure or
@@ -60,7 +80,9 @@ blindly when local edits should be incorporated into canonical sources instead.
 
 Tests verify deterministic rendering, drift detection, installation preservation,
 conflict protection, backups, and idempotence. Optional host validation checks
-actual loaded prompts, descriptions, and modes with an explicit executable.
+actual loaded profile prompts, descriptions, and modes with an explicit executable,
+plus names/descriptions from the host command registry. Registry discovery does
+not execute a command or prove its model workflow completed.
 It retries missing IDs briefly during service initialization, while prompt or
 metadata mismatches fail immediately.
 

@@ -7,18 +7,21 @@ import subprocess
 import sys
 import time
 
-from build import ROOT, compile_profiles, load_agents
+from build import ROOT, compile_profiles, load_agents, load_teams
 
 
 def validate(opencode=None):
     agents, _ = load_agents()
     names = {agent["metadata"]["id"] for agent in agents}
+    teams, _ = load_teams(agents)
+    team_names = {team["metadata"]["id"] for team in teams}
     files = compile_profiles("opencode")
     cases = json.loads((ROOT / "evals/behavior-cases.json").read_text())
     if cases.get("format_version") != 1:
         raise ValueError("Unsupported evaluation format")
     ids = set()
     coverage = {name: 0 for name in names}
+    team_coverage = {name: 0 for name in team_names}
     for case in cases["cases"]:
         if case["id"] in ids:
             raise ValueError(f"Duplicate evaluation case: {case['id']}")
@@ -32,11 +35,18 @@ def validate(opencode=None):
             raise ValueError("Case specifications must not claim observed model outcomes")
         if role != "*":
             coverage[role] += 1
+        if "expected_team" in case:
+            if case["expected_team"] not in team_names:
+                raise ValueError(f"Unknown evaluation team: {case['expected_team']}")
+            team_coverage[case["expected_team"]] += 1
     if any(count < 2 for count in coverage.values()):
         raise ValueError("Every role needs at least two role-specific acceptance scenarios")
+    if any(count < 2 for count in team_coverage.values()):
+        raise ValueError("Every team needs at least two acceptance scenarios")
     result = {"status": "passed", "validated_at_utc": datetime.now(timezone.utc).isoformat(),
               "agent_count": len(names), "scenario_count": len(ids),
-              "host_loading": "not_checked", "model_behavior": "not_run"}
+              "team_count": len(team_names), "host_loading": "not_checked",
+              "command_loading": "not_checked", "model_behavior": "not_run"}
     if opencode:
         result["opencode_executable"] = opencode
         result["opencode_version"] = subprocess.check_output([opencode, "--version"], text=True, timeout=30).strip()
@@ -56,9 +66,24 @@ def validate(opencode=None):
             description = next(agent["metadata"]["description"] for agent in agents if agent["metadata"]["id"] == name)
             if loaded[name].get("system", "").strip() != body.strip():
                 raise ValueError(f"Loaded prompt drift: {name}")
-            if loaded[name].get("mode") != config["mode"] or loaded[name].get("description") != description:
+            mode = config.get("mode_overrides", {}).get(name, config["mode"])
+            if loaded[name].get("mode") != mode or loaded[name].get("description") != description:
                 raise ValueError(f"Loaded metadata drift: {name}")
         result["host_loading"] = "passed"
+        for attempt in range(3):
+            output = subprocess.check_output([opencode, "api", "command.list"], text=True, timeout=30)
+            registry = json.loads(output)
+            commands = {command["name"]: command for command in registry["data"]}
+            if team_names <= commands.keys() or attempt == 2:
+                break
+            time.sleep(0.25)
+        for team in teams:
+            metadata = team["metadata"]
+            if metadata["id"] not in commands:
+                raise ValueError(f"Team command not loaded: {metadata['id']}")
+            if commands[metadata["id"]].get("description") != metadata["description"]:
+                raise ValueError(f"Team command metadata drift: {metadata['id']}")
+        result["command_loading"] = "passed"
     return result
 
 

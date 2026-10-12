@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "team-release",
+  "title": "Release readiness",
+  "description": "Coordinate review of release gates, artifacts, compatibility, and operational evidence.",
+  "coordinator": "team-lead",
+  "intent": "Assess readiness of the described release target from actual source, artifact, consumer, and operational evidence. This preset does not itself authorize tags, pushes, publication, rollout, or rollback.",
+  "mode": "review",
+  "max_parallel": 3,
+  "stages": [
+    {
+      "id": "release-scope",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "release-engineer",
+          "task": "Identify target source/version/channel, artifact/consumer boundaries, required gates, and existing delivery authorization without executing delivery.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "gate-reviews",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "quality-engineer",
+          "task": "Assess relevant correctness, regression, compatibility, and test evidence for the target snapshot.",
+          "when": "always"
+        },
+        {
+          "agent": "security-auditor",
+          "task": "Assess artifact, dependency, configuration, trust-boundary, and sensitive-data handling risks within the release scope.",
+          "when": "always"
+        },
+        {
+          "agent": "evidence-validator",
+          "task": "Validate source/artifact/provenance identities and public release claims; distinguish local checks from live delivery verification.",
+          "when": "always"
+        },
+        {
+          "agent": "performance-engineer",
+          "task": "Review applicable release performance budgets and representative measurements without unauthorized shared-system load.",
+          "when": "The release has explicit performance gates or introduces a performance-sensitive change."
+        }
+      ]
+    },
+    {
+      "id": "readiness-verdict",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "release-engineer",
+          "task": "Reconcile specialist findings into a gate matrix and readiness recommendation; preserve critical blockers and unavailable live/recovery evidence.",
+          "when": "always"
+        }
+      ]
+    }
+  ],
+  "completion": [
+    "The target revision, artifact, consumer compatibility, and relevant gate evidence are traceable.",
+    "Failed or unverified critical gates remain visible regardless of other passing checks.",
+    "The result is a readiness recommendation with next actions, not an invented successful publication or deployment."
+  ]
+}

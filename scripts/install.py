@@ -29,12 +29,7 @@ def atomic_write(path, content, mode=0o644):
             os.unlink(temporary)
 
 
-def install(tool, target, replace=False, dry_run=False):
-    profiles = compile_profiles(tool)
-    desired = {Path(name).name: content.encode() for name, content in profiles.items()
-               if name.startswith("agents/") and name.endswith(".md")}
-    if not desired:
-        raise ValueError("Adapter produced no installable profiles")
+def plan_target(tool, target, desired, replace):
     target = Path(target).expanduser()
     if target.is_symlink() or (target.exists() and not target.is_dir()):
         raise ValueError("Target must be a regular directory")
@@ -50,13 +45,11 @@ def install(tool, target, replace=False, dry_run=False):
         for name, value in managed.items()
     ):
         raise ValueError("Invalid installed file management state")
-    old = {}
-    changes = []
-    conflicts = []
+    old, changes, conflicts = {}, [], []
     for name, content in desired.items():
         path = target / name
         if path.is_symlink() or (path.exists() and not path.is_file()):
-            raise ValueError(f"Refusing nonregular profile: {name}")
+            raise ValueError(f"Refusing nonregular output: {name}")
         previous = path.read_bytes() if path.exists() else None
         old[name] = previous
         if previous == content:
@@ -65,12 +58,15 @@ def install(tool, target, replace=False, dry_run=False):
         if previous is not None and digest(previous) != managed.get(name) and not replace:
             conflicts.append(name)
     if conflicts:
-        raise ValueError("Unmanaged or locally edited profiles: " + ", ".join(conflicts) +
-                         "; use --replace to back up and replace these files")
-    result = {"tool": tool, "target": str(target), "changed": changes,
-              "unchanged": sorted(set(desired) - set(changes)), "dry_run": dry_run, "backup": None}
-    if dry_run:
-        return result
+        raise ValueError("Unmanaged or locally edited outputs in " + str(target) + ": " +
+                         ", ".join(conflicts) + "; use --replace to back up and replace these files")
+    return {"target": target, "state_path": state_path, "managed": managed,
+            "desired": desired, "old": old, "changes": changes}
+
+
+def apply_target(tool, plan):
+    target, state_path = plan["target"], plan["state_path"]
+    desired, old, changes = plan["desired"], plan["old"], plan["changes"]
     target.mkdir(parents=True, exist_ok=True)
     overwrites = [name for name in changes if old[name] is not None]
     backup = None
@@ -82,19 +78,51 @@ def install(tool, target, replace=False, dry_run=False):
             shutil.copy2(target / name, backup / name)
         if state_path.exists():
             shutil.copy2(state_path, backup / state_path.name)
-        result["backup"] = str(backup)
     for name in changes:
         path = target / name
         current = path.read_bytes() if path.exists() else None
         if path.is_symlink() or current != old[name]:
-            raise ValueError(f"Profile changed during installation: {name}; original backup: {backup}")
+            raise ValueError(f"Output changed during installation: {name}; original backup: {backup}")
         mode = path.stat().st_mode & 0o777 if path.exists() else 0o644
         atomic_write(path, desired[name], mode)
     updated = {"schema_version": 1, "tool": tool, "repository": "powerpuff-kitty/agents",
-               "files": {**managed, **{name: digest(content) for name, content in desired.items()}}}
+               "files": {**plan["managed"], **{name: digest(content) for name, content in desired.items()}}}
     state_bytes = (json.dumps(updated, indent=2, sort_keys=True) + "\n").encode()
     if not state_path.exists() or state_path.read_bytes() != state_bytes:
         atomic_write(state_path, state_bytes)
+    return str(backup) if backup else None
+
+
+def install(tool, target, replace=False, dry_run=False, commands_target=None, agents_only=False):
+    profiles = compile_profiles(tool)
+    groups = {"agents": (Path(target).expanduser(), {})}
+    if not agents_only:
+        destination = Path(commands_target).expanduser() if commands_target else groups["agents"][0].parent / "commands"
+        profile_root, command_root = groups["agents"][0].resolve(), destination.resolve()
+        if profile_root.is_relative_to(command_root) or command_root.is_relative_to(profile_root):
+            raise ValueError("Agent and command destinations must not overlap")
+        groups["commands"] = (destination, {})
+    for name, content in profiles.items():
+        parts = Path(name).parts
+        if len(parts) == 2 and parts[0] in groups and parts[1].endswith(".md"):
+            groups[parts[0]][1][parts[1]] = content.encode()
+    if not groups["agents"][1]:
+        raise ValueError("Adapter produced no installable profiles")
+    # Inspect every destination before writing either agents or commands.
+    plans = {kind: plan_target(tool, destination, desired, replace)
+             for kind, (destination, desired) in groups.items()}
+    result = {"tool": tool, "target": str(groups["agents"][0]),
+              "commands_target": str(groups["commands"][0]) if "commands" in groups else None,
+              "changed": [], "unchanged": [], "dry_run": dry_run, "backup": None, "backups": {}}
+    for kind, plan in plans.items():
+        result["changed"].extend(kind + "/" + name for name in plan["changes"])
+        result["unchanged"].extend(kind + "/" + name for name in sorted(set(plan["desired"]) - set(plan["changes"])))
+    if not dry_run:
+        for kind, plan in plans.items():
+            backup = apply_target(tool, plan)
+            if backup:
+                result["backups"][kind] = backup
+                result["backup"] = result["backup"] or backup
     return result
 
 
@@ -103,11 +131,16 @@ def main():
     parser.add_argument("--tool", choices=["opencode"], default="opencode")
     config_home = Path(os.environ.get("XDG_CONFIG_HOME") or Path.home() / ".config")
     parser.add_argument("--target", type=Path, default=config_home / "opencode/agents")
+    parser.add_argument("--commands-target", type=Path, help="Command directory; defaults to the agent directory's sibling commands/")
+    parser.add_argument("--agents-only", action="store_true", help="Install profiles without team commands")
     parser.add_argument("--replace", action="store_true", help="Back up and replace conflicting profiles")
     parser.add_argument("--dry-run", action="store_true", help="Plan without writing anything")
     args = parser.parse_args()
     try:
-        result = install(args.tool, args.target, args.replace, args.dry_run)
+        if args.agents_only and args.commands_target:
+            raise ValueError("--agents-only and --commands-target cannot be combined")
+        result = install(args.tool, args.target, args.replace, args.dry_run,
+                         args.commands_target, args.agents_only)
         print(json.dumps(result, indent=2))
         return 0
     except (OSError, ValueError, KeyError, TypeError, ImportError) as error:

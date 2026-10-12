@@ -2,5 +2,8 @@
   "schema_version": 1,
   "tool": "opencode",
   "mode": "all",
+  "mode_overrides": {
+    "team-lead": "primary"
+  },
   "description": "Markdown profiles compatible with the verified OpenCode 2.0.27 loader; metadata intentionally minimal."
 }

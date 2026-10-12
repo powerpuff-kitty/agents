@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "team-audit",
+  "title": "Project audit",
+  "description": "Coordinate a review-only project audit with all nine specialists.",
+  "coordinator": "team-lead",
+  "intent": "Assess the requested project or bounded subsystem against its accepted goals and available evidence. Report findings; do not apply source fixes by default.",
+  "mode": "review",
+  "max_parallel": 3,
+  "stages": [
+    {
+      "id": "scope",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "project-auditor",
+          "task": "Map accepted requirements, implementation states, critical paths, and readiness gates; provide the scoped evidence brief for subsequent reviewers.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "specialist-reviews",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "feature-developer",
+          "task": "Review implementation fit, owning boundaries, compatibility, and feasibility of proposed repairs without editing source.",
+          "when": "always"
+        },
+        {
+          "agent": "system-architect",
+          "task": "Review relevant architecture, ownership, failure paths, and accepted structural decisions.",
+          "when": "always"
+        },
+        {
+          "agent": "designer",
+          "task": "Review product fit, design-system usage, representative UI states, and accessibility evidence; mark unavailable visual checks unverified.",
+          "when": "always"
+        },
+        {
+          "agent": "quality-engineer",
+          "task": "Review correctness, meaningful test coverage, flakiness, robustness, and relevant actual check results.",
+          "when": "always"
+        },
+        {
+          "agent": "security-auditor",
+          "task": "Review reachable security weaknesses and controls using source or authorized isolated validation.",
+          "when": "always"
+        },
+        {
+          "agent": "performance-engineer",
+          "task": "Assess available performance evidence and critical-path costs with existing scoped tooling; avoid mandatory new benchmark harnesses or unauthorized load.",
+          "when": "always"
+        },
+        {
+          "agent": "evidence-validator",
+          "task": "Validate provenance, reproducibility, uncertainty, and whether project/finding claims are supported.",
+          "when": "always"
+        },
+        {
+          "agent": "release-engineer",
+          "task": "Review relevant artifact, compatibility, deployment, and recovery gates; do not tag, publish, or deploy.",
+          "when": "always"
+        }
+      ]
+    }
+  ],
+  "completion": [
+    "All nine assignments return actual results or explicit blocked/failed status; none is silently omitted.",
+    "Duplicate root causes and contradictory findings are reconciled with source evidence.",
+    "The final report distinguishes verified findings, heuristic risks, and unverified readiness gates."
+  ]
+}

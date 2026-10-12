@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "team-ui",
+  "title": "UI review",
+  "description": "Coordinate design, accessibility, UI quality, performance, and evidence review.",
+  "coordinator": "team-lead",
+  "intent": "Review the requested screens or journeys for project fit, visual/system coherence, interaction usability, and supported accessibility evidence. Do not redesign or change source by default.",
+  "mode": "review",
+  "max_parallel": 3,
+  "stages": [
+    {
+      "id": "design-scope",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "designer",
+          "task": "Establish critical journeys and a representative route/component/state/viewport/theme coverage matrix; inspect project design sources and reference behavior.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "independent-checks",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "quality-engineer",
+          "task": "Review component/browser regression and accessibility automation evidence, assertion quality, and failure handling; do not claim unexecuted manual checks.",
+          "when": "always"
+        },
+        {
+          "agent": "performance-engineer",
+          "task": "Review measured UI responsiveness, layout stability, bundle/startup, or interaction budgets with existing tooling.",
+          "when": "The scope includes responsiveness, layout shift, asset loading, or documented UI performance budgets."
+        },
+        {
+          "agent": "evidence-validator",
+          "task": "Validate measurement provenance, contrast/target/reflow claims, coverage, and distinctions between screenshots, source evidence, and actual interaction checks.",
+          "when": "always"
+        }
+      ]
+    }
+  ],
+  "completion": [
+    "The coverage matrix ties findings to relevant states, viewports, themes, and source/runtime evidence.",
+    "Contrast and other criterion findings use measured values and applicable exceptions; uncertain checks stay unverified.",
+    "The final prioritized report separates system divergence, usability defects, and optional visual preferences."
+  ]
+}

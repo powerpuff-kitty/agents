@@ -5,6 +5,10 @@ truth or an autonomous agent runtime.
 
 - Canonical role metadata and specialist instructions live in `agents/<id>/`.
   The shared operating contract lives in `shared/operating-contract.md`.
+- Portable team assignments and stage/completion policies live in `teams/*.json`.
+  Keep host macros, command syntax, and coordinator mode mappings in adapters.
+  Preserve sequential dependencies, one source writer, conditional review reasons,
+  and the distinction between workflow instructions and an enforced scheduler.
 - Put tool-specific formatting, host guidance, and capability mapping in
   `adapters/<tool>/`. Keep neutral sources free of vendor tool APIs and permission
   configuration. Preserve task authorization, evidence, and completion semantics.
@@ -30,6 +34,7 @@ python3 scripts/build.py --adapter opencode --check
 python3 -m unittest discover -s tests -v
 ```
 
-If installation is part of the task, also verify the actual selected host with
+If installation is part of the task, also verify loaded profiles and team command
+registration in the actual selected host with
 an explicit executable and document any unavailable checks. Preserve user work
 and existing project instructions in repositories these agents later inspect.
