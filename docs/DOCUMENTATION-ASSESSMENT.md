@@ -160,8 +160,8 @@ The owner later authorized the focused finance implementation described below.
 
 ## Finance implementation follow-up
 
-The current catalog adds three skills and three agents, bringing coverage to 41
-skills and 32 profiles. The original 67-entry table remains a historical baseline;
+The finance milestone added three skills and three agents, bringing that snapshot
+to 41 skills and 32 profiles. The original 67-entry table remains a historical baseline;
 these six entries complete the current documentation inventory.
 
 | Entry | Documentation delivered | Verification boundary |
@@ -176,3 +176,22 @@ these six entries complete the current documentation inventory.
 These examples and references implement the specialist documentation tier without
 creating duplicate per-entry handbooks. Eighteen skill cases and twelve role/team
 cases are new acceptance specifications and remain not_run until evaluated.
+
+## Crypto and forecasting implementation follow-up
+
+The owner authorized continuation after the finance foundation. Optional
+[crypto](CRYPTO.md) and [forecasting](FORECASTING.md) packs now add onchain-analyst,
+probability-analyst, `/team-crypto-review` and `/team-forecast`. The current catalogs
+contain 47 skills, 34 profiles, 20 workflows and seven packs. Contract-security
+review remains with security-auditor. No wallet/account or execution runtime is
+introduced. Other domain candidates remain recommendations.
+
+Six new skills have local methods, worked examples, report templates and six
+acceptance specifications each: onchain-data-analysis, smart-contract-review,
+defi-risk-analysis, odds-analysis, forecast-calibration and settlement-rule-review.
+Their guides cover identity/finality/units, source/deployment and economic controls,
+quote/margin/fees, proper scores/calibration and exact settlement definitions.
+The two new roles have self-contained procedures and linked pack walkthroughs.
+These eight additions extend the per-entry documentation inventory to all 81
+current entries (47 skills plus 34 roles). Twelve new role/team specifications
+bring the canonical case count to 124; none is promoted to an observed outcome.

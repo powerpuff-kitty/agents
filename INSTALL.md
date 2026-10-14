@@ -32,6 +32,10 @@ profile installation, not skill installation, model calls, account changes,
 publication or deployment.
 ```
 
+For onchain/DeFi research, select `crypto`; for recorded forecasts and event-market
+analysis, select `forecasting`. Their methods/scope are documented in
+[CRYPTO.md](docs/CRYPTO.md) and [FORECASTING.md](docs/FORECASTING.md).
+
 For the finance foundation, request the `finance` pack; its science-data/core
 dependencies are included. See [finance scope and examples](docs/FINANCE.md).
 

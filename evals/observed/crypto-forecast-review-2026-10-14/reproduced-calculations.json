@@ -1,0 +1,19 @@
+{
+  "input_sha256": "0271598b55aaa074e93700c37cdb3b5a38ceb0158a76754640585ba60dc18459",
+  "token_amount": "9/2",
+  "canonical_successful_candidates": 1,
+  "finalized_candidates": 0,
+  "initial_hf": "8/5",
+  "shocked_hf": "6/5",
+  "lp_relative_return": "-2/5",
+  "overround": "1/24",
+  "normalized_probabilities": [
+    "2/5",
+    "3/5"
+  ],
+  "conditional_fee_adjusted_ev": "37/1250",
+  "resolved_records": 4,
+  "brier": "87/400",
+  "baseline": "1/4",
+  "scope": "synthetic arithmetic only; not real state, calibrated performance or final settlement"
+}

@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "onchain-analyst",
+  "title": "Onchain Analyst",
+  "description": "Analyze approved blockchain records, token/protocol activity and DeFi exposure with explicit chain/block/finality, units and economic assumptions. Use for onchain research; use security-auditor for contract exploitability and probability-analyst for event-market odds/calibration. No wallet or transaction runtime is provided."
+}

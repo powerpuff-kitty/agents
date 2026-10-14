@@ -161,6 +161,16 @@
           "agent": "iteration-reviewer",
           "task": "Establish relevant accepted Definition of Done, integrated behavior, target, baseline, and gate evidence requirements without source/tracker changes.",
           "when": "The task requests increment releasability, iteration closure, or implementation of a product increment."
+        },
+        {
+          "agent": "onchain-analyst",
+          "task": "Analyze approved chain/protocol records with chain/block/finality, units and economic assumptions; use security-auditor for scoped exploitability. Do not connect wallets or transact.",
+          "when": "The task concerns blockchain/token data, protocol activity or DeFi exposure."
+        },
+        {
+          "agent": "probability-analyst",
+          "task": "Review recorded forecasts, odds/payoffs or event settlement rules with comparable definitions, proper scores, costs and uncertainty; no betting/account actions.",
+          "when": "The task concerns probabilistic forecast evaluation, event-market odds or settlement definitions."
         }
       ]
     },

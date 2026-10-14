@@ -42,6 +42,21 @@ template and six unrun acceptance cases. Profiles still work with bounded direct
 methods if a skill is unavailable. No account or model call is needed to install
 these sources; actual native loading remains a separate check.
 
+## Crypto and forecast procedures
+
+| Skill | Primary role use |
+| --- | --- |
+| onchain-data-analysis | onchain-analyst checks chain identity, finality, units and metric evidence. |
+| smart-contract-review | Existing security-auditor checks scoped EVM/Solidity source/control paths and deployment match. |
+| defi-risk-analysis | onchain-analyst and portfolio-risk-analyst assess mechanism-specific protocol/position scenarios. |
+| odds-analysis | probability-analyst checks formats, complete-market margin and conditional fees/payoffs. |
+| forecast-calibration | probability-analyst evaluates recorded probabilities, proper scores, calibration and uncertainty. |
+| settlement-rule-review | probability-analyst checks contract definitions, sources, deadlines and resolution/finality status. |
+
+[Crypto](CRYPTO.md) and [forecasting](FORECASTING.md) own role/team examples.
+Each skill has a focused guide, report template and six unrun acceptance cases.
+Profiles do not install skills or provision wallet/account access.
+
 ## OpenCode
 
 OpenCode natively discovers Agent Skills; no skill renderer is required. Its

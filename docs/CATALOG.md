@@ -1,6 +1,6 @@
 # Agent catalog
 
-The suite contains 31 specialists and one coordinator. Portable identity and
+The suite contains 33 specialists and one coordinator. Portable identity and
 procedure live in each linked source directory; generated outputs combine them
 with the shared operating contract. Profiles depend on actual host tools, data,
 permissions, and project instructions. See [packs](PACKS.md) for installation and
@@ -26,6 +26,8 @@ permissions, and project instructions. See [packs](PACKS.md) for installation an
 | [financial-analyst](../agents/financial-analyst/instructions.md) | Reconciled statements, budgets, forecasts and valuation models | finance |
 | [quant-researcher](../agents/quant-researcher/instructions.md) | Point-in-time strategy research, realistic backtests and out-of-sample evidence | finance |
 | [portfolio-risk-analyst](../agents/portfolio-risk-analyst/instructions.md) | Holdings/NAV, net/gross exposures, liquidity and stress/model assumptions | finance |
+| [onchain-analyst](../agents/onchain-analyst/instructions.md) | Chain/block/finality evidence, token/protocol activity and DeFi research | crypto |
+| [probability-analyst](../agents/probability-analyst/instructions.md) | Recorded forecasts, odds/payoffs, proper scoring and settlement definitions | forecasting |
 | [scientist](../agents/scientist/instructions.md) | Hypotheses, controls, experiments, sampling, and empirical interpretation | science-data |
 | [mathematician](../agents/mathematician/instructions.md) | Models, derivations, proofs, numerical stability, and error bounds | science-data |
 | [data-analyst](../agents/data-analyst/instructions.md) | Actual data quality, grain, metrics, cohorts, funnels, and interpretation | science-data |
@@ -76,3 +78,9 @@ strategy-research validity, and portfolio-risk-analyst current holdings/exposure
 and stress assumptions. They share available validation skills and use actual
 independent evidence checks. These analytical profiles do not supply a broker,
 wallet or gambling runtime. See [finance examples and scope](FINANCE.md).
+
+Onchain-analyst owns chain/protocol evidence, while security-auditor assesses
+contract exploitability and portfolio-risk-analyst economic exposure. Probability-
+analyst owns event definitions, odds and recorded forecast evaluation. These roles
+do not provide wallets, betting accounts or transaction execution. See
+[crypto](CRYPTO.md) and [forecasting](FORECASTING.md) for worked methods and scope.

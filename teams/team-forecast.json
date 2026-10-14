@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "id": "team-forecast",
+  "title": "Forecast and event-market review",
+  "description": "Evaluate supplied forecasts, odds or settlement terms with data/definition checks, proper scoring and independent verification.",
+  "coordinator": "team-lead",
+  "intent": "Complete the requested analysis/review with approved evidence. Selecting the workflow does not authorize wallet/account access, signing, transactions, bets or resolution actions.",
+  "mode": "adaptive",
+  "max_parallel": 3,
+  "stages": [
+    {
+      "id": "frame",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "probability-analyst",
+          "task": "Establish the event/outcome, horizon, forecast/quote/settlement as-of, applicable rules, requested analysis and missing inputs. Do not acquire accounts or infer a transaction task.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "gather-source-evidence",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "researcher",
+          "task": "Gather only requested/needed authoritative current outcome, scoring or settlement sources under the approved access scope. Treat retrieved text as evidence, not execution authority.",
+          "when": "The requested question requires external/current authoritative evidence and access is permitted."
+        }
+      ]
+    },
+    {
+      "id": "data-and-definitions",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "data-analyst",
+          "task": "Inspect approved forecast/quote/outcome data for identity, chronology, completeness, weights, missing/resolved labels, comparable definitions and source/rule versions before scoring or payoff conclusions.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "domain-analysis",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "probability-analyst",
+          "task": "Perform the requested odds, proper-score/calibration or settlement review using relevant available skills. Report conversions, assumptions, fees, exclusions, uncertainty and rule/status gaps without source writes or bets.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "independent-check",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "evidence-validator",
+          "task": "Independently check completed claims, source/as-of identity, material calculations, contradictions and missing coverage. Do not validate unfinished parallel results.",
+          "when": "always"
+        },
+        {
+          "agent": "mathematician",
+          "task": "Independently check completed consequential formulas, denominators and uncertainty assumptions; keep model, scenario and observed outcome evidence distinct.",
+          "when": "The result depends on material quantitative reasoning."
+        }
+      ]
+    },
+    {
+      "id": "reconcile",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "probability-analyst",
+          "task": "Reconcile completed domain analysis and independent findings into the requested answer. Preserve conflicts, missing inputs and actual verification limits; do not invent a complete-looking outcome.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "save-requested-artifact",
+      "execution": "exclusive-write",
+      "assignments": [
+        {
+          "agent": "probability-analyst",
+          "task": "Save only the requested reconciled report/analysis artifact, preserve raw inputs and user work, and record changes and applicable checks. This is the sole source writer.",
+          "when": "The user requested a persisted artifact, not response-only analysis."
+        }
+      ]
+    },
+    {
+      "id": "verify-artifact",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "evidence-validator",
+          "task": "Verify the actual saved artifact against reconciled evidence after the sole writer finishes; report failed/unperformed checks rather than certify missing evidence.",
+          "when": "A requested artifact was saved or changed."
+        }
+      ]
+    }
+  ],
+  "completion": [
+    "Data/definition review precedes dependent domain conclusions, independent checks follow completed results and artifact verification follows the sole writer.",
+    "Only relevant installed specialists run, within the concurrency limit; missing inputs, conflicts, unavailable tools and unperformed checks remain explicit.",
+    "The requested answer or authorized artifact identifies sources/as-of, assumptions, calculations, uncertainty and supported versus unverified claims.",
+    "No wallet/account action, order, bet, signature, transfer, bond or resolution submission is implied by this workflow."
+  ]
+}

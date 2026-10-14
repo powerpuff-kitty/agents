@@ -41,7 +41,7 @@ class WorkflowTests(unittest.TestCase):
             result = run("install.py", "--target", target, "--dry-run")
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertFalse(target.exists())
-            self.assertEqual(len(json.loads(result.stdout)["changed"]), 50)
+            self.assertEqual(len(json.loads(result.stdout)["changed"]), 54)
             self.assertFalse((Path(temporary) / "commands").exists())
 
     def test_install_preserves_other_profiles_and_is_idempotent(self):
@@ -97,7 +97,7 @@ class WorkflowTests(unittest.TestCase):
             result = run("build.py", "--adapter", "portable", "--output", output)
             self.assertEqual(result.returncode, 0, result.stderr)
             files = list((output / "agents").glob("*.md"))
-            self.assertEqual(len(files), 32)
+            self.assertEqual(len(files), 34)
             for path in files:
                 body = path.read_text()
                 self.assertEqual(body.count("## Operating contract"), 1)
@@ -143,7 +143,7 @@ class WorkflowTests(unittest.TestCase):
             result = run("build.py", "--adapter", "opencode", "--output", output)
             self.assertEqual(result.returncode, 0, result.stderr)
             commands = list((output / "commands").glob("*.md"))
-            self.assertEqual(len(commands), 18)
+            self.assertEqual(len(commands), 20)
             for command in commands:
                 front, body = command.read_text()[4:].split("\n---\n", 1)
                 self.assertIn("agent: team-lead", front.splitlines())
@@ -181,7 +181,7 @@ class WorkflowTests(unittest.TestCase):
             base = Path(temporary)
             result = run("install.py", "--target", base / "profiles", "--agents-only")
             self.assertEqual(result.returncode, 0, result.stderr)
-            self.assertEqual(len(json.loads(result.stdout)["changed"]), 32)
+            self.assertEqual(len(json.loads(result.stdout)["changed"]), 34)
             self.assertFalse((base / "commands").exists())
 
     def test_nested_profile_and_command_destinations_are_rejected(self):
@@ -221,7 +221,7 @@ class WorkflowTests(unittest.TestCase):
             result = run("build.py", "--adapter", "portable", "--output", output)
             self.assertEqual(result.returncode, 0, result.stderr)
             teams = list((output / "teams").glob("*.md"))
-            self.assertEqual(len(teams), 18)
+            self.assertEqual(len(teams), 20)
             for team in teams:
                 body = team.read_text()
                 self.assertNotIn("OpenCode", body)
@@ -320,7 +320,10 @@ class WorkflowTests(unittest.TestCase):
                                                   (["product-growth"], 26, 15), (["game-3d"], 21, 12),
                                                   (["product-growth", "game-3d"], 29, 17),
                                                   (["finance"], 21, 11),
-                                                  (["product-growth", "game-3d", "finance"], 32, 18)):
+                                                  (["product-growth", "game-3d", "finance"], 32, 18),
+                                                  (["crypto"], 22, 12), (["forecasting"], 19, 11),
+                                                  (["crypto", "forecasting"], 23, 13),
+                                                  (["product-growth", "game-3d", "crypto", "forecasting"], 34, 20)):
             with self.subTest(packs=requested):
                 files = build.compile_profiles("portable", requested)
                 manifest = json.loads(files["build-manifest.json"])
@@ -338,11 +341,15 @@ class WorkflowTests(unittest.TestCase):
         self.assertNotIn("Agent: geo-specialist", core["commands/team.md"])
         self.assertNotIn("commands/team-geo.md", core)
         self.assertNotIn("commands/team-finance.md", core)
+        self.assertNotIn("commands/team-crypto-review.md", core)
+        self.assertNotIn("commands/team-forecast.md", core)
         self.assertNotIn("Agent: financial-analyst", core["commands/team.md"])
         full = build.compile_profiles("opencode")
         self.assertIn("Agent: geo-specialist", full["commands/team.md"])
         self.assertIn("commands/team-geo.md", full)
         self.assertIn("commands/team-finance.md", full)
+        self.assertIn("commands/team-crypto-review.md", full)
+        self.assertIn("commands/team-forecast.md", full)
         self.assertIn("Agent: financial-analyst", full["commands/team.md"])
 
     def test_pack_graph_rejects_cycles_unknowns_missing_dependencies_and_ownership(self):

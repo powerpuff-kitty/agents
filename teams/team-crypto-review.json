@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "id": "team-crypto-review",
+  "title": "Onchain and DeFi review",
+  "description": "Review approved chain/protocol records with data/finality checks, conditional contract/economic assessment and independent verification.",
+  "coordinator": "team-lead",
+  "intent": "Complete the requested analysis/review with approved evidence. Selecting the workflow does not authorize wallet/account access, signing, transactions, bets or resolution actions.",
+  "mode": "adaptive",
+  "max_parallel": 3,
+  "stages": [
+    {
+      "id": "frame",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "onchain-analyst",
+          "task": "Establish the question, chain/block/hash/finality, protocol/version/contract, approved records and requested artifact. Keep onchain observations, contract issues and economic scenarios separate.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "data-and-definitions",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "data-analyst",
+          "task": "Inspect supplied chain/query records for chain/block identity, event/state/receipt semantics, units, ABI/version, coverage, canonicality and as-of timing; do not acquire credentials or alter raw data.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "domain-analysis",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "onchain-analyst",
+          "task": "Analyze relevant chain/protocol evidence with reproducible metric definitions and finality/coverage limits. Return findings/calculations without source writes.",
+          "when": "always"
+        },
+        {
+          "agent": "security-auditor",
+          "task": "Review scoped contract/control paths and deployment-match evidence using smart-contract-review when available. Keep source-only findings and hypothetical tests distinct from deployed exploitability; do not execute live tests.",
+          "when": "The request includes contract security or an affected trust/control boundary."
+        },
+        {
+          "agent": "portfolio-risk-analyst",
+          "task": "Assess supplied DeFi/portfolio snapshots and mechanism-specific collateral, liquidation, liquidity/oracle/governance/dependency scenarios using defi-risk-analysis when available; do not transact.",
+          "when": "The question concerns protocol/position economic exposure or stress risk."
+        }
+      ]
+    },
+    {
+      "id": "independent-check",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "evidence-validator",
+          "task": "Independently check completed claims, source/as-of identity, material calculations, contradictions and missing coverage. Do not validate unfinished parallel results.",
+          "when": "always"
+        },
+        {
+          "agent": "mathematician",
+          "task": "Independently check completed consequential formulas, denominators and uncertainty assumptions; keep model, scenario and observed outcome evidence distinct.",
+          "when": "The result depends on material quantitative reasoning."
+        }
+      ]
+    },
+    {
+      "id": "reconcile",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "onchain-analyst",
+          "task": "Reconcile completed domain analysis and independent findings into the requested answer. Preserve conflicts, missing inputs and actual verification limits; do not invent a complete-looking outcome.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "save-requested-artifact",
+      "execution": "exclusive-write",
+      "assignments": [
+        {
+          "agent": "onchain-analyst",
+          "task": "Save only the requested reconciled report/analysis artifact, preserve raw inputs and user work, and record changes and applicable checks. This is the sole source writer.",
+          "when": "The user requested a persisted artifact, not response-only analysis."
+        }
+      ]
+    },
+    {
+      "id": "verify-artifact",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "evidence-validator",
+          "task": "Verify the actual saved artifact against reconciled evidence after the sole writer finishes; report failed/unperformed checks rather than certify missing evidence.",
+          "when": "A requested artifact was saved or changed."
+        }
+      ]
+    }
+  ],
+  "completion": [
+    "Data/definition review precedes dependent domain conclusions, independent checks follow completed results and artifact verification follows the sole writer.",
+    "Only relevant installed specialists run, within the concurrency limit; missing inputs, conflicts, unavailable tools and unperformed checks remain explicit.",
+    "The requested answer or authorized artifact identifies sources/as-of, assumptions, calculations, uncertainty and supported versus unverified claims.",
+    "No wallet/account action, order, bet, signature, transfer, bond or resolution submission is implied by this workflow."
+  ]
+}

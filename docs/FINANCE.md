@@ -2,7 +2,7 @@
 
 The finance pack adds three profiles and `/team-finance`. It depends on science-data,
 which depends on core, so a finance export contains 21 profiles and 11 workflows.
-The full catalog contains 32 profiles, 18 workflows and five packs. These counts
+The full catalog contains 34 profiles, 20 workflows and seven packs. These counts
 refer to rendered sources, not observed model outcomes or live financial services.
 
 ## Responsibilities
@@ -16,7 +16,8 @@ refer to rendered sources, not observed model outcomes or live financial service
 These roles can analyze relevant stock, fund, crypto-asset or other instrument data
 when the actual data/method supports it. A profile name does not supply asset-specific
 market data, derivatives pricing, an account connection, cryptography expertise or
-betting-model validation. Those specialist workflows remain separate candidates.
+betting-model validation by themselves. Optional [crypto](CRYPTO.md) and
+[forecasting](FORECASTING.md) packs now supply those focused research methods.
 
 ## Reusable procedures
 

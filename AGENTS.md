@@ -30,7 +30,8 @@ truth or an autonomous agent runtime.
   profiles and installing skills are separate scopes.
 - Follow [README.md](README.md) for usage, [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
   for source/adapter boundaries, [docs/FINANCE.md](docs/FINANCE.md) for finance
-  scope and worked examples, and [evals/README.md](evals/README.md) for evaluation.
+  scope and worked examples, [docs/CRYPTO.md](docs/CRYPTO.md) and
+  [docs/FORECASTING.md](docs/FORECASTING.md) for the related packs, and [evals/README.md](evals/README.md) for evaluation.
 
 Before completing a change, run:
 

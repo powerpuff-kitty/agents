@@ -1,0 +1,75 @@
+{
+  "classification": "synthetic offline review fixture; no real account, chain or market",
+  "question": "Assess the supplied chain, contract, protocol, quote, forecast and settlement claims from these records. Preserve inputs and report uncertainty.",
+  "chain_data": {
+    "chain_id": 111,
+    "token": "0xsynthetic",
+    "declared_verified_decimals": 6,
+    "raw_amount": 4500000,
+    "reported_token_amount": 4500000,
+    "records": [
+      {"chain_id":111,"block_hash":"A","tx_hash":"T1","log_index":0,"raw_amount":4500000,"receipt_status":1,"canonical":true,"finalized":false},
+      {"chain_id":111,"block_hash":"A","tx_hash":"T1","log_index":0,"raw_amount":4500000,"receipt_status":1,"canonical":true,"finalized":false},
+      {"chain_id":111,"block_hash":"B","tx_hash":"T2","log_index":0,"raw_amount":9000000,"receipt_status":1,"canonical":false,"finalized":false},
+      {"chain_id":111,"block_hash":"C","tx_hash":"T3","log_index":0,"raw_amount":9000000,"receipt_status":0,"canonical":true,"finalized":false},
+      {"chain_id":222,"block_hash":"A","tx_hash":"T1","log_index":0,"raw_amount":4500000,"receipt_status":1,"canonical":true,"finalized":true}
+    ],
+    "reported_finalized_transfer_count_chain111":5,
+    "starting_balance":null,
+    "attribution_source":null
+  },
+  "contract": {
+    "classification":"synthetic source excerpt; no compiler or deployed bytecode provided",
+    "withdraw_sequence":["amount=balances[msg.sender]","balances[msg.sender]=0","external_call_to_sender(amount)","require_call_success"],
+    "upgrade_function":"upgradeTo(next) external onlyOwner",
+    "effective_owner_check":"caller must equal configured owner",
+    "accepted_architecture":"owner is intentionally authorized to upgrade",
+    "reported_claim":"The deployed proxy is proven vulnerable to reentrancy because the withdrawal makes an external call.",
+    "proxy_address":null,
+    "implementation_match":null
+  },
+  "defi": {
+    "model":"single collateral health factor; hypothetical",
+    "collateral_value":240,
+    "threshold":0.8,
+    "debt_value":120,
+    "collateral_only_price_shock":-0.25,
+    "reported_shocked_health_factor":0.5,
+    "reported_result":"an actual liquidation occurred",
+    "lp_model":"fee-free full-range constant-product LP versus holding initial assets",
+    "relative_price_ratio":9,
+    "reported_lp_usd_return":-0.4
+  },
+  "odds": {
+    "market":"synthetic comparable exhaustive two-outcome back market at one time",
+    "decimal_quotes":[2.4,1.6],
+    "reported_margin_free_probabilities":[0.4166666667,0.625],
+    "independent_probability_assumption_first_outcome":0.45,
+    "commission_model":"one isolated bet, commission on positive net winnings",
+    "commission_rate":0.08,
+    "reported_expected_net_profit_per_unit":0.08
+  },
+  "forecasts": {
+    "evaluation_unit":"one pre-outcome snapshot per distinct question",
+    "records":[
+      {"id":"Q1","p":0.9,"outcome":1,"status":"resolved"},
+      {"id":"Q2","p":0.7,"outcome":0,"status":"resolved"},
+      {"id":"Q3","p":0.4,"outcome":1,"status":"resolved"},
+      {"id":"Q4","p":0.1,"outcome":0,"status":"resolved"},
+      {"id":"Q5","p":0.8,"outcome":null,"status":"unresolved"}
+    ],
+    "baseline_probability":0.5,
+    "reported_brier":0.302,
+    "calibrator_training":"same four resolved labels used for final evaluation",
+    "reported_claim":"The model is calibrated and profitable."
+  },
+  "settlement": {
+    "market_A_rule":"YES if the official measured value is at least 150 by 11:00 UTC on the stated date",
+    "market_B_rule":"YES if the official measured value is strictly above 150 by 11:00 UTC on the stated date",
+    "official_value_at_cutoff":150,
+    "trading_status":"closed",
+    "resolution_status":"proposed",
+    "dispute_and_final_status":null,
+    "reported_claim":"Both markets are equivalent and finally settled YES."
+  }
+}

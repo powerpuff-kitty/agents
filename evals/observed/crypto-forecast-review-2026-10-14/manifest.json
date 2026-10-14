@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "kind": "observed-synthetic-skill-review",
+  "recorded_at_utc": "2026-10-14T14:52:06.977375+00:00",
+  "evaluator": "Codex independent subagent /root/crypto_forecast_review",
+  "model_id": null,
+  "model_identity_limit": "Exact model ID is not exposed by the collaboration tool.",
+  "skills_source": {
+    "repository": "powerpuff-kitty/skills",
+    "commit": "031ad986b946dc2b5a98ffabba84f903255a99b2"
+  },
+  "input_sha256": "0271598b55aaa074e93700c37cdb3b5a38ceb0158a76754640585ba60dc18459",
+  "review_sha256": "2303d9c9f6b635f30fe6694f65cc865690012a56996eaf638d0bee6694ab5c67",
+  "initial_skill_hashes": "initial-skill-hashes.json",
+  "original_commands_and_limits": "checks.md",
+  "original_calculation_script": "original-calculation.py",
+  "original_output": "original-calculations.json",
+  "portable_arithmetic_command": "python3 -B reproduce_calculations.py",
+  "portable_arithmetic_exit": 0,
+  "portable_arithmetic_output": "reproduced-calculations.json",
+  "parent_review": {
+    "scope": "Manual review of retained findings against the raw fixture, initial hash comparison and independent exact-arithmetic reproduction.",
+    "confirmed": [
+      "Token unit and chain/canonical/success/finality separation",
+      "Withdrawal effects-before-interaction counterevidence and missing deployment match",
+      "Health-factor scenario versus actual liquidation",
+      "LP relative benchmark versus USD return",
+      "Raw versus proportionally normalized odds",
+      "Conditional commission-adjusted expectation",
+      "Resolved-only Brier, baseline and unresolved exclusion",
+      "In-sample calibrator and small-sample limitations",
+      "Inclusive/exclusive settlement boundary and proposal/final status"
+    ],
+    "result": "Bounded synthetic findings supported; no general reliability certification."
+  },
+  "host_loading": "not_checked",
+  "automatic_skill_routing": "not_checked",
+  "agent_profile_evaluation": "not_run",
+  "acceptance_case_specifications": "unchanged_not_run",
+  "limitations": [
+    "One synthetic review, not repeated trials or a benchmark.",
+    "Explicit skill paths were supplied; automatic selection was not tested.",
+    "Evaluator also read the current workspace routing README/manifest; their hashes are recorded, contents not copied.",
+    "Exact model ID and full raw tool transcript are unavailable; report/check record and arithmetic are retained.",
+    "No chain, broker, wallet, betting account or financial action was used."
+  ]
+}

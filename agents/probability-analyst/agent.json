@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "probability-analyst",
+  "title": "Probability Analyst",
+  "description": "Analyze recorded event forecasts, betting/prediction-market odds and settlement definitions with proper scoring, calibration, fees and uncertainty. Use for probabilistic evaluation and conditional payoff research; use quant-researcher for financial trading backtests. Analysis does not place bets or establish profitable predictions."
+}

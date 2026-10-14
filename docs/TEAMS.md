@@ -19,6 +19,8 @@ These are reusable workflow instructions, not a new runtime or a multi-select UI
 | `/team-science <question>` | Derived from the request | Scientist frames the question, methods are reviewed, the protocol is finalized, requested implementation/execution is serialized, then results are interpreted and independently checked |
 | `/team-data <question>` | Derived from the request | Data-analyst checks scope/provenance, relevant methods are reviewed, approved data is analyzed, requested artifacts are saved, and results are independently checked |
 | `/team-finance <question>` | Financial analysis/review | Frame source/as-of scope, check data, conditionally analyze models/strategies/portfolio risk, independently verify, reconcile and save only requested artifacts |
+| `/team-crypto-review <scope>` | Onchain/protocol review | Check chain/source/finality before applicable contract/economic analysis, independently verify and save only requested artifacts |
+| `/team-forecast <question>` | Forecast/odds/rules review | Gather required sources before data/definition checks and analysis, independently verify and save only requested artifacts |
 | `/team-launch <product>` | GTM planning/review | Gather evidence, define positioning, create requested plan/drafts, and reconcile commercial/technical readiness without launching |
 | `/team-growth <goal>` | Derived from the request | Establish actual baselines, diagnose hypotheses, implement only requested changes, run only authorized experiments, and assess actual outcomes |
 | `/team-seo <scope>` | Derived from the request | Audit search eligibility/content, gather relevant support, apply requested fixes, then verify completed outputs and evidence |
@@ -188,7 +190,7 @@ serially and must label them coordinator-performed rather than independent runs.
 The command registry verifies that the host discovers the slash commands; source
 and rendering tests verify their coordinator, scope placeholder, and parent-session
 mapping. No actual end-to-end model team run is established by these checks.
-The 112 behavioral scenarios remain unrun until evaluated sessions and artifacts
+The 124 behavioral scenarios remain unrun until evaluated sessions and artifacts
 are retained. Parallel limits and review-only rules are prompt contracts rather
 than runtime-enforced semaphores or read-only permissions.
 
@@ -200,3 +202,12 @@ precedes dependent domain analysis; independent checks follow completed results.
 Only a requested saved artifact uses the sole writer, followed by artifact review.
 Missing inputs remain explicit. Selecting the team does not execute trades,
 activate bots, connect wallets or place bets.
+
+## Crypto and event forecasts
+
+[Crypto](CRYPTO.md) and [forecasting](FORECASTING.md) document the two optional
+teams, role boundaries and examples. The forecast team gathers needed external
+rule evidence before dependent analysis. Both teams check data/definitions first,
+independently check completed conclusions, serialize the requested artifact writer
+and inspect saved output afterward. Data access, finality, rules and missing labels
+remain explicit. No wallet/betting/resolution action is implied by team selection.

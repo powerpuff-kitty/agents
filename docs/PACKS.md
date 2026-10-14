@@ -2,7 +2,7 @@
 
 Pack declarations in `packs/*.json` select canonical profiles and teams without
 forking their instructions. Builds, installation, and optional host validation
-default to the full catalog: 32 profiles and 18 teams.
+default to the full catalog: 34 profiles and 20 teams.
 
 | Pack | Owned profiles | Owned teams | Dependencies | Total with dependencies |
 | --- | --- | --- | --- | --- |
@@ -11,6 +11,8 @@ default to the full catalog: 32 profiles and 18 teams.
 | product-growth | 8 | 5 | core, science-data | 26 profiles, 15 teams |
 | game-3d | 3 | 2 | core, science-data | 21 profiles, 12 teams |
 | finance | 3 | 1 | science-data (and its core dependency) | 21 profiles, 11 teams |
+| crypto | 1 | 1 | finance (and its dependencies) | 22 profiles, 12 teams |
+| forecasting | 1 | 1 | science-data (and core) | 19 profiles, 11 teams |
 
 Core includes ux-designer, usability-auditor, accessibility-specialist, and `/team-ux`.
 The core UX workflow remains usable without product-growth: optional user-researcher,
@@ -26,7 +28,7 @@ use it to assess integrated product increments against accepted gates. See
 [iteration readiness](ITERATION-READINESS.md) for evidence and trigger boundaries.
 
 Science/data supports quantitative growth evaluation and game balance. Combining
-product-growth, game-3d and finance includes the full catalog. Dependency closure is
+product-growth, game-3d, crypto and forecasting includes the full catalog. Dependency closure is
 automatic; repeated pack selections do not duplicate files. See the [catalog](CATALOG.md)
 for role ownership and [team workflows](TEAMS.md) for presets.
 
@@ -38,7 +40,7 @@ python3 scripts/install.py --tool opencode
 python3 scripts/install.py --pack core --dry-run
 python3 scripts/install.py --pack core
 python3 scripts/install.py --pack science-data
-python3 scripts/install.py --pack product-growth --pack game-3d --pack finance
+python3 scripts/install.py --pack product-growth --pack game-3d --pack crypto --pack forecasting
 
 # Matching portable/OpenCode exports and validation
 python3 scripts/build.py --adapter portable --pack core
@@ -66,6 +68,13 @@ python3 scripts/install.py --pack core --target /path/to/project/.opencode/agent
 ```
 
 The sibling `.opencode/commands` is selected automatically. Source validation checks
-the full catalog and all 112 behavior specifications even with `--pack`; reported
+the full catalog and all 124 behavior specifications even with `--pack`; reported
 profile/team counts and optional host checks concern the selected closure. Host
 checks allow unrelated additional profiles/commands and do not execute model workflows.
+
+[Crypto](CRYPTO.md) adds onchain evidence and a conditional contract/economic
+review team. [Forecasting](FORECASTING.md) adds odds, proper-score/calibration
+and settlement analysis. Neither pack adds account or transaction capabilities.
+Combining crypto and forecasting resolves 23 profiles and 13 workflows; shared
+dependencies are deduplicated. Source profiles still require actual host loading
+checks after a requested installation.

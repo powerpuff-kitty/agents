@@ -1,12 +1,12 @@
 # Agents
 
-Thirty-one specialist profiles and a team lead share one operating contract. Portable role
+Thirty-three specialist profiles and a team lead share one operating contract. Portable role
 instructions are the source of truth; adapters produce tool-specific versions.
 The repository currently supports plain Markdown bundles and OpenCode profiles.
 
-The [agent catalog](docs/CATALOG.md) lists all 32 roles. Eighteen [team workflows](docs/TEAMS.md)
+The [agent catalog](docs/CATALOG.md) lists all 34 roles. Twenty [team workflows](docs/TEAMS.md)
 cover general tasks, engineering, research, science/data, product/growth, finance, and game/3D
-work. Five [installable packs](docs/PACKS.md) share the same canonical sources.
+work. Seven [installable packs](docs/PACKS.md) share the same canonical sources.
 
 These are instruction profiles. They use the host's selected model, available
 tools, project context, and permissions. They do not independently provide tools,
@@ -63,7 +63,7 @@ is supplied; replacements are backed up
 under the target's parent `backups/` directory. Reinstallation without changes
 does not rewrite the profiles. Obsolete files are not silently deleted.
 
-Without `--pack`, builds and installation include all 32 profiles and 18 commands.
+Without `--pack`, builds and installation include all 34 profiles and 20 commands.
 For a smaller installation, select packs; dependencies are included automatically:
 
 ```sh
@@ -71,6 +71,7 @@ python3 scripts/install.py --pack core --dry-run
 python3 scripts/install.py --pack core
 python3 scripts/install.py --pack science-data
 python3 scripts/install.py --pack finance --dry-run
+python3 scripts/install.py --pack crypto --pack forecasting --dry-run
 python3 scripts/install.py --pack product-growth --pack game-3d
 ```
 
@@ -86,7 +87,7 @@ python3 scripts/validate.py --opencode ~/.opencode/bin/opencode
 ```
 
 Use your actual executable path if different. An earlier profile/command snapshot
-was verified with OpenCode 2.0.27; the new finance profiles/command have source and
+was verified with OpenCode 2.0.27; the added finance/crypto/forecast profiles and commands have source and
 isolated installation checks, with actual host loading not checked. The minimal frontmatter intentionally avoids model/permission
 overrides. The team lead uses `mode: primary`; specialists retain `mode: all`.
 Other OpenCode versions require their own loading checks; do not infer
@@ -170,7 +171,7 @@ python3 -m unittest discover -s tests -v
 ```
 
 Source validation, deterministic rendering, installer tests, and actual host
-profile/command loading are distinct from model behavior. The 112 scenarios in
+profile/command loading are distinct from model behavior. The 124 scenarios in
 [evals](evals/README.md) remain `not_run` until an actual evaluated session is
 retained. Do not report passing instruction-file checks as agent reliability.
 
@@ -199,11 +200,19 @@ portfolio-risk-analyst and `/team-finance`. It uses independent market-data,
 financial-model and backtest validation skills when available. See its worked
 examples, supported scope and [pack installation](docs/FINANCE.md#build-and-install-a-selected-pack).
 
+## Crypto and probabilistic analysis
+
+[Crypto research](docs/CRYPTO.md) adds onchain-analyst and `/team-crypto-review`,
+using existing security/risk roles for scoped contract and DeFi assessment.
+[Forecasting](docs/FORECASTING.md) adds probability-analyst and `/team-forecast`
+for recorded forecasts, odds and settlement-rule analysis. The packs are selectable;
+profile installation and skill installation remain separate scopes.
+
 ## Coverage and future directions
 
 See the [domain and demand assessment](docs/DOMAIN-OPPORTUNITIES.md) for current
-security/content coverage, the implemented finance foundation and proposed
-hardware, media, cryptography, aviation, crypto/DeFi and betting workflows.
+security/content coverage, the implemented finance/crypto/forecasting foundations
+and proposed hardware, media, cryptography and aviation workflows.
 Unimplemented candidates remain research recommendations. The [documentation assessment](docs/DOCUMENTATION-ASSESSMENT.md) reviews
 all current agents and skills and recommends concise entrypoints with deeper
 references for complex or consequential work.

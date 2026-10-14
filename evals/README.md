@@ -1,7 +1,7 @@
 # Agent behavior acceptance scenarios
 
-The [112 scenarios](behavior-cases.json) include at least two role-specific cases for each of
-thirty-two profiles, shared cases, at least two cases for each of eighteen team presets,
+The [124 scenarios](behavior-cases.json) include at least two role-specific cases for each of
+thirty-four profiles, shared cases, at least two cases for each of twenty team presets,
 and five procedure-selection and maintenance/CI boundary cases.
 They cover review-only scope, authorized fixes,
 unavailable checks, existing user edits, project-context discovery, untrusted
@@ -52,3 +52,14 @@ records one independent session using explicit skill paths, its input/report and
 reproducible arithmetic. It does not evaluate the new agent profiles, automatic
 routing, host loading or the separate acceptance specifications. Exact model ID
 is unavailable; the manifest preserves that provenance limit.
+
+Crypto/forecasting adds three cases per new role and three per new team: chain
+identity/units/reorgs, source-versus-deployment evidence, missing snapshots,
+probability/margin and missing-label handling, settlement status, source-before-
+analysis and saved-artifact sequencing. These twelve specifications remain not_run.
+
+A [retained crypto/forecast synthetic review](observed/crypto-forecast-review-2026-10-14/manifest.json)
+records one independent explicit-skill session, raw fixture, reports, input/source
+hashes and portable exact arithmetic. It covers different data than the guide
+examples. Profile behavior, native loading, automatic routing and the 124 canonical
+acceptance specifications remain untested by this record.

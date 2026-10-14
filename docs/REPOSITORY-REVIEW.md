@@ -50,3 +50,22 @@ team, increasing the source catalog to 32 profiles, 18 teams and five packs with
 112 unrun acceptance specifications. [FINANCE.md](FINANCE.md) owns current scope,
 worked examples and installation guidance. This addition does not change the
 reviewed repository structure or establish host/model financial reliability.
+
+## Crypto and forecasting implementation follow-up
+
+The owner authorized continuation after the finance foundation. Optional
+[crypto](CRYPTO.md) and [forecasting](FORECASTING.md) packs now add onchain-analyst,
+probability-analyst, `/team-crypto-review` and `/team-forecast`. The current catalogs
+contain 47 skills, 34 profiles, 20 workflows and seven packs. Contract-security
+review remains with security-auditor. No wallet/account or execution runtime is
+introduced. Other domain candidates remain recommendations.
+
+Six new skills have local methods, worked examples, report templates and six
+acceptance specifications each: onchain-data-analysis, smart-contract-review,
+defi-risk-analysis, odds-analysis, forecast-calibration and settlement-rule-review.
+Their guides cover identity/finality/units, source/deployment and economic controls,
+quote/margin/fees, proper scores/calibration and exact settlement definitions.
+The two new roles have self-contained procedures and linked pack walkthroughs.
+These eight additions extend the per-entry documentation inventory to all 81
+current entries (47 skills plus 34 roles). Twelve new role/team specifications
+bring the canonical case count to 124; none is promoted to an observed outcome.

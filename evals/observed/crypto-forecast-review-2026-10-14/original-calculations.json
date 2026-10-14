@@ -1,0 +1,252 @@
+{
+  "python_version": "3.14.7",
+  "review_time_utc": "2026-10-14T14:48:23.881609+00:00",
+  "input_sha256_before": "0271598b55aaa074e93700c37cdb3b5a38ceb0158a76754640585ba60dc18459",
+  "input_sha256_after": "0271598b55aaa074e93700c37cdb3b5a38ceb0158a76754640585ba60dc18459",
+  "input_unchanged": true,
+  "source_inventory": [
+    {
+      "path": "/Users/tcsntcsn/TCSN/tcsn.io/.agentic/README.md",
+      "sha256": "003a14f720e4786ce2dba827f67026f57d3731e4af95b8c452acaaa85d85fb1b"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/tcsn.io/.agentic/manifest.yaml",
+      "sha256": "ca867f626028cc9aa4fa54ec547b7b4b414ad80a14e0e9f4edcce142124749ff"
+    },
+    {
+      "path": "/private/tmp/crypto-forecast-forward/input.json",
+      "sha256": "0271598b55aaa074e93700c37cdb3b5a38ceb0158a76754640585ba60dc18459"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/onchain-data-analysis/SKILL.md",
+      "sha256": "b8f79d9560402ae3fdec34dcea741fdaa4e53e25d8247acc278265ffdf1278ff"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/onchain-data-analysis/references/method.md",
+      "sha256": "17d0ddb1ba88b9859eea50250901a2872835f5e5a9ce73a9b8d018d4978242ac"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/onchain-data-analysis/assets/report-template.md",
+      "sha256": "525694ee1bed2d824341c9de8f8a2fe8868a27edd2802ca691791f1933386686"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/smart-contract-review/SKILL.md",
+      "sha256": "bf2a99966da950ade898a66736318302f39f4f7d0a0ea7a52165b64fae33fb3e"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/smart-contract-review/references/method.md",
+      "sha256": "2df2aab37af328b78be9d4931d9344cbee6847d941d9c7350cd09673ff32d202"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/smart-contract-review/assets/report-template.md",
+      "sha256": "d00daad298a618df6519dfe0d9e91599d19a48652b68fb238db44e2eab179a70"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/defi-risk-analysis/SKILL.md",
+      "sha256": "1dae2d4d13893506bd388c47f7312bc10c6d898733f934891d33552bd6a20f6b"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/defi-risk-analysis/references/method.md",
+      "sha256": "9e9c6a76f68ef0f7c21104298f2db8adb189b02945ebfeb9a261e876b181c29e"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/defi-risk-analysis/assets/report-template.md",
+      "sha256": "09097bd55a6a6f469b34bfa211f34afb7bedbeda84e79bb891076c7e590f76dc"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/odds-analysis/SKILL.md",
+      "sha256": "9e65a46e5c397010ce67f927a618c6ce19dbf9085c4c50fab1bdaae11d35c7c9"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/odds-analysis/references/method.md",
+      "sha256": "e772e9bc107d0d838dd746d2199a3593596fc63e9829a42f14fcb5b76a2f054d"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/odds-analysis/assets/report-template.md",
+      "sha256": "fe70f0b131e178e1c7f00aa58a991d530a81ad329772c231d8327937fd27e22c"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/forecast-calibration/SKILL.md",
+      "sha256": "79e013edc1a1db0346a11104418517cfb847601a54fddbbdd82b92ce34b28bb7"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/forecast-calibration/references/method.md",
+      "sha256": "b3d65f2352455af2cc6541a1bfdce2dfb514e043c1f9f30b48a8e8ef1160a786"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/forecast-calibration/assets/report-template.md",
+      "sha256": "10e81ac0bf828c273cac263fac524d7132baf6d237eb569bc90eda06029c5b0d"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/settlement-rule-review/SKILL.md",
+      "sha256": "2033810fd483d4caacca69773a6c4d17982e70ce273c970060f36e8598532015"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/settlement-rule-review/references/method.md",
+      "sha256": "daa053586de0339a812041f99d59caaea7b06df539647dee43081961056ab670"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/settlement-rule-review/assets/report-template.md",
+      "sha256": "8f4fbaf39cef4bcea23ab9ba597e5e12248d5ee516560ded286d57e45b96c53e"
+    }
+  ],
+  "chain": {
+    "scaled_amount": {
+      "exact": "9/2",
+      "decimal": "4.5"
+    },
+    "eligible_rows": 2,
+    "unique_eligible_events": 1,
+    "unique_finalized_eligible_events": 0
+  },
+  "defi": {
+    "initial_hf": {
+      "exact": "8/5",
+      "decimal": "1.6"
+    },
+    "shocked_collateral": {
+      "exact": "180",
+      "decimal": "180"
+    },
+    "shocked_hf": {
+      "exact": "6/5",
+      "decimal": "1.2"
+    },
+    "collateral_at_hf_one": {
+      "exact": "150",
+      "decimal": "150"
+    },
+    "shock_at_hf_one": {
+      "exact": "-3/8",
+      "decimal": "-0.375"
+    },
+    "lp_relative_value": {
+      "exact": "3/5",
+      "decimal": "0.6"
+    },
+    "lp_relative_return": {
+      "exact": "-2/5",
+      "decimal": "-0.4"
+    }
+  },
+  "odds": {
+    "raw_implied": [
+      {
+        "exact": "5/12",
+        "decimal": "0.4166666666666666666666666667"
+      },
+      {
+        "exact": "5/8",
+        "decimal": "0.625"
+      }
+    ],
+    "sum_raw": {
+      "exact": "25/24",
+      "decimal": "1.041666666666666666666666667"
+    },
+    "overround": {
+      "exact": "1/24",
+      "decimal": "0.04166666666666666666666666667"
+    },
+    "proportional_normalization": [
+      {
+        "exact": "2/5",
+        "decimal": "0.4"
+      },
+      {
+        "exact": "3/5",
+        "decimal": "0.6"
+      }
+    ],
+    "gross_ev": {
+      "exact": "2/25",
+      "decimal": "0.08"
+    },
+    "winning_net_profit": {
+      "exact": "161/125",
+      "decimal": "1.288"
+    },
+    "fee_adjusted_ev": {
+      "exact": "37/1250",
+      "decimal": "0.0296"
+    },
+    "break_even_p": {
+      "exact": "125/286",
+      "decimal": "0.4370629370629370629370629371"
+    }
+  },
+  "forecast": {
+    "resolved_n": 4,
+    "excluded_ids": [
+      "Q5"
+    ],
+    "squared_errors": [
+      {
+        "exact": "1/100",
+        "decimal": "0.01"
+      },
+      {
+        "exact": "49/100",
+        "decimal": "0.49"
+      },
+      {
+        "exact": "9/25",
+        "decimal": "0.36"
+      },
+      {
+        "exact": "1/100",
+        "decimal": "0.01"
+      }
+    ],
+    "brier": {
+      "exact": "87/400",
+      "decimal": "0.2175"
+    },
+    "baseline": {
+      "exact": "1/4",
+      "decimal": "0.25"
+    },
+    "brier_skill": {
+      "exact": "13/100",
+      "decimal": "0.13"
+    },
+    "bins_descriptive_only": [
+      {
+        "range": "[0,.5)",
+        "n": 2,
+        "mean_p": {
+          "exact": "1/4",
+          "decimal": "0.25"
+        },
+        "event_rate": {
+          "exact": "1/2",
+          "decimal": "0.5"
+        }
+      },
+      {
+        "range": "[.5,1]",
+        "n": 2,
+        "mean_p": {
+          "exact": "4/5",
+          "decimal": "0.8"
+        },
+        "event_rate": {
+          "exact": "1/2",
+          "decimal": "0.5"
+        }
+      }
+    ],
+    "brier_if_unresolved_wrongly_zero": {
+      "exact": "151/500",
+      "decimal": "0.302"
+    }
+  },
+  "settlement": {
+    "value": 150,
+    "A_threshold_satisfied": true,
+    "B_threshold_satisfied": false,
+    "trading_status": "closed",
+    "resolution_status": "proposed",
+    "final_status": null
+  }
+}

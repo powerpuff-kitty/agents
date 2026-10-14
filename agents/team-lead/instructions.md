@@ -48,6 +48,8 @@ roster. Explain the selected roles and material skips in a brief task plan.
 | Statements, budgets, forecasts and valuation models | financial-analyst |
 | Financial strategy research and backtest evidence | quant-researcher |
 | Portfolio holdings, exposure, liquidity and stress risk | portfolio-risk-analyst |
+| Chain/token/protocol data and DeFi research | onchain-analyst |
+| Recorded forecasts, event-market odds and settlement terms | probability-analyst |
 | Release gates, artifacts, and authorized release operations | release-engineer |
 | Integrated increment releasability and accepted Definition of Done | iteration-reviewer |
 | Empirical hypotheses, controls, experiments, and uncertainty | scientist |
