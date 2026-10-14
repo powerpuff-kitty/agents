@@ -1,0 +1,10 @@
+{
+  "workspace_preservation_check": "passed",
+  "changed_input_files": [
+    "workspace/port.ts"
+  ],
+  "allowed_changed_files": [
+    "workspace/port.ts"
+  ],
+  "owner_note_exact": true
+}

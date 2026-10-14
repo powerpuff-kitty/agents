@@ -79,6 +79,67 @@ class WorkflowTests(unittest.TestCase):
             self.assertNotEqual(edited.returncode, 0)
             self.assertEqual(existing.read_text(), "Managed profile with user edit.\n")
 
+    def test_source_update_and_downgrade_preserve_backups_and_local_edits(self):
+        with tempfile.TemporaryDirectory() as raw:
+            base = Path(raw).resolve()
+            source = base / "source"
+            for name in ("agents", "shared", "teams", "packs", "adapters", "scripts"):
+                shutil.copytree(ROOT / name, source / name, ignore=shutil.ignore_patterns("__pycache__"))
+            shutil.copy2(ROOT / "LICENSE", source / "LICENSE")
+            target = base / "installation/agents"
+            target.mkdir(parents=True)
+            (target / "personal.md").write_text("Owner profile.\n")
+
+            def apply():
+                return subprocess.run([sys.executable, str(source / "scripts/install.py"),
+                                       "--agent", "designer", "--target", str(target)],
+                                      text=True, capture_output=True)
+
+            def installed():
+                return {str(p.relative_to(target.parent)): (p.read_bytes(), p.stat().st_mtime_ns)
+                        for p in target.parent.rglob("*") if p.is_file()}
+
+            self.assertEqual(apply().returncode, 0)
+            profile, state = target / "designer.md", target / ".agents-managed.json"
+            original_profile, original_state = profile.read_bytes(), state.read_bytes()
+            profile.chmod(0o600)
+            state.chmod(0o600)
+            instructions = source / "agents/designer/instructions.md"
+            original_source = instructions.read_bytes()
+            instructions.write_bytes(original_source + b"\nSynthetic source revision 2.\n")
+            update = apply()
+            self.assertEqual(update.returncode, 0, update.stderr)
+            result = json.loads(update.stdout)
+            self.assertEqual(result["changed"], ["agents/designer.md"])
+            backup = Path(result["backup"])
+            self.assertEqual((backup / "designer.md").read_bytes(), original_profile)
+            self.assertEqual((backup / state.name).read_bytes(), original_state)
+            self.assertEqual(profile.stat().st_mode & 0o777, 0o600)
+            self.assertEqual(state.stat().st_mode & 0o777, 0o600)
+            updated_profile = profile.read_bytes()
+            self.assertNotEqual(updated_profile, original_profile)
+            before = installed()
+            self.assertEqual(json.loads(apply().stdout)["changed"], [])
+            self.assertEqual(installed(), before)
+
+            profile.write_bytes(updated_profile + b"\nOwner customization.\n")
+            instructions.write_bytes(original_source)
+            before = installed()
+            refused = apply()
+            self.assertNotEqual(refused.returncode, 0)
+            self.assertIn("locally edited", refused.stderr)
+            self.assertEqual(installed(), before)
+
+            # The fixture owner deliberately restores the managed v2 copy before
+            # downgrading; real local changes require the same explicit decision.
+            profile.write_bytes(updated_profile)
+            downgrade = apply()
+            self.assertEqual(downgrade.returncode, 0, downgrade.stderr)
+            self.assertEqual(profile.read_bytes(), original_profile)
+            self.assertEqual(state.read_bytes(), original_state)
+            self.assertEqual((Path(json.loads(downgrade.stdout)["backup"]) / "designer.md").read_bytes(), updated_profile)
+            self.assertEqual((target / "personal.md").read_text(), "Owner profile.\n")
+
     def test_symlink_collision_is_not_replaced(self):
         with tempfile.TemporaryDirectory() as temporary:
             base = Path(temporary)

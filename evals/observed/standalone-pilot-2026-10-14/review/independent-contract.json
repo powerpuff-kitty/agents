@@ -1,0 +1,10 @@
+{
+  "kind": "independent-JavaScript-logic-check-after-exact-signature-removal",
+  "node": "v25.5.0",
+  "accepted": 196605,
+  "rejected": 131082,
+  "total": 327687,
+  "failures": 0,
+  "source_sha256": "e391062fd391147f77f044a27167d988b44e9113c0f0bdb25d94c267383ca03e",
+  "limitations": "No TypeScript parsing, type-checking or compilation. Finite contract coverage; no browser/integration claim."
+}

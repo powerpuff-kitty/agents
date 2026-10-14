@@ -1,0 +1,10 @@
+[
+  {
+    "argv": [
+      "/usr/bin/true"
+    ],
+    "cwd": "/private/tmp/standalone-pilot-2026-10-14/review/correction-recheck-artifacts/runner-probes/clean-success/project",
+    "exit": 0,
+    "log": "logs/gate-01.log"
+  }
+]

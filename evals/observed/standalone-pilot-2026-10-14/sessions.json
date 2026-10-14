@@ -1,0 +1,51 @@
+{
+  "format_version": 1,
+  "host_tool": "collaboration.spawn_agent",
+  "initial_sessions": [
+    {
+      "task_name": "/root/standalone_real_project_pilot",
+      "fork_turns": "none",
+      "accepted_brief": "pilot/task.md",
+      "purpose": "actual project source-release readiness from direct installs",
+      "selected_profiles": [
+        "release-engineer",
+        "quality-engineer"
+      ],
+      "selected_skills": [
+        "release-review"
+      ]
+    },
+    {
+      "task_name": "/root/standalone_failure_cases",
+      "fork_turns": "none",
+      "accepted_briefs": [
+        "cases/implementation-unavailable-check/task.md",
+        "cases/browser-recovery-false-pass/task.md",
+        "cases/reflection-failed-test/task.md",
+        "cases/reflection-architecture-finding/task.md",
+        "cases/reflection-insufficient-evidence/task.md",
+        "cases/reflection-no-reflection-needed/task.md"
+      ],
+      "purpose": "6 tasks in 1 evaluator context; select relevant instructions from supplied metadata",
+      "scope_clarification": "Exact catalog-listed pilot/installed/agents/*.md are common allowed instruction files; no other pilot inputs/results allowed."
+    },
+    {
+      "task_name": "/root/standalone_independent_review",
+      "fork_turns": "none",
+      "accepted_brief": "review/request.txt",
+      "accepted_requirements": "review/requirements.json",
+      "purpose": "frozen outputs reviewed without author conclusions or desired verdict; initial report retained before later pilot scope",
+      "followups": [
+        "Pilot scope then allowed after initial case review retained; source/result/actions/logs read-only.",
+        "Separate correction recheck uses candidate-source-sha256.json; complete tests may create disposable synthetic fixture Git commits.",
+        "Retain a separate archive member-count correction without editing the initial report.",
+        "Review v2 clean-source preflight and failure propagation after retaining v1 finding."
+      ]
+    }
+  ],
+  "model_provider_version_usage": "unknown; not exposed by these tools",
+  "handoff": "root coordinated actual evaluator-to-reviewer handoff; no claim of native host team workflow execution",
+  "inheritance_provenance": "Initial spawn inputs set fork_turns none; reviewer rechecks reuse its review session. This is not an authenticated exhaustive context/action trace.",
+  "native_automatic_triggering": "not tested",
+  "redactions": []
+}

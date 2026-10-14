@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "packs": [
+    "core",
+    "crypto",
+    "finance",
+    "forecasting",
+    "game-3d",
+    "product-growth",
+    "science-data"
+  ],
+  "validated_at_utc": "2026-10-14T18:59:12.067359+00:00",
+  "agent_count": 35,
+  "scenario_count": 144,
+  "team_count": 20,
+  "host_loading": "not_checked",
+  "command_loading": "not_checked",
+  "model_behavior": "not_run"
+}

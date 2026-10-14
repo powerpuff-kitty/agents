@@ -1,0 +1,3 @@
+# Dirty-source identity follow-up
+
+The v2 recheck found that an already deleted tracked file could trigger a safe FileNotFoundError before source-before.json was written. run_gates.v3.py records revision/status/environment and an explicit not-collected hash state before refusing any initially dirty tree. Clean-source hashing and command failure aggregation remain unchanged. Root's deleted-tracked-file probe returned 1 before commands, retained the exact dirty status in source-before.json and explicitly recorded null hashes. Earlier scripts, findings and probe results remain unchanged. Use v3 for this clean-source gate runner; these records do not claim a sandbox or complete action authentication.

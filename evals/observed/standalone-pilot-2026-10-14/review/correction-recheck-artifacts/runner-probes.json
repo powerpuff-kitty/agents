@@ -1,0 +1,66 @@
+{
+  "corrected_runner_sha256": "0eb7db697ba10b945e683a98d44bbd79ca1428caf6811f1b11526a13e078f47e",
+  "original_controlled_probe_aggregation_ast_matches": true,
+  "probes": [
+    {
+      "scenario": "clean-success",
+      "runner_exit": 0,
+      "subcommand_exit": 0,
+      "status_before": "",
+      "status_after": "",
+      "tracked_source_unchanged": true,
+      "expected_nonzero": false,
+      "script_sha256": "68293e29f149d7aa32798d9f768a33a98e208b97de62da7493e22941866b3299"
+    },
+    {
+      "scenario": "failed-command",
+      "runner_exit": 1,
+      "subcommand_exit": 1,
+      "status_before": "",
+      "status_after": "",
+      "tracked_source_unchanged": true,
+      "expected_nonzero": true,
+      "script_sha256": "da9b644d2fbb768e5888a024edae066fe7178e0d129a7cd399202e12bd694b02"
+    },
+    {
+      "scenario": "tracked-source-changed",
+      "runner_exit": 1,
+      "subcommand_exit": 0,
+      "status_before": "",
+      "status_after": "M fixture.txt",
+      "tracked_source_unchanged": false,
+      "expected_nonzero": true,
+      "script_sha256": "71fef97ad2c307443571a03162a4d5b379cfcd7ce359de88d7ae1532ebed699a"
+    },
+    {
+      "scenario": "dirty-tracked-before",
+      "runner_exit": 1,
+      "subcommand_exit": 0,
+      "status_before": "M fixture.txt",
+      "status_after": "M fixture.txt",
+      "tracked_source_unchanged": true,
+      "expected_nonzero": true,
+      "script_sha256": "68293e29f149d7aa32798d9f768a33a98e208b97de62da7493e22941866b3299"
+    },
+    {
+      "scenario": "dirty-untracked-after",
+      "runner_exit": 1,
+      "subcommand_exit": 0,
+      "status_before": "",
+      "status_after": "?? owner-draft.txt",
+      "tracked_source_unchanged": true,
+      "expected_nonzero": true,
+      "script_sha256": "9b771f2b1722ec2b0cd2ba87ef33d98dd2ef9495aec7f605b7bbf5664c9c2533"
+    },
+    {
+      "scenario": "dirty-untracked-before-removed",
+      "runner_exit": 0,
+      "subcommand_exit": 0,
+      "status_before": "?? owner-draft.txt",
+      "status_after": "",
+      "tracked_source_unchanged": true,
+      "expected_nonzero": true,
+      "script_sha256": "db841cccb50c996864a1759f63d47bdc687667ad82b15dfd8b875f1904bd6840"
+    }
+  ]
+}

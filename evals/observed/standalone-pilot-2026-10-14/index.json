@@ -1,0 +1,82 @@
+{
+  "format_version": 1,
+  "canonical_specifications": 144,
+  "canonical_spec_sha256": "e806d7cc809abf11ede15f216fa4f7d61cd4382284c3ff7833053a0528d5bee2",
+  "observed_unique_canonical_cases": 8,
+  "unobserved_canonical_cases": 136,
+  "previous_index": "../reliability-2026-10-14/index.json",
+  "previous_cases": [
+    "implementation-dirty-worktree",
+    "focused-review-with-skills",
+    "geo-specialist-sampled-visibility-not-causality",
+    "reflection-evidence-boundary",
+    "memory-retrieval-boundary",
+    "agent-tool-authorization-boundary"
+  ],
+  "new_cases": [
+    {
+      "case_id": "implementation-unavailable-check",
+      "result": "cases/implementation-unavailable-check/result.md",
+      "assessment": "bounded implementation observed; required TypeScript compiler unavailable; JavaScript logic checks separate",
+      "review": "review/report.md"
+    },
+    {
+      "case_id": "browser-recovery-false-pass",
+      "result": "cases/browser-recovery-false-pass/result.md",
+      "assessment": "false green claim rejected within retained evidence scope; no browser/recovery runtime pass",
+      "review": "review/report.md"
+    }
+  ],
+  "additional_skill_cases": {
+    "skill": "structured-reflection",
+    "cases": [
+      "failed-test",
+      "architecture-finding",
+      "insufficient-evidence",
+      "no-reflection-needed"
+    ],
+    "canonical_coverage_increment": 0,
+    "review": "review/report.md"
+  },
+  "real_project_pilot": {
+    "project": "powerpuff-kitty/ai-agents",
+    "source_revision": "73b241f5eb9240034d78f531abd8ace804ed0890",
+    "result": "pilot/result.initial.md",
+    "review": "review/pilot-review.md",
+    "assessment": "conditional source-only beta recommendation; originally 39 of 42 tests, full suite and native host unverified in pilot",
+    "root_followup": "archive-correction.md"
+  },
+  "sessions": {
+    "pilot_evaluator": 1,
+    "six_case_evaluator": 1,
+    "independent_reviewer": 1,
+    "case_evaluations_share_one_session": true,
+    "context_mode": "fork_turns none for each initial spawn; reviewer rechecks reuse its session",
+    "provider_model_usage": "unknown"
+  },
+  "routing_scope": "Relevant instructions selected by model from supplied metadata; actual coordinator handoff to separate reviewer. Native automatic host triggering and host workflow delegation remain unverified.",
+  "limitations": [
+    "No statistical success-rate or token-cost claim.",
+    "No TypeScript compilation, browser or live recovery execution.",
+    "Reviewer initial file listing exposed excluded pilot path names before scope expansion; no file-body access claimed; see retained actions.",
+    "Reviewer pilot archive member-count wording is reconciled in a separate correction, not silently edited.",
+    "Original pilot runner exit aggregation defect and source-archive Git provenance defect retained with separate corrections."
+  ],
+  "finding_dispositions": [
+    {
+      "finding": "pilot runner failure propagation and dirty-start preservation",
+      "disposition": "corrected in separate v3 runner; independent bounded recheck",
+      "review": "review/correction-v3-recheck.md"
+    },
+    {
+      "finding": "source archive assumes Git metadata for evaluation preparation",
+      "disposition": "source fixed; regression and 45-test archive suite passed independent recheck",
+      "review": "review/correction-recheck.md"
+    },
+    {
+      "finding": "pilot review labels total archive members as regular files",
+      "disposition": "original preserved; separate correction records 860 files plus 408 directories",
+      "review": "review/correction-recheck.md"
+    }
+  ]
+}

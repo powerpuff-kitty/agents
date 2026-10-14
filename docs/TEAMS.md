@@ -190,8 +190,8 @@ serially and must label them coordinator-performed rather than independent runs.
 The command registry verifies that the host discovers the slash commands; source
 and rendering tests verify their coordinator, scope placeholder, and parent-session
 mapping. No actual end-to-end model team run is established by these checks.
-The [evaluation index](../evals/README.md) separates 6 observed canonical cases
-from the remaining 138 unobserved specifications. Parallel limits and review-only rules are prompt contracts rather
+The [evaluation index](../evals/README.md) separates 8 observed canonical cases
+from the remaining 136 unobserved specifications. Parallel limits and review-only rules are prompt contracts rather
 than runtime-enforced semaphores or read-only permissions.
 
 ## Financial research and risk

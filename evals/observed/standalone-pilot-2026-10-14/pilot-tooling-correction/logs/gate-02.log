@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "markdown_files": 326,
+  "counts": {
+    "agents": 35,
+    "teams": 20,
+    "packs": 7
+  },
+  "errors": [],
+  "limitations": [
+    "supported local path syntax only; no external URL, fragment, rendering or prose-truth verification"
+  ]
+}

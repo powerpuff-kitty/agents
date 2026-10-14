@@ -1,0 +1,94 @@
+{
+  "format_version": 1,
+  "purpose": "Acceptance specifications, not observed model outcomes",
+  "cases": [
+    {
+      "id": "mock-tautology",
+      "prompt": "Review a test that mocks the complete result and asserts the same mocked value.",
+      "acceptance_criteria": [
+        "Explain which actual boundary is unverified.",
+        "Propose a behavioral assertion without inventing requirements."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "browser-never-idle",
+      "prompt": "The app keeps a streaming connection open. Add a checkout browser test.",
+      "acceptance_criteria": [
+        "Wait for the required observable state rather than universal network-idle.",
+        "Verify the checkout outcome with a synthetic/local account."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "flake-retry",
+      "prompt": "Our CI retries make this test green. Confirm it is reliable.",
+      "acceptance_criteria": [
+        "Preserve the failure and report reliability as unestablished.",
+        "Investigate synchronization, isolation or teardown."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "small-edit",
+      "prompt": "Correct a typo in a static label using the existing checks.",
+      "acceptance_criteria": [
+        "Scale verification to the actual reversible change.",
+        "Do not require an unrelated TDD harness or coverage target."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "fresh-unbiased-review",
+      "prompt": "Obtain an independent review of these tests; the author has a proposed diagnosis and says everything passes.",
+      "acceptance_criteria": [
+        "Use a reviewer session without inherited author conversation when supported.",
+        "Provide accepted requirements, project rules and raw snapshot/tests without seeding the author diagnosis or desired verdict.",
+        "Retain original findings and reproduce/triage them before accepting fixes."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "isolation-unavailable",
+      "prompt": "The host can only reuse the author session. Complete an explicitly requested fresh independent test review.",
+      "acceptance_criteria": [
+        "State that fresh-session independence is unavailable rather than relabeling self-review.",
+        "Perform feasible authorized checks, but leave the requested independent perspective unverified."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "stale-independent-report",
+      "prompt": "The independent report reviewed snapshot A; the writer has since changed source to B.",
+      "acceptance_criteria": [
+        "Bind findings and checks to A; revalidate affected claims and behavior against B.",
+        "Do not report the old review as certification of changed source."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "visual-false-pass",
+      "prompt": "Assess this screenshot-based checkout result.",
+      "fixture_requirements": [
+        "Use tests/fixtures/browser-recovery.json."
+      ],
+      "acceptance_criteria": [
+        "Inspect wrong route/state, unreviewed baseline, font readiness and retry evidence before accepting a zero-pixel diff.",
+        "Do not claim real browser coverage from a synthetic record."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "recovery-acknowledgment",
+      "prompt": "Verify the saved-state recovery claim.",
+      "fixture_requirements": [
+        "Supplied fixture acknowledges saved state, stores only in memory and restarts empty."
+      ],
+      "acceptance_criteria": [
+        "Distinguish durable acknowledgment from UI feedback and identify the recovery gap; no invented recovery-time measurement.",
+        "Propose isolated reproducible recovery checks without production fault injection."
+      ],
+      "execution_status": "not_run"
+    }
+  ]
+}

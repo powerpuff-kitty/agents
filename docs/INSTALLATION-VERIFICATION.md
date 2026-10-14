@@ -55,6 +55,6 @@ unsupported certification and noncausal comparisons were distinguished.
 [The manifest](../evals/observed/content-geo-review-2026-10-14/manifest.json)
 records source/artifact hashes and scope. This is 1 supplied-evidence task,
 not live SEO/GEO performance or execution of canonical acceptance cases. The canonical specification objects retain `not_run`;
-[observed role smoke cases](../evals/README.md) now cover 6 of 144 cases.
+[observed role smoke cases](../evals/README.md) now cover 8 of 144 cases.
 Skill case specifications remain separate from these observed role outcomes. Earlier finance and crypto/forecast
 observed tasks remain separate evidence in `evals/observed/`.

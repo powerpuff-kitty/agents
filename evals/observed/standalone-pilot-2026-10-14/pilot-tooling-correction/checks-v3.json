@@ -1,0 +1,11 @@
+{
+  "performer": "root",
+  "v3_sha256": "c17c839155847f5d59ab3560fab1658c54753a96d97aa865178b739addaf6d82",
+  "deleted_tracked_preflight": {
+    "exit": 1,
+    "initial_identity_recorded": true,
+    "hash_status": "not_collected_dirty_source",
+    "commands_not_run": true
+  },
+  "scope": "Record identity before hashing a dirty tree; preserve earlier v1/v2 artifacts"
+}

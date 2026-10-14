@@ -1,0 +1,137 @@
+[
+  {
+    "check": "dry run preserves all bytes and mtimes",
+    "result": {
+      "tool": "opencode",
+      "packs": [],
+      "target": "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/update-probe/agents",
+      "commands_target": null,
+      "changed": [
+        "agents/quality-engineer.md",
+        "agents/.agents-LICENSE"
+      ],
+      "unchanged": [],
+      "dry_run": true,
+      "backup": null,
+      "backups": {}
+    }
+  },
+  {
+    "check": "individual selection creates only named agent and no command state",
+    "result": {
+      "tool": "opencode",
+      "packs": [],
+      "target": "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/update-probe/agents",
+      "commands_target": null,
+      "changed": [
+        "agents/quality-engineer.md",
+        "agents/.agents-LICENSE"
+      ],
+      "unchanged": [],
+      "dry_run": false,
+      "backup": null,
+      "backups": {}
+    }
+  },
+  {
+    "check": "repeat is byte and mtime no-op",
+    "result": {
+      "tool": "opencode",
+      "packs": [],
+      "target": "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/update-probe/agents",
+      "commands_target": null,
+      "changed": [],
+      "unchanged": [
+        "agents/.agents-LICENSE",
+        "agents/quality-engineer.md"
+      ],
+      "dry_run": false,
+      "backup": null,
+      "backups": {}
+    }
+  },
+  {
+    "check": "explicit team roster installed; smaller selection does not prune",
+    "roster": [
+      "copywriter",
+      "data-analyst",
+      "evidence-validator",
+      "feature-developer",
+      "geo-specialist",
+      "marketing-strategist",
+      "researcher",
+      "seo-specialist",
+      "team-lead"
+    ],
+    "result": {
+      "tool": "opencode",
+      "packs": [],
+      "target": "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/update-probe/agents",
+      "commands_target": "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/update-probe/commands",
+      "changed": [
+        "agents/copywriter.md",
+        "agents/data-analyst.md",
+        "agents/evidence-validator.md",
+        "agents/feature-developer.md",
+        "agents/geo-specialist.md",
+        "agents/marketing-strategist.md",
+        "agents/researcher.md",
+        "agents/seo-specialist.md",
+        "agents/team-lead.md",
+        "commands/team-geo.md",
+        "commands/.agents-LICENSE"
+      ],
+      "unchanged": [
+        "agents/.agents-LICENSE"
+      ],
+      "dry_run": false,
+      "backup": null,
+      "backups": {}
+    }
+  },
+  {
+    "check": "untouched managed v1 updates to v2 with byte-exact profile/state backups and preserved mode",
+    "result": {
+      "tool": "opencode",
+      "packs": [],
+      "target": "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/update-probe/agents",
+      "commands_target": null,
+      "changed": [
+        "agents/quality-engineer.md"
+      ],
+      "unchanged": [
+        "agents/.agents-LICENSE"
+      ],
+      "dry_run": false,
+      "backup": "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/update-probe/backups/reusable-agents-20261014T185817515708Z",
+      "backups": {
+        "agents": "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/update-probe/backups/reusable-agents-20261014T185817515708Z"
+      }
+    }
+  },
+  {
+    "check": "repeat updated version is no-op",
+    "result": {
+      "tool": "opencode",
+      "packs": [],
+      "target": "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/update-probe/agents",
+      "commands_target": null,
+      "changed": [],
+      "unchanged": [
+        "agents/.agents-LICENSE",
+        "agents/quality-engineer.md"
+      ],
+      "dry_run": false,
+      "backup": null,
+      "backups": {}
+    }
+  },
+  {
+    "check": "local edit refused before any writes",
+    "error": "Unmanaged or locally edited outputs in /private/tmp/standalone-pilot-2026-10-14/pilot/scratch/update-probe/agents: quality-engineer.md; use --replace to back up and replace these files"
+  },
+  {
+    "check": "unrelated profile and command preserved",
+    "passed": true
+  }
+]

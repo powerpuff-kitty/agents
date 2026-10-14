@@ -1,0 +1,13 @@
+{
+  "runner_exit": 0,
+  "injected_command": [
+    "/usr/bin/false"
+  ],
+  "subcommand_exit": 1,
+  "source_aggregation_unchanged": true,
+  "modified_copy_only": [
+    "ROOT relocated to read-only original for git identity",
+    "commands replaced with single harmless failing command"
+  ],
+  "meaning": "The runner process exits success despite recorded failed subcommand; does not contradict original all-zero gates."
+}

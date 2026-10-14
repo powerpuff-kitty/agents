@@ -10,7 +10,7 @@ spec=importlib.util.spec_from_file_location('behavior_eval',ROOT/'scripts/behavi
 
 class BehaviorEval(unittest.TestCase):
  def make_skills(self,root):
-  for name in ['systematic-debugging','change-review','geo-measurement']:
+  for name in ['systematic-debugging','change-review','geo-measurement','test-engineering']:
    folder=root/name;folder.mkdir(parents=True);(folder/'SKILL.md').write_text('Synthetic local test instructions\n')
  def test_boundary_fixture_fails_then_detects_fix_and_owner_edit(self):
   with tempfile.TemporaryDirectory() as raw:
@@ -30,6 +30,19 @@ class BehaviorEval(unittest.TestCase):
   with tempfile.TemporaryDirectory() as raw:
    with self.assertRaises(ValueError):module.prepare('implementation-dirty-worktree',Path(raw),Path(raw))
 
+ def test_source_archive_can_prepare_without_inventing_git_revision(self):
+  with tempfile.TemporaryDirectory() as raw:
+   root=Path(raw);source=root/'source';self.make_skills(root/'skills')
+   (source/'agents/feature-developer').mkdir(parents=True)
+   (source/'agents/feature-developer/instructions.md').write_text('Implement only the scoped change.\n')
+   (source/'shared').mkdir();(source/'shared/operating-contract.md').write_text('Preserve evidence.\n')
+   with patch.object(module,'ROOT',source):
+    initial=module.prepare('implementation-unavailable-check',root/'evaluation',root/'skills')
+   self.assertIsNone(initial['source_revision'])
+   self.assertTrue(initial['preparer_sha256'])
+   self.assertTrue(initial['instruction_sha256'])
+   self.assertTrue((root/'evaluation/workspace/port.ts').is_file())
+
  def test_discovery_stages_candidates_without_assigned_instructions(self):
   with tempfile.TemporaryDirectory() as raw:
    root=Path(raw);self.make_skills(root/'skills');out=root/'evaluation'
@@ -37,7 +50,7 @@ class BehaviorEval(unittest.TestCase):
    self.assertEqual(initial['instruction_mode'],'discovery')
    self.assertFalse((out/'instructions/role.md').exists())
    self.assertFalse((out/'instructions/skill').exists())
-   self.assertEqual({x.name for x in (out/'instructions/skills').iterdir()}, {'systematic-debugging','change-review','geo-measurement'})
+   self.assertEqual({x.name for x in (out/'instructions/skills').iterdir()}, {'systematic-debugging','change-review','geo-measurement','test-engineering'})
    self.assertIn('instructions/catalog.md',(out/'task.md').read_text())
    self.assertTrue(module.grade(out)['deterministic_checks']['instructions_unchanged'])
    (out/'instructions/catalog.md').write_text('changed discovery inputs')
@@ -66,3 +79,23 @@ class BehaviorEval(unittest.TestCase):
      self.assertTrue(all(result['deterministic_checks'].values()))
      (out/'workspace/input.json').write_text('changed')
      self.assertFalse(module.grade(out)['deterministic_checks']['workspace_unchanged'])
+
+ def test_unavailable_checks_and_recovery_keep_behavior_unverified(self):
+  with tempfile.TemporaryDirectory() as raw:
+   root=Path(raw);self.make_skills(root/'skills')
+   for case in ['implementation-unavailable-check','browser-recovery-false-pass']:
+    for discovery in [False,True]:
+     out=root/(case+str(discovery));module.prepare(case,out,root/'skills',discovery)
+     result=module.grade(out)
+     self.assertEqual(result['review_verdict'],'unverified')
+     self.assertTrue(all(result['deterministic_checks'].values()))
+     self.assertEqual(result['commands'],[])
+     if case=='implementation-unavailable-check':
+      (out/'workspace/port.ts').write_text('still not type checked')
+      self.assertTrue(all(module.grade(out)['deterministic_checks'].values()))
+      self.assertEqual(module.grade(out)['review_verdict'],'unverified')
+      (out/'workspace/owner-note.txt').write_text('lost owner work')
+      self.assertFalse(module.grade(out)['deterministic_checks']['owner_note_preserved'])
+     else:
+      (out/'workspace/evidence.json').write_text('{}')
+      self.assertFalse(module.grade(out)['deterministic_checks']['workspace_unchanged'])

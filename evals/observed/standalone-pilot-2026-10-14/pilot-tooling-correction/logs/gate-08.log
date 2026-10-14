@@ -1,0 +1,10 @@
+test_combined_selection_deduplicates_and_rejects_unknown (test_selection.SelectionTests.test_combined_selection_deduplicates_and_rejects_unknown) ... ok
+test_individual_has_no_implicit_pack_or_coordinator (test_selection.SelectionTests.test_individual_has_no_implicit_pack_or_coordinator) ... ok
+test_individual_install_creates_no_commands_directory (test_selection.SelectionTests.test_individual_install_creates_no_commands_directory) ... ok
+test_team_brings_declared_roster_and_coordinator (test_selection.SelectionTests.test_team_brings_declared_roster_and_coordinator) ... ok
+test_unknown_selection_rejected_without_install_writes (test_selection.SelectionTests.test_unknown_selection_rejected_without_install_writes) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.861s
+
+OK

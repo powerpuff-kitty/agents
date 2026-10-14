@@ -1,0 +1,98 @@
+{
+  "normal_records": [
+    {
+      "log": "logs/gate-01.log",
+      "recorded_exit": 0,
+      "test_count": null,
+      "sha256": "759d3456709bda019d1806b37c23569de64fd7d1abb1de711c68e0be348faaec"
+    },
+    {
+      "log": "logs/gate-02.log",
+      "recorded_exit": 0,
+      "test_count": null,
+      "sha256": "24ba641f71c6018254c9c9daaf6d98343bdff2153c9f2e277191cea5c5fc4fd5"
+    },
+    {
+      "log": "logs/gate-03.log",
+      "recorded_exit": 0,
+      "test_count": null,
+      "sha256": "eef6e26e5ad927d7800ef4c8014ee4385d1ecb8d8dacf9b508a51f9ac6abcaf8"
+    },
+    {
+      "log": "logs/gate-04.log",
+      "recorded_exit": 0,
+      "test_count": null,
+      "sha256": "0c1150407dfb9bf4693c57d682a90324179134db95c5ca1c5f66c3470a37dab3"
+    },
+    {
+      "log": "logs/gate-05.log",
+      "recorded_exit": 0,
+      "test_count": null,
+      "sha256": "57d5908bc808175de1c3040d9730571bb9ced47b18a1417be51f22e5ac8a7035"
+    },
+    {
+      "log": "logs/gate-06.log",
+      "recorded_exit": 0,
+      "test_count": null,
+      "sha256": "8db7453deb317075f5f38f0c86cbb66b0c9c0874d914b02f73f0299508bb9576"
+    },
+    {
+      "log": "logs/gate-07.log",
+      "recorded_exit": 0,
+      "test_count": 24,
+      "sha256": "6fdabbab90baf1464da7e74b52274f519287bef9c7c49bcab425fece13aa51ec"
+    },
+    {
+      "log": "logs/gate-08.log",
+      "recorded_exit": 0,
+      "test_count": 5,
+      "sha256": "8907c89d4e17deb8e1641497454061cf5172482986b170758d48f1d744d76fb8"
+    },
+    {
+      "log": "logs/gate-09.log",
+      "recorded_exit": 0,
+      "test_count": 4,
+      "sha256": "39beb8d755ddd23e0d64587c9d354a9f5967afca8831b52dce7a3b8fb73321d1"
+    },
+    {
+      "log": "logs/gate-10.log",
+      "recorded_exit": 0,
+      "test_count": 3,
+      "sha256": "043a41a1901fdb793f528a3430e0b7709d55741c84f60eee003904229e276599"
+    },
+    {
+      "log": "logs/gate-11.log",
+      "recorded_exit": 0,
+      "test_count": 1,
+      "sha256": "f7ecf2797e58c37a9db7ff7a36362856c737c27850ac09ddfd4dd20f1613788f"
+    }
+  ],
+  "normal_before_status": "",
+  "normal_after": {
+    "status_after": "",
+    "tracked_source_unchanged": true,
+    "changes": []
+  },
+  "provided_controls": [
+    {
+      "probe": "positive",
+      "injected_command": [
+        "/usr/bin/true"
+      ],
+      "recorded_command_exit": 0,
+      "runner_exit": 0,
+      "expected_runner_exit": 0,
+      "script_sha256": "68293e29f149d7aa32798d9f768a33a98e208b97de62da7493e22941866b3299"
+    },
+    {
+      "probe": "negative",
+      "injected_command": [
+        "/usr/bin/false"
+      ],
+      "recorded_command_exit": 1,
+      "runner_exit": 1,
+      "expected_runner_exit": 1,
+      "script_sha256": "da9b644d2fbb768e5888a024edae066fe7178e0d129a7cd399202e12bd694b02"
+    }
+  ]
+}

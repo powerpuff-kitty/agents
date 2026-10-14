@@ -1,0 +1,7 @@
+test_no_overwrite_of_an_existing_evaluation (test_behavior_eval.BehaviorEval.test_no_overwrite_of_an_existing_evaluation) ... ok
+test_new_cases_route_both_modes_and_keep_reasoning_ungraded (test_behavior_eval.BehaviorEval.test_new_cases_route_both_modes_and_keep_reasoning_ungraded) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.263s
+
+OK

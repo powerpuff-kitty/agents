@@ -1,0 +1,79 @@
+{
+  "instruction_hashes_matched": 7,
+  "gates": [
+    {
+      "log": "logs/gate-01.log",
+      "recorded_exit": 0,
+      "unittest_count": null,
+      "has_OK": false
+    },
+    {
+      "log": "logs/gate-02.log",
+      "recorded_exit": 0,
+      "unittest_count": null,
+      "has_OK": false
+    },
+    {
+      "log": "logs/gate-03.log",
+      "recorded_exit": 0,
+      "unittest_count": null,
+      "has_OK": false
+    },
+    {
+      "log": "logs/gate-04.log",
+      "recorded_exit": 0,
+      "unittest_count": null,
+      "has_OK": false
+    },
+    {
+      "log": "logs/gate-05.log",
+      "recorded_exit": 0,
+      "unittest_count": null,
+      "has_OK": false
+    },
+    {
+      "log": "logs/gate-06.log",
+      "recorded_exit": 0,
+      "unittest_count": null,
+      "has_OK": false
+    },
+    {
+      "log": "logs/gate-07.log",
+      "recorded_exit": 0,
+      "unittest_count": 24,
+      "has_OK": true
+    },
+    {
+      "log": "logs/gate-08.log",
+      "recorded_exit": 0,
+      "unittest_count": 5,
+      "has_OK": true
+    },
+    {
+      "log": "logs/gate-09.log",
+      "recorded_exit": 0,
+      "unittest_count": 4,
+      "has_OK": true
+    },
+    {
+      "log": "logs/gate-10.log",
+      "recorded_exit": 0,
+      "unittest_count": 3,
+      "has_OK": true
+    },
+    {
+      "log": "logs/gate-11.log",
+      "recorded_exit": 0,
+      "unittest_count": 1,
+      "has_OK": true
+    }
+  ],
+  "unit_tests": 37,
+  "additional_safe_tests": 2,
+  "archive_commands_recorded": 9,
+  "original_source_final": {
+    "tracked_source_unchanged": true,
+    "git_status": "",
+    "source_revision": "73b241f5eb9240034d78f531abd8ace804ed0890"
+  }
+}

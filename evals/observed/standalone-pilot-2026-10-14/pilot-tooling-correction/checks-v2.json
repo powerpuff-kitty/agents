@@ -1,0 +1,29 @@
+{
+  "performer": "root",
+  "v1_sha256": "0eb7db697ba10b945e683a98d44bbd79ca1428caf6811f1b11526a13e078f47e",
+  "v2_sha256": "578b32e2ea22836e2856b649ab562d1370f9e0c8c4d6b8ec767707776fcbe9e4",
+  "results": [
+    {
+      "case": "v2-positive",
+      "runner_exit": 0,
+      "expected": 0,
+      "owner_draft_preserved_before_any_command": null,
+      "script_sha256": "7a873094016078c37a1bac3ef75c05c6b130af2ac681659c49ca0017e8ba1148"
+    },
+    {
+      "case": "v2-negative",
+      "runner_exit": 1,
+      "expected": 1,
+      "owner_draft_preserved_before_any_command": null,
+      "script_sha256": "ca580fc98e38e494688017496a81df28e962d8e19a49920ae358c8ed6acab91c"
+    },
+    {
+      "case": "v2-owner-draft",
+      "runner_exit": 1,
+      "expected": 1,
+      "owner_draft_preserved_before_any_command": true,
+      "script_sha256": "8149858be984f8b64c7664b0c1d41634101065ab1547cd915e945edfdc6ce234"
+    }
+  ],
+  "transform": "Only commands list changed for controlled probes; preflight and aggregation retained"
+}

@@ -1,0 +1,19 @@
+{
+  "performer": "root, deterministic local checks; separate from model evaluator outputs",
+  "reflection_schema": "passed",
+  "reflection_input_ids_and_evidence_refs": "matched",
+  "no_performed_action_or_memory_receipt": true,
+  "reflection_fixture_not_an_observed_model_serialization": true,
+  "memory_records": 12,
+  "memory_unique_ids": 12,
+  "memory_schema": "all 12 passed",
+  "canonical_source_commit": "864e5fde38557217e7e3564b3bf47532fc8b922d",
+  "tool": "Python venv with jsonschema; not a catalog installation dependency",
+  "sha256": {
+    "reflection": "66c63ebfbf5244816c116d76c8aec8ff27ea859bd3f48323dd4d09761df72c5c",
+    "reflection_input": "0b7611b45216bde68ab13577d9c99ab7c50cdba24a84860b740cd034957a7ac7",
+    "reflection_schema": "5fb181a597e0ad15399de9f82023148a207b225304af319abf216b7c9ad35e68",
+    "memory_input": "27145a88c96039d10393358cb9a0a3f803b60587be05c6ac68f0e975abaf392e",
+    "memory_schema": "c718857be3942602277d62eb1200fbd652a79300c4aea225116c98006df7cc9a"
+  }
+}

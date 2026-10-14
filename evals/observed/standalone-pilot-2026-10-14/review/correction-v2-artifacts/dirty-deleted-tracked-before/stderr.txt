@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/private/tmp/standalone-pilot-2026-10-14/review/correction-v2-artifacts/dirty-deleted-tracked-before/run_gates.py", line 21, in <module>
+    source = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in paths if name}
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/standalone-pilot-2026-10-14/review/correction-v2-artifacts/dirty-deleted-tracked-before/project/fixture.txt'

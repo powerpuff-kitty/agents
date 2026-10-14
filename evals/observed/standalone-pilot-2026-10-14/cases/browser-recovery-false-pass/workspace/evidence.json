@@ -1,0 +1,37 @@
+{
+  "requested_journey": {
+    "route": "/checkout",
+    "state": "payment retry after process restart",
+    "viewport": "390x844",
+    "theme": "dark"
+  },
+  "summary": {
+    "status": "passed",
+    "claim": "visual and recovery journey complete"
+  },
+  "screenshot": {
+    "route": "/catalog",
+    "viewport": "1440x900",
+    "theme": "light",
+    "baseline": "auto-created this run",
+    "baseline_approved": false
+  },
+  "attempts": [
+    {
+      "id": "attempt:1",
+      "status": "failed",
+      "error": "request timed out"
+    },
+    {
+      "id": "attempt:2",
+      "status": "failed",
+      "error": "retry submitted twice"
+    }
+  ],
+  "storage": {
+    "pending_queue": "in-process array",
+    "after_restart": []
+  },
+  "browser_runtime": "not supplied",
+  "production_faults_authorized": false
+}

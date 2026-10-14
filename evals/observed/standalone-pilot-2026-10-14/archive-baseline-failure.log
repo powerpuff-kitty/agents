@@ -1,0 +1,99 @@
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+======================================================================
+ERROR: test_boundary_fixture_fails_then_detects_fix_and_owner_edit (test_behavior_eval.BehaviorEval.test_boundary_fixture_fails_then_detects_fix_and_owner_edit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/agents-source-consumer-icvpqez3/tests/test_behavior_eval.py", line 17, in test_boundary_fixture_fails_then_detects_fix_and_owner_edit
+    root=Path(raw);self.make_skills(root/'skills');out=root/'evaluation';module.prepare('implementation-dirty-worktree',out,root/'skills')
+                                                                         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/agents-source-consumer-icvpqez3/scripts/behavior_eval.py", line 104, in prepare
+    initial={'format_version':1,'case_id':case,'role':role,'skill':skill,'workspace_sha256':snapshot(work),'instruction_sha256':snapshot(output/'instructions'),'task_sha256':hashlib.sha256((output/'task.md').read_bytes()).hexdigest(),'source_revision':git(ROOT,'rev-parse','HEAD').strip(),'instruction_mode':'discovery' if discovery else 'explicit','preparer_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'skills_revision':git(skills,'rev-parse','HEAD').strip() if (skills/'.git').exists() else None,'source_note':'instruction hashes include working-tree changes','initial_git_status':git(work,'status','--porcelain') if (work/'.git').exists() else None}
+                                                                                                                                                                                                                                                            ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/agents-source-consumer-icvpqez3/scripts/behavior_eval.py", line 30, in git
+    def git(work,*args):return subprocess.check_output(['git','-C',str(work),*args],text=True)
+                               ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 473, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               **kwargs).stdout
+               ^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['git', '-C', '/private/tmp/agents-source-consumer-icvpqez3', 'rev-parse', 'HEAD']' returned non-zero exit status 128.
+
+======================================================================
+ERROR: test_discovery_stages_candidates_without_assigned_instructions (test_behavior_eval.BehaviorEval.test_discovery_stages_candidates_without_assigned_instructions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/agents-source-consumer-icvpqez3/tests/test_behavior_eval.py", line 36, in test_discovery_stages_candidates_without_assigned_instructions
+    initial=module.prepare('implementation-dirty-worktree',out,root/'skills',discovery=True)
+  File "/private/tmp/agents-source-consumer-icvpqez3/scripts/behavior_eval.py", line 104, in prepare
+    initial={'format_version':1,'case_id':case,'role':role,'skill':skill,'workspace_sha256':snapshot(work),'instruction_sha256':snapshot(output/'instructions'),'task_sha256':hashlib.sha256((output/'task.md').read_bytes()).hexdigest(),'source_revision':git(ROOT,'rev-parse','HEAD').strip(),'instruction_mode':'discovery' if discovery else 'explicit','preparer_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'skills_revision':git(skills,'rev-parse','HEAD').strip() if (skills/'.git').exists() else None,'source_note':'instruction hashes include working-tree changes','initial_git_status':git(work,'status','--porcelain') if (work/'.git').exists() else None}
+                                                                                                                                                                                                                                                            ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/agents-source-consumer-icvpqez3/scripts/behavior_eval.py", line 30, in git
+    def git(work,*args):return subprocess.check_output(['git','-C',str(work),*args],text=True)
+                               ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 473, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               **kwargs).stdout
+               ^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['git', '-C', '/private/tmp/agents-source-consumer-icvpqez3', 'rev-parse', 'HEAD']' returned non-zero exit status 128.
+
+======================================================================
+ERROR: test_new_cases_route_both_modes_and_keep_reasoning_ungraded (test_behavior_eval.BehaviorEval.test_new_cases_route_both_modes_and_keep_reasoning_ungraded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/agents-source-consumer-icvpqez3/tests/test_behavior_eval.py", line 57, in test_new_cases_route_both_modes_and_keep_reasoning_ungraded
+    out=root/(case+str(discovery));module.prepare(case,out,skills,discovery)
+                                   ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/agents-source-consumer-icvpqez3/scripts/behavior_eval.py", line 104, in prepare
+    initial={'format_version':1,'case_id':case,'role':role,'skill':skill,'workspace_sha256':snapshot(work),'instruction_sha256':snapshot(output/'instructions'),'task_sha256':hashlib.sha256((output/'task.md').read_bytes()).hexdigest(),'source_revision':git(ROOT,'rev-parse','HEAD').strip(),'instruction_mode':'discovery' if discovery else 'explicit','preparer_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'skills_revision':git(skills,'rev-parse','HEAD').strip() if (skills/'.git').exists() else None,'source_note':'instruction hashes include working-tree changes','initial_git_status':git(work,'status','--porcelain') if (work/'.git').exists() else None}
+                                                                                                                                                                                                                                                            ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/agents-source-consumer-icvpqez3/scripts/behavior_eval.py", line 30, in git
+    def git(work,*args):return subprocess.check_output(['git','-C',str(work),*args],text=True)
+                               ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 473, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               **kwargs).stdout
+               ^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['git', '-C', '/private/tmp/agents-source-consumer-icvpqez3', 'rev-parse', 'HEAD']' returned non-zero exit status 128.
+
+======================================================================
+ERROR: test_readonly_fixture_detects_source_mutation (test_behavior_eval.BehaviorEval.test_readonly_fixture_detects_source_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/agents-source-consumer-icvpqez3/tests/test_behavior_eval.py", line 25, in test_readonly_fixture_detects_source_mutation
+    root=Path(raw);self.make_skills(root/'skills');out=root/'evaluation';module.prepare('focused-review-with-skills',out,root/'skills')
+                                                                         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/agents-source-consumer-icvpqez3/scripts/behavior_eval.py", line 104, in prepare
+    initial={'format_version':1,'case_id':case,'role':role,'skill':skill,'workspace_sha256':snapshot(work),'instruction_sha256':snapshot(output/'instructions'),'task_sha256':hashlib.sha256((output/'task.md').read_bytes()).hexdigest(),'source_revision':git(ROOT,'rev-parse','HEAD').strip(),'instruction_mode':'discovery' if discovery else 'explicit','preparer_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'skills_revision':git(skills,'rev-parse','HEAD').strip() if (skills/'.git').exists() else None,'source_note':'instruction hashes include working-tree changes','initial_git_status':git(work,'status','--porcelain') if (work/'.git').exists() else None}
+                                                                                                                                                                                                                                                            ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/agents-source-consumer-icvpqez3/scripts/behavior_eval.py", line 30, in git
+    def git(work,*args):return subprocess.check_output(['git','-C',str(work),*args],text=True)
+                               ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 473, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               **kwargs).stdout
+               ^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['git', '-C', '/private/tmp/agents-source-consumer-icvpqez3', 'rev-parse', 'HEAD']' returned non-zero exit status 128.
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.331s
+
+FAILED (errors=4)

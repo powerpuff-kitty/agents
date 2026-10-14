@@ -1,0 +1,29 @@
+test_adaptive_team_mutations_are_conditional_and_review_actions_rejected (test_workflows.WorkflowTests.test_adaptive_team_mutations_are_conditional_and_review_actions_rejected) ... ok
+test_agent_only_install_does_not_create_commands (test_workflows.WorkflowTests.test_agent_only_install_does_not_create_commands) ... ok
+test_build_does_not_follow_output_directory_symlink (test_workflows.WorkflowTests.test_build_does_not_follow_output_directory_symlink) ... ok
+test_command_conflicts_preflight_before_any_agent_writes (test_workflows.WorkflowTests.test_command_conflicts_preflight_before_any_agent_writes) ... ok
+test_command_validation_queries_current_project_and_rejects_other_location (test_workflows.WorkflowTests.test_command_validation_queries_current_project_and_rejects_other_location) ... ok
+test_conflict_refusal_and_explicit_backup (test_workflows.WorkflowTests.test_conflict_refusal_and_explicit_backup) ... ok
+test_deterministic_exports_and_drift_detection (test_workflows.WorkflowTests.test_deterministic_exports_and_drift_detection) ... ok
+test_dry_run_does_not_create_target (test_workflows.WorkflowTests.test_dry_run_does_not_create_target) ... ok
+test_general_routing_and_research_evidence_dependencies (test_workflows.WorkflowTests.test_general_routing_and_research_evidence_dependencies) ... ok
+test_install_preserves_other_profiles_and_is_idempotent (test_workflows.WorkflowTests.test_install_preserves_other_profiles_and_is_idempotent) ... ok
+test_invalid_management_state_is_rejected_before_writes (test_workflows.WorkflowTests.test_invalid_management_state_is_rejected_before_writes) ... ok
+test_iteration_gates_follow_current_checks_and_precede_dependent_actions (test_workflows.WorkflowTests.test_iteration_gates_follow_current_checks_and_precede_dependent_actions) ... ok
+test_nested_profile_and_command_destinations_are_rejected (test_workflows.WorkflowTests.test_nested_profile_and_command_destinations_are_rejected) ... ok
+test_opencode_folding_preserves_routing_description (test_workflows.WorkflowTests.test_opencode_folding_preserves_routing_description) ... ok
+test_pack_builds_have_separate_default_destinations (test_workflows.WorkflowTests.test_pack_builds_have_separate_default_destinations) ... ok
+test_pack_graph_rejects_cycles_unknowns_missing_dependencies_and_ownership (test_workflows.WorkflowTests.test_pack_graph_rejects_cycles_unknowns_missing_dependencies_and_ownership) ... ok
+test_pack_selection_resolves_dependencies_and_filters_candidates (test_workflows.WorkflowTests.test_pack_selection_resolves_dependencies_and_filters_candidates) ... ok
+test_partial_install_preserves_other_packs_and_rejects_unknown_pack_before_writes (test_workflows.WorkflowTests.test_partial_install_preserves_other_packs_and_rejects_unknown_pack_before_writes) ... ok
+test_portable_bundles_are_complete_and_host_neutral (test_workflows.WorkflowTests.test_portable_bundles_are_complete_and_host_neutral) ... ok
+test_portable_team_briefs_have_no_host_macros (test_workflows.WorkflowTests.test_portable_team_briefs_have_no_host_macros) ... ok
+test_symlink_collision_is_not_replaced (test_workflows.WorkflowTests.test_symlink_collision_is_not_replaced) ... ok
+test_team_commands_select_parent_coordinator_and_include_scope (test_workflows.WorkflowTests.test_team_commands_select_parent_coordinator_and_include_scope) ... ok
+test_team_references_and_writer_constraints_are_validated (test_workflows.WorkflowTests.test_team_references_and_writer_constraints_are_validated) ... ok
+test_ux_workflow_filters_optional_roles_and_orders_dependent_checks (test_workflows.WorkflowTests.test_ux_workflow_filters_optional_roles_and_orders_dependent_checks) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 2.973s
+
+OK

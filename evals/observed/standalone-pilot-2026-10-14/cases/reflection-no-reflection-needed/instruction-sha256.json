@@ -1,0 +1,19 @@
+{
+  "/private/tmp/standalone-pilot-2026-10-14/catalog.md": "5dd372e9f39eecbdc3913e8dbad2c912059b929c4983b7dfe7aae9568d4ab5f0",
+  "/private/tmp/standalone-pilot-2026-10-14/shared-contract.md": "2d629172285cf6fbe0397911188a780f56960f0bbead8e3b753338c938a4fb7e",
+  "/private/tmp/standalone-pilot-2026-10-14/installed-skills/structured-reflection/SKILL.md": "3961d1d1ecbc574f47de4c865e77fa9f74fb7e5dccc5b739c99f2bc1322c2dca",
+  "/private/tmp/standalone-pilot-2026-10-14/installed-skills/structured-reflection/references/method.md": "002dd55c5a387fa4c1a6790b958279c9751cd0a324334b494f208d77705af10d",
+  "/private/tmp/standalone-pilot-2026-10-14/installed-skills/structured-reflection/assets/report-template.md": "ccd79ab30aa17ea336c583af0a53f31e10de6a543f8a8f1034045f3da12ac0e6",
+  "/private/tmp/standalone-pilot-2026-10-14/installed-skills/systematic-debugging/SKILL.md": "e01c99c7b7a65c3eb249c0abbd3196132a51a3d3cba44b5809d6b19e0e8d6957",
+  "/private/tmp/standalone-pilot-2026-10-14/installed-skills/test-engineering/SKILL.md": "cf79fe8b70df0c8af1e9750709f8d85373c5c0c3982c4da28f9c46751a37330f",
+  "/private/tmp/standalone-pilot-2026-10-14/installed-skills/test-engineering/references/test-design.md": "504ed4d0823764ca4c9e4a101dfd6c5a3ad80eee38e3a02cef1fa9c1edac171e",
+  "/private/tmp/standalone-pilot-2026-10-14/installed-skills/test-engineering/references/browser-recovery.md": "6bd9a500fbe4d38f6e168c5a34f007a76f95c486b56ec147f1bdfbba3d61444a",
+  "/private/tmp/standalone-pilot-2026-10-14/installed-skills/test-engineering/references/fresh-review.md": "ad9978761b85507520d85a7358280d367b591c16969029ab9fb73a2350b3c94e",
+  "/private/tmp/standalone-pilot-2026-10-14/installed-skills/performance-audit/SKILL.md": "26b6c652e209c2ebbedb834da4584e5668783abcb4812abee9ebbf6247c9fa71",
+  "/private/tmp/standalone-pilot-2026-10-14/installed-skills/performance-audit/references/recovery-evidence.md": "1adac69961f718bc15a8cd95bdc745ef731e0d2fbf458e9ace77f2f959872973",
+  "/private/tmp/standalone-pilot-2026-10-14/installed-skills/change-review/SKILL.md": "6e000682dde1623ed721826b2e925527df35993b09c797503efc8b7b60079702",
+  "/private/tmp/standalone-pilot-2026-10-14/pilot/installed/agents/evidence-validator.md": "f4b1f033d65b3d2030c1629aee80c40b06291302c05e574b61a42590156e9998",
+  "/private/tmp/standalone-pilot-2026-10-14/pilot/installed/agents/feature-developer.md": "cdb8d5f902f5b297030d58c1a303edfb9771ef94b0cc9fe2810d4a89c2a05ba7",
+  "/private/tmp/standalone-pilot-2026-10-14/pilot/installed/agents/quality-engineer.md": "95a6febc6a6475665fbac7ebe03a3c9dfbf6907cb501f274b4c744ad3acc402e",
+  "/private/tmp/standalone-pilot-2026-10-14/pilot/installed/agents/system-architect.md": "b137fdea022f2b41281149a16abde4375eb026572a69acacaa989e5063b8a664"
+}

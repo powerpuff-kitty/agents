@@ -1,0 +1,8 @@
+{
+  "workspace_preservation_check": "passed",
+  "changed_input_files": [],
+  "allowed_changed_files": [],
+  "supplied_evidence_count": 2,
+  "supplied_finding_id": "finding:enum",
+  "application_test_executed": false
+}

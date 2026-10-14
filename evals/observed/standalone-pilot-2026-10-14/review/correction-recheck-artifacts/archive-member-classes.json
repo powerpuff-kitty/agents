@@ -1,0 +1,14 @@
+{
+  "archive": "/private/tmp/standalone-pilot-2026-10-14/review/pilot-repro/candidate.tar",
+  "sha256": "6f4f6f64d550e33f4c0e44ef2e45026d0c76d8eab002460793319e0aa5110cdf",
+  "total_members": 1268,
+  "member_classes": {
+    "regular_files": 860,
+    "directories": 408,
+    "symlinks": 0,
+    "hardlinks": 0,
+    "other": 0
+  },
+  "tracked_files_in_initial_source_manifest": 860,
+  "correction": "The initial pilot review called all 1268 members regular. The class-specific counts here supersede that wording; original report retained unchanged."
+}

@@ -1,0 +1,139 @@
+{
+  "archive_argv": [
+    "git",
+    "archive",
+    "--format=tar",
+    "--prefix=ai-agents-candidate/",
+    "HEAD"
+  ],
+  "source_revision": "73b241f5eb9240034d78f531abd8ace804ed0890",
+  "archive": "scratch/ai-agents-0.1.0-beta.1-candidate.tar",
+  "archive_sha256": "6f4f6f64d550e33f4c0e44ef2e45026d0c76d8eab002460793319e0aa5110cdf",
+  "repeat_archive_identical": true,
+  "regular_source_members": 1268,
+  "no_git_or_dist_members": true,
+  "commands": [
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/validate.py"
+      ],
+      "cwd": "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/archive-consumer/ai-agents-candidate",
+      "exit": 0,
+      "log": "logs/archive-01.log"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/check_docs.py"
+      ],
+      "cwd": "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/archive-consumer/ai-agents-candidate",
+      "exit": 0,
+      "log": "logs/archive-02.log"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/build.py",
+        "--adapter",
+        "portable"
+      ],
+      "cwd": "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/archive-consumer/ai-agents-candidate",
+      "exit": 0,
+      "log": "logs/archive-03.log"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/build.py",
+        "--adapter",
+        "opencode"
+      ],
+      "cwd": "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/archive-consumer/ai-agents-candidate",
+      "exit": 0,
+      "log": "logs/archive-04.log"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/build.py",
+        "--adapter",
+        "portable",
+        "--check"
+      ],
+      "cwd": "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/archive-consumer/ai-agents-candidate",
+      "exit": 0,
+      "log": "logs/archive-05.log"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/build.py",
+        "--adapter",
+        "opencode",
+        "--check"
+      ],
+      "cwd": "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/archive-consumer/ai-agents-candidate",
+      "exit": 0,
+      "log": "logs/archive-06.log"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/install.py",
+        "--target",
+        "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/archive-install/agents",
+        "--commands-target",
+        "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/archive-install/commands",
+        "--pack",
+        "core",
+        "--dry-run"
+      ],
+      "cwd": "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/archive-consumer/ai-agents-candidate",
+      "exit": 0,
+      "log": "logs/archive-07.log"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/install.py",
+        "--target",
+        "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/archive-install/agents",
+        "--commands-target",
+        "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/archive-install/commands",
+        "--pack",
+        "core"
+      ],
+      "cwd": "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/archive-consumer/ai-agents-candidate",
+      "exit": 0,
+      "log": "logs/archive-08.log"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "scripts/install.py",
+        "--target",
+        "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/archive-install/agents",
+        "--commands-target",
+        "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/archive-install/commands",
+        "--pack",
+        "core"
+      ],
+      "cwd": "/private/tmp/standalone-pilot-2026-10-14/pilot/scratch/archive-consumer/ai-agents-candidate",
+      "exit": 0,
+      "log": "logs/archive-09.log"
+    }
+  ],
+  "consumer_exports_identical_to_checkout": true,
+  "build_manifests": {
+    "portable": {
+      "sha256": "c30f93e229cf102dcbd497a29928ed755480f4fcce001e76806e56558c47f73a",
+      "files": 56
+    },
+    "opencode": {
+      "sha256": "e8fa1def7d583c2d283727f7e25e50d09ded8a471b3d1ef10220833051d1a201",
+      "files": 56
+    }
+  },
+  "release_status": "local candidate only; no tag, publication, download or host execution"
+}

@@ -1,0 +1,8 @@
+test_corrupt_host_download_never_creates_executable (test_native_probe.NativeProbeTests.test_corrupt_host_download_never_creates_executable) ... ok
+test_empty_export_is_not_a_successful_native_check (test_native_probe.NativeProbeTests.test_empty_export_is_not_a_successful_native_check) ... ok
+test_stages_profiles_without_skills_and_rejects_prompt_drift (test_native_probe.NativeProbeTests.test_stages_profiles_without_skills_and_rejects_prompt_drift) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.004s
+
+OK

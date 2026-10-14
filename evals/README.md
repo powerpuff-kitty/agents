@@ -7,10 +7,13 @@ a scenario into a claimed pass.
 
 ## Observed canonical cases
 
-The [current reliability index](observed/reliability-2026-10-14/index.json) records
-**6 observed cases and 138 unobserved cases** across the 144 current specifications.
-It adds reflection, memory and agent-tool-security tasks, with original findings,
-separate corrections and explicit execution limits.
+The [current standalone-pilot index](observed/standalone-pilot-2026-10-14/index.json)
+records **8 observed cases and 136 unobserved cases** across the 144 specifications.
+It adds unavailable-compiler and false-recovery cases, 4 reflection branches and
+a real Agents project pilot with a separate reviewer. Native automatic triggering
+and statistical reliability remain unverified. The earlier
+[reliability index](observed/reliability-2026-10-14/index.json) retains its original
+6-case scope, findings and corrections.
 
 The earlier [smoke suite](observed/behavior-smoke-2026-10-14/index.json) contains
 these 3 historical cases; its source counts remain historical:
@@ -63,6 +66,11 @@ actions. Review each acceptance criterion against the actual response and availa
 artifacts, recording pass/fail/unverified and limits. Do not show expected answers
 or reviewer conclusions to the evaluator. Use local fixtures/stubs only and retain
 failed/missing checks. Never upload private data or run a provider/budget implicitly.
+Missing-compiler and false-recovery fixtures are also available as
+`implementation-unavailable-check` and `browser-recovery-false-pass`. A preserved
+workspace does not establish compilation or recovery success. From a source archive
+without Git metadata, the harness records a null source revision and retains input
+and preparer hashes; it never substitutes an unrelated parent repository's commit.
 
 ## Design extraction exercises
 

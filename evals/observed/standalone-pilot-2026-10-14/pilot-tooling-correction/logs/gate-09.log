@@ -1,0 +1,9 @@
+test_documented_tooling_uses_utf8_independent_of_locale (test_audit_regressions.AuditRegressions.test_documented_tooling_uses_utf8_independent_of_locale) ... ok
+test_export_and_install_retain_license (test_audit_regressions.AuditRegressions.test_export_and_install_retain_license) ... ok
+test_generated_byte_hash_drift_is_not_hidden_by_newline_normalization (test_audit_regressions.AuditRegressions.test_generated_byte_hash_drift_is_not_hidden_by_newline_normalization) ... ok
+test_private_state_mode_survives_selection_update (test_audit_regressions.AuditRegressions.test_private_state_mode_survives_selection_update) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.891s
+
+OK

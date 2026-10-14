@@ -1,0 +1,18 @@
+{
+  "revision": "73b241f5eb9240034d78f531abd8ace804ed0890",
+  "git_status": "",
+  "tracked_files_verified": 860,
+  "retained_final_identity": {
+    "tracked_source_unchanged": true,
+    "git_status": "",
+    "source_revision": "73b241f5eb9240034d78f531abd8ace804ed0890"
+  },
+  "initial_and_final_result_equal": true,
+  "archive_sha256": "6f4f6f64d550e33f4c0e44ef2e45026d0c76d8eab002460793319e0aa5110cdf",
+  "archive_repeat_equal": true,
+  "archive_members": 1268,
+  "archive_current_equals_retained": true,
+  "tags": "",
+  "pin_diff_names": "INSTALL.md\n",
+  "pin_diff": "diff --git a/INSTALL.md b/INSTALL.md\nindex ce5e503..10ee2b8 100644\n--- a/INSTALL.md\n+++ b/INSTALL.md\n@@ -12,7 +12,7 @@ Give this prompt to an agent with local filesystem, Git and Python access:\n \n ```text\n Install the agents from https://github.com/powerpuff-kitty/ai-agents at source revision\n-28bb1c3309cc4803ecb79d2593078f00fa9e9908 for OpenCode on this machine,\n+18584173054bb7d16c2448e5892da923cd68370e for OpenCode on this machine,\n using the effective global agent and command locations.\n \n Inspect a temporary checkout, its AGENTS.md and INSTALL.md, and record the exact\n"
+}

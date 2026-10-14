@@ -1,0 +1,2 @@
+{"argv": ["/opt/homebrew/opt/python@3.14/bin/python3.14", "-B", "-c", "from pathlib import Path;Path('owner-draft.txt').unlink()"], "cwd": "/private/tmp/standalone-pilot-2026-10-14/review/correction-recheck-artifacts/runner-probes/dirty-untracked-before-removed/project", "exit": 0, "log": "logs/gate-01.log"}
+{"status_after": "", "tracked_source_unchanged": true, "changes": []}

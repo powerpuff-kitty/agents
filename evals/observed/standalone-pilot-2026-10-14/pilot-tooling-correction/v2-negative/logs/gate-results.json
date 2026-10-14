@@ -1,0 +1,10 @@
+[
+  {
+    "argv": [
+      "/usr/bin/false"
+    ],
+    "cwd": "/private/tmp/standalone-pilot-2026-10-14/pilot-tooling-correction/v2-negative/project",
+    "exit": 1,
+    "log": "logs/gate-01.log"
+  }
+]

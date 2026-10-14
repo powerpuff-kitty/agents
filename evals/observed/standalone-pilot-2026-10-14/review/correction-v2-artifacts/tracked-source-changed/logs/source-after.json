@@ -1,0 +1,7 @@
+{
+  "status_after": "M fixture.txt",
+  "tracked_source_unchanged": false,
+  "changes": [
+    "fixture.txt"
+  ]
+}

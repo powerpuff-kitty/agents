@@ -118,3 +118,23 @@ selection to compile current sources: identical files remain untouched, unchange
 managed files update with backups, and unmanaged/local edits require review.
 Agents and Skills are installed separately; [recommended skills](docs/SKILLS.md)
 are suggestions, not added pack dependencies or permission grants.
+
+## Versioned installs
+
+Use a [release tag](https://github.com/powerpuff-kitty/ai-agents/releases) when a
+reviewed snapshot is preferable to the moving default branch:
+
+```sh
+git clone --branch v0.1.0-beta.1 --depth 1 https://github.com/powerpuff-kitty/ai-agents.git
+cd ai-agents
+git rev-parse HEAD
+python3 scripts/install.py --pack core --dry-run
+python3 scripts/install.py --pack core
+```
+
+Record the full resolved commit. Review release notes and preserve the same
+selection/destinations when updating. Rollback means deliberately checking out a
+prior reviewed revision and rerunning that selection after a dry run; managed
+unchanged files can be restored while local edits remain conflicts. Automatic
+pruning is never part of an update or downgrade. [Release policy](docs/RELEASING.md)
+defines version ownership and checks.

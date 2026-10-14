@@ -1,0 +1,72 @@
+{
+  "browser-recovery-false-pass": {
+    "input_changes_vs_retained_manifest": [],
+    "instruction_hashes_verified": 17,
+    "instruction_hash_mismatches": {}
+  },
+  "implementation-unavailable-check": {
+    "input_changes_vs_retained_manifest": [
+      "workspace/port.ts"
+    ],
+    "instruction_hashes_verified": 17,
+    "instruction_hash_mismatches": {}
+  },
+  "reflection-architecture-finding": {
+    "input_changes_vs_retained_manifest": [],
+    "instruction_hashes_verified": 17,
+    "instruction_hash_mismatches": {},
+    "evidence_ids": [
+      "evidence:rule",
+      "evidence:edge"
+    ],
+    "finding_id": "finding:edge"
+  },
+  "reflection-failed-test": {
+    "input_changes_vs_retained_manifest": [],
+    "instruction_hashes_verified": 17,
+    "instruction_hash_mismatches": {},
+    "evidence_ids": [
+      "evidence:contract",
+      "evidence:test"
+    ],
+    "finding_id": "finding:enum"
+  },
+  "reflection-insufficient-evidence": {
+    "input_changes_vs_retained_manifest": [],
+    "instruction_hashes_verified": 17,
+    "instruction_hash_mismatches": {},
+    "evidence_ids": [],
+    "finding_id": "finding:enum"
+  },
+  "reflection-no-reflection-needed": {
+    "input_changes_vs_retained_manifest": [],
+    "instruction_hashes_verified": 17,
+    "instruction_hash_mismatches": {},
+    "evidence_ids": [
+      "evidence:check"
+    ],
+    "finding_id": null
+  },
+  "browser_record_check": {
+    "mismatch_dimensions": [
+      "route",
+      "viewport",
+      "theme"
+    ],
+    "attempts": [
+      {
+        "id": "attempt:1",
+        "status": "failed",
+        "error": "request timed out"
+      },
+      {
+        "id": "attempt:2",
+        "status": "failed",
+        "error": "retry submitted twice"
+      }
+    ],
+    "baseline_approved": false,
+    "after_restart": [],
+    "browser_executed_by_reviewer": false
+  }
+}

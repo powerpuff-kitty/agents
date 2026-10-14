@@ -1,0 +1,26 @@
+{
+  "task": "Reflect on the failed synthetic query attempt and propose a bounded correction; do not edit source or persist memory.",
+  "attempt_id": "attempt:1",
+  "work_unit_id": "wu:query",
+  "run_id": "run:query",
+  "evidence": [
+    {
+      "id": "evidence:rule",
+      "text": "UI cannot import persistence."
+    },
+    {
+      "id": "evidence:edge",
+      "text": "A supplied static graph observed ui/view.py importing db/store.py."
+    }
+  ],
+  "attempt_note": "The attempt assumed a direct import was permitted.",
+  "finding_id": "finding:edge",
+  "provider_identity": {
+    "kind": "agent",
+    "connection_id": null,
+    "name": "evaluating-agent",
+    "model": null,
+    "version": null
+  },
+  "created_at": "2026-10-14T12:00:00Z"
+}

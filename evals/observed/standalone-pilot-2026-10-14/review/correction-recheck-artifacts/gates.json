@@ -1,0 +1,87 @@
+[
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-B",
+      "scripts/validate.py"
+    ],
+    "cwd": "/private/tmp/standalone-pilot-2026-10-14/review/correction-recheck-artifacts/source",
+    "exit": 0,
+    "log": "logs/gate-01.log"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-B",
+      "scripts/check_docs.py"
+    ],
+    "cwd": "/private/tmp/standalone-pilot-2026-10-14/review/correction-recheck-artifacts/source",
+    "exit": 0,
+    "log": "logs/gate-02.log"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-B",
+      "scripts/build.py",
+      "--adapter",
+      "portable"
+    ],
+    "cwd": "/private/tmp/standalone-pilot-2026-10-14/review/correction-recheck-artifacts/source",
+    "exit": 0,
+    "log": "logs/gate-03.log"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-B",
+      "scripts/build.py",
+      "--adapter",
+      "opencode"
+    ],
+    "cwd": "/private/tmp/standalone-pilot-2026-10-14/review/correction-recheck-artifacts/source",
+    "exit": 0,
+    "log": "logs/gate-04.log"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-B",
+      "scripts/build.py",
+      "--adapter",
+      "portable",
+      "--check"
+    ],
+    "cwd": "/private/tmp/standalone-pilot-2026-10-14/review/correction-recheck-artifacts/source",
+    "exit": 0,
+    "log": "logs/gate-05.log"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-B",
+      "scripts/build.py",
+      "--adapter",
+      "opencode",
+      "--check"
+    ],
+    "cwd": "/private/tmp/standalone-pilot-2026-10-14/review/correction-recheck-artifacts/source",
+    "exit": 0,
+    "log": "logs/gate-06.log"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "cwd": "/private/tmp/standalone-pilot-2026-10-14/review/correction-recheck-artifacts/source",
+    "exit": 0,
+    "log": "logs/gate-07.log"
+  }
+]

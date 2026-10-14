@@ -1,0 +1,5 @@
+# Source-archive provenance correction
+
+Root reproduced a source-archive consumer failure at ai-agents commit 73b241f5eb9240034d78f531abd8ace804ed0890: running test_behavior_eval.py outside a Git checkout yielded 4 errors in 5 tests. The retained traceback identifies prepare() unconditionally calling git rev-parse HEAD on the unpacked source directory. This is an archive-consumption defect, separate from the pilot's check scope and the model fixture outcomes.
+
+The correction records source_revision=null when the exact source root has no .git entry, retaining preparer, instruction and input hashes. It does not fabricate a commit or silently identify a parent repository as the source. A regression prepares the missing-compiler fixture from an archive-like source root and checks unknown revision plus retained provenance. Full final source and extracted-archive suites are required separately; see release metadata for exact final results. This record and deterministic correction are root-performed, not an independent model reflection or a new canonical observed case.

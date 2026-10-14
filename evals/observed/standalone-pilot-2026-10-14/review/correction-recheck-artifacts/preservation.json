@@ -1,0 +1,10 @@
+{
+  "candidate_manifest_sha256": "77677bfad7d16baf096d0e52030d3bee23cedc87d973ff65bc76e9a79dc49315",
+  "candidate_files": 861,
+  "candidate_unchanged": true,
+  "copied_source_files_unchanged": true,
+  "corrected_runner_sha256": "0eb7db697ba10b945e683a98d44bbd79ca1428caf6811f1b11526a13e078f47e",
+  "supplied_tooling_files_unchanged": 2727,
+  "original_reviews_retention_hashes_match": true,
+  "archive_sha256": "6f4f6f64d550e33f4c0e44ef2e45026d0c76d8eab002460793319e0aa5110cdf"
+}

@@ -1,0 +1,227 @@
+{
+  "kind": "javascript-logic-check-with-exact-signature-removal",
+  "node": "v25.5.0",
+  "final_source_sha256": "e391062fd391147f77f044a27167d988b44e9113c0f0bdb25d94c267383ca03e",
+  "original": {
+    "total": 52,
+    "passed": 10,
+    "failures": [
+      {
+        "group": "rejected",
+        "value": "true",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "false",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "null",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "undefined",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": " ",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "\t",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "\n",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "80\n",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "\n80",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "80 ",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "1.5",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "1.5",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "+1",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "-1",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "1e2",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "1E2",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "0x50",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "0b10",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "1_000",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "NaN",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "Infinity",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "-Infinity",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "0",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "0",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "-1",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "65536",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "0",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "000",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "65536",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "NaN",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "Infinity",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "８０",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "٨٠",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "12\u0000",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "80",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "[object Object]",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "80",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "80",
+        "error": "Missing expected exception (TypeError)."
+      },
+      {
+        "group": "rejected",
+        "value": "[object Object]",
+        "error": "The error is expected to be an instance of \"TypeError\". Received \"Error\"\n\nError message:\n\nmust not coerce objects"
+      }
+    ]
+  },
+  "final": {
+    "total": 52,
+    "passed": 52,
+    "failures": []
+  },
+  "limitation": "Does not type-check or compile TypeScript; required standalone-pilot-tsc remains unverified."
+}

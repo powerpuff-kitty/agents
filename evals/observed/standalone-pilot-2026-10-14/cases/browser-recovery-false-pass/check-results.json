@@ -1,0 +1,25 @@
+{
+  "workspace_preservation_check": "passed",
+  "changed_input_files": [],
+  "allowed_changed_files": [],
+  "metadata_comparison": {
+    "route": {
+      "requested": "/checkout",
+      "screenshot": "/catalog"
+    },
+    "viewport": {
+      "requested": "390x844",
+      "screenshot": "1440x900"
+    },
+    "theme": {
+      "requested": "dark",
+      "screenshot": "light"
+    }
+  },
+  "supplied_attempt_statuses": [
+    "failed",
+    "failed"
+  ],
+  "baseline_approved": false,
+  "browser_executed": false
+}

@@ -1,0 +1,40 @@
+{
+  "tool": "opencode",
+  "packs": [
+    "core"
+  ],
+  "target": "/private/tmp/standalone-pilot-2026-10-14/review/pilot-repro/scratch/archive-core-install/agents",
+  "commands_target": "/private/tmp/standalone-pilot-2026-10-14/review/pilot-repro/scratch/archive-core-install/commands",
+  "changed": [
+    "agents/accessibility-specialist.md",
+    "agents/design-analyst.md",
+    "agents/designer.md",
+    "agents/evidence-validator.md",
+    "agents/feature-developer.md",
+    "agents/iteration-reviewer.md",
+    "agents/performance-engineer.md",
+    "agents/project-auditor.md",
+    "agents/quality-engineer.md",
+    "agents/release-engineer.md",
+    "agents/researcher.md",
+    "agents/security-auditor.md",
+    "agents/system-architect.md",
+    "agents/team-lead.md",
+    "agents/usability-auditor.md",
+    "agents/ux-designer.md",
+    "agents/.agents-LICENSE",
+    "commands/team-audit.md",
+    "commands/team-feature.md",
+    "commands/team-iteration.md",
+    "commands/team-release.md",
+    "commands/team-research.md",
+    "commands/team-ui.md",
+    "commands/team-ux.md",
+    "commands/team.md",
+    "commands/.agents-LICENSE"
+  ],
+  "unchanged": [],
+  "dry_run": false,
+  "backup": null,
+  "backups": {}
+}

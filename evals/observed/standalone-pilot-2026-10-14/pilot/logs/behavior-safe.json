@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "test_behavior_eval.BehaviorEval.test_no_overwrite_of_an_existing_evaluation",
+    "test_behavior_eval.BehaviorEval.test_new_cases_route_both_modes_and_keep_reasoning_ungraded"
+  ],
+  "cwd": "/private/tmp/standalone-pilot-2026-10-14/pilot/project/tests",
+  "exit": 0,
+  "log": "logs/behavior-safe.log",
+  "excluded": [
+    "test_boundary_fixture_fails_then_detects_fix_and_owner_edit",
+    "test_readonly_fixture_detects_source_mutation",
+    "test_discovery_stages_candidates_without_assigned_instructions"
+  ],
+  "reason": "Those three prepare synthetic Git commits, excluded under pilot no-commit constraint."
+}

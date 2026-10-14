@@ -1,0 +1,1 @@
+{"status": "passed", "checks": 8, "evidence": "logs/installer-probe.json", "limit": "Version change simulated in compiled content; project source was not edited."}

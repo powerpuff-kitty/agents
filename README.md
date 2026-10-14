@@ -1,6 +1,7 @@
 # Agents
 
 [![CI](https://github.com/powerpuff-kitty/ai-agents/actions/workflows/validate.yml/badge.svg?branch=main&event=push)](https://github.com/powerpuff-kitty/ai-agents/actions/workflows/validate.yml)
+[![Version: 0.1.0-beta.1](https://img.shields.io/badge/version-0.1.0--beta.1-blue)](https://github.com/powerpuff-kitty/ai-agents/releases/tag/v0.1.0-beta.1)
 [![Profiles: 35](https://img.shields.io/badge/profiles-35-blue)](docs/CATALOG.md)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
@@ -29,6 +30,8 @@ members; an individual profile adds no commands. See [selection and dependencies
 The installer preserves unrelated files and local edits, backs up replaced managed
 content and never prunes a previously installed selection. [INSTALL.md](INSTALL.md)
 owns destination, update, conflict and verification details.
+[Independent releases](docs/RELEASING.md) provide reviewed version pins and change
+notes; neither Skills nor the CLI needs a matching version.
 
 ## Use
 

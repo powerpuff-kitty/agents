@@ -1,0 +1,65 @@
+{
+  "reviewed_v3_sha256": "c17c839155847f5d59ab3560fab1658c54753a96d97aa865178b739addaf6d82",
+  "probes": [
+    {
+      "case": "clean-success",
+      "runner_exit": 0,
+      "initial_identity": {
+        "revision": "a035ce327babb65a3a7287ab96c3b105005be2a6",
+        "status_before": "",
+        "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+        "platform": "macOS-26.7-arm64-arm-64bit-Mach-O",
+        "model": "unknown",
+        "token_usage": "unknown",
+        "recorded_at_utc": "2026-10-14T19:16:07.352103+00:00",
+        "tracked_sha256": {
+          "fixture.txt": "dffae6325cfee7ac7a230da4b765aece14aa6143eb18c910159f2d43dc1906e1"
+        }
+      },
+      "command_log_count": 1,
+      "gate_results_recorded": true,
+      "gate_sentinel_present": false,
+      "script_sha256": "88f93296285d1d0bb137a83f8832278c45e0430e8e8e778aaba8bcd064b7e6c2"
+    },
+    {
+      "case": "clean-failure",
+      "runner_exit": 1,
+      "initial_identity": {
+        "revision": "a035ce327babb65a3a7287ab96c3b105005be2a6",
+        "status_before": "",
+        "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+        "platform": "macOS-26.7-arm64-arm-64bit-Mach-O",
+        "model": "unknown",
+        "token_usage": "unknown",
+        "recorded_at_utc": "2026-10-14T19:16:07.612686+00:00",
+        "tracked_sha256": {
+          "fixture.txt": "dffae6325cfee7ac7a230da4b765aece14aa6143eb18c910159f2d43dc1906e1"
+        }
+      },
+      "command_log_count": 1,
+      "gate_results_recorded": true,
+      "gate_sentinel_present": false,
+      "script_sha256": "0e46489bc2424cf93b987f9b7a905889a03491ba945b85bf7c8c86f366d38159"
+    },
+    {
+      "case": "initially-deleted-tracked",
+      "runner_exit": 1,
+      "initial_identity": {
+        "revision": "a035ce327babb65a3a7287ab96c3b105005be2a6",
+        "status_before": "D fixture.txt",
+        "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+        "platform": "macOS-26.7-arm64-arm-64bit-Mach-O",
+        "model": "unknown",
+        "token_usage": "unknown",
+        "tracked_sha256": null,
+        "hash_status": "not_collected_dirty_source",
+        "recorded_at_utc": "2026-10-14T19:16:07.796714+00:00"
+      },
+      "command_log_count": 0,
+      "gate_results_recorded": false,
+      "gate_sentinel_present": false,
+      "script_sha256": "dff64ffa89e7542ed59af718c519ece26aa598a4f8632dd766aaa730b845e463"
+    }
+  ],
+  "inputs_and_earlier_reports_unchanged": true
+}

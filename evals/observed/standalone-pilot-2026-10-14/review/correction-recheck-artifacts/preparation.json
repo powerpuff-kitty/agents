@@ -1,0 +1,134 @@
+{
+  "synthetic_parent_revision": "3f8fad63b55246ad28b4843c7f6d33c0cfc86868",
+  "preparations": [
+    {
+      "case": "implementation-dirty-worktree",
+      "discovery": false,
+      "source_revision": null,
+      "preparer_sha256": "6f145a5843e5bb843824500d79eeedd63533516177e042bd15da4e186f49a4cf",
+      "workspace_files": 3,
+      "instruction_files": 4
+    },
+    {
+      "case": "implementation-dirty-worktree",
+      "discovery": true,
+      "source_revision": null,
+      "preparer_sha256": "6f145a5843e5bb843824500d79eeedd63533516177e042bd15da4e186f49a4cf",
+      "workspace_files": 3,
+      "instruction_files": 94
+    },
+    {
+      "case": "implementation-unavailable-check",
+      "discovery": false,
+      "source_revision": null,
+      "preparer_sha256": "6f145a5843e5bb843824500d79eeedd63533516177e042bd15da4e186f49a4cf",
+      "workspace_files": 3,
+      "instruction_files": 4
+    },
+    {
+      "case": "implementation-unavailable-check",
+      "discovery": true,
+      "source_revision": null,
+      "preparer_sha256": "6f145a5843e5bb843824500d79eeedd63533516177e042bd15da4e186f49a4cf",
+      "workspace_files": 3,
+      "instruction_files": 94
+    },
+    {
+      "case": "browser-recovery-false-pass",
+      "discovery": false,
+      "source_revision": null,
+      "preparer_sha256": "6f145a5843e5bb843824500d79eeedd63533516177e042bd15da4e186f49a4cf",
+      "workspace_files": 1,
+      "instruction_files": 4
+    },
+    {
+      "case": "browser-recovery-false-pass",
+      "discovery": true,
+      "source_revision": null,
+      "preparer_sha256": "6f145a5843e5bb843824500d79eeedd63533516177e042bd15da4e186f49a4cf",
+      "workspace_files": 1,
+      "instruction_files": 94
+    },
+    {
+      "case": "reflection-evidence-boundary",
+      "discovery": false,
+      "source_revision": null,
+      "preparer_sha256": "6f145a5843e5bb843824500d79eeedd63533516177e042bd15da4e186f49a4cf",
+      "workspace_files": 1,
+      "instruction_files": 4
+    },
+    {
+      "case": "reflection-evidence-boundary",
+      "discovery": true,
+      "source_revision": null,
+      "preparer_sha256": "6f145a5843e5bb843824500d79eeedd63533516177e042bd15da4e186f49a4cf",
+      "workspace_files": 1,
+      "instruction_files": 94
+    },
+    {
+      "case": "memory-retrieval-boundary",
+      "discovery": false,
+      "source_revision": null,
+      "preparer_sha256": "6f145a5843e5bb843824500d79eeedd63533516177e042bd15da4e186f49a4cf",
+      "workspace_files": 1,
+      "instruction_files": 4
+    },
+    {
+      "case": "memory-retrieval-boundary",
+      "discovery": true,
+      "source_revision": null,
+      "preparer_sha256": "6f145a5843e5bb843824500d79eeedd63533516177e042bd15da4e186f49a4cf",
+      "workspace_files": 1,
+      "instruction_files": 94
+    },
+    {
+      "case": "agent-tool-authorization-boundary",
+      "discovery": false,
+      "source_revision": null,
+      "preparer_sha256": "6f145a5843e5bb843824500d79eeedd63533516177e042bd15da4e186f49a4cf",
+      "workspace_files": 2,
+      "instruction_files": 4
+    },
+    {
+      "case": "agent-tool-authorization-boundary",
+      "discovery": true,
+      "source_revision": null,
+      "preparer_sha256": "6f145a5843e5bb843824500d79eeedd63533516177e042bd15da4e186f49a4cf",
+      "workspace_files": 2,
+      "instruction_files": 94
+    },
+    {
+      "case": "focused-review-with-skills",
+      "discovery": false,
+      "source_revision": null,
+      "preparer_sha256": "6f145a5843e5bb843824500d79eeedd63533516177e042bd15da4e186f49a4cf",
+      "workspace_files": 4,
+      "instruction_files": 4
+    },
+    {
+      "case": "focused-review-with-skills",
+      "discovery": true,
+      "source_revision": null,
+      "preparer_sha256": "6f145a5843e5bb843824500d79eeedd63533516177e042bd15da4e186f49a4cf",
+      "workspace_files": 4,
+      "instruction_files": 94
+    },
+    {
+      "case": "geo-specialist-sampled-visibility-not-causality",
+      "discovery": false,
+      "source_revision": null,
+      "preparer_sha256": "6f145a5843e5bb843824500d79eeedd63533516177e042bd15da4e186f49a4cf",
+      "workspace_files": 1,
+      "instruction_files": 4
+    },
+    {
+      "case": "geo-specialist-sampled-visibility-not-causality",
+      "discovery": true,
+      "source_revision": null,
+      "preparer_sha256": "6f145a5843e5bb843824500d79eeedd63533516177e042bd15da4e186f49a4cf",
+      "workspace_files": 1,
+      "instruction_files": 94
+    }
+  ],
+  "no_parent_revision_guessed": true
+}

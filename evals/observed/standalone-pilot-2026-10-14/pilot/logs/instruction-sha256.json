@@ -1,0 +1,30 @@
+[
+  {
+    "path": "/private/tmp/standalone-pilot-2026-10-14/pilot/task.md",
+    "sha256": "7f58af4965c4e6e2d373d183cd02c4b42a8369984c7ff650f046e20b0964316a"
+  },
+  {
+    "path": "/private/tmp/standalone-pilot-2026-10-14/catalog.md",
+    "sha256": "5dd372e9f39eecbdc3913e8dbad2c912059b929c4983b7dfe7aae9568d4ab5f0"
+  },
+  {
+    "path": "/private/tmp/standalone-pilot-2026-10-14/shared-contract.md",
+    "sha256": "2d629172285cf6fbe0397911188a780f56960f0bbead8e3b753338c938a4fb7e"
+  },
+  {
+    "path": "/private/tmp/standalone-pilot-2026-10-14/pilot/project/AGENTS.md",
+    "sha256": "22fc0037e5c201dee5e50c849e4d53d4a27f9d89ebbde7b1f8e4ed22ee84b33d"
+  },
+  {
+    "path": "/private/tmp/standalone-pilot-2026-10-14/pilot/installed/agents/release-engineer.md",
+    "sha256": "335c5017d266346032e0d641dcb7051799f786c71754f2f024496edc5e56bcf4"
+  },
+  {
+    "path": "/private/tmp/standalone-pilot-2026-10-14/pilot/installed/agents/quality-engineer.md",
+    "sha256": "95a6febc6a6475665fbac7ebe03a3c9dfbf6907cb501f274b4c744ad3acc402e"
+  },
+  {
+    "path": "/private/tmp/standalone-pilot-2026-10-14/installed-skills/release-review/SKILL.md",
+    "sha256": "7a81e9be233d684dc7906f5463ab1798debb0e1af419bc2eedaab09ab10dd9f6"
+  }
+]

@@ -1,0 +1,3 @@
+{"argv": ["/usr/bin/false"], "cwd": "/private/tmp/standalone-pilot-2026-10-14/review/correction-v2-artifacts/failed-command-and-retained-later-log/project", "exit": 1, "log": "logs/gate-01.log"}
+{"argv": ["/usr/bin/true"], "cwd": "/private/tmp/standalone-pilot-2026-10-14/review/correction-v2-artifacts/failed-command-and-retained-later-log/project", "exit": 0, "log": "logs/gate-02.log"}
+{"status_after": "", "tracked_source_unchanged": true, "changes": []}

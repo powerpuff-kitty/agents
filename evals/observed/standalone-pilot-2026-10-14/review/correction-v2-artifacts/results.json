@@ -1,0 +1,110 @@
+{
+  "runner_v2_sha256": "578b32e2ea22836e2856b649ab562d1370f9e0c8c4d6b8ec767707776fcbe9e4",
+  "probes": [
+    {
+      "case": "clean-success",
+      "runner_exit": 0,
+      "initial_identity_recorded": true,
+      "command_log_count": 1,
+      "gate_results_recorded": true,
+      "project_files_unchanged": true,
+      "script_sha256": "7a873094016078c37a1bac3ef75c05c6b130af2ac681659c49ca0017e8ba1148",
+      "status_before": "",
+      "subcommand_exits": [
+        0
+      ],
+      "source_after": {
+        "status_after": "",
+        "tracked_source_unchanged": true,
+        "changes": []
+      }
+    },
+    {
+      "case": "failed-command-and-retained-later-log",
+      "runner_exit": 1,
+      "initial_identity_recorded": true,
+      "command_log_count": 2,
+      "gate_results_recorded": true,
+      "project_files_unchanged": true,
+      "script_sha256": "11e3de96c661dd12b7d44b2911ba03e40801cfb5ea5fc1328a0849b2eb6691d0",
+      "status_before": "",
+      "subcommand_exits": [
+        1,
+        0
+      ],
+      "source_after": {
+        "status_after": "",
+        "tracked_source_unchanged": true,
+        "changes": []
+      }
+    },
+    {
+      "case": "tracked-source-changed",
+      "runner_exit": 1,
+      "initial_identity_recorded": true,
+      "command_log_count": 1,
+      "gate_results_recorded": true,
+      "project_files_unchanged": false,
+      "script_sha256": "3312b34e8fda854a70b1c6c95cd582b10c6b9802e1506fc0a052733f146371c9",
+      "status_before": "",
+      "subcommand_exits": [
+        0
+      ],
+      "source_after": {
+        "status_after": "M fixture.txt",
+        "tracked_source_unchanged": false,
+        "changes": [
+          "fixture.txt"
+        ]
+      }
+    },
+    {
+      "case": "dirty-tracked-before",
+      "runner_exit": 1,
+      "initial_identity_recorded": true,
+      "command_log_count": 0,
+      "gate_results_recorded": false,
+      "project_files_unchanged": true,
+      "script_sha256": "7a873094016078c37a1bac3ef75c05c6b130af2ac681659c49ca0017e8ba1148",
+      "status_before": "M fixture.txt"
+    },
+    {
+      "case": "dirty-untracked-after",
+      "runner_exit": 1,
+      "initial_identity_recorded": true,
+      "command_log_count": 1,
+      "gate_results_recorded": true,
+      "project_files_unchanged": false,
+      "script_sha256": "413cd938e59908b9ee1b0e90d5631028c97e5b33f965fc0cc5ed73656d94a705",
+      "status_before": "",
+      "subcommand_exits": [
+        0
+      ],
+      "source_after": {
+        "status_after": "?? owner-draft.txt",
+        "tracked_source_unchanged": true,
+        "changes": []
+      }
+    },
+    {
+      "case": "owner-draft-delete-command-refused",
+      "runner_exit": 1,
+      "initial_identity_recorded": true,
+      "command_log_count": 0,
+      "gate_results_recorded": false,
+      "project_files_unchanged": true,
+      "script_sha256": "ce9bab7ed4bf5493b168b44124232874ffe19b9a73aeeaf6280ced34bfe0a793",
+      "status_before": "?? owner-draft.txt"
+    },
+    {
+      "case": "dirty-deleted-tracked-before",
+      "runner_exit": 1,
+      "initial_identity_recorded": false,
+      "command_log_count": 0,
+      "gate_results_recorded": false,
+      "project_files_unchanged": true,
+      "script_sha256": "7a873094016078c37a1bac3ef75c05c6b130af2ac681659c49ca0017e8ba1148"
+    }
+  ],
+  "input_identities_preserved": true
+}

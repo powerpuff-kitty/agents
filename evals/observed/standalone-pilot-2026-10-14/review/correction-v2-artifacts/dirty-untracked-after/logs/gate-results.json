@@ -1,0 +1,13 @@
+[
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-B",
+      "-c",
+      "from pathlib import Path;Path('owner-draft.txt').write_text('new\\n')"
+    ],
+    "cwd": "/private/tmp/standalone-pilot-2026-10-14/review/correction-v2-artifacts/dirty-untracked-after/project",
+    "exit": 0,
+    "log": "logs/gate-01.log"
+  }
+]
