@@ -25,6 +25,9 @@ truth or an autonomous agent runtime.
   protect local edits, and remain idempotent. Do not silently widen permissions.
 - Evaluation scenarios are specifications. Only actual retained model executions
   can establish behavioral outcomes; deterministic validators must not claim them.
+- Authored profiles and tooling use the root MIT [LICENSE](LICENSE).
+  [INSTALL.md](INSTALL.md) owns the copyable installation prompt; installing
+  profiles and installing skills are separate scopes.
 - Follow [README.md](README.md) for usage, [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
   for source/adapter boundaries, and [evals/README.md](evals/README.md) for evaluation.
 

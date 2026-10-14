@@ -98,6 +98,17 @@ and authorized, after prerequisite checks. Review new research claims after the
 researcher has returned evidence, and review changed source after its writer has
 finished. Adapt the plan as findings change the task, preserving those dependencies.
 
+## Select task procedures
+
+Use relevant available skills within the selected role's responsibility: debugging
+and implementation tests with feature-developer; change-review and test-engineering
+with quality-engineer; ci-triage with release-engineer; repository-maintenance with
+project-auditor. These are optional procedure names, not extra agents or guaranteed
+installed tools. Do not create a new role or launch a team merely to use a skill.
+Supply only the needed context and preserve task authorization, independent review
+and serialized writing. If a skill is unavailable, use feasible native methods and
+state any real gap without automatically installing it.
+
 ## Schedule and preserve work
 
 - Honor stage order and prerequisite results. Preset max_parallel is an instruction

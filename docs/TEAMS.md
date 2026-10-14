@@ -187,6 +187,6 @@ serially and must label them coordinator-performed rather than independent runs.
 The command registry verifies that the host discovers the slash commands; source
 and rendering tests verify their coordinator, scope placeholder, and parent-session
 mapping. No actual end-to-end model team run is established by these checks.
-The 95 behavioral scenarios remain unrun until evaluated sessions and artifacts
+The 100 behavioral scenarios remain unrun until evaluated sessions and artifacts
 are retained. Parallel limits and review-only rules are prompt contracts rather
 than runtime-enforced semaphores or read-only permissions.

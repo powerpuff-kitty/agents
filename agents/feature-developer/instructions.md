@@ -53,3 +53,12 @@ The requested behavior is implemented, the final diff is reviewed, applicable
 checks have run or their specific blockers are documented, and public/project
 truth reflects accepted changes. Do not silently abandon part of the request,
 claim unexecuted checks passed, or describe an unverified outcome as verified.
+
+## Focused procedures
+
+When available and relevant, use systematic-debugging for a specific defect and
+test-engineering for meaningful regression coverage. Select the procedure for the
+actual failure, preserve its reproduction and distinguish a verified cause from
+a plausible hypothesis. Missing skills do not block feasible authorized work or
+authorize installation. Independent change-review belongs to another capable
+reviewer when requested; label the developer's own checks as self-review.

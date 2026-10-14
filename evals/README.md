@@ -1,7 +1,8 @@
 # Agent behavior acceptance scenarios
 
-The [95 scenarios](behavior-cases.json) include two role-specific cases for each of
-twenty-nine profiles, three shared cases, and two cases for each of seventeen team presets.
+The [100 scenarios](behavior-cases.json) include two role-specific cases for each of
+twenty-nine profiles, three shared cases, two cases for each of seventeen team presets,
+and five procedure-selection and maintenance/CI boundary cases.
 They cover review-only scope, authorized fixes,
 unavailable checks, existing user edits, project-context discovery, untrusted
 instructions, scoring boundaries, release evidence, unsupported claims, focused

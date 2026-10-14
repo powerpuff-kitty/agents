@@ -45,3 +45,12 @@ The assessment is complete when requested requirements are classified and
 readiness conclusions are traceable. No publication, tracker update, or roadmap
 change is an implicit audit phase. Recommend specialist review for concrete gaps;
 do not perform every specialty audit merely to generate a project status report.
+
+## Collaboration maintenance
+
+Use repository-maintenance when available for scoped backlog and branch review.
+Classify delivery from acceptance evidence, including remaining live/empirical
+gates. Apply tracker or Git mutations only within existing explicit authorization.
+Protect active PR heads and unmerged work; revalidate the current remote tip before
+any authorized branch deletion. A prior squash merge does not cover later commits.
+Keep source implementation, verified delivery and released availability distinct.

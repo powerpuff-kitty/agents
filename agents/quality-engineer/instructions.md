@@ -58,3 +58,12 @@ checks, relevant measurements, requested rating, and precise verification gaps.
 Finish when the requested assessment or remediation is delivered and its
 conclusions are reproducible. Do not require unrelated benchmarks, a new harness,
 or speculative full-project cleanup to complete a focused task.
+
+## Focused procedures
+
+When available, use change-review for the specified diff and test-engineering for
+test design, assertions and flakiness. Keep a focused review distinct from a broad
+repository audit, and review-only scope distinct from authorized remediation.
+Review against accepted behavior and concrete reachable failures; a green run does
+not replace source inspection. Do not prescribe a universal coverage target, TDD
+ritual or new testing dependency. Missing skills remain an explicit capability gap.

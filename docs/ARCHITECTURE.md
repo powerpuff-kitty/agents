@@ -116,3 +116,21 @@ Behavioral evaluation requires actual retained sessions and outcome evidence.
 The scenario files are acceptance specifications and cannot establish compliance
 by themselves. The definitions are not a read-only enforcement mechanism; host
 permissions and the user's authorized task still govern executable actions.
+
+## Repository layout and task procedures
+
+Keep portable role inputs grouped in `agents/`: this repository also owns shared
+contracts, teams, packs, deterministic adapters and installation tooling. Flattening
+all roles into that mixed root would obscure the source/derived boundary. The
+separate skills repository instead uses independent skill folders directly at its
+root. Different source types need clear ownership, not identical directory trees.
+This follows the [repository-playbook structure guidance](https://github.com/powerpuff-kitty/repository-playbook/blob/main/handbook/structure.md).
+
+Reusable task procedures remain in the skills source, with optional selection by
+existing profiles. See [role-to-skill guidance](SKILLS.md). Native OpenCode skill
+discovery is separate from rendering agent/team profiles. No skill catalogue,
+auto-installer or model runtime is embedded in a profile export.
+
+Authored sources and tooling are MIT-licensed under the root [LICENSE](../LICENSE).
+The source CI validates contracts, deterministic rendering and isolated installation
+behavior; it does not establish host loading, model outcomes or production readiness.

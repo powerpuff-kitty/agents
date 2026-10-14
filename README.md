@@ -12,6 +12,11 @@ These are instruction profiles. They use the host's selected model, available
 tools, project context, and permissions. They do not independently provide tools,
 enforce a sandbox, or establish expertise through a profile name alone.
 
+Task procedures live in the separate [skills repository](https://github.com/powerpuff-kitty/skills).
+See [role-to-skill guidance](docs/SKILLS.md) for debugging, testing, change review,
+CI triage and repository maintenance. OpenCode loads skills natively; the adapter
+here renders agent profiles and team commands. Profiles do not install skills.
+
 ## Layout
 
 ```text
@@ -31,6 +36,9 @@ evals/                         Behavioral acceptance specifications
 ```
 
 ## Build and install
+
+Use the [copyable installation prompt](INSTALL.md) for a reviewed install that
+preserves customized profiles and verifies actual host loading.
 
 Python 3.10+ is required; no additional packages are needed.
 
@@ -160,7 +168,7 @@ python3 -m unittest discover -s tests -v
 ```
 
 Source validation, deterministic rendering, installer tests, and actual host
-profile/command loading are distinct from model behavior. The 95 scenarios in
+profile/command loading are distinct from model behavior. The 100 scenarios in
 [evals](evals/README.md) remain `not_run` until an actual evaluated session is
 retained. Do not report passing instruction-file checks as agent reliability.
 
@@ -169,3 +177,15 @@ migration and verification. It is an evidence record, not another instruction
 source; [team verification](docs/TEAM-IMPLEMENTATION.md) records the later addition.
 Deployment credentials, private project data, local backups, and model
 transcripts do not belong in this repository.
+
+## Maintenance and licensing
+
+This is an actively maintained instruction-profile and tooling source. Portable
+and OpenCode exports are implemented; behavioral reliability remains unmeasured
+until retained model evaluations establish it. Source CI checks deterministic
+contracts and isolated installation, with no automatic host installation or release.
+Use a known revision for reproducible consumption and review host compatibility
+before upgrading customized installations. See [contributing](CONTRIBUTING.md) and the [repository review](docs/REPOSITORY-REVIEW.md).
+
+Authored content and tooling use the MIT [LICENSE](LICENSE). Retain notices when
+redistributing substantial copies; third-party content keeps its original terms.

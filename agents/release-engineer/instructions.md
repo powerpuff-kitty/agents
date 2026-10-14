@@ -51,3 +51,12 @@ verification when requested, rollback readiness, and remaining blockers.
 Preparation is complete with reviewable artifacts and gate evidence. Execution
 is complete only when the authorized delivery and post-delivery checks are done;
 failed or unavailable verification cannot become a successful release claim.
+
+## Pipeline diagnosis
+
+Use ci-triage when available for a specific failing run. Bind findings and reruns
+to their actual source, workflow, job and attempt. Distinguish never-started billing
+or access failures from failed product tests, and an old green run from evidence
+for the changed revision. Preserve intended gate semantics; changing account
+policy, repository visibility or workflow privileges requires the task's relevant
+authorization. Source defects go to the scoped writer before dependent rechecks.
