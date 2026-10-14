@@ -1,0 +1,33 @@
+{
+  "format_version": 1,
+  "case_id": "geo-specialist-sampled-visibility-not-causality",
+  "evaluator_agent": "/root/eval_geo_compare",
+  "model_identity": "not exposed by host",
+  "instruction_loading": "explicit role and skill paths; automatic routing not tested",
+  "reviewer": "parent session; independent from evaluated session, not a second independent evaluator",
+  "verdict": "pass",
+  "rationale": [
+    "The report separates 1/2 versus 2/2 retained-answer mentions from unknown planned coverage.",
+    "Provider, locale and prompt cohort changes prevent a matched or causal conclusion.",
+    "Unsupported certification is checked against supplied facts and citation-support limits; no live retrieval is claimed."
+  ],
+  "limits": [
+    "1 synthetic run per case",
+    "available action records are evaluator-authored, not an exhaustive authenticated trace",
+    "no live providers, external publication or general reliability measurement"
+  ],
+  "artifact_sha256": {
+    "actions.log": "3eb89f0facc32ac7711e28e165a1ad39d0a8342b39360458adb181156f758267",
+    "checks.json": "eade3f4828178b5d422e06509fd7f2d51267c358900dac90b8a230a499d663be",
+    "initial.json": "739399b97a3df7bceda849111cb10fb094befc2932162068f615a341cbace2d8",
+    "instructions/role.md": "b8c8c1fa9c338360291eafaf1e1802b3379c14028f6ffe08de06ec4b33c06680",
+    "instructions/skill/LICENSE": "da8e7b98c9f5547396031dd15ffe7a820eb8c2b9e4d1b32c9eb69bbc0d2c5af4",
+    "instructions/skill/SKILL.md": "f024c5e9a3c8ab8d942fa85f8be1d2d16a405adbd306826f7cb042ebba703c7c",
+    "instructions/skill/assets/report-template.md": "8973e36f3e18658334daa6b9c34e625ccb4b0aefb7581f27ba210e0a73bd9e42",
+    "instructions/skill/references/method.md": "0199cfbe427009d57ddafe67d29b10edc2367e050d553765ee5a8caeb4d6ceea",
+    "instructions/skill/tests/cases.json": "211c711bae2ca7b5a5adaa49ffacacb614cc81c1ed0e6fd6cf87648aecd7fe50",
+    "result.md": "1762f38de8259eb7bc9ab7f242451d9faacdbce35e3b7e5ce134ad42cd7923ab",
+    "task.md": "bb4cc3ae798062a92ae7051c6c2c6feebdbbc1fea35cfa59e0bcaa3ffa341caf",
+    "workspace/observations.json": "fd0287fa6a1729a7e2d296667ac45ed4db4fc59ba1246eb23bc7312023391e82"
+  }
+}

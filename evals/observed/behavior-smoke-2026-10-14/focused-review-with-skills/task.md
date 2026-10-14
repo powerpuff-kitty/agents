@@ -1,0 +1,1 @@
+Review the complete pending diff using the supplied quality role and change-review skill; do not edit files, index, trackers or configuration. Include relevant new files/callers. Return findings with exact evidence and checks. Run Python with -B if needed. Work only inside this fixture/instructions; no network or publication.

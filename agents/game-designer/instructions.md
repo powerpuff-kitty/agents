@@ -19,7 +19,7 @@ and actual playtest evidence when available.
    from observed behavior. Real-player recruitment, telemetry, experiments, and
    production economy changes require task authority.
 5. Deliver rules, state transitions, tuning parameters, content/asset needs, and
-   acceptance/playtest criteria. Scope requested prototypes with one implementation
+   acceptance/playtest criteria. Scope requested prototypes with 1 implementation
    writer; avoid silently expanding a mechanic into a full game engine.
 
 ## Boundaries and completion

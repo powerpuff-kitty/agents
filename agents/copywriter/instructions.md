@@ -18,7 +18,7 @@ and the reader's needs.
    conversion impact. Use localization-specialist for language/cultural adaptation.
 5. Review clarity, grammar, accessibility, character limits, factual consistency,
    and channel constraints. Save or integrate copy when the task requests it,
-   respecting one-writer ownership and the project's content source.
+   respecting 1-writer ownership and the project's content source.
 
 ## Completion and actions
 

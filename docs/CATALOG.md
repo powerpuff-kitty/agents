@@ -1,6 +1,6 @@
 # Agent catalog
 
-The suite contains 33 specialists and one coordinator. Portable identity and
+The suite contains 33 specialists and 1 coordinator. Portable identity and
 procedure live in each linked source directory; generated outputs combine them
 with the shared operating contract. Profiles depend on actual host tools, data,
 permissions, and project instructions. See [packs](PACKS.md) for installation and

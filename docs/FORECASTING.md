@@ -3,7 +3,7 @@
 The `forecasting` pack owns probability-analyst and `/team-forecast`. It depends
 on science-data/core: 19 profiles and 11 workflows. It supports recorded event
 forecasts and conditional betting/prediction-market analysis without a betting
-or account runtime. The full catalog has 34 profiles, 20 workflows and seven packs.
+or account runtime. The full catalog has 34 profiles, 20 workflows and 7 packs.
 
 ## Responsibilities and methods
 
@@ -19,7 +19,7 @@ records belong to onchain-analyst when that optional pack is available.
 | [forecast-calibration](https://github.com/powerpuff-kitty/skills/tree/main/forecast-calibration) | Recorded probabilities/labels, proper scores, calibration counts, dependence and fit/evaluation separation. |
 | [settlement-rule-review](https://github.com/powerpuff-kitty/skills/tree/main/settlement-rule-review) | Exact event definitions, rule/source versions, time boundaries, void/refund and proposal/dispute/final status. |
 
-Each includes a focused reference, worked examples, a report template and six
+Each includes a focused reference, worked examples, a report template and 6
 unrun acceptance cases. Skills are installed separately with their [installation
 prompt](https://github.com/powerpuff-kitty/skills/blob/main/INSTALL.md); missing
 skills permit bounded direct work and explicit limits.
@@ -43,10 +43,10 @@ All examples are synthetic and conditional, not observed task/model outcomes.
 
 ### Quotes and conditional payoff
 
-For a comparable exhaustive two-outcome market, decimal back odds 1.80 and 2.20
+For a comparable exhaustive 2-outcome market, decimal back odds 1.80 and 2.20
 imply 5/9 and 5/11. Their sum is 100/99, so overround is 1/99, approximately
 1.010101%. Proportional margin removal gives .55/.45; the method does not establish
-true probabilities. A three-way market missing the draw cannot use that two-way
+true probabilities. A 3-way market missing the draw cannot use that 2-way
 normalization as a complete market.
 
 With an independently ASSUMED probability .60 and decimal odds1.80, expected unit
@@ -59,7 +59,7 @@ liquidity, a personal stake recommendation or executed profit.
 
 Recorded p=[.8,.6,.2,.4] and resolved y=[1,0,0,1] have mean binary Brier .20;
 a predeclared constant .5 baseline has .25. In bins [0,.5) and [.5,1], mean
-predictions .3/.7 each have observed rate .5 and n=2. Improvement on four records
+predictions .3/.7 each have observed rate .5 and n=2. Improvement on 4 records
 does not prove calibration or significance. Unresolved outcomes remain excluded
 with counts/status; they are not losses. A zero probability for an observed event
 has infinite natural-log loss unless a separately declared clipped metric is used.
@@ -90,7 +90,7 @@ outcomes or claim funds. Forecast accuracy, calibration, conditional utility and
 actual profit remain distinct evidence. Native loading and broad reasoning
 reliability are not established by source checks; cases remain not_run.
 
-One [retained independent synthetic skill review](../evals/observed/crypto-forecast-review-2026-10-14/manifest.json)
+1 [retained independent synthetic skill review](../evals/observed/crypto-forecast-review-2026-10-14/manifest.json)
 checks chain/finality, contract counterevidence, DeFi scenarios, odds/fees, proper
 scores and settlement boundaries. Reports and exact arithmetic are retained; this
 is not a profile/host-loading evaluation or broad outcome benchmark.

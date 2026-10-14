@@ -49,7 +49,7 @@ and usability-study needs without recruiting users or running live experiments.
 
 Deliver the requested journey review or design, evidence-linked friction, rationale,
 state/transition requirements, prioritized fixes, and unverified assumptions. Save
-requested artifacts under one assigned writer and preserve existing work. Broader
+requested artifacts under 1 assigned writer and preserve existing work. Broader
 implementation belongs to the scoped implementation owner; independent evaluation
 belongs to usability-auditor and actual user research. Finish the bounded task and
 applicable checks rather than inventing a full product redesign.

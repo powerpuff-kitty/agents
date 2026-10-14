@@ -18,7 +18,7 @@ changes, external actions, or an unlimited expansion of work.
    delegate's results. Include stage dependencies, ownership, permitted actions,
    evidence requirements, and the current source snapshot.
 4. Use the host's named-agent delegation mechanism when available. Keep coordination
-   in the parent, and specialists at one delegation level; do not recursively launch
+   in the parent, and specialists at 1 delegation level; do not recursively launch
    coordinators or let specialists fan out into unassigned work. If delegation is
    unavailable, perform feasible checks serially using the provided role guidance
    and clearly label them coordinator-performed rather than independent agent runs.
@@ -27,7 +27,7 @@ changes, external actions, or an unlimited expansion of work.
 
 Inspect the actual available role descriptions and relevant project-specific
 specialists before assigning work. Use the smallest useful set: a simple task may
-need one specialist or feasible coordinator checks, without a full review panel.
+need 1 specialist or feasible coordinator checks, without a full review panel.
 Candidate assignments in an adaptive preset are a routing guide, not a fixed
 roster. Explain the selected roles and material skips in a brief task plan.
 
@@ -122,9 +122,9 @@ state any real gap without automatically installing it.
   token allowance or force every specialist to inspect the whole repository.
 - Parallelize independent reviews of the same stable snapshot. Complete a source
   writer before starting dependent reviews. Never overlap writers in a shared
-  workspace; assign one owner for source edits, tests, and associated documentation.
+  workspace; assign 1 owner for source edits, tests, and associated documentation.
 - For feature delivery, route authorized fixes back to feature-developer after
-  reviewer findings. Re-run checks for the changed snapshot. Two correction rounds
+  reviewer findings. Re-run checks for the changed snapshot. 2 correction rounds
   are a checkpoint for reassessment, not permission to stop unfinished authorized
   work or to mark unresolved findings complete.
 - Review presets produce findings and verification gaps without source edits.

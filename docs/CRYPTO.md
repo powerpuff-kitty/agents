@@ -2,7 +2,7 @@
 
 The `crypto` pack owns onchain-analyst and `/team-crypto-review`. It depends on
 finance, science-data and core through dependency closure: 22 profiles and 12
-workflows. The full catalog has 34 profiles, 20 workflows and seven packs.
+workflows. The full catalog has 34 profiles, 20 workflows and 7 packs.
 
 ## Responsibilities and methods
 
@@ -17,7 +17,7 @@ does not provide blockchain access, an audited contract or a wallet runtime.
 | [smart-contract-review](https://github.com/powerpuff-kitty/skills/tree/main/smart-contract-review) | EVM/Solidity source/control paths, accounting, signatures, upgrades and actual deployment-match evidence. Other contract languages need their own supported method. |
 | [defi-risk-analysis](https://github.com/powerpuff-kitty/skills/tree/main/defi-risk-analysis) | Mechanism-specific collateral/liquidation, AMM/LP, liquidity/oracle/governance/dependency scenarios. |
 
-Each standalone skill includes a focused guide, report template and six unrun
+Each standalone skill includes a focused guide, report template and 6 unrun
 acceptance specifications. Install skills separately via the Skills [installation
 prompt](https://github.com/powerpuff-kitty/skills/blob/main/INSTALL.md). Missing
 skills permit bounded direct methods rather than automatic installation.
@@ -74,7 +74,7 @@ non-EVM expertise by default, financial execution or an eligibility certificatio
 Source checks, generated profiles, isolated installs, native loading and observed
 reasoning have separate evidence; acceptance specifications remain not_run.
 
-One [retained independent synthetic skill review](../evals/observed/crypto-forecast-review-2026-10-14/manifest.json)
+1 [retained independent synthetic skill review](../evals/observed/crypto-forecast-review-2026-10-14/manifest.json)
 checks chain/finality, contract counterevidence, DeFi scenarios, odds/fees, proper
 scores and settlement boundaries. Reports and exact arithmetic are retained; this
 is not a profile/host-loading evaluation or broad outcome benchmark.

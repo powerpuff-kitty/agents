@@ -1,0 +1,26 @@
+{
+  "format_version": 1,
+  "date": "2026-10-14",
+  "cases": [
+    {
+      "case_id": "implementation-dirty-worktree",
+      "verdict": "pass",
+      "review": "implementation-dirty-worktree/review.json"
+    },
+    {
+      "case_id": "focused-review-with-skills",
+      "verdict": "pass",
+      "review": "focused-review-with-skills/review.json"
+    },
+    {
+      "case_id": "geo-specialist-sampled-visibility-not-causality",
+      "verdict": "pass",
+      "review": "geo-specialist-sampled-visibility-not-causality/review.json"
+    }
+  ],
+  "canonical_specifications": 124,
+  "observed_canonical_cases": 3,
+  "unobserved_canonical_cases": 121,
+  "harness_sha256": "480648cba4d8e171b680c31011b58d81bc11fd6ed37d1817e49c49cb6978e214",
+  "scope": "explicit instruction loading; no automatic routing or host-model integration evaluation"
+}

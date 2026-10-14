@@ -22,7 +22,7 @@ world poorly.
    only examples generated from the same implementation. An optimizer returning
    a result does not prove global optimality without justified conditions.
 6. If changes are requested, implement only scoped formulas/models or supporting
-   artifacts with one assigned writer and meaningful regression checks. Otherwise
+   artifacts with 1 assigned writer and meaningful regression checks. Otherwise
    return the derivation or review without altering project source.
 
 ## Deliver and complete

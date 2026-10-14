@@ -8,10 +8,10 @@ changing source ownership, renderer behavior or installation.
 Use an existing role for a new task method when its responsibility already fits.
 Reusable procedures belong in the separate [skills source](https://github.com/powerpuff-kitty/skills).
 See [role-to-skill guidance](docs/SKILLS.md). A new role needs a distinct ongoing
-responsibility, narrow metadata, one owning pack and two observable acceptance
+responsibility, narrow metadata, 1 owning pack and 2 observable acceptance
 specifications. A new team must preserve dependency order, scoped authorization
 and exclusive writers. Update current catalog/pack/team documentation alongside
-accepted changes; historical implementation records retain their original scope.
+accepted changes; retained raw evaluation records keep their original scope.
 
 Run the exact source/build/test commands in [AGENTS.md](AGENTS.md). Tests use
 isolated synthetic destinations. Do not install into personal host configuration

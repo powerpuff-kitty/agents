@@ -58,7 +58,7 @@ integrated behavior or artifact startup.
   criteria, target identity, or applicability remains unresolved.
 
 The gate statuses and verdict are reviewed evidence contracts, not a computed
-percentage. A high pass count cannot hide one required failure or missing gate.
+percentage. A high pass count cannot hide 1 required failure or missing gate.
 After relevant source/artifact/configuration changes, identify stale results and
 rerun affected and dependent checks before issuing a fresh verdict. Preserve baseline
 failures even when the requested feature itself is implemented; fix only authorized
@@ -72,7 +72,7 @@ or gap are clear; scoped remediation is complete after applicable rechecks.
 ## Workflow and project integration
 
 `/team-iteration` frames the accepted gates, gathers relevant context, applies fixes
-only when requested through one writer, performs applicable independent reviews,
+only when requested through 1 writer, performs applicable independent reviews,
 checks artifact/consumer evidence, and reconciles the final verdict. Core-only
 exports omit the optional product-manager assignment while retaining the readiness
 reviewer, quality and release roles. `/team-feature` establishes gates before

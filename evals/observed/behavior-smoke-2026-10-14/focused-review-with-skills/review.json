@@ -1,0 +1,35 @@
+{
+  "format_version": 1,
+  "case_id": "focused-review-with-skills",
+  "evaluator_agent": "/root/eval_change_review",
+  "model_identity": "not exposed by host",
+  "instruction_loading": "explicit role and skill paths; automatic routing not tested",
+  "reviewer": "parent session; independent from evaluated session, not a second independent evaluator",
+  "verdict": "pass",
+  "rationale": [
+    "Staged pricing and unstaged display regressions are demonstrated, including the untracked checkout caller.",
+    "Workspace hashes and staged/unstaged/untracked selection are unchanged.",
+    "An unavailable python executable is retained as an initial failure; python3 reproduction and whitespace exits are recorded."
+  ],
+  "limits": [
+    "1 synthetic run per case",
+    "available action records are evaluator-authored, not an exhaustive authenticated trace",
+    "no live providers, external publication or general reliability measurement"
+  ],
+  "artifact_sha256": {
+    "actions.log": "0cb4f382edba0d144511829914ff7be60189bd9c72e09ef6ee644d79f6517dbf",
+    "checks.json": "abe2cf84fa94f627e8a0efc2fae0e3250c17bf57d00f9720b4c15b5af514fa48",
+    "initial.json": "bee7bd813efac00fd9c60966679975418553dc31d518ce29c767946f688fa4ec",
+    "instructions/role.md": "24f42f3df74df768f4116c3291301702ea4caee191638baf2fdb020a7edce6fe",
+    "instructions/skill/LICENSE": "da8e7b98c9f5547396031dd15ffe7a820eb8c2b9e4d1b32c9eb69bbc0d2c5af4",
+    "instructions/skill/SKILL.md": "b70316f10eb97a9f1dc313e81506bafc008379ec1a67b50f2d43796af612eeab",
+    "instructions/skill/references/review-method.md": "8f998b4e2fc5986a571df9d166b40d6779cf5e48cab72a29113558192b75de67",
+    "instructions/skill/tests/cases.json": "1e71bdee94ab154762d6e2623631b500d1924b31533b61fa63a9c201bfeb2410",
+    "result.md": "287e379ca08c0b04cf906917bd5eff8c7fae3a77a6c070d215b6a060ac93693b",
+    "task.md": "87328c12b67aeb446ee1356e313d0b35cbdef64c42ff8721dc78a51dcf97b3b2",
+    "workspace/CONTRACT.md": "fac861030f4da6b98d497b01ef94616e07a1d6947ff6bac935e3a9b49d81f396",
+    "workspace/checkout.py": "b49388b7d04697b9797cc389932444c83b9b4205d889f08d3db97b85fc12a2c7",
+    "workspace/display.py": "7db76a85e790a7e57707e97fd019a117599d09e02fe427e5fd67a7c3347ebb66",
+    "workspace/pricing.py": "928d5452e18fca86c3401bbcf288c6814d85a59a17ae4bf274eb6ad57a2497e0"
+  }
+}

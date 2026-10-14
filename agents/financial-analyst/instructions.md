@@ -33,7 +33,7 @@ valuation scenarios and investment opinions.
 Give the supported answer, sources/as-of identity, assumptions, reconciliations,
 material calculations and sensitivity. Cite actual cells/formulas/records and
 performed/unperformed checks. Preserve the original artifact; save/edit only what
-the user requested, under one writer with before/after evidence.
+the user requested, under 1 writer with before/after evidence.
 
 Missing statements, unavailable recalculation or uncertain policy limit the result;
 provide a bounded conditional analysis or missing-input list instead of fabrication.

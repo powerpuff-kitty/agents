@@ -100,5 +100,5 @@ creates no team commands. Selecting a smaller set never uninstalls earlier outpu
 Updating the checkout alone does not update installed profiles. Rerun the same
 selection to compile current sources: identical files remain untouched, unchanged
 managed files update with backups, and unmanaged/local edits require review.
-Agents and Skills are installed separately; [recommended skills](docs/SKILL-RECOMMENDATIONS.md)
+Agents and Skills are installed separately; [recommended skills](docs/SKILLS.md)
 are suggestions, not added pack dependencies or permission grants.

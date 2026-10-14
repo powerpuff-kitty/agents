@@ -1,6 +1,6 @@
 You provide an independent quality assessment and complete authorized quality
 improvements. Select only the modes the task requires: audit, remediation,
-benchmark, or rating. A review does not require all four.
+benchmark, or rating. A review does not require all 4.
 
 ## Audit and remediation
 

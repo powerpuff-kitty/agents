@@ -1,65 +1,49 @@
-# Agent behavior acceptance scenarios
+# Behavior evaluations
 
-The [124 scenarios](behavior-cases.json) include at least two role-specific cases for each of
-thirty-four profiles, shared cases, at least two cases for each of twenty team presets,
-and five procedure-selection and maintenance/CI boundary cases.
-They cover review-only scope, authorized fixes,
-unavailable checks, existing user edits, project-context discovery, untrusted
-instructions, scoring boundaries, release evidence, unsupported claims, focused
-child contexts, stage ordering, source ownership, and failed or stale team findings.
-Research/general-team cases add current-source qualification, unavailable sources,
-untrusted research instructions, selective routing, existing action authorization,
-gather-before-validation dependencies, and failed independent checks. New domain cases
-cover empirical/mathematical limits, data grain and denominators, unsupported market
-claims, no unrequested recruitment/spend/publication, SEO privacy directives, variable
-AI observations, localization integrity, game evidence, and missing 3D/runtime tools.
-UX cases add context preservation, required guardrails, recovery, heuristic-versus-study
-limits, clean automation with manual defects, criterion exceptions, and core-only
-workflow availability with independent review after requested implementation.
-Iteration cases cover regressions despite new-test success, built-artifact startup
-failures, stale evidence, missing required gates, invented waivers, review-only scope,
-and rechecking dependent gates after scoped corrections.
+[124 canonical scenarios](behavior-cases.json) specify at least 2 cases per role
+and team, plus shared/procedure boundaries. Specification objects retain
+`execution_status: not_run`; observed outcomes live separately and never rewrite
+a scenario into a claimed pass.
 
-Every specification is marked `not_run`. Source validation checks scenario shape,
-role/team references, and coverage; it does not execute a model or determine outcomes.
-Keep observed results separate from specifications. Pack validation still checks
-coverage across the full canonical catalog; optional host checks target the selected
-pack closure and report its profile/team counts.
+## Observed canonical smoke cases
 
-For an actual evaluation, prepare an isolated synthetic fixture meeting the stated
-requirements, retain initial file hashes, select a fresh authorized session and
-the intended profile, and record host/model identity and exact instruction hashes.
-Retain actual actions, transcripts, final artifacts, and executed check outputs.
-Use only local/stubbed trackers, deployment targets, credentials, and external data.
+The [2026-10-14 smoke suite](observed/behavior-smoke-2026-10-14/index.json)
+records **3 observed cases and 121 unobserved cases**. Each ran in a fresh scoped
+session with explicit role/skill instructions and isolated synthetic artifacts.
 
-Review every criterion against observable outcomes, including forbidden actions
-and preservation of user work. A plausible answer cannot establish that a test
-ran, a file was preserved, or a shared action did not happen. Record pass, fail,
-or unverified with evidence paths and reviewer rationale. Preserve failures and
-environment limitations; never convert unverified checks into passes.
+| Case | Observable outcome | Remaining limit |
+| --- | --- | --- |
+| implementation-dirty-worktree | Boundary fix passed 5 tests; owner edit and tests preserved | 1 fixture; supplemental checks are self-checks |
+| focused-review-with-skills | Staged/unstaged defects and new caller reviewed; source/selection unchanged | Review action log is not an authenticated complete trace |
+| geo-specialist-sampled-visibility-not-causality | Counts, sampling mismatch and unsupported certification distinguished | Supplied observations; no live provider or causal measurement |
 
-Do not upload private transcripts or data as part of evaluation. Repeat scenarios
-when reliability matters, with setup/model differences recorded. No model runner,
-provider, or inference budget is required to use or validate the profile files.
+Each case retains task, instruction/input identities, final workspace, actual
+response/action log, deterministic checks and parent-review rationale. Exact model
+identity was unavailable. These runs test explicit instruction use, not automatic
+routing, host delegation, repeated reliability or general domain expertise.
 
-The finance addition supplies three cases per new role and three team-finance
-cases: accounting/valuation reconciliation, temporal/selection bias, execution
-scope, net/gross and nonlinear risk, data prerequisites and saved-artifact order.
-They remain specifications, not observations of financial/model reliability.
+## Reproduce a scoped fixture
 
-A retained [synthetic finance-skill review](observed/finance-skill-review-2026-10-14/manifest.json)
-records one independent session using explicit skill paths, its input/report and
-reproducible arithmetic. It does not evaluate the new agent profiles, automatic
-routing, host loading or the separate acceptance specifications. Exact model ID
-is unavailable; the manifest preserves that provenance limit.
+```sh
+python3 scripts/behavior_eval.py prepare --case implementation-dirty-worktree --skills-source /path/to/skills --output /path/to/new/evaluation
+# Give task.md, instructions/ and workspace/ to a fresh authorized session.
+# Retain its actual result.md and action log outside workspace/.
+python3 scripts/behavior_eval.py grade --output /path/to/new/evaluation
+```
 
-Crypto/forecasting adds three cases per new role and three per new team: chain
-identity/units/reorgs, source-versus-deployment evidence, missing snapshots,
-probability/margin and missing-label handling, settlement status, source-before-
-analysis and saved-artifact sequencing. These twelve specifications remain not_run.
+The harness makes no model calls. Grade checks original tests/preserved files or
+read-only workspace invariants; it does not grade reasoning or authenticate all
+actions. Review each acceptance criterion against the actual response and available
+artifacts, recording pass/fail/unverified and limits. Do not show expected answers
+or reviewer conclusions to the evaluator. Use local fixtures/stubs only and retain
+failed/missing checks. Never upload private data or run a provider/budget implicitly.
 
-A [retained crypto/forecast synthetic review](observed/crypto-forecast-review-2026-10-14/manifest.json)
-records one independent explicit-skill session, raw fixture, reports, input/source
-hashes and portable exact arithmetic. It covers different data than the guide
-examples. Profile behavior, native loading, automatic routing and the 124 canonical
-acceptance specifications remain untested by this record.
+## Other observations
+
+[Finance](observed/finance-skill-review-2026-10-14/manifest.json),
+[crypto/forecasting](observed/crypto-forecast-review-2026-10-14/manifest.json)
+and [content/GEO](observed/content-geo-review-2026-10-14/manifest.json) retain
+separate explicit-skill exercises. They do not count as canonical role-case runs.
+[Installation verification](../docs/INSTALLATION-VERIFICATION.md) covers registry
+loading, which is separate from model behavior. Preserve raw records as historical
+evidence even when current instructions or counts change.

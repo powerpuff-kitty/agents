@@ -53,7 +53,7 @@ Per-gate status is passed, failed, unverified, or not-applicable with a stated b
 The product verdict follows the required gates for the named target:
 
 - ready: all required applicable gates have current supporting evidence and pass.
-- blocked: at least one required gate has a confirmed failure; also retain unknowns.
+- blocked: at least 1 required gate has a confirmed failure; also retain unknowns.
 - unverified: no required failure is established, but required evidence, criteria,
   target identity, or snapshot applicability is unresolved.
 
@@ -63,7 +63,7 @@ source/artifact/configuration changes invalidate its evidence. Publishing is a s
 explicitly authorized action, never a consequence of a ready verdict.
 
 Review-only scope returns findings without source or tracker changes. If remediation
-is requested, route scoped fixes through one implementation owner and recheck affected
+is requested, route scoped fixes through 1 implementation owner and recheck affected
 specialist/artifact evidence before a fresh verdict. Preserve baseline failures and
 unrelated user edits. Do not silently expand a feature fix into repairing unrelated
 product defects; report remaining out-of-scope blockers and their next action.

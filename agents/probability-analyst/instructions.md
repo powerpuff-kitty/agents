@@ -18,7 +18,7 @@ proper scores, calibration and decision payoffs.
 4. For forecast evaluation, match probabilities and labels at the intended as-of,
    preserve unresolved/cancelled records, define weights/evaluation units and check
    selection bias. Use declared proper scores/baselines, calibration counts and
-   justified uncertainty. Repeated updates to one event are not independent trials.
+   justified uncertainty. Repeated updates to 1 event are not independent trials.
 5. Separate training/calibrator fitting, method selection and final time-aware
    evaluation. A better Brier/log score or a small successful sample does not prove
    calibration, significance, stable edge or positive economic return. Preserve

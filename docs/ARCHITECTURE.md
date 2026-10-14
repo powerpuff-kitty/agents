@@ -1,7 +1,7 @@
 # Source and adapter architecture
 
-Each agent has one portable metadata file and one specialist instruction file.
-The shared operating contract has one canonical file. A renderer composes those
+Each agent has 1 portable metadata file and 1 specialist instruction file.
+The shared operating contract has 1 canonical file. A renderer composes those
 inputs with host-specific guidance and emits a complete profile. Generated files
 are disposable outputs rather than independent sources.
 
@@ -44,7 +44,7 @@ they are not an automatic classifier, sandbox, or deterministic task executor.
 
 `packs/<id>.json` owns membership, not duplicate instructions. Its version 1
 fields are ID/title/description, required pack IDs, and agent/team ID lists.
-Each role and team has exactly one owning pack and the pack catalog covers all
+Each role and team has exactly 1 owning pack and the pack catalog covers all
 sources. Validation rejects unknown references, duplicate ownership, dependency
 cycles, and fixed workflows whose members cannot resolve through dependencies.
 

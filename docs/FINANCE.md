@@ -1,8 +1,8 @@
 # Financial research and risk
 
-The finance pack adds three profiles and `/team-finance`. It depends on science-data,
+The finance pack adds 3 profiles and `/team-finance`. It depends on science-data,
 which depends on core, so a finance export contains 21 profiles and 11 workflows.
-The full catalog contains 34 profiles, 20 workflows and seven packs. These counts
+The full catalog contains 34 profiles, 20 workflows and 7 packs. These counts
 refer to rendered sources, not observed model outcomes or live financial services.
 
 ## Responsibilities
@@ -64,7 +64,7 @@ contract and do not represent observed model behavior.
 Request: “Review this USD-thousands cash and project valuation model without editing.”
 Inputs: cash begins at 20, operating cash flow 15, investing -5, financing -2,
 no FX/other; model displays ending cash 30. Project cash flows are 110 and 121 at
-years one and two, with annual end-of-year rate 10% and time-zero outflow 180.
+years 1 and 2, with annual end-of-year rate 10% and time-zero outflow 180.
 
 Expected result: cash should be 28, leaving a residual of 2. Future cash-flow PV
 is 200 and project NPV is 20, assuming no terminal value. The report cites the
@@ -106,7 +106,7 @@ liquidity, funding and missing positions may require a different method.
 financial/quantitative/risk analysis, then independently checks completed claims.
 The financial analyst reconciles the answer. Only an explicitly requested persisted
 artifact enters the single-writer stage; its actual saved content is checked after
-writing. Domain analyses run only when relevant, within the three-way concurrency
+writing. Domain analyses run only when relevant, within the 3-way concurrency
 limit. Parallel reviews do not edit shared source.
 
 A review without enough data returns missing inputs and a bounded method. Historical
@@ -119,7 +119,7 @@ Source validation, deterministic exports and isolated installer tests do not pro
 host loading or financial decision quality. The new role/team and skill acceptance
 cases remain `not_run` until actual evaluated sessions and artifacts are retained.
 
-One [retained independent synthetic skill review](../evals/observed/finance-skill-review-2026-10-14/manifest.json)
+1 [retained independent synthetic skill review](../evals/observed/finance-skill-review-2026-10-14/manifest.json)
 checked different cash/valuation/fee/compounding records and timing/selection
 claims. Its report and arithmetic are retained; it is not an evaluation of these
 agent profiles, automatic routing, actual host loading or general reliability.

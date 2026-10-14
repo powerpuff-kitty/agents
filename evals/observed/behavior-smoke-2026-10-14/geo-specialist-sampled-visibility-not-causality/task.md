@@ -1,0 +1,1 @@
+Compare these retained AI-answer observations before and after our content update using the supplied GEO role and skill. Work offline from observations.json; do not fetch URLs or upload files. Provide metrics, evidence limitations and a next measurement plan. Write no source files; put your result outside workspace.

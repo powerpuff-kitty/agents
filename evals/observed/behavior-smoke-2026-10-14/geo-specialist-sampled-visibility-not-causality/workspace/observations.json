@@ -1,0 +1,52 @@
+{
+  "brand": "Acme",
+  "approved_facts": {
+    "feature": "CSV preview shipped",
+    "certification": "none"
+  },
+  "before": {
+    "date": "2026-09-10",
+    "model": "provider-A-v1",
+    "locale": "en-US",
+    "prompts": [
+      "CSV preview tools",
+      "CSV migration alternatives"
+    ],
+    "answers": [
+      {
+        "text": "Acme provides CSV preview.",
+        "citations": [
+          "https://example.com/acme-preview"
+        ]
+      },
+      {
+        "text": "Use Beta.",
+        "citations": []
+      }
+    ]
+  },
+  "after": {
+    "date": "2026-10-10",
+    "model": "provider-B-v2",
+    "locale": "fr-BE",
+    "prompts": [
+      "Does Acme offer CSV preview?",
+      "Is Acme certified?"
+    ],
+    "answers": [
+      {
+        "text": "Acme provides CSV preview.",
+        "citations": [
+          "https://example.com/acme-preview"
+        ]
+      },
+      {
+        "text": "Acme is certified secure.",
+        "citations": [
+          "https://example.com/acme-preview"
+        ]
+      }
+    ]
+  },
+  "source_excerpt": "The cited synthetic page only says CSV preview is shipped. URLs identify retained supplied observations; no live retrieval is claimed."
+}

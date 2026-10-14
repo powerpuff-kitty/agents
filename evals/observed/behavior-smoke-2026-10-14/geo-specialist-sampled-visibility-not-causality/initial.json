@@ -1,0 +1,21 @@
+{
+  "format_version": 1,
+  "case_id": "geo-specialist-sampled-visibility-not-causality",
+  "role": "geo-specialist",
+  "skill": "geo-measurement",
+  "workspace_sha256": {
+    "observations.json": "fd0287fa6a1729a7e2d296667ac45ed4db4fc59ba1246eb23bc7312023391e82"
+  },
+  "instruction_sha256": {
+    "role.md": "b8c8c1fa9c338360291eafaf1e1802b3379c14028f6ffe08de06ec4b33c06680",
+    "skill/LICENSE": "da8e7b98c9f5547396031dd15ffe7a820eb8c2b9e4d1b32c9eb69bbc0d2c5af4",
+    "skill/SKILL.md": "f024c5e9a3c8ab8d942fa85f8be1d2d16a405adbd306826f7cb042ebba703c7c",
+    "skill/assets/report-template.md": "8973e36f3e18658334daa6b9c34e625ccb4b0aefb7581f27ba210e0a73bd9e42",
+    "skill/references/method.md": "0199cfbe427009d57ddafe67d29b10edc2367e050d553765ee5a8caeb4d6ceea",
+    "skill/tests/cases.json": "211c711bae2ca7b5a5adaa49ffacacb614cc81c1ed0e6fd6cf87648aecd7fe50"
+  },
+  "task_sha256": "bb4cc3ae798062a92ae7051c6c2c6feebdbbc1fea35cfa59e0bcaa3ffa341caf",
+  "source_revision": "848962e0fab950782ee7757e57e0851dae8508ea",
+  "source_note": "instruction hashes include working-tree changes",
+  "initial_git_status": null
+}

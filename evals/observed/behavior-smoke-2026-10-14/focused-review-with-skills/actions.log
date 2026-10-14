@@ -1,0 +1,120 @@
+Working directories: /private/tmp/behavior-review and its workspace child.
+All commands were local. Results below are actual tool results, condensed only for repeated source listings.
+
+1. Command (cwd /private/tmp/behavior-review):
+cat /private/tmp/behavior-review/task.md /private/tmp/behavior-review/instructions/role.md /private/tmp/behavior-review/instructions/skill/SKILL.md
+Exit 0. Read task (complete pending read-only review; Python -B; no network), supplied quality role, and change-review procedure.
+
+2. Command (cwd workspace):
+pwd && rg --files -g '!initial.json' -g '!grader*' -g '!**/.git/**' . && git status --short && git rev-parse HEAD && git diff --stat && git diff --cached --stat
+Exit 0.
+Output:
+/private/tmp/behavior-review/workspace
+./pricing.py
+./checkout.py
+./display.py
+./CONTRACT.md
+ M display.py
+M  pricing.py
+?? checkout.py
+2cf1fb372f674b06c63f039487b09662610d6085
+ display.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ pricing.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+3. Command (cwd /private/tmp/behavior-review):
+cat /private/tmp/behavior-review/instructions/skill/references/review-method.md
+Exit 0. Read comparison/evidence guidance, including inclusion of pending/new files and concretely reachable impact.
+
+4. Command (cwd workspace):
+for f in CONTRACT.md pricing.py display.py checkout.py; do nl -ba "$f"; done
+ git diff HEAD -- pricing.py display.py
+ git show HEAD:pricing.py
+ git show HEAD:display.py
+ git ls-tree -r --name-only HEAD
+Exit 0.
+Files read in full:
+CONTRACT.md:1 quote receives dollars and discount percentage points, e.g. 10 means 10%. dollars receives dollars. Checkout uses these contracts. Review staged, unstaged and relevant new files.
+pricing.py:1 def quote(quantity, unit_price, discount_percent=0):
+pricing.py:2     return quantity * unit_price - discount_percent
+display.py:1 def dollars(value):
+display.py:2     return f"${value / 100:.2f}"
+checkout.py:1 from pricing import quote
+checkout.py:2 from display import dollars
+checkout.py:3 def checkout():
+checkout.py:4     return dollars(quote(2, 50, discount_percent=10))
+HEAD pricing.py line 2: return quantity * unit_price * (1 - discount_percent / 100)
+HEAD display.py line 2: return f"${value:.2f}"
+Diff confirms exactly these two changed return lines.
+HEAD tree: CONTRACT.md, display.py, pricing.py.
+
+5. Command: attempted the Python script in item 7 below using python -B in place of python3 -B.
+Exit 127. Output: zsh:1: command not found: python
+No test code ran.
+
+6. Command (cwd workspace):
+git status --short && git diff --check && git diff --cached --check && rg --files --hidden -g '!.git/**'
+Exit 0. Both whitespace checks emitted no errors.
+Output:
+ M display.py
+M  pricing.py
+?? checkout.py
+pricing.py
+checkout.py
+display.py
+CONTRACT.md
+
+7. Command (cwd workspace):
+python3 -B - <<'PY'
+import subprocess
+from pricing import quote
+from display import dollars
+from checkout import checkout
+baseline = {}
+for name in ('pricing.py', 'display.py'):
+    source = subprocess.check_output(['git', 'show', f'HEAD:{name}'], text=True)
+    exec(compile(source, f'HEAD:{name}', 'exec'), baseline)
+cases = [
+    ('quote(2, 30, discount_percent=10)', lambda q, d: q(2, 30, discount_percent=10), 54.0),
+    ('quote(2, 50, discount_percent=10)', lambda q, d: q(2, 50, discount_percent=10), 90.0),
+    ('dollars(90)', lambda q, d: d(90), '$90.00'),
+    ('dollars(0)', lambda q, d: d(0), '$0.00'),
+    ('checkout()', lambda q, d: d(q(2, 50, discount_percent=10)), '$90.00'),
+]
+failed = 0
+for label, fn, expected in cases:
+    before = fn(baseline['quote'], baseline['dollars'])
+    after = fn(quote, dollars)
+    passed = after == expected
+    failed += not passed
+    print(f'{label}: expected={expected!r}, HEAD={before!r}, pending={after!r}, {"PASS" if passed else "FAIL"}')
+print(f'actual new checkout(): {checkout()!r}')
+print(f'{failed} of {len(cases)} pending checks failed; HEAD passed all: {all(fn(baseline["quote"], baseline["dollars"]) == expected for _, fn, expected in cases)}')
+raise SystemExit(bool(failed))
+PY
+Exit 1 (expected failure signal from contract violations).
+Output:
+quote(2, 30, discount_percent=10): expected=54.0, HEAD=54.0, pending=50, FAIL
+quote(2, 50, discount_percent=10): expected=90.0, HEAD=90.0, pending=90, PASS
+dollars(90): expected='$90.00', HEAD='$90.00', pending='$0.90', FAIL
+dollars(0): expected='$0.00', HEAD='$0.00', pending='$0.00', PASS
+checkout(): expected='$90.00', HEAD='$90.00', pending='$0.90', FAIL
+actual new checkout(): '$0.90'
+3 of 5 pending checks failed; HEAD passed all: True
+
+8. Wrote only /private/tmp/behavior-review/result.md and /private/tmp/behavior-review/actions.log with shell heredocs. No workspace edits. Report records two confirmed P2 defects and test/tooling limits.
+Write command exit: 0.
+
+9. Final verification command (cwd workspace):
+git status --short && rg --files --hidden -g '!.git/**'
+Exit 0.
+Output:
+ M display.py
+M  pricing.py
+?? checkout.py
+pricing.py
+checkout.py
+display.py
+CONTRACT.md
+The workspace pending state is unchanged and no bytecode files appeared.

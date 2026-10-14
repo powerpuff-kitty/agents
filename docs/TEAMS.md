@@ -9,8 +9,8 @@ These are reusable workflow instructions, not a new runtime or a multi-select UI
 | --- | --- | --- |
 | `/team <task>` | Derived from the request | Select the smallest useful set of available specialists, with conditional research/review, serialized implementation, verification, and explicitly authorized actions |
 | `/team-research <question>` | Research/review only | Researcher gathers cited evidence, then evidence-validator and applicable domain specialists assess it; team-lead reconciles the answer |
-| `/team-audit <scope>` | Review only | Project-auditor scopes accepted work, researcher gathers references when needed, then eight core specialists review bounded domains; team-lead consolidates results |
-| `/team-feature <feature>` | Implement the described feature | Establish accepted Definition of Done, frame relevant domains, implement with one writer, independently verify, check applicable artifact evidence, then assess integrated readiness |
+| `/team-audit <scope>` | Review only | Project-auditor scopes accepted work, researcher gathers references when needed, then 8 core specialists review bounded domains; team-lead consolidates results |
+| `/team-feature <feature>` | Implement the described feature | Establish accepted Definition of Done, frame relevant domains, implement with 1 writer, independently verify, check applicable artifact evidence, then assess integrated readiness |
 | `/team-ui <screens or journey>` | Review only | Designer establishes coverage, UX-designer maps relevant journeys, then quality, usability, accessibility, evidence, and applicable performance reviews follow |
 | `/team-ux <task or journey>` | Derived from the request | Frame task scope, use available user evidence, assess/design journeys, align UI/copy/access, implement only requested changes, then independently check and reconcile |
 | `/team-release <target>` | Readiness review | Release-engineer establishes gates, specialists assess applicable evidence, and release-engineer reconciles the readiness matrix |
@@ -41,7 +41,7 @@ Use `/team` when the work does not fit a fixed preset. Team-lead inspects availa
 role descriptions and project context, selects relevant specialists, and explains
 the brief plan. It can use additional registered project specialists within the
 same scope and limits; it cannot invent roles or recursively invoke other teams.
-A small task can use one specialist or feasible coordinator checks.
+A small task can use 1 specialist or feasible coordinator checks.
 
 The general preset's roster is conditional. Research goes to researcher, claim
 checking to evidence-validator, structural decisions to system-architect, UI work
@@ -65,7 +65,7 @@ search/AI metrics are not measured visibility. Each workflow preserves those lim
 
 The request determines whether source changes are authorized. A research or audit
 question does not become an implementation task merely because a writer is listed.
-Requested changes run with one source writer at a time, then applicable checks.
+Requested changes run with 1 source writer at a time, then applicable checks.
 Requested release preparation has a separate serialized writer stage; explicitly
 authorized commit/push, release operations, and tracker updates occur sequentially
 after their prerequisites pass. Existing authorization persists.
@@ -73,7 +73,7 @@ after their prerequisites pass. Existing authorization persists.
 Use `/team-research` for technical comparisons, product/market questions, data
 research, or decision evidence. It first gathers an evidence packet, then checks
 citations, freshness, calculations, uncertainty, and relevant domain implications.
-Domain review is conditional. Researcher is one broad role, complemented by existing
+Domain review is conditional. Researcher is 1 broad role, complemented by existing
 specialists rather than duplicated into narrow research profiles. Browsing and
 source access depend on the host; unavailable evidence stays explicit. Research
 answers distinguish facts, vendor assertions, observations, and inference, and
@@ -89,7 +89,7 @@ recognition, feedback, confusion, repeated work, dead ends, and guardrails.
 Accessibility-specialist checks relevant semantics, keyboard/focus, assistive use,
 and declared criteria with actual evidence.
 
-All three specialist roles and the workflow belong to core. User-researcher,
+All 3 specialist roles and the workflow belong to core. User-researcher,
 data-analyst, and copywriter are conditional candidates from other packs; filtered
 exports skip absent roles and empty evidence stages. Available evidence precedes
 journey conclusions, completed flow specifications precede UI/copy alignment, and
@@ -113,7 +113,7 @@ and actual evidence rather than an aggregate guess.
 Iteration-reviewer owns integrated-product Definition of Done assessment;
 release-engineer owns technical artifact/consumer evidence and authorized delivery.
 `/team-iteration` assesses a named increment and target, with conditional remediation
-through one writer followed by applicable independent and artifact checks. It works
+through 1 writer followed by applicable independent and artifact checks. It works
 in core-only exports and omits the optional product-manager candidate when absent.
 
 `/team-feature` establishes applicable gates before writing and closes with a
@@ -142,7 +142,7 @@ It owns a stage/member status record and the final result. Specialists do not
 recursively launch other coordinators or additional unassigned workers.
 
 Independent reviews of a stable snapshot may run concurrently, with a requested
-maximum of three active assignments and any lower host/user limit respected.
+maximum of 3 active assignments and any lower host/user limit respected.
 Writers complete before dependent reviews. Corrections return to the implementation
 owner, then affected checks run against the changed snapshot. Review assignments
 do not mutate source or shared trackers merely because a fix was identified.
@@ -165,7 +165,7 @@ python3 scripts/install.py --tool opencode
 python3 scripts/validate.py --opencode ~/.opencode/bin/opencode
 ```
 
-The installer writes twenty-nine profiles and seventeen commands by default.
+The installer writes 34 profiles and 20 commands by default.
 Use repeatable `--pack` options for a smaller dependency-complete set. Team-lead is a
 primary profile, while specialists retain both primary and child eligibility.
 Command frontmatter selects team-lead and uses `subagent: false`, keeping the
@@ -190,13 +190,13 @@ serially and must label them coordinator-performed rather than independent runs.
 The command registry verifies that the host discovers the slash commands; source
 and rendering tests verify their coordinator, scope placeholder, and parent-session
 mapping. No actual end-to-end model team run is established by these checks.
-The 124 behavioral scenarios remain unrun until evaluated sessions and artifacts
-are retained. Parallel limits and review-only rules are prompt contracts rather
+The [evaluation index](../evals/README.md) separates 3 observed smoke cases
+from the remaining 121 unobserved specifications. Parallel limits and review-only rules are prompt contracts rather
 than runtime-enforced semaphores or read-only permissions.
 
 ## Financial research and risk
 
-[Finance](FINANCE.md) documents `/team-finance`, the three role boundaries,
+[Finance](FINANCE.md) documents `/team-finance`, the 3 role boundaries,
 worked synthetic calculations and pack installation. Data/provenance review
 precedes dependent domain analysis; independent checks follow completed results.
 Only a requested saved artifact uses the sole writer, followed by artifact review.
@@ -205,7 +205,7 @@ activate bots, connect wallets or place bets.
 
 ## Crypto and event forecasts
 
-[Crypto](CRYPTO.md) and [forecasting](FORECASTING.md) document the two optional
+[Crypto](CRYPTO.md) and [forecasting](FORECASTING.md) document the 2 optional
 teams, role boundaries and examples. The forecast team gathers needed external
 rule evidence before dependent analysis. Both teams check data/definitions first,
 independently check completed conclusions, serialize the requested artifact writer

@@ -7,9 +7,9 @@ truth or an autonomous agent runtime.
   The shared operating contract lives in `shared/operating-contract.md`.
 - Portable team assignments and stage/completion policies live in `teams/*.json`.
   Keep host macros, command syntax, and coordinator mode mappings in adapters.
-  Preserve sequential dependencies, one source writer, conditional review reasons,
+  Preserve sequential dependencies, 1 source writer, conditional review reasons,
   and the distinction between workflow instructions and an enforced scheduler.
-- Pack membership and dependencies live in `packs/*.json`. Keep one owner per
+- Pack membership and dependencies live in `packs/*.json`. Keep 1 owner per
   role/team, cover the full catalog, and validate dependency closure. Adaptive
   team candidates may be omitted from a pack export when their role is unavailable;
   fixed workflows must resolve all members. Individual --agent selection adds only
@@ -39,6 +39,7 @@ Before completing a change, run:
 
 ```sh
 python3 scripts/validate.py
+python3 scripts/check_docs.py
 python3 scripts/build.py --adapter portable
 python3 scripts/build.py --adapter opencode
 python3 scripts/build.py --adapter portable --check

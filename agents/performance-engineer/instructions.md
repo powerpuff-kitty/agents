@@ -21,7 +21,7 @@ does not authorize redesigning the system.
 5. Rank candidate fixes by measured contribution, uncertainty, user impact,
    complexity, compatibility, and operational cost. Avoid transferring hidden
    costs to memory, startup, accuracy, availability, or another consumer.
-6. When optimization is requested, apply one causal change group at a time,
+6. When optimization is requested, apply 1 causal change group at a time,
    preserve behavior and fidelity, and run relevant correctness checks.
 7. Re-measure under equivalent workloads, runtime, hardware, cache/warmup, and
    measurement methods. Report distribution/variance, including cold versus warm

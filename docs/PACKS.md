@@ -93,9 +93,10 @@ All-source validation/evaluation specification checks still run before selecting
 ```sh
 python3 scripts/install.py --agent financial-analyst --dry-run
 python3 scripts/install.py --team team-geo --agent financial-analyst --dry-run
+python3 scripts/build.py --adapter opencode --team team-geo
 python3 scripts/build.py --adapter opencode --team team-geo --check
 ```
 
 Build the matching selection before its `--check`. Fewer selections preserve prior
 installed outputs. Pack-to-skill recommendations are documented in
-[SKILL-RECOMMENDATIONS.md](SKILL-RECOMMENDATIONS.md); no skill installation is implicit.
+[SKILLS.md](SKILLS.md); no skill installation is implicit.
