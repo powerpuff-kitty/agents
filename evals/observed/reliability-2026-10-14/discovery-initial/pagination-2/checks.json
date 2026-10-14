@@ -1,0 +1,25 @@
+{
+  "format_version": 1,
+  "case_id": "implementation-dirty-worktree",
+  "deterministic_checks": {
+    "boundary_tests": true,
+    "owner_label_preserved": true,
+    "tests_preserved": true,
+    "instructions_unchanged": true
+  },
+  "commands": [
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "-m",
+        "unittest",
+        "-v"
+      ],
+      "exit": 0,
+      "log": "verification.log"
+    }
+  ],
+  "review_verdict": "unverified",
+  "review_note": "Artifact invariants do not grade reasoning or authenticate all actions. Review actual retained response and available action evidence separately."
+}

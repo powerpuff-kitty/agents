@@ -1,0 +1,11 @@
+{
+  "skills_commit": "2c3c4d482e2cddf3da1c81d6c90da6ba0193f985",
+  "agents_base_commit": "2f66c70a6ba794f155f9264464227d06b4785607",
+  "working_tree_inputs_sha256": {
+    "scripts/behavior_eval.py": "8f81be97ecfeb1bbae7467284e353f048fd98d7af78a7094d783e7fb47fd6683",
+    "shared/operating-contract.md": "2d629172285cf6fbe0397911188a780f56960f0bbead8e3b753338c938a4fb7e",
+    "agents/security-auditor/instructions.md": "de2766cf7e3d7e4ab59d671ff31feca656a624bc23e19abd507979f9e70cb661",
+    "evals/behavior-cases.json": "e806d7cc809abf11ede15f216fa4f7d61cd4382284c3ff7833053a0528d5bee2"
+  },
+  "note": "Agent base commit predates pending changes; exact file hashes and individual initial manifests define the observed inputs."
+}

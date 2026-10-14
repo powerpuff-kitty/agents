@@ -46,6 +46,9 @@ request delegation within the actual task scope.
 Reusable procedures live in [Skills](https://github.com/powerpuff-kitty/ai-skills).
 [Role-to-skill guidance](docs/SKILLS.md) explains optional domains and installation;
 installing profiles does not install skills or change their permissions.
+[Distribution choices](docs/DISTRIBUTION.md) explains Git/native installation and npm.
+[Reflection, memory and agent security](docs/RELIABILITY-METHODS.md) adds focused
+methods under existing ownership.
 [Product methods](docs/PRODUCT-METHODS.md) covers analytics, experiments, competitor
 watching, native apps, participant research and market sizing under existing roles.
 

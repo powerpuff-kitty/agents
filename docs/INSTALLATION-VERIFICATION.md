@@ -1,7 +1,7 @@
 # Installation and task verification
 
 Observed 2026-10-14 with OpenCode v2.0.27. A disposable Git project and private
-persistent server registered **59 native skills, 35 agent prompts and 20 team
+persistent server registered **62 native skills, 35 agent prompts and 20 team
 commands**. Skill paths and Markdown bodies and complete agent prompt bodies
 matched their source exports. Team command names were present. No model call,
 account change or existing host configuration write occurred.
@@ -20,9 +20,9 @@ python3 scripts/build.py --adapter opencode
 python3 scripts/opencode_skill_probe.py --opencode /absolute/path/to/opencode --agents-export /path/to/agents/dist/opencode
 ```
 
-The latest [native registry evidence](../evals/observed/product-methods-2026-10-14/native-host.json)
-and [source identities](../evals/observed/product-methods-2026-10-14/source-inputs.json)
-identify the product-method run. Earlier [design-extraction evidence](../evals/observed/design-extraction-2026-10-14/native-host.json)
+The latest [native registry evidence](../evals/observed/reliability-2026-10-14/native-host.json)
+and [source identities](../evals/observed/reliability-2026-10-14/source-inputs.json)
+identify the reliability-method run. Earlier [design-extraction evidence](../evals/observed/design-extraction-2026-10-14/native-host.json)
 remains historical. This verifies registered content, not model adherence,
 team scheduling or all host versions. The native-host CI job fetches the exact integrity-pinned OpenCode 2.0.27 package
 and checks current source exports plus a pinned Skills snapshot without model calls.
@@ -46,6 +46,6 @@ unsupported certification and noncausal comparisons were distinguished.
 [The manifest](../evals/observed/content-geo-review-2026-10-14/manifest.json)
 records source/artifact hashes and scope. This is 1 supplied-evidence task,
 not live SEO/GEO performance or execution of canonical acceptance cases. The canonical specification objects retain `not_run`;
-[observed role smoke cases](../evals/README.md) now cover 3 of 141 cases.
+[observed role smoke cases](../evals/README.md) now cover 6 of 144 cases.
 Skill case specifications remain separate from these observed role outcomes. Earlier finance and crypto/forecast
 observed tasks remain separate evidence in `evals/observed/`.

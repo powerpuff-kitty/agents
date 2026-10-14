@@ -1,0 +1,18 @@
+# Independent review of four catalog-selected outcomes
+
+All four completed outcomes satisfy their scoped functional deliverable on the reviewed synthetic snapshots. No actionable outcome correctness or user-work-preservation defect was established. One disclosed process breadth limitation remains in review-2: it mechanically hashed unselected instruction bytes, which is unnecessary for the focused task but does not establish a forbidden-source read.
+
+| Outcome | Independent result | Preservation |
+| --- | --- | --- |
+| pagination-1 | Correct two-line boundary fix; final and original suites pass 5/5. Original HEAD reproduces two boundary failures. | Owner label and original test bytes match initial manifest; only intended implementation bytes differ. |
+| pagination-2 | Same correct fix; final suite passes 8/8 and original suite 5/5. Added tests preserve original assertions and exercise public behavior. Original HEAD reproduces two boundary failures. | Owner label matches initial manifest; only intended implementation and test bytes differ. |
+| review-1 | Both P2 findings confirmed: percentage subtraction and dollar scaling violate explicit units, including the new caller. | All four source/contract bytes and pending status match initial manifest. |
+| review-2 | Both findings confirmed; five exact comparison cases reproduce 1 passing / 4 failing, expected exit 1. P1 is a priority judgment without a supplied project severity rubric. | All four source/contract bytes and pending status match initial manifest. |
+
+Each pagination implementation also passed 574 length/positive-size combinations plus three invalid-size cases in independent local checks. Both review callers expose the formatter defect, while the $100 subtotal hides the percentage defect as the outcomes explain. Baseline counterchecks confirm the changed expressions introduced the two regressions.
+
+Instruction selections are relevant: implementation/debug/test roles and procedures for pagination, quality audit/change-review for pending reviews, and structured-reflection for meaningful failures/findings under the shared operating contract. Catalog, tasks and selected source hashes match initial records. Reported selection/loading and historical commands remain reported artifacts rather than authenticated execution traces. The original failed command attempts are not certified as observed history.
+
+Per-case reviewed-sha256.json, initial-manifest-comparison.json, originals-unchanged.json and independent-checks.json retain exact reviewed identities, new commands, outputs and exit codes. Isolated workspace copies and selected source copies are retained alongside them. Original findings are retained separately in original-findings-first-three.md and original-findings-review-2.md; this combined report does not replace those observations. request.md preserves the review request and context boundary. reproduce_completed.py and reproduce_review_2.py retain the local reproduction code.
+
+This is a separately delegated review with inherited parent conversation, not a certified history-free session or authenticated host/model trace. No authoring/grading scripts, other independent reviews, author hypotheses or unrelated receiving-project instructions were read. Originals were read-only and hashes rechecked unchanged. No network, packages, providers, accounts, production changes or delegation occurred. Local arithmetic/pagination checks do not establish exhaustive input behavior, builds, browser, dependency, production, universal model compatibility or causal benefit from the catalog instructions. All four were reviewed; the earlier review-2 pending state was neither passed nor failed and remains retained as an original observation.

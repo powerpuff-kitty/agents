@@ -1,0 +1,67 @@
+{
+  "task": "Review complete pending diff; read-only workspace",
+  "selected_skills": [
+    {
+      "name": "change-review",
+      "path": "instructions/skills/change-review/SKILL.md",
+      "reason": "Focused pending-diff review, including staged, unstaged and new files",
+      "references": [
+        "instructions/skills/change-review/references/review-method.md"
+      ]
+    }
+  ],
+  "selected_roles": [
+    {
+      "name": "quality-engineer",
+      "path": "instructions/roles/quality-engineer/instructions.md",
+      "mode": "audit",
+      "reason": "Correctness and reproducible verification of the scoped change"
+    }
+  ],
+  "discovery_source": "instructions/catalog.md",
+  "requirements_source": "workspace/CONTRACT.md:1",
+  "base": "8c13a170c42f5686733063cdc2631a01915ccc66",
+  "reviewed_files": [
+    "workspace/pricing.py",
+    "workspace/display.py",
+    "workspace/checkout.py",
+    "workspace/CONTRACT.md"
+  ],
+  "findings": [
+    {
+      "priority": "P1",
+      "location": "workspace/display.py:2",
+      "summary": "Dollar values divided by 100 before formatting"
+    },
+    {
+      "priority": "P2",
+      "location": "workspace/pricing.py:2",
+      "summary": "Discount percentage subtracted as fixed dollars"
+    }
+  ],
+  "checks": {
+    "runtime": "Python 3.14.7",
+    "bytecode_disabled": true,
+    "observations": 6,
+    "current_contract_failures": 4,
+    "baseline_contract_failures": 0,
+    "source_and_index_unchanged_during_checks": true,
+    "bytecode_files": []
+  },
+  "delegated": false,
+  "host_product": null,
+  "host_version": null,
+  "model_identifier": null,
+  "token_usage": null,
+  "cost": null,
+  "unknowns": [
+    "Exact host and model identity not independently exposed/verified",
+    "Token usage and cost unavailable",
+    "Platform-enforced context isolation not independently verified"
+  ],
+  "outputs": [
+    "result.md",
+    "actions.md",
+    "selection.json"
+  ]
+}

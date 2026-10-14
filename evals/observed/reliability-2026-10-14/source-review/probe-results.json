@@ -1,0 +1,170 @@
+[
+  {
+    "source": "initial-observed-reconstructed",
+    "source_sha256": "d8c68b06b597cd96527d0a58a3aa487a24d2ce98312354daf751604038d7c71b",
+    "case": "reflection-evidence-boundary",
+    "mode": "explicit",
+    "task_points_to_catalog": false,
+    "shared_contract_staged": false,
+    "task_or_catalog_mentions_operating_contract": false,
+    "artifact_checks_before_mutation": {
+      "workspace_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "detects_workspace_mutation": true
+  },
+  {
+    "source": "initial-observed-reconstructed",
+    "source_sha256": "d8c68b06b597cd96527d0a58a3aa487a24d2ce98312354daf751604038d7c71b",
+    "case": "reflection-evidence-boundary",
+    "mode": "discovery",
+    "task_points_to_catalog": false,
+    "shared_contract_staged": true,
+    "task_or_catalog_mentions_operating_contract": false,
+    "artifact_checks_before_mutation": {
+      "workspace_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "detects_workspace_mutation": true
+  },
+  {
+    "source": "initial-observed-reconstructed",
+    "source_sha256": "d8c68b06b597cd96527d0a58a3aa487a24d2ce98312354daf751604038d7c71b",
+    "case": "memory-retrieval-boundary",
+    "mode": "explicit",
+    "task_points_to_catalog": false,
+    "shared_contract_staged": false,
+    "task_or_catalog_mentions_operating_contract": false,
+    "artifact_checks_before_mutation": {
+      "workspace_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "detects_workspace_mutation": true
+  },
+  {
+    "source": "initial-observed-reconstructed",
+    "source_sha256": "d8c68b06b597cd96527d0a58a3aa487a24d2ce98312354daf751604038d7c71b",
+    "case": "memory-retrieval-boundary",
+    "mode": "discovery",
+    "task_points_to_catalog": false,
+    "shared_contract_staged": true,
+    "task_or_catalog_mentions_operating_contract": false,
+    "artifact_checks_before_mutation": {
+      "workspace_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "detects_workspace_mutation": true
+  },
+  {
+    "source": "initial-observed-reconstructed",
+    "source_sha256": "d8c68b06b597cd96527d0a58a3aa487a24d2ce98312354daf751604038d7c71b",
+    "case": "agent-tool-authorization-boundary",
+    "mode": "explicit",
+    "task_points_to_catalog": false,
+    "shared_contract_staged": false,
+    "task_or_catalog_mentions_operating_contract": false,
+    "artifact_checks_before_mutation": {
+      "workspace_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "detects_workspace_mutation": true
+  },
+  {
+    "source": "initial-observed-reconstructed",
+    "source_sha256": "d8c68b06b597cd96527d0a58a3aa487a24d2ce98312354daf751604038d7c71b",
+    "case": "agent-tool-authorization-boundary",
+    "mode": "discovery",
+    "task_points_to_catalog": false,
+    "shared_contract_staged": true,
+    "task_or_catalog_mentions_operating_contract": false,
+    "artifact_checks_before_mutation": {
+      "workspace_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "detects_workspace_mutation": true
+  },
+  {
+    "source": "captured-recheck",
+    "source_sha256": "3defe9aa1408e656344eb5facb56872c4fae4dffb04a85b3cacfd89b90b91a76",
+    "case": "reflection-evidence-boundary",
+    "mode": "explicit",
+    "task_points_to_catalog": false,
+    "shared_contract_staged": false,
+    "task_or_catalog_mentions_operating_contract": false,
+    "artifact_checks_before_mutation": {
+      "workspace_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "detects_workspace_mutation": true
+  },
+  {
+    "source": "captured-recheck",
+    "source_sha256": "3defe9aa1408e656344eb5facb56872c4fae4dffb04a85b3cacfd89b90b91a76",
+    "case": "reflection-evidence-boundary",
+    "mode": "discovery",
+    "task_points_to_catalog": true,
+    "shared_contract_staged": true,
+    "task_or_catalog_mentions_operating_contract": false,
+    "artifact_checks_before_mutation": {
+      "workspace_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "detects_workspace_mutation": true
+  },
+  {
+    "source": "captured-recheck",
+    "source_sha256": "3defe9aa1408e656344eb5facb56872c4fae4dffb04a85b3cacfd89b90b91a76",
+    "case": "memory-retrieval-boundary",
+    "mode": "explicit",
+    "task_points_to_catalog": false,
+    "shared_contract_staged": false,
+    "task_or_catalog_mentions_operating_contract": false,
+    "artifact_checks_before_mutation": {
+      "workspace_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "detects_workspace_mutation": true
+  },
+  {
+    "source": "captured-recheck",
+    "source_sha256": "3defe9aa1408e656344eb5facb56872c4fae4dffb04a85b3cacfd89b90b91a76",
+    "case": "memory-retrieval-boundary",
+    "mode": "discovery",
+    "task_points_to_catalog": true,
+    "shared_contract_staged": true,
+    "task_or_catalog_mentions_operating_contract": false,
+    "artifact_checks_before_mutation": {
+      "workspace_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "detects_workspace_mutation": true
+  },
+  {
+    "source": "captured-recheck",
+    "source_sha256": "3defe9aa1408e656344eb5facb56872c4fae4dffb04a85b3cacfd89b90b91a76",
+    "case": "agent-tool-authorization-boundary",
+    "mode": "explicit",
+    "task_points_to_catalog": false,
+    "shared_contract_staged": false,
+    "task_or_catalog_mentions_operating_contract": false,
+    "artifact_checks_before_mutation": {
+      "workspace_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "detects_workspace_mutation": true
+  },
+  {
+    "source": "captured-recheck",
+    "source_sha256": "3defe9aa1408e656344eb5facb56872c4fae4dffb04a85b3cacfd89b90b91a76",
+    "case": "agent-tool-authorization-boundary",
+    "mode": "discovery",
+    "task_points_to_catalog": true,
+    "shared_contract_staged": true,
+    "task_or_catalog_mentions_operating_contract": false,
+    "artifact_checks_before_mutation": {
+      "workspace_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "detects_workspace_mutation": true
+  }
+]

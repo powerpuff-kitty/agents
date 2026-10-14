@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_behavior_eval.py",
+    "-v"
+  ],
+  "cwd": "/Users/tcsntcsn/TCSN/agents",
+  "env_overrides": {
+    "TMPDIR": "/private/tmp/reliability-source-review-2026-10-14/unit-tmp-recheck-2",
+    "GIT_CONFIG_GLOBAL": "/dev/null",
+    "GIT_CONFIG_NOSYSTEM": "1"
+  },
+  "exit_code": 0
+}

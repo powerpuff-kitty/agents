@@ -13,7 +13,10 @@ def check(root,skills=None):
   for file in sorted(base.rglob('*.md')):
    if any(x in file.relative_to(base).parts for x in ['.git','dist','__pycache__']):continue
    checked+=1
-   for target in re.findall(r'\]\(([^)]+)\)',file.read_text(encoding="utf-8")):
+   prose=file.read_text(encoding="utf-8")
+   prose=re.sub(r'(?ms)^ {0,3}(`{3,}|~{3,})[^\n]*\n.*?^ {0,3}\1[ \t]*$', '', prose)
+   prose=re.sub(r'`+[^`\n]*`+', '', prose)
+   for target in re.findall(r'\]\(([^)]+)\)',prose):
     target=target.split('#')[0].strip('<>')
     if not target or re.match(r'[a-zA-Z][a-zA-Z0-9+.-]*:',target) or any(x in target for x in ['<','>','{','}']):continue
     if not (file.parent/target).exists():errors.append(f'{file.relative_to(base)}: missing {target}')

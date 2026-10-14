@@ -1,0 +1,43 @@
+{
+  "task": "Fix the pagination boundary defect, preserve the pending label change, and verify locally",
+  "catalog": "instructions/catalog.md",
+  "selected_roles": [
+    {
+      "name": "feature-developer",
+      "source": "instructions/roles/feature-developer/instructions.md",
+      "reason": "Hands-on scoped implementation and verification while preserving existing edits."
+    },
+    {
+      "name": "quality-engineer",
+      "source": "instructions/roles/quality-engineer/instructions.md",
+      "reason": "Focused correctness, boundary coverage and verification evidence self-review; no independent-review claim."
+    }
+  ],
+  "selected_skills": [
+    {
+      "name": "systematic-debugging",
+      "source": "instructions/skills/systematic-debugging/SKILL.md",
+      "reason": "Reproduce the specific defect, identify its owning condition, make the authorized fix and rerun the reproduction."
+    },
+    {
+      "name": "test-engineering",
+      "source": "instructions/skills/test-engineering/SKILL.md",
+      "references": ["instructions/skills/test-engineering/references/test-design.md"],
+      "reason": "Assess existing regression assertions and choose proportionate neighboring boundary checks with the existing unittest runner."
+    }
+  ],
+  "supporting_instructions": ["instructions/operating-contract.md"],
+  "not_selected": [
+    {"name": "api-design", "reason": "The request is implementation debugging, not API contract design."},
+    {"name": "team-lead", "reason": "Solo scoped task; no delegation permitted."},
+    {"name": "codebase-audit", "reason": "No broad repository audit requested."},
+    {"name": "change-review", "reason": "No independent diff review requested; final verification is explicitly self-review."}
+  ],
+  "review_mode": "developer self-review",
+  "delegated": false,
+  "host_identity": null,
+  "exact_model_id": null,
+  "token_usage": null,
+  "unknowns_reason": "No reliable task-local host, exact model or usage measurement was exposed; no metrics invented.",
+  "context_isolation": "Separate assigned task context; full fresh-session guarantees not independently measurable. Only allowed task-local sources were accessed."
+}

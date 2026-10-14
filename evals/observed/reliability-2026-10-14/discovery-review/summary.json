@@ -1,0 +1,98 @@
+{
+  "pagination-1": {
+    "status": "reviewed",
+    "outcome_defects_established": 0,
+    "source_hashes": {
+      "task.md": "28ebd7cc8c3e8d4fc1b57231c17a3103431dd9bff6642db6bf9f56afe586aa8b",
+      "initial.json": "93adb5b814d0c77d26f8ec3ab64dac05af17607d67f8186d67615f3c014ec2b6",
+      "selection.json": "77f799369e21591c7dc69b88e24e0b24b4df6ca5bdc4406a23f2b48f4f4f30dc",
+      "result.md": "23d028b1782437ecd2616db803200a080157b06646a21f7b7620dc4b0c633e3b",
+      "actions.md": "59c9f770ec7ed8aa77714c6ef1ecdcc3b92b9409379bd5dae3eb61c3349b9a7a",
+      "instructions/catalog.md": "a21b5a9a14febed08c3ceaf6260bec6f2dc5cf2bcfdf368e439e77d8a216dc5b",
+      "instructions/operating-contract.md": "2d629172285cf6fbe0397911188a780f56960f0bbead8e3b753338c938a4fb7e",
+      "instructions/roles/feature-developer/instructions.md": "fc068697e96698d6013824644ae4cd6c4112921460fd657d7fbf0998dc16b638",
+      "instructions/skills/structured-reflection/SKILL.md": "3961d1d1ecbc574f47de4c865e77fa9f74fb7e5dccc5b739c99f2bc1322c2dca",
+      "instructions/skills/structured-reflection/assets/report-template.md": "ccd79ab30aa17ea336c583af0a53f31e10de6a543f8a8f1034045f3da12ac0e6",
+      "instructions/skills/structured-reflection/references/method.md": "002dd55c5a387fa4c1a6790b958279c9751cd0a324334b494f208d77705af10d",
+      "instructions/skills/systematic-debugging/SKILL.md": "e01c99c7b7a65c3eb249c0abbd3196132a51a3d3cba44b5809d6b19e0e8d6957",
+      "instructions/skills/test-engineering/SKILL.md": "cf79fe8b70df0c8af1e9750709f8d85373c5c0c3982c4da28f9c46751a37330f",
+      "instructions/skills/test-engineering/references/test-design.md": "504ed4d0823764ca4c9e4a101dfd6c5a3ad80eee38e3a02cef1fa9c1edac171e",
+      "workspace/labels.txt": "305acd098d197015b990421d4289436941e05a24d7cba35415127e8656da64a5",
+      "workspace/pagination.py": "5f2ab5a4dbd9450e9e9bbf724addbe44aa7b788ce77651e6f22a6725b4c947b0",
+      "workspace/test_pagination.py": "7a4c6202edabff0858d9bfd17b4ad5789f0eca9552ef6751e95d964d3ee1feff",
+      "workspace/.git/index": "67362d1a5ee9c1e839b26d7add7305001daef4d394592d841774245a6670224c"
+    }
+  },
+  "pagination-2": {
+    "status": "reviewed",
+    "outcome_defects_established": 0,
+    "source_hashes": {
+      "task.md": "28ebd7cc8c3e8d4fc1b57231c17a3103431dd9bff6642db6bf9f56afe586aa8b",
+      "initial.json": "93adb5b814d0c77d26f8ec3ab64dac05af17607d67f8186d67615f3c014ec2b6",
+      "selection.json": "6f9179bb519e0f8f827ff7f4ddd101009a0656f951d5b6cd6083d0d09a08e583",
+      "result.md": "3833230470123e2cab7d92060cc440fae769d90379eec88478e4a43462fb33dd",
+      "actions.md": "dd9dd0c94438417383d522e3937fea4b3cecd7254a1153042866cd7423dfd6b9",
+      "instructions/catalog.md": "a21b5a9a14febed08c3ceaf6260bec6f2dc5cf2bcfdf368e439e77d8a216dc5b",
+      "instructions/operating-contract.md": "2d629172285cf6fbe0397911188a780f56960f0bbead8e3b753338c938a4fb7e",
+      "instructions/roles/feature-developer/instructions.md": "fc068697e96698d6013824644ae4cd6c4112921460fd657d7fbf0998dc16b638",
+      "instructions/skills/structured-reflection/SKILL.md": "3961d1d1ecbc574f47de4c865e77fa9f74fb7e5dccc5b739c99f2bc1322c2dca",
+      "instructions/skills/structured-reflection/assets/report-template.md": "ccd79ab30aa17ea336c583af0a53f31e10de6a543f8a8f1034045f3da12ac0e6",
+      "instructions/skills/structured-reflection/references/method.md": "002dd55c5a387fa4c1a6790b958279c9751cd0a324334b494f208d77705af10d",
+      "instructions/skills/systematic-debugging/SKILL.md": "e01c99c7b7a65c3eb249c0abbd3196132a51a3d3cba44b5809d6b19e0e8d6957",
+      "instructions/skills/test-engineering/SKILL.md": "cf79fe8b70df0c8af1e9750709f8d85373c5c0c3982c4da28f9c46751a37330f",
+      "instructions/skills/test-engineering/references/test-design.md": "504ed4d0823764ca4c9e4a101dfd6c5a3ad80eee38e3a02cef1fa9c1edac171e",
+      "workspace/labels.txt": "305acd098d197015b990421d4289436941e05a24d7cba35415127e8656da64a5",
+      "workspace/pagination.py": "5f2ab5a4dbd9450e9e9bbf724addbe44aa7b788ce77651e6f22a6725b4c947b0",
+      "workspace/test_pagination.py": "6e9b23812482fb114fc0b9d0d1e24e45e4f759fd87540e1757a2c982c9b6bf3a",
+      "workspace/.git/index": "8b67d6ad9f7a21c63032a89d5215b4ad291c8ecc29dac57b9373a32e47f35428"
+    }
+  },
+  "review-1": {
+    "status": "reviewed",
+    "outcome_defects_established": 0,
+    "source_hashes": {
+      "task.md": "8a9b4d2a7d80d300e06b45c736c603ec4edaf3a7d909259ea0b597b1ca10d3a9",
+      "initial.json": "4919e4e988a74a564aa8f60dd1b8fee929f998db69763bf72eefd6f1f275ea37",
+      "selection.json": "e3e1c4f17e0d8154d7d391e15cd0b8168df774fc42b163cdd1f899b3cb249c63",
+      "result.md": "1142476a46cd64ec9061b675c60a11e4f16e22bb3ad72e1f7363c0906eaded58",
+      "actions.md": "239447ca0d7da8f767e6c13c0fadbce1e6316b58e26dfb94ba062555fd7832c1",
+      "instructions/catalog.md": "a21b5a9a14febed08c3ceaf6260bec6f2dc5cf2bcfdf368e439e77d8a216dc5b",
+      "instructions/operating-contract.md": "2d629172285cf6fbe0397911188a780f56960f0bbead8e3b753338c938a4fb7e",
+      "instructions/roles/quality-engineer/instructions.md": "2c9e455c2f19aaf66eaa776f283c984e4128b985e961846bd21cdbfc14966395",
+      "instructions/skills/change-review/SKILL.md": "6e000682dde1623ed721826b2e925527df35993b09c797503efc8b7b60079702",
+      "instructions/skills/change-review/references/review-method.md": "8f998b4e2fc5986a571df9d166b40d6779cf5e48cab72a29113558192b75de67",
+      "instructions/skills/structured-reflection/SKILL.md": "3961d1d1ecbc574f47de4c865e77fa9f74fb7e5dccc5b739c99f2bc1322c2dca",
+      "instructions/skills/structured-reflection/assets/report-template.md": "ccd79ab30aa17ea336c583af0a53f31e10de6a543f8a8f1034045f3da12ac0e6",
+      "instructions/skills/structured-reflection/references/method.md": "002dd55c5a387fa4c1a6790b958279c9751cd0a324334b494f208d77705af10d",
+      "workspace/CONTRACT.md": "fac861030f4da6b98d497b01ef94616e07a1d6947ff6bac935e3a9b49d81f396",
+      "workspace/checkout.py": "b49388b7d04697b9797cc389932444c83b9b4205d889f08d3db97b85fc12a2c7",
+      "workspace/display.py": "7db76a85e790a7e57707e97fd019a117599d09e02fe427e5fd67a7c3347ebb66",
+      "workspace/pricing.py": "928d5452e18fca86c3401bbcf288c6814d85a59a17ae4bf274eb6ad57a2497e0",
+      "workspace/.git/index": "1c4b228c034d4252ea63a690f061919f56b83c21bdf0b42ce088380a976f57a7"
+    }
+  },
+  "review-2": {
+    "status": "reviewed",
+    "outcome_defects_established": 0,
+    "source_hashes": {
+      "task.md": "8a9b4d2a7d80d300e06b45c736c603ec4edaf3a7d909259ea0b597b1ca10d3a9",
+      "initial.json": "4919e4e988a74a564aa8f60dd1b8fee929f998db69763bf72eefd6f1f275ea37",
+      "selection.json": "a82a43f279242bec1fea33ec40551bc58ad126f20125c7acfc051a7d8a7f3089",
+      "result.md": "c025c570f0c157f46d0f388c8a19bd5bcceb13c6ba57550503f0b5a69f84aa4f",
+      "actions.md": "cb4eabd8e6424bbfcb78db0010daea7c3bbd911be1342f5811816c82b7932a9c",
+      "instructions/catalog.md": "a21b5a9a14febed08c3ceaf6260bec6f2dc5cf2bcfdf368e439e77d8a216dc5b",
+      "instructions/operating-contract.md": "2d629172285cf6fbe0397911188a780f56960f0bbead8e3b753338c938a4fb7e",
+      "instructions/roles/quality-engineer/instructions.md": "2c9e455c2f19aaf66eaa776f283c984e4128b985e961846bd21cdbfc14966395",
+      "instructions/skills/change-review/SKILL.md": "6e000682dde1623ed721826b2e925527df35993b09c797503efc8b7b60079702",
+      "instructions/skills/change-review/references/review-method.md": "8f998b4e2fc5986a571df9d166b40d6779cf5e48cab72a29113558192b75de67",
+      "instructions/skills/structured-reflection/SKILL.md": "3961d1d1ecbc574f47de4c865e77fa9f74fb7e5dccc5b739c99f2bc1322c2dca",
+      "instructions/skills/structured-reflection/assets/report-template.md": "ccd79ab30aa17ea336c583af0a53f31e10de6a543f8a8f1034045f3da12ac0e6",
+      "instructions/skills/structured-reflection/references/method.md": "002dd55c5a387fa4c1a6790b958279c9751cd0a324334b494f208d77705af10d",
+      "workspace/CONTRACT.md": "fac861030f4da6b98d497b01ef94616e07a1d6947ff6bac935e3a9b49d81f396",
+      "workspace/checkout.py": "b49388b7d04697b9797cc389932444c83b9b4205d889f08d3db97b85fc12a2c7",
+      "workspace/display.py": "7db76a85e790a7e57707e97fd019a117599d09e02fe427e5fd67a7c3347ebb66",
+      "workspace/pricing.py": "928d5452e18fca86c3401bbcf288c6814d85a59a17ae4bf274eb6ad57a2497e0",
+      "workspace/.git/index": "3874cb90205bb1f6c9405a27545b23353f1cf25e984bbcf622079769de4fdda7"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+test_empty (test_pagination.Pages.test_empty) ... ok
+test_exact_first (test_pagination.Pages.test_exact_first) ... ok
+test_exact_last (test_pagination.Pages.test_exact_last) ... ok
+test_invalid_size (test_pagination.Pages.test_invalid_size) ... ok
+test_partial_last (test_pagination.Pages.test_partial_last) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK

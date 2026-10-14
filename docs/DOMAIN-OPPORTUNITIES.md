@@ -16,11 +16,13 @@ participant, production analytics and scheduled-watch execution still require th
 actual project, tools, data and authorization. The offline fixtures establish
 bounded method behavior, not production coverage or quantified market demand.
 
+Agent-specific security paths are now covered by
+[agent-security-review](RELIABILITY-METHODS.md), with isolated synthetic evidence.
+
 ## Other domain candidates
 
 | Candidate workflow | Starting responsibility | Required artifact/evidence |
 | --- | --- | --- |
-| AI-agent security | security-auditor | Tool/data trust boundaries, prompt-injection paths, permission and exfiltration controls, isolated adversarial fixture |
 | Cryptography review | security-auditor; add a distinct engineer only for recurring protocol work | Versioned protocol/library and key/nonce lifecycle, official test vectors, dated standards |
 | Hardware/PCB | A distinct electronics/embedded owner when work recurs | Schematic/BOM, datasheets, units/tolerances, ERC/DRC and bench/manufacturing status |
 | Movies/series | A story/editorial owner when work recurs | Story canon, continuity, episode dependencies, script/timeline formats and media rights |

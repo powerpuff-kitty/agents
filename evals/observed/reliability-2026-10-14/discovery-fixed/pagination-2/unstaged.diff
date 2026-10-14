@@ -1,0 +1,33 @@
+diff --git a/labels.txt b/labels.txt
+index 5ab7085..4ea5fd5 100644
+--- a/labels.txt
++++ b/labels.txt
+@@ -1 +1 @@
+-Next page
++Continue to next page — owner edit
+diff --git a/pagination.py b/pagination.py
+index adf27f7..c1909a1 100644
+--- a/pagination.py
++++ b/pagination.py
+@@ -3,7 +3,5 @@ def pages(items, size):
+         raise ValueError("size must be positive")
+     result = []
+     for start in range(0, len(items), size):
+-        if start + size == len(items):
+-            break
+         result.append(items[start:start + size])
+     return result
+diff --git a/test_pagination.py b/test_pagination.py
+index 793af12..5e87e8c 100644
+--- a/test_pagination.py
++++ b/test_pagination.py
+@@ -5,5 +5,9 @@ class Pages(unittest.TestCase):
+     def test_exact_first(self): self.assertEqual(pages([1, 2], 2), [[1, 2]])
+     def test_exact_last(self): self.assertEqual(pages([1, 2, 3, 4], 2), [[1, 2], [3, 4]])
+     def test_partial_last(self): self.assertEqual(pages([1, 2, 3], 2), [[1, 2], [3]])
++    def test_unit_size(self): self.assertEqual(pages([1, 2, 3], 1), [[1], [2], [3]])
++    def test_larger_size(self): self.assertEqual(pages([1, 2], 3), [[1, 2]])
+     def test_invalid_size(self):
+         with self.assertRaises(ValueError): pages([1], 0)
++    def test_negative_size(self):
++        with self.assertRaises(ValueError): pages([1], -1)

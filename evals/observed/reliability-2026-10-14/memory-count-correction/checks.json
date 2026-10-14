@@ -1,0 +1,11 @@
+{
+  "source_sha256": "27145a88c96039d10393358cb9a0a3f803b60587be05c6ac68f0e975abaf392e",
+  "actual_memory_records": 12,
+  "unique_ids": 12,
+  "ledger_covers_all_ids": true,
+  "promotion_candidates": 3,
+  "originals_unchanged": {
+    "result.md": "123960985d251780f36980f003a62fcf4bc608aad4fce952cebd7a51db768db6",
+    "actions.md": "3db335a271d0db8eaae4b7487894d80eb971117380ad552c7dba1555d78c0ef8"
+  }
+}

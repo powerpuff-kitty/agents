@@ -1,0 +1,42 @@
+{
+  "task": "review-1",
+  "route": "shared operating contract, then focused change review",
+  "shared_contract": "instructions/operating-contract.md",
+  "roles": [
+    {
+      "name": "quality-engineer",
+      "path": "instructions/roles/quality-engineer/instructions.md",
+      "mode": "audit only",
+      "reason": "Assess correctness and verification of the complete pending change without remediation or scoring."
+    }
+  ],
+  "skills": [
+    {
+      "name": "change-review",
+      "path": "instructions/skills/change-review/SKILL.md",
+      "reason": "The task explicitly requests review of staged, unstaged and relevant new files.",
+      "supporting_reads": [
+        "instructions/skills/change-review/references/review-method.md"
+      ]
+    },
+    {
+      "name": "structured-reflection",
+      "path": "instructions/skills/structured-reflection/SKILL.md",
+      "reason": "The shared operating contract calls for a bounded reflection after meaningful findings; record supported corrections without editing.",
+      "supporting_reads": [
+        "instructions/skills/structured-reflection/references/method.md",
+        "instructions/skills/structured-reflection/assets/report-template.md"
+      ]
+    }
+  ],
+  "not_selected": {
+    "test-engineering": "No test suite authoring or test-strategy request; direct native reproductions suffice for these small arithmetic changes.",
+    "security-review": "No concrete security question in the changed arithmetic/formatting paths.",
+    "release-review": "No release-readiness or publication request."
+  },
+  "authority": "Read-only workspace and instructions; only result.md, actions.md and selection.json written.",
+  "host": "unknown",
+  "model": "unknown",
+  "usage": "unknown",
+  "independence": "Separate delegated review context; no author notes or previous verdict read. Parent conversation context was inherited, so full fresh-session isolation is not claimed."
+}

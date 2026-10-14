@@ -1,0 +1,26 @@
+{
+  "format_version": 1,
+  "case_id": "memory-retrieval-boundary",
+  "role": "team-lead",
+  "skill": "project-memory",
+  "workspace_sha256": {
+    "input.json": "27145a88c96039d10393358cb9a0a3f803b60587be05c6ac68f0e975abaf392e"
+  },
+  "instruction_sha256": {
+    "role.md": "977aee85443d8a340440b555a597d1a7c8a2acf2f2042afc1a8a95cd57200eae",
+    "skill/LICENSE": "da8e7b98c9f5547396031dd15ffe7a820eb8c2b9e4d1b32c9eb69bbc0d2c5af4",
+    "skill/SKILL.md": "575a34ca082dc7a78a95cac894d59438249237695f5befdac7a6b73f76dcf442",
+    "skill/assets/report-template.md": "6e038d89a988d52f853fbee24808ad2c405194536d54ba05e018c7c4e901eb53",
+    "skill/references/method.md": "ba80e80a40a4f5f3d1d5f315e11b1f30e2470be31ff3f6a4013ef8e9c16c5367",
+    "skill/references/protocol.md": "f2fc62065746117d8a40d7e382ca7808f2a68981275a5a89e32fe4c2bc5ce489",
+    "skill/tests/cases.json": "84d917096f20ec1c05561dbfcb99029015c9a5e669adfd38fd8b7a18c8591743",
+    "skill/tests/fixtures/input.json": "27145a88c96039d10393358cb9a0a3f803b60587be05c6ac68f0e975abaf392e"
+  },
+  "task_sha256": "824c4a3c654be32e58bd66ccacea92ff6ccbf76c014025e3656c0a299ae1bdf3",
+  "source_revision": "synthetic-revision",
+  "instruction_mode": "explicit",
+  "preparer_sha256": "8f81be97ecfeb1bbae7467284e353f048fd98d7af78a7094d783e7fb47fd6683",
+  "skills_revision": null,
+  "source_note": "instruction hashes include working-tree changes",
+  "initial_git_status": null
+}

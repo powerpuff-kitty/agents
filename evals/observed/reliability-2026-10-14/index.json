@@ -1,0 +1,41 @@
+{
+  "format_version": 1,
+  "canonical_specifications": 144,
+  "canonical_spec_sha256": "e806d7cc809abf11ede15f216fa4f7d61cd4382284c3ff7833053a0528d5bee2",
+  "observed_unique_canonical_cases": 6,
+  "unobserved_canonical_cases": 138,
+  "earlier_cases": [
+    "implementation-dirty-worktree",
+    "focused-review-with-skills",
+    "geo-specialist-sampled-visibility-not-causality"
+  ],
+  "new_cases": [
+    {
+      "case_id": "reflection-evidence-boundary",
+      "result": "forward/reflection-evidence-boundary/result.md",
+      "assessment": "supported_in_supplied_scope",
+      "review": "output-review/review.md"
+    },
+    {
+      "case_id": "memory-retrieval-boundary",
+      "result": "forward/memory-retrieval-boundary/result.md",
+      "assessment": "supported_with_count_correction",
+      "review": "output-review/review.md"
+    },
+    {
+      "case_id": "agent-tool-authorization-boundary",
+      "result": "forward/agent-tool-authorization-boundary/result.md",
+      "assessment": "supported_in_supplied_scope",
+      "review": "output-review/review.md"
+    }
+  ],
+  "discovery_trials": {
+    "before_shared_route_fix": 4,
+    "after_shared_route_fix": 4,
+    "workloads": 2,
+    "repetitions_per_workload_per_snapshot": 2,
+    "scope_limitation": "fixed review-2 hashes unselected instruction bytes; selected-only semantics not authenticated"
+  },
+  "provider_model_usage": "unknown",
+  "no_general_success_rate_claim": true
+}

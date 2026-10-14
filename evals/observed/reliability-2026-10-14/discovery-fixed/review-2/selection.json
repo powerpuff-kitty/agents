@@ -1,0 +1,39 @@
+{
+  "shared_contract": {
+    "path": "instructions/operating-contract.md",
+    "read_before_selection": true
+  },
+  "role": {
+    "name": "quality-engineer",
+    "path": "instructions/roles/quality-engineer/instructions.md",
+    "reason": "Correctness and verification assessment of the complete pending change; audit mode only."
+  },
+  "skills": [
+    {
+      "name": "change-review",
+      "path": "instructions/skills/change-review/SKILL.md",
+      "reason": "Focused pending diff with staged, unstaged and untracked caller coverage.",
+      "references": [
+        "instructions/skills/change-review/references/review-method.md"
+      ]
+    },
+    {
+      "name": "structured-reflection",
+      "path": "instructions/skills/structured-reflection/SKILL.md",
+      "reason": "Shared contract routes meaningful findings to evidence-linked bounded correction proposals; no remediation authorized.",
+      "references": [
+        "instructions/skills/structured-reflection/references/method.md",
+        "instructions/skills/structured-reflection/assets/report-template.md"
+      ]
+    }
+  ],
+  "scope": "HEAD versus staged, unstaged and relevant new files; read-only review",
+  "host": null,
+  "model": null,
+  "usage": null,
+  "delegation": false,
+  "limitations": [
+    "Mechanical preservation hashing read all instruction bytes; only selected instruction text was semantically inspected.",
+    "No corrected-source validation because no fixes were authorized."
+  ]
+}

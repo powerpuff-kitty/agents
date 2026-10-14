@@ -1,15 +1,19 @@
 # Behavior evaluations
 
-[141 canonical scenarios](behavior-cases.json) specify at least 2 cases per role
+[144 canonical scenarios](behavior-cases.json) specify at least 2 cases per role
 and team, plus shared/procedure boundaries. Specification objects retain
 `execution_status: not_run`; observed outcomes live separately and never rewrite
 a scenario into a claimed pass.
 
-## Observed canonical smoke cases
+## Observed canonical cases
 
-The [2026-10-14 smoke suite](observed/behavior-smoke-2026-10-14/index.json)
-records **3 observed cases and 138 unobserved cases**. Each ran in a fresh scoped
-session with explicit role/skill instructions and isolated synthetic artifacts.
+The [current reliability index](observed/reliability-2026-10-14/index.json) records
+**6 observed cases and 138 unobserved cases** across the 144 current specifications.
+It adds reflection, memory and agent-tool-security tasks, with original findings,
+separate corrections and explicit execution limits.
+
+The earlier [smoke suite](observed/behavior-smoke-2026-10-14/index.json) contains
+these 3 historical cases; its source counts remain historical:
 
 | Case | Observable outcome | Remaining limit |
 | --- | --- | --- |
@@ -21,6 +25,15 @@ Each case retains task, instruction/input identities, final workspace, actual
 response/action log, deterministic checks and parent-review rationale. Exact model
 identity was unavailable. These runs test explicit instruction use, not automatic
 routing, host delegation, repeated reliability or general domain expertise.
+
+## Repeated catalog selection
+
+[8 catalog-selection trials](observed/reliability-2026-10-14/README.md) repeat 2
+synthetic tasks before and after the shared-contract routing fix. Fresh sessions
+choose from metadata; native automatic-trigger behavior, exact model/usage and
+statistical reliability remain unverified. The record retains a reporting error,
+a broad mechanical-read limitation and a false test-byte invariant for legitimate
+added tests. Artifact checks never silently become reasoning verdicts.
 
 ## Fresh independent repository audits
 

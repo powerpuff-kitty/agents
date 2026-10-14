@@ -1,0 +1,44 @@
+{
+  "task": "pagination-1",
+  "route": "shared operating contract, then catalog-selected role and procedures",
+  "shared_contract": "instructions/operating-contract.md",
+  "catalog": "instructions/catalog.md",
+  "roles": [
+    {
+      "name": "feature-developer",
+      "path": "instructions/roles/feature-developer/instructions.md",
+      "reason": "Hands-on scoped defect correction and verification while preserving pending edits."
+    }
+  ],
+  "skills": [
+    {
+      "name": "systematic-debugging",
+      "path": "instructions/skills/systematic-debugging/SKILL.md",
+      "reason": "Reproduce the specific pagination defect, trace its cause, fix and recheck."
+    },
+    {
+      "name": "test-engineering",
+      "path": "instructions/skills/test-engineering/SKILL.md",
+      "reason": "Assess existing boundary regression coverage and execute the local unit suite."
+    },
+    {
+      "name": "structured-reflection",
+      "path": "instructions/skills/structured-reflection/SKILL.md",
+      "reason": "Record the failed test discovery and demonstrated defect with bounded corrections and actual rechecks."
+    }
+  ],
+  "supporting_instructions": [
+    "instructions/skills/test-engineering/references/test-design.md",
+    "instructions/skills/structured-reflection/references/method.md",
+    "instructions/skills/structured-reflection/assets/report-template.md"
+  ],
+  "not_selected": {
+    "api-design": "No API contract design requested.",
+    "change-review": "Self-check only; no independent review requested.",
+    "team-lead": "No delegated team workflow authorized."
+  },
+  "host": "unknown",
+  "model": "unknown",
+  "usage": "unknown",
+  "independent_review": false
+}

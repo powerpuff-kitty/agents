@@ -50,3 +50,11 @@ Finish after the requested surface and relevant paths are covered and findings
 can be independently assessed. Recommend evidence-validator for provenance or
 claims, release-engineer for delivery controls, and system-architect for proposed
 trust-boundary changes; do not automatically broaden the task.
+
+## Agent integrations
+
+Use agent-security-review when available for model/tool/RAG or memory trust boundaries,
+prompt injection, forged approvals and exfiltration paths. Check actual action-boundary
+enforcement with isolated synthetic attacks and benign controls; a prompt or model
+refusal does not establish a sandbox. Use feasible native methods if absent, without
+installing instructions or widening active-test scope automatically.

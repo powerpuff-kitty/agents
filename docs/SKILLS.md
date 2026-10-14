@@ -16,7 +16,8 @@ reports the embedded revision and domain membership; source folder layout stays 
 | --- | --- | --- |
 | core / feature-developer | engineering, delivery | implementation-plan, native-app-delivery, test-engineering, change-review |
 | core / design-analyst, designer and UX | product-design | design-extraction, design-analysis, design-system, product-design, accessibility-audit |
-| core / security-auditor | security | security-review, threat-model |
+| core / security-auditor | security | security-review, threat-model, agent-security-review |
+| current task owner / team-lead | agent-setup | structured-reflection, project-memory |
 | core / project-auditor | agent-setup, delivery | agentic-structure-audit, repository-maintenance |
 | science-data | analytics, agent-setup, forecasting where relevant | product-instrumentation, product-analytics, product-experimentation, decision-intelligence, forecast-calibration |
 | product-growth | analytics, content-growth | product-experimentation, product-analytics, competitor-monitoring, market-opportunity-research, content-brief, geo-measurement |

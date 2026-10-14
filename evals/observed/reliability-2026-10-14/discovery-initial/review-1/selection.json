@@ -1,0 +1,67 @@
+{
+  "task": "/private/tmp/behavior-repeated-2026-10-14/review-1/task.md",
+  "workspace": "/private/tmp/behavior-repeated-2026-10-14/review-1/workspace",
+  "catalog": "/private/tmp/behavior-repeated-2026-10-14/review-1/instructions/catalog.md",
+  "selected_skills": [
+    {
+      "name": "change-review",
+      "path": "/private/tmp/behavior-repeated-2026-10-14/review-1/instructions/skills/change-review/SKILL.md",
+      "reason": "Focused review of the complete staged, unstaged, and relevant new pending change against accepted behavior.",
+      "references": [
+        "/private/tmp/behavior-repeated-2026-10-14/review-1/instructions/skills/change-review/references/review-method.md"
+      ]
+    }
+  ],
+  "selected_roles": [
+    {
+      "name": "quality-engineer",
+      "path": "/private/tmp/behavior-repeated-2026-10-14/review-1/instructions/roles/quality-engineer/instructions.md",
+      "reason": "Correctness, robustness, test evidence, and reproducible review findings; audit mode only."
+    }
+  ],
+  "additional_specialists": [],
+  "delegation": false,
+  "reviewed_files": [
+    "CONTRACT.md",
+    "pricing.py",
+    "display.py",
+    "checkout.py"
+  ],
+  "base": "84ab0fba8a67385ccd42ca6d3b79d8e9fb8b0d9c",
+  "findings": 2,
+  "focused_checks": {
+    "total": 7,
+    "current_passed": 3,
+    "current_failed": 4,
+    "baseline_behavior_passed": 7,
+    "exit_code": 1,
+    "note": "New checkout baseline comparison uses baseline functions' equivalent composition."
+  },
+  "runtime": {
+    "python": "3.14.7",
+    "host": null,
+    "model": null,
+    "token_usage": null,
+    "cost": null,
+    "elapsed_evaluation_time": null
+  },
+  "isolation": {
+    "separate_task_session": true,
+    "authenticated_history_isolation": null,
+    "authored_changes": false,
+    "notes": "No author diagnosis or prior findings used; host-side history isolation not verified."
+  },
+  "constraints": {
+    "workspace_and_instructions_read_only": true,
+    "no_network": true,
+    "no_commits": true,
+    "no_publication": true,
+    "excluded_sources_read": false
+  },
+  "outputs": [
+    "result.md",
+    "actions.md",
+    "selection.json"
+  ]
+}
+

@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "case_id": "reflection-evidence-boundary",
+  "deterministic_checks": {
+    "workspace_unchanged": false,
+    "instructions_unchanged": true
+  },
+  "commands": [],
+  "review_verdict": "unverified",
+  "review_note": "Artifact invariants do not grade reasoning or authenticate all actions. Review actual retained response and available action evidence separately."
+}

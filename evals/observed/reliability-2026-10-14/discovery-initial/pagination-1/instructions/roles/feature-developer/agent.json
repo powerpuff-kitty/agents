@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "feature-developer",
+  "title": "Feature Developer",
+  "description": "Implement, debug, or refactor scoped software changes and verify behavior. Use for hands-on code work, including approved audit remediation. Follow project contracts and preserve existing edits. For independent reviews, release work, visual audits, or deep profiling, use the corresponding specialist."
+}

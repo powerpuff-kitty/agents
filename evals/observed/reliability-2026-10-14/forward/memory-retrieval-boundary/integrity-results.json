@@ -1,0 +1,12 @@
+{
+  "checked_files": 6,
+  "unchanged": true,
+  "checks": {
+    "task.md": true,
+    "instructions/role.md": true,
+    "instructions/skill/SKILL.md": true,
+    "instructions/skill/references/method.md": true,
+    "instructions/skill/assets/report-template.md": true,
+    "workspace/input.json": true
+  }
+}

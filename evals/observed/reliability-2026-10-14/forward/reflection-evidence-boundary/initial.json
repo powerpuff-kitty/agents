@@ -1,0 +1,25 @@
+{
+  "format_version": 1,
+  "case_id": "reflection-evidence-boundary",
+  "role": "feature-developer",
+  "skill": "structured-reflection",
+  "workspace_sha256": {
+    "input.json": "0b7611b45216bde68ab13577d9c99ab7c50cdba24a84860b740cd034957a7ac7"
+  },
+  "instruction_sha256": {
+    "role.md": "35bfbb65be7f2fdabe38d15882deb92212aae2045444ef390c3239cf511034a9",
+    "skill/LICENSE": "da8e7b98c9f5547396031dd15ffe7a820eb8c2b9e4d1b32c9eb69bbc0d2c5af4",
+    "skill/SKILL.md": "3961d1d1ecbc574f47de4c865e77fa9f74fb7e5dccc5b739c99f2bc1322c2dca",
+    "skill/assets/report-template.md": "4be8aa486b6ff0706f5375ec092ba57dded41ff57080d2e70da20acfbc9a3255",
+    "skill/references/method.md": "002dd55c5a387fa4c1a6790b958279c9751cd0a324334b494f208d77705af10d",
+    "skill/references/protocol.md": "8a56192abc777f376ff29a8df83f9a6ffdb904cbb8cdaf7c88ddf91c7ac2ebd1",
+    "skill/tests/cases.json": "3f4af7219a9967de8d83e729e365d26881c81b8af63b0f159e71ea7893e0a4ad",
+    "skill/tests/fixtures/input.json": "0b7611b45216bde68ab13577d9c99ab7c50cdba24a84860b740cd034957a7ac7"
+  },
+  "task_sha256": "824c4a3c654be32e58bd66ccacea92ff6ccbf76c014025e3656c0a299ae1bdf3",
+  "source_revision": "2f66c70a6ba794f155f9264464227d06b4785607",
+  "instruction_mode": "explicit",
+  "skills_revision": "a4d16c0e174e911963811a088fc78cc00e9c670d",
+  "source_note": "instruction hashes include working-tree changes",
+  "initial_git_status": null
+}

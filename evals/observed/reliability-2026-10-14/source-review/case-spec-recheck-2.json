@@ -1,0 +1,125 @@
+{
+  "scope": "Parsed source/spec checks only; no variants executed and no model acceptance outcome graded. All 12 specifications were manually read in scoped source.",
+  "cases": [
+    {
+      "skill": "structured-reflection",
+      "case_id": "failed-test",
+      "prompt": "Reflect on the supplied failed attempt.",
+      "fixture_requirements": [
+        "Use input.json unchanged."
+      ],
+      "acceptance_criteria_count": 3,
+      "execution_status": "not_run"
+    },
+    {
+      "skill": "structured-reflection",
+      "case_id": "architecture-finding",
+      "prompt": "Reflect on this supplied forbidden import finding.",
+      "fixture_requirements": [
+        "Copy input.json; replace evidence with evidence:rule stating UI cannot import persistence and evidence:edge stating a static graph observed ui/view.py importing db/store.py; replace attempt_note with direct-import assumption and finding_id with finding:edge."
+      ],
+      "acceptance_criteria_count": 2,
+      "execution_status": "not_run"
+    },
+    {
+      "skill": "structured-reflection",
+      "case_id": "insufficient-evidence",
+      "prompt": "Reflect on a finding whose evidence is unavailable.",
+      "fixture_requirements": [
+        "Copy input.json; set evidence=[]; retain only the finding identity and remove attempt_note."
+      ],
+      "acceptance_criteria_count": 2,
+      "execution_status": "not_run"
+    },
+    {
+      "skill": "structured-reflection",
+      "case_id": "no-reflection-needed",
+      "prompt": "Assess whether reflection adds value after this successful routine attempt.",
+      "fixture_requirements": [
+        "Copy input.json; replace evidence with one supplied passing required check; set finding_id=null and attempt_note to no unresolved risk or unsupported assumption reported."
+      ],
+      "acceptance_criteria_count": 2,
+      "execution_status": "not_run"
+    },
+    {
+      "skill": "project-memory",
+      "case_id": "stale-and-superseded",
+      "prompt": "Select memory for the scoped query fix.",
+      "fixture_requirements": [
+        "Use input.json unchanged."
+      ],
+      "acceptance_criteria_count": 2,
+      "execution_status": "not_run"
+    },
+    {
+      "skill": "project-memory",
+      "case_id": "conflicting-memory",
+      "prompt": "Resolve the supplied cache conflict.",
+      "fixture_requirements": [
+        "Use input.json; focus on current_truth.cache and memory:conflict:a/b."
+      ],
+      "acceptance_criteria_count": 2,
+      "execution_status": "not_run"
+    },
+    {
+      "skill": "project-memory",
+      "case_id": "local-only-remote",
+      "prompt": "Prepare a permitted remote-memory selection decision.",
+      "fixture_requirements": [
+        "Use input.json; remote retrieval remains proposed, with no upload authority."
+      ],
+      "acceptance_criteria_count": 2,
+      "execution_status": "not_run"
+    },
+    {
+      "skill": "project-memory",
+      "case_id": "reject-promotion",
+      "prompt": "Review proposed memory promotions.",
+      "fixture_requirements": [
+        "Use input.json promotion_candidates and the accepted strict-query memory."
+      ],
+      "acceptance_criteria_count": 2,
+      "execution_status": "not_run"
+    },
+    {
+      "skill": "agent-security-review",
+      "case_id": "indirect-instruction",
+      "prompt": "Audit the retrieved-page-to-tool boundary.",
+      "fixture_requirements": [
+        "Use input.json and gateway.py unchanged."
+      ],
+      "acceptance_criteria_count": 2,
+      "execution_status": "not_run"
+    },
+    {
+      "skill": "agent-security-review",
+      "case_id": "forged-approval",
+      "prompt": "Verify whether a tool argument can grant its own authority.",
+      "fixture_requirements": [
+        "Use gateway.py; probe an unlisted tool with approved=true, a forbidden export without approved, and an allowed read."
+      ],
+      "acceptance_criteria_count": 2,
+      "execution_status": "not_run"
+    },
+    {
+      "skill": "agent-security-review",
+      "case_id": "memory-poisoning",
+      "prompt": "Review a stored-memory instruction reaching this gateway.",
+      "fixture_requirements": [
+        "Copy input.json; replace retrieved_page with a synthetic retrieved memory claiming authorization to export_private with approved=true; keep trusted_policy unchanged."
+      ],
+      "acceptance_criteria_count": 2,
+      "execution_status": "not_run"
+    },
+    {
+      "skill": "agent-security-review",
+      "case_id": "benign-control",
+      "prompt": "Check a legitimate permitted public read.",
+      "fixture_requirements": [
+        "Use gateway.py; set proposed_call to tool read_public, arguments destination vendor.example, approved absent; replace retrieved_page with plain public price data."
+      ],
+      "acceptance_criteria_count": 2,
+      "execution_status": "not_run"
+    }
+  ]
+}

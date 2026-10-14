@@ -1,0 +1,92 @@
+[
+  {
+    "source": "captured-recheck-2",
+    "source_sha256": "8f81be97ecfeb1bbae7467284e353f048fd98d7af78a7094d783e7fb47fd6683",
+    "case": "reflection-evidence-boundary",
+    "mode": "explicit",
+    "task_points_to_catalog": false,
+    "shared_contract_staged": false,
+    "task_mentions_operating_contract": false,
+    "catalog_instructs_shared_contract": false,
+    "artifact_checks_before_mutation": {
+      "workspace_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "detects_workspace_mutation": true
+  },
+  {
+    "source": "captured-recheck-2",
+    "source_sha256": "8f81be97ecfeb1bbae7467284e353f048fd98d7af78a7094d783e7fb47fd6683",
+    "case": "reflection-evidence-boundary",
+    "mode": "discovery",
+    "task_points_to_catalog": true,
+    "shared_contract_staged": true,
+    "task_mentions_operating_contract": true,
+    "catalog_instructs_shared_contract": true,
+    "artifact_checks_before_mutation": {
+      "workspace_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "detects_workspace_mutation": true
+  },
+  {
+    "source": "captured-recheck-2",
+    "source_sha256": "8f81be97ecfeb1bbae7467284e353f048fd98d7af78a7094d783e7fb47fd6683",
+    "case": "memory-retrieval-boundary",
+    "mode": "explicit",
+    "task_points_to_catalog": false,
+    "shared_contract_staged": false,
+    "task_mentions_operating_contract": false,
+    "catalog_instructs_shared_contract": false,
+    "artifact_checks_before_mutation": {
+      "workspace_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "detects_workspace_mutation": true
+  },
+  {
+    "source": "captured-recheck-2",
+    "source_sha256": "8f81be97ecfeb1bbae7467284e353f048fd98d7af78a7094d783e7fb47fd6683",
+    "case": "memory-retrieval-boundary",
+    "mode": "discovery",
+    "task_points_to_catalog": true,
+    "shared_contract_staged": true,
+    "task_mentions_operating_contract": true,
+    "catalog_instructs_shared_contract": true,
+    "artifact_checks_before_mutation": {
+      "workspace_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "detects_workspace_mutation": true
+  },
+  {
+    "source": "captured-recheck-2",
+    "source_sha256": "8f81be97ecfeb1bbae7467284e353f048fd98d7af78a7094d783e7fb47fd6683",
+    "case": "agent-tool-authorization-boundary",
+    "mode": "explicit",
+    "task_points_to_catalog": false,
+    "shared_contract_staged": false,
+    "task_mentions_operating_contract": false,
+    "catalog_instructs_shared_contract": false,
+    "artifact_checks_before_mutation": {
+      "workspace_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "detects_workspace_mutation": true
+  },
+  {
+    "source": "captured-recheck-2",
+    "source_sha256": "8f81be97ecfeb1bbae7467284e353f048fd98d7af78a7094d783e7fb47fd6683",
+    "case": "agent-tool-authorization-boundary",
+    "mode": "discovery",
+    "task_points_to_catalog": true,
+    "shared_contract_staged": true,
+    "task_mentions_operating_contract": true,
+    "catalog_instructs_shared_contract": true,
+    "artifact_checks_before_mutation": {
+      "workspace_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "detects_workspace_mutation": true
+  }
+]

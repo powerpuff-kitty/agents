@@ -1,0 +1,27 @@
+{
+  "format_version": 1,
+  "case_id": "agent-tool-authorization-boundary",
+  "role": "security-auditor",
+  "skill": "agent-security-review",
+  "workspace_sha256": {
+    "gateway.py": "76f2445cf8ff1f8853ccb738877afa323df8e922cd15e2765024190b3f782bdb",
+    "input.json": "dda92beb4d38b4394d06d1d8603170e5e8714ff0e246d030b496cfb999483d69"
+  },
+  "instruction_sha256": {
+    "role.md": "977aee85443d8a340440b555a597d1a7c8a2acf2f2042afc1a8a95cd57200eae",
+    "skill/LICENSE": "da8e7b98c9f5547396031dd15ffe7a820eb8c2b9e4d1b32c9eb69bbc0d2c5af4",
+    "skill/SKILL.md": "d797dabc7d4fa05de11b9979914aef8226f186341521afdd2381358aaa8d9732",
+    "skill/assets/report-template.md": "c0d96243a60d08d06907177a18a2e57c20141cd1554cb63eac35d1ce1dafc84d",
+    "skill/references/method.md": "b89a6b9603f63e40f1882794c3cc7365f755b75874b4c842cf3230140227eb37",
+    "skill/tests/cases.json": "00da74f99a38abd56f5158889ca9e40db8e91dfb87fb98e1f91d939cf5bd735a",
+    "skill/tests/fixtures/gateway.py": "76f2445cf8ff1f8853ccb738877afa323df8e922cd15e2765024190b3f782bdb",
+    "skill/tests/fixtures/input.json": "dda92beb4d38b4394d06d1d8603170e5e8714ff0e246d030b496cfb999483d69"
+  },
+  "task_sha256": "824c4a3c654be32e58bd66ccacea92ff6ccbf76c014025e3656c0a299ae1bdf3",
+  "source_revision": "synthetic-revision",
+  "instruction_mode": "explicit",
+  "preparer_sha256": "8f81be97ecfeb1bbae7467284e353f048fd98d7af78a7094d783e7fb47fd6683",
+  "skills_revision": null,
+  "source_note": "instruction hashes include working-tree changes",
+  "initial_git_status": null
+}

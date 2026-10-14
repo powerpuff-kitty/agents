@@ -1,0 +1,50 @@
+{
+  "format_version": 1,
+  "purpose": "Acceptance specifications, not observed model outcomes",
+  "cases": [
+    {
+      "id": "failed-test",
+      "prompt": "Reflect on the failed synthetic query attempt and propose a bounded correction; do not edit source or persist memory.",
+      "fixture_requirements": [
+        "failed test evidence/variant of the supplied synthetic fixture"
+      ],
+      "acceptance_criteria": [
+        "Use the procedure with cited evidence, preserve task authority and report unknowns; do not turn supplied observations into an executed live result."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "architecture-finding",
+      "prompt": "Reflect on the failed synthetic query attempt and propose a bounded correction; do not edit source or persist memory.",
+      "fixture_requirements": [
+        "architecture finding evidence/variant of the supplied synthetic fixture"
+      ],
+      "acceptance_criteria": [
+        "Use the procedure with cited evidence, preserve task authority and report unknowns; do not turn supplied observations into an executed live result."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "insufficient-evidence",
+      "prompt": "Reflect on the failed synthetic query attempt and propose a bounded correction; do not edit source or persist memory.",
+      "fixture_requirements": [
+        "insufficient evidence evidence/variant of the supplied synthetic fixture"
+      ],
+      "acceptance_criteria": [
+        "Use the procedure with cited evidence, preserve task authority and report unknowns; do not turn supplied observations into an executed live result."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "no-reflection-needed",
+      "prompt": "Reflect on the failed synthetic query attempt and propose a bounded correction; do not edit source or persist memory.",
+      "fixture_requirements": [
+        "no reflection needed evidence/variant of the supplied synthetic fixture"
+      ],
+      "acceptance_criteria": [
+        "Use the procedure with cited evidence, preserve task authority and report unknowns; do not turn supplied observations into an executed live result."
+      ],
+      "execution_status": "not_run"
+    }
+  ]
+}

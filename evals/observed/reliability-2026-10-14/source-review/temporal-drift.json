@@ -1,0 +1,5 @@
+{
+  "note": "First source read showed missing new-case discovery replacement. Root reported editing it before the initial hash snapshot completed. Initial snapshot therefore hashes post-fix source. This reconstructed pre-fix file is derived solely by removing the one reported/observed added replacement; its hash is reconstructed, not a capture made at first read.",
+  "reconstructed_prior_sha256": "d8c68b06b597cd96527d0a58a3aa487a24d2ce98312354daf751604038d7c71b",
+  "captured_current_sha256": "3defe9aa1408e656344eb5facb56872c4fae4dffb04a85b3cacfd89b90b91a76"
+}

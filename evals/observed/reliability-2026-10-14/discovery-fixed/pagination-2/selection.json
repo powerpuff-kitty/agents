@@ -1,0 +1,43 @@
+{
+  "route": "shared-contract",
+  "task": "Fix pagination boundary defect and preserve pending label edit",
+  "shared_contract": "instructions/operating-contract.md",
+  "catalog": "instructions/catalog.md",
+  "roles": [
+    {
+      "name": "feature-developer",
+      "path": "instructions/roles/feature-developer/instructions.md",
+      "reason": "Scoped implementation, debugging, verification, and preservation of existing edits."
+    }
+  ],
+  "skills": [
+    {
+      "name": "systematic-debugging",
+      "path": "instructions/skills/systematic-debugging/SKILL.md",
+      "reason": "Reproduce the reported boundary defect, locate its cause, and verify the authorized correction."
+    },
+    {
+      "name": "test-engineering",
+      "path": "instructions/skills/test-engineering/SKILL.md",
+      "reason": "Use existing regression tests and add public-behavior checks for adjacent pagination boundaries.",
+      "references": ["instructions/skills/test-engineering/references/test-design.md"]
+    },
+    {
+      "name": "structured-reflection",
+      "path": "instructions/skills/structured-reflection/SKILL.md",
+      "reason": "Selected after two observed baseline failures, as required by the shared contract; record a bounded correction and actual rechecks.",
+      "references": [
+        "instructions/skills/structured-reflection/references/method.md",
+        "instructions/skills/structured-reflection/assets/report-template.md"
+      ]
+    }
+  ],
+  "not_selected": [
+    {"name": "api-design", "reason": "This is a local implementation defect, not an API design artifact."},
+    {"name": "change-review", "reason": "No independent review was requested; final inspection is developer self-review."},
+    {"name": "team-lead", "reason": "Standalone fixture task; no delegation authorized."}
+  ],
+  "host": "unknown",
+  "model": "unknown",
+  "usage": "unknown"
+}

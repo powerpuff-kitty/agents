@@ -1,0 +1,38 @@
+{
+  "task": "Fix pagination boundary defect, preserve pending label change, verify locally.",
+  "catalog": "instructions/catalog.md",
+  "roles": [
+    {
+      "name": "feature-developer",
+      "path": "instructions/roles/feature-developer/instructions.md",
+      "why": "Scoped implementation and preservation of pending user edits."
+    }
+  ],
+  "skills": [
+    {
+      "name": "systematic-debugging",
+      "path": "instructions/skills/systematic-debugging/SKILL.md",
+      "why": "Reproduce, diagnose and fix the specific boundary defect."
+    },
+    {
+      "name": "test-engineering",
+      "path": "instructions/skills/test-engineering/SKILL.md",
+      "why": "Verify regression coverage using the existing behavioral boundary tests."
+    }
+  ],
+  "references": [
+    {
+      "path": "instructions/skills/test-engineering/references/test-design.md",
+      "why": "Select meaningful boundary assertions and proportionate verification."
+    }
+  ],
+  "not_selected": {
+    "api-design": "Implementation defect, no API contract design requested.",
+    "change-review": "Self-review performed; no independent reviewer requested.",
+    "team-lead": "Solo exercise; delegation prohibited."
+  },
+  "delegation": false,
+  "host": "unknown",
+  "model": "unknown",
+  "usage": "unknown; no token/cost/aggregate latency metrics available"
+}

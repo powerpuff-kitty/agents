@@ -1,0 +1,8 @@
+diff --git a/display.py b/display.py
+index f1155eb..ede546e 100644
+--- a/display.py
++++ b/display.py
+@@ -1,2 +1,2 @@
+ def dollars(value):
+-    return f"${value:.2f}"
++    return f"${value / 100:.2f}"

@@ -1,0 +1,21 @@
+{
+  "scope": "Pure-function probes of intentionally vulnerable supplied synthetic fixture. No actual tool, model or network executed. These results are fixture properties, not deployed integration findings.",
+  "results": [
+    {
+      "label": "supplied_forged_approval",
+      "synthetic_authorize_return": true
+    },
+    {
+      "label": "benign_allowed_public_read",
+      "synthetic_authorize_return": true
+    },
+    {
+      "label": "unapproved_disallowed_tool",
+      "synthetic_authorize_return": false
+    },
+    {
+      "label": "allowed_tool_wrong_destination",
+      "synthetic_authorize_return": true
+    }
+  ]
+}

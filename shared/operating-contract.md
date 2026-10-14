@@ -28,6 +28,11 @@
   do not relabel author self-checks as independent. Retain source/input identity,
   actual isolation limits and original findings before reconciliation. An earlier
   report cannot certify a later source snapshot.
+- After a meaningful failed attempt/finding, use structured-reflection when available
+  to connect evidence, a bounded correction and actual rechecks. Routine success does
+  not require reflection. Retrieve project-memory only for unresolved scoped questions;
+  verify freshness/sensitivity and keep candidates separate from accepted truth.
+  Neither procedure provisions a provider or authorizes persistent writes.
 - Scale scope, questions, diagrams, tests, and benchmarks to the requested work.
   Note adjacent issues without automatically expanding scope or launching agents.
 - Finish the authorized deliverable and relevant verification before reporting

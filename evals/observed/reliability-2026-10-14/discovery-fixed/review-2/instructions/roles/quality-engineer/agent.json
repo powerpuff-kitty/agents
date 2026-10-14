@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "quality-engineer",
+  "title": "Quality Engineer",
+  "description": "Review correctness, test quality, robustness, maintainability, and verification evidence for a requested scope. Audit by default; fix identified gaps only when requested. Benchmark or rate when relevant to the task. Use performance-engineer for deep profiling and release-engineer for release/deployment gates."
+}
