@@ -138,4 +138,8 @@ auto-installer or model runtime is embedded in a profile export.
 
 Authored sources and tooling are MIT-licensed under the root [LICENSE](../LICENSE).
 The source CI validates contracts, deterministic rendering and isolated installation
-behavior; it does not establish host loading, model outcomes or production readiness.
+behavior. A separate native-host job uses this repository's own integrity-pinned
+host fetcher and disposable-server probe to check current profiles and command
+names without installing skills or checking out the CLI. CI does not establish
+model outcomes or production readiness. Optional cross-catalog documentation
+checks accept an explicit Skills checkout; default checks need only this repository.

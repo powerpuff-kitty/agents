@@ -29,7 +29,10 @@ truth or an autonomous agent runtime.
   can establish behavioral outcomes; deterministic validators must not claim them.
 - Authored profiles and tooling use the root MIT [LICENSE](LICENSE).
   [INSTALL.md](INSTALL.md) owns the copyable installation prompt; installing
-  profiles and installing skills are separate scopes.
+  profiles and installing skills are separate scopes. Installation, default
+  validation and native-host CI must work without a CLI or Skills checkout;
+  keep optional cross-catalog checks explicit and downstream integration pins
+  owned by their consumer.
 - Follow [README.md](README.md) for usage, [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
   for source/adapter boundaries, [docs/FINANCE.md](docs/FINANCE.md) for finance
   scope and worked examples, [docs/CRYPTO.md](docs/CRYPTO.md) and

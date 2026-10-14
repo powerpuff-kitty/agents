@@ -1,7 +1,9 @@
 # Install agent profiles
 
 This source owns reusable roles and team workflows. Its adapters render portable
-Markdown or OpenCode profiles; they do not install skills or provide a model runtime.
+Markdown or OpenCode profiles. Installation needs Git, Python 3.10+ and the
+selected host; it needs no Harness CLI, Harness project or Skills checkout.
+Profiles do not install skills or provide a model runtime.
 See [role-to-skill guidance](docs/SKILLS.md) for the independent procedure source.
 
 ## Copyable installation prompt
@@ -18,7 +20,8 @@ source revision. Verify Python 3.10+ and the installed OpenCode executable. Revi
 canonical roles, teams, selected packs and the local installer before running it.
 Install all packs unless I named a smaller selection. Use the repository's existing
 OpenCode installer with --dry-run first, inspect the exact destinations/conflicts,
-then apply the already authorized installation when preflight succeeds.
+then apply the already authorized installation when preflight succeeds. Do not
+install the Harness CLI or Skills collection as a prerequisite.
 
 Preserve unrelated profiles, commands, permissions and customized files. Do not
 use --replace automatically, delete old profiles or switch scope to bypass a

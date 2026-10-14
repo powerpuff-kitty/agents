@@ -7,8 +7,13 @@ installation of one collection never installs the other or grants permissions.
 [Skills](https://github.com/powerpuff-kitty/ai-skills) keeps self-contained folders at
 its root. Each includes SKILL.md, a license and local resources. Its
 [installation guide](https://github.com/powerpuff-kitty/ai-skills/blob/main/INSTALL.md)
-owns native discovery paths and the optional CLI lifecycle. `ah skills list`
-reports the embedded revision and domain membership; source folder layout stays flat.
+owns direct-folder installation, updates and native discovery paths. No CLI or
+second checkout is needed to install or use the profiles in this repository.
+
+The domains below are optional grouping suggestions also offered by the separate
+CLI installer; they are not required installation units. Direct installs select
+individual root folders. If choosing the CLI, `ah skills list` reports its bundled
+revision and domain membership; source folder layout stays flat.
 
 ## Optional domain recommendations
 

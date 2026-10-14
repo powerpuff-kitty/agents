@@ -32,34 +32,17 @@ jobs:
 
   native-host:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: agents
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-        with:
-          path: agents
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-        with:
-          repository: powerpuff-kitty/agentic-harness-cli
-          ref: 7dfebeb7b4b66a829602b8b67f2e4eebb98f60e3
-          path: tools
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-        with:
-          repository: powerpuff-kitty/ai-skills
-          ref: 2c3c4d482e2cddf3da1c81d6c90da6ba0193f985
-          path: skill-source
-      - name: Build current profiles and check both catalogs
-        run: |
-          python3 scripts/build.py --adapter opencode
-          python3 scripts/check_docs.py --skills-source ../skill-source
+      - name: Build current profiles
+        run: python3 scripts/build.py --adapter opencode
       - name: Fetch integrity-pinned OpenCode host
-        run: python3 ../tools/scripts/fetch-opencode.py --output "$RUNNER_TEMP/opencode" > host-download.json
-      - name: Verify native skill, profile and command registration
-        run: python3 ../tools/scripts/opencode_skill_probe.py --opencode "$RUNNER_TEMP/opencode" --expected-version 2.0.27 --source ../skill-source --agents-export dist/opencode > native-host.json
+        run: python3 scripts/fetch-opencode.py --output "$RUNNER_TEMP/opencode" > host-download.json
+      - name: Verify native profile and command registration without skills
+        run: python3 scripts/opencode_probe.py --opencode "$RUNNER_TEMP/opencode" --expected-version 2.0.27 --agents-export dist/opencode > native-host.json
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: native-host-evidence
           path: |
-            agents/host-download.json
-            agents/native-host.json
+            host-download.json
+            native-host.json

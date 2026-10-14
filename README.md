@@ -7,6 +7,8 @@
 34 specialists and 1 team lead share a portable operating contract. The catalog
 contains **35 profiles, 20 team workflows and 7 optional packs**. OpenCode adapters
 produce named profiles and commands; portable exports provide plain Markdown.
+Install, build, validate and update this repository independently with Git and
+Python 3.10+. No Harness CLI, Harness project or Skills checkout is required.
 
 ## Install
 

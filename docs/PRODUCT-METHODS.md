@@ -20,9 +20,9 @@ remain separate for [profiles](../INSTALL.md) and
 Read only relevant method references; the skill owns its procedure and report
 template. Profiles continue with feasible native methods if the skill is absent,
 and identify unavailable tools or evidence. They never silently install skills.
-The CLI supports an `analytics` domain plus existing engineering, product-design
-and content-growth groups; folders remain flat and individual selection is allowed.
-Use `ah skills list` to verify the embedded revision before choosing a group.
+Install only the desired skill folders directly from the Skills repository.
+The optional CLI also offers domain presets; its embedded revision can lag the
+source. See [installation channels](DISTRIBUTION.md) before choosing a manager.
 
 ## Use
 

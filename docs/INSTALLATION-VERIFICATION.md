@@ -12,21 +12,30 @@ starting a fresh standalone server can repeat the empty snapshot. Native folders
 need no skill adapter. Use current [V2 skill documentation](https://opencode.ai/v2/docs/skills/),
 which is separate from V1 configuration documentation.
 
-Reproduce from a CLI checkout with its pinned Skills source and an Agents checkout:
+Check profiles independently from this Agents checkout with an explicit host:
 
 ```sh
 python3 scripts/build.py --adapter opencode
-# Run from the CLI checkout; pass the actual export path.
-python3 scripts/opencode_skill_probe.py --opencode /absolute/path/to/opencode --agents-export /path/to/agents/dist/opencode
+python3 scripts/opencode_probe.py --opencode /absolute/path/to/opencode --expected-version 2.0.27 --agents-export dist/opencode
 ```
+
+The probe uses a disposable project, home/configuration directories and a private
+persistent server. It checks complete profile bodies and command names without a
+Skills or CLI checkout, installing skills, or invoking a model. The earlier combined
+Skills/Agents observations above remain evidence for their recorded revisions.
+A separate 2026-10-14 run of this profile-only probe registered all 35 prompts
+and 20 command names on OpenCode v2.0.27 without installing any skills.
 
 The latest [native registry evidence](../evals/observed/reliability-2026-10-14/native-host.json)
 and [source identities](../evals/observed/reliability-2026-10-14/source-inputs.json)
 identify the reliability-method run. Earlier [design-extraction evidence](../evals/observed/design-extraction-2026-10-14/native-host.json)
 remains historical. This verifies registered content, not model adherence,
 team scheduling or all host versions. The native-host CI job fetches the exact integrity-pinned OpenCode 2.0.27 package
-and checks current source exports plus a pinned Skills snapshot without model calls.
-The workflow pins its shared probe/tooling revision separately.
+and checks current source exports without model calls. The host package lock,
+fetcher and profile probe live in this repository. No cross-repository checkout or
+coordinated release is needed. The Linux fetcher verifies the locked archive
+integrity before extracting its single executable; on other platforms pass an
+existing supported executable explicitly.
 
 Individual profile/team selection has deterministic regression coverage for exact
 rosters, coordinator inclusion, deduplication and unknown-ID refusal before writes.
