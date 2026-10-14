@@ -74,7 +74,8 @@ python3 -m unittest discover -s tests -v
 
 Native registration was checked with OpenCode v2.0.27. [Verification evidence](docs/INSTALLATION-VERIFICATION.md)
 separates loaded content from model outcomes; [evaluations](evals/README.md) explain
-observed runs and cases that remain unexecuted. Other host versions need their own checks.
+observed runs and cases that remain unexecuted. [Fresh independent reviews](docs/FRESH-REVIEWS.md)
+use separate reviewer sessions without inherited author conversation. Other host versions need their own checks.
 
 Browse the [role catalog](docs/CATALOG.md), [teams](docs/TEAMS.md),
 [packs](docs/PACKS.md), [finance](docs/FINANCE.md), [crypto](docs/CRYPTO.md),

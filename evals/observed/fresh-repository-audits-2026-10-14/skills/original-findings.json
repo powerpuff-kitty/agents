@@ -1,0 +1,45 @@
+{
+  "revision": "4eb646c4700698fe297f04cadcd2737bc0717cdd",
+  "findings": [
+    {
+      "id": "F1",
+      "priority": "P2",
+      "severity": "medium",
+      "confidence": "high",
+      "path": "agentic-improvement/scripts/compact_log.py",
+      "line": 129,
+      "title": "Self-referential serialized byte accounting can oscillate and abort valid logs",
+      "evidence": "/private/tmp/fresh-skills-audit-evidence/compact-default-repro.json"
+    },
+    {
+      "id": "F2",
+      "priority": "P2",
+      "severity": "medium",
+      "confidence": "high",
+      "path": "agentic-improvement/tests/test_source_excerpts.py",
+      "line": 30,
+      "title": "Raw default temporary paths break success-path tests on macOS",
+      "evidence": "/private/tmp/fresh-skills-audit-evidence/check-1.log"
+    },
+    {
+      "id": "F3",
+      "priority": "P3",
+      "severity": "low",
+      "confidence": "high",
+      "path": "adapter-sync/tests/validate_adapter_assets.py",
+      "line": 111,
+      "title": "Repository asset loader filters out unexpected files before inventory validation",
+      "evidence": "/private/tmp/fresh-skills-audit-evidence/adapter-extra-asset-repro.json"
+    },
+    {
+      "id": "F4",
+      "priority": "P3",
+      "severity": "low",
+      "confidence": "high within snapshot",
+      "path": "design-analysis/references/enrichment.md",
+      "line": 34,
+      "title": "Guide claims a repository enrichment evaluator absent from the distribution",
+      "evidence": "Full tracked-file inventory and design-analysis directory inventory"
+    }
+  ]
+}

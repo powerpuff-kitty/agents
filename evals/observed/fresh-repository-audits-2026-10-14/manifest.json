@@ -1,0 +1,108 @@
+{
+  "format_version": 1,
+  "kind": "observed-independent-repository-audits",
+  "date": "2026-10-14",
+  "canonical_behavior_cases_executed": 0,
+  "invocation_provenance": {
+    "source": "coordinator collaboration.spawn_agent tool calls in this session",
+    "fork_turns": "none",
+    "reviewer_model_identity": "not exposed",
+    "limits": "Host-requested conversation isolation; not an authenticated exhaustive access trace. Project rules, task brief and raw repository evidence were available."
+  },
+  "reviews": [
+    {
+      "repository": "powerpuff-kitty/skills",
+      "commit": "4eb646c4700698fe297f04cadcd2737bc0717cdd",
+      "reviewer": "/root/fresh_audit_skills",
+      "source": "detached, clean tracked worktree",
+      "original_report": "skills/original-report.md",
+      "original_brief": "skills/original-brief.txt",
+      "findings": "skills/original-findings.json"
+    },
+    {
+      "repository": "powerpuff-kitty/agents",
+      "commit": "f374ffbb543595486c8c5145884c123d77e88020",
+      "reviewer": "/root/fresh_audit_agents",
+      "source": "detached, clean tracked worktree",
+      "original_report": "agents/original-report.md",
+      "original_brief": "agents/original-brief.txt",
+      "findings": "agents/original-findings.json"
+    }
+  ],
+  "triage": [
+    {
+      "id": "F1",
+      "status": "confirmed, fixed",
+      "change": "Monotone full-record byte accounting with explicit padding prevents digit/boolean oscillation.",
+      "verification": "Original CLI reproduction fails baseline and passes fix with exact byte count and round-trip; decimal/budget sweep regression."
+    },
+    {
+      "id": "F2",
+      "status": "confirmed, fixed",
+      "change": "Resolve only test-owned normal temporary fixture roots; retain deliberate link-refusal paths.",
+      "verification": "155 agentic-improvement tests and 34 decision tests pass with default macOS temp directory and explicitly linked temp alias; compiler class skipped."
+    },
+    {
+      "id": "F3",
+      "status": "confirmed, fixed",
+      "change": "Compare disk asset names with reviewed inventory before reading known assets.",
+      "verification": "Copied-bundle unknown non-UTF-8 file rejected through public validate_repository entrypoint; 24 adapter tests pass."
+    },
+    {
+      "id": "F4",
+      "status": "confirmed, fixed",
+      "change": "Replace absent-evaluator claim with acceptance cases and explicit absence of bundled evaluator/observed pass.",
+      "verification": "Source/inventory inspection; no model behavior or new evaluator claimed."
+    },
+    {
+      "id": "A1",
+      "status": "confirmed, fixed",
+      "change": "Explicit UTF-8 for script source and artifact text I/O.",
+      "verification": "Regression runs build, validate and check_docs under forced ASCII locale."
+    },
+    {
+      "id": "A2",
+      "status": "confirmed, fixed",
+      "change": "Export LICENSE and install managed .agents-LICENSE notices in populated destinations.",
+      "verification": "Both adapter exports and profile/team install notice bytes/hashes tested; native host loads only expected Markdown entries."
+    },
+    {
+      "id": "A3",
+      "status": "confirmed, fixed",
+      "change": "Generate and compare exact UTF-8 bytes.",
+      "verification": "CRLF mutation rejected by --check; both clean adapters pass --check."
+    },
+    {
+      "id": "A4",
+      "status": "confirmed, fixed",
+      "change": "Preserve existing management-state mode on atomic replacement.",
+      "verification": "0600 retained across selection update on POSIX."
+    }
+  ],
+  "verification_limits": [
+    "These repository reviews did not execute the 4 new canonical fresh-review behavior specifications or 3 new skill case specifications.",
+    "Native host registration does not prove model routing or behavior.",
+    "Python 3.10, Windows, other hosts and real TypeScript compiler integration were not locally exercised.",
+    "Original reports describe original snapshots; remediation checks and later focused reviews cover separately identified changed source."
+  ],
+  "remediation_reviews": [
+    {
+      "reviewer": "/root/review_skills_changes",
+      "fork_turns": "none",
+      "report": "skills/change-review.md",
+      "brief": "skills/change-review-brief.txt",
+      "inputs": "skills/change-review-inputs.json",
+      "outcome": "no actionable regression confirmed",
+      "scope": "separate fresh-session review of changed working-tree inputs; see file hashes and limits"
+    },
+    {
+      "reviewer": "/root/review_agents_changes",
+      "fork_turns": "none",
+      "report": "agents/change-review.md",
+      "brief": "agents/change-review-brief.txt",
+      "inputs": "agents/change-review-inputs.json",
+      "outcome": "no actionable regression confirmed",
+      "scope": "separate fresh-session review of changed working-tree inputs; see file hashes and limits"
+    }
+  ]
+}

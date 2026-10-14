@@ -68,8 +68,9 @@ An adapter directory contains:
   returning relative output paths and their UTF-8 text.
 
 The shared compiler validates canonical metadata, invokes the selected renderer,
-and creates a manifest with input and output hashes. Builds have no timestamps or
-machine-specific paths. `--check` detects missing, stale, or altered outputs.
+and creates a manifest with input and output hashes. Builds use explicit UTF-8/LF bytes with no timestamps or machine-specific paths.
+Every export includes the root MIT LICENSE; the manifest hashes both license input
+and output. Freshness checks compare exact bytes, including line endings. `--check` detects missing, stale, or altered outputs.
 Unexpected output files are not silently deleted.
 
 OpenCode maps the neutral description to folded YAML and selects `mode: all` for
@@ -91,7 +92,9 @@ is appropriate; otherwise document manual loading explicitly.
 
 Installation compiles from current sources, checks all known conflicts in both
 profile and command destinations before writing either, backs up changed existing
-files, and writes individual files atomically.
+files, and writes individual files atomically. Each populated installed destination
+retains a managed `.agents-LICENSE` notice. Existing management-state permissions
+are preserved on updates.
 The local management state records installed hashes so subsequent changes to a
 managed profile are recognized as user edits. `--replace` is an explicit request
 to back up and overwrite conflicts. Unrelated profiles and commands are preserved and stale

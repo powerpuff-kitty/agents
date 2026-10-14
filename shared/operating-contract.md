@@ -24,6 +24,10 @@
 - Report source-confirmed, measured, and heuristic claims distinctly. Cite exact
   locations and reproducible checks. Redact credentials and sensitive data; use
   synthetic fixtures. Unavailable evidence stays unverified, not passed or failed.
+- Independent reviews use a separate reviewer context when supported and scoped;
+  do not relabel author self-checks as independent. Retain source/input identity,
+  actual isolation limits and original findings before reconciliation. An earlier
+  report cannot certify a later source snapshot.
 - Scale scope, questions, diagrams, tests, and benchmarks to the requested work.
   Note adjacent issues without automatically expanding scope or launching agents.
 - Finish the authorized deliverable and relevant verification before reporting

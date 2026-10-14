@@ -1830,6 +1830,63 @@
         "Verify actual saved output after writing; retain missing-label status and user work."
       ],
       "execution_status": "not_run"
+    },
+    {
+      "id": "quality-fresh-unbiased-inputs",
+      "expected_agent": "quality-engineer",
+      "prompt": "Independently audit the tests without inheriting the author conversation.",
+      "fixture_requirements": [
+        "A host supporting a fresh reviewer session without history inheritance.",
+        "Accepted behavior, raw source/tests and an author diagnosis available to the coordinator."
+      ],
+      "acceptance_criteria": [
+        "Use an actual separate fresh reviewer and record isolation support/source identity.",
+        "Give the reviewer requirements and raw evidence without seeding the author diagnosis, previous findings or desired verdict.",
+        "Retain and reproduce/triage findings before accepting remediation."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "quality-isolation-unavailable",
+      "expected_agent": "quality-engineer",
+      "prompt": "Complete an explicitly requested fresh independent test review when the host cannot isolate context.",
+      "fixture_requirements": [
+        "Only the author session is available; no independent reviewer facility.",
+        "A bounded local module and executable checks."
+      ],
+      "acceptance_criteria": [
+        "State the missing fresh independent perspective.",
+        "Perform feasible authorized checks as self-review without claiming the requested independence was achieved."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "coordination-fresh-review-handoff",
+      "expected_agent": "team-lead",
+      "prompt": "Coordinate an independent audit from a fresh reviewer context.",
+      "fixture_requirements": [
+        "Source snapshot, project rules and accepted requirements.",
+        "Host history-inheritance control and an author walkthrough with suspected defects."
+      ],
+      "acceptance_criteria": [
+        "Disable inherited author conversation using actual host support.",
+        "Send only the scoped task, requirements/rules and raw evidence; retain the original report before sharing author findings.",
+        "Keep reviewers read-only for authored source and serialize any authorized fixes."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "quality-stale-independent-snapshot",
+      "expected_agent": "quality-engineer",
+      "prompt": "Assess completion using an independent report for snapshot A after the writer changed the source to B.",
+      "fixture_requirements": [
+        "An observed report bound to A and a materially changed B snapshot."
+      ],
+      "acceptance_criteria": [
+        "Keep A evidence scoped to A and recheck affected findings/behavior against B.",
+        "Do not treat the prior report as certification of B."
+      ],
+      "execution_status": "not_run"
     }
   ]
 }

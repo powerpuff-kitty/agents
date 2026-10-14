@@ -1,0 +1,67 @@
+{
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.7-arm64-arm-64bit-Mach-O",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "agentic-improvement/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit": 1,
+      "log": "/private/tmp/fresh-skills-audit-evidence/check-1.log",
+      "tail": "run.stderr)\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 2 != 0 : b'{\"kind\":\"source-excerpt-error\",\"code\":\"invalid-or-stale-input\"}\\n'\n\n======================================================================\nFAIL: test_recorded_synthetic_measurements_match_actual_stdout (test_source_excerpts.SourceExcerpts.test_recorded_synthetic_measurements_match_actual_stdout)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py\", line 267, in test_recorded_synthetic_measurements_match_actual_stdout\n    self.assertEqual(run.returncode, 0, run.stderr)\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 2 != 0 : b'{\"kind\":\"source-excerpt-error\",\"code\":\"invalid-or-stale-input\"}\\n'\n\n----------------------------------------------------------------------\nRan 154 tests in 3.648s\n\nFAILED (failures=13, errors=33, skipped=1)\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "decision-intelligence/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit": 1,
+      "log": "/private/tmp/fresh-skills-audit-evidence/check-2.log",
+      "tail": "ision_graph_review.py\", line 258, in test_actual_blocked_and_invalid_exit_codes\n    self.assertEqual(run.returncode, 1)\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nAssertionError: 2 != 1\n\n======================================================================\nFAIL: test_actual_copied_helper_subprocess_and_no_writes (test_decision_graph_review.DecisionGraphReview.test_actual_copied_helper_subprocess_and_no_writes)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/private/tmp/independent-audit-skills/decision-intelligence/tests/test_decision_graph_review.py\", line 245, in test_actual_copied_helper_subprocess_and_no_writes\n    self.assertEqual(run.returncode, 0, run.stderr)\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 2 != 0 : b'{\"code\":\"linked-parent\",\"kind\":\"decision-graph-review-error\"}\\n'\n\n----------------------------------------------------------------------\nRan 34 tests in 0.155s\n\nFAILED (failures=2)\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "adapter-sync/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit": 0,
+      "log": "/private/tmp/fresh-skills-audit-evidence/check-3.log",
+      "tail": "ed_profile_is_opt_in (test_adapter_assets.AdapterAssetsTests.test_scoped_profile_is_opt_in) ... ok\ntest_scoped_rule_cannot_become_always_on (test_adapter_assets.AdapterAssetsTests.test_scoped_rule_cannot_become_always_on) ... ok\ntest_self_hosting_import_matches_distribution (test_adapter_assets.AdapterAssetsTests.test_self_hosting_import_matches_distribution) ... ok\ntest_settings_hooks_and_override_targets_are_not_permitted (test_adapter_assets.AdapterAssetsTests.test_settings_hooks_and_override_targets_are_not_permitted) ... ok\ntest_shared_rule_guidance_cannot_diverge_silently (test_adapter_assets.AdapterAssetsTests.test_shared_rule_guidance_cannot_diverge_silently) ... ok\ntest_shipped_bundle_is_valid (test_adapter_assets.AdapterAssetsTests.test_shipped_bundle_is_valid) ... ok\ntest_unlisted_asset_is_rejected (test_adapter_assets.AdapterAssetsTests.test_unlisted_asset_is_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 23 tests in 0.006s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "adapter-sync/tests/validate_adapter_assets.py"
+      ],
+      "exit": 0,
+      "log": "/private/tmp/fresh-skills-audit-evidence/check-4.log",
+      "tail": "Native adapter assets valid; host execution and instruction adherence remain unverified\n"
+    }
+  ]
+}

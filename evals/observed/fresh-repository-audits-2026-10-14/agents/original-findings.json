@@ -1,0 +1,41 @@
+{
+  "revision": "f374ffbb543595486c8c5145884c123d77e88020",
+  "snapshot": "/private/tmp/independent-audit-agents",
+  "findings": [
+    {
+      "id": "A1",
+      "priority": "P2",
+      "title": "Source decoding depends on locale",
+      "path": "scripts/build.py",
+      "line": 36,
+      "confidence": "high"
+    },
+    {
+      "id": "A2",
+      "priority": "P2",
+      "title": "Exports and installations omit source license notice",
+      "path": "scripts/install.py",
+      "line": 105,
+      "confidence": "high"
+    },
+    {
+      "id": "A3",
+      "priority": "P3",
+      "title": "Build check passes despite output-byte hash mismatch",
+      "path": "scripts/build.py",
+      "line": 293,
+      "confidence": "high"
+    },
+    {
+      "id": "A4",
+      "priority": "P3",
+      "title": "State updates widen existing restricted mode",
+      "path": "scripts/install.py",
+      "line": 92,
+      "confidence": "high"
+    }
+  ],
+  "report": "/private/tmp/fresh-agents-audit-report.md",
+  "reproductions": "/private/tmp/fresh-agents-audit-repros.py",
+  "source_modified": false
+}

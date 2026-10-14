@@ -41,7 +41,7 @@ class WorkflowTests(unittest.TestCase):
             result = run("install.py", "--target", target, "--dry-run")
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertFalse(target.exists())
-            self.assertEqual(len(json.loads(result.stdout)["changed"]), 54)
+            self.assertEqual(len(json.loads(result.stdout)["changed"]), 56)
             self.assertFalse((Path(temporary) / "commands").exists())
 
     def test_install_preserves_other_profiles_and_is_idempotent(self):
@@ -181,7 +181,7 @@ class WorkflowTests(unittest.TestCase):
             base = Path(temporary)
             result = run("install.py", "--target", base / "profiles", "--agents-only")
             self.assertEqual(result.returncode, 0, result.stderr)
-            self.assertEqual(len(json.loads(result.stdout)["changed"]), 34)
+            self.assertEqual(len(json.loads(result.stdout)["changed"]), 35)
             self.assertFalse((base / "commands").exists())
 
     def test_nested_profile_and_command_destinations_are_rejected(self):
@@ -386,7 +386,7 @@ class WorkflowTests(unittest.TestCase):
             self.assertFalse(target.exists())
             first = run("install.py", "--target", target, "--pack", "core")
             self.assertEqual(first.returncode, 0, first.stderr)
-            self.assertEqual(len(json.loads(first.stdout)["changed"]), 23)
+            self.assertEqual(len(json.loads(first.stdout)["changed"]), 25)
             self.assertFalse((target / "scientist.md").exists())
             more = run("install.py", "--target", target, "--pack", "game-3d")
             self.assertEqual(more.returncode, 0, more.stderr)

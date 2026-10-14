@@ -1,0 +1,23 @@
+{
+  "head": "f374ffbb543595486c8c5145884c123d77e88020",
+  "changed_working_tree_sha256": {
+    "INSTALL.md": "bc3845168e833d898c4d6220cad642cfdb5edabc93a370444f0bc42b083c6d0f",
+    "agents/quality-engineer/instructions.md": "fa60df70cd2b4613c1221d49af2e3ccf2f8c2d9f312c176ae1da1bcf752c3419",
+    "agents/team-lead/instructions.md": "55f4b7395679f7e8358e8fdd6743604aed528a31af8dd64ffd80049fed6badb3",
+    "docs/ARCHITECTURE.md": "957897b9e94d93233c7ff2bd145ea0a24b0e15eea78e4a09ac3dbde0780aebd7",
+    "docs/FRESH-REVIEWS.md": "115d4eb3eca975ec7ad2f7d2e0516408ed92fd15b2e45731ed38e3fd8a1d0795",
+    "docs/INSTALLATION-VERIFICATION.md": "14c9a8eed5a543ae2046786ee6394335a3ff40eb7b7fa866d79dff4563cf6fec",
+    "docs/PACKS.md": "0f2e18248a713629a8334c367c9fc7f8664463664522778ab39f86c56a1da38e",
+    "docs/TEAMS.md": "0b6ca5ef3e87bfd2a432f4b170dcec09e9b2144a574b31a9a64cfc2455c8e5e4",
+    "evals/README.md": "1d5c21c7d6118033ee78d3c082119d29efc23da35a7e35941297a1ab519fecc2",
+    "evals/behavior-cases.json": "28c36714b75699ba191b5fe40904687730eaacc19d1d16c978e14d4a5a1cdfcd",
+    "scripts/behavior_eval.py": "9c78053353ed177bd7da67b816e91ef7e13107737d7a1e37203d13b1309bd07e",
+    "scripts/build.py": "8c6a077ed7ce44999871c941b0bd2f1039f79c4ed9b730cfe7a57c216328fe83",
+    "scripts/check_docs.py": "9b1992638d0d67e21b4b3d80bec8402faba1180504fd00cea4e06c6117b6584b",
+    "scripts/install.py": "1fc062c74d60ece3be91b926082576021cba03fa9d7c723945b58bc43613f627",
+    "scripts/validate.py": "7418f7426809cac70be98efd22b9df557703c93152a81c05e43ce99b7c6ba798",
+    "shared/operating-contract.md": "25c88a8a48a9f2081348417f0ffed7df4731dc99f34ba84f42104512df397a72",
+    "tests/test_audit_regressions.py": "c412d68bff8de2055a8fc004f82bb2977b4b2ef4ca1dbaac0beab8ee3a39dd19",
+    "tests/test_workflows.py": "37e54f275cce90d214ed07abed359fcbda581f7f1d0939b5f060167d87dbe6d9"
+  }
+}

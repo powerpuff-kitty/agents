@@ -13,16 +13,16 @@ def check(root,skills=None):
   for file in sorted(base.rglob('*.md')):
    if any(x in file.relative_to(base).parts for x in ['.git','dist','__pycache__']):continue
    checked+=1
-   for target in re.findall(r'\]\(([^)]+)\)',file.read_text()):
+   for target in re.findall(r'\]\(([^)]+)\)',file.read_text(encoding="utf-8")):
     target=target.split('#')[0].strip('<>')
     if not target or re.match(r'[a-zA-Z][a-zA-Z0-9+.-]*:',target) or any(x in target for x in ['<','>','{','}']):continue
     if not (file.parent/target).exists():errors.append(f'{file.relative_to(base)}: missing {target}')
  counts={kind:len(list((root/kind).glob('*/agent.json' if kind=='agents' else '*.json'))) for kind in ['agents','teams','packs']}
- text=(root/'README.md').read_text()
+ text=(root/'README.md').read_text(encoding="utf-8")
  for expected in [f"profiles-{counts['agents']}",f"{counts['agents']} profiles",f"{counts['teams']} team workflows",f"{counts['packs']} optional packs"]:
   if expected not in text:errors.append('README count missing/stale: '+expected)
  if skills:
-  n=len(list(skills.glob('*/SKILL.md')));text=(skills/'README.md').read_text()
+  n=len(list(skills.glob('*/SKILL.md')));text=(skills/'README.md').read_text(encoding="utf-8")
   for expected in [f'skills-{n}',f'{n} portable task procedures']:
    if expected not in text:errors.append('Skills README count missing/stale: '+expected)
  return {'passed':not errors,'markdown_files':checked,'counts':counts,'errors':errors,'limitations':['supported local path syntax only; no external URL, fragment, rendering or prose-truth verification']}

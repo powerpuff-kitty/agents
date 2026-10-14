@@ -1,0 +1,28 @@
+test_absolute_import_is_rejected (test_adapter_assets.AdapterAssetsTests.test_absolute_import_is_rejected) ... ok
+test_canonical_router_is_never_an_install_destination (test_adapter_assets.AdapterAssetsTests.test_canonical_router_is_never_an_install_destination) ... ok
+test_codex_and_cursor_do_not_install_redundant_root_overrides (test_adapter_assets.AdapterAssetsTests.test_codex_and_cursor_do_not_install_redundant_root_overrides) ... ok
+test_documentation_provenance_cannot_silently_drift (test_adapter_assets.AdapterAssetsTests.test_documentation_provenance_cannot_silently_drift) ... ok
+test_duplicate_frontmatter_fields_are_rejected (test_adapter_assets.AdapterAssetsTests.test_duplicate_frontmatter_fields_are_rejected) ... ok
+test_duplicate_or_unknown_hosts_are_rejected (test_adapter_assets.AdapterAssetsTests.test_duplicate_or_unknown_hosts_are_rejected) ... ok
+test_glob_widening_is_rejected (test_adapter_assets.AdapterAssetsTests.test_glob_widening_is_rejected) ... ok
+test_host_claims_require_separate_evidence_work (test_adapter_assets.AdapterAssetsTests.test_host_claims_require_separate_evidence_work) ... ok
+test_inactive_fenced_import_is_rejected (test_adapter_assets.AdapterAssetsTests.test_inactive_fenced_import_is_rejected) ... ok
+test_malformed_manifest_inputs_return_errors (test_adapter_assets.AdapterAssetsTests.test_malformed_manifest_inputs_return_errors) ... ok
+test_missing_asset_is_rejected (test_adapter_assets.AdapterAssetsTests.test_missing_asset_is_rejected) ... ok
+test_missing_canonical_boundary_is_rejected (test_adapter_assets.AdapterAssetsTests.test_missing_canonical_boundary_is_rejected) ... ok
+test_no_command_or_permission_mutation_claim (test_adapter_assets.AdapterAssetsTests.test_no_command_or_permission_mutation_claim) ... ok
+test_numeric_boolean_is_rejected (test_adapter_assets.AdapterAssetsTests.test_numeric_boolean_is_rejected) ... ok
+test_private_or_external_source_paths_cannot_be_declared (test_adapter_assets.AdapterAssetsTests.test_private_or_external_source_paths_cannot_be_declared) ... ok
+test_scoped_assets_share_body_but_use_different_native_metadata (test_adapter_assets.AdapterAssetsTests.test_scoped_assets_share_body_but_use_different_native_metadata) ... ok
+test_scoped_profile_is_opt_in (test_adapter_assets.AdapterAssetsTests.test_scoped_profile_is_opt_in) ... ok
+test_scoped_rule_cannot_become_always_on (test_adapter_assets.AdapterAssetsTests.test_scoped_rule_cannot_become_always_on) ... ok
+test_self_hosting_import_matches_distribution (test_adapter_assets.AdapterAssetsTests.test_self_hosting_import_matches_distribution) ... ok
+test_settings_hooks_and_override_targets_are_not_permitted (test_adapter_assets.AdapterAssetsTests.test_settings_hooks_and_override_targets_are_not_permitted) ... ok
+test_shared_rule_guidance_cannot_diverge_silently (test_adapter_assets.AdapterAssetsTests.test_shared_rule_guidance_cannot_diverge_silently) ... ok
+test_shipped_bundle_is_valid (test_adapter_assets.AdapterAssetsTests.test_shipped_bundle_is_valid) ... ok
+test_unlisted_asset_is_rejected (test_adapter_assets.AdapterAssetsTests.test_unlisted_asset_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.006s
+
+OK

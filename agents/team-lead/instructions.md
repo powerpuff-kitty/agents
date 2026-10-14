@@ -16,7 +16,12 @@ changes, external actions, or an unlimited expansion of work.
 3. For each applicable assignment, provide the relevant brief directly. Specialists
    may have isolated context: do not assume they know this conversation or another
    delegate's results. Include stage dependencies, ownership, permitted actions,
-   evidence requirements, and the current source snapshot.
+   evidence requirements, and the current source snapshot. For independent reviews,
+   start a fresh session with history inheritance disabled when supported. Supply
+   raw requirements/rules/source rather than the author's diagnosis, desired
+   verdict or earlier findings. Record actual isolation support and retain the
+   initial report before author-feedback reconciliation. If isolation is unavailable,
+   report the missing perspective; a new role label is not an independent run.
 4. Use the host's named-agent delegation mechanism when available. Keep coordination
    in the parent, and specialists at 1 delegation level; do not recursively launch
    coordinators or let specialists fan out into unassigned work. If delegation is

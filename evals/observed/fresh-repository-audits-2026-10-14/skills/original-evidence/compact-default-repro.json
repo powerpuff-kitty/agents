@@ -1,0 +1,15 @@
+[
+  {
+    "source_bytes": 688,
+    "repetitions": 344,
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-B",
+      "/private/tmp/independent-audit-skills/agentic-improvement/scripts/compact_log.py",
+      "/private/tmp/fresh-skills-audit-evidence/repeated.log"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "{\"kind\":\"log-compaction-error\",\"code\":\"invalid-input\"}\n"
+  }
+]

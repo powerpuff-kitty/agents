@@ -1,0 +1,36 @@
+[
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "agentic-improvement/tests",
+      "-p",
+      "test_*.py",
+      "-q"
+    ],
+    "temporary_parent": "explicit symbolic-link alias",
+    "exit": 0,
+    "stderr": "----------------------------------------------------------------------\nRan 155 tests in 2.982s\n\nOK (skipped=1)\n"
+  },
+  {
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "decision-intelligence/tests",
+      "-p",
+      "test_*.py",
+      "-q"
+    ],
+    "temporary_parent": "explicit symbolic-link alias",
+    "exit": 0,
+    "stderr": "----------------------------------------------------------------------\nRan 34 tests in 0.177s\n\nOK\n"
+  }
+]

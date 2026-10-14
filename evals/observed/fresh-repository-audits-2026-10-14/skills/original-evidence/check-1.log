@@ -1,0 +1,890 @@
+test_budget_overflow_does_not_remove_evidence (test_compact_log.CompactLog.test_budget_overflow_does_not_remove_evidence) ... ok
+test_control_characters_and_instructions_remain_escaped_data (test_compact_log.CompactLog.test_control_characters_and_instructions_remain_escaped_data) ... ok
+test_distinct_phases_and_timestamps_are_not_normalised (test_compact_log.CompactLog.test_distinct_phases_and_timestamps_are_not_normalised) ... ok
+test_empty_and_single_line (test_compact_log.CompactLog.test_empty_and_single_line) ... ok
+test_hash_size_and_repetition_tampering_rejected (test_compact_log.CompactLog.test_hash_size_and_repetition_tampering_rejected) ... ok
+test_input_bounds_binary_and_invalid_utf8 (test_compact_log.CompactLog.test_input_bounds_binary_and_invalid_utf8) ... ok
+test_invalid_reference_and_budget (test_compact_log.CompactLog.test_invalid_reference_and_budget) ... ok
+test_literal_fallback_avoids_run_list_overhead (test_compact_log.CompactLog.test_literal_fallback_avoids_run_list_overhead) ... ok
+test_malformed_payloads_are_rejected (test_compact_log.CompactLog.test_malformed_payloads_are_rejected) ... ok
+test_partial_log_does_not_claim_producer_completion (test_compact_log.CompactLog.test_partial_log_does_not_claim_producer_completion) ... ok
+test_randomised_round_trips (test_compact_log.CompactLog.test_randomised_round_trips) ... ok
+test_rare_failure_and_retry_order_retained (test_compact_log.CompactLog.test_rare_failure_and_retry_order_retained) ... ok
+test_repeatability (test_compact_log.CompactLog.test_repeatability) ... ok
+test_repetition_reduces_bytes_including_envelope (test_compact_log.CompactLog.test_repetition_reduces_bytes_including_envelope) ... ok
+test_restore_never_opens_reference (test_compact_log.CompactLog.test_restore_never_opens_reference) ... ok
+test_retained_measurements_match_exact_helper_and_fixture_bytes (test_compact_log.CompactLog.test_retained_measurements_match_exact_helper_and_fixture_bytes) ... ok
+test_unicode_line_endings_and_bom_preserved (test_compact_log.CompactLog.test_unicode_line_endings_and_bom_preserved) ... ok
+test_actual_command_budget_status_keeps_complete_output (test_compact_log.CompactLogFiles.test_actual_command_budget_status_keeps_complete_output) ... FAIL
+test_actual_command_reads_without_modifying_log (test_compact_log.CompactLogFiles.test_actual_command_reads_without_modifying_log) ... FAIL
+test_ambiguous_parent_traversal_rejected (test_compact_log.CompactLogFiles.test_ambiguous_parent_traversal_rejected) ... ok
+test_invalid_log_error_does_not_print_source (test_compact_log.CompactLogFiles.test_invalid_log_error_does_not_print_source) ... ok
+test_missing_directory_and_oversized_inputs (test_compact_log.CompactLogFiles.test_missing_directory_and_oversized_inputs) ... ok
+test_read_boundary_matches_exact_bytes (test_compact_log.CompactLogFiles.test_read_boundary_matches_exact_bytes) ... ERROR
+test_symlink_file_and_parent_rejected (test_compact_log.CompactLogFiles.test_symlink_file_and_parent_rejected) ... ok
+test_change_between_stat_and_open_rejected (test_evidence_snapshot.EvidenceSnapshot.test_change_between_stat_and_open_rejected) ... ok
+test_changed_scope_requires_refresh (test_evidence_snapshot.EvidenceSnapshot.test_changed_scope_requires_refresh) ... ok
+test_deterministic_capture_and_order (test_evidence_snapshot.EvidenceSnapshot.test_deterministic_capture_and_order) ... ok
+test_dropping_old_path_never_reads_it_or_hides_selection_change (test_evidence_snapshot.EvidenceSnapshot.test_dropping_old_path_never_reads_it_or_hides_selection_change) ... ok
+test_empty_files_are_valid (test_evidence_snapshot.EvidenceSnapshot.test_empty_files_are_valid) ... ok
+test_fifo_refused_without_blocking (test_evidence_snapshot.EvidenceSnapshot.test_fifo_refused_without_blocking) ... ok
+test_file_and_ancestor_links_are_refused (test_evidence_snapshot.EvidenceSnapshot.test_file_and_ancestor_links_are_refused) ... ok
+test_invalid_paths_and_duplicate_aliases (test_evidence_snapshot.EvidenceSnapshot.test_invalid_paths_and_duplicate_aliases) ... ok
+test_loader_rejects_duplicate_nonfinite_and_oversized_json (test_evidence_snapshot.EvidenceSnapshot.test_loader_rejects_duplicate_nonfinite_and_oversized_json) ... ok
+test_malformed_or_tampered_record_refused_before_reads (test_evidence_snapshot.EvidenceSnapshot.test_malformed_or_tampered_record_refused_before_reads) ... ok
+test_missing_selected_file_forces_refresh (test_evidence_snapshot.EvidenceSnapshot.test_missing_selected_file_forces_refresh) ... ok
+test_mtime_change_without_byte_change_is_unchanged (test_evidence_snapshot.EvidenceSnapshot.test_mtime_change_without_byte_change_is_unchanged) ... ok
+test_new_root_is_not_silently_equivalent (test_evidence_snapshot.EvidenceSnapshot.test_new_root_is_not_silently_equivalent) ... ok
+test_new_selection_is_reported (test_evidence_snapshot.EvidenceSnapshot.test_new_selection_is_reported) ... ok
+test_no_bodies_absolute_root_or_scope_text_in_reports (test_evidence_snapshot.EvidenceSnapshot.test_no_bodies_absolute_root_or_scope_text_in_reports) ... ok
+test_no_execution_or_writes_of_source_content (test_evidence_snapshot.EvidenceSnapshot.test_no_execution_or_writes_of_source_content) ... ok
+test_nontext_capture_refuses_and_comparison_reports_unavailable (test_evidence_snapshot.EvidenceSnapshot.test_nontext_capture_refuses_and_comparison_reports_unavailable) ... ok
+test_per_file_bound (test_evidence_snapshot.EvidenceSnapshot.test_per_file_bound) ... ok
+test_policy_only_change_is_detected (test_evidence_snapshot.EvidenceSnapshot.test_policy_only_change_is_detected) ... ok
+test_real_subprocess_capture_compare_exit_codes_and_no_writes (test_evidence_snapshot.EvidenceSnapshot.test_real_subprocess_capture_compare_exit_codes_and_no_writes) ... ok
+test_record_boolean_size_unsorted_and_duplicate_paths_refused (test_evidence_snapshot.EvidenceSnapshot.test_record_boolean_size_unsorted_and_duplicate_paths_refused) ... ok
+test_record_file_symlink_refused (test_evidence_snapshot.EvidenceSnapshot.test_record_file_symlink_refused) ... ok
+test_record_paths_cannot_expand_read_selection (test_evidence_snapshot.EvidenceSnapshot.test_record_paths_cannot_expand_read_selection) ... ok
+test_same_size_edit_with_restored_mtime_is_detected (test_evidence_snapshot.EvidenceSnapshot.test_same_size_edit_with_restored_mtime_is_detected) ... ok
+test_scope_and_input_limits (test_evidence_snapshot.EvidenceSnapshot.test_scope_and_input_limits) ... ok
+test_script_runs_when_copied_alone (test_evidence_snapshot.EvidenceSnapshot.test_script_runs_when_copied_alone) ... ok
+test_total_bound_and_unavailable_reporting (test_evidence_snapshot.EvidenceSnapshot.test_total_bound_and_unavailable_reporting) ... ok
+test_unchanged_is_not_a_verified_finding (test_evidence_snapshot.EvidenceSnapshot.test_unchanged_is_not_a_verified_finding) ... ok
+test_unicode_and_space_paths_and_crlf (test_evidence_snapshot.EvidenceSnapshot.test_unicode_and_space_paths_and_crlf) ... ok
+test_unsafe_record_path_refused_even_with_recalculated_digest (test_evidence_snapshot.EvidenceSnapshot.test_unsafe_record_path_refused_even_with_recalculated_digest) ... ok
+test_unselected_changes_are_not_falsely_certified (test_evidence_snapshot.EvidenceSnapshot.test_unselected_changes_are_not_falsely_certified) ... ok
+test_failed_nontext_reads_consume_total_budget (test_evidence_snapshot_budget.EvidenceSnapshotBudget.test_failed_nontext_reads_consume_total_budget) ... ok
+test_caller_bytecode_setting_is_preserved_on_reader_import_failure (test_excerpt_reader_source.ExcerptReaderSource.test_caller_bytecode_setting_is_preserved_on_reader_import_failure) ... ok
+test_caller_bytecode_setting_is_preserved_on_success (test_excerpt_reader_source.ExcerptReaderSource.test_caller_bytecode_setting_is_preserved_on_success) ... ok
+test_cli_emits_no_source_when_current_reader_is_invalid (test_excerpt_reader_source.ExcerptReaderSource.test_cli_emits_no_source_when_current_reader_is_invalid) ... ok
+test_cold_load_retains_module_metadata_without_writing_bytecode (test_excerpt_reader_source.ExcerptReaderSource.test_cold_load_retains_module_metadata_without_writing_bytecode) ... ok
+test_current_syntax_error_cannot_hide_behind_timestamp_cache (test_excerpt_reader_source.ExcerptReaderSource.test_current_syntax_error_cannot_hide_behind_timestamp_cache) ... ok
+test_current_syntax_error_cannot_hide_behind_unchecked_cache (test_excerpt_reader_source.ExcerptReaderSource.test_current_syntax_error_cannot_hide_behind_unchecked_cache) ... ok
+test_directory_and_symlink_readers_are_refused (test_excerpt_reader_source.ExcerptReaderSource.test_directory_and_symlink_readers_are_refused) ... ok
+test_missing_reader_cannot_be_replaced_by_orphan_cache (test_excerpt_reader_source.ExcerptReaderSource.test_missing_reader_cannot_be_replaced_by_orphan_cache) ... ok
+test_old_cached_side_effect_is_not_executed (test_excerpt_reader_source.ExcerptReaderSource.test_old_cached_side_effect_is_not_executed) ... ok
+test_oversized_reader_is_not_executed (test_excerpt_reader_source.ExcerptReaderSource.test_oversized_reader_is_not_executed) ... ok
+test_timestamp_cache_cannot_override_same_size_current_source (test_excerpt_reader_source.ExcerptReaderSource.test_timestamp_cache_cannot_override_same_size_current_source) ... ok
+test_unchecked_hash_cache_cannot_override_current_source (test_excerpt_reader_source.ExcerptReaderSource.test_unchecked_hash_cache_cannot_override_current_source) ... ok
+test_bare_cr_is_rejected_instead_of_misaligned_ranges (test_python_outline.PythonOutline.test_bare_cr_is_rejected_instead_of_misaligned_ranges) ... ERROR
+test_budget_counts_the_complete_envelope (test_python_outline.PythonOutline.test_budget_counts_the_complete_envelope) ... ERROR
+test_budget_defers_all_metadata_without_false_evidence_delivery (test_python_outline.PythonOutline.test_budget_defers_all_metadata_without_false_evidence_delivery) ... FAIL
+test_byte_and_aggregate_read_limits (test_python_outline.PythonOutline.test_byte_and_aggregate_read_limits) ... ok
+test_cli_modes_and_required_evidence_are_not_interchangeable (test_python_outline.PythonOutline.test_cli_modes_and_required_evidence_are_not_interchangeable) ... ok
+test_decorator_comments_blank_lines_and_indentation (test_python_outline.PythonOutline.test_decorator_comments_blank_lines_and_indentation) ... ERROR
+test_default_literals_docstrings_and_bodies_are_not_returned (test_python_outline.PythonOutline.test_default_literals_docstrings_and_bodies_are_not_returned) ... ERROR
+test_duplicate_conditional_names_remain_distinct (test_python_outline.PythonOutline.test_duplicate_conditional_names_remain_distinct) ... ERROR
+test_empty_and_non_definition_modules_are_explicitly_partial (test_python_outline.PythonOutline.test_empty_and_non_definition_modules_are_explicitly_partial) ... ERROR
+test_later_invalid_file_prevents_partial_outline (test_python_outline.PythonOutline.test_later_invalid_file_prevents_partial_outline) ... ok
+test_limits_reject_invalid_inputs (test_python_outline.PythonOutline.test_limits_reject_invalid_inputs) ... ok
+test_matrix_operator_and_docstring_cannot_invent_definitions (test_python_outline.PythonOutline.test_matrix_operator_and_docstring_cannot_invent_definitions) ... ERROR
+test_multiple_file_order_is_stable_and_identity_is_not_collapsed (test_python_outline.PythonOutline.test_multiple_file_order_is_stable_and_identity_is_not_collapsed) ... ERROR
+test_names_and_exact_inclusive_ranges (test_python_outline.PythonOutline.test_names_and_exact_inclusive_ranges) ... ERROR
+test_nested_class_async_and_function_parent_identities (test_python_outline.PythonOutline.test_nested_class_async_and_function_parent_identities) ... ERROR
+test_node_definition_and_name_limits (test_python_outline.PythonOutline.test_node_definition_and_name_limits) ... FAIL
+test_parenthesized_multiline_decorator_includes_at_line (test_python_outline.PythonOutline.test_parenthesized_multiline_decorator_includes_at_line) ... ERROR
+test_parser_warnings_cannot_echo_source_literals (test_python_outline.PythonOutline.test_parser_warnings_cannot_echo_source_literals) ... FAIL
+test_pin_conflict_and_alias_fail_before_reads (test_python_outline.PythonOutline.test_pin_conflict_and_alias_fail_before_reads) ... ok
+test_real_capture_outline_guarded_extraction_and_stale_refusal (test_python_outline.PythonOutline.test_real_capture_outline_guarded_extraction_and_stale_refusal) ... FAIL
+test_repeated_file_is_read_once_without_discovery (test_python_outline.PythonOutline.test_repeated_file_is_read_once_without_discovery) ... ERROR
+test_same_size_restored_mtime_change_refuses_outline (test_python_outline.PythonOutline.test_same_size_restored_mtime_change_refuses_outline) ... ok
+test_symlink_source_and_linked_parent_are_rejected (test_python_outline.PythonOutline.test_symlink_source_and_linked_parent_are_rejected) ... ok
+test_syntax_error_has_no_source_leak (test_python_outline.PythonOutline.test_syntax_error_has_no_source_leak) ... FAIL
+test_target_module_and_decorators_never_execute (test_python_outline.PythonOutline.test_target_module_and_decorators_never_execute) ... FAIL
+test_unsupported_language_fails_before_target_read (test_python_outline.PythonOutline.test_unsupported_language_fails_before_target_read) ... ok
+test_utf8_bom_crlf_and_missing_final_newline_use_extractor_lines (test_python_outline.PythonOutline.test_utf8_bom_crlf_and_missing_final_newline_use_extractor_lines) ... ERROR
+test_adjacent_and_overlapping_selected_ranges_cover_the_requirement (test_required_source_spans.RequiredSourceSpans.test_adjacent_and_overlapping_selected_ranges_cover_the_requirement) ... ERROR
+test_budget_defers_required_evidence_without_claiming_emission (test_required_source_spans.RequiredSourceSpans.test_budget_defers_required_evidence_without_claiming_emission) ... FAIL
+test_case_only_different_requirement_is_not_treated_as_same_path (test_required_source_spans.RequiredSourceSpans.test_case_only_different_requirement_is_not_treated_as_same_path) ... ok
+test_changed_required_coverage_changes_its_identity (test_required_source_spans.RequiredSourceSpans.test_changed_required_coverage_changes_its_identity) ... ERROR
+test_cli_reports_missing_requirements_with_no_partial_source (test_required_source_spans.RequiredSourceSpans.test_cli_reports_missing_requirements_with_no_partial_source) ... ok
+test_complete_envelope_budget_includes_requirement_metadata (test_required_source_spans.RequiredSourceSpans.test_complete_envelope_budget_includes_requirement_metadata) ... ERROR
+test_complete_required_evidence_is_emitted_without_claiming_semantic_sufficiency (test_required_source_spans.RequiredSourceSpans.test_complete_required_evidence_is_emitted_without_claiming_semantic_sufficiency) ... ERROR
+test_copied_helpers_snapshot_extract_and_policy_change_workflow (test_required_source_spans.RequiredSourceSpans.test_copied_helpers_snapshot_extract_and_policy_change_workflow) ... FAIL
+test_disjoint_required_ranges_do_not_require_the_gap (test_required_source_spans.RequiredSourceSpans.test_disjoint_required_ranges_do_not_require_the_gap) ... ERROR
+test_empty_malformed_and_oversized_requirements_fail_before_reads (test_required_source_spans.RequiredSourceSpans.test_empty_malformed_and_oversized_requirements_fail_before_reads) ... ok
+test_full_coverage_cannot_hide_out_of_range_source (test_required_source_spans.RequiredSourceSpans.test_full_coverage_cannot_hide_out_of_range_source) ... ok
+test_identical_content_at_different_paths_does_not_supply_required_identity (test_required_source_spans.RequiredSourceSpans.test_identical_content_at_different_paths_does_not_supply_required_identity) ... ok
+test_missing_required_path_does_not_expand_reads (test_required_source_spans.RequiredSourceSpans.test_missing_required_path_does_not_expand_reads) ... ok
+test_normalized_declarations_have_stable_identity_and_counts (test_required_source_spans.RequiredSourceSpans.test_normalized_declarations_have_stable_identity_and_counts) ... ERROR
+test_one_line_hole_cannot_hide_required_counterevidence (test_required_source_spans.RequiredSourceSpans.test_one_line_hole_cannot_hide_required_counterevidence) ... ok
+test_required_pin_conflict_is_rejected_before_reads (test_required_source_spans.RequiredSourceSpans.test_required_pin_conflict_is_rejected_before_reads) ... ok
+test_requirement_checks_do_not_duplicate_source_reads (test_required_source_spans.RequiredSourceSpans.test_requirement_checks_do_not_duplicate_source_reads) ... ERROR
+test_seeded_interval_coverage_matches_exact_line_sets (test_required_source_spans.RequiredSourceSpans.test_seeded_interval_coverage_matches_exact_line_sets) ... ok
+test_structural_coverage_does_not_bypass_stale_pin (test_required_source_spans.RequiredSourceSpans.test_structural_coverage_does_not_bypass_stale_pin) ... ok
+test_unguarded_interface_has_no_requirement_metadata (test_required_source_spans.RequiredSourceSpans.test_unguarded_interface_has_no_requirement_metadata) ... ERROR
+test_budget_measures_whole_serialized_envelope (test_source_excerpts.SourceExcerpts.test_budget_measures_whole_serialized_envelope) ... ERROR
+test_case_only_alias_rejected (test_source_excerpts.SourceExcerpts.test_case_only_alias_rejected) ... ok
+test_conflicting_pins_fail_before_any_read (test_source_excerpts.SourceExcerpts.test_conflicting_pins_fail_before_any_read) ... ok
+test_disjoint_ranges_keep_visible_gap (test_source_excerpts.SourceExcerpts.test_disjoint_ranges_keep_visible_gap) ... ERROR
+test_exact_utf8_crlf_empty_lines_and_no_final_newline (test_source_excerpts.SourceExcerpts.test_exact_utf8_crlf_empty_lines_and_no_final_newline) ... ERROR
+test_file_is_read_only_once (test_source_excerpts.SourceExcerpts.test_file_is_read_only_once) ... ERROR
+test_identical_content_at_different_paths_is_not_collapsed (test_source_excerpts.SourceExcerpts.test_identical_content_at_different_paths_is_not_collapsed) ... ERROR
+test_input_and_aggregate_read_limits (test_source_excerpts.SourceExcerpts.test_input_and_aggregate_read_limits) ... ok
+test_invalid_budget (test_source_excerpts.SourceExcerpts.test_invalid_budget) ... ok
+test_invalid_pin_rejected (test_source_excerpts.SourceExcerpts.test_invalid_pin_rejected) ... ok
+test_invalid_request_shapes_and_ranges (test_source_excerpts.SourceExcerpts.test_invalid_request_shapes_and_ranges) ... ok
+test_later_file_failure_emits_no_partial_bodies (test_source_excerpts.SourceExcerpts.test_later_file_failure_emits_no_partial_bodies) ... ok
+test_missing_sibling_does_not_fall_back_to_pythonpath (test_source_excerpts.SourceExcerpts.test_missing_sibling_does_not_fall_back_to_pythonpath) ... ok
+test_no_path_discovery (test_source_excerpts.SourceExcerpts.test_no_path_discovery) ... ERROR
+test_non_text_missing_and_directory_inputs (test_source_excerpts.SourceExcerpts.test_non_text_missing_and_directory_inputs) ... ok
+test_out_of_range_and_empty_file_not_silently_clamped (test_source_excerpts.SourceExcerpts.test_out_of_range_and_empty_file_not_silently_clamped) ... ok
+test_output_budget_defers_every_excerpt (test_source_excerpts.SourceExcerpts.test_output_budget_defers_every_excerpt) ... FAIL
+test_overlaps_duplicates_and_adjacency_are_merged (test_source_excerpts.SourceExcerpts.test_overlaps_duplicates_and_adjacency_are_merged) ... ERROR
+test_real_subprocess_and_no_writes_in_complete_copied_directory (test_source_excerpts.SourceExcerpts.test_real_subprocess_and_no_writes_in_complete_copied_directory) ... FAIL
+test_recorded_synthetic_measurements_match_actual_stdout (test_source_excerpts.SourceExcerpts.test_recorded_synthetic_measurements_match_actual_stdout) ... FAIL
+test_request_order_does_not_change_output (test_source_excerpts.SourceExcerpts.test_request_order_does_not_change_output) ... ERROR
+test_seeded_random_interval_unions_preserve_exact_selected_lines (test_source_excerpts.SourceExcerpts.test_seeded_random_interval_unions_preserve_exact_selected_lines) ... ERROR
+test_source_instructions_are_returned_as_untrusted_data_not_executed (test_source_excerpts.SourceExcerpts.test_source_instructions_are_returned_as_untrusted_data_not_executed) ... ERROR
+test_stale_pin_same_size_restored_mtime_fails (test_source_excerpts.SourceExcerpts.test_stale_pin_same_size_restored_mtime_fails) ... ok
+test_symlink_file_and_parent_rejected (test_source_excerpts.SourceExcerpts.test_symlink_file_and_parent_rejected) ... ok
+test_unsafe_paths_are_rejected (test_source_excerpts.SourceExcerpts.test_unsafe_paths_are_rejected) ... ok
+test_current_sibling_source_ignores_unchecked_bytecode (test_typescript_outline.Guards.test_current_sibling_source_ignores_unchecked_bytecode) ... ok
+test_invalid_budget_refused_before_execution (test_typescript_outline.Guards.test_invalid_budget_refused_before_execution) ... ok
+test_later_missing_source_prevents_process_execution (test_typescript_outline.Guards.test_later_missing_source_prevents_process_execution) ... ok
+test_malformed_parser_output_and_unknown_failure_do_not_leak (test_typescript_outline.Guards.test_malformed_parser_output_and_unknown_failure_do_not_leak) ... ok
+test_missing_sibling_does_not_use_pythonpath (test_typescript_outline.Guards.test_missing_sibling_does_not_use_pythonpath) ... ok
+test_no_ambient_credentials_or_node_preloads_forwarded (test_typescript_outline.Guards.test_no_ambient_credentials_or_node_preloads_forwarded) ... ok
+test_process_timeout_is_fixed_safe_error (test_typescript_outline.Guards.test_process_timeout_is_fixed_safe_error) ... ERROR
+test_rejects_empty_malformed_and_conflicting_selection (test_typescript_outline.Guards.test_rejects_empty_malformed_and_conflicting_selection) ... ok
+test_rejects_relative_tool_paths_and_unknown_parser_hash (test_typescript_outline.Guards.test_rejects_relative_tool_paths_and_unknown_parser_hash) ... ok
+test_rejects_unsupported_and_unsafe_source_paths (test_typescript_outline.Guards.test_rejects_unsupported_and_unsafe_source_paths) ... ok
+test_source_and_parser_size_limits (test_typescript_outline.Guards.test_source_and_parser_size_limits) ... ok
+test_stale_source_same_size_and_restored_timestamp (test_typescript_outline.Guards.test_stale_source_same_size_and_restored_timestamp) ... ok
+test_symlink_source_and_parser_refused (test_typescript_outline.Guards.test_symlink_source_and_parser_refused) ... ok
+setUpClass (test_typescript_outline.InstalledCompiler) ... skipped 'real parser unavailable; set HARNESS_TEST_TYPESCRIPT to a reviewed installed entry'
+
+======================================================================
+ERROR: test_read_boundary_matches_exact_bytes (test_compact_log.CompactLogFiles.test_read_boundary_matches_exact_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_compact_log.py", line 224, in test_read_boundary_matches_exact_bytes
+    self.assertEqual(log.read_log(self.path), self.raw)
+                     ~~~~~~~~~~~~^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/compact_log.py", line 53, in read_log
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "linked parent refused")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/compact_log.py", line 30, in require
+    raise LogError(message)
+compact_log.LogError: linked parent refused
+
+======================================================================
+ERROR: test_bare_cr_is_rejected_instead_of_misaligned_ranges (test_python_outline.PythonOutline.test_bare_cr_is_rejected_instead_of_misaligned_ranges)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 111, in test_bare_cr_is_rejected_instead_of_misaligned_ranges
+    self.outline([['source.py', pin]])
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 45, in outline
+    return extractor.outline(self.root, selections or [['source.py', self.pin]], budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 302, in outline
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_budget_counts_the_complete_envelope (test_python_outline.PythonOutline.test_budget_counts_the_complete_envelope)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 235, in test_budget_counts_the_complete_envelope
+    result = self.outline()
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 45, in outline
+    return extractor.outline(self.root, selections or [['source.py', self.pin]], budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 302, in outline
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_decorator_comments_blank_lines_and_indentation (test_python_outline.PythonOutline.test_decorator_comments_blank_lines_and_indentation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 80, in test_decorator_comments_blank_lines_and_indentation
+    items = self.outline([['source.py', pin]])['files'][0]['definitions']
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 45, in outline
+    return extractor.outline(self.root, selections or [['source.py', self.pin]], budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 302, in outline
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_default_literals_docstrings_and_bodies_are_not_returned (test_python_outline.PythonOutline.test_default_literals_docstrings_and_bodies_are_not_returned)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 139, in test_default_literals_docstrings_and_bodies_are_not_returned
+    data = extractor.evidence.encoded(self.outline([['source.py', pin]]))
+                                      ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 45, in outline
+    return extractor.outline(self.root, selections or [['source.py', self.pin]], budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 302, in outline
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_duplicate_conditional_names_remain_distinct (test_python_outline.PythonOutline.test_duplicate_conditional_names_remain_distinct)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 94, in test_duplicate_conditional_names_remain_distinct
+    items = self.outline([['source.py', pin]])['files'][0]['definitions']
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 45, in outline
+    return extractor.outline(self.root, selections or [['source.py', self.pin]], budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 302, in outline
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_empty_and_non_definition_modules_are_explicitly_partial (test_python_outline.PythonOutline.test_empty_and_non_definition_modules_are_explicitly_partial)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 130, in test_empty_and_non_definition_modules_are_explicitly_partial
+    result = self.outline([['source.py', pin]])
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 45, in outline
+    return extractor.outline(self.root, selections or [['source.py', self.pin]], budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 302, in outline
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_matrix_operator_and_docstring_cannot_invent_definitions (test_python_outline.PythonOutline.test_matrix_operator_and_docstring_cannot_invent_definitions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 88, in test_matrix_operator_and_docstring_cannot_invent_definitions
+    items = self.outline([['source.py', pin]])['files'][0]['definitions']
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 45, in outline
+    return extractor.outline(self.root, selections or [['source.py', self.pin]], budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 302, in outline
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_multiple_file_order_is_stable_and_identity_is_not_collapsed (test_python_outline.PythonOutline.test_multiple_file_order_is_stable_and_identity_is_not_collapsed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 173, in test_multiple_file_order_is_stable_and_identity_is_not_collapsed
+    result = self.outline(selections)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 45, in outline
+    return extractor.outline(self.root, selections or [['source.py', self.pin]], budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 302, in outline
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_names_and_exact_inclusive_ranges (test_python_outline.PythonOutline.test_names_and_exact_inclusive_ranges)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 48, in test_names_and_exact_inclusive_ranges
+    result = self.outline()
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 45, in outline
+    return extractor.outline(self.root, selections or [['source.py', self.pin]], budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 302, in outline
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_nested_class_async_and_function_parent_identities (test_python_outline.PythonOutline.test_nested_class_async_and_function_parent_identities)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 59, in test_nested_class_async_and_function_parent_identities
+    items = self.outline([['source.py', pin]])['files'][0]['definitions']
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 45, in outline
+    return extractor.outline(self.root, selections or [['source.py', self.pin]], budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 302, in outline
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_parenthesized_multiline_decorator_includes_at_line (test_python_outline.PythonOutline.test_parenthesized_multiline_decorator_includes_at_line)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 70, in test_parenthesized_multiline_decorator_includes_at_line
+    item = self.outline([['source.py', pin]])['files'][0]['definitions'][0]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 45, in outline
+    return extractor.outline(self.root, selections or [['source.py', self.pin]], budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 302, in outline
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_repeated_file_is_read_once_without_discovery (test_python_outline.PythonOutline.test_repeated_file_is_read_once_without_discovery)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 165, in test_repeated_file_is_read_once_without_discovery
+    result = self.outline([['source.py', self.pin]] * 2)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 45, in outline
+    return extractor.outline(self.root, selections or [['source.py', self.pin]], budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 302, in outline
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_utf8_bom_crlf_and_missing_final_newline_use_extractor_lines (test_python_outline.PythonOutline.test_utf8_bom_crlf_and_missing_final_newline_use_extractor_lines)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 102, in test_utf8_bom_crlf_and_missing_final_newline_use_extractor_lines
+    item = self.outline([['source.py', pin]])['files'][0]['definitions'][0]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 45, in outline
+    return extractor.outline(self.root, selections or [['source.py', self.pin]], budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 302, in outline
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_adjacent_and_overlapping_selected_ranges_cover_the_requirement (test_required_source_spans.RequiredSourceSpans.test_adjacent_and_overlapping_selected_ranges_cover_the_requirement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_required_source_spans.py", line 80, in test_adjacent_and_overlapping_selected_ranges_cover_the_requirement
+    result = self.guarded(selected, [self.span()])
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_required_source_spans.py", line 41, in guarded
+    return extractor.extract(self.root, spans, budget, required_spans=required)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 157, in extract
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_changed_required_coverage_changes_its_identity (test_required_source_spans.RequiredSourceSpans.test_changed_required_coverage_changes_its_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_required_source_spans.py", line 100, in test_changed_required_coverage_changes_its_identity
+    one = self.guarded([self.span()], [self.span(1, 1)])
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_required_source_spans.py", line 41, in guarded
+    return extractor.extract(self.root, spans, budget, required_spans=required)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 157, in extract
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_complete_envelope_budget_includes_requirement_metadata (test_required_source_spans.RequiredSourceSpans.test_complete_envelope_budget_includes_requirement_metadata)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_required_source_spans.py", line 152, in test_complete_envelope_budget_includes_requirement_metadata
+    result = self.guarded([self.span()], [self.span()])
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_required_source_spans.py", line 41, in guarded
+    return extractor.extract(self.root, spans, budget, required_spans=required)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 157, in extract
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_complete_required_evidence_is_emitted_without_claiming_semantic_sufficiency (test_required_source_spans.RequiredSourceSpans.test_complete_required_evidence_is_emitted_without_claiming_semantic_sufficiency)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_required_source_spans.py", line 44, in test_complete_required_evidence_is_emitted_without_claiming_semantic_sufficiency
+    result = self.guarded([self.span(1, 4)], [self.span()])
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_required_source_spans.py", line 41, in guarded
+    return extractor.extract(self.root, spans, budget, required_spans=required)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 157, in extract
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_disjoint_required_ranges_do_not_require_the_gap (test_required_source_spans.RequiredSourceSpans.test_disjoint_required_ranges_do_not_require_the_gap)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_required_source_spans.py", line 85, in test_disjoint_required_ranges_do_not_require_the_gap
+    result = self.guarded([self.span(1, 1), self.span(3, 3)],
+                          [self.span(1, 1), self.span(3, 3)])
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_required_source_spans.py", line 41, in guarded
+    return extractor.extract(self.root, spans, budget, required_spans=required)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 157, in extract
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_normalized_declarations_have_stable_identity_and_counts (test_required_source_spans.RequiredSourceSpans.test_normalized_declarations_have_stable_identity_and_counts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_required_source_spans.py", line 93, in test_normalized_declarations_have_stable_identity_and_counts
+    first = self.guarded([self.span()], [self.span(1, 2), self.span(2, 3), self.span(1, 2)])
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_required_source_spans.py", line 41, in guarded
+    return extractor.extract(self.root, spans, budget, required_spans=required)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 157, in extract
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_requirement_checks_do_not_duplicate_source_reads (test_required_source_spans.RequiredSourceSpans.test_requirement_checks_do_not_duplicate_source_reads)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_required_source_spans.py", line 107, in test_requirement_checks_do_not_duplicate_source_reads
+    self.guarded([self.span(), self.span(2, 4)], [self.span(1, 2), self.span(2, 3)])
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_required_source_spans.py", line 41, in guarded
+    return extractor.extract(self.root, spans, budget, required_spans=required)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 157, in extract
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_unguarded_interface_has_no_requirement_metadata (test_required_source_spans.RequiredSourceSpans.test_unguarded_interface_has_no_requirement_metadata)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_required_source_spans.py", line 164, in test_unguarded_interface_has_no_requirement_metadata
+    normal = extractor.extract(self.root, [self.span()])
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 157, in extract
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_budget_measures_whole_serialized_envelope (test_source_excerpts.SourceExcerpts.test_budget_measures_whole_serialized_envelope)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 218, in test_budget_measures_whole_serialized_envelope
+    record = self.result([self.span()])
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 46, in result
+    return extractor.extract(self.root, spans, budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 157, in extract
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_disjoint_ranges_keep_visible_gap (test_source_excerpts.SourceExcerpts.test_disjoint_ranges_keep_visible_gap)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 69, in test_disjoint_ranges_keep_visible_gap
+    record = self.result([self.span(1, 1), self.span(4, 4)])
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 46, in result
+    return extractor.extract(self.root, spans, budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 157, in extract
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_exact_utf8_crlf_empty_lines_and_no_final_newline (test_source_excerpts.SourceExcerpts.test_exact_utf8_crlf_empty_lines_and_no_final_newline)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 51, in test_exact_utf8_crlf_empty_lines_and_no_final_newline
+    value = self.result([self.span(2, 4, raw=raw)])['files'][0]
+            ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 46, in result
+    return extractor.extract(self.root, spans, budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 157, in extract
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_file_is_read_only_once (test_source_excerpts.SourceExcerpts.test_file_is_read_only_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 79, in test_file_is_read_only_once
+    self.result([self.span(1, 1), self.span(3, 4), self.span(3, 3)])
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 46, in result
+    return extractor.extract(self.root, spans, budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 157, in extract
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_identical_content_at_different_paths_is_not_collapsed (test_source_excerpts.SourceExcerpts.test_identical_content_at_different_paths_is_not_collapsed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 88, in test_identical_content_at_different_paths_is_not_collapsed
+    record = self.result([self.span(), self.span(path='other.txt')])
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 46, in result
+    return extractor.extract(self.root, spans, budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 157, in extract
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_no_path_discovery (test_source_excerpts.SourceExcerpts.test_no_path_discovery)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 95, in test_no_path_discovery
+    self.result([self.span()])
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 46, in result
+    return extractor.extract(self.root, spans, budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 157, in extract
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_overlaps_duplicates_and_adjacency_are_merged (test_source_excerpts.SourceExcerpts.test_overlaps_duplicates_and_adjacency_are_merged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 62, in test_overlaps_duplicates_and_adjacency_are_merged
+    record = self.result([self.span(3, 4), self.span(1, 2), self.span(2, 3), self.span(1, 2)])
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 46, in result
+    return extractor.extract(self.root, spans, budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 157, in extract
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_request_order_does_not_change_output (test_source_excerpts.SourceExcerpts.test_request_order_does_not_change_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 84, in test_request_order_does_not_change_output
+    self.assertEqual(self.result(spans), self.result(list(reversed(spans))))
+                     ~~~~~~~~~~~^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 46, in result
+    return extractor.extract(self.root, spans, budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 157, in extract
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_seeded_random_interval_unions_preserve_exact_selected_lines (test_source_excerpts.SourceExcerpts.test_seeded_random_interval_unions_preserve_exact_selected_lines)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 246, in test_seeded_random_interval_unions_preserve_exact_selected_lines
+    excerpts = self.result(spans)['files'][0]['excerpts']
+               ~~~~~~~~~~~^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 46, in result
+    return extractor.extract(self.root, spans, budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 157, in extract
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_source_instructions_are_returned_as_untrusted_data_not_executed (test_source_excerpts.SourceExcerpts.test_source_instructions_are_returned_as_untrusted_data_not_executed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 279, in test_source_instructions_are_returned_as_untrusted_data_not_executed
+    result = self.result([self.span(1, 1, raw=raw)])
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 46, in result
+    return extractor.extract(self.root, spans, budget)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/extract_context.py", line 157, in extract
+    root = evidence.real_directory(root)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+ERROR: test_process_timeout_is_fixed_safe_error (test_typescript_outline.Guards.test_process_timeout_is_fixed_safe_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_typescript_outline.py", line 108, in test_process_timeout_is_fixed_safe_error
+    self.outline()
+    ~~~~~~~~~~~~^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_typescript_outline.py", line 45, in outline
+    return module.outline(**args)
+           ~~~~~~~~~~~~~~^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/outline_typescript.py", line 199, in outline
+    parser_bytes = reader.read_text(compiler, MAX_PARSER_BYTES)
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 88, in read_text
+    real_directory(path.parent)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 59, in real_directory
+    require(stat.S_ISDIR(meta.st_mode) and not linked(meta), "unsafe-root")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/independent-audit-skills/agentic-improvement/scripts/evidence_snapshot.py", line 37, in require
+    raise SnapshotError(code)
+_typescript_evidence_reader.SnapshotError: unsafe-root
+
+======================================================================
+FAIL: test_actual_command_budget_status_keeps_complete_output (test_compact_log.CompactLogFiles.test_actual_command_budget_status_keeps_complete_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_compact_log.py", line 187, in test_actual_command_budget_status_keeps_complete_output
+    self.assertEqual(result.returncode, 1)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 1
+
+======================================================================
+FAIL: test_actual_command_reads_without_modifying_log (test_compact_log.CompactLogFiles.test_actual_command_reads_without_modifying_log)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_compact_log.py", line 178, in test_actual_command_reads_without_modifying_log
+    self.assertEqual(result.returncode, 0, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : b'{"kind":"log-compaction-error","code":"invalid-input"}\n'
+
+======================================================================
+FAIL: test_budget_defers_all_metadata_without_false_evidence_delivery (test_python_outline.PythonOutline.test_budget_defers_all_metadata_without_false_evidence_delivery)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 227, in test_budget_defers_all_metadata_without_false_evidence_delivery
+    self.assertEqual(run.returncode, 1, run.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 1 : b'{"kind":"source-excerpt-error","code":"invalid-or-stale-input"}\n'
+
+======================================================================
+FAIL: test_node_definition_and_name_limits (test_python_outline.PythonOutline.test_node_definition_and_name_limits)
+----------------------------------------------------------------------
+_excerpt_evidence_reader.SnapshotError: unsafe-root
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 217, in test_node_definition_and_name_limits
+    with patch.object(extractor, 'MAX_OUTLINE_AST_NODES', 2), self.assertRaisesRegex(ValueError, 'outline-structure-limit'):
+                                                              ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "outline-structure-limit" does not match "unsafe-root"
+
+======================================================================
+FAIL: test_parser_warnings_cannot_echo_source_literals (test_python_outline.PythonOutline.test_parser_warnings_cannot_echo_source_literals)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 148, in test_parser_warnings_cannot_echo_source_literals
+    self.assertEqual(run.returncode, 0, run.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : b'{"kind":"source-excerpt-error","code":"invalid-or-stale-input"}\n'
+
+======================================================================
+FAIL: test_real_capture_outline_guarded_extraction_and_stale_refusal (test_python_outline.PythonOutline.test_real_capture_outline_guarded_extraction_and_stale_refusal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 272, in test_real_capture_outline_guarded_extraction_and_stale_refusal
+    self.assertEqual(capture.returncode, 0, capture.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : b'{"kind":"evidence-snapshot-error","code":"invalid-input"}\n'
+
+======================================================================
+FAIL: test_syntax_error_has_no_source_leak (test_python_outline.PythonOutline.test_syntax_error_has_no_source_leak)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 124, in test_syntax_error_has_no_source_leak
+    self.assertEqual(json.loads(run.stderr)['code'], 'unsupported-python-source')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'invalid-or-stale-input' != 'unsupported-python-source'
+- invalid-or-stale-input
++ unsupported-python-source
+
+
+======================================================================
+FAIL: test_target_module_and_decorators_never_execute (test_python_outline.PythonOutline.test_target_module_and_decorators_never_execute)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_python_outline.py", line 158, in test_target_module_and_decorators_never_execute
+    self.assertEqual(run.returncode, 0, run.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : b'{"kind":"source-excerpt-error","code":"invalid-or-stale-input"}\n'
+
+======================================================================
+FAIL: test_budget_defers_required_evidence_without_claiming_emission (test_required_source_spans.RequiredSourceSpans.test_budget_defers_required_evidence_without_claiming_emission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_required_source_spans.py", line 143, in test_budget_defers_required_evidence_without_claiming_emission
+    self.assertEqual(run.returncode, 1, run.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 1 : b'{"kind":"source-excerpt-error","code":"invalid-or-stale-input"}\n'
+
+======================================================================
+FAIL: test_copied_helpers_snapshot_extract_and_policy_change_workflow (test_required_source_spans.RequiredSourceSpans.test_copied_helpers_snapshot_extract_and_policy_change_workflow)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_required_source_spans.py", line 200, in test_copied_helpers_snapshot_extract_and_policy_change_workflow
+    self.assertEqual(snapshot_run.returncode, 0, snapshot_run.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : b'{"kind":"evidence-snapshot-error","code":"invalid-input"}\n'
+
+======================================================================
+FAIL: test_output_budget_defers_every_excerpt (test_source_excerpts.SourceExcerpts.test_output_budget_defers_every_excerpt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 209, in test_output_budget_defers_every_excerpt
+    self.assertEqual(run.returncode, 1, run.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 1 : b'{"kind":"source-excerpt-error","code":"invalid-or-stale-input"}\n'
+
+======================================================================
+FAIL: test_real_subprocess_and_no_writes_in_complete_copied_directory (test_source_excerpts.SourceExcerpts.test_real_subprocess_and_no_writes_in_complete_copied_directory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 105, in test_real_subprocess_and_no_writes_in_complete_copied_directory
+    self.assertEqual(run.returncode, 0, run.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : b'{"kind":"source-excerpt-error","code":"invalid-or-stale-input"}\n'
+
+======================================================================
+FAIL: test_recorded_synthetic_measurements_match_actual_stdout (test_source_excerpts.SourceExcerpts.test_recorded_synthetic_measurements_match_actual_stdout)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/independent-audit-skills/agentic-improvement/tests/test_source_excerpts.py", line 267, in test_recorded_synthetic_measurements_match_actual_stdout
+    self.assertEqual(run.returncode, 0, run.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : b'{"kind":"source-excerpt-error","code":"invalid-or-stale-input"}\n'
+
+----------------------------------------------------------------------
+Ran 154 tests in 3.648s
+
+FAILED (failures=13, errors=33, skipped=1)

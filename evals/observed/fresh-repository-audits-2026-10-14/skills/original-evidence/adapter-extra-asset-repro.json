@@ -1,0 +1,11 @@
+{
+  "synthetic_extra_asset": "assets/unapproved.sh",
+  "validate_repository": [],
+  "inventory": [
+    "assets.json",
+    "claude/files/.claude/rules/agentic-typed-ui.md",
+    "claude/files/CLAUDE.md",
+    "cursor/files/.cursor/rules/agentic-typed-ui.mdc",
+    "unapproved.sh"
+  ]
+}

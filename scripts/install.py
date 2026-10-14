@@ -36,7 +36,7 @@ def plan_target(tool, target, desired, replace):
     state_path = target / ".agents-managed.json"
     if state_path.is_symlink():
         raise ValueError("Refusing managed-state symlink")
-    state = json.loads(state_path.read_text()) if state_path.exists() else {}
+    state = json.loads(state_path.read_text(encoding="utf-8")) if state_path.exists() else {}
     if state and (state.get("schema_version") != 1 or state.get("tool") != tool):
         raise ValueError("Incompatible installed management state")
     managed = state.get("files", {})
@@ -89,7 +89,8 @@ def apply_target(tool, plan):
                "files": {**plan["managed"], **{name: digest(content) for name, content in desired.items()}}}
     state_bytes = (json.dumps(updated, indent=2, sort_keys=True) + "\n").encode()
     if not state_path.exists() or state_path.read_bytes() != state_bytes:
-        atomic_write(state_path, state_bytes)
+        state_mode = state_path.stat().st_mode & 0o777 if state_path.exists() else 0o644
+        atomic_write(state_path, state_bytes, state_mode)
     return str(backup) if backup else None
 
 
@@ -110,6 +111,8 @@ def install(tool, target, replace=False, dry_run=False, commands_target=None, ag
         raise ValueError("Adapter produced no installable profiles")
     # An individual role selection should not create an empty command installation.
     groups = {kind: group for kind, group in groups.items() if group[1]}
+    for _, desired in groups.values():
+        desired[".agents-LICENSE"] = profiles["LICENSE"].encode("utf-8")
     # Inspect every destination before writing either agents or commands.
     plans = {kind: plan_target(tool, destination, desired, replace)
              for kind, (destination, desired) in groups.items()}

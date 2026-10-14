@@ -17,7 +17,7 @@ def validate(opencode=None, packs=None, agent_ids=None, team_ids=None):
     teams, _ = load_teams(agents)
     team_names = {team["metadata"]["id"] for team in teams}
     files = compile_profiles("opencode", packs, agent_ids, team_ids)
-    cases = json.loads((ROOT / "evals/behavior-cases.json").read_text())
+    cases = json.loads((ROOT / "evals/behavior-cases.json").read_text(encoding="utf-8"))
     if cases.get("format_version") != 1:
         raise ValueError("Unsupported evaluation format")
     ids = set()
@@ -66,7 +66,7 @@ def validate(opencode=None, packs=None, agent_ids=None, team_ids=None):
             if name not in loaded:
                 raise ValueError(f"Profile not loaded: {name}")
             front, body = files[f"agents/{name}.md"][4:].split("\n---\n", 1)
-            config = json.loads((ROOT / "adapters/opencode/adapter.json").read_text())
+            config = json.loads((ROOT / "adapters/opencode/adapter.json").read_text(encoding="utf-8"))
             description = next(agent["metadata"]["description"] for agent in agents if agent["metadata"]["id"] == name)
             if loaded[name].get("system", "").strip() != body.strip():
                 raise ValueError(f"Loaded prompt drift: {name}")

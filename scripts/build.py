@@ -21,7 +21,7 @@ def load_agents():
             raise ValueError(f"Unexpected source entry: {directory.name}")
         metadata_path = directory / "agent.json"
         instructions_path = directory / "instructions.md"
-        metadata = json.loads(metadata_path.read_text())
+        metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
         if set(metadata) != {"schema_version", "id", "title", "description"}:
             raise ValueError(f"Invalid metadata fields: {directory.name}")
         if metadata["schema_version"] != 1:
@@ -33,7 +33,7 @@ def load_agents():
         if any(not isinstance(metadata[field], str) or not metadata[field].strip()
                for field in ("title", "description")):
             raise ValueError(f"Empty metadata: {directory.name}")
-        instructions = instructions_path.read_text()
+        instructions = instructions_path.read_text(encoding="utf-8")
         if not instructions.strip():
             raise ValueError(f"Empty instructions: {directory.name}")
         agents.append({"metadata": metadata, "instructions": instructions})
@@ -82,7 +82,7 @@ def load_teams(agents):
     for path in sorted(directory.iterdir()):
         if path.suffix != ".json" or not path.is_file():
             raise ValueError(f"Unexpected team source entry: {path.name}")
-        team = json.loads(path.read_text())
+        team = json.loads(path.read_text(encoding="utf-8"))
         if set(team) != fields or team["schema_version"] != 1:
             raise ValueError(f"Invalid team metadata: {path.name}")
         if not isinstance(team["id"], str) or not ID.fullmatch(team["id"]) or team["id"] != path.stem:
@@ -143,7 +143,7 @@ def load_packs(agents, teams):
     for path in sorted((ROOT / "packs").iterdir()):
         if path.suffix != ".json" or not path.is_file():
             raise ValueError(f"Unexpected pack entry: {path.name}")
-        pack = json.loads(path.read_text())
+        pack = json.loads(path.read_text(encoding="utf-8"))
         if set(pack) != {"schema_version", "id", "title", "description", "requires", "agents", "teams"} or pack["schema_version"] != 1:
             raise ValueError(f"Invalid pack metadata: {path.name}")
         if not isinstance(pack["id"], str) or not ID.fullmatch(pack["id"]) or pack["id"] != path.stem:
@@ -237,7 +237,7 @@ def compile_profiles(adapter="opencode", packs=None, agent_ids=None, team_ids=No
     config_path = directory / "adapter.json"
     renderer_path = directory / "render.py"
     host_path = directory / "instructions.md"
-    config = json.loads(config_path.read_text())
+    config = json.loads(config_path.read_text(encoding="utf-8"))
     if config.get("schema_version") != 1 or config.get("tool") != adapter:
         raise ValueError("Adapter metadata mismatch")
     agents, sources = load_agents()
@@ -248,18 +248,23 @@ def compile_profiles(adapter="opencode", packs=None, agent_ids=None, team_ids=No
     agents, teams, pack_sources, selected_packs = select_catalog(agents, teams, packs, agent_ids, team_ids)
     sources.extend(pack_sources)
     contract_path = ROOT / "shared/operating-contract.md"
-    contract = contract_path.read_text()
+    contract = contract_path.read_text(encoding="utf-8")
     if not contract.strip():
         raise ValueError("Empty shared contract")
     spec = importlib.util.spec_from_file_location("agent_adapter_" + adapter, renderer_path)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
-    files = module.render(agents, teams, contract, host_path.read_text(), config)
+    files = module.render(agents, teams, contract, host_path.read_text(encoding="utf-8"), config)
     for name, content in files.items():
         path = Path(name)
         if path.is_absolute() or ".." in path.parts or not isinstance(content, str):
             raise ValueError(f"Invalid adapter output: {name}")
-    sources.extend([contract_path, config_path, renderer_path, host_path, Path(__file__)])
+    license_path = ROOT / "LICENSE"
+    license_text = license_path.read_text(encoding="utf-8")
+    if not license_text.strip():
+        raise ValueError("Missing authored license text")
+    files["LICENSE"] = license_text
+    sources.extend([contract_path, config_path, renderer_path, host_path, license_path, Path(__file__)])
     manifest = {
         "schema_version": 1,
         "adapter": adapter,
@@ -290,7 +295,7 @@ def build(adapter, output=None, check=False, packs=None, agent_ids=None, team_id
         if existing != expected:
             raise ValueError("Generated file inventory is missing or stale; rebuild")
         for name, content in files.items():
-            if (destination / name).read_text() != content:
+            if (destination / name).read_bytes() != content.encode("utf-8"):
                 raise ValueError(f"Generated output drift: {name}; rebuild")
     else:
         if destination.is_symlink():
@@ -303,7 +308,7 @@ def build(adapter, output=None, check=False, packs=None, agent_ids=None, team_id
             target.parent.mkdir(parents=True, exist_ok=True)
             if target.is_symlink():
                 raise ValueError(f"Refusing to overwrite symlink: {name}")
-            target.write_text(content)
+            target.write_bytes(content.encode("utf-8"))
     return destination
 
 

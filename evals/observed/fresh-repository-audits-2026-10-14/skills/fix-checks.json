@@ -1,0 +1,19 @@
+{
+  "baseline": {
+    "exit": 2,
+    "stderr": "{\"kind\":\"log-compaction-error\",\"code\":\"invalid-input\"}\n",
+    "stdout_bytes": 0
+  },
+  "fixed": {
+    "exit": 0,
+    "stderr": "",
+    "stdout_bytes": 601
+  },
+  "unexpected_asset": [
+    "adapters: missing or unexpected shipped asset"
+  ],
+  "source_sha256": {
+    "agentic-improvement/scripts/compact_log.py": "9909e02b0ba5369b7d3ef3409ea67cc9c8bc19b750059a6c6089637f28c054be",
+    "adapter-sync/tests/validate_adapter_assets.py": "d342b27cc7d3b99e1e28db83ee92ad0602040b6f589f2aed81348c9426bc9ab5"
+  }
+}

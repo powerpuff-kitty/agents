@@ -23,6 +23,21 @@ benchmark, or rating. A review does not require all 4.
 6. Review the final diff and relevant regression results. Separate baseline
    failures, resolved findings, regressions, and checks still unverified.
 
+## Fresh independent perspective
+
+For a requested independent test review or audit, work in a separate fresh session
+without the author's conversation when the host supports it. Read accepted project
+requirements and raw source/tests; do not treat the author's diagnosis, previous
+findings or a desired verdict as review evidence. Keep the initial report separate
+before reconciling it with author explanations. If you authored the change in this
+session or isolation is unavailable, label self-review and the missing independent
+perspective instead of claiming independence.
+
+Report the actual context-isolation support, reviewed snapshot, relevant commands,
+findings and limits. Reproduce and triage findings before accepting remediation;
+recheck affected behavior after source changes. A separate session does not by
+itself prove comprehensive coverage or an authenticated action history.
+
 ## Performance evidence
 
 Benchmark when requested or needed to verify a concrete performance claim. Use

@@ -1,0 +1,39 @@
+test_actual_blocked_and_invalid_exit_codes (test_decision_graph_review.DecisionGraphReview.test_actual_blocked_and_invalid_exit_codes) ... ok
+test_actual_copied_helper_subprocess_and_no_writes (test_decision_graph_review.DecisionGraphReview.test_actual_copied_helper_subprocess_and_no_writes) ... ok
+test_boolean_versions_and_revisions_rejected (test_decision_graph_review.DecisionGraphReview.test_boolean_versions_and_revisions_rejected) ... ok
+test_cycle_discards_even_acyclic_prefix (test_decision_graph_review.DecisionGraphReview.test_cycle_discards_even_acyclic_prefix) ... ok
+test_duplicate_dependencies_rejected (test_decision_graph_review.DecisionGraphReview.test_duplicate_dependencies_rejected) ... ok
+test_duplicate_json_keys_rejected (test_decision_graph_review.DecisionGraphReview.test_duplicate_json_keys_rejected) ... ok
+test_duplicate_nodes_rejected (test_decision_graph_review.DecisionGraphReview.test_duplicate_nodes_rejected) ... ok
+test_duplicate_reducers_rejected (test_decision_graph_review.DecisionGraphReview.test_duplicate_reducers_rejected) ... ok
+test_empty_graph_and_empty_reducer_inputs_rejected (test_decision_graph_review.DecisionGraphReview.test_empty_graph_and_empty_reducer_inputs_rejected) ... ok
+test_extension_fields_cannot_hide_semantics (test_decision_graph_review.DecisionGraphReview.test_extension_fields_cannot_hide_semantics) ... ok
+test_full_source_bytes_are_fingerprinted (test_decision_graph_review.DecisionGraphReview.test_full_source_bytes_are_fingerprinted) ... ok
+test_group_width_does_not_change_layers (test_decision_graph_review.DecisionGraphReview.test_group_width_does_not_change_layers) ... ok
+test_identical_bytes_are_deterministic (test_decision_graph_review.DecisionGraphReview.test_identical_bytes_are_deterministic) ... ok
+test_input_size_bound (test_decision_graph_review.DecisionGraphReview.test_input_size_bound) ... ok
+test_invalid_group_limits (test_decision_graph_review.DecisionGraphReview.test_invalid_group_limits) ... ok
+test_layers_preserve_dependencies (test_decision_graph_review.DecisionGraphReview.test_layers_preserve_dependencies) ... ok
+test_linked_file_parent_and_traversal_rejected (test_decision_graph_review.DecisionGraphReview.test_linked_file_parent_and_traversal_rejected) ... ok
+test_matching_spec_revisions_are_not_conflated (test_decision_graph_review.DecisionGraphReview.test_matching_spec_revisions_are_not_conflated) ... ok
+test_missing_fields_and_bad_labels (test_decision_graph_review.DecisionGraphReview.test_missing_fields_and_bad_labels) ... ok
+test_node_and_edge_bounds (test_decision_graph_review.DecisionGraphReview.test_node_and_edge_bounds) ... ok
+test_node_order_only_changes_source_fingerprint (test_decision_graph_review.DecisionGraphReview.test_node_order_only_changes_source_fingerprint) ... ok
+test_nondeterministic_reducer_rejected (test_decision_graph_review.DecisionGraphReview.test_nondeterministic_reducer_rejected) ... ok
+test_nonfinite_and_malformed_input_rejected (test_decision_graph_review.DecisionGraphReview.test_nonfinite_and_malformed_input_rejected) ... ok
+test_random_acyclic_graphs_preserve_every_edge_and_node (test_decision_graph_review.DecisionGraphReview.test_random_acyclic_graphs_preserve_every_edge_and_node) ... ok
+test_record_references_do_not_trigger_reads (test_decision_graph_review.DecisionGraphReview.test_record_references_do_not_trigger_reads) ... ok
+test_reducer_cannot_reference_another_reducer (test_decision_graph_review.DecisionGraphReview.test_reducer_cannot_reference_another_reducer) ... ok
+test_reducer_count_bound (test_decision_graph_review.DecisionGraphReview.test_reducer_count_bound) ... ok
+test_repeated_specs_are_not_deduplicated (test_decision_graph_review.DecisionGraphReview.test_repeated_specs_are_not_deduplicated) ... ok
+test_self_dependency_is_explicit (test_decision_graph_review.DecisionGraphReview.test_self_dependency_is_explicit) ... ok
+test_state_provider_and_authority_remain_unverified (test_decision_graph_review.DecisionGraphReview.test_state_provider_and_authority_remain_unverified) ... ok
+test_unavailable_directory_fifo_and_large_input (test_decision_graph_review.DecisionGraphReview.test_unavailable_directory_fifo_and_large_input) ... ok
+test_unknown_dependency_blocks_all_groups (test_decision_graph_review.DecisionGraphReview.test_unknown_dependency_blocks_all_groups) ... ok
+test_unknown_reducer_input_blocks (test_decision_graph_review.DecisionGraphReview.test_unknown_reducer_input_blocks) ... ok
+test_wrong_contract_rejected (test_decision_graph_review.DecisionGraphReview.test_wrong_contract_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 0.247s
+
+OK

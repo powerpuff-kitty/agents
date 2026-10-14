@@ -86,6 +86,14 @@ substantial copies and preserve third-party terms. Skills require their own
 separately authorized installation; OpenCode reads SKILL.md natively, with no
 skill renderer in this repository.
 
+## License notices
+
+Exports include LICENSE. Each populated installed profile/command destination
+retains the same MIT text as `.agents-LICENSE`, tracked alongside managed files.
+The notice is not a host profile/command. Preserve it when redistributing exports
+or installed instructions. Conflicting existing notice files receive normal
+local-edit protection; installation does not silently replace them.
+
 ## Individual profiles and teams
 
 ```sh
