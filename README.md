@@ -75,6 +75,18 @@ python3 scripts/install.py --pack crypto --pack forecasting --dry-run
 python3 scripts/install.py --pack product-growth --pack game-3d
 ```
 
+Individual profiles and complete teams can also be selected without installing a pack:
+
+```sh
+python3 scripts/install.py --agent financial-analyst --dry-run
+python3 scripts/install.py --team team-geo --dry-run
+python3 scripts/install.py --pack core --agent onchain-analyst --dry-run
+```
+
+An explicit team includes its coordinator and every declared member. Repeated
+`--agent`, `--team` and `--pack` selections combine and deduplicate. Selecting an
+individual role adds no coordinator or commands. See [selection details](docs/PACKS.md).
+
 Selecting fewer packs later preserves previously installed outputs; it does not
 uninstall them. Pack-specific builds use separate default output directories.
 See [pack selection](docs/PACKS.md) for dependency counts and matching validation.
@@ -87,8 +99,10 @@ python3 scripts/validate.py --opencode ~/.opencode/bin/opencode
 ```
 
 Use your actual executable path if different. An earlier profile/command snapshot
-was verified with OpenCode 2.0.27; the added finance/crypto/forecast profiles and commands have source and
-isolated installation checks, with actual host loading not checked. The minimal frontmatter intentionally avoids model/permission
+was verified with OpenCode 2.0.27. A later isolated persistent-host check
+registered all 34 prompts and 20 team command names, including finance/crypto/
+forecasting. See [retained verification and limits](docs/INSTALLATION-VERIFICATION.md).
+The minimal frontmatter intentionally avoids model/permission
 overrides. The team lead uses `mode: primary`; specialists retain `mode: all`.
 Other OpenCode versions require their own loading checks; do not infer
 compatibility from the file extension. Existing projects can override global
@@ -216,3 +230,12 @@ and proposed hardware, media, cryptography and aviation workflows.
 Unimplemented candidates remain research recommendations. The [documentation assessment](docs/DOCUMENTATION-ASSESSMENT.md) reviews
 all current agents and skills and recommends concise entrypoints with deeper
 references for complex or consequential work.
+
+## Content and GEO procedures
+
+Existing copywriter, marketing and GEO roles can use the independent Skills
+procedures `content-brief`, `copy-editing`, `content-repurposing` and
+`geo-measurement`. [Domain recommendations](docs/SKILL-RECOMMENDATIONS.md) connect
+roles/packs to useful procedures without automatically installing them.
+See [installation verification](docs/INSTALLATION-VERIFICATION.md) for retained
+native-host and synthetic task evidence and its limits.

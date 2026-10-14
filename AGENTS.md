@@ -12,7 +12,9 @@ truth or an autonomous agent runtime.
 - Pack membership and dependencies live in `packs/*.json`. Keep one owner per
   role/team, cover the full catalog, and validate dependency closure. Adaptive
   team candidates may be omitted from a pack export when their role is unavailable;
-  fixed workflows must resolve all members. Pack selection never silently removes
+  fixed workflows must resolve all members. Individual --agent selection adds only
+  the named profile; explicit --team includes its coordinator and declared roster.
+  Selectors combine without duplicates. Selection never silently removes
   previously installed files.
 - Put tool-specific formatting, host guidance, and capability mapping in
   `adapters/<tool>/`. Keep neutral sources free of vendor tool APIs and permission

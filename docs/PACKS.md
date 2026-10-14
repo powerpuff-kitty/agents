@@ -78,3 +78,24 @@ and settlement analysis. Neither pack adds account or transaction capabilities.
 Combining crypto and forecasting resolves 23 profiles and 13 workflows; shared
 dependencies are deduplicated. Source profiles still require actual host loading
 checks after a requested installation.
+
+## Fine selection
+
+Build, install and validation also accept repeatable `--agent ID` and `--team ID`.
+With any granular selection and no `--pack`, no whole pack is selected. A team
+adds its coordinator and every declared member, including adaptive candidates;
+this makes the selected command self-contained. An individual profile adds only
+itself. Combine selectors with packs to extend their closure, with no duplicates.
+Unknown IDs fail before installation writes. Granular exports use a deterministic
+`<adapter>-selection-<hash>` default directory; use `--output` for a chosen path.
+All-source validation/evaluation specification checks still run before selecting.
+
+```sh
+python3 scripts/install.py --agent financial-analyst --dry-run
+python3 scripts/install.py --team team-geo --agent financial-analyst --dry-run
+python3 scripts/build.py --adapter opencode --team team-geo --check
+```
+
+Build the matching selection before its `--check`. Fewer selections preserve prior
+installed outputs. Pack-to-skill recommendations are documented in
+[SKILL-RECOMMENDATIONS.md](SKILL-RECOMMENDATIONS.md); no skill installation is implicit.

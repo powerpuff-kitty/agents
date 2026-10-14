@@ -52,8 +52,10 @@ Selection includes dependency closure. Adaptive workflows omit candidates whose
 profiles are unavailable in the selected closure and omit empty stages; fixed
 workflows retain their complete roster. Team-lead can still discover actual
 additional project profiles at runtime. Selected pack IDs and all source hashes
-are recorded in the build manifest. `--pack` is shared by build, install, and
-validation; omitted selection means all packs. Pack-specific default build paths
+are recorded in the build manifest. `--pack`, `--agent` and `--team` are shared by build, install and validation.
+Omitting all selectors means all packs. Explicit individual profiles have no
+implicit dependencies; explicit teams include the full declared roster and
+coordinator. Packs retain their existing dependency/adaptive-filtering semantics. Pack-specific default build paths
 are separate from the full export, and installation never prunes previous packs.
 
 ## Adapter contract

@@ -93,8 +93,8 @@ def apply_target(tool, plan):
     return str(backup) if backup else None
 
 
-def install(tool, target, replace=False, dry_run=False, commands_target=None, agents_only=False, packs=None):
-    profiles = compile_profiles(tool, packs)
+def install(tool, target, replace=False, dry_run=False, commands_target=None, agents_only=False, packs=None, agent_ids=None, team_ids=None):
+    profiles = compile_profiles(tool, packs, agent_ids, team_ids)
     groups = {"agents": (Path(target).expanduser(), {})}
     if not agents_only:
         destination = Path(commands_target).expanduser() if commands_target else groups["agents"][0].parent / "commands"
@@ -108,6 +108,8 @@ def install(tool, target, replace=False, dry_run=False, commands_target=None, ag
             groups[parts[0]][1][parts[1]] = content.encode()
     if not groups["agents"][1]:
         raise ValueError("Adapter produced no installable profiles")
+    # An individual role selection should not create an empty command installation.
+    groups = {kind: group for kind, group in groups.items() if group[1]}
     # Inspect every destination before writing either agents or commands.
     plans = {kind: plan_target(tool, destination, desired, replace)
              for kind, (destination, desired) in groups.items()}
@@ -136,12 +138,14 @@ def main():
     parser.add_argument("--replace", action="store_true", help="Back up and replace conflicting profiles")
     parser.add_argument("--dry-run", action="store_true", help="Plan without writing anything")
     parser.add_argument("--pack", action="append", help="Select a pack plus dependencies; repeat to combine. Default: all packs")
+    parser.add_argument("--agent", action="append", help="Select an individual profile; repeat or combine")
+    parser.add_argument("--team", action="append", help="Select a team and its declared profiles; repeat or combine")
     args = parser.parse_args()
     try:
         if args.agents_only and args.commands_target:
             raise ValueError("--agents-only and --commands-target cannot be combined")
         result = install(args.tool, args.target, args.replace, args.dry_run,
-                         args.commands_target, args.agents_only, args.pack)
+                         args.commands_target, args.agents_only, args.pack, args.agent, args.team)
         print(json.dumps(result, indent=2))
         return 0
     except (OSError, ValueError, KeyError, TypeError, ImportError) as error:

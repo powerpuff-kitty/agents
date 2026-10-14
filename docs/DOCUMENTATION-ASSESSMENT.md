@@ -48,7 +48,8 @@ merely to repeat a skill.
 Document validation in four separate states: source checks, isolated helper tests,
 actual host loading and observed task/model outcomes. The original snapshot included
 100 agent acceptance specifications, not 100 observed successes. OpenCode skill
-loading remains unverified in the isolated v2.0.27 probe described in
+the initial isolated v2.0.27 probe did not establish loading; the later persistent-server
+verification in [INSTALLATION-VERIFICATION.md](INSTALLATION-VERIFICATION.md) supersedes that limit. Historical probe details remain in
 [SKILLS.md](SKILLS.md#local-verification-boundary).
 
 ## Skill-by-skill assessment
@@ -195,3 +196,15 @@ The two new roles have self-contained procedures and linked pack walkthroughs.
 These eight additions extend the per-entry documentation inventory to all 81
 current entries (47 skills plus 34 roles). Twelve new role/team specifications
 bring the canonical case count to 124; none is promoted to an observed outcome.
+
+
+## Content/GEO implementation and installation follow-up
+
+The collection now has 51 skills. The focused `content-brief`, `copy-editing`,
+`content-repurposing` and `geo-measurement` procedures each include a worked
+reference, output template and unexecuted acceptance specifications. Existing
+copywriter/GEO roles remain the role entrypoints; no duplicate generalist was added.
+[Retained installation and task evidence](INSTALLATION-VERIFICATION.md) distinguishes
+native host registration from one observed independent synthetic task and from
+canonical cases that remain unexecuted. [Skill recommendations](SKILL-RECOMMENDATIONS.md)
+connect domains without changing the flat Skills source layout.

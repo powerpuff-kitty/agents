@@ -189,20 +189,37 @@ def load_packs(agents, teams):
     return packs, closures, sources
 
 
-def select_catalog(agents, teams, requested=None):
+def select_catalog(agents, teams, requested=None, agent_ids=None, team_ids=None):
     packs, closures, sources = load_packs(agents, teams)
-    selected = set(packs) if requested is None else set()
+    granular = agent_ids is not None or team_ids is not None
+    selected = set(packs) if requested is None and not granular else set()
     for name in requested or []:
         if name not in packs:
             raise ValueError(f"Unknown pack: {name}; available: {', '.join(sorted(packs))}")
         selected.update(closures[name])
-    if not selected:
+    if not selected and not granular:
         raise ValueError("At least one pack is required")
     names = {name for pack in selected for name in packs[pack]["agents"]}
-    team_ids = {name for pack in selected for name in packs[pack]["teams"]}
+    selected_team_ids = {name for pack in selected for name in packs[pack]["teams"]}
+    known_agents = {a["metadata"]["id"] for a in agents}
+    team_map = {t["metadata"]["id"]: t["metadata"] for t in teams}
+    for name in agent_ids or []:
+        if name not in known_agents:
+            raise ValueError(f"Unknown agent: {name}")
+        names.add(name)
+    for name in team_ids or []:
+        if name not in team_map:
+            raise ValueError(f"Unknown team: {name}")
+        selected_team_ids.add(name)
+        # Explicit teams bring their full declared roster, including adaptive candidates.
+        team = team_map[name]
+        names.add(team["coordinator"])
+        names.update(a["agent"] for stage in team["stages"] for a in stage["assignments"])
+    if not names:
+        raise ValueError("Select at least one agent, team, or pack")
     selected_teams = []
     for original in teams:
-        if original["metadata"]["id"] not in team_ids:
+        if original["metadata"]["id"] not in selected_team_ids:
             continue
         team = copy.deepcopy(original["metadata"])
         if team["mode"] == "adaptive":
@@ -213,7 +230,7 @@ def select_catalog(agents, teams, requested=None):
     return ([a for a in agents if a["metadata"]["id"] in names], selected_teams, sources, sorted(selected))
 
 
-def compile_profiles(adapter="opencode", packs=None):
+def compile_profiles(adapter="opencode", packs=None, agent_ids=None, team_ids=None):
     if not ID.fullmatch(adapter):
         raise ValueError("Invalid adapter ID")
     directory = ROOT / "adapters" / adapter
@@ -224,9 +241,11 @@ def compile_profiles(adapter="opencode", packs=None):
     if config.get("schema_version") != 1 or config.get("tool") != adapter:
         raise ValueError("Adapter metadata mismatch")
     agents, sources = load_agents()
+    if set(config.get("mode_overrides", {})) - {a["metadata"]["id"] for a in agents}:
+        raise ValueError("Unknown profile in mode overrides")
     teams, team_sources = load_teams(agents)
     sources.extend(team_sources)
-    agents, teams, pack_sources, selected_packs = select_catalog(agents, teams, packs)
+    agents, teams, pack_sources, selected_packs = select_catalog(agents, teams, packs, agent_ids, team_ids)
     sources.extend(pack_sources)
     contract_path = ROOT / "shared/operating-contract.md"
     contract = contract_path.read_text()
@@ -256,9 +275,12 @@ def compile_profiles(adapter="opencode", packs=None):
     return files
 
 
-def build(adapter, output=None, check=False, packs=None):
-    files = compile_profiles(adapter, packs)
+def build(adapter, output=None, check=False, packs=None, agent_ids=None, team_ids=None):
+    files = compile_profiles(adapter, packs, agent_ids, team_ids)
     suffix = "-" + "-".join(sorted(set(packs))) if packs else ""
+    if agent_ids is not None or team_ids is not None:
+        selection = json.dumps([sorted(set(packs or [])), sorted(set(agent_ids or [])), sorted(set(team_ids or []))])
+        suffix = "-selection-" + hashlib.sha256(selection.encode()).hexdigest()[:12]
     destination = Path(output) if output else ROOT / "dist" / (adapter + suffix)
     expected = set(files)
     if destination.is_symlink() or any(path.is_symlink() for path in destination.rglob("*")):
@@ -291,9 +313,11 @@ def main():
     parser.add_argument("--output", type=Path)
     parser.add_argument("--check", action="store_true")
     parser.add_argument("--pack", action="append", help="Select a pack plus dependencies; repeat to combine. Default: all packs")
+    parser.add_argument("--agent", action="append", help="Select an individual profile; repeat or combine with packs/teams")
+    parser.add_argument("--team", action="append", help="Select a team and its declared profiles; repeat or combine")
     args = parser.parse_args()
     try:
-        path = build(args.adapter, args.output, args.check, args.pack)
+        path = build(args.adapter, args.output, args.check, args.pack, args.agent, args.team)
         print(f"{'Verified' if args.check else 'Built'} {args.adapter}: {path}")
         return 0
     except (OSError, ValueError, KeyError, TypeError, ImportError) as error:

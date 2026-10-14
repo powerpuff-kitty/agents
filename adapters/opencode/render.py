@@ -4,8 +4,7 @@ import textwrap
 
 def render(agents, teams, contract, host_instructions, config):
     modes = config.get("mode_overrides", {})
-    names = {agent["metadata"]["id"] for agent in agents}
-    if set(modes) - names or any(mode not in {"primary", "subagent", "all"}
+    if any(mode not in {"primary", "subagent", "all"}
                                   for mode in [config["mode"], *modes.values()]):
         raise ValueError("Invalid OpenCode mode")
     files = {}

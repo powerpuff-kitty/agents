@@ -60,27 +60,35 @@ Profiles do not install skills or provision wallet/account access.
 ## OpenCode
 
 OpenCode natively discovers Agent Skills; no skill renderer is required. Its
-[skill documentation](https://opencode.ai/docs/skills/) lists project-local
+[skill documentation](https://opencode.ai/v2/docs/skills/) lists project-local
 `.agents/skills/<name>/SKILL.md` and `.opencode/skills/<name>/SKILL.md`, and global
 `~/.agents/skills/<name>/SKILL.md` and `~/.config/opencode/skills/<name>/SKILL.md`.
 The source repo's root folders must be installed into a supported discovery path.
 Use real folders with their local resources, preserve existing custom copies and
-avoid duplicate names across discovery locations. The required frontmatter is
-`name` plus `description`; preserve normal automatic selection unless the user
+avoid duplicate names across discovery locations. The portable collection contract requires
+`name` plus `description`; V2 uses the directory-derived ID and treats `name` as a display label; preserve normal automatic selection unless the user
 explicitly requests otherwise. Review date: 2026-10-14.
 
 The existing `adapters/opencode/` renders role profiles and team commands. It does
 not transform skill files or widen skill permissions. Check the installed host's
-actual skill inventory and load the chosen skill before claiming delivery. The
-current source changes were validated as profiles/specifications; they are not
-new live-host or model-adherence results. Other hosts use their own verified
+actual skill inventory and load the chosen skill before claiming delivery. The [retained verification](INSTALLATION-VERIFICATION.md) checks current registered
+content. It does not establish model adherence. Other hosts use their own verified
 skill discovery workflow, with the same portable skill contents where supported.
 
 ## Local verification boundary
 
-On 2026-10-14, an isolated OpenCode v2.0.27 `skill.list` API probe returned an empty
-inventory for a valid root-source skill copied into documented project discovery
-paths. No global host configuration was changed and no model call ran. The skill
-source and generated role exports pass their structural checks; native skill
-loading remains unverified in this local environment. The empty response alone
-does not establish a required adapter or a particular loader/configuration defect.
+On 2026-10-14, an initial fresh-server `skill.list` API query was empty. A
+persistent-server check then registered all 51 skills, 34 agent prompts and 20
+team command names with expected skill paths/bodies and agent prompt bodies.
+Configuration plugins initialize asynchronously; bounded polling must reuse the
+same server. No global host configuration changed and no model call ran. See
+[actual evidence and reproduction](INSTALLATION-VERIFICATION.md). Native folders
+need no skill adapter; other hosts/versions need their own checks.
+
+## Content/GEO and managed selection
+
+Existing copywriter/marketing/GEO roles can use content-brief, copy-editing,
+content-repurposing and geo-measurement. [Domain recommendations](SKILL-RECOMMENDATIONS.md)
+map optional procedures to agent packs. The CLI's `skills` lifecycle offers
+individual/domain selection, revision/hash inventory, safe managed updates and
+rollback; it remains separate from installing agent profiles.

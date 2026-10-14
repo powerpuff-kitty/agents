@@ -80,3 +80,25 @@ Authored source is MIT-licensed under [LICENSE](LICENSE). Retain notices with
 substantial copies and preserve third-party terms. Skills require their own
 separately authorized installation; OpenCode reads SKILL.md natively, with no
 skill renderer in this repository.
+
+## Individual profiles and teams
+
+```sh
+python3 scripts/install.py --agent financial-analyst --dry-run
+python3 scripts/install.py --agent financial-analyst
+python3 scripts/install.py --team team-geo --dry-run
+python3 scripts/build.py --adapter portable --agent financial-analyst
+python3 scripts/validate.py --team team-geo
+```
+
+`--agent` and `--team` repeat and combine with `--pack`. Explicit teams bring
+their full declared roster plus coordinator; an individual profile has no implicit
+coordinator/team. See [packs and selection](docs/PACKS.md). Commands still use the
+selected profile target's sibling `commands/`; selecting individual profiles alone
+creates no team commands. Selecting a smaller set never uninstalls earlier outputs.
+
+Updating the checkout alone does not update installed profiles. Rerun the same
+selection to compile current sources: identical files remain untouched, unchanged
+managed files update with backups, and unmanaged/local edits require review.
+Agents and Skills are installed separately; [recommended skills](docs/SKILL-RECOMMENDATIONS.md)
+are suggestions, not added pack dependencies or permission grants.
