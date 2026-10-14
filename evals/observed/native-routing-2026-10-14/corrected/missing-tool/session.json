@@ -1,0 +1,180 @@
+{
+  "id": "ses_ec41071f8ffe3vAneXUr7WYObr",
+  "projectID": "ba463947f1ff2efabffd42cb4574ccb884eadf2d",
+  "model": {
+    "id": "deepseek-v4-pro",
+    "providerID": "deepseek",
+    "variant": "default"
+  },
+  "cost": 0.048739856,
+  "tokens": {
+    "input": 33051,
+    "output": 2990,
+    "cache": {
+      "read": 165248,
+      "write": 0
+    }
+  },
+  "outcome": "succeeded",
+  "time": {
+    "created": 1792006917641,
+    "updated": 1792007009999,
+    "idle": 1792007010007
+  },
+  "title": "Bound native catalog missing-tool",
+  "permissions": [
+    {
+      "action": "*",
+      "resource": "*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "glob",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "grep",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "skill",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "subagent",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "execute",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "pwd",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "ls",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "ls *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git status *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git diff *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git ls-files *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python3 -B -m unittest *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python3 -B -m unittest",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python -B -m unittest *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python -B -m unittest",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "command -v *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "which *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "standalone-pilot-tsc *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "node --version",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python3 --version",
+      "effect": "allow"
+    },
+    {
+      "action": "edit",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "external_directory",
+      "resource": "*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "*.env*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": ".opencode/*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": ".agents/*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": ".git/*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "owner-note.txt",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "CONTRACT.md",
+      "effect": "deny"
+    }
+  ],
+  "location": {
+    "directory": "/private/tmp/native-routing-2026-10-14/bound-v2/missing-tool/project"
+  }
+}

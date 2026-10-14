@@ -1,0 +1,1 @@
+Review the complete pending diff for correctness, including relevant new files and callers. Keep source and the Git index unchanged. Report concrete findings with file evidence and actual checks. Work only within this project; do not install tools, use web/network tools, commit or publish.

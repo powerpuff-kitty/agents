@@ -1,0 +1,272 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "autoupdate": false,
+  "permissions": [
+    {
+      "action": "*",
+      "resource": "*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "glob",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "grep",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "skill",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "subagent",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "execute",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "pwd",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "ls",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "ls *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git status *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git diff *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git ls-files *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python3 -B -m unittest *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python3 -B -m unittest",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python -B -m unittest *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python -B -m unittest",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "command -v *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "which *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "standalone-pilot-tsc *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "node --version",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python3 --version",
+      "effect": "allow"
+    },
+    {
+      "action": "edit",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "external_directory",
+      "resource": "*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "*.env*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": ".opencode/*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": ".agents/*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": ".git/*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "labels.txt",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "test_pagination.py",
+      "effect": "deny"
+    }
+  ],
+  "agents": {
+    "build": {
+      "steps": 10
+    },
+    "general": {
+      "steps": 10
+    },
+    "explore": {
+      "steps": 10
+    },
+    "copywriter": {
+      "steps": 10
+    },
+    "release-engineer": {
+      "steps": 10
+    },
+    "evidence-validator": {
+      "steps": 10
+    },
+    "design-analyst": {
+      "steps": 10
+    },
+    "system-architect": {
+      "steps": 10
+    },
+    "quality-engineer": {
+      "steps": 10
+    },
+    "ux-designer": {
+      "steps": 10
+    },
+    "geo-specialist": {
+      "steps": 10
+    },
+    "project-auditor": {
+      "steps": 10
+    },
+    "gtm-strategist": {
+      "steps": 10
+    },
+    "onchain-analyst": {
+      "steps": 10
+    },
+    "data-analyst": {
+      "steps": 10
+    },
+    "user-researcher": {
+      "steps": 10
+    },
+    "scientist": {
+      "steps": 10
+    },
+    "product-manager": {
+      "steps": 10
+    },
+    "marketing-strategist": {
+      "steps": 10
+    },
+    "seo-specialist": {
+      "steps": 10
+    },
+    "financial-analyst": {
+      "steps": 10
+    },
+    "portfolio-risk-analyst": {
+      "steps": 10
+    },
+    "probability-analyst": {
+      "steps": 10
+    },
+    "feature-developer": {
+      "steps": 10
+    },
+    "localization-specialist": {
+      "steps": 10
+    },
+    "performance-engineer": {
+      "steps": 10
+    },
+    "technical-artist": {
+      "steps": 10
+    },
+    "designer": {
+      "steps": 10
+    },
+    "accessibility-specialist": {
+      "steps": 10
+    },
+    "artist-3d": {
+      "steps": 10
+    },
+    "security-auditor": {
+      "steps": 10
+    },
+    "mathematician": {
+      "steps": 10
+    },
+    "game-designer": {
+      "steps": 10
+    },
+    "usability-auditor": {
+      "steps": 10
+    },
+    "quant-researcher": {
+      "steps": 10
+    },
+    "researcher": {
+      "steps": 10
+    },
+    "iteration-reviewer": {
+      "steps": 10
+    },
+    "team-lead": {
+      "steps": 10
+    }
+  }
+}

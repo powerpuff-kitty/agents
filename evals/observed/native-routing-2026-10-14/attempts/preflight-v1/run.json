@@ -1,0 +1,16 @@
+{
+  "scenario": "implementation",
+  "model_requested": {
+    "providerID": "deepseek",
+    "id": "deepseek-v4-pro"
+  },
+  "wall_clock_limit_seconds": 240,
+  "prompt_names_roles_or_skills": false,
+  "trace_scope": "API messages excluding reasoning/thinking; no private config/credentials copied",
+  "host_version": "opencode v2.0.27",
+  "status": "setup_or_run_error",
+  "error_type": "AssertionError",
+  "error": "Model resolution mismatch",
+  "changed_files": [],
+  "elapsed_seconds": 0.858
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "check": "implementation trace, instruction inventory, location, source hashes, model, no reasoning fields",
+    "passed": true
+  },
+  {
+    "check": "review trace, instruction inventory, location, source hashes, model, no reasoning fields",
+    "passed": true
+  },
+  {
+    "check": "missing-tool trace, instruction inventory, location, source hashes, model, no reasoning fields",
+    "passed": true
+  },
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "-v"
+    ],
+    "copy_of": "corrected/implementation/final-workspace",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "test_empty (test_pagination.Pages.test_empty) ... ok\ntest_exact_first (test_pagination.Pages.test_exact_first) ... ok\ntest_exact_last (test_pagination.Pages.test_exact_last) ... ok\ntest_invalid_size (test_pagination.Pages.test_invalid_size) ... ok\ntest_partial_last (test_pagination.Pages.test_partial_last) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.000s\n\nOK\n"
+  },
+  {
+    "argv": [
+      "node",
+      "--experimental-strip-types",
+      "reviewer-port-check.mjs"
+    ],
+    "copy_of": "reviewer/corrected-copy-missing-tool",
+    "exit": 0,
+    "stdout": "{\"accepted\":8,\"rejected\":38,\"checks\":46,\"passed\":true}\n",
+    "stderr": ""
+  }
+]

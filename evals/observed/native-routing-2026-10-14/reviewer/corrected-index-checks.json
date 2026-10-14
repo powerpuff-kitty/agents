@@ -1,0 +1,267 @@
+[
+  {
+    "scenario": "implementation",
+    "original_fixture": {
+      "version": 2,
+      "entries": [
+        {
+          "path": "labels.txt",
+          "mode": 33188,
+          "oid": "5ab7085d7d9345d99d07ef3032a7e80f67ce31cd",
+          "stage": 0,
+          "flags": 10,
+          "stat_fields": [
+            1792006072,
+            237763100,
+            1792006072,
+            237763100,
+            16777230,
+            202086939,
+            501,
+            0,
+            10
+          ]
+        },
+        {
+          "path": "pagination.py",
+          "mode": 33188,
+          "oid": "adf27f7acaeb54d9b7c7b65cbcbf882bb2f03e72",
+          "stage": 0,
+          "flags": 13,
+          "stat_fields": [
+            1792006072,
+            237486972,
+            1792006072,
+            237486972,
+            16777230,
+            202086938,
+            501,
+            0,
+            277
+          ]
+        },
+        {
+          "path": "test_pagination.py",
+          "mode": 33188,
+          "oid": "793af124002ee41189262ed4c6b6aeb627a0e382",
+          "stage": 0,
+          "flags": 18,
+          "stat_fields": [
+            1792006072,
+            238044812,
+            1792006072,
+            238044812,
+            16777230,
+            202086940,
+            501,
+            0,
+            482
+          ]
+        }
+      ],
+      "extensions_hex": "5452454500000019003320300a68997aa36cae0dd6bae323d82b3bafba4b7cae03",
+      "checksum": "525ade2cdd1c53759a0be730bd2b83317f9bef5b",
+      "sha256": "24e0573b32c1ae54430136e8d7550de0a64271038ee9adf314526895b3313fc8"
+    },
+    "corrected_final": {
+      "version": 2,
+      "entries": [
+        {
+          "path": "labels.txt",
+          "mode": 33188,
+          "oid": "5ab7085d7d9345d99d07ef3032a7e80f67ce31cd",
+          "stage": 0,
+          "flags": 10,
+          "stat_fields": [
+            1792006072,
+            237763100,
+            1792006072,
+            237763100,
+            16777230,
+            202086939,
+            501,
+            0,
+            10
+          ]
+        },
+        {
+          "path": "pagination.py",
+          "mode": 33188,
+          "oid": "adf27f7acaeb54d9b7c7b65cbcbf882bb2f03e72",
+          "stage": 0,
+          "flags": 13,
+          "stat_fields": [
+            1792006072,
+            237486972,
+            1792006072,
+            237486972,
+            16777230,
+            202086938,
+            501,
+            0,
+            277
+          ]
+        },
+        {
+          "path": "test_pagination.py",
+          "mode": 33188,
+          "oid": "793af124002ee41189262ed4c6b6aeb627a0e382",
+          "stage": 0,
+          "flags": 18,
+          "stat_fields": [
+            1792006819,
+            653796056,
+            1792006072,
+            238044812,
+            16777230,
+            202108637,
+            501,
+            0,
+            482
+          ]
+        }
+      ],
+      "extensions_hex": "5452454500000019003320300a68997aa36cae0dd6bae323d82b3bafba4b7cae03",
+      "checksum": "aae221b95094f7bb3968c4d803491b0467130770",
+      "sha256": "f90d318a8e6c757f9ab553b7690dda6ae6ef110420dc8f3a16024b9eaeb408e6"
+    },
+    "same_staged_entries_and_flags": true,
+    "same_extensions": true,
+    "stat_differences": [
+      "test_pagination.py"
+    ]
+  },
+  {
+    "scenario": "review",
+    "original_fixture": {
+      "version": 2,
+      "entries": [
+        {
+          "path": "CONTRACT.md",
+          "mode": 33188,
+          "oid": "6bc2bc5a7a4979aa0bc35d5077f8a6b1e55d4544",
+          "stage": 0,
+          "flags": 11,
+          "stat_fields": [
+            1792006073,
+            148465869,
+            1792006073,
+            148465869,
+            16777230,
+            202087597,
+            501,
+            0,
+            179
+          ]
+        },
+        {
+          "path": "display.py",
+          "mode": 33188,
+          "oid": "f1155eb7cd026b93c14de819703b2be0493ab0d0",
+          "stage": 0,
+          "flags": 10,
+          "stat_fields": [
+            1792006073,
+            148303034,
+            1792006073,
+            148303034,
+            16777230,
+            202087596,
+            501,
+            0,
+            47
+          ]
+        },
+        {
+          "path": "pricing.py",
+          "mode": 33188,
+          "oid": "6bca0dc20f8757b07ab40a2cbb2b99a94fbf805f",
+          "stage": 0,
+          "flags": 10,
+          "stat_fields": [
+            1792006073,
+            218564717,
+            1792006073,
+            218564717,
+            16777230,
+            202087595,
+            501,
+            0,
+            105
+          ]
+        }
+      ],
+      "extensions_hex": "5452454500000006002d3120300a",
+      "checksum": "73d80e7a5ebd519d6da9cd612e325d44494b45c7",
+      "sha256": "e6543ddab9763656ce754fabad3835bcee0d268842405e25fd2c608d3934c3a7"
+    },
+    "corrected_final": {
+      "version": 2,
+      "entries": [
+        {
+          "path": "CONTRACT.md",
+          "mode": 33188,
+          "oid": "6bc2bc5a7a4979aa0bc35d5077f8a6b1e55d4544",
+          "stage": 0,
+          "flags": 11,
+          "stat_fields": [
+            1792006846,
+            566887700,
+            1792006073,
+            148465869,
+            16777230,
+            202111606,
+            501,
+            0,
+            179
+          ]
+        },
+        {
+          "path": "display.py",
+          "mode": 33188,
+          "oid": "f1155eb7cd026b93c14de819703b2be0493ab0d0",
+          "stage": 0,
+          "flags": 10,
+          "stat_fields": [
+            1792006073,
+            148303034,
+            1792006073,
+            148303034,
+            16777230,
+            202087596,
+            501,
+            0,
+            47
+          ]
+        },
+        {
+          "path": "pricing.py",
+          "mode": 33188,
+          "oid": "6bca0dc20f8757b07ab40a2cbb2b99a94fbf805f",
+          "stage": 0,
+          "flags": 10,
+          "stat_fields": [
+            1792006846,
+            568159387,
+            1792006073,
+            218564717,
+            16777230,
+            202111609,
+            501,
+            0,
+            105
+          ]
+        }
+      ],
+      "extensions_hex": "5452454500000006002d3120300a",
+      "checksum": "55a66156d054cf167b14c7a8623241eda43be262",
+      "sha256": "86ae6390cb848d48435145c66c381cbcbe18122b9acdf791a4a16812e36b34c8"
+    },
+    "same_staged_entries_and_flags": true,
+    "same_extensions": true,
+    "stat_differences": [
+      "CONTRACT.md",
+      "pricing.py"
+    ]
+  }
+]

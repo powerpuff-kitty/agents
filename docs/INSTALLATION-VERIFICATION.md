@@ -20,7 +20,7 @@ python3 scripts/opencode_probe.py --opencode /absolute/path/to/opencode --expect
 ```
 
 The probe uses a disposable project, home/configuration directories and a private
-persistent server. It checks complete profile bodies and command names without a
+persistent server. It checks complete profile bodies and command names without an
 AI Skills or CLI checkout, installing skills, or invoking a model. The earlier combined
 AI Skills/AI Agents observations above remain evidence for their recorded revisions.
 A separate 2026-10-14 run of this profile-only probe registered all 35 prompts
@@ -36,6 +36,14 @@ fetcher and profile probe live in this repository. No cross-repository checkout 
 coordinated release is needed. The Linux fetcher verifies the locked archive
 integrity before extracting its single executable; on other platforms pass an
 existing supported executable explicitly.
+
+Separate [ordinary-prompt native trials](../evals/observed/native-routing-2026-10-14/README.md)
+used DeepSeek with verified fixture locations and all 62 skills/35 profiles visible
+before prompting. All 3 used built-in `build`; none invoked a skill or subagent or
+selected a custom profile. Use a named profile or team command for deliberate
+specialist selection. Installation visibility does not guarantee implicit use.
+The retained attempts include quota refusal, wrong-project activity and a corrected
+rerun; host session success is assessed separately from task acceptance.
 
 Individual profile/team selection has deterministic regression coverage for exact
 rosters, coordinator inclusion, deduplication and unknown-ID refusal before writes.

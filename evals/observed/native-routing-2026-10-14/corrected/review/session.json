@@ -1,0 +1,175 @@
+{
+  "id": "ses_ec4118404ffeWopErJNR065KUa",
+  "projectID": "8c51c543b9b4c200058769d93068acf54c9d6257",
+  "model": {
+    "id": "deepseek-v4-pro",
+    "providerID": "deepseek",
+    "variant": "default"
+  },
+  "cost": 0.033765204,
+  "tokens": {
+    "input": 18912,
+    "output": 2830,
+    "cache": {
+      "read": 129792,
+      "write": 0
+    }
+  },
+  "outcome": "succeeded",
+  "time": {
+    "created": 1792006847527,
+    "updated": 1792006915625,
+    "idle": 1792006915627
+  },
+  "title": "Bound native catalog review",
+  "permissions": [
+    {
+      "action": "*",
+      "resource": "*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "glob",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "grep",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "skill",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "subagent",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "execute",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "pwd",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "ls",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "ls *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git status *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git diff *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git ls-files *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python3 -B -m unittest *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python3 -B -m unittest",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python -B -m unittest *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python -B -m unittest",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "command -v *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "which *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "standalone-pilot-tsc *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "node --version",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python3 --version",
+      "effect": "allow"
+    },
+    {
+      "action": "edit",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "external_directory",
+      "resource": "*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "*.env*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": ".opencode/*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": ".agents/*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": ".git/*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "*",
+      "effect": "deny"
+    }
+  ],
+  "location": {
+    "directory": "/private/tmp/native-routing-2026-10-14/bound-v2/review/project"
+  }
+}

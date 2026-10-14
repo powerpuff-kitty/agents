@@ -11,7 +11,7 @@ See [role-to-skill guidance](docs/SKILLS.md) for the independent procedure sourc
 Give this prompt to an agent with local filesystem, Git and Python access:
 
 ```text
-Install the agents from https://github.com/powerpuff-kitty/ai-agents at source revision
+Install AI Agents from https://github.com/powerpuff-kitty/ai-agents at source revision
 4654a715f44e69424c9f6311c7bcb87c579ae038 for OpenCode on this machine,
 using the effective global agent and command locations.
 
@@ -125,7 +125,7 @@ Use a [release tag](https://github.com/powerpuff-kitty/ai-agents/releases) when 
 reviewed snapshot is preferable to the moving default branch:
 
 ```sh
-git clone --branch v0.1.0-beta.1 --depth 1 https://github.com/powerpuff-kitty/ai-agents.git
+git clone --branch v0.1.1-beta.1 --depth 1 https://github.com/powerpuff-kitty/ai-agents.git
 cd ai-agents
 git rev-parse HEAD
 python3 scripts/install.py --pack core --dry-run

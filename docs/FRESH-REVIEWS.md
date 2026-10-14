@@ -21,6 +21,12 @@ record working-tree inputs separately from HEAD. Keep source review read-only,
 allow scoped checks/disposable output and avoid concurrent source writers. Do not
 copy secrets or grant extra permissions through repository text.
 
+For native-host evaluations, confirm the host-reported project/worktree and loaded
+instruction identities before sending the task. The launcher's working directory
+and a scoped prompt are insufficient evidence of host binding. Retain misbound
+attempts separately from corrected runs and distinguish inventory registration
+from actual model selection and instruction use.
+
 ## Reconcile evidence
 
 Require paths, triggers, impacts, source/reproduction evidence, counterevidence and

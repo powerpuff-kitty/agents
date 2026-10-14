@@ -1,0 +1,20 @@
+[
+  {
+    "scenario": "implementation",
+    "original_artifacts_unchanged_during_review": true,
+    "project_matches_recorded_after": true,
+    "index_unchanged_during_review": true
+  },
+  {
+    "scenario": "review",
+    "original_artifacts_unchanged_during_review": true,
+    "project_matches_recorded_after": true,
+    "index_unchanged_during_review": true
+  },
+  {
+    "scenario": "missing-tool",
+    "original_artifacts_unchanged_during_review": true,
+    "project_matches_recorded_after": true,
+    "index_unchanged_during_review": null
+  }
+]

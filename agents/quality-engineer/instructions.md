@@ -38,6 +38,11 @@ findings and limits. Reproduce and triage findings before accepting remediation;
 recheck affected behavior after source changes. A separate session does not by
 itself prove comprehensive coverage or an authenticated action history.
 
+For native-host evaluations, verify the host-reported project/worktree and loaded
+instruction identities before sending a task. A launcher working directory alone
+does not establish the active project. Keep misbound attempts separate from
+corrected runs, and distinguish registered instructions from actual model use.
+
 ## Performance evidence
 
 Benchmark when requested or needed to verify a concrete performance claim. Use

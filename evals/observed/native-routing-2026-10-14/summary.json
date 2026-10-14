@@ -1,0 +1,132 @@
+{
+  "format_version": 1,
+  "host": "opencode v2.0.27",
+  "agents_source_commit": "942fa2e284d83d13c74a2e56d40e4dd48c741fb7",
+  "skills_source_commit": "7d5238fe346412bba05623baaacc2c04c0ddfa41",
+  "corrected_native_runs": [
+    {
+      "scenario": "implementation",
+      "case_id": "implementation-dirty-worktree",
+      "model": {
+        "id": "deepseek-v4-pro",
+        "providerID": "deepseek",
+        "variant": "default"
+      },
+      "assistant_agents": [
+        "build"
+      ],
+      "tool_counts": {
+        "read": 6,
+        "shell": 6,
+        "edit": 1
+      },
+      "tool_status_counts": {
+        "completed": 12,
+        "error": 1
+      },
+      "skill_invocations": 0,
+      "subagent_invocations": 0,
+      "session_outcome": "succeeded",
+      "elapsed_seconds": 26.557,
+      "reported_cost": 0.017928063999999997,
+      "reported_tokens": {
+        "input": 16097,
+        "output": 1462,
+        "cache": {
+          "read": 122752,
+          "write": 0
+        }
+      },
+      "changed_files": [
+        "pagination.py"
+      ]
+    },
+    {
+      "scenario": "review",
+      "case_id": "focused-review-with-skills",
+      "model": {
+        "id": "deepseek-v4-pro",
+        "providerID": "deepseek",
+        "variant": "default"
+      },
+      "assistant_agents": [
+        "build"
+      ],
+      "tool_counts": {
+        "shell": 11,
+        "read": 11,
+        "glob": 2,
+        "grep": 1
+      },
+      "tool_status_counts": {
+        "completed": 23,
+        "error": 2
+      },
+      "skill_invocations": 0,
+      "subagent_invocations": 0,
+      "session_outcome": "succeeded",
+      "elapsed_seconds": 70.039,
+      "reported_cost": 0.033765204,
+      "reported_tokens": {
+        "input": 18912,
+        "output": 2830,
+        "cache": {
+          "read": 129792,
+          "write": 0
+        }
+      },
+      "changed_files": []
+    },
+    {
+      "scenario": "missing-tool",
+      "case_id": "implementation-unavailable-check",
+      "model": {
+        "id": "deepseek-v4-pro",
+        "providerID": "deepseek",
+        "variant": "default"
+      },
+      "assistant_agents": [
+        "build"
+      ],
+      "tool_counts": {
+        "read": 9,
+        "shell": 13,
+        "glob": 2,
+        "write": 1
+      },
+      "tool_status_counts": {
+        "completed": 24,
+        "error": 1
+      },
+      "skill_invocations": 0,
+      "subagent_invocations": 0,
+      "session_outcome": "succeeded",
+      "elapsed_seconds": 93.397,
+      "reported_cost": 0.048739856,
+      "reported_tokens": {
+        "input": 33051,
+        "output": 2990,
+        "cache": {
+          "read": 165248,
+          "write": 0
+        }
+      },
+      "changed_files": [
+        "port.ts"
+      ]
+    }
+  ],
+  "canonical_unique_case_count_unchanged": 8,
+  "canonical_total": 144,
+  "native_automatic_catalog_selection": "not observed in these 3 ordinary-prompt runs",
+  "default_attempts": "3 provider quota refusals before a model response",
+  "misbound_attempt": "excluded from fixture-selection outcomes; retained separately with unrelated outputs withheld",
+  "preflight_v1": "aborted before prompt because resolved default variant was compared too strictly",
+  "reviewer": {
+    "agent": "/root/native_opencode_independent_review",
+    "initial_spawn_history_inheritance": "none",
+    "provenance": "collaboration.spawn_agent fork_turns=none; follow-up reused that independent reviewer session",
+    "model_identity": "not exposed by reviewer invocation",
+    "corrected_review_handoff": "corrected-request.txt"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "scenario": "missing-tool",
+  "argv": [
+    "/Users/tcsntcsn/.opencode/bin/opencode",
+    "run",
+    "--standalone",
+    "--format",
+    "json",
+    "--auto",
+    "--title",
+    "Native catalog missing-tool",
+    "Implement the input-validation contract in CONTRACT.md. The normal compiler is unavailable here; finish feasible scoped work, run available checks, and make verification limits clear. Preserve owner-note.txt. Work only within this project. Do not install tools, use web/network tools, commit or publish."
+  ],
+  "cwd": "/private/tmp/native-routing-2026-10-14/missing-tool/workspace",
+  "exit": 1,
+  "timed_out": false,
+  "elapsed_seconds": 1.186,
+  "host_version": "opencode v2.0.27",
+  "event_count": 2,
+  "reasoning_events_not_retained": 0,
+  "trace_scope": "CLI JSON events excluding reasoning/thinking; no credential/config files inspected or copied",
+  "configured_model": "default, not overridden",
+  "configured_agent": "default, not overridden",
+  "tool_permissions": "disposable project rules; --auto never overrides configured deny; not a sandbox"
+}

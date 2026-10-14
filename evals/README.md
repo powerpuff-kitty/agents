@@ -10,8 +10,11 @@ a scenario into a claimed pass.
 The [current standalone-pilot index](observed/standalone-pilot-2026-10-14/index.json)
 records **8 observed cases and 136 unobserved cases** across the 144 specifications.
 It adds unavailable-compiler and false-recovery cases, 4 reflection branches and
-a real Agents project pilot with a separate reviewer. Native automatic triggering
-and statistical reliability remain unverified. The earlier
+a real AI Agents project pilot with a separate reviewer. The
+[native OpenCode trials](observed/native-routing-2026-10-14/README.md) repeat 3 of
+those cases with DeepSeek: all used built-in `build`, with no skill/subagent calls
+or custom profile selection. Inventory visibility is verified; native automatic
+catalog selection was not observed. Statistical reliability remains unverified. The earlier
 [reliability index](observed/reliability-2026-10-14/index.json) retains its original
 6-case scope, findings and corrections.
 

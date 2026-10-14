@@ -1,7 +1,7 @@
 # AI Agents
 
 [![CI](https://github.com/powerpuff-kitty/ai-agents/actions/workflows/validate.yml/badge.svg?branch=main&event=push)](https://github.com/powerpuff-kitty/ai-agents/actions/workflows/validate.yml)
-[![Version: 0.1.0-beta.1](https://img.shields.io/badge/version-0.1.0--beta.1-blue)](https://github.com/powerpuff-kitty/ai-agents/releases/tag/v0.1.0-beta.1)
+[![Version: 0.1.1-beta.1](https://img.shields.io/badge/version-0.1.1--beta.1-blue)](https://github.com/powerpuff-kitty/ai-agents/releases/tag/v0.1.1-beta.1)
 [![Profiles: 35](https://img.shields.io/badge/profiles-35-blue)](docs/CATALOG.md)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
@@ -47,6 +47,11 @@ evidence. [Design extraction](docs/DESIGN-EXTRACTION.md) produces scoped taste/s
 from existing interfaces. Profiles use the host's available model, tools, context and permissions;
 they do not supply a runtime, sandbox or automatic scheduler. Team definitions
 request delegation within the actual task scope.
+
+Installation makes profiles available; it does not guarantee automatic selection.
+Use a named profile or team command for deliberate specialist use. In the
+[3 ordinary-prompt native trials](evals/observed/native-routing-2026-10-14/README.md),
+OpenCode used its built-in agent without invoking installed skills or specialists.
 
 Reusable procedures live in [AI Skills](https://github.com/powerpuff-kitty/ai-skills).
 [Role-to-skill guidance](docs/SKILLS.md) explains optional domains and installation;

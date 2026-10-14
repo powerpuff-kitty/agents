@@ -1,0 +1,31 @@
+{
+  "original_events_sha256": "36366b10321fb70ab0e9e5f04297cf09a1793c68cc4f5516670c44465b510e82",
+  "event_count": 92,
+  "event_types": {
+    "step_start": 25,
+    "tool_use": 42,
+    "step_finish": 24,
+    "error": 1
+  },
+  "omissions": "Full tool inputs/outputs and assistant text withheld because the host read an unrelated portfolio checkout. Private originals retained; this summary does not authenticate their contents. Reasoning/thinking was excluded by the collector before initial retention.",
+  "observed_completed_tool_count": 42,
+  "observed_tool_counts": {
+    "read": 15,
+    "grep": 13,
+    "shell": 10,
+    "glob": 3,
+    "skill": 1
+  },
+  "observed_skill_id": "tcsn-change",
+  "fixture_task_completed": false,
+  "exact_served_model_and_settings": "unverified",
+  "partial_step_finish_usage": {
+    "input": 73233,
+    "output": 3600,
+    "cache_read": 1084416,
+    "cache_write": 0,
+    "reported_cost": 0.098600172
+  },
+  "usage_limit": "24 completed steps only; terminal step unmetered. Not invoice verification.",
+  "other_deepseek_cli_attempts": "review started but was interrupted without a completed run.json; missing-tool not started. Neither counts as a completed trial."
+}

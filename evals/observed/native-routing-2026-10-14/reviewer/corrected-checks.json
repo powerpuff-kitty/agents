@@ -1,0 +1,64 @@
+[
+  {
+    "scenario": "implementation",
+    "cwd": "/private/tmp/native-routing-2026-10-14/reviewer/corrected-copy-implementation",
+    "argv": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "-v"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "test_empty (test_pagination.Pages.test_empty) ... ok\ntest_exact_first (test_pagination.Pages.test_exact_first) ... ok\ntest_exact_last (test_pagination.Pages.test_exact_last) ... ok\ntest_invalid_size (test_pagination.Pages.test_invalid_size) ... ok\ntest_partial_last (test_pagination.Pages.test_partial_last) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.000s\n\nOK\n"
+  },
+  {
+    "scenario": "review",
+    "cwd": "/private/tmp/native-routing-2026-10-14/reviewer/corrected-copy-review",
+    "argv": [
+      "python3",
+      "-B",
+      "-c",
+      "from pricing import quote; from display import dollars; from checkout import checkout; print({\"quote(3,40,10)\":quote(3,40,10),\"expected_quote\":108,\"dollars(90)\":dollars(90),\"expected_dollars\":\"$90.00\",\"checkout()\":checkout(),\"expected_checkout\":\"$90.00\"})"
+    ],
+    "exit": 0,
+    "stdout": "{'quote(3,40,10)': 110, 'expected_quote': 108, 'dollars(90)': '$0.90', 'expected_dollars': '$90.00', 'checkout()': '$0.90', 'expected_checkout': '$90.00'}\n",
+    "stderr": ""
+  },
+  {
+    "scenario": "missing-tool",
+    "cwd": "/private/tmp/native-routing-2026-10-14/reviewer/corrected-copy-missing-tool",
+    "argv": [
+      "node",
+      "--version"
+    ],
+    "exit": 0,
+    "stdout": "v24.21.0\n",
+    "stderr": ""
+  },
+  {
+    "scenario": "missing-tool",
+    "cwd": "/private/tmp/native-routing-2026-10-14/reviewer/corrected-copy-missing-tool",
+    "argv": [
+      "node",
+      "--experimental-strip-types",
+      "reviewer-port-check.mjs"
+    ],
+    "exit": 0,
+    "stdout": "{\"accepted\":8,\"rejected\":38,\"checks\":46,\"passed\":true}\n",
+    "stderr": ""
+  },
+  {
+    "scenario": "missing-tool",
+    "cwd": "/private/tmp/native-routing-2026-10-14/reviewer/corrected-copy-missing-tool",
+    "argv": [
+      "/bin/sh",
+      "-c",
+      "command -v standalone-pilot-tsc"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": ""
+  }
+]
