@@ -1,7 +1,7 @@
 # Independent releases
 
-Git tags are the version authority for this source collection. Agents has its own
-release cadence and starts at `v0.1.0-beta.1`; Skills and the Harness CLI may use
+Git tags are the version authority for this source collection. AI Agents has its own
+release cadence and starts at `v0.1.0-beta.1`; AI Skills and the Harness CLI may use
 different versions. No npm manifest, shared version service or coordinated release
 is required. The version applies to profiles, shared instructions, teams, adapters
 and installer source at the tagged commit.
@@ -20,7 +20,7 @@ tags immutable; withdraw or supersede a faulty release with notes and a new vers
 
 1. Select a clean, reviewed commit and the version. Run all [repository gates](../AGENTS.md).
 2. Require successful source and native-host CI for that exact commit. The jobs
-   use this repository alone; they do not require Skills or CLI checkouts.
+   use this repository alone; they do not require AI Skills or CLI checkouts.
 3. Verify partial/repeated installation, updates and local-edit protection in
    disposable targets. Keep unavailable platforms and behavioral checks explicit.
 4. Build a source archive from the exact commit with `git archive`, retaining

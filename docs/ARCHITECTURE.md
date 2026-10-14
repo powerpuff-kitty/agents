@@ -142,4 +142,4 @@ behavior. A separate native-host job uses this repository's own integrity-pinned
 host fetcher and disposable-server probe to check current profiles and command
 names without installing skills or checking out the CLI. CI does not establish
 model outcomes or production readiness. Optional cross-catalog documentation
-checks accept an explicit Skills checkout; default checks need only this repository.
+checks accept an explicit AI Skills checkout; default checks need only this repository.

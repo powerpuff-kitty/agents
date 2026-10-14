@@ -1,16 +1,16 @@
 # Distribution channels
 
-Skills and Agents are independent source repositories with separate installation,
+AI Skills and AI Agents are independent source repositories with separate installation,
 updates, validation and releases. Direct Git/native skill folders and the Python
 profile installer are their primary paths. Neither requires the Harness CLI or
 the other collection. Roles can use optional skills when available and continue
 with feasible native methods when they are absent.
 
-The CLI is an optional downstream consumer. It pins and bundles a Skills snapshot
-for reproducible builds; that dependency points from the CLI to Skills. It does
+The CLI is an optional downstream consumer. It pins and bundles a AI Skills snapshot
+for reproducible builds; that dependency points from the CLI to AI Skills. It does
 not control either collection's releases, and it does not bundle agent profiles.
 Updating any repository does not update copies already installed by another
-channel. The CLI validates its pinned integration in its own CI; Agents validates
+channel. The CLI validates its pinned integration in its own CI; AI Agents validates
 its own source and native profile registration without checking out either repo.
 
 Installing a Node package in node_modules does not itself register skills, profiles

@@ -18,7 +18,7 @@ does not provide blockchain access, an audited contract or a wallet runtime.
 | [defi-risk-analysis](https://github.com/powerpuff-kitty/ai-skills/tree/main/defi-risk-analysis) | Mechanism-specific collateral/liquidation, AMM/LP, liquidity/oracle/governance/dependency scenarios. |
 
 Each standalone skill includes a focused guide, report template and 6 unrun
-acceptance specifications. Install skills separately via the Skills [installation
+acceptance specifications. Install skills separately via the AI Skills [installation
 prompt](https://github.com/powerpuff-kitty/ai-skills/blob/main/INSTALL.md). Missing
 skills permit bounded direct methods rather than automatic installation.
 

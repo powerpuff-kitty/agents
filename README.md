@@ -1,4 +1,4 @@
-# Agents
+# AI Agents
 
 [![CI](https://github.com/powerpuff-kitty/ai-agents/actions/workflows/validate.yml/badge.svg?branch=main&event=push)](https://github.com/powerpuff-kitty/ai-agents/actions/workflows/validate.yml)
 [![Version: 0.1.0-beta.1](https://img.shields.io/badge/version-0.1.0--beta.1-blue)](https://github.com/powerpuff-kitty/ai-agents/releases/tag/v0.1.0-beta.1)
@@ -9,7 +9,7 @@
 contains **35 profiles, 20 team workflows and 7 optional packs**. OpenCode adapters
 produce named profiles and commands; portable exports provide plain Markdown.
 Install, build, validate and update this repository independently with Git and
-Python 3.10+. No Harness CLI, Harness project or Skills checkout is required.
+Python 3.10+. No Harness CLI, Harness project or AI Skills checkout is required.
 
 ## Install
 
@@ -31,7 +31,7 @@ The installer preserves unrelated files and local edits, backs up replaced manag
 content and never prunes a previously installed selection. [INSTALL.md](INSTALL.md)
 owns destination, update, conflict and verification details.
 [Independent releases](docs/RELEASING.md) provide reviewed version pins and change
-notes; neither Skills nor the CLI needs a matching version.
+notes; neither AI Skills nor the CLI needs a matching version.
 
 ## Use
 
@@ -48,7 +48,7 @@ from existing interfaces. Profiles use the host's available model, tools, contex
 they do not supply a runtime, sandbox or automatic scheduler. Team definitions
 request delegation within the actual task scope.
 
-Reusable procedures live in [Skills](https://github.com/powerpuff-kitty/ai-skills).
+Reusable procedures live in [AI Skills](https://github.com/powerpuff-kitty/ai-skills).
 [Role-to-skill guidance](docs/SKILLS.md) explains optional domains and installation;
 installing profiles does not install skills or change their permissions.
 [Distribution choices](docs/DISTRIBUTION.md) explains Git/native installation and npm.

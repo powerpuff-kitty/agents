@@ -20,7 +20,7 @@ records belong to onchain-analyst when that optional pack is available.
 | [settlement-rule-review](https://github.com/powerpuff-kitty/ai-skills/tree/main/settlement-rule-review) | Exact event definitions, rule/source versions, time boundaries, void/refund and proposal/dispute/final status. |
 
 Each includes a focused reference, worked examples, a report template and 6
-unrun acceptance cases. Skills are installed separately with their [installation
+unrun acceptance cases. AI Skills are installed separately with their [installation
 prompt](https://github.com/powerpuff-kitty/ai-skills/blob/main/INSTALL.md); missing
 skills permit bounded direct work and explicit limits.
 

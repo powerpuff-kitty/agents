@@ -26,8 +26,8 @@ def check(root,skills=None):
   if expected not in text:errors.append('README count missing/stale: '+expected)
  if skills:
   n=len(list(skills.glob('*/SKILL.md')));text=(skills/'README.md').read_text(encoding="utf-8")
-  for expected in [f'skills-{n}',f'{n} portable task procedures']:
-   if expected not in text:errors.append('Skills README count missing/stale: '+expected)
+  for expected in [f'AI%20Skills-{n}',f'{n} portable task procedures']:
+   if expected not in text:errors.append('AI Skills README count missing/stale: '+expected)
  return {'passed':not errors,'markdown_files':checked,'counts':counts,'errors':errors,'limitations':['supported local path syntax only; no external URL, fragment, rendering or prose-truth verification']}
 
 if __name__=='__main__':

@@ -21,7 +21,7 @@ betting-model validation by themselves. Optional [crypto](CRYPTO.md) and
 
 ## Reusable procedures
 
-Skills live independently at the Skills source root. Install them separately using
+Procedures live independently at the AI Skills repository root. Install them separately using
 its [installation guide](https://github.com/powerpuff-kitty/ai-skills/blob/main/INSTALL.md).
 The role can perform bounded direct checks if a skill is unavailable; it does not
 silently install it or claim host loading.

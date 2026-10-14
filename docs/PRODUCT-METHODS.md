@@ -1,7 +1,7 @@
 # Product methods
 
 Use the existing roles with optional focused procedures from
-[Skills](https://github.com/powerpuff-kitty/ai-skills). The catalog remains 35 profiles;
+[AI Skills](https://github.com/powerpuff-kitty/ai-skills). The catalog remains 35 profiles;
 these methods add depth without duplicating ownership. Installation and updates
 remain separate for [profiles](../INSTALL.md) and
 [skills](https://github.com/powerpuff-kitty/ai-skills/blob/main/INSTALL.md).
@@ -20,7 +20,7 @@ remain separate for [profiles](../INSTALL.md) and
 Read only relevant method references; the skill owns its procedure and report
 template. Profiles continue with feasible native methods if the skill is absent,
 and identify unavailable tools or evidence. They never silently install skills.
-Install only the desired skill folders directly from the Skills repository.
+Install only the desired skill folders directly from the AI Skills repository.
 The optional CLI also offers domain presets; its embedded revision can lag the
 source. See [installation channels](DISTRIBUTION.md) before choosing a manager.
 

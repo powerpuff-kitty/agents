@@ -12,7 +12,7 @@ starting a fresh standalone server can repeat the empty snapshot. Native folders
 need no skill adapter. Use current [V2 skill documentation](https://opencode.ai/v2/docs/skills/),
 which is separate from V1 configuration documentation.
 
-Check profiles independently from this Agents checkout with an explicit host:
+Check profiles independently from this AI Agents checkout with an explicit host:
 
 ```sh
 python3 scripts/build.py --adapter opencode
@@ -21,8 +21,8 @@ python3 scripts/opencode_probe.py --opencode /absolute/path/to/opencode --expect
 
 The probe uses a disposable project, home/configuration directories and a private
 persistent server. It checks complete profile bodies and command names without a
-Skills or CLI checkout, installing skills, or invoking a model. The earlier combined
-Skills/Agents observations above remain evidence for their recorded revisions.
+AI Skills or CLI checkout, installing skills, or invoking a model. The earlier combined
+AI Skills/AI Agents observations above remain evidence for their recorded revisions.
 A separate 2026-10-14 run of this profile-only probe registered all 35 prompts
 and 20 command names on OpenCode v2.0.27 without installing any skills.
 

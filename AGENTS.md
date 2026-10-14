@@ -30,7 +30,7 @@ truth or an autonomous agent runtime.
 - Authored profiles and tooling use the root MIT [LICENSE](LICENSE).
   [INSTALL.md](INSTALL.md) owns the copyable installation prompt; installing
   profiles and installing skills are separate scopes. Installation, default
-  validation and native-host CI must work without a CLI or Skills checkout;
+  validation and native-host CI must work without a CLI or AI Skills checkout;
   keep optional cross-catalog checks explicit and downstream integration pins
   owned by their consumer.
 - Follow [README.md](README.md) for usage, [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)

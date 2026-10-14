@@ -1,8 +1,8 @@
-# Install agent profiles
+# Install AI Agents
 
 This source owns reusable roles and team workflows. Its adapters render portable
 Markdown or OpenCode profiles. Installation needs Git, Python 3.10+ and the
-selected host; it needs no Harness CLI, Harness project or Skills checkout.
+selected host; it needs no Harness CLI, Harness project or AI Skills checkout.
 Profiles do not install skills or provide a model runtime.
 See [role-to-skill guidance](docs/SKILLS.md) for the independent procedure source.
 
@@ -21,7 +21,7 @@ canonical roles, teams, selected packs and the local installer before running it
 Install all packs unless I named a smaller selection. Use the repository's existing
 OpenCode installer with --dry-run first, inspect the exact destinations/conflicts,
 then apply the already authorized installation when preflight succeeds. Do not
-install the Harness CLI or Skills collection as a prerequisite.
+install the Harness CLI or AI Skills collection as a prerequisite.
 
 Preserve unrelated profiles, commands, permissions and customized files. Do not
 use --replace automatically, delete old profiles or switch scope to bypass a
@@ -85,7 +85,7 @@ remain explicit gaps. Review [architecture and installation boundaries](docs/ARC
 when upgrading; source renders and local tests are separate from live loading.
 
 Authored source is MIT-licensed under [LICENSE](LICENSE). Retain notices with
-substantial copies and preserve third-party terms. Skills require their own
+substantial copies and preserve third-party terms. AI Skills require their own
 separately authorized installation; OpenCode reads SKILL.md natively, with no
 skill renderer in this repository.
 
@@ -116,7 +116,7 @@ creates no team commands. Selecting a smaller set never uninstalls earlier outpu
 Updating the checkout alone does not update installed profiles. Rerun the same
 selection to compile current sources: identical files remain untouched, unchanged
 managed files update with backups, and unmanaged/local edits require review.
-Agents and Skills are installed separately; [recommended skills](docs/SKILLS.md)
+AI Agents and AI Skills are installed separately; [recommended skills](docs/SKILLS.md)
 are suggestions, not added pack dependencies or permission grants.
 
 ## Versioned installs

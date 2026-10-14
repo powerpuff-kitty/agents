@@ -4,7 +4,7 @@ An agent owns responsibility, handoffs and completion. A skill supplies a focuse
 task procedure. Profiles work with available native methods when a skill is absent;
 installation of one collection never installs the other or grants permissions.
 
-[Skills](https://github.com/powerpuff-kitty/ai-skills) keeps self-contained folders at
+[AI Skills](https://github.com/powerpuff-kitty/ai-skills) keeps self-contained folders at
 its root. Each includes SKILL.md, a license and local resources. Its
 [installation guide](https://github.com/powerpuff-kitty/ai-skills/blob/main/INSTALL.md)
 owns direct-folder installation, updates and native discovery paths. No CLI or
@@ -41,7 +41,7 @@ procedure does not require a duplicate specialist profile or a full team.
 ## OpenCode
 
 OpenCode V2 natively discovers SKILL.md folders; no skill renderer is required.
-The Agents adapter renders role profiles and team commands separately. V2 uses a
+The AI Agents adapter renders role profiles and team commands separately. V2 uses a
 path-derived skill ID; portable folders keep name and directory aligned. Preserve
 normal implicit selection unless the user requests otherwise.
 

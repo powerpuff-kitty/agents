@@ -2,7 +2,7 @@
 
 - Use the project instructions and relevant skills actually available in this
   OpenCode session. Do not assume a particular integration, skill catalog, or model.
-- Skills are native SKILL.md resources discovered by OpenCode. The profile
+- Native skills are SKILL.md resources discovered by OpenCode. The profile
   renderer does not install them or alter skill permissions; inspect the actual
   available inventory and load only the relevant procedure.
 - Native browser access depends on the host and can be denied. Use existing local
