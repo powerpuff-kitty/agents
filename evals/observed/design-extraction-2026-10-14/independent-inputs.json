@@ -1,0 +1,42 @@
+{
+  "heads": {
+    "/Users/tcsntcsn/TCSN/skills": "95ff8b5e60997bb34f6ac2262e7e22db899a5ae2",
+    "/Users/tcsntcsn/TCSN/agents": "1c3728db107fab245af9b5523ce3d85bedceea9d"
+  },
+  "sha256": {
+    "/Users/tcsntcsn/TCSN/agents/AGENTS.md": "e56761619d68df95233a537d245f70d2638c3fde4f7a868123076af3cecead3f",
+    "/Users/tcsntcsn/TCSN/agents/INSTALL.md": "814d4f2f8a324a4346c743e88abec03b5990ad300291175e3a21f15b4d97929b",
+    "/Users/tcsntcsn/TCSN/agents/README.md": "98740462f879c8811fc431fba8dbc82c998a4a70d4c314f154beed1596d71270",
+    "/Users/tcsntcsn/TCSN/agents/agents/design-analyst/agent.json": "b4b91f561b402b1265b57ebfbd23375915b001ce604b470cafc683df17bf1e6e",
+    "/Users/tcsntcsn/TCSN/agents/agents/design-analyst/instructions.md": "43783822dd88826b7e020f770ab5b09d81a7f6438b8cd167738c7614a602be25",
+    "/Users/tcsntcsn/TCSN/agents/agents/designer/instructions.md": "897e734e39c0ffe852b12cb2b8e20d15c6e6df145c0e5cfa603059b718b36cd4",
+    "/Users/tcsntcsn/TCSN/agents/agents/evidence-validator/instructions.md": "fbf301cf159ded606269266db84c6753a77deaa6273ac9741beea7ae1c37b7a1",
+    "/Users/tcsntcsn/TCSN/agents/agents/team-lead/instructions.md": "55f4b7395679f7e8358e8fdd6743604aed528a31af8dd64ffd80049fed6badb3",
+    "/Users/tcsntcsn/TCSN/agents/docs/ARCHITECTURE.md": "957897b9e94d93233c7ff2bd145ea0a24b0e15eea78e4a09ac3dbde0780aebd7",
+    "/Users/tcsntcsn/TCSN/agents/docs/SKILLS.md": "bd519526277ec4df6e71367a9a1c64e182d93b41578e4cc691edd0179a3419cd",
+    "/Users/tcsntcsn/TCSN/agents/evals/behavior-cases.json": "4b52e34bf8cf898734164a2f02d513a15a8d6a0b62804da235958794330d0708",
+    "/Users/tcsntcsn/TCSN/agents/packs/core.json": "86bc419d8c8df62470c7a311f9922e3aba9e664a393e4632a77bdb5b215063be",
+    "/Users/tcsntcsn/TCSN/agents/scripts/build.py": "8c6a077ed7ce44999871c941b0bd2f1039f79c4ed9b730cfe7a57c216328fe83",
+    "/Users/tcsntcsn/TCSN/agents/scripts/check_docs.py": "9b1992638d0d67e21b4b3d80bec8402faba1180504fd00cea4e06c6117b6584b",
+    "/Users/tcsntcsn/TCSN/agents/scripts/validate.py": "7418f7426809cac70be98efd22b9df557703c93152a81c05e43ce99b7c6ba798",
+    "/Users/tcsntcsn/TCSN/agents/shared/operating-contract.md": "25c88a8a48a9f2081348417f0ffed7df4731dc99f34ba84f42104512df397a72",
+    "/Users/tcsntcsn/TCSN/agents/teams/team-ui.json": "f948b4c6714d7426328414943ad0533e5046f785b3a170e0e35a6ac811e2e76a",
+    "/Users/tcsntcsn/TCSN/agents/teams/team.json": "93a9d5bfc7ea5d44a42bae624f64a33b7a323d40190388b779f39fa4fe99d135",
+    "/Users/tcsntcsn/TCSN/skills/INSTALL.md": "c0fa4abdc7830a71870683223366b00e97a854e11e8c71e485120cb9ae93d694",
+    "/Users/tcsntcsn/TCSN/skills/README.md": "465cbe27fb9d5fa713c9dca5121fe4129ce5265fd4970c9369870452e86d74ab",
+    "/Users/tcsntcsn/TCSN/skills/design-analysis/SKILL.md": "c51f532e488bd02a0fe51c97dc42e033c07cb50e6d198d371609fb1b75b27847",
+    "/Users/tcsntcsn/TCSN/skills/design-extraction/LICENSE": "da8e7b98c9f5547396031dd15ffe7a820eb8c2b9e4d1b32c9eb69bbc0d2c5af4",
+    "/Users/tcsntcsn/TCSN/skills/design-extraction/SKILL.md": "861c7dd239eb5b7805555b46ced205be3745b6d722bb4f3003cfb5cddc53ffd1",
+    "/Users/tcsntcsn/TCSN/skills/design-extraction/assets/report-template.md": "f1041f0e64e2f2694e1182b738d1e6c99d5e67839a9b2419fa019f8280ec1f70",
+    "/Users/tcsntcsn/TCSN/skills/design-extraction/assets/taste-profile.example.json": "f190b7eb9db8152052248b46fa71831958e03b5c362a6d12accd7cb70d6b96d7",
+    "/Users/tcsntcsn/TCSN/skills/design-extraction/references/capture-and-report.md": "4e4c9c6a261e12089b54266b69960f7d7f99a47acd59ea0d85c34c75e3d63e44",
+    "/Users/tcsntcsn/TCSN/skills/design-extraction/tests/cases.json": "3e823ab33f0f11060a44047debaaad523744f147f915dbb31147255690b0a012",
+    "/Users/tcsntcsn/TCSN/skills/design-extraction/tests/fixtures/reference.css": "7e81a04148dd881f97f853c448cc7ad553b19232ed59ff3d0f681a29f82b1c6b",
+    "/Users/tcsntcsn/TCSN/skills/design-extraction/tests/fixtures/reference.html": "6e75166cb6bffaa59196fe7c60c2c7d514c96a91217717c1bf959e6e22285e76",
+    "/Users/tcsntcsn/TCSN/skills/design-intelligence/SKILL.md": "b7ccd86fed223329f37f38261f9b09a5c7e703859bd1456655c795d70afe581f",
+    "/Users/tcsntcsn/TCSN/agents/tests/test_selection.py": "b290d224c5ab1e5eb99aced8c6e66871e4a993853e766a74f878f6e96d66e098",
+    "/Users/tcsntcsn/TCSN/agents/tests/test_workflows.py": "e7e41c6faffaaff92323f5bedc3ccb677b4a0278e61efa92b62f33bb3c85a2bd",
+    "/Users/tcsntcsn/TCSN/agents/tests/test_audit_regressions.py": "c412d68bff8de2055a8fc004f82bb2977b4b2ef4ca1dbaac0beab8ee3a39dd19",
+    "/Users/tcsntcsn/TCSN/agents/tests/test_behavior_eval.py": "3c5cf6c3d916c2cef41e23ea3a9135b1272146348af0ba40299e3d676428b375"
+  }
+}

@@ -1,6 +1,6 @@
 # Behavior evaluations
 
-[128 canonical scenarios](behavior-cases.json) specify at least 2 cases per role
+[133 canonical scenarios](behavior-cases.json) specify at least 2 cases per role
 and team, plus shared/procedure boundaries. Specification objects retain
 `execution_status: not_run`; observed outcomes live separately and never rewrite
 a scenario into a claimed pass.
@@ -8,7 +8,7 @@ a scenario into a claimed pass.
 ## Observed canonical smoke cases
 
 The [2026-10-14 smoke suite](observed/behavior-smoke-2026-10-14/index.json)
-records **3 observed cases and 125 unobserved cases**. Each ran in a fresh scoped
+records **3 observed cases and 130 unobserved cases**. Each ran in a fresh scoped
 session with explicit role/skill instructions and isolated synthetic artifacts.
 
 | Case | Observable outcome | Remaining limit |
@@ -50,6 +50,14 @@ actions. Review each acceptance criterion against the actual response and availa
 artifacts, recording pass/fail/unverified and limits. Do not show expected answers
 or reviewer conclusions to the evaluator. Use local fixtures/stubs only and retain
 failed/missing checks. Never upload private data or run a provider/budget implicitly.
+
+## Design extraction exercises
+
+The [source-only and DTCG exercises](observed/design-extraction-2026-10-14/README.md)
+retain reports, candidate artifacts, source identities and independent reviews.
+They are explicit-instruction observations, not canonical role-case executions,
+automatic routing proof, live app/browser capture or full DTCG certification.
+Public exports withhold unrelated project context and disclose separate-copy changes.
 
 ## Other observations
 

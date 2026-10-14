@@ -3,7 +3,7 @@
 The `forecasting` pack owns probability-analyst and `/team-forecast`. It depends
 on science-data/core: 19 profiles and 11 workflows. It supports recorded event
 forecasts and conditional betting/prediction-market analysis without a betting
-or account runtime. The full catalog has 34 profiles, 20 workflows and 7 packs.
+or account runtime. The full catalog has 35 profiles, 20 workflows and 7 packs.
 
 ## Responsibilities and methods
 

@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "design-analyst",
+  "title": "Design Analyst",
+  "description": "Extract evidence-backed design profiles, taste indexes and candidate design-system reports from websites, apps, screenshots, design files or UI source. Own capture provenance, supported token exports and report coverage; use designer for independent design review and ux-designer for new journeys."
+}

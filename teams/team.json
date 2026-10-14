@@ -28,6 +28,11 @@
           "when": "The task asks for architecture or changes public contracts, persistence, or system boundaries."
         },
         {
+          "agent": "design-analyst",
+          "task": "Capture the requested interface/source evidence and scoped taste/design-system reference report in its authorized output directory. Return original evidence and candidate artifacts for later review, preserving runtime/image/source limits.",
+          "when": "The task asks to extract an existing interface design language, taste profile/index or candidate design-system report."
+        },
+        {
           "agent": "designer",
           "task": "Assess visual/system fit, components, UI states, contrast, spacing, and responsive consistency; complete journey design belongs to ux-designer.",
           "when": "The task asks for design or changes a user-facing interface."

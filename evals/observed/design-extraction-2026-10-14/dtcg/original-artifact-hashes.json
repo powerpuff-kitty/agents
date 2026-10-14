@@ -1,0 +1,14 @@
+{
+  "tokens.json": "fa8dd6281062ad291dadb43ad88bf0e91e7ae3b96d3439e79be1018876a33222",
+  "tokens.dark.json": "36a9f2dc739beb83ad38959360c63390c51d07592bd2a606335a79a6829f2278",
+  "tokens.css": "9409177212377d0744b2cdeac35b81fc3a0d6ff87ebcff204a63101c2ab29919",
+  "css-mapping.json": "43bfd84eaa35b929a89d945c4d48f73f92a2a6c30681b9d948988534a29596af",
+  "reference.css": "7e81a04148dd881f97f853c448cc7ad553b19232ed59ff3d0f681a29f82b1c6b",
+  "task.txt": "43a9ba8e3e09f7eb4a5bc8d8decebfc8c5502ed9f482f0d00b097131438c10b4",
+  "actions.json": "8bbcb174b8da302ae0f171923dc952e190b5c5b8e9bd6056fe5b31fb21dbc2ee",
+  "checks.json": "49070bee3b09509f3593a4d79cc56e938bb49f641c46a9b91e639e714dac6070",
+  "result.md": "c618303dd84abc2f7ef6413b3161879845e6411941c78f4d0c16bd8bca71e94c",
+  "evidence/notes.md": "a877f4dbe6d800391d2fa70233c2b924e7477d89abb113754465a5140ad25739",
+  "evidence/manifest.json": "57eefb134b9b5ff7f97ff4eb12a54ac66ae29c38ced32dc69598a354ec84fc94",
+  "evidence/observations.json": "6e8dd31f23fb86985cb5fdca3e36ca3afc1bc1ab7cfda631641f60aa5ad43008"
+}

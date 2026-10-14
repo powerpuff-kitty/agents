@@ -25,7 +25,7 @@ class SelectionTests(unittest.TestCase):
 
     def test_combined_selection_deduplicates_and_rejects_unknown(self):
         files=compile_profiles('portable',packs=['core'],agent_ids=['financial-analyst','financial-analyst'])
-        self.assertEqual(len(json.loads(files['build-manifest.json'])['agents']),16)
+        self.assertEqual(len(json.loads(files['build-manifest.json'])['agents']),17)
         for kwargs in [{'agent_ids':['missing']},{'team_ids':['missing']}]:
             with self.assertRaises(ValueError):compile_profiles('opencode',**kwargs)
 

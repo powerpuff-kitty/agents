@@ -1,0 +1,265 @@
+{
+  "format": "Local evidence and CSS mapping ledger, version 1; this companion is not a DTCG document",
+  "source": "reference.css",
+  "defaultTokens": "tokens.json",
+  "darkTokens": "tokens.dark.json",
+  "css": "tokens.css",
+  "themeSelection": {
+    "default": ":root",
+    "dark": "@media (prefers-color-scheme: dark) { :root { ... } }",
+    "changedPaths": [
+      "color.ink",
+      "color.surface"
+    ],
+    "evidence": [
+      "E15"
+    ],
+    "semantics": "Separate complete DTCG token files; no standard mode field asserted."
+  },
+  "tokens": [
+    {
+      "path": "color.ink",
+      "type": "color",
+      "cssCustomProperty": "--ink",
+      "defaultCssValue": "#111111",
+      "darkCssValue": "#ffffff",
+      "evidence": [
+        "E02",
+        "E07",
+        "E10",
+        "E13",
+        "E15"
+      ],
+      "mapping": "Retains source variable --ink and every var(--ink) binding; foreground and action background are not renamed into one universal foreground role.",
+      "status": "candidate; extracted value with proposed token path; not an accepted source system"
+    },
+    {
+      "path": "color.surface",
+      "type": "color",
+      "cssCustomProperty": "--surface",
+      "defaultCssValue": "#ffffff",
+      "darkCssValue": "#111111",
+      "evidence": [
+        "E03",
+        "E07",
+        "E10",
+        "E15"
+      ],
+      "mapping": "Retains source variable --surface, used for body background and action foreground.",
+      "status": "candidate; extracted value with proposed token path; not an accepted source system"
+    },
+    {
+      "path": "space.small",
+      "type": "dimension",
+      "cssCustomProperty": "--space-small",
+      "defaultCssValue": "8px",
+      "darkCssValue": "8px",
+      "evidence": [
+        "E04",
+        "E10"
+      ],
+      "mapping": "Existing variable, with proposed reuse for action block padding; source action padding is literal.",
+      "status": "candidate; extracted value with proposed token path; not an accepted source system"
+    },
+    {
+      "path": "space.medium",
+      "type": "dimension",
+      "cssCustomProperty": "--space-medium",
+      "defaultCssValue": "16px",
+      "darkCssValue": "16px",
+      "evidence": [
+        "E08",
+        "E10",
+        "E13",
+        "E14"
+      ],
+      "mapping": "Proposed spacing reuse for grid gap, action inline padding, panel padding and compact layout padding; equal literals do not prove an existing shared token.",
+      "status": "candidate; extracted value with proposed token path; not an accepted source system"
+    },
+    {
+      "path": "space.large",
+      "type": "dimension",
+      "cssCustomProperty": "--space-large",
+      "defaultCssValue": "24px",
+      "darkCssValue": "24px",
+      "evidence": [
+        "E08"
+      ],
+      "mapping": "Proposed name for default layout padding.",
+      "status": "candidate; extracted value with proposed token path; not an accepted source system"
+    },
+    {
+      "path": "radius.control",
+      "type": "dimension",
+      "cssCustomProperty": "--radius-control",
+      "defaultCssValue": "4px",
+      "darkCssValue": "4px",
+      "evidence": [
+        "E05",
+        "E10"
+      ],
+      "mapping": "Retains source variable and action border-radius reference; separate from equal focus offset.",
+      "status": "candidate; extracted value with proposed token path; not an accepted source system"
+    },
+    {
+      "path": "layout.maxWidth",
+      "type": "dimension",
+      "cssCustomProperty": "--layout-max-width",
+      "defaultCssValue": "64rem",
+      "darkCssValue": "64rem",
+      "evidence": [
+        "E08"
+      ],
+      "mapping": "Proposed name for layout max-width; no root-font conversion.",
+      "status": "candidate; extracted value with proposed token path; not an accepted source system"
+    },
+    {
+      "path": "breakpoint.compact",
+      "type": "dimension",
+      "cssCustomProperty": "--breakpoint-compact",
+      "defaultCssValue": "40rem",
+      "darkCssValue": "40rem",
+      "evidence": [
+        "E14"
+      ],
+      "mapping": "Proposed name for max-width media condition. CSS custom properties cannot drive media conditions; consumers must emit the literal 40rem.",
+      "status": "candidate; extracted value with proposed token path; not an accepted source system"
+    },
+    {
+      "path": "font.family.body",
+      "type": "fontFamily",
+      "cssCustomProperty": "--font-family-body",
+      "defaultCssValue": "system-ui, sans-serif",
+      "darkCssValue": "system-ui, sans-serif",
+      "evidence": [
+        "E07"
+      ],
+      "mapping": "Source ordered generic family stack; availability and actual selected font are unobserved.",
+      "status": "candidate; extracted value with proposed token path; not an accepted source system"
+    },
+    {
+      "path": "font.size.heading1",
+      "type": "dimension",
+      "cssCustomProperty": "--font-size-heading-1",
+      "defaultCssValue": "2rem",
+      "darkCssValue": "2rem",
+      "evidence": [
+        "E09"
+      ],
+      "mapping": "Proposed name for h1 size; no px conversion.",
+      "status": "candidate; extracted value with proposed token path; not an accepted source system"
+    },
+    {
+      "path": "font.lineHeight.heading1",
+      "type": "number",
+      "cssCustomProperty": "--font-line-height-heading-1",
+      "defaultCssValue": "1.2",
+      "darkCssValue": "1.2",
+      "evidence": [
+        "E09"
+      ],
+      "mapping": "Preserves unitless multiplier; no dimension or percent conversion.",
+      "status": "candidate; extracted value with proposed token path; not an accepted source system"
+    },
+    {
+      "path": "opacity.actionHover",
+      "type": "number",
+      "cssCustomProperty": "--opacity-action-hover",
+      "defaultCssValue": "0.8",
+      "darkCssValue": "0.8",
+      "evidence": [
+        "E11"
+      ],
+      "mapping": "Preserves opacity scalar in a number token; usage constrains 0..1, not a DTCG opacity type. Hover is declared, not exercised.",
+      "status": "candidate; extracted value with proposed token path; not an accepted source system"
+    },
+    {
+      "path": "focus.outlineWidth",
+      "type": "dimension",
+      "cssCustomProperty": "--focus-outline-width",
+      "defaultCssValue": "2px",
+      "darkCssValue": "2px",
+      "evidence": [
+        "E12"
+      ],
+      "mapping": "Extracted outline width only, not a reconstructed border composite.",
+      "status": "candidate; extracted value with proposed token path; not an accepted source system"
+    },
+    {
+      "path": "focus.outlineOffset",
+      "type": "dimension",
+      "cssCustomProperty": "--focus-outline-offset",
+      "defaultCssValue": "4px",
+      "darkCssValue": "4px",
+      "evidence": [
+        "E12"
+      ],
+      "mapping": "Separate semantic candidate from radius.control despite equal numeric value.",
+      "status": "candidate; extracted value with proposed token path; not an accepted source system"
+    },
+    {
+      "path": "border.width.panel",
+      "type": "dimension",
+      "cssCustomProperty": "--border-width-panel",
+      "defaultCssValue": "1px",
+      "darkCssValue": "1px",
+      "evidence": [
+        "E13"
+      ],
+      "mapping": "Extracted panel border width only; style and dynamic color remain raw evidence.",
+      "status": "candidate; extracted value with proposed token path; not an accepted source system"
+    }
+  ],
+  "contextBindings": [
+    {
+      "selector": "body",
+      "property": "color",
+      "source": "var(--ink)",
+      "token": "color.ink",
+      "evidence": "E07"
+    },
+    {
+      "selector": "body",
+      "property": "background",
+      "source": "var(--surface)",
+      "token": "color.surface",
+      "evidence": "E07"
+    },
+    {
+      "selector": ".action",
+      "property": "color",
+      "source": "var(--surface)",
+      "token": "color.surface",
+      "evidence": "E10"
+    },
+    {
+      "selector": ".action",
+      "property": "background",
+      "source": "var(--ink)",
+      "token": "color.ink",
+      "evidence": "E10"
+    },
+    {
+      "selector": ".action",
+      "property": "border-radius",
+      "source": "var(--radius-control)",
+      "token": "radius.control",
+      "evidence": "E10"
+    },
+    {
+      "selector": ".panel",
+      "property": "border color",
+      "source": "var(--ink)",
+      "token": "color.ink",
+      "evidence": "E13"
+    },
+    {
+      "selector": ".action:focus-visible",
+      "property": "outline color",
+      "source": "currentColor",
+      "token": null,
+      "evidence": "E12",
+      "reason": "Depends on element computed color; retained rather than guessed."
+    }
+  ]
+}

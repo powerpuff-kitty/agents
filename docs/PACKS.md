@@ -2,17 +2,17 @@
 
 Pack declarations in `packs/*.json` select canonical profiles and teams without
 forking their instructions. Builds, installation, and optional host validation
-default to the full catalog: 34 profiles and 20 teams.
+default to the full catalog: 35 profiles and 20 teams.
 
 | Pack | Owned profiles | Owned teams | Dependencies | Total with dependencies |
 | --- | --- | --- | --- | --- |
-| core | 15 | 8 | None | 15 profiles, 8 teams |
-| science-data | 3 | 2 | core | 18 profiles, 10 teams |
-| product-growth | 8 | 5 | core, science-data | 26 profiles, 15 teams |
-| game-3d | 3 | 2 | core, science-data | 21 profiles, 12 teams |
-| finance | 3 | 1 | science-data (and its core dependency) | 21 profiles, 11 teams |
-| crypto | 1 | 1 | finance (and its dependencies) | 22 profiles, 12 teams |
-| forecasting | 1 | 1 | science-data (and core) | 19 profiles, 11 teams |
+| core | 16 | 8 | None | 16 profiles, 8 teams |
+| science-data | 3 | 2 | core | 19 profiles, 10 teams |
+| product-growth | 8 | 5 | core, science-data | 27 profiles, 15 teams |
+| game-3d | 3 | 2 | core, science-data | 22 profiles, 12 teams |
+| finance | 3 | 1 | science-data (and its core dependency) | 22 profiles, 11 teams |
+| crypto | 1 | 1 | finance (and its dependencies) | 23 profiles, 12 teams |
+| forecasting | 1 | 1 | science-data (and core) | 20 profiles, 11 teams |
 
 Core includes ux-designer, usability-auditor, accessibility-specialist, and `/team-ux`.
 The core UX workflow remains usable without product-growth: optional user-researcher,
@@ -68,7 +68,7 @@ python3 scripts/install.py --pack core --target /path/to/project/.opencode/agent
 ```
 
 The sibling `.opencode/commands` is selected automatically. Source validation checks
-the full catalog and all 128 behavior specifications even with `--pack`; reported
+the full catalog and all 133 behavior specifications even with `--pack`; reported
 profile/team counts and optional host checks concern the selected closure. Host
 checks allow unrelated additional profiles/commands and do not execute model workflows.
 

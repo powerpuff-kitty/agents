@@ -1,0 +1,29 @@
+{
+  "agents": {
+    "head": "1c3728db107fab245af9b5523ce3d85bedceea9d",
+    "working_tree_sha256": {
+      "agents/design-analyst/agent.json": "b4b91f561b402b1265b57ebfbd23375915b001ce604b470cafc683df17bf1e6e",
+      "agents/design-analyst/instructions.md": "7e903a5354610b46f9fa79a5a687e9ea2eeaa99e962a322639a29a7f85eda633",
+      "teams/team-ui.json": "f948b4c6714d7426328414943ad0533e5046f785b3a170e0e35a6ac811e2e76a",
+      "teams/team.json": "e79815ed35b29ac5a65546682613fcbbc6020fe8d6fcc4d1258d1a3dab436ac1",
+      "packs/core.json": "86bc419d8c8df62470c7a311f9922e3aba9e664a393e4632a77bdb5b215063be",
+      "shared/operating-contract.md": "25c88a8a48a9f2081348417f0ffed7df4731dc99f34ba84f42104512df397a72",
+      "scripts/install.py": "1fc062c74d60ece3be91b926082576021cba03fa9d7c723945b58bc43613f627",
+      "scripts/build.py": "8c6a077ed7ce44999871c941b0bd2f1039f79c4ed9b730cfe7a57c216328fe83",
+      "tests/test_selection.py": "189fbf776babeaef4d3253cf1f0e6e261d6fc727989ff686996a6e92f22aef4e"
+    }
+  },
+  "skills": {
+    "head": "49d566c34f3e4872f2601da23f13447935803a03",
+    "working_tree_sha256": {
+      "design-extraction/LICENSE": "da8e7b98c9f5547396031dd15ffe7a820eb8c2b9e4d1b32c9eb69bbc0d2c5af4",
+      "design-extraction/SKILL.md": "de27141056828b5d34635cea8fe03df87886c3f845a994a6b69eb6a4836d809a",
+      "design-extraction/assets/report-template.md": "f1041f0e64e2f2694e1182b738d1e6c99d5e67839a9b2419fa019f8280ec1f70",
+      "design-extraction/assets/taste-profile.example.json": "f190b7eb9db8152052248b46fa71831958e03b5c362a6d12accd7cb70d6b96d7",
+      "design-extraction/references/capture-and-report.md": "39684fee1e75c4fbb36f990e01da0aeacc1a338b1f7a2c30fae81e7893c221b3",
+      "design-extraction/tests/cases.json": "fe077ddd2c07006d45cb0edffecdd4f9d831568b7e2a2ae14913e76aa3f8c64d",
+      "design-extraction/tests/fixtures/reference.css": "7e81a04148dd881f97f853c448cc7ad553b19232ed59ff3d0f681a29f82b1c6b",
+      "design-extraction/tests/fixtures/reference.html": "6e75166cb6bffaa59196fe7c60c2c7d514c96a91217717c1bf959e6e22285e76"
+    }
+  }
+}

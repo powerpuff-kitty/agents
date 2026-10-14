@@ -1,0 +1,10 @@
+# Provenance addendum to the independent token review
+
+The original `/private/tmp/design-dtcg-evidence-review.md` remains unchanged. This addendum only checks two newly supplied historical raw instruction files against the exact SHA-256 and byte counts already recorded in the token-export manifest. It does not validate later instruction revisions or broaden the original token/specification review.
+
+- Historical `/private/tmp/design-extraction-forward-2026-10-14/evidence/instructions/18-instructions.md` corresponds to `/Users/tcsntcsn/TCSN/agents/agents/design-analyst/instructions.md`: SHA-256 `43783822dd88826b7e020f770ab5b09d81a7f6438b8cd167738c7614a602be25`; 3778 bytes. Manifest SHA-256 `43783822dd88826b7e020f770ab5b09d81a7f6438b8cd167738c7614a602be25`; 3778 bytes. Result: **MATCH**.
+- Historical `/private/tmp/design-extraction-forward-2026-10-14/evidence/instructions/19-SKILL.md` corresponds to `/Users/tcsntcsn/TCSN/skills/design-extraction/SKILL.md`: SHA-256 `861c7dd239eb5b7805555b46ced205be3745b6d722bb4f3003cfb5cddc53ffd1`; 4342 bytes. Manifest SHA-256 `861c7dd239eb5b7805555b46ced205be3745b6d722bb4f3003cfb5cddc53ffd1`; 4342 bytes. Result: **MATCH**.
+
+Both historical files match the manifest identities. The earlier inability to reconstruct those historical instruction bytes is therefore resolved for identity/provenance purposes by these additional captures. The original observation that current files differ from the historical manifest remains valid; this addendum makes no claim that changed current instructions passed the prior review.
+
+Actual check: `functions.exec` → `exec_command`, offline `python3` standard library (`pathlib`, `json`, `hashlib`), reading the token manifest and both historical files as bytes, computing SHA-256 and comparing lengths and digests. No author narrative or other review was read. No source/configuration edits, packages, browser/network, accounts, commits or publication were used. A matching content hash establishes byte identity, not proof of when or how an instruction was actually consumed during the original export.

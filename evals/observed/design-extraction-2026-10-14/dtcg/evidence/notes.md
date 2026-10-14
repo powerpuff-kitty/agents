@@ -1,0 +1,22 @@
+# Evidence and omission notes
+
+These are reusable candidates from one 15-line CSS fixture, not approved project tokens. Raw evidence is `reference.css`; `evidence/observations.json` supplies line IDs. `css-mapping.json` traces every exported token. No rendered interface was inspected.
+
+Pinned target: [Design Tokens Format Module 2025.10](https://www.designtokens.org/tr/2025.10/format/), as specified by the supplied local capture guide (reviewed there 2026-10-14). No network request was made. Supported export subset: explicit leaf `$type` and `$value`, groups and descriptions; color objects in sRGB with numeric components and alpha; dimension objects with `px` or `rem`; unitless numbers; ordered fontFamily arrays. No extensions, references, composites, resolvers or standard mode fields are claimed. This declaration identifies the target version; it does not imply an official validator passed.
+
+`tokens.json` contains 15 default candidates; `tokens.dark.json` contains 15 complete dark candidates. Default means the base `:root` rules, not a light-only media query. Only color.ink and color.surface change in dark, following E15. All other declarations remain available under dark because the fixture does not override them. Theme files are alternative inputs, not meant to be merged together. `tokens.css` is a separate web custom-property mapping with the original dark media condition.
+
+Hex channels are converted losslessly to normalized sRGB component numbers (17/255 or 255/255); alpha is 1 because the supplied hex values have no alpha component. CSS maps them back to their original six-digit hex. Existing variable identities and var() consumers are retained in the ledger. New token paths and names are proposals, including spacing reuse across repeated literals. Repetition supports candidacy, not proof of source design intent. Focus offset and radius remain separate even though both are 4px. The line height 1.2 and opacity 0.8 remain numbers; no fictitious units are added. Font-family order remains system-ui, sans-serif. Rem values (64rem, 2rem, 40rem) stay rem; no root size was observed or assumed.
+
+The responsive condition is at most 40rem and changes `.layout` padding from 24px to 16px (E08, E14). Its candidate is exported as a rem dimension, but CSS custom properties cannot be substituted into media query conditions; a consumer must emit literal `@media (max-width: 40rem)`. The CSS is a token mapping only and does not implement or exercise the fixture's selectors.
+
+Omitted from DTCG tokens, retained in raw evidence:
+
+- E08 `margin-inline: auto` and `display: grid`: layout behavior/keywords, not a numeric dimension or reusable value within this subset.
+- E12 `solid currentColor` and E13 `solid var(--ink)`: border/outline composites are outside this subset. Their numeric widths are exported separately. `currentColor` depends on computed color, so it is not flattened to a guessed static color. The panel color alias is retained in the mapping.
+- E10/E13/E14 padding shorthand and E12 outline shorthand: constituents are mapped; no composite type or rewritten component rule is invented.
+- No separate DTCG alias syntax is emitted: source var() links to source custom properties remain recoverable in `css-mapping.json`; tokens use direct typed values in each theme. There is no claim that repeated source literals were originally token references.
+- No percentages, points, unresolved calc expressions, shadows, assets, transitions, disabled/loading/error states, or extra breakpoints occur in this fixture; none are invented.
+- Full REPORT.md, HTML report, taste.json and candidate DESIGN.md are omitted because the authorized task is only token export. No product implementation, browser rendering, accessibility/contrast certification, build/dependency/production validation or independent review was requested/performed.
+
+Validation is limited to the recorded local standard-library checks plus manual shape and evidence review against the supplied guide. The script is a task-specific consistency checker, not an official DTCG schema or full specification validator. JSON syntax alone does not prove DTCG conformance. No packages were installed and no official DTCG validation tool was invoked. Potential downstream importer compatibility is untested, including generic font-family handling. All fixture observations are source-confirmed, not runtime-confirmed; hover and focus are declarations, not exercised states.

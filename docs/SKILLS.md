@@ -15,7 +15,7 @@ reports the embedded revision and domain membership; source folder layout stays 
 | Agent pack/role | Suggested skill domains | Useful individual procedures |
 | --- | --- | --- |
 | core / feature-developer | engineering, delivery | implementation-plan, test-engineering, change-review |
-| core / designer and UX | product-design | product-design, accessibility-audit |
+| core / design-analyst, designer and UX | product-design | design-extraction, design-analysis, design-system, product-design, accessibility-audit |
 | core / security-auditor | security | security-review, threat-model |
 | core / project-auditor | agent-setup, delivery | agentic-structure-audit, repository-maintenance |
 | science-data | agent-setup, forecasting where relevant | decision-intelligence, forecast-calibration |

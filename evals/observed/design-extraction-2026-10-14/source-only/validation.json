@@ -1,0 +1,56 @@
+{
+  "format": "design-extraction.artifact-validation",
+  "format_version": 1,
+  "checked_at": "2026-10-14T17:19:13.241572+00:00",
+  "command": "python3 /private/tmp/design-extraction-forward-2026-10-14/validate.py",
+  "tool": "Python 3.14.7 standard library",
+  "checks": [
+    {
+      "name": "json-syntax",
+      "status": "pass",
+      "detail": "9 JSON files parsed with Python standard library; schema conformance not implied."
+    },
+    {
+      "name": "source-and-instruction-byte-integrity",
+      "status": "pass",
+      "detail": "2 original inputs and 26 instruction/context files byte-identical to captures; task/context copies match stored hashes."
+    },
+    {
+      "name": "evidence-and-cross-references",
+      "status": "pass",
+      "detail": "13 unique evidence records; all source line ranges and 56 profile/token evidence references resolve."
+    },
+    {
+      "name": "source-values-units-and-css-mapping",
+      "status": "pass",
+      "detail": "19 primitive/value entries checked against source-literal citations and JSON/CSS mapping; px/rem/unitless/family retained. No DTCG validation or general CSS-parser claim."
+    },
+    {
+      "name": "aliases-themes-and-role-separation",
+      "status": "pass",
+      "detail": "27 unique tokens; aliases acyclic/resolved; default/dark inversion and inverse focus relationship retained; distinct equal-value roles retained."
+    },
+    {
+      "name": "portable-report-links",
+      "status": "pass",
+      "detail": "91 local report/source links checked for target/HTML anchor existence; no external links in deliverable prose/HTML."
+    },
+    {
+      "name": "inert-offline-html-and-escaping",
+      "status": "pass",
+      "detail": "Report and 2 escaped-source HTML pages statically checked: no script/form/resource/event handler/CSS fetch, local CSP present; source strings escaped. Not rendered."
+    }
+  ],
+  "not_checked": [
+    "Browser rendering or screenshots (task forbids browser)",
+    "Original computed styles, actual viewport, device scale, zoom, fonts and UA defaults",
+    "Hover/focus/keyboard/touch/disabled/loading/error and other runtime interactions",
+    "Runtime responsive/theme/forced-colors/reduced-motion/accessibility checks",
+    "Application builds/npm tests/check suites and dependency audit (no implementation changes)",
+    "DTCG or canonical Harness schema/CLI certification (custom formats used)",
+    "Independent evidence review and full host/model routing coverage",
+    "Source originality/licensing and external/production behavior"
+  ],
+  "status": "pass",
+  "scope": "Static artifact integrity, source mappings and links only; no runtime/schema/browser certification."
+}

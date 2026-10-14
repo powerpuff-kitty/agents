@@ -1,0 +1,38 @@
+/* Candidate web mapping v1; not installed, not DTCG. Source-native units retained. */
+:root {
+  --de-primitive-color-near-black: #111111;
+  --de-primitive-color-white: #ffffff;
+  --de-space-small: 8px;
+  --de-space-action-block: 8px;
+  --de-space-action-inline: 16px;
+  --de-space-layout-gap: 16px;
+  --de-space-panel-inset: 16px;
+  --de-space-layout-wide: 24px;
+  --de-space-layout-compact: 16px;
+  --de-radius-control: 4px;
+  --de-border-panel-width: 1px;
+  --de-focus-width: 2px;
+  --de-focus-offset: 4px;
+  --de-layout-max-width: 64rem;
+  --de-breakpoint-compact-max: 40rem;
+  --de-type-heading-size: 2rem;
+  --de-type-heading-line-height: 1.2;
+  --de-state-action-hover-opacity: 0.8;
+  --de-type-body-family: system-ui, sans-serif;
+  --de-color-ink: var(--de-primitive-color-near-black);
+  --de-color-surface: var(--de-primitive-color-white);
+  --de-color-text: var(--de-color-ink);
+  --de-color-canvas: var(--de-color-surface);
+  --de-color-action-text: var(--de-color-surface);
+  --de-color-action-fill: var(--de-color-ink);
+  --de-color-panel-border: var(--de-color-ink);
+  --de-color-action-focus: var(--de-color-action-text);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --de-color-ink: var(--de-primitive-color-white);
+    --de-color-surface: var(--de-primitive-color-near-black);
+  }
+}
+/* breakpoint.compact-max is also exported as data; authored condition remains 40rem. */
+/* Example consumption (not active CSS): @media (max-width: 40rem) { .layout { padding: var(--de-space-layout-compact); } } */

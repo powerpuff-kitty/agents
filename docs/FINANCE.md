@@ -2,7 +2,7 @@
 
 The finance pack adds 3 profiles and `/team-finance`. It depends on science-data,
 which depends on core, so a finance export contains 21 profiles and 11 workflows.
-The full catalog contains 34 profiles, 20 workflows and 7 packs. These counts
+The full catalog contains 35 profiles, 20 workflows and 7 packs. These counts
 refer to rendered sources, not observed model outcomes or live financial services.
 
 ## Responsibilities

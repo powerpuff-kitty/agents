@@ -1,0 +1,122 @@
+[
+  {
+    "id": "E01",
+    "source": "reference.css",
+    "originalPath": "/Users/tcsntcsn/TCSN/skills/design-extraction/tests/fixtures/reference.css",
+    "line": 1,
+    "text": ":root {",
+    "evidenceClass": "source declaration; not runtime"
+  },
+  {
+    "id": "E02",
+    "source": "reference.css",
+    "originalPath": "/Users/tcsntcsn/TCSN/skills/design-extraction/tests/fixtures/reference.css",
+    "line": 2,
+    "text": "  --ink: #111111;",
+    "evidenceClass": "source declaration; not runtime"
+  },
+  {
+    "id": "E03",
+    "source": "reference.css",
+    "originalPath": "/Users/tcsntcsn/TCSN/skills/design-extraction/tests/fixtures/reference.css",
+    "line": 3,
+    "text": "  --surface: #ffffff;",
+    "evidenceClass": "source declaration; not runtime"
+  },
+  {
+    "id": "E04",
+    "source": "reference.css",
+    "originalPath": "/Users/tcsntcsn/TCSN/skills/design-extraction/tests/fixtures/reference.css",
+    "line": 4,
+    "text": "  --space-small: 8px;",
+    "evidenceClass": "source declaration; not runtime"
+  },
+  {
+    "id": "E05",
+    "source": "reference.css",
+    "originalPath": "/Users/tcsntcsn/TCSN/skills/design-extraction/tests/fixtures/reference.css",
+    "line": 5,
+    "text": "  --radius-control: 4px;",
+    "evidenceClass": "source declaration; not runtime"
+  },
+  {
+    "id": "E06",
+    "source": "reference.css",
+    "originalPath": "/Users/tcsntcsn/TCSN/skills/design-extraction/tests/fixtures/reference.css",
+    "line": 6,
+    "text": "}",
+    "evidenceClass": "source declaration; not runtime"
+  },
+  {
+    "id": "E07",
+    "source": "reference.css",
+    "originalPath": "/Users/tcsntcsn/TCSN/skills/design-extraction/tests/fixtures/reference.css",
+    "line": 7,
+    "text": "body { color: var(--ink); background: var(--surface); font-family: system-ui, sans-serif; }",
+    "evidenceClass": "source declaration; not runtime"
+  },
+  {
+    "id": "E08",
+    "source": "reference.css",
+    "originalPath": "/Users/tcsntcsn/TCSN/skills/design-extraction/tests/fixtures/reference.css",
+    "line": 8,
+    "text": ".layout { max-width: 64rem; padding: 24px; margin-inline: auto; display: grid; gap: 16px; }",
+    "evidenceClass": "source declaration; not runtime"
+  },
+  {
+    "id": "E09",
+    "source": "reference.css",
+    "originalPath": "/Users/tcsntcsn/TCSN/skills/design-extraction/tests/fixtures/reference.css",
+    "line": 9,
+    "text": "h1 { font-size: 2rem; line-height: 1.2; }",
+    "evidenceClass": "source declaration; not runtime"
+  },
+  {
+    "id": "E10",
+    "source": "reference.css",
+    "originalPath": "/Users/tcsntcsn/TCSN/skills/design-extraction/tests/fixtures/reference.css",
+    "line": 10,
+    "text": ".action { color: var(--surface); background: var(--ink); padding: 8px 16px; border-radius: var(--radius-control); }",
+    "evidenceClass": "source declaration; not runtime"
+  },
+  {
+    "id": "E11",
+    "source": "reference.css",
+    "originalPath": "/Users/tcsntcsn/TCSN/skills/design-extraction/tests/fixtures/reference.css",
+    "line": 11,
+    "text": ".action:hover { opacity: 0.8; }",
+    "evidenceClass": "source declaration; not runtime"
+  },
+  {
+    "id": "E12",
+    "source": "reference.css",
+    "originalPath": "/Users/tcsntcsn/TCSN/skills/design-extraction/tests/fixtures/reference.css",
+    "line": 12,
+    "text": ".action:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }",
+    "evidenceClass": "source declaration; not runtime"
+  },
+  {
+    "id": "E13",
+    "source": "reference.css",
+    "originalPath": "/Users/tcsntcsn/TCSN/skills/design-extraction/tests/fixtures/reference.css",
+    "line": 13,
+    "text": ".panel { padding: 16px; border: 1px solid var(--ink); }",
+    "evidenceClass": "source declaration; not runtime"
+  },
+  {
+    "id": "E14",
+    "source": "reference.css",
+    "originalPath": "/Users/tcsntcsn/TCSN/skills/design-extraction/tests/fixtures/reference.css",
+    "line": 14,
+    "text": "@media (max-width: 40rem) { .layout { padding: 16px; } }",
+    "evidenceClass": "source declaration; not runtime"
+  },
+  {
+    "id": "E15",
+    "source": "reference.css",
+    "originalPath": "/Users/tcsntcsn/TCSN/skills/design-extraction/tests/fixtures/reference.css",
+    "line": 15,
+    "text": "@media (prefers-color-scheme: dark) { :root { --ink: #ffffff; --surface: #111111; } }",
+    "evidenceClass": "source declaration; not runtime"
+  }
+]

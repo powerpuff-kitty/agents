@@ -1,6 +1,6 @@
 # Agent catalog
 
-The suite contains 33 specialists and 1 coordinator. Portable identity and
+The suite contains 34 specialists and 1 coordinator. Portable identity and
 procedure live in each linked source directory; generated outputs combine them
 with the shared operating contract. Profiles depend on actual host tools, data,
 permissions, and project instructions. See [packs](PACKS.md) for installation and
@@ -15,6 +15,7 @@ permissions, and project instructions. See [packs](PACKS.md) for installation an
 | [iteration-reviewer](../agents/iteration-reviewer/instructions.md) | Integrated increment releasability against accepted Definition of Done and current snapshot evidence | core |
 | [quality-engineer](../agents/quality-engineer/instructions.md) | Correctness, meaningful tests, regressions, and reliability | core |
 | [security-auditor](../agents/security-auditor/instructions.md) | Reachable weaknesses, privacy, and trust boundaries | core |
+| [design-analyst](../agents/design-analyst/instructions.md) | Capture interface evidence, descriptive taste profiles and candidate design-system reports | core |
 | [designer](../agents/designer/instructions.md) | Visual UI, design systems, components, states, and responsive consistency | core |
 | [ux-designer](../agents/ux-designer/instructions.md) | Complete journeys, task sequence, hierarchy, continuity, and recovery | core |
 | [usability-auditor](../agents/usability-auditor/instructions.md) | Independent task walkthroughs, confusion, friction, and evidence-linked repairs | core |
@@ -55,6 +56,8 @@ Artist-3d owns assets and technical-artist integration, with separate serialized
 writing when both are requested. Modeling/rendering access is not provisioned by
 the profile and missing tools remain explicit.
 
+Design-analyst owns reference capture/reporting and candidate system evidence;
+designer independently assesses visual/system interpretation. See [design extraction](DESIGN-EXTRACTION.md).
 UX-designer owns the flow specification, designer visual/system alignment,
 usability-auditor independent task assessment, accessibility-specialist deep access
 checks, and user-researcher actual user evidence. Copywriter supports labels and

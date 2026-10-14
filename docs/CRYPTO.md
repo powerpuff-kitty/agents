@@ -2,7 +2,7 @@
 
 The `crypto` pack owns onchain-analyst and `/team-crypto-review`. It depends on
 finance, science-data and core through dependency closure: 22 profiles and 12
-workflows. The full catalog has 34 profiles, 20 workflows and 7 packs.
+workflows. The full catalog has 35 profiles, 20 workflows and 7 packs.
 
 ## Responsibilities and methods
 

@@ -1,0 +1,170 @@
+{
+  "format": "design-extraction.local-taste-index",
+  "format_version": 1,
+  "status": "candidate",
+  "canonical_harness_artifact": false,
+  "index": [
+    {
+      "id": "studio-fixture-source",
+      "name": "Studio fixture / Studio notes",
+      "platform": "web",
+      "source_paths": [
+        "/Users/tcsntcsn/TCSN/skills/design-extraction/tests/fixtures/reference.html",
+        "/Users/tcsntcsn/TCSN/skills/design-extraction/tests/fixtures/reference.css"
+      ],
+      "source_sha256": [
+        "6e75166cb6bffaa59196fe7c60c2c7d514c96a91217717c1bf959e6e22285e76",
+        "7e81a04148dd881f97f853c448cc7ad553b19232ed59ff3d0f681a29f82b1c6b"
+      ],
+      "captured_at": "2026-10-14T17:17:42.297545+00:00",
+      "capture_mode": "source-only",
+      "surfaces": [
+        "single supplied document"
+      ],
+      "themes": [
+        "default declarations",
+        "dark-preference declarations"
+      ],
+      "states": [
+        "base",
+        "declared hover",
+        "declared focus-visible"
+      ],
+      "viewports": [
+        "unmeasured; max-width 40rem declared"
+      ],
+      "intended_use": "Reusable reference for a small text-led monochrome interface; candidate handoff only.",
+      "style_tags": [
+        "monochrome",
+        "system-typography",
+        "grid-stack",
+        "thin-borders",
+        "restrained-control-radius",
+        "dark-preference-inversion"
+      ],
+      "profile_id": "studio-fixture-profile",
+      "reference_relevance": [
+        "palette role separation",
+        "compact spacing relationships",
+        "small action/panel anatomy"
+      ],
+      "exclusions": [
+        "complete product identity",
+        "forms/navigation systems",
+        "brand imagery",
+        "proven runtime accessibility"
+      ]
+    }
+  ],
+  "profiles": {
+    "studio-fixture-profile": {
+      "hierarchy": {
+        "classification": "inference",
+        "source_type": "ai",
+        "value": "Strong heading/action contrast is suggested by a 2rem h1 and inverted action against the page.",
+        "evidence_ids": [
+          "E05",
+          "E06",
+          "E01"
+        ],
+        "counterexample_or_limit": "The document has only one heading level; UA heading weight/margins and action font are unknown.",
+        "tradeoff_inference": "Prioritizes a short note-and-action reading order; exact salience requires rendering.",
+        "confidence_basis": "Direct source declarations plus limited AI interpretation; not a calibrated probability."
+      },
+      "density": {
+        "classification": "inference",
+        "source_type": "ai",
+        "value": "Moderate declared grouping: 24px outer padding, 16px grid gap and panel padding, 8px vertical action padding.",
+        "evidence_ids": [
+          "E04",
+          "E06",
+          "E09",
+          "E11"
+        ],
+        "counterexample_or_limit": "UA paragraph/heading margins stack with grid gaps; wide grid items may stretch. Compact rule reduces only padding.",
+        "tradeoff_inference": "Reusable spacing relationships are stronger evidence than a numeric density rating.",
+        "confidence_basis": "Direct source declarations plus limited AI interpretation; not a calibrated probability."
+      },
+      "contrast_character": {
+        "classification": "inference",
+        "source_type": "ai",
+        "value": "Two-color near-black/white palette; page and action swap foreground/background roles, with dark preference inversion.",
+        "evidence_ids": [
+          "E02",
+          "E03",
+          "E06",
+          "E10"
+        ],
+        "counterexample_or_limit": "Hover opacity blends the whole action with the backdrop; currentColor focus can match the page background. No rendered contrast certification.",
+        "tradeoff_inference": "Clear tonal separation with little hue coding; functional feedback needs additional decisions.",
+        "confidence_basis": "Direct source declarations plus limited AI interpretation; not a calibrated probability."
+      },
+      "typography": {
+        "classification": "inference",
+        "source_type": "ai",
+        "value": "System-led body text plus one explicitly larger heading size.",
+        "evidence_ids": [
+          "E03",
+          "E05",
+          "E06",
+          "E13"
+        ],
+        "counterexample_or_limit": "No exact installed font, body size/line-height, weights or button inheritance specified.",
+        "tradeoff_inference": "Portable platform voice; less deterministic cross-platform metrics.",
+        "confidence_basis": "Direct source declarations plus limited AI interpretation; not a calibrated probability."
+      },
+      "geometry": {
+        "classification": "inference",
+        "source_type": "ai",
+        "value": "Restrained geometry: 4px action radius, square unrounded panel declaration, thin 1px panel border.",
+        "evidence_ids": [
+          "E02",
+          "E06",
+          "E09"
+        ],
+        "counterexample_or_limit": "4px focus offset is a different semantic role despite matching radius value. UA button border remains.",
+        "tradeoff_inference": "Control softness contrasts with structural panel edges; no broad radius scale proven.",
+        "confidence_basis": "Direct source declarations plus limited AI interpretation; not a calibrated probability."
+      },
+      "imagery": {
+        "classification": "observation",
+        "source_type": "ai",
+        "value": "No imagery or iconography is declared in the supplied source.",
+        "evidence_ids": [
+          "E01",
+          "E13"
+        ],
+        "counterexample_or_limit": "Does not establish whether the wider product uses media; no asset license can be inferred.",
+        "tradeoff_inference": "Text-led reference only; image treatment remains unknown.",
+        "confidence_basis": "Direct source declarations plus limited AI interpretation; not a calibrated probability."
+      },
+      "motion": {
+        "classification": "observation",
+        "source_type": "ai",
+        "value": "One opacity hover rule; no transition duration or animation is declared.",
+        "evidence_ids": [
+          "E07",
+          "E13"
+        ],
+        "counterexample_or_limit": "No exercised hover, touch or reduced-motion state. Browser-native effects are outside inspection.",
+        "tradeoff_inference": "A restrained-motion interpretation is limited to author declarations, not measured behavior.",
+        "confidence_basis": "Direct source declarations plus limited AI interpretation; not a calibrated probability."
+      }
+    }
+  },
+  "ratings": null,
+  "rating_note": "No score requested; index is descriptive. Unknown dimensions and runtime checks do not receive zero scores.",
+  "unknowns": [
+    "Rendered hierarchy and density",
+    "Exact fonts and UA defaults",
+    "Motion timing",
+    "Hidden routes/states",
+    "Asset reuse rights",
+    "Accessibility outcomes"
+  ],
+  "approval": {
+    "status": "candidate",
+    "accepted_project_identity": false,
+    "reason": "Reference source cannot grant approval or publication authority."
+  }
+}

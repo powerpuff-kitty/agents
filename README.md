@@ -1,11 +1,11 @@
 # Agents
 
 [![CI](https://github.com/powerpuff-kitty/agents/actions/workflows/validate.yml/badge.svg?branch=main&event=push)](https://github.com/powerpuff-kitty/agents/actions/workflows/validate.yml)
-[![Profiles: 34](https://img.shields.io/badge/profiles-34-blue)](docs/CATALOG.md)
+[![Profiles: 35](https://img.shields.io/badge/profiles-35-blue)](docs/CATALOG.md)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-33 specialists and 1 team lead share a portable operating contract. The catalog
-contains **34 profiles, 20 team workflows and 7 optional packs**. OpenCode adapters
+34 specialists and 1 team lead share a portable operating contract. The catalog
+contains **35 profiles, 20 team workflows and 7 optional packs**. OpenCode adapters
 produce named profiles and commands; portable exports provide plain Markdown.
 
 ## Install
@@ -32,12 +32,14 @@ owns destination, update, conflict and verification details.
 
 ```text
 /team-feature implement the described feature
+/team-ui extract a design profile and candidate system from the supplied reference
 /team-geo assess observed AI-answer visibility from the supplied evidence
 /team-finance review the supplied financial model
 ```
 
 [Team workflows](docs/TEAMS.md) define stages, conditional assignments and completion
-evidence. Profiles use the host's available model, tools, context and permissions;
+evidence. [Design extraction](docs/DESIGN-EXTRACTION.md) produces scoped taste/system reports
+from existing interfaces. Profiles use the host's available model, tools, context and permissions;
 they do not supply a runtime, sandbox or automatic scheduler. Team definitions
 request delegation within the actual task scope.
 

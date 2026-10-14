@@ -47,7 +47,7 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           repository: powerpuff-kitty/skills
-          ref: 95ff8b5e60997bb34f6ac2262e7e22db899a5ae2
+          ref: 49d566c34f3e4872f2601da23f13447935803a03
           path: skill-source
       - name: Build current profiles and check both catalogs
         run: |

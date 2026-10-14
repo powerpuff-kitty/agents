@@ -1,0 +1,55 @@
+{
+  "format_version": 1,
+  "kind": "observed-design-extraction-exercises",
+  "date": "2026-10-14",
+  "canonical_behavior_cases_executed": 0,
+  "invocation_provenance": {
+    "source": "coordinator collaboration.spawn_agent calls in this session",
+    "fork_turns": "none",
+    "model_identity": "not exposed",
+    "limits": "Requested history isolation is not an authenticated exhaustive access trace. Host/project rules remained available."
+  },
+  "exercises": [
+    {
+      "reviewer": "/root/design_extraction_forward",
+      "scope": "Offline source-only report and local-format token/profile handoff",
+      "record": "source-only/EXPORT.md",
+      "independent_review": "report-evidence-review.md",
+      "outcome": "No material static output defect confirmed; original evidence/report contains ambient receiving-project notes, subsequently clarified in source and redacted for portable public export."
+    },
+    {
+      "reviewer": "/root/design_dtcg_forward",
+      "scope": "Focused DTCG 2025.10 supported-subset token export, 15 candidates per theme",
+      "record": "dtcg/EXPORT.md",
+      "independent_review": "dtcg-evidence-review.md",
+      "provenance_addendum": "dtcg-provenance-addendum.md",
+      "outcome": "Independent value/unit/theme/mapping/subset checks passed; full official specification conformance unverified."
+    }
+  ],
+  "source_review": {
+    "reviewer": "/root/design_extraction_review",
+    "original_report": "independent-review.md",
+    "targeted_recheck": "targeted-recheck.md",
+    "finding": "F1 stale combined-selection test count confirmed and fixed; targeted selection/workflow checks passed."
+  },
+  "output_reviewers": [
+    "/root/design_report_evidence_review",
+    "/root/design_dtcg_evidence_review"
+  ],
+  "native_registration": {
+    "record": "native-host.json",
+    "inputs": "source-inputs.json",
+    "skills": 52,
+    "profiles": 35,
+    "commands": 20,
+    "model_execution": "not_run"
+  },
+  "current_source_change_after_exercises": "Target identity was clarified after the original captures. Historical instruction bytes/hashes remain available; earlier runs do not establish current routing or new target-scope case outcomes.",
+  "public_export_boundary": "Original complete runs remain local. Public subsets withhold unrelated project instruction contents, preserve original artifact hashes, label report-scope redactions and normalize public result links.",
+  "limits": [
+    "No live website/native-app capture, browser rendering or accessibility execution in the offline exercises.",
+    "9 new skill cases and 5 new canonical role/team cases are specifications and remain not_run.",
+    "Explicit instruction exercises do not prove automatic skill routing, scheduling, repeated reliability or whole-product coverage.",
+    "No official DTCG validator; bounded subset review and local consistency checks only."
+  ]
+}

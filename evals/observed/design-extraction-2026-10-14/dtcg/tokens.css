@@ -1,0 +1,38 @@
+/* Candidate web mapping; not a production stylesheet or a DTCG mode syntax.
+ * tokens.json is default; tokens.dark.json is the complete dark snapshot.
+ * Only color varies with prefers-color-scheme in the source.
+ * --breakpoint-compact documents 40rem; @media must use the literal value.
+ * New property names are proposed. Source consumers are listed in css-mapping.json.
+ */
+:root {
+  --ink: #111111;
+  --surface: #ffffff;
+  --space-small: 8px;
+  --space-medium: 16px;
+  --space-large: 24px;
+  --radius-control: 4px;
+  --layout-max-width: 64rem;
+  --breakpoint-compact: 40rem;
+  --font-family-body: system-ui, sans-serif;
+  --font-size-heading-1: 2rem;
+  --font-line-height-heading-1: 1.2;
+  --opacity-action-hover: 0.8;
+  --focus-outline-width: 2px;
+  --focus-outline-offset: 4px;
+  --border-width-panel: 1px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #ffffff;
+    --surface: #111111;
+  }
+}
+
+/* Source responsive binding: @media (max-width: 40rem)
+ * .layout padding switches from 24px (space.large) to 16px (space.medium).
+ * Source aliases: body color -> --ink; body background -> --surface;
+ * .action color -> --surface; .action background -> --ink;
+ * .action border-radius -> --radius-control; .panel border color -> --ink.
+ * Source focus outline color remains currentColor; do not replace it with --ink.
+ */

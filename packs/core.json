@@ -6,6 +6,7 @@
   "requires": [],
   "agents": [
     "accessibility-specialist",
+    "design-analyst",
     "designer",
     "evidence-validator",
     "feature-developer",

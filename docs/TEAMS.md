@@ -11,7 +11,7 @@ These are reusable workflow instructions, not a new runtime or a multi-select UI
 | `/team-research <question>` | Research/review only | Researcher gathers cited evidence, then evidence-validator and applicable domain specialists assess it; team-lead reconciles the answer |
 | `/team-audit <scope>` | Review only | Project-auditor scopes accepted work, researcher gathers references when needed, then 8 core specialists review bounded domains; team-lead consolidates results |
 | `/team-feature <feature>` | Implement the described feature | Establish accepted Definition of Done, frame relevant domains, implement with 1 writer, independently verify, check applicable artifact evidence, then assess integrated readiness |
-| `/team-ui <screens or journey>` | Review only | Designer establishes coverage, UX-designer maps relevant journeys, then quality, usability, accessibility, evidence, and applicable performance reviews follow |
+| `/team-ui <screens or journey>` | Review/report only | Designer establishes coverage; requested reference extraction goes to design-analyst; independent design, quality, usability, accessibility, evidence and applicable performance reviews follow |
 | `/team-ux <task or journey>` | Derived from the request | Frame task scope, use available user evidence, assess/design journeys, align UI/copy/access, implement only requested changes, then independently check and reconcile |
 | `/team-release <target>` | Readiness review | Release-engineer establishes gates, specialists assess applicable evidence, and release-engineer reconciles the readiness matrix |
 | `/team-iteration <increment or target>` | Derived from the request | Establish accepted gates and snapshot, gather relevant context, apply only requested fixes, complete specialist/artifact checks, then report ready, blocked, or unverified |
@@ -165,7 +165,7 @@ python3 scripts/install.py --tool opencode
 python3 scripts/validate.py --opencode ~/.opencode/bin/opencode
 ```
 
-The installer writes 34 profiles and 20 commands by default.
+The installer writes 35 profiles and 20 commands by default.
 Use repeatable `--pack` options for a smaller dependency-complete set. Team-lead is a
 primary profile, while specialists retain both primary and child eligibility.
 Command frontmatter selects team-lead and uses `subagent: false`, keeping the
@@ -191,7 +191,7 @@ The command registry verifies that the host discovers the slash commands; source
 and rendering tests verify their coordinator, scope placeholder, and parent-session
 mapping. No actual end-to-end model team run is established by these checks.
 The [evaluation index](../evals/README.md) separates 3 observed smoke cases
-from the remaining 125 unobserved specifications. Parallel limits and review-only rules are prompt contracts rather
+from the remaining 130 unobserved specifications. Parallel limits and review-only rules are prompt contracts rather
 than runtime-enforced semaphores or read-only permissions.
 
 ## Financial research and risk

@@ -1,0 +1,73 @@
+{
+  "algorithm": "sha256",
+  "file_instructions": [
+    {
+      "path": "/Users/tcsntcsn/TCSN/agents/agents/design-analyst/instructions.md",
+      "captured_copy": "evidence/instructions/18-instructions.md.txt",
+      "sha256": "43783822dd88826b7e020f770ab5b09d81a7f6438b8cd167738c7614a602be25",
+      "bytes": 3778,
+      "original_captured_copy": "evidence/instructions/18-instructions.md"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/design-extraction/SKILL.md",
+      "captured_copy": "evidence/instructions/19-SKILL.md.txt",
+      "sha256": "861c7dd239eb5b7805555b46ced205be3745b6d722bb4f3003cfb5cddc53ffd1",
+      "bytes": 4342,
+      "original_captured_copy": "evidence/instructions/19-SKILL.md"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/design-extraction/references/capture-and-report.md",
+      "captured_copy": "evidence/instructions/20-capture-and-report.md.txt",
+      "sha256": "4e4c9c6a261e12089b54266b69960f7d7f99a47acd59ea0d85c34c75e3d63e44",
+      "bytes": 6142,
+      "original_captured_copy": "evidence/instructions/20-capture-and-report.md"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/design-extraction/assets/report-template.md",
+      "captured_copy": "evidence/instructions/21-report-template.md.txt",
+      "sha256": "f1041f0e64e2f2694e1182b738d1e6c99d5e67839a9b2419fa019f8280ec1f70",
+      "bytes": 1902,
+      "original_captured_copy": "evidence/instructions/21-report-template.md"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/design-extraction/assets/taste-profile.example.json",
+      "captured_copy": "evidence/instructions/22-taste-profile.example.json",
+      "sha256": "f190b7eb9db8152052248b46fa71831958e03b5c362a6d12accd7cb70d6b96d7",
+      "bytes": 1598
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/design-analysis/SKILL.md",
+      "captured_copy": "evidence/instructions/23-SKILL.md.txt",
+      "sha256": "c51f532e488bd02a0fe51c97dc42e033c07cb50e6d198d371609fb1b75b27847",
+      "bytes": 4488,
+      "original_captured_copy": "evidence/instructions/23-SKILL.md"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/design-analysis/references/design-intelligence.md",
+      "captured_copy": "evidence/instructions/24-design-intelligence.md.txt",
+      "sha256": "627649ca0c1c617eacd3e2387a342929bfb53f08208deb2cc1d0fe7f4f065e61",
+      "bytes": 5075,
+      "original_captured_copy": "evidence/instructions/24-design-intelligence.md"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/design-system/SKILL.md",
+      "captured_copy": "evidence/instructions/25-SKILL.md.txt",
+      "sha256": "96d74913748b4abb3de40ce24bd638489879a9722cf6e1a789e6de4185543c28",
+      "bytes": 3498,
+      "original_captured_copy": "evidence/instructions/25-SKILL.md"
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/design-system/references/design-intelligence.md",
+      "captured_copy": "evidence/instructions/26-design-intelligence.md.txt",
+      "sha256": "627649ca0c1c617eacd3e2387a342929bfb53f08208deb2cc1d0fe7f4f065e61",
+      "bytes": 5075,
+      "original_captured_copy": "evidence/instructions/26-design-intelligence.md"
+    }
+  ],
+  "task_sha256": "9e57b4d316a0193075c3d09d013aaf5095e52877a6146d4098d01cd805c52151",
+  "user_supplied_agents_sha256": "838abff043dccd2a033f0c12245df0b1203b8c173d4464e9bd57ee70be619675",
+  "note": "File hashes identify exact bytes read/copied; tool/developer system instructions are contextual authority, not files and not misrepresented as filesystem hashes.",
+  "public_export_note": "Subset: unrelated TCSN project instruction copies/entries withheld; original run retained locally. This filtered metadata is not the original complete instruction index.",
+  "withheld_file_count": 17,
+  "original_index_sha256": "598cc115bf85ac33e25431e4a7b90f8888446dc27d2881578f3744606da825c6"
+}

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "id": "team-ui",
   "title": "UI review",
-  "description": "Coordinate design, accessibility, UI quality, performance, and evidence review.",
+  "description": "Coordinate scoped design extraction/reporting, design review, accessibility, UI quality and evidence checks.",
   "coordinator": "team-lead",
   "intent": "Review the requested screens or journeys for project fit, visual/system coherence, interaction usability, and supported accessibility evidence. Do not redesign or change source by default.",
   "mode": "review",
@@ -25,9 +25,25 @@
       ]
     },
     {
+      "id": "reference-report",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "design-analyst",
+          "task": "Capture the agreed interface/source evidence and produce the requested design/taste/candidate-system report in the authorized output directory as 1 artifact writer. Preserve source/runtime/image distinctions, evidence and unknowns; do not edit product truth or copy restricted assets.",
+          "when": "The request explicitly includes extracting a design language/system, a taste profile/index, or a design reference report."
+        }
+      ]
+    },
+    {
       "id": "independent-checks",
       "execution": "parallel-review",
       "assignments": [
+        {
+          "agent": "designer",
+          "task": "Independently review the extracted report against raw evidence and accepted scope in a fresh session when supported, without inheriting author conclusions. Retain the original review, triage findings and recheck accepted changes; do not approve candidate identity by default.",
+          "when": "The requested extraction/report requires independent design interpretation review."
+        },
         {
           "agent": "quality-engineer",
           "task": "Review component/browser regression and accessibility automation evidence, assertion quality, and failure handling; do not claim unexecuted manual checks.",
@@ -59,6 +75,7 @@
   "completion": [
     "The coverage matrix ties findings to relevant states, viewports, themes, and source/runtime evidence.",
     "Contrast and other criterion findings use measured values and applicable exceptions; uncertain checks stay unverified.",
-    "The final prioritized report separates system divergence, usability defects, and optional visual preferences."
+    "The final prioritized report separates system divergence, usability defects, and optional visual preferences.",
+    "Requested extraction reports trace values and profile interpretations to captured evidence, identify candidate artifacts and omitted/unchecked scope, and do not silently replace project identity."
   ]
 }
