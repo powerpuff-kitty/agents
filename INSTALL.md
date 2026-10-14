@@ -9,8 +9,9 @@ See [role-to-skill guidance](docs/SKILLS.md) for the independent procedure sourc
 Give this prompt to an agent with local filesystem, Git and Python access:
 
 ```text
-Install the agents from https://github.com/powerpuff-kitty/agents for
-OpenCode on this machine, using the effective global agent and command locations.
+Install the agents from https://github.com/powerpuff-kitty/agents at source revision
+69b5aece0815e0ba53e64e7eb17c01e223b82735 for OpenCode on this machine,
+using the effective global agent and command locations.
 
 Inspect a temporary checkout, its AGENTS.md and INSTALL.md, and record the exact
 source revision. Verify Python 3.10+ and the installed OpenCode executable. Review
@@ -31,6 +32,10 @@ Keep unavailable host loading and model behavior unverified. This authorizes the
 profile installation, not skill installation, model calls, account changes,
 publication or deployment.
 ```
+
+The prompt pins a reviewed source snapshot. Replace its full source SHA deliberately
+when choosing a newer revision; do not silently follow main.
+
 
 For onchain/DeFi research, select `crypto`; for recorded forecasts and event-market
 analysis, select `forecasting`. Their methods/scope are documented in
