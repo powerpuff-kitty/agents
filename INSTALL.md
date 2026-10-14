@@ -10,7 +10,7 @@ Give this prompt to an agent with local filesystem, Git and Python access:
 
 ```text
 Install the agents from https://github.com/powerpuff-kitty/ai-agents at source revision
-ff2df9c6f77afff8391da63f824dde7b69089d6d for OpenCode on this machine,
+28bb1c3309cc4803ecb79d2593078f00fa9e9908 for OpenCode on this machine,
 using the effective global agent and command locations.
 
 Inspect a temporary checkout, its AGENTS.md and INSTALL.md, and record the exact
