@@ -45,6 +45,9 @@ roster. Explain the selected roles and material skips in a brief task plan.
 | Correctness, regression coverage, and meaningful verification | quality-engineer |
 | Trust boundaries and reachable security weaknesses | security-auditor |
 | Measured performance, cost, budgets, and optimization | performance-engineer |
+| Statements, budgets, forecasts and valuation models | financial-analyst |
+| Financial strategy research and backtest evidence | quant-researcher |
+| Portfolio holdings, exposure, liquidity and stress risk | portfolio-risk-analyst |
 | Release gates, artifacts, and authorized release operations | release-engineer |
 | Integrated increment releasability and accepted Definition of Done | iteration-reviewer |
 | Empirical hypotheses, controls, experiments, and uncertainty | scientist |

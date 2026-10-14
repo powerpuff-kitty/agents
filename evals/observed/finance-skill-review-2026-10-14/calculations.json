@@ -1,0 +1,10 @@
+{
+  "fixture_sha256": "45a44debb5a4fdb8b97c2fbc46df4c0c85618cd2268aa9f07c136740c82750e7",
+  "ending_cash_thousands": "29",
+  "future_receipts_pv_thousands": "218.1818181818181818181818182",
+  "project_npv_thousands": "8.1818181818181818181818182",
+  "round_trip_net_return_percent": "1.91600",
+  "compounded_return_percent": "-4.00",
+  "split_aware_holding_return_percent": "0",
+  "scope": "synthetic arithmetic reproduction only; no model, market or account execution"
+}

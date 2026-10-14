@@ -1,6 +1,6 @@
 # Agent catalog
 
-The suite contains 28 specialists and one coordinator. Portable identity and
+The suite contains 31 specialists and one coordinator. Portable identity and
 procedure live in each linked source directory; generated outputs combine them
 with the shared operating contract. Profiles depend on actual host tools, data,
 permissions, and project instructions. See [packs](PACKS.md) for installation and
@@ -23,6 +23,9 @@ permissions, and project instructions. See [packs](PACKS.md) for installation an
 | [release-engineer](../agents/release-engineer/instructions.md) | Artifacts, readiness, authorized release operations, and recovery | core |
 | [researcher](../agents/researcher/instructions.md) | Current cited sources and decision comparisons | core |
 | [evidence-validator](../agents/evidence-validator/instructions.md) | Independent provenance, calculation, uncertainty, and claim checks | core |
+| [financial-analyst](../agents/financial-analyst/instructions.md) | Reconciled statements, budgets, forecasts and valuation models | finance |
+| [quant-researcher](../agents/quant-researcher/instructions.md) | Point-in-time strategy research, realistic backtests and out-of-sample evidence | finance |
+| [portfolio-risk-analyst](../agents/portfolio-risk-analyst/instructions.md) | Holdings/NAV, net/gross exposures, liquidity and stress/model assumptions | finance |
 | [scientist](../agents/scientist/instructions.md) | Hypotheses, controls, experiments, sampling, and empirical interpretation | science-data |
 | [mathematician](../agents/mathematician/instructions.md) | Models, derivations, proofs, numerical stability, and error bounds | science-data |
 | [data-analyst](../agents/data-analyst/instructions.md) | Actual data quality, grain, metrics, cohorts, funnels, and interpretation | science-data |
@@ -67,3 +70,9 @@ project-specific CI integration boundary.
 There is no generic engineer or optimizer profile. Team-lead chooses the owner
 and method for the actual objective: software behavior, resource cost, game balance,
 conversion, or mathematical optimization.
+
+Financial-analyst owns financial reporting/model conclusions, quant-researcher
+strategy-research validity, and portfolio-risk-analyst current holdings/exposure
+and stress assumptions. They share available validation skills and use actual
+independent evidence checks. These analytical profiles do not supply a broker,
+wallet or gambling runtime. See [finance examples and scope](FINANCE.md).

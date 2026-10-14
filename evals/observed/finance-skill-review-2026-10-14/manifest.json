@@ -1,0 +1,44 @@
+{
+  "format_version": 1,
+  "kind": "observed-synthetic-skill-review",
+  "recorded_at_utc": "2026-10-14T14:26:23.318488+00:00",
+  "evaluator": "Codex independent subagent /root/finance_forward_review",
+  "model_id": null,
+  "model_identity_limit": "Exact model ID is not exposed by the collaboration tool; do not infer it.",
+  "skills_source": {
+    "repository": "powerpuff-kitty/skills",
+    "commit": "cbd1cf66fa033c1737e503675dc96933fe43be69"
+  },
+  "input_sha256": "45a44debb5a4fdb8b97c2fbc46df4c0c85618cd2268aa9f07c136740c82750e7",
+  "review_sha256": "1e9510622ee1e8b2d6acd4127ba22156eb156bd3da557714af8ee96922da2a52",
+  "skill_source_hashes": "skill-input-hashes.json",
+  "arithmetic_command": "python3 -B reproduce_calculations.py",
+  "arithmetic_output": "calculations.json",
+  "arithmetic_exit": 0,
+  "parent_review": {
+    "scope": "Manual comparison of retained findings to the raw synthetic fixture plus independent Decimal arithmetic reproduction.",
+    "confirmed": [
+      "Split-aware return versus raw per-share price change",
+      "Cash bridge includes FX",
+      "Future-receipt PV versus project NPV",
+      "Fees on entry and exit and capital denominator",
+      "Compounded returns",
+      "Late-publication availability",
+      "Full-interval feature dependency with unproved realized impact",
+      "After-auction signal/same-auction fill chronology",
+      "Test interval used for 200-variant selection",
+      "Missing historical universe/source contract"
+    ],
+    "result": "The retained review supports these bounded findings; one fixture does not establish reliability."
+  },
+  "host_loading": "not_checked",
+  "automatic_skill_routing": "not_checked",
+  "agent_profile_evaluation": "not_run",
+  "acceptance_case_specifications": "unchanged_not_run",
+  "limitations": [
+    "One synthetic review, no repeated trials or broad benchmark.",
+    "Evaluator received explicit skill paths; automatic discovery/selection was not tested.",
+    "No live data, broker/wallet, account, trade or bet was used.",
+    "No full raw tool transcript is archived; the retained report records commands, file inventory and calculated outcomes."
+  ]
+}

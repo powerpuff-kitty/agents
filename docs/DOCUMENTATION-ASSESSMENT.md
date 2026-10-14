@@ -18,7 +18,7 @@ and resources loaded as needed. It recommends keeping SKILL.md below 500 lines.
 [Anthropic's explanation](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
 also treats skills as composable, task-specific onboarding material.
 
-Current source evidence: all 38 skills contain Objective, Inputs, Context,
+Original assessment source evidence: all 38 skills contain Objective, Inputs, Context,
 Procedure, Output and Completion sections. Their entrypoints are 34–59 lines;
 22 have Markdown reference guides. All 29 roles have identity/description and
 instruction sources. A missing references directory is not automatically a defect:
@@ -46,7 +46,7 @@ existing team docs for coordination examples. Do not add a handbook or a new rol
 merely to repeat a skill.
 
 Document validation in four separate states: source checks, isolated helper tests,
-actual host loading and observed task/model outcomes. The current source includes
+actual host loading and observed task/model outcomes. The original snapshot included
 100 agent acceptance specifications, not 100 observed successes. OpenCode skill
 loading remains unverified in the isolated v2.0.27 probe described in
 [SKILLS.md](SKILLS.md#local-verification-boundary).
@@ -155,5 +155,24 @@ render/build freshness should pass, but cannot stand in for task-outcome evidenc
 The existing [evaluation backlog](https://github.com/powerpuff-kitty/skills/issues/26)
 remains the right place for reproducible routing/outcome work.
 
-No bulk examples, new skills or agent roles were created in this assessment. The
-owner selected assessment and recommendations rather than an example-writing pass.
+No bulk examples, new skills or agent roles were created in the original assessment.
+The owner later authorized the focused finance implementation described below.
+
+## Finance implementation follow-up
+
+The current catalog adds three skills and three agents, bringing coverage to 41
+skills and 32 profiles. The original 67-entry table remains a historical baseline;
+these six entries complete the current documentation inventory.
+
+| Entry | Documentation delivered | Verification boundary |
+| --- | --- | --- |
+| [market-data-validation](https://github.com/powerpuff-kitty/skills/tree/main/market-data-validation) | Timing/instrument/action/universe reference, split/publication examples and report template. | Source checks and arithmetic are distinct from dataset quality and host/model outcomes. |
+| [financial-model-review](https://github.com/powerpuff-kitty/skills/tree/main/financial-model-review) | Accounting/cash/valuation/risk methods, worked calculations and report template. | No accounting certification, blanket recalculation or future-value guarantee. |
+| [backtest-validation](https://github.com/powerpuff-kitty/skills/tree/main/backtest-validation) | Causality/fill/ledger/selection reference, cost/compounding cases and report template. | No live execution or model-performance claim from a source check. |
+| [financial-analyst](../agents/financial-analyst/instructions.md) | Role procedure, handoffs and worked examples in [FINANCE.md](FINANCE.md). | Historical records, assumptions and scenarios remain distinct. |
+| [quant-researcher](../agents/quant-researcher/instructions.md) | Research validity procedure and causal/ledger examples in [FINANCE.md](FINANCE.md). | Simulations and paper/live execution have separate evidence. |
+| [portfolio-risk-analyst](../agents/portfolio-risk-analyst/instructions.md) | Snapshot/exposure/stress procedure and leverage example in [FINANCE.md](FINANCE.md). | Limited scenarios and statistical estimates do not establish safety. |
+
+These examples and references implement the specialist documentation tier without
+creating duplicate per-entry handbooks. Eighteen skill cases and twelve role/team
+cases are new acceptance specifications and remain not_run until evaluated.

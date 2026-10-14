@@ -1,10 +1,10 @@
 # Domain opportunities and demand review
 
 Assessment date: 2026-10-14. This is a research snapshot and proposed direction,
-not an accepted implementation roadmap. It covers the current 38 Skills and 29
+not an accepted implementation roadmap. Its original snapshot covers 38 Skills and 29
 Agents, then considers the owner's additional creative, physical-engineering,
-security and financial domains. No new roles, skills, integrations or live actions
-are introduced by this document.
+security and financial domains. The original research did not implement candidates. The finance follow-up below
+records the subsequently authorized source additions.
 
 ## What is already covered
 
@@ -118,3 +118,14 @@ specification, source-test, host-loading and observed-model statuses separately.
 See the [documentation assessment](DOCUMENTATION-ASSESSMENT.md) for the per-entry
 review and recommended documentation tiers. No automatic brokerage connection,
 wallet access, gambling account, physical device control or publication is added.
+
+## Implemented finance follow-up
+
+The owner authorized the recommended finance foundation after this assessment.
+[FINANCE.md](FINANCE.md) now documents financial-analyst, quant-researcher,
+portfolio-risk-analyst, the finance pack and `/team-finance`. Skills now includes
+market-data-validation, financial-model-review and backtest-validation, with local
+references, templates and acceptance specifications. The catalogs contain 41 skills
+and 32 agent profiles. Other domain candidates above remain recommendations,
+including dedicated crypto/DeFi, betting and execution-engineering workflows.
+Source/profile availability does not establish live loading or successful outcomes.

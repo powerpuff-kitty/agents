@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "id": "team-finance",
+  "title": "Financial research and risk review",
+  "description": "Analyze a scoped financial question with data-provenance checks, conditional financial/quantitative/risk work and independent verification.",
+  "coordinator": "team-lead",
+  "intent": "Complete the requested financial analysis or review using approved records. Keep historical facts, estimates, scenarios and simulations distinct. Selecting this team does not authorize account connections, trades, fund movements, wallet operations or bets.",
+  "mode": "adaptive",
+  "max_parallel": 3,
+  "stages": [
+    {
+      "id": "frame",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "financial-analyst",
+          "task": "Define the financial question, source/as-of/entity/instrument/period/currency scope, requested artifact and missing inputs. Establish analysis versus execution boundaries without changing models or accounts.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "data-analyst",
+          "task": "Inspect approved supplied records, provenance, grain, units, publication/revision timing, adjustment and missingness. Identify what can be analyzed now; do not acquire paid/account data or silently clean originals.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "analysis",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "financial-analyst",
+          "task": "Review relevant statements/forecasts/valuation with traced inputs, accounting/cash reconciliation and assumption sensitivity. Return findings/calculations without writing source artifacts.",
+          "when": "The question involves statements, budgets, cash flow, forecasts or valuation."
+        },
+        {
+          "agent": "quant-researcher",
+          "task": "Assess the supplied strategy/backtest evidence for temporal leakage, costs, fill/accounting logic and out-of-sample/trial validity. Execute only reviewed offline calculations already authorized for the specified environment; otherwise report source review or a reproducibility gap.",
+          "when": "The question involves trading-strategy research or simulated performance."
+        },
+        {
+          "agent": "portfolio-risk-analyst",
+          "task": "Review the supplied holdings/limits or specified scenario, reconcile NAV/exposures and report concentration, nonlinear/liquidity/funding assumptions and uncertainty. Do not rebalance or submit orders.",
+          "when": "The question involves holdings, portfolio exposure, risk limits or stress scenarios."
+        }
+      ]
+    },
+    {
+      "id": "independent-check",
+      "execution": "parallel-review",
+      "assignments": [
+        {
+          "agent": "evidence-validator",
+          "task": "Independently check completed financial claims, source/publication identity, material calculations, contrary evidence and whether assumptions support the conclusion. Missing results remain unverified.",
+          "when": "always"
+        },
+        {
+          "agent": "mathematician",
+          "task": "Independently assess completed consequential formulas, numerical methods and uncertainty assumptions; do not treat a simulation or model as proof of future performance.",
+          "when": "The completed analysis depends on consequential or nontrivial quantitative reasoning."
+        }
+      ]
+    },
+    {
+      "id": "reconcile",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "financial-analyst",
+          "task": "Reconcile completed analysis and independent findings into the requested answer, retaining contradictions, missing inputs, performed checks and bounded conclusions. Do not suppress a blocker to produce a complete-looking report.",
+          "when": "always"
+        }
+      ]
+    },
+    {
+      "id": "save-requested-report",
+      "execution": "exclusive-write",
+      "assignments": [
+        {
+          "agent": "financial-analyst",
+          "task": "Save only the requested report/model artifact from the reconciled result, preserve original records and user work, identify changes and run applicable artifact checks. This is the sole source writer in this workflow.",
+          "when": "The user requests a persisted report or financial artifact, not analysis in the response alone."
+        }
+      ]
+    },
+    {
+      "id": "verify-artifact",
+      "execution": "serial-review",
+      "assignments": [
+        {
+          "agent": "evidence-validator",
+          "task": "Check the actual saved artifact against the reconciled evidence and requested scope after writing completes; preserve failed/unperformed checks and do not certify missing evidence.",
+          "when": "A requested artifact was saved or changed."
+        }
+      ]
+    }
+  ],
+  "completion": [
+    "The requested answer or authorized artifact is delivered with exact source/as-of identity, definitions, material calculations and uncertainty.",
+    "Data review precedes dependent analysis, independent checks follow completed results and saved artifacts are verified after the sole writer finishes.",
+    "Only applicable domain roles run; missing inputs, unavailable tools, unresolved contradictions and unperformed checks remain explicit.",
+    "Historical facts, assumptions, forecasts, scenarios, backtests, paper fills and actual live records are distinguished without guaranteed-return claims.",
+    "No account configuration, order, transfer, wallet operation or bet is implied by selecting the team."
+  ]
+}

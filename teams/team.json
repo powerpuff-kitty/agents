@@ -73,6 +73,21 @@
           "when": "The task asks about datasets, behavior metrics, funnels, cohorts, or quantitative interpretation."
         },
         {
+          "agent": "financial-analyst",
+          "task": "Review approved financial statements, budgets, forecasts or valuation models with source/period/currency reconciliation and sensitivity; return analysis without transactions or source writes.",
+          "when": "The task concerns company financials, financial modeling, budgets or valuation."
+        },
+        {
+          "agent": "quant-researcher",
+          "task": "Assess strategy/backtest evidence, point-in-time data, fills/costs and out-of-sample/trial validity; do not activate bots or live execution.",
+          "when": "The task concerns quantitative financial strategy research or historical trading simulations."
+        },
+        {
+          "agent": "portfolio-risk-analyst",
+          "task": "Assess supplied holdings, defined net/gross exposures, liquidity and stress/model assumptions against accepted limits without rebalancing.",
+          "when": "The task concerns portfolio risk, leverage, exposure, concentration or stress scenarios."
+        },
+        {
           "agent": "product-manager",
           "task": "Define bounded requirements, priorities, acceptance criteria, and measurable outcomes from accepted goals.",
           "when": "The task asks for product definition, prioritization, or acceptance criteria."

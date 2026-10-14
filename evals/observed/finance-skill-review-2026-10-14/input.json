@@ -1,0 +1,35 @@
+{
+  "classification": "synthetic offline evaluation fixture; not a real account or instrument",
+  "question": "Assess the supplied financial model, data and claimed strategy result from these records. Preserve original files.",
+  "market_data": {
+    "instrument": "SYNTH-X",
+    "currency": "USD",
+    "price_convention": "raw unadjusted close",
+    "bars": [
+      {"date": "2026-08-13", "close": 100},
+      {"date": "2026-08-14", "close": 20}
+    ],
+    "corporate_actions": [{"date": "2026-08-14", "action": "5-for-1 split"}],
+    "claimed_holding_loss_percent": -80,
+    "universe_source": "current constituent snapshot only; no membership history provided",
+    "fundamental": {"period_end": "2026-06-30", "published_at": "2026-08-20T18:00:00Z", "value": 12},
+    "strategy_decision_at": "2026-08-15T14:00:00Z"
+  },
+  "financial_model": {
+    "units": "USD thousands",
+    "beginning_cash": 20,
+    "operating_cash_flow": 15,
+    "investing_cash_flow": -5,
+    "financing_cash_flow": -2,
+    "fx_effect": 1,
+    "displayed_ending_cash": 30,
+    "project": {"initial_outflow_at_t0": 210, "end_of_year_cash_flows": [120,132], "annual_effective_discount_rate": 0.10, "terminal_value": 0, "reported_npv": 218.181818}
+  },
+  "strategy": {
+    "feature": "For every row, compute score = row.close / max(close over the entire supplied evaluation interval).",
+    "execution": "Compute the signal after the closing auction; book an entry at that same closing auction price.",
+    "selection": "Choose the best of 200 variants using the interval labeled test.",
+    "synthetic_round_trip": {"initial_capital": 1000, "quantity": 5, "buy_price": 40, "sell_price": 44, "fee_per_traded_notional": 0.002, "other_costs": 0, "reported_return_percent": 2},
+    "separate_two_period_return_example": {"simple_returns": [0.20,-0.20], "reported_compounded_return_percent": 0}
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "portfolio-risk-analyst",
+  "title": "Portfolio Risk Analyst",
+  "description": "Analyze approved portfolio holdings, exposures, concentration, liquidity and stress scenarios with explicit valuation, instrument and model assumptions. Use for portfolio risk and limits review; use quant-researcher for strategy backtests and financial-analyst for company statements/valuation. Risk analysis does not rebalance or transact."
+}

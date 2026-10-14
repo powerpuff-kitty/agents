@@ -26,7 +26,7 @@ Remote settings and manual/behavioral checks remain unknown or review-required.
 
 ## Actual verification and limits
 
-Source validation covers 29 profiles, 17 teams, four packs and 100 `not_run`
+At the initial review, source validation covered 29 profiles, 17 teams, four packs and 100 `not_run`
 acceptance specifications. Both portable/OpenCode builds and freshness checks pass;
 24 tooling tests pass using synthetic local destinations. These results are separate
 from model behavior and personal-host installation. Five new scenarios cover optional
@@ -42,3 +42,11 @@ Run the playbook auditor from its own checkout with the actual local target path
 audited target. The exact profile/build/test commands are in [AGENTS.md](../AGENTS.md).
 Do not convert unknown/manual-review findings into passes or use count changes as
 a quality score.
+
+## Finance follow-up
+
+The owner subsequently authorized a finance pack with three new roles and one
+team, increasing the source catalog to 32 profiles, 18 teams and five packs with
+112 unrun acceptance specifications. [FINANCE.md](FINANCE.md) owns current scope,
+worked examples and installation guidance. This addition does not change the
+reviewed repository structure or establish host/model financial reliability.

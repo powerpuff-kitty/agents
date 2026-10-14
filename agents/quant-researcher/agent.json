@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "quant-researcher",
+  "title": "Quant Researcher",
+  "description": "Design and evaluate financial trading-strategy research using point-in-time data, reproducible backtests, realistic costs and out-of-sample evidence. Use for quantitative strategy/model evaluation; use financial-analyst for statements/valuation and portfolio-risk-analyst for current holdings risk. Research does not authorize live execution or imply profitable returns."
+}

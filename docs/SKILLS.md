@@ -27,6 +27,21 @@ when it is requested and feasible. Reviewers do not certify their own authored
 change by adopting another role name. A focused defect or CI failure does not
 require a full team or every specialty audit.
 
+## Financial procedures
+
+The optional [finance pack](FINANCE.md) adds:
+
+| Skill | Primary role use |
+| --- | --- |
+| market-data-validation | All finance roles; data-analyst checks input provenance/availability. |
+| financial-model-review | financial-analyst checks statements/forecasts/valuation; portfolio-risk-analyst checks exposure/stress models. |
+| backtest-validation | quant-researcher checks causal timelines, fills/costs, ledgers and selection evidence. |
+
+Each skill includes a focused reference, worked synthetic examples, a report
+template and six unrun acceptance cases. Profiles still work with bounded direct
+methods if a skill is unavailable. No account or model call is needed to install
+these sources; actual native loading remains a separate check.
+
 ## OpenCode
 
 OpenCode natively discovers Agent Skills; no skill renderer is required. Its

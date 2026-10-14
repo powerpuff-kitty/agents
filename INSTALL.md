@@ -32,6 +32,9 @@ profile installation, not skill installation, model calls, account changes,
 publication or deployment.
 ```
 
+For the finance foundation, request the `finance` pack; its science-data/core
+dependencies are included. See [finance scope and examples](docs/FINANCE.md).
+
 For a project installation, name the project and explicit profile and command
 destinations instead of the global scope. The installer supports only its
 documented OpenCode destination strategy; portable exports are manually loaded

@@ -2,7 +2,7 @@
 
 Pack declarations in `packs/*.json` select canonical profiles and teams without
 forking their instructions. Builds, installation, and optional host validation
-default to the full catalog: 29 profiles and 17 teams.
+default to the full catalog: 32 profiles and 18 teams.
 
 | Pack | Owned profiles | Owned teams | Dependencies | Total with dependencies |
 | --- | --- | --- | --- | --- |
@@ -10,18 +10,23 @@ default to the full catalog: 29 profiles and 17 teams.
 | science-data | 3 | 2 | core | 18 profiles, 10 teams |
 | product-growth | 8 | 5 | core, science-data | 26 profiles, 15 teams |
 | game-3d | 3 | 2 | core, science-data | 21 profiles, 12 teams |
+| finance | 3 | 1 | science-data (and its core dependency) | 21 profiles, 11 teams |
 
 Core includes ux-designer, usability-auditor, accessibility-specialist, and `/team-ux`.
 The core UX workflow remains usable without product-growth: optional user-researcher,
 data-analyst, and copywriter candidates are omitted when unavailable. Installing
 science-data adds analytics support; product-growth adds user research and copy.
 
+The [finance pack](FINANCE.md) provides financial reporting/model analysis,
+quantitative strategy research and portfolio-risk review. It does not connect
+financial accounts or install the independent validation skills.
+
 Core also owns iteration-reviewer and `/team-iteration`; feature/general workflows
 use it to assess integrated product increments against accepted gates. See
 [iteration readiness](ITERATION-READINESS.md) for evidence and trigger boundaries.
 
 Science/data supports quantitative growth evaluation and game balance. Combining
-product-growth and game-3d includes the full catalog. Dependency closure is
+product-growth, game-3d and finance includes the full catalog. Dependency closure is
 automatic; repeated pack selections do not duplicate files. See the [catalog](CATALOG.md)
 for role ownership and [team workflows](TEAMS.md) for presets.
 
@@ -33,7 +38,7 @@ python3 scripts/install.py --tool opencode
 python3 scripts/install.py --pack core --dry-run
 python3 scripts/install.py --pack core
 python3 scripts/install.py --pack science-data
-python3 scripts/install.py --pack product-growth --pack game-3d
+python3 scripts/install.py --pack product-growth --pack game-3d --pack finance
 
 # Matching portable/OpenCode exports and validation
 python3 scripts/build.py --adapter portable --pack core
@@ -61,6 +66,6 @@ python3 scripts/install.py --pack core --target /path/to/project/.opencode/agent
 ```
 
 The sibling `.opencode/commands` is selected automatically. Source validation checks
-the full catalog and all 100 behavior specifications even with `--pack`; reported
+the full catalog and all 112 behavior specifications even with `--pack`; reported
 profile/team counts and optional host checks concern the selected closure. Host
 checks allow unrelated additional profiles/commands and do not execute model workflows.

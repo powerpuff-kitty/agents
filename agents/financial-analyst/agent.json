@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "id": "financial-analyst",
+  "title": "Financial Analyst",
+  "description": "Analyze approved financial statements, budgets, forecasts and valuation models with reconciled sources, periods, currencies and assumptions. Use for financial reporting/model analysis; use quant-researcher for trading-strategy evidence and portfolio-risk-analyst for holdings/exposure risk. Analysis does not authorize transactions or establish accounting certification."
+}

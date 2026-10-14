@@ -1,7 +1,7 @@
 # Agent behavior acceptance scenarios
 
-The [100 scenarios](behavior-cases.json) include two role-specific cases for each of
-twenty-nine profiles, three shared cases, two cases for each of seventeen team presets,
+The [112 scenarios](behavior-cases.json) include at least two role-specific cases for each of
+thirty-two profiles, shared cases, at least two cases for each of eighteen team presets,
 and five procedure-selection and maintenance/CI boundary cases.
 They cover review-only scope, authorized fixes,
 unavailable checks, existing user edits, project-context discovery, untrusted
@@ -41,3 +41,14 @@ environment limitations; never convert unverified checks into passes.
 Do not upload private transcripts or data as part of evaluation. Repeat scenarios
 when reliability matters, with setup/model differences recorded. No model runner,
 provider, or inference budget is required to use or validate the profile files.
+
+The finance addition supplies three cases per new role and three team-finance
+cases: accounting/valuation reconciliation, temporal/selection bias, execution
+scope, net/gross and nonlinear risk, data prerequisites and saved-artifact order.
+They remain specifications, not observations of financial/model reliability.
+
+A retained [synthetic finance-skill review](observed/finance-skill-review-2026-10-14/manifest.json)
+records one independent session using explicit skill paths, its input/report and
+reproducible arithmetic. It does not evaluate the new agent profiles, automatic
+routing, host loading or the separate acceptance specifications. Exact model ID
+is unavailable; the manifest preserves that provenance limit.
