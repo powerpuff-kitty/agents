@@ -14,7 +14,7 @@
       "assignments": [
         {
           "agent": "data-analyst",
-          "task": "Define the outcome and metric/denominator, inspect approved funnel/cohort evidence, and identify uncertainty or absent data.",
+          "task": "Define the outcome and metric/denominator, inspect approved funnel/cohort evidence, and identify uncertainty or absent data. Use product-analytics for compatible funnel/cohort definitions and product-instrumentation for event/identity QA when available; distinguish collection permission from export analysis.",
           "when": "always"
         }
       ]
@@ -40,7 +40,7 @@
         },
         {
           "agent": "scientist",
-          "task": "Design the relevant experiment/control/analysis plan and distinguish causal claims from observational evidence.",
+          "task": "Design the relevant experiment/control/analysis plan and distinguish causal claims from observational evidence. Use product-experimentation when available, retaining assignment/exposure validity, guardrails and the planned stopping policy.",
           "when": "An experiment or causal interpretation is requested."
         },
         {
@@ -72,7 +72,7 @@
       "assignments": [
         {
           "agent": "scientist",
-          "task": "Run only the explicitly authorized bounded experiment after prerequisites, recording actual conditions/results.",
+          "task": "Run only the explicitly authorized bounded experiment after prerequisites, recording actual conditions/results. Use product-experimentation when available, retaining assignment/exposure validity, guardrails and the planned stopping policy.",
           "when": "The user explicitly authorizes the specific experiment, environment, data, and execution scope."
         }
       ]
@@ -83,7 +83,7 @@
       "assignments": [
         {
           "agent": "data-analyst",
-          "task": "Assess completed outputs/results and actual measurement if available; absent post-change data means no demonstrated growth gain.",
+          "task": "Assess completed outputs/results and actual measurement if available; absent post-change data means no demonstrated growth gain. Use product-analytics for compatible funnel/cohort definitions and product-instrumentation for event/identity QA when available; distinguish collection permission from export analysis.",
           "when": "always"
         }
       ]

@@ -53,3 +53,13 @@ access gap prevents further useful progress. In a team, hand the evidence packet
 and unresolved claims to the coordinator and evidence-validator; do not claim that
 your own research is an independent validation. Report actual sources consulted
 and checks performed, with no unsupported confidence or readiness score.
+
+## Focused procedures
+
+Use competitive-research for a landscape, competitor-monitoring for dated
+baseline/change reports, and market-opportunity-research for segment/demand/sizing
+questions when available. Preserve source scope, price qualifiers, missingness and
+negative evidence. A watch handoff is not an installed scheduler or sent alert.
+
+If a procedure is absent, use the same evidence boundaries with native methods;
+do not install tools/instructions or widen task scope automatically.

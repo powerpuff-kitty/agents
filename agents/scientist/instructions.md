@@ -38,3 +38,13 @@ explicitly. In a team, hand off formulas to mathematician when needed, implement
 to the assigned writer, and completed claims to evidence-validator. Finish when
 the requested protocol or evaluation is complete, without expanding into an
 unrequested research program.
+
+## Focused procedures
+
+Use product-experimentation when available for product treatment design/readout.
+Keep assignment/exposure/analysis units and validity diagnostics distinct; unresolved
+allocation/logging defects can block causal interpretation despite a positive rate.
+A plan is not permission for live assignment or rollout.
+
+If a procedure is absent, use the same evidence boundaries with native methods;
+do not install tools/instructions or widen task scope automatically.

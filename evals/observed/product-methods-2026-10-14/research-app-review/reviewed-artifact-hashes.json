@@ -1,0 +1,182 @@
+[
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/actions.md",
+    "sha256": "3614dd85a50907fd7b32100d965a2768f591fe22c60a613241a1e4c728727eaa",
+    "bytes": 4337
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/browser-recovery-review.md",
+    "sha256": "15c199e599aaa732bb961fdfda5399395d9695b1c7472b75be705cd50b8cfbd0",
+    "bytes": 4178
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/checks.json",
+    "sha256": "86c754d7ab1e9603a407d34f8f24a8068dceba9144c5293e7767643047370278",
+    "bytes": 2092
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/comparison.stderr.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/comparison.stdout.json",
+    "sha256": "08a427a7c148db5a5173459cfd60f767d168e2c18a87cc6a26b8660d48d51cfb",
+    "bytes": 1509
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/competitor-monitoring-report.md",
+    "sha256": "8eadb0ef3167d87b12a295bebe2b64e5a65a6d7d5fdfdd4d55f5aa92dac84784",
+    "bytes": 3427
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/market-opportunity-report.md",
+    "sha256": "ea932d50631c7d289653d0b4e44355e753f73b504328836813c1b9e5dad6f016",
+    "bytes": 4626
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/native-app-delivery-report.md",
+    "sha256": "687d5ad249bd479a9f77e9ca4b938c4e6d4bd184ebfd1fa9c8155b15d2634809",
+    "bytes": 4878
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/result.md",
+    "sha256": "7c90b5136fb1c2f2af9a7dd9f1572f72bcae6adcb4f9ddbcf55ff943b05d1847",
+    "bytes": 3317
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/source-identities.json",
+    "sha256": "46b52546d7a880c6007ffc90e5161ee68aeb21bab705a24c68c7013539501e92",
+    "bytes": 11035
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/competitor-monitoring/SKILL.md",
+    "sha256": "e32f07b7aa82164f607922def2d07e257f95f5c2f469e3136f4a9471dc1c2c55",
+    "bytes": 2925
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/competitor-monitoring/assets/report-template.md",
+    "sha256": "cf8d62493a716994834ed0820162c2f7de3ddc18822f02b3e5fbde78839c2fea",
+    "bytes": 648
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/competitor-monitoring/references/method.md",
+    "sha256": "20fb3e7e98177a87e1a86dcc9ab0e1300e7e5febfa6b7e09e20147030baec71d",
+    "bytes": 2963
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/competitor-monitoring/tests/fixtures/baseline.json",
+    "sha256": "3be3dc6f17da07dd1c25f398155fc4d04da718e653ec29e82be961238a9998fa",
+    "bytes": 994
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/competitor-monitoring/tests/fixtures/current.json",
+    "sha256": "17afa13c4bdd8922ced9fd39253d045661d58bcc8f531f148b53b21425006919",
+    "bytes": 837
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/market-opportunity-research/SKILL.md",
+    "sha256": "92f6544f606ecf7082cc659a458688faaec565eedef8f53031965fc3e4f4d70d",
+    "bytes": 2993
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/market-opportunity-research/assets/report-template.md",
+    "sha256": "07c228c0cb25c0eeb3d94d0eb369adc654dd272e863f2aec95667af77acd22f0",
+    "bytes": 632
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/market-opportunity-research/references/method.md",
+    "sha256": "74062fdcd235b908d1968cf3de8b50d9f65e769cc97c5aab5e874342e79b53bc",
+    "bytes": 2003
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/market-opportunity-research/tests/fixtures/input.json",
+    "sha256": "9575cd16953a5d1a4077f7c0a426c0d184cc8b6e9acdb0a07e6817480215db85",
+    "bytes": 749
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/native-app-delivery/SKILL.md",
+    "sha256": "150907b0b946522bd518edef072883bacfc3a4bdb6fed4f75eb97dacac343946",
+    "bytes": 3219
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/native-app-delivery/assets/report-template.md",
+    "sha256": "dc67d7c0ed83e9759460af666bbda34b02d0ccdb5af3e0f4025992a5ba2837cb",
+    "bytes": 613
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/native-app-delivery/references/android.md",
+    "sha256": "2a9b03bdc81721344200c99bfad84ec6d6a1c37e28914177ab00333509203d8e",
+    "bytes": 1442
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/native-app-delivery/references/ios.md",
+    "sha256": "fd0d970f6484d28986068bb580353af9a9fbe369f27767bad59758eb60f77c6f",
+    "bytes": 1410
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/native-app-delivery/references/method.md",
+    "sha256": "8b41573a17e23c65f80c18009edfaf278b635d4a0347b68bd8b0e0e451430d50",
+    "bytes": 1791
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/native-app-delivery/tests/fixtures/input.json",
+    "sha256": "715fadde536835cbe77177bbe237b93f03aa9157feed41792e8c089917b9dd25",
+    "bytes": 747
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/test-engineering/SKILL.md",
+    "sha256": "cf79fe8b70df0c8af1e9750709f8d85373c5c0c3982c4da28f9c46751a37330f",
+    "bytes": 4313
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/test-engineering/references/browser-recovery.md",
+    "sha256": "6bd9a500fbe4d38f6e168c5a34f007a76f95c486b56ec147f1bdfbba3d61444a",
+    "bytes": 2925
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/test-engineering/references/fresh-review.md",
+    "sha256": "ad9978761b85507520d85a7358280d367b591c16969029ab9fb73a2350b3c94e",
+    "bytes": 3193
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/test-engineering/references/test-design.md",
+    "sha256": "504ed4d0823764ca4c9e4a101dfd6c5a3ad80eee38e3a02cef1fa9c1edac171e",
+    "bytes": 1712
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/test-engineering/tests/fixtures/browser-recovery.json",
+    "sha256": "655eb9a8bf279f9e8e95e778b785fbac6fe114fe4553f3f8b14cccf2fe5cbd1b",
+    "bytes": 690
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/user-research/SKILL.md",
+    "sha256": "554f431d3a3f8de30df305ce69fca1a12b09f85585f05b8f9776eaa5602cab3a",
+    "bytes": 2788
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/user-research/assets/report-template.md",
+    "sha256": "deb76978191fb1e6e9419c155c9b18599236d0a17d36e905710e7d034ec8cd18",
+    "bytes": 544
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/user-research/references/method.md",
+    "sha256": "597590d90e4f1e50713ce065235912e6343cd861649d7b64fed5756745451508",
+    "bytes": 1954
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/sources/user-research/tests/fixtures/input.json",
+    "sha256": "acf8a72db039310e2f092507258891f1a98ac46d9a292d361ebf44842fe6fcf1",
+    "bytes": 1199
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/user-research-report.md",
+    "sha256": "b94c738bb0c598bf7cfcfcc551a03b4c76f934e02efd279ef3cf9c454b54b188",
+    "bytes": 4726
+  },
+  {
+    "path": "/private/tmp/research-app-methods-forward-2026-10-14/verification.json",
+    "sha256": "f1f31920067ae2e4d0cb87800bb8570cdf43e2178cd092321eddd58306150d1a",
+    "bytes": 14155
+  }
+]

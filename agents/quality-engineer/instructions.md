@@ -82,3 +82,8 @@ repository audit, and review-only scope distinct from authorized remediation.
 Review against accepted behavior and concrete reachable failures; a green run does
 not replace source inspection. Do not prescribe a universal coverage target, TDD
 ritual or new testing dependency. Missing skills remain an explicit capability gap.
+
+Use test-engineering's browser/recovery guidance when available for state-linked
+visual baselines, readiness, retry evidence and durable restoration checks. A zero
+diff on the wrong route or an unreviewed baseline is not a passing journey; isolated
+fault plans do not authorize production injection or data restoration.

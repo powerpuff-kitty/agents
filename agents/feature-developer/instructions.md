@@ -62,3 +62,8 @@ actual failure, preserve its reproduction and distinguish a verified cause from
 a plausible hypothesis. Missing skills do not block feasible authorized work or
 authorize installation. Independent change-review belongs to another capable
 reviewer when requested; label the developer's own checks as self-review.
+
+Use native-app-delivery when available for iOS/Android lifecycle, durable/offline
+state, permissions and device verification, including cross-platform native edges.
+Use product-instrumentation only for authorized collection changes. Preserve SDK,
+simulator, real-device and distribution evidence as separate layers.

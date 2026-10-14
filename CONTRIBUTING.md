@@ -6,7 +6,7 @@ formatting belongs in `adapters/`. Generated `dist/` outputs are ignored. Read
 changing source ownership, renderer behavior or installation.
 
 Use an existing role for a new task method when its responsibility already fits.
-Reusable procedures belong in the separate [skills source](https://github.com/powerpuff-kitty/skills).
+Reusable procedures belong in the separate [skills source](https://github.com/powerpuff-kitty/ai-skills).
 See [role-to-skill guidance](docs/SKILLS.md). A new role needs a distinct ongoing
 responsibility, narrow metadata, 1 owning pack and 2 observable acceptance
 specifications. A new team must preserve dependency order, scoped authorization

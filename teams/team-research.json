@@ -14,7 +14,7 @@
       "assignments": [
         {
           "agent": "researcher",
-          "task": "Frame decision criteria, gather supporting and contradictory sources, normalize comparisons, and return conclusions with citations, versions/dates, assumptions, and unknowns.",
+          "task": "Frame decision criteria, gather supporting and contradictory sources, normalize comparisons, and return conclusions with citations, versions/dates, assumptions, and unknowns. Use market-opportunity-research for segment/demand/sizing questions and competitor-monitoring for repeat-run baselines when available; preserve qualifiers, unavailable sources and negative evidence.",
           "when": "always"
         }
       ]

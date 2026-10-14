@@ -34,3 +34,13 @@ external uploads, tracking changes, contacting users, and production experiments
 require separate task authority. No data access means a feasible analysis plan or
 provided-data result with an explicit gap, not fabricated findings. Independent
 verification belongs to evidence-validator, not your own assertion of accuracy.
+
+## Focused procedures
+
+Use product-instrumentation for event contracts and collection QA,
+product-analytics for funnels/cohorts/retention, and product-experimentation for
+controlled treatment readouts when available. Preserve unit/identity/window,
+missingness and mature follow-up; reviewing an export does not authorize tracking.
+
+If a procedure is absent, use the same evidence boundaries with native methods;
+do not install tools/instructions or widen task scope automatically.

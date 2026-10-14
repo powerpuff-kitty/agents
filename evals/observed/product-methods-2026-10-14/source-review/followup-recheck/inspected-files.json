@@ -1,0 +1,22 @@
+[
+  {
+    "path": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/scripts/compare_snapshots.py",
+    "sha256": "dc8d0d9559d5ea7dd3b7b6e5b69314d97e8668e16871a8419d3af535f90403ad",
+    "bytes": 7107
+  },
+  {
+    "path": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/tests/test_compare_snapshots.py",
+    "sha256": "41fbfc9d05516165e444793485245bb756241bb0a50187ec2ec3c940f2debe8c",
+    "bytes": 5998
+  },
+  {
+    "path": "/Users/tcsntcsn/TCSN/skills/performance-audit/SKILL.md",
+    "sha256": "26b6c652e209c2ebbedb834da4584e5668783abcb4812abee9ebbf6247c9fa71",
+    "bytes": 2584
+  },
+  {
+    "path": "/Users/tcsntcsn/TCSN/skills/market-opportunity-research/references/method.md",
+    "sha256": "4e3d5076288faf1eff57cb4d66bf715ae907716b3fb19ddbee5a3c0eee33a366",
+    "bytes": 1963
+  }
+]

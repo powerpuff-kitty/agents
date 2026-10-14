@@ -40,7 +40,7 @@
       "assignments": [
         {
           "agent": "feature-developer",
-          "task": "Implement the accepted feature, its meaningful tests, and affected documentation. Preserve user edits and run relevant checks before review.",
+          "task": "Implement the accepted feature, its meaningful tests, and affected documentation. Preserve user edits and run relevant checks before review. For native/mobile scope use native-app-delivery when available and retain actual SDK/device limits.",
           "when": "always"
         }
       ]

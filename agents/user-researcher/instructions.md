@@ -27,3 +27,13 @@ evidence-linked findings, uncertainty, and implications for product/designer wor
 Use redacted approved material and retain data only within requested boundaries.
 Report unavailable participant access explicitly. Finish the bounded study artifact
 or analysis; do not claim a design is user-validated because it looks plausible.
+
+## Focused procedures
+
+Use user-research when available for study planning, participant evidence and
+traceable synthesis. Preserve said/did distinctions, sample limits, negative cases
+and quote/sharing restrictions. Research planning does not authorize recruitment,
+recording, outreach or transcript upload.
+
+If a procedure is absent, use the same evidence boundaries with native methods;
+do not install tools/instructions or widen task scope automatically.

@@ -1,0 +1,15 @@
+{
+  "recorded_utc": "2026-10-14T17:53:12.144131+00:00",
+  "hashes": {
+    "reviewed-artifact-hashes.json": "a42651c8fae94f6f8c7f59c7d3c37e84634682d3aa3cc24833334bb445c005c3",
+    "result.md": "567524697ef8d2722e888833fb97286f31e4ea546c8b1cf88eff4e3ede045181",
+    "checks.json": "fa096714c2085478db606c2e0e139bd36b9d84b47655a0da0b38ee6a1c5f630d",
+    "actions.md": "fdd1a5c27a23202a993d96080be3d5dbaffcc4149c583feafd8933e9e9af9567",
+    "request.md": "2281656fc0eb675c15f9d13d6422ef015468d087b81e124a6153e8f50303ef1e",
+    "review.md": "c935a8f94b22ef09d3f3ef0fa900c8a7dd02d9a2a674751f44c393f8900f2910",
+    "coordinator-disposition.md": "6ea513c59abb5d6f33a076416ff7e6cde935d3469ce378f71b4555ceb3401854"
+  },
+  "retained_reviewed_artifacts_unchanged_since_initial_hash_check": true,
+  "reviewed_input_artifacts_checked": 36,
+  "coordinator_disposition_recorded_utc": "2026-10-14T17:53:24.162314+00:00"
+}

@@ -1,0 +1,73 @@
+{
+  "raw_rows": 8,
+  "valid_rows": 8,
+  "after_deduplication": 7,
+  "duplicate_rows": [
+    3
+  ],
+  "invalid_rows": [],
+  "after_cutoff_rows": [],
+  "distinct_units": 5,
+  "eligible_entrants": 4,
+  "excluded_nonentrant_units": 1,
+  "mature_entrants": 3,
+  "immature_entrants": 1,
+  "mature_converters": 1,
+  "mature_conversion_rate": 0.3333333333333333,
+  "observed_all_entrant_rate_incomplete": 0.25,
+  "eventual_current_entrant_rate_lower_bound": 0.25,
+  "eventual_current_entrant_rate_upper_bound": 0.5,
+  "ledger": [
+    {
+      "unit": "A",
+      "entrant": true,
+      "entry": "2026-10-01T00:00:00+00:00",
+      "window_end": "2026-10-03T00:00:00+00:00",
+      "observed_hours": 48,
+      "mature": true,
+      "converted_in_window": true,
+      "out_of_window_conversion_count": 0,
+      "conversion_before_entry_count": 0
+    },
+    {
+      "unit": "B",
+      "entrant": true,
+      "entry": "2026-10-01T00:00:00+00:00",
+      "window_end": "2026-10-03T00:00:00+00:00",
+      "observed_hours": 48,
+      "mature": true,
+      "converted_in_window": false,
+      "out_of_window_conversion_count": 1,
+      "conversion_before_entry_count": 0
+    },
+    {
+      "unit": "C",
+      "entrant": true,
+      "entry": "2026-10-01T00:00:00+00:00",
+      "window_end": "2026-10-03T00:00:00+00:00",
+      "observed_hours": 48,
+      "mature": true,
+      "converted_in_window": false,
+      "out_of_window_conversion_count": 0,
+      "conversion_before_entry_count": 0
+    },
+    {
+      "unit": "D",
+      "entrant": true,
+      "entry": "2026-10-07T00:00:00+00:00",
+      "window_end": "2026-10-09T00:00:00+00:00",
+      "observed_hours": 24.0,
+      "mature": false,
+      "converted_in_window": false,
+      "out_of_window_conversion_count": 0,
+      "conversion_before_entry_count": 0
+    },
+    {
+      "unit": "E",
+      "entrant": false,
+      "mature": null,
+      "converted_in_window": null,
+      "reason": "conversion without observed entry; excluded from funnel"
+    }
+  ]
+}

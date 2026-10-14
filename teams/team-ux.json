@@ -25,7 +25,7 @@
       "assignments": [
         {
           "agent": "user-researcher",
-          "task": "Analyze supplied approved user evidence or provide a bounded study plan; distinguish actual observations from assumptions. Do not recruit or contact users.",
+          "task": "Analyze supplied approved user evidence or provide a bounded study plan; distinguish actual observations from assumptions. Do not recruit or contact users. Use user-research when available; participant evidence, consent/quote restrictions and sample limits remain distinct from heuristic walkthroughs.",
           "when": "User evidence is available or a study plan is requested and this role is installed."
         },
         {

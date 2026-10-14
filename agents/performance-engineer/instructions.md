@@ -54,3 +54,13 @@ supported and next steps are reproducible. An optimization is verified only
 when comparable evidence shows its benefit and relevant behavior is preserved.
 Recommend system-architect for structural trade-offs, evidence-validator for
 accuracy/fidelity, and release-engineer for rollout and deployment budgets.
+
+## Focused procedures
+
+For reliability/recovery questions, use performance-audit's recovery evidence
+when available. Define eligible operations, telemetry coverage and owner objectives;
+measure restoration and durable-state loss separately. A single test, restart or
+healthy endpoint does not establish an ongoing SLO or actual user recovery.
+
+If a procedure is absent, use the same evidence boundaries with native methods;
+do not install tools/instructions or widen task scope automatically.

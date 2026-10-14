@@ -22,15 +22,15 @@ betting-model validation by themselves. Optional [crypto](CRYPTO.md) and
 ## Reusable procedures
 
 Skills live independently at the Skills source root. Install them separately using
-its [installation guide](https://github.com/powerpuff-kitty/skills/blob/main/INSTALL.md).
+its [installation guide](https://github.com/powerpuff-kitty/ai-skills/blob/main/INSTALL.md).
 The role can perform bounded direct checks if a skill is unavailable; it does not
 silently install it or claim host loading.
 
 | Skill | Useful detail |
 | --- | --- |
-| [market-data-validation](https://github.com/powerpuff-kitty/skills/tree/main/market-data-validation) | Field/time/adjustment contract, point-in-time fundamentals, corporate actions, instrument/universe coverage and a report template. |
-| [financial-model-review](https://github.com/powerpuff-kitty/skills/tree/main/financial-model-review) | Formula/source review, statement/cash reconciliation, discounting, valuation bridges, risk assumptions and a report template. |
-| [backtest-validation](https://github.com/powerpuff-kitty/skills/tree/main/backtest-validation) | Causal timeline, fills/costs, ledger reconciliation, selection effects, out-of-sample validity and a report template. |
+| [market-data-validation](https://github.com/powerpuff-kitty/ai-skills/tree/main/market-data-validation) | Field/time/adjustment contract, point-in-time fundamentals, corporate actions, instrument/universe coverage and a report template. |
+| [financial-model-review](https://github.com/powerpuff-kitty/ai-skills/tree/main/financial-model-review) | Formula/source review, statement/cash reconciliation, discounting, valuation bridges, risk assumptions and a report template. |
+| [backtest-validation](https://github.com/powerpuff-kitty/ai-skills/tree/main/backtest-validation) | Causal timeline, fills/costs, ledger reconciliation, selection effects, out-of-sample validity and a report template. |
 
 Current source references are reviewed 2026-10-14. Verify current provider, standard,
 engine and data versions when applying them. They provide methods, not universal

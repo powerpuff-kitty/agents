@@ -1,0 +1,91 @@
+{
+  "scope": "Local synthetic fixture arithmetic and source-informed walkthrough, not blinded model-evaluation outcomes, actual collector/browser/device/participant/production evidence, or externally verified market facts. Acceptance case files unchanged.",
+  "instrumentation": {
+    "raw_rows": 4,
+    "rows": [
+      {
+        "row": 1,
+        "duplicate_event_id": false,
+        "missing_fields": [],
+        "unexpected_property_names": []
+      },
+      {
+        "row": 2,
+        "duplicate_event_id": true,
+        "missing_fields": [],
+        "unexpected_property_names": []
+      },
+      {
+        "row": 3,
+        "duplicate_event_id": false,
+        "missing_fields": [
+          "occurred_at"
+        ],
+        "unexpected_property_names": []
+      },
+      {
+        "row": 4,
+        "duplicate_event_id": false,
+        "missing_fields": [],
+        "unexpected_property_names": [
+          "email"
+        ]
+      }
+    ],
+    "sensitive_values": "not copied"
+  },
+  "analytics": {
+    "raw_rows": 8,
+    "deduplicated_rows": 7,
+    "replays": 1,
+    "unit_reconciliation": [
+      {
+        "unit": "A",
+        "mature": true,
+        "valid_conversion": true
+      },
+      {
+        "unit": "B",
+        "mature": true,
+        "valid_conversion": false
+      },
+      {
+        "unit": "C",
+        "mature": true,
+        "valid_conversion": false
+      },
+      {
+        "unit": "D",
+        "mature": false,
+        "valid_conversion": false
+      },
+      {
+        "unit": "E",
+        "classification": "no_entry"
+      }
+    ],
+    "mature_denominator": 3,
+    "mature_converters": 1
+  },
+  "experimentation": {
+    "descriptive_rates": {
+      "control": 0.05,
+      "treatment": 0.06
+    },
+    "assignment_chi_square_df1": 20.0,
+    "assignment_srm_p_df1": 7.744216431044074e-06,
+    "limits": "Assignment mechanism, exposures, guardrails and concrete outcome window not supplied; rates descriptive, causal interpretation blocked."
+  },
+  "market": {
+    "distinct_hypothetical_buying_units": 3500,
+    "annual_list_prices": [
+      1000,
+      1200
+    ],
+    "illustrative_revenue_bounds": [
+      3600000,
+      3700000
+    ],
+    "assumption": "Each overlapping buying unit buys exactly one of the two listed packages; no demand, reach, transaction-price or revenue validation."
+  }
+}

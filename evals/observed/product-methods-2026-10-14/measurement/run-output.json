@@ -1,0 +1,72 @@
+{
+  "instrumentation": {
+    "raw_rows": 4,
+    "distinct_event_ids": 3,
+    "schema_pass_rows": 2,
+    "schema_rejected_rows": 2,
+    "duplicate_rows": 1,
+    "accepted_unique_rows": 1
+  },
+  "analytics": {
+    "raw_rows": 8,
+    "valid_rows": 8,
+    "after_deduplication": 7,
+    "duplicate_rows": [
+      3
+    ],
+    "invalid_rows": [],
+    "after_cutoff_rows": [],
+    "distinct_units": 5,
+    "eligible_entrants": 4,
+    "excluded_nonentrant_units": 1,
+    "mature_entrants": 3,
+    "immature_entrants": 1,
+    "mature_converters": 1,
+    "mature_conversion_rate": 0.3333333333333333,
+    "observed_all_entrant_rate_incomplete": 0.25,
+    "eventual_current_entrant_rate_lower_bound": 0.25,
+    "eventual_current_entrant_rate_upper_bound": 0.5
+  },
+  "experiment": {
+    "assigned": {
+      "control": 900,
+      "treatment": 1100,
+      "total": 2000
+    },
+    "expected_assigned": {
+      "control": 1000.0,
+      "treatment": 1000.0
+    },
+    "allocation_observed": {
+      "control": 0.45,
+      "treatment": 0.55
+    },
+    "srm": {
+      "method": "Pearson goodness-of-fit, df=1, asymptotic chi-square tail",
+      "chi_square": 20.0,
+      "df": 1,
+      "p_value": 7.744216431044074e-06,
+      "exact_binomial_two_sided_p": 8.457089535503927e-06,
+      "alpha": "not predeclared in supplied input; diagnostic p-values only"
+    },
+    "rates": {
+      "control": 0.05,
+      "treatment": 0.06
+    },
+    "effect": {
+      "absolute_difference": 0.009999999999999995,
+      "relative_change": 0.1999999999999999,
+      "standard_error_unpooled_independent_binomial": 0.01020051494045791,
+      "exploratory_95pct_normal_interval": [
+        -0.009992641907060243,
+        0.029992641907060233
+      ],
+      "interval_caveat": "Unplanned illustrative precision only, assumes independent fully observed binary accounts and valid measurement. Unresolved SRM blocks causal interpretation; no confirmatory primary outcome test performed."
+    },
+    "exposure_counts": null,
+    "analysis_account_rows_available": false,
+    "guardrail_results": null,
+    "decision": "Do not infer causal lift or approve rollout. Investigate unresolved allocation discrepancy and measurement/exposure validity first."
+  },
+  "source_checks": "15 retained source/copy SHA-256 matches; self-check assertions passed"
+}

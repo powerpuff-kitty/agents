@@ -1,0 +1,87 @@
+[
+  {
+    "argv": [
+      "python3",
+      "--version"
+    ],
+    "cwd": null,
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "TMPDIR": "/private/tmp/product-methods-independent-review-2026-10-14"
+    },
+    "exit_code": 0,
+    "stdout": "Python 3.14.7\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "competitor-monitoring/tests",
+      "-v"
+    ],
+    "cwd": "/Users/tcsntcsn/TCSN/skills",
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "TMPDIR": "/private/tmp/product-methods-independent-review-2026-10-14"
+    },
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "test_actual_cli_exit_and_no_input_writes (test_compare_snapshots.SnapshotComparison.test_actual_cli_exit_and_no_input_writes) ... ok\ntest_invalid_inventory_dates_and_nonfinite_rejected (test_compare_snapshots.SnapshotComparison.test_invalid_inventory_dates_and_nonfinite_rejected) ... ok\ntest_like_for_like_change_and_cosmetic_text (test_compare_snapshots.SnapshotComparison.test_like_for_like_change_and_cosmetic_text) ... ok\ntest_missing_fact_does_not_claim_removal (test_compare_snapshots.SnapshotComparison.test_missing_fact_does_not_claim_removal) ... ok\ntest_qualifier_change_is_not_price_increase (test_compare_snapshots.SnapshotComparison.test_qualifier_change_is_not_price_increase) ... ok\ntest_scalar_types_and_instructions_remain_data (test_compare_snapshots.SnapshotComparison.test_scalar_types_and_instructions_remain_data) ... ok\ntest_stale_and_locator_changes_block_comparison (test_compare_snapshots.SnapshotComparison.test_stale_and_locator_changes_block_comparison) ... ok\ntest_unavailable_or_omitted_source_is_coverage_gap (test_compare_snapshots.SnapshotComparison.test_unavailable_or_omitted_source_is_coverage_gap) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.202s\n\nOK\n"
+  },
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/scripts/compare_snapshots.py",
+      "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/tests/fixtures/baseline.json",
+      "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/tests/fixtures/current.json"
+    ],
+    "cwd": null,
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "TMPDIR": "/private/tmp/product-methods-independent-review-2026-10-14"
+    },
+    "exit_code": 1,
+    "stdout": "{\"alerts_sent\": false, \"baseline_at\": \"2026-10-14T12:00:00Z\", \"current_at\": \"2026-10-15T12:00:00Z\", \"items\": [{\"baseline\": {\"evidence\": \"synthetic source:2\", \"key\": \"plan-name\", \"qualifiers\": {}, \"value\": \"Pro plan\"}, \"baseline_observed_at\": \"2026-10-14T11:00:00Z\", \"classification\": \"unchanged\", \"current\": {\"evidence\": \"synthetic source:2\", \"key\": \"plan-name\", \"qualifiers\": {}, \"value\": \" Pro  plan \"}, \"current_observed_at\": \"2026-10-15T11:00:00Z\", \"fact_key\": \"plan-name\", \"source_id\": \"pricing\"}, {\"baseline\": {\"evidence\": \"synthetic source:1\", \"key\": \"pro-price\", \"qualifiers\": {\"currency\": \"USD\", \"period\": \"month\", \"unit\": \"seat\"}, \"value\": \"29\"}, \"baseline_observed_at\": \"2026-10-14T11:00:00Z\", \"classification\": \"changed\", \"current\": {\"evidence\": \"synthetic source:1\", \"key\": \"pro-price\", \"qualifiers\": {\"currency\": \"USD\", \"period\": \"month\", \"unit\": \"seat\"}, \"value\": \"39\"}, \"current_observed_at\": \"2026-10-15T11:00:00Z\", \"fact_key\": \"pro-price\", \"source_id\": \"pricing\"}, {\"baseline_observed_at\": \"2026-10-14T11:00:00Z\", \"baseline_status\": \"ok\", \"classification\": \"coverage_gap\", \"current_observed_at\": null, \"current_status\": \"unavailable\", \"source_id\": \"release-notes\"}], \"kind\": \"competitor-snapshot-comparison\", \"limits\": \"Caller-supplied observations only; no fact verification, freshness SLA, removal inference, scheduler or business-cause judgment.\", \"normalization\": \"Collapse whitespace in string fact values only; qualifiers and scalar types remain exact.\", \"retrieval\": \"not_performed\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/scripts/compare_snapshots.py",
+      "/private/tmp/product-methods-independent-review-2026-10-14/probes/empty-inventory-baseline.json",
+      "/private/tmp/product-methods-independent-review-2026-10-14/probes/empty-inventory-current.json"
+    ],
+    "cwd": null,
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "TMPDIR": "/private/tmp/product-methods-independent-review-2026-10-14"
+    },
+    "exit_code": 0,
+    "stdout": "{\"alerts_sent\": false, \"baseline_at\": \"2026-10-14T12:00:00Z\", \"current_at\": \"2026-10-15T12:00:00Z\", \"items\": [], \"kind\": \"competitor-snapshot-comparison\", \"limits\": \"Caller-supplied observations only; no fact verification, freshness SLA, removal inference, scheduler or business-cause judgment.\", \"normalization\": \"Collapse whitespace in string fact values only; qualifiers and scalar types remain exact.\", \"retrieval\": \"not_performed\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/scripts/compare_snapshots.py",
+      "/private/tmp/product-methods-independent-review-2026-10-14/probes/empty-facts-baseline.json",
+      "/private/tmp/product-methods-independent-review-2026-10-14/probes/empty-facts-current.json"
+    ],
+    "cwd": null,
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "TMPDIR": "/private/tmp/product-methods-independent-review-2026-10-14"
+    },
+    "exit_code": 0,
+    "stdout": "{\"alerts_sent\": false, \"baseline_at\": \"2026-10-14T12:00:00Z\", \"current_at\": \"2026-10-15T12:00:00Z\", \"items\": [], \"kind\": \"competitor-snapshot-comparison\", \"limits\": \"Caller-supplied observations only; no fact verification, freshness SLA, removal inference, scheduler or business-cause judgment.\", \"normalization\": \"Collapse whitespace in string fact values only; qualifiers and scalar types remain exact.\", \"retrieval\": \"not_performed\"}\n",
+    "stderr": ""
+  }
+]

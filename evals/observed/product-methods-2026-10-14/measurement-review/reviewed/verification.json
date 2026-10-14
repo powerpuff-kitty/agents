@@ -1,0 +1,9 @@
+{
+  "exit_code": 0,
+  "repeat_output_matches_retained_output": true,
+  "five_json_artifact_hashes_unchanged_on_repeat": true,
+  "fifteen_source_copy_pairs_verified_by_calculate": true,
+  "six_task_report_action_files_nonempty": true,
+  "independent_review": false,
+  "behavior_cases_evaluated": false
+}

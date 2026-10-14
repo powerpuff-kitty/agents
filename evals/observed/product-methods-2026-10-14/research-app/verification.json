@@ -1,0 +1,442 @@
+{
+  "verified_at_utc": "2026-10-14T17:48:35.714595+00:00",
+  "selected_originals": [
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/SKILL.md",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/references/method.md",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/assets/report-template.md",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/native-app-delivery/SKILL.md",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/native-app-delivery/references/method.md",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/native-app-delivery/assets/report-template.md",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/user-research/SKILL.md",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/user-research/references/method.md",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/user-research/assets/report-template.md",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/market-opportunity-research/SKILL.md",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/market-opportunity-research/references/method.md",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/market-opportunity-research/assets/report-template.md",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/native-app-delivery/references/ios.md",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/native-app-delivery/references/android.md",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/test-engineering/SKILL.md",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/test-engineering/references/browser-recovery.md",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/test-engineering/references/test-design.md",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/test-engineering/references/fresh-review.md",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/scripts/compare_snapshots.py",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/tests/fixtures/baseline.json",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/tests/fixtures/current.json",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/native-app-delivery/tests/fixtures/input.json",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/user-research/tests/fixtures/input.json",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/market-opportunity-research/tests/fixtures/input.json",
+      "unchanged_since_capture": true
+    },
+    {
+      "path": "/Users/tcsntcsn/TCSN/skills/test-engineering/tests/fixtures/browser-recovery.json",
+      "unchanged_since_capture": true
+    }
+  ],
+  "selected_copies": [
+    {
+      "path": "sources/competitor-monitoring/SKILL.md",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/competitor-monitoring/references/method.md",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/competitor-monitoring/assets/report-template.md",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/native-app-delivery/SKILL.md",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/native-app-delivery/references/method.md",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/native-app-delivery/assets/report-template.md",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/user-research/SKILL.md",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/user-research/references/method.md",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/user-research/assets/report-template.md",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/market-opportunity-research/SKILL.md",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/market-opportunity-research/references/method.md",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/market-opportunity-research/assets/report-template.md",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/native-app-delivery/references/ios.md",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/native-app-delivery/references/android.md",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/test-engineering/SKILL.md",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/test-engineering/references/browser-recovery.md",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/test-engineering/references/test-design.md",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/test-engineering/references/fresh-review.md",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/competitor-monitoring/scripts/compare_snapshots.py",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/competitor-monitoring/tests/fixtures/baseline.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/competitor-monitoring/tests/fixtures/current.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/native-app-delivery/tests/fixtures/input.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/user-research/tests/fixtures/input.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/market-opportunity-research/tests/fixtures/input.json",
+      "matches_recorded_hash": true
+    },
+    {
+      "path": "sources/test-engineering/tests/fixtures/browser-recovery.json",
+      "matches_recorded_hash": true
+    }
+  ],
+  "markdown_links": [
+    {
+      "document": "result.md",
+      "target": "competitor-monitoring-report.md",
+      "exists": true
+    },
+    {
+      "document": "result.md",
+      "target": "native-app-delivery-report.md",
+      "exists": true
+    },
+    {
+      "document": "result.md",
+      "target": "user-research-report.md",
+      "exists": true
+    },
+    {
+      "document": "result.md",
+      "target": "market-opportunity-report.md",
+      "exists": true
+    },
+    {
+      "document": "result.md",
+      "target": "browser-recovery-review.md",
+      "exists": true
+    },
+    {
+      "document": "result.md",
+      "target": "checks.json",
+      "exists": true
+    },
+    {
+      "document": "result.md",
+      "target": "source-identities.json",
+      "exists": true
+    },
+    {
+      "document": "result.md",
+      "target": "actions.md",
+      "exists": true
+    }
+  ],
+  "artifacts_except_this_manifest": [
+    {
+      "path": "actions.md",
+      "bytes": 4337,
+      "sha256": "3614dd85a50907fd7b32100d965a2768f591fe22c60a613241a1e4c728727eaa"
+    },
+    {
+      "path": "browser-recovery-review.md",
+      "bytes": 4178,
+      "sha256": "15c199e599aaa732bb961fdfda5399395d9695b1c7472b75be705cd50b8cfbd0"
+    },
+    {
+      "path": "checks.json",
+      "bytes": 2092,
+      "sha256": "86c754d7ab1e9603a407d34f8f24a8068dceba9144c5293e7767643047370278"
+    },
+    {
+      "path": "comparison.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "comparison.stdout.json",
+      "bytes": 1509,
+      "sha256": "08a427a7c148db5a5173459cfd60f767d168e2c18a87cc6a26b8660d48d51cfb"
+    },
+    {
+      "path": "competitor-monitoring-report.md",
+      "bytes": 3427,
+      "sha256": "8eadb0ef3167d87b12a295bebe2b64e5a65a6d7d5fdfdd4d55f5aa92dac84784"
+    },
+    {
+      "path": "market-opportunity-report.md",
+      "bytes": 4626,
+      "sha256": "ea932d50631c7d289653d0b4e44355e753f73b504328836813c1b9e5dad6f016"
+    },
+    {
+      "path": "native-app-delivery-report.md",
+      "bytes": 4878,
+      "sha256": "687d5ad249bd479a9f77e9ca4b938c4e6d4bd184ebfd1fa9c8155b15d2634809"
+    },
+    {
+      "path": "reproduce.py",
+      "bytes": 5483,
+      "sha256": "9dfad0b814775957fd6cf58e03562e8a1e333835ddb1165db4044d0705215e13"
+    },
+    {
+      "path": "result.md",
+      "bytes": 3317,
+      "sha256": "7c90b5136fb1c2f2af9a7dd9f1572f72bcae6adcb4f9ddbcf55ff943b05d1847"
+    },
+    {
+      "path": "snapshot_sources.py",
+      "bytes": 2839,
+      "sha256": "1f470160ae64d660bcb397084149179979bb0e29a169395b8fbd016e7ad25011"
+    },
+    {
+      "path": "source-identities.json",
+      "bytes": 11035,
+      "sha256": "46b52546d7a880c6007ffc90e5161ee68aeb21bab705a24c68c7013539501e92"
+    },
+    {
+      "path": "sources/competitor-monitoring/SKILL.md",
+      "bytes": 2925,
+      "sha256": "e32f07b7aa82164f607922def2d07e257f95f5c2f469e3136f4a9471dc1c2c55"
+    },
+    {
+      "path": "sources/competitor-monitoring/assets/report-template.md",
+      "bytes": 648,
+      "sha256": "cf8d62493a716994834ed0820162c2f7de3ddc18822f02b3e5fbde78839c2fea"
+    },
+    {
+      "path": "sources/competitor-monitoring/references/method.md",
+      "bytes": 2963,
+      "sha256": "20fb3e7e98177a87e1a86dcc9ab0e1300e7e5febfa6b7e09e20147030baec71d"
+    },
+    {
+      "path": "sources/competitor-monitoring/scripts/compare_snapshots.py",
+      "bytes": 6832,
+      "sha256": "c3bd17da3feb281b409219edf696af6cc923461cc372d02414cd26caf111dfb0"
+    },
+    {
+      "path": "sources/competitor-monitoring/tests/fixtures/baseline.json",
+      "bytes": 994,
+      "sha256": "3be3dc6f17da07dd1c25f398155fc4d04da718e653ec29e82be961238a9998fa"
+    },
+    {
+      "path": "sources/competitor-monitoring/tests/fixtures/current.json",
+      "bytes": 837,
+      "sha256": "17afa13c4bdd8922ced9fd39253d045661d58bcc8f531f148b53b21425006919"
+    },
+    {
+      "path": "sources/market-opportunity-research/SKILL.md",
+      "bytes": 2993,
+      "sha256": "92f6544f606ecf7082cc659a458688faaec565eedef8f53031965fc3e4f4d70d"
+    },
+    {
+      "path": "sources/market-opportunity-research/assets/report-template.md",
+      "bytes": 632,
+      "sha256": "07c228c0cb25c0eeb3d94d0eb369adc654dd272e863f2aec95667af77acd22f0"
+    },
+    {
+      "path": "sources/market-opportunity-research/references/method.md",
+      "bytes": 2003,
+      "sha256": "74062fdcd235b908d1968cf3de8b50d9f65e769cc97c5aab5e874342e79b53bc"
+    },
+    {
+      "path": "sources/market-opportunity-research/tests/fixtures/input.json",
+      "bytes": 749,
+      "sha256": "9575cd16953a5d1a4077f7c0a426c0d184cc8b6e9acdb0a07e6817480215db85"
+    },
+    {
+      "path": "sources/native-app-delivery/SKILL.md",
+      "bytes": 3219,
+      "sha256": "150907b0b946522bd518edef072883bacfc3a4bdb6fed4f75eb97dacac343946"
+    },
+    {
+      "path": "sources/native-app-delivery/assets/report-template.md",
+      "bytes": 613,
+      "sha256": "dc67d7c0ed83e9759460af666bbda34b02d0ccdb5af3e0f4025992a5ba2837cb"
+    },
+    {
+      "path": "sources/native-app-delivery/references/android.md",
+      "bytes": 1442,
+      "sha256": "2a9b03bdc81721344200c99bfad84ec6d6a1c37e28914177ab00333509203d8e"
+    },
+    {
+      "path": "sources/native-app-delivery/references/ios.md",
+      "bytes": 1410,
+      "sha256": "fd0d970f6484d28986068bb580353af9a9fbe369f27767bad59758eb60f77c6f"
+    },
+    {
+      "path": "sources/native-app-delivery/references/method.md",
+      "bytes": 1791,
+      "sha256": "8b41573a17e23c65f80c18009edfaf278b635d4a0347b68bd8b0e0e451430d50"
+    },
+    {
+      "path": "sources/native-app-delivery/tests/fixtures/input.json",
+      "bytes": 747,
+      "sha256": "715fadde536835cbe77177bbe237b93f03aa9157feed41792e8c089917b9dd25"
+    },
+    {
+      "path": "sources/test-engineering/SKILL.md",
+      "bytes": 4313,
+      "sha256": "cf79fe8b70df0c8af1e9750709f8d85373c5c0c3982c4da28f9c46751a37330f"
+    },
+    {
+      "path": "sources/test-engineering/references/browser-recovery.md",
+      "bytes": 2925,
+      "sha256": "6bd9a500fbe4d38f6e168c5a34f007a76f95c486b56ec147f1bdfbba3d61444a"
+    },
+    {
+      "path": "sources/test-engineering/references/fresh-review.md",
+      "bytes": 3193,
+      "sha256": "ad9978761b85507520d85a7358280d367b591c16969029ab9fb73a2350b3c94e"
+    },
+    {
+      "path": "sources/test-engineering/references/test-design.md",
+      "bytes": 1712,
+      "sha256": "504ed4d0823764ca4c9e4a101dfd6c5a3ad80eee38e3a02cef1fa9c1edac171e"
+    },
+    {
+      "path": "sources/test-engineering/tests/fixtures/browser-recovery.json",
+      "bytes": 690,
+      "sha256": "655eb9a8bf279f9e8e95e778b785fbac6fe114fe4553f3f8b14cccf2fe5cbd1b"
+    },
+    {
+      "path": "sources/user-research/SKILL.md",
+      "bytes": 2788,
+      "sha256": "554f431d3a3f8de30df305ce69fca1a12b09f85585f05b8f9776eaa5602cab3a"
+    },
+    {
+      "path": "sources/user-research/assets/report-template.md",
+      "bytes": 544,
+      "sha256": "deb76978191fb1e6e9419c155c9b18599236d0a17d36e905710e7d034ec8cd18"
+    },
+    {
+      "path": "sources/user-research/references/method.md",
+      "bytes": 1954,
+      "sha256": "597590d90e4f1e50713ce065235912e6343cd861649d7b64fed5756745451508"
+    },
+    {
+      "path": "sources/user-research/tests/fixtures/input.json",
+      "bytes": 1199,
+      "sha256": "acf8a72db039310e2f092507258891f1a98ac46d9a292d361ebf44842fe6fcf1"
+    },
+    {
+      "path": "user-research-report.md",
+      "bytes": 4726,
+      "sha256": "b94c738bb0c598bf7cfcfcc551a03b4c76f934e02efd279ef3cf9c454b54b188"
+    }
+  ],
+  "scope": "Selected source integrity and local artifacts only; no whole-repository or product execution claim."
+}

@@ -1,0 +1,53 @@
+{
+  "kind": "offline-fixture-checks-and-calculations; no product execution",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "comparison_command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "/private/tmp/research-app-methods-forward-2026-10-14/sources/competitor-monitoring/scripts/compare_snapshots.py",
+    "/private/tmp/research-app-methods-forward-2026-10-14/sources/competitor-monitoring/tests/fixtures/baseline.json",
+    "/private/tmp/research-app-methods-forward-2026-10-14/sources/competitor-monitoring/tests/fixtures/current.json"
+  ],
+  "comparison_exit": 1,
+  "competitor": {
+    "delta_usd_per_seat_month": "10",
+    "percentage_of_baseline": "34.48275862068965517241379310",
+    "fixture_current_is_future_dated_relative_to_task_date": true,
+    "retrieval_performed": false
+  },
+  "market": {
+    "currency": "USD",
+    "period": "annual",
+    "agency_annual_list_price": 1200,
+    "distinct_buying_units": 3500,
+    "solo_only": 2500,
+    "agency_only": 500,
+    "overlap": 500,
+    "nonoverlap_value": 3100000,
+    "naive_double_counted_sum": 4200000,
+    "conditional_full_participation_low": 3600000,
+    "conditional_full_participation_high": 3700000,
+    "naive_overstatement_low": 500000,
+    "naive_overstatement_high": 600000,
+    "overlap_assignment_sensitivity": "3,600,000 + 200*x USD/year; x is overlap units assigned agency price, 0 <= x <= 500",
+    "reach_adoption_wtp_validated": false
+  },
+  "research": {
+    "permitted_synthetic_records": 3,
+    "interview_said_records": 2,
+    "task_did_records": 1
+  },
+  "browser_fixture_consistency": {
+    "fixture_route_matches": false,
+    "fixture_has_state_assertions": false,
+    "fixture_fonts_ready": false,
+    "fixture_acknowledged_state_lost_after_restart": true,
+    "recovery_duration_measured": false,
+    "lost_record_count_measured": false
+  },
+  "unavailable": [
+    "app source/build/SDK/device/backend checks",
+    "browser runs/traces/recovery measurements",
+    "actual participant sessions",
+    "live market or competitor retrieval"
+  ]
+}

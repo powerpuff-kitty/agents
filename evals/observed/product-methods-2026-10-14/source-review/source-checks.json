@@ -1,0 +1,529 @@
+{
+  "json_parse": [
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/tests/cases.json",
+      "parsed": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/tests/fixtures/baseline.json",
+      "parsed": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/tests/fixtures/current.json",
+      "parsed": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/tests/fixtures/input.json",
+      "parsed": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/market-opportunity-research/tests/cases.json",
+      "parsed": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/market-opportunity-research/tests/fixtures/input.json",
+      "parsed": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/native-app-delivery/tests/cases.json",
+      "parsed": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/native-app-delivery/tests/fixtures/input.json",
+      "parsed": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/product-analytics/tests/cases.json",
+      "parsed": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/product-analytics/tests/fixtures/input.json",
+      "parsed": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/product-experimentation/tests/cases.json",
+      "parsed": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/product-experimentation/tests/fixtures/input.json",
+      "parsed": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/product-instrumentation/tests/cases.json",
+      "parsed": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/product-instrumentation/tests/fixtures/input.json",
+      "parsed": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/test-engineering/tests/cases.json",
+      "parsed": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/test-engineering/tests/fixtures/browser-recovery.json",
+      "parsed": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/user-research/tests/cases.json",
+      "parsed": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/user-research/tests/fixtures/input.json",
+      "parsed": true
+    }
+  ],
+  "relative_links": [
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "INSTALL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "INSTALL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "INSTALL.md#opencode-placement-and-verification",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "agentic-app/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "agentic-structure-audit/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "agentic-improvement/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "adapter-sync/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "migration/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "model-fit/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "systematic-debugging/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "native-app-delivery/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "test-engineering/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "change-review/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "ci-triage/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "repository-maintenance/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "code-quality/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "codebase-audit/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "component-resolution/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "api-design/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "database-design/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "dependency-upgrade/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "performance-audit/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "product-design/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "user-research/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "design-research/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "design-extraction/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "design-analysis/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "design-intelligence/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "identity-design/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "design-system/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "design-system-compliance/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "accessibility-audit/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "decision-intelligence/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "adr-management/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "implementation-plan/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "documentation/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "security-review/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "threat-model/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "incident-review/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "release-review/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "release/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "competitor-monitoring/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "market-opportunity-research/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "competitive-research/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "marketing/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "seo-audit/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "content-brief/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "copy-editing/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "content-repurposing/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "geo-measurement/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "product-instrumentation/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "product-analytics/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "product-experimentation/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "market-data-validation/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "financial-model-review/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "backtest-validation/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "onchain-data-analysis/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "smart-contract-review/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "defi-risk-analysis/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "odds-analysis/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "forecast-calibration/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "settlement-rule-review/SKILL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "INSTALL.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "INSTALL.md#updates-and-validation",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/README.md",
+      "target": "systematic-debugging/LICENSE",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/SKILL.md",
+      "target": "references/method.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/SKILL.md",
+      "target": "assets/report-template.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/references/method.md",
+      "target": "../scripts/compare_snapshots.py",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/references/method.md",
+      "target": "../tests/fixtures/baseline.json",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/references/method.md",
+      "target": "../tests/fixtures/current.json",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/market-opportunity-research/SKILL.md",
+      "target": "references/method.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/market-opportunity-research/SKILL.md",
+      "target": "assets/report-template.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/native-app-delivery/SKILL.md",
+      "target": "references/method.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/native-app-delivery/SKILL.md",
+      "target": "references/ios.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/native-app-delivery/SKILL.md",
+      "target": "references/android.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/native-app-delivery/SKILL.md",
+      "target": "assets/report-template.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/performance-audit/SKILL.md",
+      "target": "references/recovery-evidence.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/product-analytics/SKILL.md",
+      "target": "references/method.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/product-analytics/SKILL.md",
+      "target": "assets/report-template.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/product-design/SKILL.md",
+      "target": "references/design-intelligence.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/product-experimentation/SKILL.md",
+      "target": "references/method.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/product-experimentation/SKILL.md",
+      "target": "assets/report-template.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/product-instrumentation/SKILL.md",
+      "target": "references/method.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/product-instrumentation/SKILL.md",
+      "target": "assets/report-template.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/test-engineering/SKILL.md",
+      "target": "references/test-design.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/test-engineering/SKILL.md",
+      "target": "references/browser-recovery.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/test-engineering/SKILL.md",
+      "target": "references/fresh-review.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/test-engineering/references/browser-recovery.md",
+      "target": "../tests/fixtures/browser-recovery.json",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/user-research/SKILL.md",
+      "target": "references/method.md",
+      "exists": true
+    },
+    {
+      "file": "/Users/tcsntcsn/TCSN/skills/user-research/SKILL.md",
+      "target": "assets/report-template.md",
+      "exists": true
+    }
+  ],
+  "external_links": "not fetched; network out of scope"
+}

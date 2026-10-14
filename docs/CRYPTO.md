@@ -13,13 +13,13 @@ does not provide blockchain access, an audited contract or a wallet runtime.
 
 | Skill | Scope and resource |
 | --- | --- |
-| [onchain-data-analysis](https://github.com/powerpuff-kitty/skills/tree/main/onchain-data-analysis) | Chain/block/finality, event/state semantics, integer token units, coverage and attribution. |
-| [smart-contract-review](https://github.com/powerpuff-kitty/skills/tree/main/smart-contract-review) | EVM/Solidity source/control paths, accounting, signatures, upgrades and actual deployment-match evidence. Other contract languages need their own supported method. |
-| [defi-risk-analysis](https://github.com/powerpuff-kitty/skills/tree/main/defi-risk-analysis) | Mechanism-specific collateral/liquidation, AMM/LP, liquidity/oracle/governance/dependency scenarios. |
+| [onchain-data-analysis](https://github.com/powerpuff-kitty/ai-skills/tree/main/onchain-data-analysis) | Chain/block/finality, event/state semantics, integer token units, coverage and attribution. |
+| [smart-contract-review](https://github.com/powerpuff-kitty/ai-skills/tree/main/smart-contract-review) | EVM/Solidity source/control paths, accounting, signatures, upgrades and actual deployment-match evidence. Other contract languages need their own supported method. |
+| [defi-risk-analysis](https://github.com/powerpuff-kitty/ai-skills/tree/main/defi-risk-analysis) | Mechanism-specific collateral/liquidation, AMM/LP, liquidity/oracle/governance/dependency scenarios. |
 
 Each standalone skill includes a focused guide, report template and 6 unrun
 acceptance specifications. Install skills separately via the Skills [installation
-prompt](https://github.com/powerpuff-kitty/skills/blob/main/INSTALL.md). Missing
+prompt](https://github.com/powerpuff-kitty/ai-skills/blob/main/INSTALL.md). Missing
 skills permit bounded direct methods rather than automatic installation.
 
 ## Select the pack

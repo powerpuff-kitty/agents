@@ -1,0 +1,17 @@
+{
+  "checks": [
+    {
+      "command": "python3 measurement/replay.py",
+      "exit": 0,
+      "stdout_sha256": "ce0e216ace8561bd22a84c9e68e99ec0710d4485d4abc494edc03e993937b132",
+      "stderr": ""
+    },
+    {
+      "command": "python3 research-app/reproduce.py",
+      "exit": 0,
+      "stdout_sha256": "b68bdcaf73fc27202a9c1446c6da94740a8d94309632f103991f6376b6056b5f",
+      "stderr": ""
+    }
+  ],
+  "scope": "Root packaging checks in isolated copies; source copies and portable calculations only; no additional model/product executions."
+}

@@ -60,3 +60,13 @@ or access failures from failed product tests, and an old green run from evidence
 for the changed revision. Preserve intended gate semantics; changing account
 policy, repository visibility or workflow privileges requires the task's relevant
 authorization. Source defects go to the scoped writer before dependent rechecks.
+
+## Focused procedures
+
+For mobile work, use native-app-delivery when available to distinguish native
+build/device evidence, signing/packaging and actual beta/store processing. Missing
+SDKs, hardware or signing authority remain unchecked layers; preparing a checklist
+does not authorize account changes, credential inspection or distribution.
+
+If a procedure is absent, use the same evidence boundaries with native methods;
+do not install tools/instructions or widen task scope automatically.

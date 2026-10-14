@@ -1,0 +1,136 @@
+{
+  "kind": "independent retained-copy-only synthetic replay; not product execution",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "instrumentation": {
+    "raw_rows": 4,
+    "unique_event_ids": 3,
+    "duplicate_groups": {
+      "e1": [
+        0,
+        1
+      ]
+    },
+    "shape_valid_rows": 2,
+    "deduplicated_shape_valid_events": 1,
+    "rows": [
+      {
+        "fixture_index": 0,
+        "event_id": "e1",
+        "missing_property_names": [],
+        "extra_property_names": [],
+        "declared_shape_pass": true
+      },
+      {
+        "fixture_index": 1,
+        "event_id": "e1",
+        "missing_property_names": [],
+        "extra_property_names": [],
+        "declared_shape_pass": true
+      },
+      {
+        "fixture_index": 2,
+        "event_id": "e2",
+        "missing_property_names": [
+          "occurred_at"
+        ],
+        "extra_property_names": [],
+        "declared_shape_pass": false
+      },
+      {
+        "fixture_index": 3,
+        "event_id": "e3",
+        "missing_property_names": [],
+        "extra_property_names": [
+          "email"
+        ],
+        "declared_shape_pass": false
+      }
+    ],
+    "live_emission_transport_collection_verified": false
+  },
+  "analytics": {
+    "raw_rows": 8,
+    "deduplicated_events": 7,
+    "entrant_units": 4,
+    "mature_entrant_units": 3,
+    "immature_units": [
+      "D"
+    ],
+    "mature_conversion_numerator": 1,
+    "mature_conversion_denominator": 3,
+    "mature_conversion_rate": 0.3333333333333333,
+    "observed_all_entrant_rate": 0.25,
+    "orphan_conversion_units": [
+      "E"
+    ],
+    "ledger": [
+      {
+        "unit": "A",
+        "entry": "2026-10-01T00:00:00+00:00",
+        "mature": true,
+        "observed_followup_hours": 48,
+        "within_window_conversion": true,
+        "conversion_hours_after_entry": [
+          24.0
+        ]
+      },
+      {
+        "unit": "B",
+        "entry": "2026-10-01T00:00:00+00:00",
+        "mature": true,
+        "observed_followup_hours": 48,
+        "within_window_conversion": false,
+        "conversion_hours_after_entry": [
+          72.0
+        ]
+      },
+      {
+        "unit": "C",
+        "entry": "2026-10-01T00:00:00+00:00",
+        "mature": true,
+        "observed_followup_hours": 48,
+        "within_window_conversion": false,
+        "conversion_hours_after_entry": []
+      },
+      {
+        "unit": "D",
+        "entry": "2026-10-07T00:00:00+00:00",
+        "mature": false,
+        "observed_followup_hours": 24.0,
+        "within_window_conversion": false,
+        "conversion_hours_after_entry": []
+      }
+    ],
+    "window_boundary_convention": "entry <= conversion <= entry+48h; no boundary-sensitive events in fixture"
+  },
+  "experiment": {
+    "analysis_unit": "account",
+    "assigned_total": 2000,
+    "expected_assignment_counts": {
+      "control": 1000.0,
+      "treatment": 1000.0
+    },
+    "assignment_chi_square_df1": 20.0,
+    "assignment_chi_square_survival": 7.744216431044074e-06,
+    "two_sided_exact_binomial_srm_p": 8.457089535503927e-06,
+    "control_rate": 0.05,
+    "treatment_rate": 0.06,
+    "absolute_rate_difference": 0.01,
+    "absolute_percentage_point_difference": 1.0,
+    "relative_difference": 0.2,
+    "illustrative_unpooled_normal_difference_95_interval": [
+      -0.009992641907060238,
+      0.02999264190706024
+    ],
+    "interval_limit": "Exploratory iid-binomial normal approximation, not predeclared inference or valid causal evidence; SRM and measurement gaps unresolved.",
+    "missing": [
+      "exposure logs",
+      "assignment implementation",
+      "guardrails",
+      "actual declared outcome window",
+      "practical threshold",
+      "planned inferential method"
+    ],
+    "rollout_authorized": false
+  }
+}

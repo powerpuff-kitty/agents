@@ -1,0 +1,63 @@
+{
+  "raw_rows": 4,
+  "distinct_event_ids": 3,
+  "schema_pass_rows": 2,
+  "schema_rejected_rows": 2,
+  "duplicate_rows": 1,
+  "accepted_unique_rows": 1,
+  "rows": [
+    {
+      "row": 1,
+      "event_id": "e1",
+      "missing_fields": [],
+      "unexpected_field_names": [],
+      "issues": [],
+      "schema_accept": true,
+      "duplicate_of_previous": false,
+      "conflicting_duplicate": false,
+      "accepted_under_local_strict_policy": true
+    },
+    {
+      "row": 2,
+      "event_id": "e1",
+      "missing_fields": [],
+      "unexpected_field_names": [],
+      "issues": [],
+      "schema_accept": true,
+      "duplicate_of_previous": true,
+      "conflicting_duplicate": false,
+      "accepted_under_local_strict_policy": false
+    },
+    {
+      "row": 3,
+      "event_id": "e2",
+      "missing_fields": [
+        "occurred_at"
+      ],
+      "unexpected_field_names": [],
+      "issues": [
+        "missing_required"
+      ],
+      "schema_accept": false,
+      "duplicate_of_previous": false,
+      "conflicting_duplicate": false,
+      "accepted_under_local_strict_policy": false
+    },
+    {
+      "row": 4,
+      "event_id": "e3",
+      "missing_fields": [],
+      "unexpected_field_names": [
+        "email"
+      ],
+      "issues": [
+        "unexpected_field"
+      ],
+      "schema_accept": false,
+      "duplicate_of_previous": false,
+      "conflicting_duplicate": false,
+      "accepted_under_local_strict_policy": false
+    }
+  ],
+  "policy": "Reject missing/disallowed fields; keep first exact event_id once within this fixture. Local batch policy only; no deployed retention/deduplication window claimed."
+}

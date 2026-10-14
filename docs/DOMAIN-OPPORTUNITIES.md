@@ -7,38 +7,14 @@ The candidates below are unimplemented; they are not market-demand measurements.
 Design reference extraction is now covered by [design-analyst](DESIGN-EXTRACTION.md)
 and the design-extraction skill. Capability depth still depends on available tools.
 
-## Next procedure gaps
+## Implemented product methods
 
-Assessed 2026-10-14 against current skill/role instructions. Priority reflects
-missing repeatable methods and evidence, not quantified market demand. Start with
-the work the user actually needs; native work can wait when no native app is planned.
-
-| Priority / area | Proposed procedure | Existing owner | First meaningful fixture |
-| --- | --- | --- | --- |
-| 1 / apps | Native iOS/Android implementation, lifecycle, offline state, permissions, deep links and device/distribution verification | feature-developer; quality, accessibility and release reviewers | Interrupted offline flow and state restoration, with simulator versus device evidence |
-| 1 / analytics | Tracking plans, event/property contracts, identity/deduplication and payload QA; reproducible funnels/cohorts | data-analyst defines measurement; feature-developer implements; quality-engineer verifies | Duplicate events, anonymous-to-known identity, missing properties and incorrect conversion denominators |
-| 1 / competition watch | Approved watchlist, dated baseline, normalized material diff, freshness and repeat-run handoff | researcher, with evidence-validator and product/marketing interpretation | Real price/feature change, cosmetic churn and an unavailable page that does not prove removal |
-| 2 / discovery | Participant-study planning, recruitment/consent, interviews, coding and synthesis artifacts | user-researcher | Contradictory synthetic transcripts with negative evidence; no invented participants |
-| 2 / experiments | Assignment/exposure units, primary metrics, guardrails, stopping policy and trustworthy readout | scientist and data-analyst | Apparently positive result invalidated by assignment or exposure defects |
-| 2 / market research | Segment/demand validation, buyer versus user, willingness-to-pay evidence and bottom-up market ranges | researcher; product, marketing and GTM interpret | Incompatible definitions and overlapping segments that cannot be summed |
-| 2 / web and engineering | Deeper browser/visual regression and reliability evidence under existing test/performance/release procedures | quality-engineer, performance-engineer, feature-developer | Viewport/theme/locale/state changes, flaky visual baselines and a recovery scenario |
-
-Existing web implementation, API/data design, debugging, testing, security, release,
-design and research owners already cover the broad responsibility labels. These
-are procedure/evidence gaps, not a reason to duplicate generic frontend, backend,
-UI/UX, analyst or research profiles. Competitor monitoring can start as a repeat-run
-reference under competitive-research; create a separate skill if its workflow grows.
-A cadence needs a real authorized scheduler; these profiles do not supply one.
-Analytics recommendations do not authorize tracking in a project that excludes it.
-
-Primary method references: [Android app quality](https://developer.android.com/develop/adaptive-apps/quality-guidelines/core-app-quality),
-[Apple distribution](https://developer.apple.com/documentation/xcode/distributing-your-app-for-beta-testing-and-releases/),
-[Amplitude tracking plans](https://amplitude.com/docs/data/data-planning-playbook),
-[GitHub release sources](https://docs.github.com/en/rest/releases/releases),
-[GOV.UK research planning](https://www.gov.uk/service-manual/user-research/plan-user-research-for-your-service),
-[Microsoft experiment assignment checks](https://www.microsoft.com/en-us/research/publication/diagnosing-sample-ratio-mismatch-in-online-controlled-experiments-a-taxonomy-and-rules-of-thumb-for-practitioners/)
-and [Playwright visual comparisons](https://playwright.dev/docs/test-snapshots).
-These establish concrete methods, not demand, adoption or verified expertise.
+The 2026-10-14 procedure assessment is implemented in 7 focused skills plus
+extensions to testing and performance methods. [Product methods](PRODUCT-METHODS.md)
+maps them to existing owners and defines their evidence limits. Browser/device,
+participant, production analytics and scheduled-watch execution still require the
+actual project, tools, data and authorization. The offline fixtures establish
+bounded method behavior, not production coverage or quantified market demand.
 
 ## Other domain candidates
 

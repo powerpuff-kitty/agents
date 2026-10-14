@@ -1,0 +1,9 @@
+# Review request (verbatim)
+
+Please retain your original task brief verbatim as task.md in your output folder if available (do not reconstruct missing details silently). Then independently review the separate /private/tmp/measurement-methods-forward-2026-10-14 outputs using retained inputs, reports and calculations. You did not author those 3 outputs; no authoring scripts/expected answers. Write review request, reviewed hashes, independent calculations, findings and execution limits in /private/tmp/measurement-methods-output-review-2026-10-14. Read-only inputs/repos, offline synthetic scope. The original calculate.py checks current mutable role sources, so if they changed, use a separate copy-only replay and disclose it instead of rewriting originals.
+
+# Review method and context limits
+
+Reviewer: delegated task `research_app_methods_forward`, originally author of a different five-exercise artifact set, not the three measurement outputs. This is an independently executed cross-output review. The host's prior-context isolation metadata was not inspected and a clean history-free session is not claimed. The request identifies no desired conclusion. Only retained public instructions, input fixtures, reports, calculation outputs and provenance records are eligible review evidence; no cases/expected-answer files or authoring scripts are opened. `calculate.py` is neither read nor executed. The independent replay will use retained fixture copies only and will write into this review directory. Live current source files may be hashed solely to identify drift, without treating their content as the reviewed instruction snapshot.
+
+The original five-exercise brief was available in this session and is now retained verbatim at `/private/tmp/research-app-methods-forward-2026-10-14/task.md`; no missing brief text was reconstructed. All measurement sources/reports remain read-only.

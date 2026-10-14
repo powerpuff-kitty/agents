@@ -15,13 +15,13 @@ records belong to onchain-analyst when that optional pack is available.
 
 | Skill | Scope and resource |
 | --- | --- |
-| [odds-analysis](https://github.com/powerpuff-kitty/skills/tree/main/odds-analysis) | Quote formats, complete-market overround, named margin assumptions and conditional fee-adjusted payoffs. |
-| [forecast-calibration](https://github.com/powerpuff-kitty/skills/tree/main/forecast-calibration) | Recorded probabilities/labels, proper scores, calibration counts, dependence and fit/evaluation separation. |
-| [settlement-rule-review](https://github.com/powerpuff-kitty/skills/tree/main/settlement-rule-review) | Exact event definitions, rule/source versions, time boundaries, void/refund and proposal/dispute/final status. |
+| [odds-analysis](https://github.com/powerpuff-kitty/ai-skills/tree/main/odds-analysis) | Quote formats, complete-market overround, named margin assumptions and conditional fee-adjusted payoffs. |
+| [forecast-calibration](https://github.com/powerpuff-kitty/ai-skills/tree/main/forecast-calibration) | Recorded probabilities/labels, proper scores, calibration counts, dependence and fit/evaluation separation. |
+| [settlement-rule-review](https://github.com/powerpuff-kitty/ai-skills/tree/main/settlement-rule-review) | Exact event definitions, rule/source versions, time boundaries, void/refund and proposal/dispute/final status. |
 
 Each includes a focused reference, worked examples, a report template and 6
 unrun acceptance cases. Skills are installed separately with their [installation
-prompt](https://github.com/powerpuff-kitty/skills/blob/main/INSTALL.md); missing
+prompt](https://github.com/powerpuff-kitty/ai-skills/blob/main/INSTALL.md); missing
 skills permit bounded direct work and explicit limits.
 
 ## Select the pack

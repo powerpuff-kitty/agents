@@ -14,7 +14,7 @@
       "assignments": [
         {
           "agent": "researcher",
-          "task": "Gather cited current sources and compare options against the project decision criteria. Return an evidence packet for later validation.",
+          "task": "Gather cited current sources and compare options against the project decision criteria. Return an evidence packet for later validation. Use competitor-monitoring for repeat runs and market-opportunity-research for buyer/demand/sizing when available.",
           "when": "The task needs external research, current or niche facts, a technology/product/market comparison, or source discovery."
         },
         {
@@ -64,7 +64,7 @@
         },
         {
           "agent": "scientist",
-          "task": "Design/review the empirical method, hypotheses, controls, uncertainty, and requested execution boundary; do not run unrequested experiments.",
+          "task": "Design/review the empirical method, hypotheses, controls, uncertainty, and requested execution boundary; do not run unrequested experiments. Use product-experimentation for controlled product design/readout with assignment/exposure validity.",
           "when": "The task asks for experiments, empirical evaluation, or causal interpretation."
         },
         {
@@ -74,7 +74,7 @@
         },
         {
           "agent": "data-analyst",
-          "task": "Analyze approved data with explicit grain, metrics, denominators, provenance, and uncertainty; return results without mutating datasets.",
+          "task": "Analyze approved data with explicit grain, metrics, denominators, provenance, and uncertainty; return results without mutating datasets. Use product-instrumentation/product-analytics for permitted event QA and compatible mature-cohort readouts.",
           "when": "The task asks about datasets, behavior metrics, funnels, cohorts, or quantitative interpretation."
         },
         {

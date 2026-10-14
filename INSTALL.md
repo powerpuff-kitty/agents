@@ -9,7 +9,7 @@ See [role-to-skill guidance](docs/SKILLS.md) for the independent procedure sourc
 Give this prompt to an agent with local filesystem, Git and Python access:
 
 ```text
-Install the agents from https://github.com/powerpuff-kitty/agents at source revision
+Install the agents from https://github.com/powerpuff-kitty/ai-agents at source revision
 ac619f141b579d55839dd9952e016f4fd6f902fe for OpenCode on this machine,
 using the effective global agent and command locations.
 

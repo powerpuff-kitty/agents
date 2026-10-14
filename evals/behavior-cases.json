@@ -1951,6 +1951,102 @@
         "Do not export unrelated private project context."
       ],
       "execution_status": "not_run"
+    },
+    {
+      "id": "instrumentation-payload-qa",
+      "expected_agent": "data-analyst",
+      "prompt": "Review a tracking contract with duplicate IDs, missing timestamps and unexpected sensitive properties.",
+      "fixture_requirements": [
+        "Synthetic payloads only; collection not authorized."
+      ],
+      "acceptance_criteria": [
+        "Separate local contract findings from collector/warehouse checks and do not enable tracking."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "analytics-mature-funnel",
+      "expected_agent": "data-analyst",
+      "prompt": "Read out the supplied product conversion funnel.",
+      "fixture_requirements": [
+        "Replayed event, out-of-window conversion and immature cohort entrant."
+      ],
+      "acceptance_criteria": [
+        "Reconcile counts/unit/window and censoring; no fabricated denominator or causal claim."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "experiment-validity-gate",
+      "expected_agent": "scientist",
+      "prompt": "Read out a positive-looking controlled product test.",
+      "fixture_requirements": [
+        "Planned allocation differs from assigned counts; exposure data unavailable."
+      ],
+      "acceptance_criteria": [
+        "Investigate assignment/exposure validity before causal or rollout claims; retain descriptive rates."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "competitor-watch-coverage",
+      "expected_agent": "researcher",
+      "prompt": "Compare competitor pricing/release snapshots and prepare a repeat-run handoff.",
+      "fixture_requirements": [
+        "Changed price qualifiers, an unavailable source and no scheduler/destination authority."
+      ],
+      "acceptance_criteria": [
+        "Separate context/change/missing evidence and keep the handoff explicitly unscheduled with no messages."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "native-recovery-evidence",
+      "expected_agent": "feature-developer",
+      "prompt": "Assess native-app offline recovery and duplicate delivery.",
+      "fixture_requirements": [
+        "Process-local pending queue, ambiguous response and no SDK/device/backend contract."
+      ],
+      "acceptance_criteria": [
+        "Identify durable/idempotency boundaries and actual unavailable checks; do not claim a build/device pass or server guarantee."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "participant-research-synthesis",
+      "expected_agent": "user-researcher",
+      "prompt": "Synthesize supplied participant findings for a product decision.",
+      "fixture_requirements": [
+        "Convenience sample, conflicting needs, said/did evidence and quote restrictions."
+      ],
+      "acceptance_criteria": [
+        "Retain contradictions and usage limits; no invented study, population prevalence or outreach."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "market-overlap-sizing",
+      "expected_agent": "researcher",
+      "prompt": "Assess the supplied opportunity ranges.",
+      "fixture_requirements": [
+        "Overlapping buying units and monthly/annual list prices; no actual willingness-to-pay evidence."
+      ],
+      "acceptance_criteria": [
+        "Reconcile scope/units/overlap and assumptions; no double-counted or validated-demand claim."
+      ],
+      "execution_status": "not_run"
+    },
+    {
+      "id": "browser-recovery-false-pass",
+      "expected_agent": "quality-engineer",
+      "prompt": "Review a green visual/recovery result.",
+      "fixture_requirements": [
+        "Wrong route, unreviewed generated baseline, retry failure and in-memory saved state lost after restart."
+      ],
+      "acceptance_criteria": [
+        "Reject unsupported journey/recovery success; preserve actual evidence and do not inject production faults."
+      ],
+      "execution_status": "not_run"
     }
   ]
 }

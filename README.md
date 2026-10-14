@@ -1,6 +1,6 @@
 # Agents
 
-[![CI](https://github.com/powerpuff-kitty/agents/actions/workflows/validate.yml/badge.svg?branch=main&event=push)](https://github.com/powerpuff-kitty/agents/actions/workflows/validate.yml)
+[![CI](https://github.com/powerpuff-kitty/ai-agents/actions/workflows/validate.yml/badge.svg?branch=main&event=push)](https://github.com/powerpuff-kitty/ai-agents/actions/workflows/validate.yml)
 [![Profiles: 35](https://img.shields.io/badge/profiles-35-blue)](docs/CATALOG.md)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
@@ -14,8 +14,8 @@ Use the [copyable installation prompt](INSTALL.md), or clone the repo and previe
 a selection with Python 3.10+; no additional Python packages are required:
 
 ```sh
-git clone https://github.com/powerpuff-kitty/agents.git
-cd agents
+git clone https://github.com/powerpuff-kitty/ai-agents.git
+cd ai-agents
 python3 scripts/install.py --pack core --dry-run
 python3 scripts/install.py --pack core
 ```
@@ -43,9 +43,11 @@ from existing interfaces. Profiles use the host's available model, tools, contex
 they do not supply a runtime, sandbox or automatic scheduler. Team definitions
 request delegation within the actual task scope.
 
-Reusable procedures live in [Skills](https://github.com/powerpuff-kitty/skills).
+Reusable procedures live in [Skills](https://github.com/powerpuff-kitty/ai-skills).
 [Role-to-skill guidance](docs/SKILLS.md) explains optional domains and installation;
 installing profiles does not install skills or change their permissions.
+[Product methods](docs/PRODUCT-METHODS.md) covers analytics, experiments, competitor
+watching, native apps, participant research and market sizing under existing roles.
 
 ## Source layout
 

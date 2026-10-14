@@ -1,0 +1,92 @@
+[
+  {
+    "source": "/Users/tcsntcsn/TCSN/skills/product-instrumentation/SKILL.md",
+    "copy": "sources/skills/product-instrumentation/SKILL.md",
+    "sha256": "71ce250ab2a63cae82c4ac10c9fefb79f6c9947fe8b5c7700b2c08a33c7b5b19",
+    "bytes": 2915
+  },
+  {
+    "source": "/Users/tcsntcsn/TCSN/skills/product-instrumentation/references/method.md",
+    "copy": "sources/skills/product-instrumentation/references/method.md",
+    "sha256": "670eba49e8e38332cfca13c6d3e8e8e80614c29c66940ef2769646800eeeed6e",
+    "bytes": 2445
+  },
+  {
+    "source": "/Users/tcsntcsn/TCSN/skills/product-instrumentation/assets/report-template.md",
+    "copy": "sources/skills/product-instrumentation/assets/report-template.md",
+    "sha256": "a4c6b9df22a485cff68687735e2bdc0b7befbbba4c6df0626d7d13a1dc171f20",
+    "bytes": 659
+  },
+  {
+    "source": "/Users/tcsntcsn/TCSN/skills/product-instrumentation/tests/fixtures/input.json",
+    "copy": "sources/skills/product-instrumentation/tests/fixtures/input.json",
+    "sha256": "24dd4346448ca41cce52f0325c0e7e38d499db4688e6d770b05a663a7292d4d5",
+    "bytes": 1113
+  },
+  {
+    "source": "/Users/tcsntcsn/TCSN/skills/product-analytics/SKILL.md",
+    "copy": "sources/skills/product-analytics/SKILL.md",
+    "sha256": "c79a5e135073bad4cd5e1715df89efb1e824a429848ca02563fe2f871d35bc25",
+    "bytes": 2595
+  },
+  {
+    "source": "/Users/tcsntcsn/TCSN/skills/product-analytics/references/method.md",
+    "copy": "sources/skills/product-analytics/references/method.md",
+    "sha256": "fe26e4f5c685a2dc86914ad7e4b3fb7a4fde27e3db41349c740d792ff5f08abb",
+    "bytes": 2034
+  },
+  {
+    "source": "/Users/tcsntcsn/TCSN/skills/product-analytics/assets/report-template.md",
+    "copy": "sources/skills/product-analytics/assets/report-template.md",
+    "sha256": "bcf1d5c3f1446fd2030c3bcb13fb1689873bb69d475354fd01732f5945a61ea5",
+    "bytes": 611
+  },
+  {
+    "source": "/Users/tcsntcsn/TCSN/skills/product-analytics/tests/fixtures/input.json",
+    "copy": "sources/skills/product-analytics/tests/fixtures/input.json",
+    "sha256": "68e4ef9bdc83ba1ced1ea7f6477482d709699bcea4eedc1fffef88a501f19975",
+    "bytes": 1325
+  },
+  {
+    "source": "/Users/tcsntcsn/TCSN/skills/product-experimentation/SKILL.md",
+    "copy": "sources/skills/product-experimentation/SKILL.md",
+    "sha256": "652c24ca5909207664a4c7b2895250c3fdaa0c5bf2ac2349ff95f6c8c7da7a21",
+    "bytes": 2876
+  },
+  {
+    "source": "/Users/tcsntcsn/TCSN/skills/product-experimentation/references/method.md",
+    "copy": "sources/skills/product-experimentation/references/method.md",
+    "sha256": "40e241c57fc3abfee92b9f4f5f89f9ebaf0d1d2c980be4a8a201b53d3d29ec37",
+    "bytes": 2263
+  },
+  {
+    "source": "/Users/tcsntcsn/TCSN/skills/product-experimentation/assets/report-template.md",
+    "copy": "sources/skills/product-experimentation/assets/report-template.md",
+    "sha256": "938c3f2da792d6f3f1a38ed1ea3cc9f74051cfbfe52a473a54adb64824cd2cb6",
+    "bytes": 709
+  },
+  {
+    "source": "/Users/tcsntcsn/TCSN/skills/product-experimentation/tests/fixtures/input.json",
+    "copy": "sources/skills/product-experimentation/tests/fixtures/input.json",
+    "sha256": "8c216a5586b1708e016acdad8e503439a6c00704fa1456ed39a38f30b17e2031",
+    "bytes": 593
+  },
+  {
+    "source": "/Users/tcsntcsn/TCSN/agents/agents/data-analyst/instructions.md",
+    "copy": "sources/roles/agents/data-analyst/instructions.md",
+    "sha256": "97414053f4202548be346c7d5c51082b716b8300f98f41bc8f856b3b4191a9c6",
+    "bytes": 2416
+  },
+  {
+    "source": "/Users/tcsntcsn/TCSN/agents/agents/scientist/instructions.md",
+    "copy": "sources/roles/agents/scientist/instructions.md",
+    "sha256": "9efcb668ee6cf2d296492e69df1f1e9e13d3f508729854ff6e401012d5b845af",
+    "bytes": 2592
+  },
+  {
+    "source": "/Users/tcsntcsn/TCSN/agents/shared/operating-contract.md",
+    "copy": "sources/roles/shared/operating-contract.md",
+    "sha256": "25c88a8a48a9f2081348417f0ffed7df4731dc99f34ba84f42104512df397a72",
+    "bytes": 2674
+  }
+]

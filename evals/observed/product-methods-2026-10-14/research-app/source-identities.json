@@ -1,0 +1,206 @@
+{
+  "captured_utc": "2026-10-14T17:45:47.845027+00:00",
+  "scope": "Explicitly selected public skill instructions, helper and synthetic fixtures only; repositories are read-only.",
+  "files": [
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/SKILL.md",
+      "source_sha256": "e32f07b7aa82164f607922def2d07e257f95f5c2f469e3136f4a9471dc1c2c55",
+      "source_bytes": 2925,
+      "copy_path": "sources/competitor-monitoring/SKILL.md",
+      "copy_sha256": "e32f07b7aa82164f607922def2d07e257f95f5c2f469e3136f4a9471dc1c2c55",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/references/method.md",
+      "source_sha256": "20fb3e7e98177a87e1a86dcc9ab0e1300e7e5febfa6b7e09e20147030baec71d",
+      "source_bytes": 2963,
+      "copy_path": "sources/competitor-monitoring/references/method.md",
+      "copy_sha256": "20fb3e7e98177a87e1a86dcc9ab0e1300e7e5febfa6b7e09e20147030baec71d",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/assets/report-template.md",
+      "source_sha256": "cf8d62493a716994834ed0820162c2f7de3ddc18822f02b3e5fbde78839c2fea",
+      "source_bytes": 648,
+      "copy_path": "sources/competitor-monitoring/assets/report-template.md",
+      "copy_sha256": "cf8d62493a716994834ed0820162c2f7de3ddc18822f02b3e5fbde78839c2fea",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/native-app-delivery/SKILL.md",
+      "source_sha256": "150907b0b946522bd518edef072883bacfc3a4bdb6fed4f75eb97dacac343946",
+      "source_bytes": 3219,
+      "copy_path": "sources/native-app-delivery/SKILL.md",
+      "copy_sha256": "150907b0b946522bd518edef072883bacfc3a4bdb6fed4f75eb97dacac343946",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/native-app-delivery/references/method.md",
+      "source_sha256": "8b41573a17e23c65f80c18009edfaf278b635d4a0347b68bd8b0e0e451430d50",
+      "source_bytes": 1791,
+      "copy_path": "sources/native-app-delivery/references/method.md",
+      "copy_sha256": "8b41573a17e23c65f80c18009edfaf278b635d4a0347b68bd8b0e0e451430d50",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/native-app-delivery/assets/report-template.md",
+      "source_sha256": "dc67d7c0ed83e9759460af666bbda34b02d0ccdb5af3e0f4025992a5ba2837cb",
+      "source_bytes": 613,
+      "copy_path": "sources/native-app-delivery/assets/report-template.md",
+      "copy_sha256": "dc67d7c0ed83e9759460af666bbda34b02d0ccdb5af3e0f4025992a5ba2837cb",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/user-research/SKILL.md",
+      "source_sha256": "554f431d3a3f8de30df305ce69fca1a12b09f85585f05b8f9776eaa5602cab3a",
+      "source_bytes": 2788,
+      "copy_path": "sources/user-research/SKILL.md",
+      "copy_sha256": "554f431d3a3f8de30df305ce69fca1a12b09f85585f05b8f9776eaa5602cab3a",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/user-research/references/method.md",
+      "source_sha256": "597590d90e4f1e50713ce065235912e6343cd861649d7b64fed5756745451508",
+      "source_bytes": 1954,
+      "copy_path": "sources/user-research/references/method.md",
+      "copy_sha256": "597590d90e4f1e50713ce065235912e6343cd861649d7b64fed5756745451508",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/user-research/assets/report-template.md",
+      "source_sha256": "deb76978191fb1e6e9419c155c9b18599236d0a17d36e905710e7d034ec8cd18",
+      "source_bytes": 544,
+      "copy_path": "sources/user-research/assets/report-template.md",
+      "copy_sha256": "deb76978191fb1e6e9419c155c9b18599236d0a17d36e905710e7d034ec8cd18",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/market-opportunity-research/SKILL.md",
+      "source_sha256": "92f6544f606ecf7082cc659a458688faaec565eedef8f53031965fc3e4f4d70d",
+      "source_bytes": 2993,
+      "copy_path": "sources/market-opportunity-research/SKILL.md",
+      "copy_sha256": "92f6544f606ecf7082cc659a458688faaec565eedef8f53031965fc3e4f4d70d",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/market-opportunity-research/references/method.md",
+      "source_sha256": "74062fdcd235b908d1968cf3de8b50d9f65e769cc97c5aab5e874342e79b53bc",
+      "source_bytes": 2003,
+      "copy_path": "sources/market-opportunity-research/references/method.md",
+      "copy_sha256": "74062fdcd235b908d1968cf3de8b50d9f65e769cc97c5aab5e874342e79b53bc",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/market-opportunity-research/assets/report-template.md",
+      "source_sha256": "07c228c0cb25c0eeb3d94d0eb369adc654dd272e863f2aec95667af77acd22f0",
+      "source_bytes": 632,
+      "copy_path": "sources/market-opportunity-research/assets/report-template.md",
+      "copy_sha256": "07c228c0cb25c0eeb3d94d0eb369adc654dd272e863f2aec95667af77acd22f0",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/native-app-delivery/references/ios.md",
+      "source_sha256": "fd0d970f6484d28986068bb580353af9a9fbe369f27767bad59758eb60f77c6f",
+      "source_bytes": 1410,
+      "copy_path": "sources/native-app-delivery/references/ios.md",
+      "copy_sha256": "fd0d970f6484d28986068bb580353af9a9fbe369f27767bad59758eb60f77c6f",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/native-app-delivery/references/android.md",
+      "source_sha256": "2a9b03bdc81721344200c99bfad84ec6d6a1c37e28914177ab00333509203d8e",
+      "source_bytes": 1442,
+      "copy_path": "sources/native-app-delivery/references/android.md",
+      "copy_sha256": "2a9b03bdc81721344200c99bfad84ec6d6a1c37e28914177ab00333509203d8e",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/test-engineering/SKILL.md",
+      "source_sha256": "cf79fe8b70df0c8af1e9750709f8d85373c5c0c3982c4da28f9c46751a37330f",
+      "source_bytes": 4313,
+      "copy_path": "sources/test-engineering/SKILL.md",
+      "copy_sha256": "cf79fe8b70df0c8af1e9750709f8d85373c5c0c3982c4da28f9c46751a37330f",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/test-engineering/references/browser-recovery.md",
+      "source_sha256": "6bd9a500fbe4d38f6e168c5a34f007a76f95c486b56ec147f1bdfbba3d61444a",
+      "source_bytes": 2925,
+      "copy_path": "sources/test-engineering/references/browser-recovery.md",
+      "copy_sha256": "6bd9a500fbe4d38f6e168c5a34f007a76f95c486b56ec147f1bdfbba3d61444a",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/test-engineering/references/test-design.md",
+      "source_sha256": "504ed4d0823764ca4c9e4a101dfd6c5a3ad80eee38e3a02cef1fa9c1edac171e",
+      "source_bytes": 1712,
+      "copy_path": "sources/test-engineering/references/test-design.md",
+      "copy_sha256": "504ed4d0823764ca4c9e4a101dfd6c5a3ad80eee38e3a02cef1fa9c1edac171e",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/test-engineering/references/fresh-review.md",
+      "source_sha256": "ad9978761b85507520d85a7358280d367b591c16969029ab9fb73a2350b3c94e",
+      "source_bytes": 3193,
+      "copy_path": "sources/test-engineering/references/fresh-review.md",
+      "copy_sha256": "ad9978761b85507520d85a7358280d367b591c16969029ab9fb73a2350b3c94e",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/scripts/compare_snapshots.py",
+      "source_sha256": "c3bd17da3feb281b409219edf696af6cc923461cc372d02414cd26caf111dfb0",
+      "source_bytes": 6832,
+      "copy_path": "sources/competitor-monitoring/scripts/compare_snapshots.py",
+      "copy_sha256": "c3bd17da3feb281b409219edf696af6cc923461cc372d02414cd26caf111dfb0",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/tests/fixtures/baseline.json",
+      "source_sha256": "3be3dc6f17da07dd1c25f398155fc4d04da718e653ec29e82be961238a9998fa",
+      "source_bytes": 994,
+      "copy_path": "sources/competitor-monitoring/tests/fixtures/baseline.json",
+      "copy_sha256": "3be3dc6f17da07dd1c25f398155fc4d04da718e653ec29e82be961238a9998fa",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/tests/fixtures/current.json",
+      "source_sha256": "17afa13c4bdd8922ced9fd39253d045661d58bcc8f531f148b53b21425006919",
+      "source_bytes": 837,
+      "copy_path": "sources/competitor-monitoring/tests/fixtures/current.json",
+      "copy_sha256": "17afa13c4bdd8922ced9fd39253d045661d58bcc8f531f148b53b21425006919",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/native-app-delivery/tests/fixtures/input.json",
+      "source_sha256": "715fadde536835cbe77177bbe237b93f03aa9157feed41792e8c089917b9dd25",
+      "source_bytes": 747,
+      "copy_path": "sources/native-app-delivery/tests/fixtures/input.json",
+      "copy_sha256": "715fadde536835cbe77177bbe237b93f03aa9157feed41792e8c089917b9dd25",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/user-research/tests/fixtures/input.json",
+      "source_sha256": "71b16b7249e845171674167ad8459a552efe7f3b05deef24a9fe5e6a255a952d",
+      "source_bytes": 1008,
+      "copy_path": "sources/user-research/tests/fixtures/input.json",
+      "copy_sha256": "acf8a72db039310e2f092507258891f1a98ac46d9a292d361ebf44842fe6fcf1",
+      "transformation": "P02 note paraphrased to honor quote_allowed=false; all other records preserved semantically; JSON reformatted"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/market-opportunity-research/tests/fixtures/input.json",
+      "source_sha256": "9575cd16953a5d1a4077f7c0a426c0d184cc8b6e9acdb0a07e6817480215db85",
+      "source_bytes": 749,
+      "copy_path": "sources/market-opportunity-research/tests/fixtures/input.json",
+      "copy_sha256": "9575cd16953a5d1a4077f7c0a426c0d184cc8b6e9acdb0a07e6817480215db85",
+      "transformation": "exact byte copy"
+    },
+    {
+      "source_path": "/Users/tcsntcsn/TCSN/skills/test-engineering/tests/fixtures/browser-recovery.json",
+      "source_sha256": "655eb9a8bf279f9e8e95e778b785fbac6fe114fe4553f3f8b14cccf2fe5cbd1b",
+      "source_bytes": 690,
+      "copy_path": "sources/test-engineering/tests/fixtures/browser-recovery.json",
+      "copy_sha256": "655eb9a8bf279f9e8e95e778b785fbac6fe114fe4553f3f8b14cccf2fe5cbd1b",
+      "transformation": "exact byte copy"
+    }
+  ]
+}

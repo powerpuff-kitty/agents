@@ -4,9 +4,9 @@ An agent owns responsibility, handoffs and completion. A skill supplies a focuse
 task procedure. Profiles work with available native methods when a skill is absent;
 installation of one collection never installs the other or grants permissions.
 
-[Skills](https://github.com/powerpuff-kitty/skills) keeps self-contained folders at
+[Skills](https://github.com/powerpuff-kitty/ai-skills) keeps self-contained folders at
 its root. Each includes SKILL.md, a license and local resources. Its
-[installation guide](https://github.com/powerpuff-kitty/skills/blob/main/INSTALL.md)
+[installation guide](https://github.com/powerpuff-kitty/ai-skills/blob/main/INSTALL.md)
 owns native discovery paths and the optional CLI lifecycle. `ah skills list`
 reports the embedded revision and domain membership; source folder layout stays flat.
 
@@ -14,12 +14,13 @@ reports the embedded revision and domain membership; source folder layout stays 
 
 | Agent pack/role | Suggested skill domains | Useful individual procedures |
 | --- | --- | --- |
-| core / feature-developer | engineering, delivery | implementation-plan, test-engineering, change-review |
+| core / feature-developer | engineering, delivery | implementation-plan, native-app-delivery, test-engineering, change-review |
 | core / design-analyst, designer and UX | product-design | design-extraction, design-analysis, design-system, product-design, accessibility-audit |
 | core / security-auditor | security | security-review, threat-model |
 | core / project-auditor | agent-setup, delivery | agentic-structure-audit, repository-maintenance |
-| science-data | agent-setup, forecasting where relevant | decision-intelligence, forecast-calibration |
-| product-growth | content-growth | content-brief, copy-editing, content-repurposing, seo-audit, geo-measurement |
+| science-data | analytics, agent-setup, forecasting where relevant | product-instrumentation, product-analytics, product-experimentation, decision-intelligence, forecast-calibration |
+| product-growth | analytics, content-growth | product-experimentation, product-analytics, competitor-monitoring, market-opportunity-research, content-brief, geo-measurement |
+| researcher / user-researcher | content-growth / product-design | competitor-monitoring, market-opportunity-research / user-research |
 | finance | finance | market-data-validation, financial-model-review, backtest-validation |
 | crypto | crypto | onchain-data-analysis, smart-contract-review, defi-risk-analysis |
 | forecasting | forecasting | odds-analysis, forecast-calibration, settlement-rule-review |

@@ -85,7 +85,7 @@ def apply_target(tool, plan):
             raise ValueError(f"Output changed during installation: {name}; original backup: {backup}")
         mode = path.stat().st_mode & 0o777 if path.exists() else 0o644
         atomic_write(path, desired[name], mode)
-    updated = {"schema_version": 1, "tool": tool, "repository": "powerpuff-kitty/agents",
+    updated = {"schema_version": 1, "tool": tool, "repository": "powerpuff-kitty/ai-agents",
                "files": {**plan["managed"], **{name: digest(content) for name, content in desired.items()}}}
     state_bytes = (json.dumps(updated, indent=2, sort_keys=True) + "\n").encode()
     if not state_path.exists() or state_path.read_bytes() != state_bytes:

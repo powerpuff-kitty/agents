@@ -1,0 +1,89 @@
+[
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "competitor-monitoring/tests",
+      "-v"
+    ],
+    "cwd": "/Users/tcsntcsn/TCSN/skills",
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "TMPDIR": "/private/tmp/product-methods-independent-review-2026-10-14/followup-recheck"
+    },
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "test_actual_cli_exit_and_no_input_writes (test_compare_snapshots.SnapshotComparison.test_actual_cli_exit_and_no_input_writes) ... ok\ntest_empty_evidence_requires_review (test_compare_snapshots.SnapshotComparison.test_empty_evidence_requires_review) ... ok\ntest_invalid_inventory_dates_and_nonfinite_rejected (test_compare_snapshots.SnapshotComparison.test_invalid_inventory_dates_and_nonfinite_rejected) ... ok\ntest_like_for_like_change_and_cosmetic_text (test_compare_snapshots.SnapshotComparison.test_like_for_like_change_and_cosmetic_text) ... ok\ntest_missing_fact_does_not_claim_removal (test_compare_snapshots.SnapshotComparison.test_missing_fact_does_not_claim_removal) ... ok\ntest_qualifier_change_is_not_price_increase (test_compare_snapshots.SnapshotComparison.test_qualifier_change_is_not_price_increase) ... ok\ntest_scalar_types_and_instructions_remain_data (test_compare_snapshots.SnapshotComparison.test_scalar_types_and_instructions_remain_data) ... ok\ntest_stale_and_locator_changes_block_comparison (test_compare_snapshots.SnapshotComparison.test_stale_and_locator_changes_block_comparison) ... ok\ntest_unavailable_or_omitted_source_is_coverage_gap (test_compare_snapshots.SnapshotComparison.test_unavailable_or_omitted_source_is_coverage_gap) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.193s\n\nOK\n"
+  },
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/scripts/compare_snapshots.py",
+      "/private/tmp/product-methods-independent-review-2026-10-14/probes/empty-inventory-baseline.json",
+      "/private/tmp/product-methods-independent-review-2026-10-14/probes/empty-inventory-current.json"
+    ],
+    "cwd": null,
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "TMPDIR": "/private/tmp/product-methods-independent-review-2026-10-14/followup-recheck"
+    },
+    "exit_code": 1,
+    "stdout": "{\"alerts_sent\": false, \"baseline_at\": \"2026-10-14T12:00:00Z\", \"current_at\": \"2026-10-15T12:00:00Z\", \"items\": [{\"classification\": \"coverage_gap\", \"reason\": \"no sources supplied\"}], \"kind\": \"competitor-snapshot-comparison\", \"limits\": \"Caller-supplied observations only; no fact verification, freshness SLA, removal inference, scheduler or business-cause judgment.\", \"normalization\": \"Collapse whitespace in string fact values only; qualifiers and scalar types remain exact.\", \"retrieval\": \"not_performed\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/tcsntcsn/TCSN/skills/competitor-monitoring/scripts/compare_snapshots.py",
+      "/private/tmp/product-methods-independent-review-2026-10-14/probes/empty-facts-baseline.json",
+      "/private/tmp/product-methods-independent-review-2026-10-14/probes/empty-facts-current.json"
+    ],
+    "cwd": null,
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "TMPDIR": "/private/tmp/product-methods-independent-review-2026-10-14/followup-recheck"
+    },
+    "exit_code": 1,
+    "stdout": "{\"alerts_sent\": false, \"baseline_at\": \"2026-10-14T12:00:00Z\", \"current_at\": \"2026-10-15T12:00:00Z\", \"items\": [{\"baseline_observed_at\": \"2026-10-14T11:00:00Z\", \"classification\": \"coverage_gap\", \"current_observed_at\": \"2026-10-14T11:00:00Z\", \"reason\": \"no facts supplied\", \"source_id\": \"pricing\"}], \"kind\": \"competitor-snapshot-comparison\", \"limits\": \"Caller-supplied observations only; no fact verification, freshness SLA, removal inference, scheduler or business-cause judgment.\", \"normalization\": \"Collapse whitespace in string fact values only; qualifiers and scalar types remain exact.\", \"retrieval\": \"not_performed\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "diff",
+      "--",
+      "performance-audit/SKILL.md"
+    ],
+    "cwd": "/Users/tcsntcsn/TCSN/skills",
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "TMPDIR": "/private/tmp/product-methods-independent-review-2026-10-14/followup-recheck"
+    },
+    "exit_code": 0,
+    "stdout": "diff --git a/performance-audit/SKILL.md b/performance-audit/SKILL.md\nindex 710a6ce..2ee58d0 100644\n--- a/performance-audit/SKILL.md\n+++ b/performance-audit/SKILL.md\n@@ -1,23 +1,31 @@\n ---\n name: performance-audit\n-description: \"Measure and diagnose performance bottlenecks in application, API, database, build, or runtime paths using profiling, tracing, benchmarks, metrics, and repository evidence. Use when latency, throughput, resource use, query cost, bundle/build speed, or performance regressions are explicitly requested. Do not use for generic code quality or incident review without a performance focus.\"\n+description: \"Measure performance bottlenecks and scoped reliability/recovery claims in application, API, database, build, or runtime paths using profiling, tracing, benchmarks, metrics, and repository evidence. Use when latency, throughput, resource use, query cost, bundle/build speed, performance regressions, availability indicators or recovery measurements are requested. Use incident-review for retrospective incident analysis.\"\n ---\n # Performance Audit\n \n ## Objective\n \n-Identify measurable bottlenecks, quantify impact, and recommend changes whose expected benefit can be verified.\n+Identify measurable bottlenecks or assess a scoped reliability/recovery claim, with evidence that supports the requested decision.\n \n ## Inputs\n \n-Required: target repository/system and performance concern. Optional: baseline metrics, SLOs, workload, production traces, profiler output, benchmark command, environment, and regression window.\n+Required: target repository/system and performance or reliability concern. Optional: baseline metrics, SLOs, workload, production traces, profiler output, benchmark command, environment, and regression window.\n \n ## Context\n \n Read performance/operations architecture relevant to the measured path, source called out by traces/profiles, and datastore/API details implicated by evidence. Avoid speculative full-code scans.\n \n+For requested reliability, restoration or recovery measurements, load the\n+[recovery evidence guide](references/recovery-evidence.md). Keep telemetry coverage,\n+actual failure tests and owner objectives distinct from a general latency benchmark.\n+\n ## Procedure\n \n+For reliability/recovery work, follow the linked recovery guide and report actual\n+indicator populations, restoration and loss measurements or explicit unavailable\n+checks. The optimization sequence below applies to performance bottlenecks.\n+\n 1. Define the metric, workload, environment, and target threshold before optimization.\n 2. Reproduce or collect a baseline with representative measurements when possible.\n 3. Use profiling/tracing/query plans/bundle analysis to localize cost.\n@@ -28,8 +36,9 @@ Read performance/operations architecture relevant to the measured path, source c\n \n ## Output\n \n-Return baseline, bottleneck evidence, root-cause confidence, prioritized fixes, before/after measurements when applied, and environment/measurement caveats.\n+For optimization, return baseline, bottleneck evidence, root-cause confidence, prioritized fixes, before/after measurements when applied, and environment/measurement caveats.\n \n ## Completion\n \n-Claims are tied to measurements or explicitly labeled hypotheses, regressions were checked, and improvements are demonstrated under comparable conditions.\n+Claims are tied to measurements or explicitly labeled hypotheses, regressions were checked, and claimed improvements use comparable conditions. Recovery and availability\n+conclusions retain their tested window, population and unobserved layers.\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "rg",
+      "-n",
+      "coverage_gap|empty|comparable",
+      "competitor-monitoring/scripts/compare_snapshots.py",
+      "competitor-monitoring/tests/test_compare_snapshots.py"
+    ],
+    "cwd": "/Users/tcsntcsn/TCSN/skills",
+    "environment_overrides": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "TMPDIR": "/private/tmp/product-methods-independent-review-2026-10-14/followup-recheck"
+    },
+    "exit_code": 0,
+    "stdout": "competitor-monitoring/scripts/compare_snapshots.py:74:            items.append({'classification': 'coverage_gap', 'reason': 'no sources supplied'})\ncompetitor-monitoring/scripts/compare_snapshots.py:80:                items.append({**entry, 'classification': 'coverage_gap',\ncompetitor-monitoring/scripts/compare_snapshots.py:93:                items.append({**entry, 'classification': 'coverage_gap', 'reason': 'no facts supplied'})\ncompetitor-monitoring/tests/test_compare_snapshots.py:40:    def test_empty_evidence_requires_review(self):\ncompetitor-monitoring/tests/test_compare_snapshots.py:43:        self.assertEqual(self.classes(a,b), {'snapshot': 'coverage_gap'})\ncompetitor-monitoring/tests/test_compare_snapshots.py:46:        self.assertEqual(self.classes(a,b), {'pricing': 'coverage_gap'})\ncompetitor-monitoring/tests/test_compare_snapshots.py:52:            self.assertEqual(json.loads(result.stdout)['items'][0]['classification'], 'coverage_gap')\ncompetitor-monitoring/tests/test_compare_snapshots.py:58:    def test_unavailable_or_omitted_source_is_coverage_gap(self):\ncompetitor-monitoring/tests/test_compare_snapshots.py:60:        self.assertEqual(self.classes(a,b), {'pricing': 'coverage_gap'})\ncompetitor-monitoring/tests/test_compare_snapshots.py:61:        b['sources'] = []; self.assertEqual(self.classes(a,b), {'pricing': 'coverage_gap'})\n",
+    "stderr": ""
+  }
+]

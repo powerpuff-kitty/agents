@@ -1,0 +1,8 @@
+{
+  "additional_link_target": {
+    "path": "research-app/sources/test-engineering/assets/fresh-review-brief.md",
+    "sha256": "56d0d9ddfba0615bc0188e63985a4db75da8cf9b2e5b5412f75c4453f6add9f0",
+    "purpose": "Included after the exercise solely to resolve a retained reference link; not claimed as evaluator input."
+  },
+  "measurement_replay": "Added portable copy-only replay; original code and source manifest unchanged."
+}

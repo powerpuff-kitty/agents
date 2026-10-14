@@ -1,0 +1,343 @@
+{
+  "comparison_checks": [
+    {
+      "claim": "instrument raw rows",
+      "independent": 4,
+      "authored": 4,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "instrument distinct IDs",
+      "independent": 3,
+      "authored": 3,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "instrument shape passes",
+      "independent": 2,
+      "authored": 2,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "instrument valid unique",
+      "independent": 1,
+      "authored": 1,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "instrument row 1 missing names",
+      "independent": [],
+      "authored": [],
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "instrument row 1 extra names",
+      "independent": [],
+      "authored": [],
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "instrument row 2 missing names",
+      "independent": [],
+      "authored": [],
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "instrument row 2 extra names",
+      "independent": [],
+      "authored": [],
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "instrument row 3 missing names",
+      "independent": [
+        "occurred_at"
+      ],
+      "authored": [
+        "occurred_at"
+      ],
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "instrument row 3 extra names",
+      "independent": [],
+      "authored": [],
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "instrument row 4 missing names",
+      "independent": [],
+      "authored": [],
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "instrument row 4 extra names",
+      "independent": [
+        "email"
+      ],
+      "authored": [
+        "email"
+      ],
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "analytics raw rows",
+      "independent": 8,
+      "authored": 8,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "analytics deduplicated events",
+      "independent": 7,
+      "authored": 7,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "analytics entrants",
+      "independent": 4,
+      "authored": 4,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "analytics mature entrants",
+      "independent": 3,
+      "authored": 3,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "analytics mature converters",
+      "independent": 1,
+      "authored": 1,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "analytics mature rate",
+      "independent": 0.3333333333333333,
+      "authored": 0.3333333333333333,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "analytics immature units count",
+      "independent": 1,
+      "authored": 1,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "analytics orphan units count",
+      "independent": 1,
+      "authored": 1,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "analytics A maturity",
+      "independent": true,
+      "authored": true,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "analytics A conversion",
+      "independent": true,
+      "authored": true,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "analytics B maturity",
+      "independent": true,
+      "authored": true,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "analytics B conversion",
+      "independent": false,
+      "authored": false,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "analytics C maturity",
+      "independent": true,
+      "authored": true,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "analytics C conversion",
+      "independent": false,
+      "authored": false,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "analytics D maturity",
+      "independent": false,
+      "authored": false,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "analytics D conversion",
+      "independent": false,
+      "authored": false,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "experiment SRM chi square",
+      "independent": 20.0,
+      "authored": 20.0,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "experiment asymptotic SRM p",
+      "independent": 7.744216431044074e-06,
+      "authored": 7.744216431044074e-06,
+      "match": true,
+      "absolute_tolerance": 1e-18
+    },
+    {
+      "claim": "experiment exact SRM p",
+      "independent": 8.457089535503927e-06,
+      "authored": 8.457089535503927e-06,
+      "match": true,
+      "absolute_tolerance": 1e-18
+    },
+    {
+      "claim": "experiment control rate",
+      "independent": 0.05,
+      "authored": 0.05,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "experiment treatment rate",
+      "independent": 0.06,
+      "authored": 0.06,
+      "match": true,
+      "absolute_tolerance": null
+    },
+    {
+      "claim": "experiment absolute difference",
+      "independent": 0.01,
+      "authored": 0.009999999999999995,
+      "match": true,
+      "absolute_tolerance": 1e-15
+    },
+    {
+      "claim": "experiment relative difference",
+      "independent": 0.2,
+      "authored": 0.1999999999999999,
+      "match": true,
+      "absolute_tolerance": 1e-15
+    },
+    {
+      "claim": "experiment illustrative CI endpoint 0",
+      "independent": -0.009992641907060238,
+      "authored": -0.009992641907060243,
+      "match": true,
+      "absolute_tolerance": 1e-06
+    },
+    {
+      "claim": "experiment illustrative CI endpoint 1",
+      "independent": 0.02999264190706024,
+      "authored": 0.029992641907060233,
+      "match": true,
+      "absolute_tolerance": 1e-06
+    }
+  ],
+  "all_match": true,
+  "interval_rounding_note": "Independent replay uses 1.959963984540054; authored interval is consistent with rounded 1.96. Maximum allowed discrepancy 1e-6 in rate units; substantive precision unchanged.",
+  "authored_artifact_hashes_verified": [
+    "source-manifest.json",
+    "analytics-report.md",
+    "runtime.json",
+    "result.md",
+    "experiment-calculations.json",
+    "analytics-calculations.json",
+    "experiment-report.md",
+    "instrumentation-report.md",
+    "run-output.json",
+    "task.md",
+    "instrumentation-calculations.json",
+    "verification.json",
+    "actions.md",
+    "sources/skills/product-instrumentation/SKILL.md",
+    "sources/skills/product-analytics/SKILL.md",
+    "sources/skills/product-experimentation/SKILL.md",
+    "sources/skills/product-experimentation/references/method.md",
+    "sources/skills/product-experimentation/assets/report-template.md",
+    "sources/skills/product-experimentation/tests/fixtures/input.json",
+    "sources/skills/product-analytics/references/method.md",
+    "sources/skills/product-analytics/assets/report-template.md",
+    "sources/skills/product-analytics/tests/fixtures/input.json",
+    "sources/skills/product-instrumentation/references/method.md",
+    "sources/skills/product-instrumentation/assets/report-template.md",
+    "sources/skills/product-instrumentation/tests/fixtures/input.json",
+    "sources/roles/shared/operating-contract.md",
+    "sources/roles/agents/data-analyst/instructions.md",
+    "sources/roles/agents/scientist/instructions.md"
+  ],
+  "reviewed_originals_unchanged": [
+    "/private/tmp/measurement-methods-forward-2026-10-14/sources/skills/product-instrumentation/SKILL.md",
+    "/private/tmp/measurement-methods-forward-2026-10-14/sources/skills/product-instrumentation/references/method.md",
+    "/private/tmp/measurement-methods-forward-2026-10-14/sources/skills/product-instrumentation/assets/report-template.md",
+    "/private/tmp/measurement-methods-forward-2026-10-14/sources/skills/product-instrumentation/tests/fixtures/input.json",
+    "/private/tmp/measurement-methods-forward-2026-10-14/sources/skills/product-analytics/SKILL.md",
+    "/private/tmp/measurement-methods-forward-2026-10-14/sources/skills/product-analytics/references/method.md",
+    "/private/tmp/measurement-methods-forward-2026-10-14/sources/skills/product-analytics/assets/report-template.md",
+    "/private/tmp/measurement-methods-forward-2026-10-14/sources/skills/product-analytics/tests/fixtures/input.json",
+    "/private/tmp/measurement-methods-forward-2026-10-14/sources/skills/product-experimentation/SKILL.md",
+    "/private/tmp/measurement-methods-forward-2026-10-14/sources/skills/product-experimentation/references/method.md",
+    "/private/tmp/measurement-methods-forward-2026-10-14/sources/skills/product-experimentation/assets/report-template.md",
+    "/private/tmp/measurement-methods-forward-2026-10-14/sources/skills/product-experimentation/tests/fixtures/input.json",
+    "/private/tmp/measurement-methods-forward-2026-10-14/sources/roles/agents/data-analyst/instructions.md",
+    "/private/tmp/measurement-methods-forward-2026-10-14/sources/roles/agents/scientist/instructions.md",
+    "/private/tmp/measurement-methods-forward-2026-10-14/sources/roles/shared/operating-contract.md",
+    "/private/tmp/measurement-methods-forward-2026-10-14/task.md",
+    "/private/tmp/measurement-methods-forward-2026-10-14/source-manifest.json",
+    "/private/tmp/measurement-methods-forward-2026-10-14/instrumentation-report.md",
+    "/private/tmp/measurement-methods-forward-2026-10-14/analytics-report.md",
+    "/private/tmp/measurement-methods-forward-2026-10-14/experiment-report.md",
+    "/private/tmp/measurement-methods-forward-2026-10-14/instrumentation-calculations.json",
+    "/private/tmp/measurement-methods-forward-2026-10-14/analytics-calculations.json",
+    "/private/tmp/measurement-methods-forward-2026-10-14/experiment-calculations.json",
+    "/private/tmp/measurement-methods-forward-2026-10-14/result.md",
+    "/private/tmp/measurement-methods-forward-2026-10-14/actions.md",
+    "/private/tmp/measurement-methods-forward-2026-10-14/runtime.json",
+    "/private/tmp/measurement-methods-forward-2026-10-14/run-output.json",
+    "/private/tmp/measurement-methods-forward-2026-10-14/verification.json",
+    "/private/tmp/measurement-methods-forward-2026-10-14/artifact-hashes.json"
+  ],
+  "not_executed": [
+    "calculate.py",
+    "application",
+    "SDK",
+    "collector",
+    "warehouse",
+    "browser",
+    "live experiment"
+  ]
+}

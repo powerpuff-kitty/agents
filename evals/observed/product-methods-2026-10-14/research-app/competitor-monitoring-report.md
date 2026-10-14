@@ -1,0 +1,17 @@
+# Competitor watch exercise
+
+The supplied snapshots support a changed synthetic price observation and a release-source coverage gap. They establish no current real vendor fact. Decision framing is whether a later authorized watch run should investigate pricing and restore release coverage. The watch owner, region, rights, report destination and materiality policy are not supplied; this report does not establish an approved real watchlist.
+
+Baseline capture: `2026-10-14T12:00:00Z`; pricing and releases observed at `2026-10-14T11:00:00Z`. Current capture: `2026-10-15T12:00:00Z`; pricing observed at `2026-10-15T11:00:00Z`; releases unavailable with no observation. These are fixture timestamps, not tool retrieval times. The current capture is future-dated relative to this exercise's 2026-10-14 task date. No inference of a live repeat run, precise effective change date or freshness SLA follows.
+
+| Source/fact | Baseline | Current | Class and implication |
+| --- | --- | --- | --- |
+| `pricing/pro-price`, `https://vendor.example/pricing`, `synthetic source:1` | 29 USD/seat/month | 39 USD/seat/month | Changed supplied observation; +10, approximately +34.48% of 29. The locator and supplied currency/period/unit qualifiers match. |
+| `pricing/plan-name`, same locator, `synthetic source:2` | `Pro plan` | Whitespace-padded `Pro plan` | Unchanged under the explicit rule of collapsing string-value whitespace. Raw captures are retained; qualifiers and scalar types are exact. |
+| `release-notes/export`, `https://vendor.example/releases`, `synthetic release:1` | `true` | Source unavailable, no facts | Coverage gap. Export's current status is unknown; no removal or discontinuation is evidenced. |
+
+The price delta is reproducible from the supplied values, but region, tax treatment, billing commitment, seat minimums and a full tier definition are absent. Matching supplied fields does not complete a real pricing comparability audit. The +10 is potentially decision-relevant; no approved materiality threshold is supplied. Confidence is high in structural fixture classification, with no empirical confidence claim about a vendor, strategic cause or customer effect. Alternative explanations requiring source review include unrecorded billing/tier context, a source correction or extraction error.
+
+The standard-library local helper exited 1, its documented review-needed result, with unchanged/changed/coverage-gap records. `comparison.stdout.json` retains the original helper output, `comparison.stderr.txt` is empty, and `checks.json` retains arithmetic. It fetched nothing. Exact source/copy hashes, including the helper and both snapshots, are in `source-identities.json`.
+
+Next-run handoff (unexecuted): first obtain the watch owner and permitted source scope, confirm full pricing qualifiers and whether the date-forward snapshot is intended, then capture new immutable observations with retrieval outcome, timestamp and raw evidence. Keep both existing captures. Recheck release availability with bounded retries under an agreed policy; repeated failure must remain unknown. Review source locator changes and conflicting pricing evidence before classifying. Owner, cadence/timezone, freshness threshold, retry count, materiality threshold and output destination all remain unset. No scheduler exists for this exercise, no notification destination is authorized, and no schedule or alert was created or sent.
