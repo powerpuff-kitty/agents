@@ -1,4 +1,4 @@
-# Reusable agents
+# Agents
 
 Twenty-eight specialist profiles and a team lead share one operating contract. Portable role
 instructions are the source of truth; adapters produce tool-specific versions.
@@ -189,3 +189,12 @@ before upgrading customized installations. See [contributing](CONTRIBUTING.md) a
 
 Authored content and tooling use the MIT [LICENSE](LICENSE). Retain notices when
 redistributing substantial copies; third-party content keeps its original terms.
+
+## Coverage and future directions
+
+See the [domain and demand assessment](docs/DOMAIN-OPPORTUNITIES.md) for current
+security/content coverage and proposed hardware, media, cryptography, aviation and
+finance workflows. These candidates are research recommendations, not installed
+roles. The [documentation assessment](docs/DOCUMENTATION-ASSESSMENT.md) reviews
+all current agents and skills and recommends concise entrypoints with deeper
+references for complex or consequential work.
