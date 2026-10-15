@@ -1,0 +1,44 @@
+{
+  "original_artifact_checks": {
+    "/private/tmp/installation-followup-20261015": {
+      "final_snapshot_verified": true,
+      "managed_hashes_match_actual_files": true,
+      "backup_mode": "0o640",
+      "backup_contains_original_plus_exact_customization": true,
+      "unrelated_bytes_mode_preserved": true,
+      "original_bytecode_files": [
+        "source/scripts/__pycache__/build.cpython-314.pyc",
+        "source/adapters/opencode/__pycache__/render.cpython-314.pyc"
+      ]
+    },
+    "/private/tmp/installation-followup-recheck-20261015": {
+      "final_snapshot_verified": true,
+      "managed_hashes_match_actual_files": true,
+      "backup_mode": "0o640",
+      "backup_contains_original_plus_exact_customization": true,
+      "unrelated_bytes_mode_preserved": true,
+      "original_bytecode_files": [
+        "source/scripts/__pycache__/build.cpython-314.pyc",
+        "source/adapters/opencode/__pycache__/render.cpython-314.pyc"
+      ]
+    }
+  },
+  "independent_checks": {
+    "initial_dry_no_target_nodes_content_mode_mtime_changes": true,
+    "initial_dry_created_source_nodes": [
+      "adapters/opencode/__pycache__",
+      "adapters/opencode/__pycache__/render.cpython-314.pyc",
+      "scripts/__pycache__",
+      "scripts/__pycache__/build.cpython-314.pyc"
+    ],
+    "conflict_no_tree_content_mode_mtime_changes": true,
+    "replacement_dry_no_tree_content_mode_mtime_changes": true,
+    "replacement_backup_exact_bytes_mode": true,
+    "replacement_target_mode_and_update": true,
+    "repeat_no_tree_content_mode_mtime_changes": true,
+    "partial_preserves_prior_designer_bytes_mode_mtime": true,
+    "partial_preserves_unrelated_bytes_mode": true,
+    "partial_installs_new_selected_role": true
+  },
+  "originals_unchanged": true
+}

@@ -1,0 +1,32 @@
+{
+  "format_version": 1,
+  "seed": 17,
+  "repetitions": 1,
+  "agents_revision": "1ecc04a0648d76ffb4558b882fd7e1d28384453e",
+  "skills_revision": "c54a95ecccdc20e5df1c655746802465cdb8f602",
+  "runner_sha256": "d241d5cb980eb07387b234a9b1ab23699b81a090ce6e9930a9efdd6c423bdf3b",
+  "model": "deepseek/deepseek-v4-pro",
+  "runs": [
+    {
+      "id": "01-implementation-unavailable-check-named-agent-1",
+      "case": "implementation-unavailable-check",
+      "mode": "named-agent",
+      "repeat": 1,
+      "agent": "feature-developer",
+      "skill": null,
+      "prompt_sha256": "c485c4968f758bb2bf987aec8dbdd71f25d15e60e3e099f2d75341e01d3beef7",
+      "fixture_sha256": "ee58b67cba4b9007fd3d09e01f71d6d6057555cea9bcbbfdf0728b14c04b19b7"
+    },
+    {
+      "id": "02-architecture-proposed-decision-named-agent-1",
+      "case": "architecture-proposed-decision",
+      "mode": "named-agent",
+      "repeat": 1,
+      "agent": "system-architect",
+      "skill": null,
+      "prompt_sha256": "d8b8c98dfc6454b25391a089d489e4839a38c2a9a54f89d3c7abd375dcbce563",
+      "fixture_sha256": "bf9b2cff031a357a2d75200af3b8866d73bf92eb238110d405413456f7422147"
+    }
+  ],
+  "purpose": "Separate corrections after independent review: strengthened port fixture includes coercion hooks; shared inspection-claim guidance changed. Original failed outcomes retained."
+}

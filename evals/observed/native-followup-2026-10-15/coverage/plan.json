@@ -1,0 +1,61 @@
+{
+  "format_version": 1,
+  "seed": 17,
+  "repetitions": 1,
+  "agents_revision": "1ecc04a0648d76ffb4558b882fd7e1d28384453e",
+  "skills_revision": "c54a95ecccdc20e5df1c655746802465cdb8f602",
+  "runner_sha256": "d241d5cb980eb07387b234a9b1ab23699b81a090ce6e9930a9efdd6c423bdf3b",
+  "model": "deepseek/deepseek-v4-pro",
+  "runs": [
+    {
+      "id": "01-shared-project-context-named-agent-1",
+      "case": "shared-project-context",
+      "mode": "named-agent",
+      "repeat": 1,
+      "agent": "feature-developer",
+      "skill": null,
+      "prompt_sha256": "8829d09f0f5e2400fbcf01e9f5232b2de8b51e0760f238e10fea051429a03291",
+      "fixture_sha256": "19eaff1a557e68af6ea4e0aa4a0e3a1af7867ec20586b8fa41784cc33b895c4e"
+    },
+    {
+      "id": "02-security-secret-evidence-named-agent-1",
+      "case": "security-secret-evidence",
+      "mode": "named-agent",
+      "repeat": 1,
+      "agent": "security-auditor",
+      "skill": null,
+      "prompt_sha256": "329b7491c890cced8ee8ef89e83d1ac258a1bab6f007861b3cde723a36598f34",
+      "fixture_sha256": "a4959fd5631b6b583ac817c41c8910a19e8b03b750eac822b07ffa147fcc7d51"
+    },
+    {
+      "id": "03-security-isolated-repro-named-agent-1",
+      "case": "security-isolated-repro",
+      "mode": "named-agent",
+      "repeat": 1,
+      "agent": "security-auditor",
+      "skill": null,
+      "prompt_sha256": "4751419539278588bb12c0d7203bd3c886012a646460f0d9adcd8947afd4cb35",
+      "fixture_sha256": "4627b061106a288f33073a0b2d4e32af61d75eaa2a1b27fe1304c78de8d30fbc"
+    },
+    {
+      "id": "04-architecture-proposed-decision-named-agent-1",
+      "case": "architecture-proposed-decision",
+      "mode": "named-agent",
+      "repeat": 1,
+      "agent": "system-architect",
+      "skill": null,
+      "prompt_sha256": "d8b8c98dfc6454b25391a089d489e4839a38c2a9a54f89d3c7abd375dcbce563",
+      "fixture_sha256": "6db02ce360a087f733ff698d37b4bc82a276fcbae06f54e64bd936a058f1d1c8"
+    },
+    {
+      "id": "05-coordination-missing-delegation-named-agent-1",
+      "case": "coordination-missing-delegation",
+      "mode": "named-agent",
+      "repeat": 1,
+      "agent": "team-lead",
+      "skill": null,
+      "prompt_sha256": "d8dd39a316d8554d0bc6c26d4e988716e99a6850e623d3968e5990cfeacaabb1",
+      "fixture_sha256": "08522dbe690b387247c31511b1302c37e22a97d2c49fd862b698c9c86fb3147e"
+    }
+  ]
+}

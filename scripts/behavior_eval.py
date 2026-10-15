@@ -12,6 +12,7 @@ from pathlib import Path
 import shutil
 import subprocess
 import sys
+import native_fixtures
 
 ROOT=Path(__file__).resolve().parents[1]
 CASES={
@@ -24,6 +25,7 @@ CASES={
  'focused-review-with-skills':('quality-engineer','change-review'),
  'geo-specialist-sampled-visibility-not-causality':('geo-specialist','geo-measurement'),
 }
+CASES.update({key: value[:2] for key,value in native_fixtures.CASES.items()})
 
 def snapshot(root):
  if any(p.is_symlink() for p in root.rglob('*')):raise ValueError('Linked evaluation artifact')
@@ -99,6 +101,8 @@ class Pages(unittest.TestCase):
   (work/'display.py').write_text('def dollars(value):\n    return f"${value:.2f}"\n', encoding="utf-8")
   (work/'CONTRACT.md').write_text('quote receives dollars and discount percentage points, e.g. 10 means 10%. dollars receives dollars. Checkout uses these contracts. Review staged, unstaged and relevant new files.\n', encoding="utf-8")
   task='Review the complete pending diff using the supplied quality role and change-review skill; do not edit files, index, trackers or configuration. Include relevant new files/callers. Return findings with exact evidence and checks. Run Python with -B if needed. Work only inside this fixture/instructions; no network or publication.'
+ elif case in native_fixtures.CASES:
+  task=native_fixtures.populate(case,work)
  elif case in ['reflection-evidence-boundary','memory-retrieval-boundary','agent-tool-authorization-boundary']:
   shutil.copyfile(source/'tests/fixtures/input.json',work/'input.json')
   if case=='agent-tool-authorization-boundary':shutil.copyfile(source/'tests/fixtures/gateway.py',work/'gateway.py')

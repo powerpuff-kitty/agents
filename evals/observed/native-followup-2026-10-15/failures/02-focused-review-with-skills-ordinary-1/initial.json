@@ -1,0 +1,27 @@
+{
+  "format_version": 1,
+  "case_id": "focused-review-with-skills",
+  "role": "quality-engineer",
+  "skill": "change-review",
+  "workspace_sha256": {
+    "CONTRACT.md": "fac861030f4da6b98d497b01ef94616e07a1d6947ff6bac935e3a9b49d81f396",
+    "checkout.py": "b49388b7d04697b9797cc389932444c83b9b4205d889f08d3db97b85fc12a2c7",
+    "display.py": "7db76a85e790a7e57707e97fd019a117599d09e02fe427e5fd67a7c3347ebb66",
+    "pricing.py": "928d5452e18fca86c3401bbcf288c6814d85a59a17ae4bf274eb6ad57a2497e0"
+  },
+  "instruction_sha256": {
+    "role.md": "2bf9f14f8754afcf3de4db983f7481420cb5d3d70b6c83bf98feec4017d9a830",
+    "skill/LICENSE": "da8e7b98c9f5547396031dd15ffe7a820eb8c2b9e4d1b32c9eb69bbc0d2c5af4",
+    "skill/SKILL.md": "6e000682dde1623ed721826b2e925527df35993b09c797503efc8b7b60079702",
+    "skill/references/review-method.md": "8f998b4e2fc5986a571df9d166b40d6779cf5e48cab72a29113558192b75de67",
+    "skill/tests/cases.json": "1e71bdee94ab154762d6e2623631b500d1924b31533b61fa63a9c201bfeb2410"
+  },
+  "task_sha256": "87328c12b67aeb446ee1356e313d0b35cbdef64c42ff8721dc78a51dcf97b3b2",
+  "source_revision": "1ecc04a0648d76ffb4558b882fd7e1d28384453e",
+  "instruction_mode": "explicit",
+  "preparer_sha256": "908c82e9b477e67735af40afdf6f702a2b770dbd06100bd534df1ae3cfe06872",
+  "skills_revision": "c54a95ecccdc20e5df1c655746802465cdb8f602",
+  "source_note": "instruction hashes include working-tree changes",
+  "initial_git_status": " M display.py\nM  pricing.py\n?? checkout.py\n",
+  "initial_staging_identity": "a4d73c032fb470aa9a8a425e352d897f5ca63d7d3dd4ce8a4c588e698946bb8c"
+}

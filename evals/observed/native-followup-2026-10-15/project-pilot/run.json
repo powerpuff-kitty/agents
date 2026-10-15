@@ -1,0 +1,31 @@
+{
+  "source": {
+    "repository": "powerpuff-kitty/ai-agents",
+    "source_commit": "1ecc04a0648d76ffb4558b882fd7e1d28384453e",
+    "working_source_note": "Only native exports, native skill copies, configuration and owner note added to this exact source archive; source files unchanged.",
+    "skills_commit": "c54a95ecccdc20e5df1c655746802465cdb8f602",
+    "allowed_source_changes": [
+      "scripts/native_eval_report.py",
+      "tests/test_native_eval_report.py"
+    ],
+    "prompt_sha256": "c16b4e77cc8cae42c0ab0ce6f6db69953db143b5797a0d1cdf1ff13dd674641e"
+  },
+  "model_requested": {
+    "providerID": "deepseek",
+    "id": "deepseek-v4-pro"
+  },
+  "time_limit_seconds": 900,
+  "reported_cost_limit": 0.75,
+  "team_command": "team-feature",
+  "acceptance": "needs_independent_review",
+  "status": "collected",
+  "seconds": 847.177,
+  "usage": {
+    "input": 145279,
+    "output": 14567,
+    "cache_read": 1132288,
+    "cache_write": 0,
+    "reported_cost": 0.248817316,
+    "complete_session_fields": true
+  }
+}

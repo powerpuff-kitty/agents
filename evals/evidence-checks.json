@@ -1,0 +1,39 @@
+{
+  "format_version": 1,
+  "bundles": [
+    {
+      "path": "evals/observed/native-comparison-2026-10-15",
+      "reports": [
+        {
+          "path": "matched",
+          "review": "runner-review/final-decisions.json"
+        },
+        {
+          "path": "context",
+          "review": "runner-review/context-decisions.json"
+        },
+        {
+          "path": "startup-retry",
+          "review": "runner-review/retry-decisions.json"
+        }
+      ]
+    },
+    {
+      "path": "evals/observed/native-followup-2026-10-15",
+      "reports": [
+        {
+          "path": "failures",
+          "review": "failures/review-bound.json"
+        },
+        {
+          "path": "coverage",
+          "review": "coverage/review-bound.json"
+        },
+        {
+          "path": "corrections",
+          "review": "corrections/review-bound.json"
+        }
+      ]
+    }
+  ]
+}

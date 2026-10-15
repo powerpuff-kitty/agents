@@ -1,0 +1,24 @@
+{
+  "review": "independent completed v2 native workflow review",
+  "source_acceptance": "pass_unchanged",
+  "continuation_deliverables": "complete_with_reporting_limitations",
+  "strict_team_feature_preset_compliance": "incomplete_initial_framing_and_conditional_skip_reasons",
+  "outstanding_continuation": null,
+  "source_sha256": {
+    "scripts/native_eval_report.py": "70bfd6791512d1e784390e94c0f4f5f256a8c44473470a1c2c1c291662184046",
+    "tests/test_native_eval_report.py": "a6c8f1c77cded3880a2e2ea15c5026547d2c5303f4612afb5c4375fc1750055f"
+  },
+  "evidence_sha256": {
+    "run.json": "d682457fab252150ed7d69e5ef7ef3250e288a1704386c164211dab6fb5bddd7",
+    "source.json": "48696ba092ad5dd4d4b9db192e3df8caf687f8837419d27c80c4c7ad66c99e90",
+    "before.json": "1577b28f99dabbf3c0b2fba728bfcdf82c280241c9ebeaf8147adc3a2edf4082",
+    "after.json": "4fbb36e2a456297c279efb31028b8f0c5c85b5c623fcc73d7bc96e1868e18713",
+    "git-before.json": "82a88b95f11b00618a8205b1de0849a9f4486628d79ad4ff0ef4da5bd9bd9232",
+    "git-after.json": "82a88b95f11b00618a8205b1de0849a9f4486628d79ad4ff0ef4da5bd9bd9232",
+    "sessions.json": "ca81a744fd9b940926a4dc144d1a09656272ea66903090b287f83911c29e1749",
+    "messages.json": "a34f40a2ca624fc869f056b2f55a27132ba3ab8ca00ec8a814378e8477ab49bf"
+  },
+  "original_report_sha256": "4d616e61d7f124538fcf4bcb645169083e8222125a5b1c772dc07102e858ba62",
+  "completion_review_sha256": "7948486f6d53b1b6f467a2e78298ae051f33c16dc9a7e60dda6b4688e9a04e8a",
+  "usage_scope": "v2 cumulative, original and premature collector totals are not additional"
+}

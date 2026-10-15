@@ -7,16 +7,21 @@ a scenario into a claimed pass.
 
 ## Observed canonical cases
 
-The [current standalone-pilot index](observed/standalone-pilot-2026-10-14/index.json)
-records **8 observed cases and 136 unobserved cases** across the 144 specifications.
-It adds unavailable-compiler and false-recovery cases, 4 reflection branches and
-a real AI Agents project pilot with a separate reviewer. The
-[native OpenCode trials](observed/native-routing-2026-10-14/README.md) repeat 3 of
-those cases with DeepSeek: all used built-in `build`, with no skill/subagent calls
-or custom profile selection. Inventory visibility is verified; native automatic
-catalog selection was not observed. Statistical reliability remains unverified. The earlier
-[reliability index](observed/reliability-2026-10-14/index.json) retains its original
-6-case scope, findings and corrections.
+The [current follow-up index](observed/native-followup-2026-10-15/index.json)
+records **13 observed cases and 131 unobserved cases** across 144 specifications.
+It adds project-context, tenant-security, sanitized-secret-evidence, proposed-
+architecture and unavailable-delegation executions. Acceptance failures remain
+observations, not passes. The [follow-up report](observed/native-followup-2026-10-15/README.md)
+keeps the initial 10 trials, 2 corrections, installation exercise and project pilot
+separate, with independent decisions and explicit unresolved findings.
+
+The earlier [standalone-pilot index](observed/standalone-pilot-2026-10-14/index.json)
+retains its 8-case scope, including unavailable-compiler and false-recovery cases.
+The [native OpenCode trials](observed/native-routing-2026-10-14/README.md) repeat 3
+of those cases using built-in build without skill/subagent calls or custom profile
+selection. Registration alone does not prove automatic catalog selection. The earlier
+[reliability index](observed/reliability-2026-10-14/index.json) retains its 6-case scope.
+Statistical reliability remains unverified.
 
 The earlier [smoke suite](observed/behavior-smoke-2026-10-14/index.json) contains
 these 3 historical cases; its source counts remain historical:
@@ -118,6 +123,12 @@ acceptance comes from independent review rather than host completion.
 The pilot's incomplete native change is separate from the coordinator's tested,
 independently reviewed staging-identity correction. The shorter debugging skill
 retains scoped before/after outcomes; source bytes and provider measurements remain
-distinct. These repeat already observed cases, so unique coverage stays 8/144.
+distinct. That comparison repeats already observed cases and retains its 8/144
+coverage baseline; the later follow-up index records the additional 5 executions.
 Use [the native evaluation guide](../docs/NATIVE-EVALUATIONS.md) to prepare offline,
 run only explicitly authorized inference, and produce result-bound review reports.
+
+The required offline `python3 scripts/check_evidence.py` gate verifies registered
+artifact manifests, exact review bindings and in-memory measurement regeneration.
+It preserves failed/missing outcomes and uses no host executable, credentials,
+AI Skills checkout or paid inference. See [the native guide](../docs/NATIVE-EVALUATIONS.md).

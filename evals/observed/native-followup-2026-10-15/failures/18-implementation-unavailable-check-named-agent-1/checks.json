@@ -1,0 +1,12 @@
+{
+  "checks": {
+    "source_scope_preserved": true,
+    "staging_entries_preserved": true
+  },
+  "changed_files": [
+    "port.ts"
+  ],
+  "commands": [],
+  "task_acceptance": "needs_independent_review",
+  "limits": "Artifact checks do not grade review reasoning, compiler success or authenticated side effects."
+}

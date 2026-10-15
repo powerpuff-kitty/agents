@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-B",
+    "scripts/install.py",
+    "--agent",
+    "designer",
+    "--target",
+    "/private/tmp/native-followup-source-review-20261015/installation-cold-dry-reproduction/nonexistent/agents",
+    "--dry-run"
+  ],
+  "cwd": "/private/tmp/native-followup-source-review-20261015/installation-cold-dry-reproduction/source",
+  "exit": 0,
+  "stdout": "{\n  \"tool\": \"opencode\",\n  \"packs\": [],\n  \"target\": \"/private/tmp/native-followup-source-review-20261015/installation-cold-dry-reproduction/nonexistent/agents\",\n  \"commands_target\": null,\n  \"changed\": [\n    \"agents/designer.md\",\n    \"agents/.agents-LICENSE\"\n  ],\n  \"unchanged\": [],\n  \"dry_run\": true,\n  \"backup\": null,\n  \"backups\": {}\n}\n",
+  "stderr": "",
+  "all_bounded_nodes_content_modes_mtimes_unchanged": true
+}

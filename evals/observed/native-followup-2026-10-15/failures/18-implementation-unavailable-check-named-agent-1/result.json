@@ -1,0 +1,36 @@
+{
+  "entry": {
+    "id": "18-implementation-unavailable-check-named-agent-1",
+    "case": "implementation-unavailable-check",
+    "mode": "named-agent",
+    "repeat": 1,
+    "agent": "feature-developer",
+    "skill": null,
+    "prompt_sha256": "c485c4968f758bb2bf987aec8dbdd71f25d15e60e3e099f2d75341e01d3beef7",
+    "fixture_sha256": "32590d1d11653337a733a29e80b4659e40cb4af813a5a36319c8f0438a147424"
+  },
+  "model_requested": {
+    "providerID": "deepseek",
+    "id": "deepseek-v4-pro"
+  },
+  "timeout_seconds": 300,
+  "max_reported_cost": 0.2,
+  "task_acceptance": "needs_independent_review",
+  "status": "collected",
+  "runner_sha256": "d241d5cb980eb07387b234a9b1ab23699b81a090ce6e9930a9efdd6c423bdf3b",
+  "usage_limits": "Host session totals, including discovered descendants. Hidden auxiliary calls/billing remain unknown; reported-cost interrupt can overshoot.",
+  "host_version": "opencode v2.0.27",
+  "seconds": 82.548,
+  "usage": {
+    "input": 17137,
+    "output": 2192,
+    "cache_read": 155904,
+    "cache_write": 0,
+    "reported_cost": 0.026927208000000005,
+    "complete_session_fields": true
+  },
+  "invariants": {
+    "source_scope_preserved": true,
+    "staging_entries_preserved": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "base_revision": "1ecc04a0648d76ffb4558b882fd7e1d28384453e",
+  "uncommitted_overlay_sha256": {
+    ".github/workflows/validate.yml": "1f03dfcd86a97dc16083a2f5201d5c8d04e38a3cfca62e100dd194069e62cff1",
+    "scripts/behavior_eval.py": "908c82e9b477e67735af40afdf6f702a2b770dbd06100bd534df1ae3cfe06872",
+    "scripts/native_eval.py": "d241d5cb980eb07387b234a9b1ab23699b81a090ce6e9930a9efdd6c423bdf3b",
+    "tests/test_behavior_eval.py": "85fe37bf9d0a68b05b0ccd5f402adf00da613bf8f5314773860e3091fad62127",
+    "scripts/check_evidence.py": "93426b9c2b01e3d9bcccf6d5236fb95b236bad1752148c4e31785c1597607bd2",
+    "scripts/native_fixtures.py": "a61876b739bdaa8961c3810b9b4492748c61320ad5bb8e9adf3ec892a2f3189c",
+    "evals/evidence-checks.json": "6b921d77c95876d3046e3156522b490da9541ed5a048478c966832323d5eb0b3",
+    "tests/test_evidence.py": "9b5f7ce3e396d31f2ba08fc5bdccc6eb0fb062a026960faa4355aaad13daa034",
+    "tests/test_native_fixtures.py": "862d84ac409512fa1350defa5d62d40013cd627fd50c6ab633da482f39ba85dc"
+  }
+}

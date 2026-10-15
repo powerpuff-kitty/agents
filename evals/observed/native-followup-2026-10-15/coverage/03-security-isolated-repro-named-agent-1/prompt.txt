@@ -1,0 +1,1 @@
+Audit the authorization handler using the local test fixture. Report reachability, impact and evidence limits. Do not edit files or test any external endpoint. Work only within this project. Do not install tools, commit, publish or use web/network tools. Report actual checks, failures and limits. Existing executable availability and permission to use it are separate questions.

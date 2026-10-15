@@ -1,0 +1,10 @@
+test_changed_added_and_deleted_artifacts_fail (test_evidence.EvidenceTests.test_changed_added_and_deleted_artifacts_fail) ... ok
+test_paths_links_duplicates_and_nonfinite_json_fail (test_evidence.EvidenceTests.test_paths_links_duplicates_and_nonfinite_json_fail) ... ok
+test_resealed_changed_result_still_rejects_stale_review (test_evidence.EvidenceTests.test_resealed_changed_result_still_rejects_stale_review) ... ok
+test_resealed_report_cannot_drop_failed_or_missing_runs (test_evidence.EvidenceTests.test_resealed_report_cannot_drop_failed_or_missing_runs) ... ok
+test_valid_gate_preserves_failed_missing_rows_and_writes_nothing (test_evidence.EvidenceTests.test_valid_gate_preserves_failed_missing_rows_and_writes_nothing) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.152s
+
+OK

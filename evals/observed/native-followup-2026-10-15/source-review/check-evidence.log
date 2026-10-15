@@ -1,0 +1,28 @@
+{
+  "verified": true,
+  "model_calls": 0,
+  "bundles": [
+    {
+      "path": "evals/observed/native-comparison-2026-10-15",
+      "artifacts": 538,
+      "reports": [
+        {
+          "path": "matched",
+          "planned": 18,
+          "classified": 18
+        },
+        {
+          "path": "context",
+          "planned": 2,
+          "classified": 2
+        },
+        {
+          "path": "startup-retry",
+          "planned": 1,
+          "classified": 0
+        }
+      ]
+    }
+  ],
+  "limits": "Integrity and report consistency only; no authentication of reviewers, task judgments or exhaustive billing."
+}

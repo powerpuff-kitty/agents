@@ -21,6 +21,8 @@ jobs:
         run: python3 scripts/validate.py
       - name: Check documentation paths and source-derived counts
         run: python3 scripts/check_docs.py
+      - name: Verify retained evidence and regenerate reports without inference
+        run: python3 scripts/check_evidence.py
       - name: Build and check deterministic exports
         run: |
           python3 scripts/build.py --adapter portable

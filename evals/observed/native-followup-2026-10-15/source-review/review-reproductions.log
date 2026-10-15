@@ -1,0 +1,9 @@
+All 9 overlay hashes match source-identity.json
+Default roster is exactly 3 original cases x 3 modes x 2 repetitions
+All 5 optional cases prepare in all 3 modes, preserve unchanged scope, reject added tests, and configure expected delegation rules
+Permission-rule inspection is static; no live host enforcement claim
+Required compiler available: False
+Local Node version: v25.5.0
+Local independent implementation contract check exit: 0
+30 local port-contract cases passed; required compiler remains separate.
+No native executable, provider credential, external network or AI Skills checkout used

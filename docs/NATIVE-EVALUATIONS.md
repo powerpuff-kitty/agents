@@ -22,6 +22,21 @@ the built-in `build` primary; named-agent trials select the corresponding profil
 This controls the primary agent, rather than testing an arbitrary ambient default.
 No skill folder is adapted and no host account/configuration is changed.
 
+The default remains these 18 runs. Select `--case` and `--mode` explicitly for
+smaller or broader exercises; each option can be repeated. Additional fixtures
+cover the existing canonical `shared-project-context`, `security-isolated-repro`,
+`security-secret-evidence`, `architecture-proposed-decision` and
+`coordination-missing-delegation` cases. They are read-only. The final case denies
+the subagent capability rather than merely describing delegation as unavailable.
+Fixture preparation and invariant checks never establish behavioral coverage.
+
+The missing-compiler fixture now supplies `port.contract.check.mjs`, permitted as
+`node --experimental-strip-types port.contract.check.mjs` when the existing Node
+supports TypeScript. The check is protected from edits and covers 34 accepted and
+rejected inputs. No runtime is installed; this check does not replace the absent
+required compiler. Such changed-input follow-ups remain separate from historical
+matched trials.
+
 Tasks, instruction hashes, source revisions and working-tree inputs are recorded.
 Participant workspaces receive native catalogs; expected answers/grader metadata
 remain outside them. Inspect all inputs and the generated permissions before running.
@@ -78,6 +93,27 @@ The fixed roster retains failures and unexecuted runs. The optional review file 
 This binds the supplied assessment to bytes; it does not authenticate the reviewer
 or independently validate their judgment. Use the [fresh-review method](FRESH-REVIEWS.md).
 
+## Required offline evidence gate
+
+```sh
+python3 scripts/check_evidence.py
+```
+
+CI runs this command without a native executable, account, model call or AI Skills
+checkout. [The evidence index](../evals/evidence-checks.json) explicitly registers
+bundles and their result-bound reviews. The gate verifies each bundle's complete
+artifact set and SHA-256 manifest, rejects linked/unsafe paths and malformed JSON,
+then regenerates the JSON and Markdown measurements in memory. Changed artifacts,
+stale review bindings, omitted failure/missing rows or stale reports fail the gate.
+It never rewrites retained evidence. Older formats remain historical rather than
+being silently interpreted as current native trials. Manifest consistency does
+not authenticate an author or establish the correctness of an acceptance judgment.
+
+Live inference remains an explicitly invoked optional command with model, executable,
+time and cost bounds. It is not part of this CI gate.
+
+## Measurement scope
+
 The measurement report keeps per-run values and group mean/range/sample counts,
 unknown usage, actual primary agents, resolved skill-body attachments, skill calls
 and instruction-file reads. Skill attachments may carry full bodies without a
@@ -86,6 +122,11 @@ bytes separately from host tokens/cache and cost. Do not sum a parent session's
 reported fields again from individual assistant messages; independently compare
 those message sums where the host exposes them. Descendant totals and unexposed
 auxiliary billing need distinct treatment.
+
+Only finite nonnegative numeric metric samples contribute to statistics. Booleans,
+negative/nonfinite/nonnumeric observations and non-dict usage containers count as
+missing. Nonfinite values in returned rows become JSON null; failed/missing planned
+rows and exact raw-result review bindings remain intact.
 
 These modes change procedures/roles, not just context disclosure. Lower input or
 cost does not prove a context-efficiency improvement. Such a claim needs matched

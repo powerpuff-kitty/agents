@@ -3,12 +3,14 @@ import json
 import os
 import subprocess
 import shutil
+import sys
 from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
 
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'scripts'))
 spec=importlib.util.spec_from_file_location('behavior_eval',ROOT/'scripts/behavior_eval.py');module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
 
 class BehaviorEval(unittest.TestCase):

@@ -1,0 +1,26 @@
+{
+  "format_version": 1,
+  "case_id": "implementation-unavailable-check",
+  "role": "feature-developer",
+  "skill": "systematic-debugging",
+  "workspace_sha256": {
+    "CONTRACT.md": "b0f69d8a06ac50264e12380a93dedde353cc1caf73e2489451dee5973fd78052",
+    "owner-note.txt": "5d4b18c4dbe069d750ff20076220c59997fcef2def70f90472c64702dc9a6b67",
+    "port.ts": "478aabf961f04f21f45decbf4292b75e4bc10a767b35dcf5a74fe15d27a3ee7d"
+  },
+  "instruction_sha256": {
+    "role.md": "35bfbb65be7f2fdabe38d15882deb92212aae2045444ef390c3239cf511034a9",
+    "skill/LICENSE": "da8e7b98c9f5547396031dd15ffe7a820eb8c2b9e4d1b32c9eb69bbc0d2c5af4",
+    "skill/SKILL.md": "de1be21daed80af51ea99f1523bef2653f6388aa3bc8ec41b7bf39d0f8019202",
+    "skill/references/investigation.md": "8ae2b90c87e4de6de9015b8c848a6274b94ba7ceeb2b7e5e67e6a9fc12ba65a4",
+    "skill/tests/cases.json": "4e40b8e96a2fa7a63396ba59fac2e2c6dc8c5ae353f5b2ba46579eef22914e5e"
+  },
+  "task_sha256": "42cfc324d89630fd7a4f7413af1707f8db43f9bbf9facf98b80c38f6d416dd5f",
+  "source_revision": "1ecc04a0648d76ffb4558b882fd7e1d28384453e",
+  "instruction_mode": "explicit",
+  "preparer_sha256": "908c82e9b477e67735af40afdf6f702a2b770dbd06100bd534df1ae3cfe06872",
+  "skills_revision": "c54a95ecccdc20e5df1c655746802465cdb8f602",
+  "source_note": "instruction hashes include working-tree changes",
+  "initial_git_status": null,
+  "initial_staging_identity": null
+}

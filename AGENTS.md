@@ -43,6 +43,7 @@ Before completing a change, run:
 ```sh
 python3 scripts/validate.py
 python3 scripts/check_docs.py
+python3 scripts/check_evidence.py
 python3 scripts/build.py --adapter portable
 python3 scripts/build.py --adapter opencode
 python3 scripts/build.py --adapter portable --check

@@ -1,0 +1,21 @@
+{
+  "status": "collected",
+  "time_limit_seconds": 600,
+  "reported_cost_limit_cumulative": 0.75,
+  "model_requested": {
+    "providerID": "deepseek",
+    "id": "deepseek-v4-pro"
+  },
+  "acceptance": "needs_independent_review",
+  "prior_result_sha256": "702ff402c8bcfe1883c7281478fb9b24531a9a3df746c1f39a0b282caa770b62",
+  "usage_scope": "Cumulative original root and discovered descendants, including prior turn; do not add to prior usage again.",
+  "seconds": 1.467,
+  "usage_cumulative": {
+    "input": 145279,
+    "output": 14567,
+    "cache_read": 1132288,
+    "cache_write": 0,
+    "reported_cost": 0.248817316,
+    "complete_session_fields": true
+  }
+}

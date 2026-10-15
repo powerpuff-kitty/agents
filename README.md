@@ -1,7 +1,7 @@
 # AI Agents
 
 [![CI](https://github.com/powerpuff-kitty/ai-agents/actions/workflows/validate.yml/badge.svg?branch=main&event=push)](https://github.com/powerpuff-kitty/ai-agents/actions/workflows/validate.yml)
-[![Version: 0.1.2-beta.1](https://img.shields.io/badge/version-0.1.2--beta.1-blue)](https://github.com/powerpuff-kitty/ai-agents/releases/tag/v0.1.2-beta.1)
+[![Version: 0.1.3-beta.1](https://img.shields.io/badge/version-0.1.3--beta.1-blue)](https://github.com/powerpuff-kitty/ai-agents/releases/tag/v0.1.3-beta.1)
 [![Profiles: 35](https://img.shields.io/badge/profiles-35-blue)](docs/CATALOG.md)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
@@ -58,6 +58,9 @@ offline and collects explicitly authorized trials with time/cost bounds, staging
 identity and independent acceptance records. The
 [retained comparison and project pilot](evals/observed/native-comparison-2026-10-15/README.md)
 include failures, context measurements and reviewed corrections.
+[Later reliability follow-ups](evals/observed/native-followup-2026-10-15/README.md)
+add 5 canonical executions (13/144 observed), stronger runtime checks and an offline
+evidence gate in CI; failed acceptance remains explicit.
 
 Reusable procedures live in [AI Skills](https://github.com/powerpuff-kitty/ai-skills).
 [Role-to-skill guidance](docs/SKILLS.md) explains optional domains and installation;

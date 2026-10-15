@@ -1,0 +1,67 @@
+# Independent source and native-pilot acceptance review
+
+Original report retained before coordinator discussion, 2026-10-15. Reviewer did not author either changed file, received no author conversation or desired verdict, made no source edits, used no model inference requests, installs, network, user configuration, commits, or publication. Verification used the isolated source snapshot, not the native active workspace. The enclosing TCSN entrypoint was read first; the reviewed AI Agents checkout AGENTS.md supplies the applicable gates.
+
+## Verdict
+
+**Source acceptance: PASS for the accepted measurement behavior, with a transient unrelated full-suite failure retained below.** No confirmed source requirement defect found. All seven mandatory project gate commands eventually passed against the exact supplied source hashes. Source acceptance does not establish completion of the native team workflow.
+
+**Retained original native workflow: INCOMPLETE.** One serialized writer and a fresh read-only DeepSeek quality review are evidenced. That review preceded the final correction; no final corrected-snapshot recheck, framing iteration-reviewer, final iteration-reviewer, four export gates, or explicit conditional-stage skip reasons are present in the original messages. The first continuation adds only a user prompt and performs no model/tool work. Do not classify either host “succeeded”/“collected” as task acceptance.
+
+**Outstanding continuation:** `/private/tmp/native-project-pilot-completion-v2-20261015`, continuing root session `ses_ec0f41c8affeuzCmgnaZfT89eh`. Reported active by assignment; only its directory inventory was seen. Its live messages, workspace, and results were not inspected. This original review makes no verdict about that continuation.
+
+## Target identity and scope
+
+Base revision supplied: `1ecc04a0648d76ffb4558b882fd7e1d28384453e`.
+- `scripts/native_eval_report.py`: SHA-256 `70bfd6791512d1e784390e94c0f4f5f256a8c44473470a1c2c1c291662184046`.
+- `tests/test_native_eval_report.py`: SHA-256 `a6c8f1c77cded3880a2e2ea15c5026547d2c5303f4612afb5c4375fc1750055f`.
+
+Both actual snapshot file hashes match source-identity.json and the original after.json. The native before/after manifests differ at precisely these two paths. Owner note hash remains `ad194beab679cd2d8582c9b7d953c8830867d47a2fb46abd791d0ccf34b42aee`. Git before/after preserve both staged-entry hash `34308b848f680a8c5b0fccaed09b59b73b5d34d4fcc2a8d973b313fbf6eaee9a` and index-byte hash `57c8d6aac8cb769bd294b65280dd8d6239f956224ef3506e0848355fc87209ef`. This is retained hash evidence, not a live-data inspection.
+
+## Source findings and counterevidence
+
+No confirmed defect within accepted scope. `_is_valid_observation` rejects bool before int, accepts nonnegative arbitrary-precision ints and only finite nonnegative floats, and rejects other types. All six metric keys share the predicate, retain denominator/planned rows and status/acceptance, and calculate mean/min/max from valid values only. `_usage_dict` additionally handles non-dict usage containers. Recursive sanitization prevents raw row NaN/Infinity from leaking through; main uses allow_nan=False. Review identity still hashes untouched raw result bytes before sanitization.
+
+Added tests meaningfully assert counts, statistics, failed/absent rows, unchanged acceptance provenance, result-bound review rejection on byte changes and strict JSON serialization. Coverage gaps are informational, not defects: committed tests do not directly execute the CLI write path, and the boolean/negative matrix is concentrated on input rather than every metric. Independent probes below cover those paths without altering source.
+
+Independent probe preconditions: temporary frozen plan with matching plan.sha256; 16 timed_out results plus one absent planned result; every one of input/output/cache_read/cache_write/reported_cost/seconds assigned the same matrix `[True, False, -1, -0.25, NaN, Infinity, -Infinity, None, '3', [], {}, 0, 0.0, -0.0, 4, 2.5]`. An explicit fail review attached to exact r0 result hash. Reproduction: import the supplied report module, write those JSON records with standard json.dumps, call summarize and actual `python3 scripts/native_eval_report.py --output TEMP --review TEMP/review.json`, then parse measurements.json with parse_constant rejecting NaN/Infinity. Observed each metric exactly `{observed: 5, missing: 12, mean: 1.3, min: 0, max: 4}`; statuses `{timed_out: 16, not_run: 1}`, acceptance `{fail: 1, unverified: 16}`. CLI exited 0, strict JSON matched summarize, Markdown displayed 1.3 with range, appending a single space to reviewed result caused ValueError. Additional shape probes passed for string/int/list/bool/None/empty-list/dict/zero usage. Thus boolean/negative seconds, all cache/cost keys, signed zero and CLI serialization were exercised meaningfully.
+
+## Actual independent commands and results
+
+All commands used workdir `/private/tmp/native-followup-pilot-review-20261015/source`, separately. Generated dist and Python caches in this disposable snapshot are verification outputs only.
+
+| Command | Result |
+| --- | --- |
+| `python3 scripts/validate.py` | exit 0; passed; 35 agents, 144 scenarios, 20 teams; host/command loading not checked and model behavior not run |
+| `python3 scripts/check_docs.py` | exit 0; 421 Markdown files, zero errors; local supported path syntax only |
+| `python3 scripts/build.py --adapter portable` | exit 0; built dist/portable |
+| `python3 scripts/build.py --adapter opencode` | exit 0; built dist/opencode |
+| `python3 scripts/build.py --adapter portable --check` | exit 0; verified dist/portable |
+| `python3 scripts/build.py --adapter opencode --check` | exit 0; verified dist/opencode |
+| `python3 -m unittest discover -s tests -v` | first run exit 1: 77 tests, one PermissionError in unchanged `test_cleanup_stops_owned_process_group`, native_eval.py:283 os.killpg(SIGKILL); all report tests passed |
+| `python3 -m unittest discover -s tests -p test_native_eval_report.py -v` | exit 0; 11 tests, 0.027s |
+| `python3 -m unittest discover -s tests -p test_native_eval.py -k test_cleanup_stops_owned_process_group -v` | exit 0; 1 test, 0.047s |
+| `python3 -m unittest discover -s tests -v` (retry after isolated reproduction passed) | exit 0; 77 tests, 11.018s |
+| independent standard-library heredoc matrix/CLI probe described above | exit 0; all assertions passed |
+
+First failure is not erased by retries. It occurs outside the two changed files and did not reproduce in isolation or full rerun; root cause remains unverified. No claim that the patch fixes process cleanup.
+
+## Native raw trace findings
+
+Inspected original prompt, source identity, preflight, before/after manifests, Git hashes, sessions and all raw messages under native-project-pilot-followup-20261015. Full original message digest retained in adjacent trace-digest.txt. Key source evidence:
+- Root `ses_ec0f41c8affeuzCmgnaZfT89eh` uses team-lead. Exactly one writer session `ses_ec0f00819ffeqr6JskD6YlJiGj` performs the edits and later correction.
+- Fresh quality session `ses_ec0ed1546ffesdSi2Nhkqz3pp9` begins with only independent requirements/files/check instructions, not writer explanations or desired verdict. It reads sources and AGENTS, runs actual full suite (76 tests OK, 8.319s), reads diffs/status and producer. Its trace contains no edit tool calls and unchanged start/end snapshot. This supports session-level independence and read-only review; hidden provider context or host implementation cannot be proven from exported transcript.
+- Original quality report says no confirmed requirement defect, identifies low-risk truthy non-dict usage crash, and notes CLI/coverage gaps. Its full report is retained before coordinator reconciliation. Coordinator routes that risk to the same writer, which changes the source and adds sixth test. The reviewer was not re-invoked afterward in the original trace.
+- Raw gate content (not merely metadata) confirms baseline 71 tests OK; writer initial 76 OK (8.286s); quality 76 OK (8.319s); corrected writer 77 OK (6.494s); coordinator final 77 OK (6.626s), validate passed and docs passed (640 Markdown files in scaffolded native project). Four export commands do not appear at all; they were **never run**, not failed or denied.
+- Compound shell and two reviewer inline Python calls were permission.rejected. Separate git/python commands succeed. These denials are not blanket command/executable unavailability. No installs, network-tool, commits or publication calls appear; tool names are read/shell/glob/subagent/grep/edit.
+- Original final message explicitly says maximum coordinator steps reached and missing builds/final review. Its recommendation that integrated releasability is not applicable/authorized is not a substitute for the preset always-required iteration-reviewer gate. No iteration-reviewer session is retained for framing or final readiness. Conditional stages lack explicit skip reasons in retained original messages.
+
+Completed first continuation under native-project-pilot-completion-20261015: before/after identical; its only new message ID `msg_13f1a3e35001lslKgIhUkn5kRj` is the continuation user instruction. No new assistant or tool work, no new session, no new review/gate evidence. Its 1.467s “collected” host status is insufficient for completion. Usage is explicitly cumulative; do not add it again.
+
+## Model and usage limitations
+
+Every retained assistant message in the original three sessions identifies provider `deepseek`, model `deepseek-v4-pro`, variant `default`; both delegate creation calls explicitly request the same model. Raw assistant token/cost fields sum to input 145279, output 14567, cache_read 1132288, cache_write 0, reported cost approximately 0.248817316 (binary floating summation differs in final digits), matching retained run/session totals. Original host wall time 847.177 seconds is the host's run measurement, not a provider latency decomposition. These are exposed host/provider fields only: no independent billing verification, auxiliary-call completeness, hidden provider internals, actual token loads, or generalized model quality/cost conclusion is established. No task acceptance is inferred from lower cost, successful host status, or those measurements.
+
+## Remaining limitations
+
+No browser/production checks apply to this offline Python reporting change. No network/link verification, live configuration inspection, installation, external catalog, or model execution was performed by this reviewer. The isolated source snapshot excludes native scaffolding (explaining docs count difference); independent gates cannot retroactively fill missing native workflow evidence. V2 completion must be assessed only once retained and completed, preserving both prior incomplete attempts and this original report.

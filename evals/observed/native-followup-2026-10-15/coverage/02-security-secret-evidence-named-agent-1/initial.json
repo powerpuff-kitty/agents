@@ -1,0 +1,27 @@
+{
+  "format_version": 1,
+  "case_id": "security-secret-evidence",
+  "role": "security-auditor",
+  "skill": "security-review",
+  "workspace_sha256": {
+    "AGENTS.md": "6694bbaba4e2f936143f275a7dc7a63e1e3f8e7dea7559b071ab241a8c9f0363",
+    "auth_log.py": "212078d9924f3f93c2917a58653cb1886a39ddae1f76092428956b923fcdbc47",
+    "request.log": "89debdb653f18332e6f904bb2ebec0df8e6e15d00f50ddad14ea93e7cd152c7a",
+    "sanitize_log.py": "2a996d18a9ee2e66e71494af31008a1081204b4a39c4d72c04b078e3e12c6ea4"
+  },
+  "instruction_sha256": {
+    "role.md": "ae2240972a2488c739fec58b15eef5b8f4bf909677391147361515a578a359b9",
+    "skill/LICENSE": "da8e7b98c9f5547396031dd15ffe7a820eb8c2b9e4d1b32c9eb69bbc0d2c5af4",
+    "skill/SKILL.md": "e8d9d7c26f1225a6b956c9c6cfcc1c2ad7c792f90024f0ce50e62ed533f67d68",
+    "skill/references/report-template.md": "c9261fa46a7ff01297fcae8972937998a48ac864da9c684ac8d8cd1f8049a712",
+    "skill/references/review-guide.md": "be86751d4b89f4d13b47c44d531de551e6378d2730c4a4a5ea7ae1ad337b6639"
+  },
+  "task_sha256": "e33562972ca80017bf8fc05f8abc25b83f9f6244074e1d0b74efddcca62f0e1e",
+  "source_revision": "1ecc04a0648d76ffb4558b882fd7e1d28384453e",
+  "instruction_mode": "explicit",
+  "preparer_sha256": "908c82e9b477e67735af40afdf6f702a2b770dbd06100bd534df1ae3cfe06872",
+  "skills_revision": "c54a95ecccdc20e5df1c655746802465cdb8f602",
+  "source_note": "instruction hashes include working-tree changes",
+  "initial_git_status": null,
+  "initial_staging_identity": null
+}

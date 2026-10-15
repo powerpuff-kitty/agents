@@ -1,0 +1,8 @@
+{
+  "correction_checks.py": "d1356bc5bf0bb52fd7b7b6ead7666f189f89b335bb1d658d7c4aa207a22498a5",
+  "correction-evidence.json": "c595c0336a5c88894546ed5209ee7c3ba004eb28d74739d1fb88ec7da5817ca3",
+  "correction-decisions.json": "09457c8d0a47754f31e9038bd0f7032680619f79d9a759c395e306299fffab5e",
+  "correction-report.md": "eae27da32f0b34c983b75fa2dbe98a2c6a6d6fe162358b5ee673891b83f49d5e",
+  "correction-checks-command-output.json": "3ddc65562d51ba3e141b52129b54e50b28c7f94bed09dc31edc80a2cc1c6afeb",
+  "correction-inputs/PORT_CHECK.mjs": "0edbf9bebaf2ae8ddbac23f5eee22f048424684b323d6a6c73a5362756b8832a"
+}

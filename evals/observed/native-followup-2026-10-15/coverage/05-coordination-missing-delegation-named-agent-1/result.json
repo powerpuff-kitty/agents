@@ -1,0 +1,36 @@
+{
+  "entry": {
+    "id": "05-coordination-missing-delegation-named-agent-1",
+    "case": "coordination-missing-delegation",
+    "mode": "named-agent",
+    "repeat": 1,
+    "agent": "team-lead",
+    "skill": null,
+    "prompt_sha256": "d8dd39a316d8554d0bc6c26d4e988716e99a6850e623d3968e5990cfeacaabb1",
+    "fixture_sha256": "08522dbe690b387247c31511b1302c37e22a97d2c49fd862b698c9c86fb3147e"
+  },
+  "model_requested": {
+    "providerID": "deepseek",
+    "id": "deepseek-v4-pro"
+  },
+  "timeout_seconds": 240,
+  "max_reported_cost": 0.2,
+  "task_acceptance": "needs_independent_review",
+  "status": "collected",
+  "runner_sha256": "d241d5cb980eb07387b234a9b1ab23699b81a090ce6e9930a9efdd6c423bdf3b",
+  "usage_limits": "Host session totals, including discovered descendants. Hidden auxiliary calls/billing remain unknown; reported-cost interrupt can overshoot.",
+  "host_version": "opencode v2.0.27",
+  "seconds": 75.263,
+  "usage": {
+    "input": 19381,
+    "output": 1988,
+    "cache_read": 177536,
+    "cache_write": 0,
+    "reported_cost": 0.026327971999999998,
+    "complete_session_fields": true
+  },
+  "invariants": {
+    "source_scope_preserved": true,
+    "staging_entries_preserved": true
+  }
+}

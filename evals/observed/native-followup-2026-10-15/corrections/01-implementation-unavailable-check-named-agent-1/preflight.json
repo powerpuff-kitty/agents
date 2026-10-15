@@ -1,0 +1,598 @@
+{
+  "location": {
+    "directory": "/private/tmp/native-corrections-followup-20261015/01-implementation-unavailable-check-named-agent-1/workspace",
+    "project": {
+      "id": "0b9fcf01d04d39e7d2703da7acb4da0142864acb",
+      "directory": "/private/tmp/native-corrections-followup-20261015/01-implementation-unavailable-check-named-agent-1/workspace",
+      "canonical": "/private/tmp/native-corrections-followup-20261015/01-implementation-unavailable-check-named-agent-1/workspace"
+    }
+  },
+  "session": {
+    "id": "ses_ec0e4f285ffeBtUidgtPCMyqiS",
+    "projectID": "0b9fcf01d04d39e7d2703da7acb4da0142864acb",
+    "agent": "feature-developer",
+    "model": {
+      "id": "deepseek-v4-pro",
+      "providerID": "deepseek",
+      "variant": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 0,
+      "output": 0,
+      "cache": {
+        "read": 0,
+        "write": 0
+      }
+    },
+    "time": {
+      "created": 1792060099964,
+      "updated": 1792060099964
+    },
+    "title": "Native evaluation 01-implementation-unavailable-check-named-agent-1",
+    "permissions": [
+      {
+        "action": "*",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "read",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "glob",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "grep",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "skill",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "subagent",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "execute",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "pwd",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "ls",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "ls *",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "git status*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "git diff*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "git ls-files*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "python3 -B -m unittest*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "command -v *",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "which *",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "standalone-pilot-tsc*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "node --version",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "bun --version",
+        "effect": "allow"
+      },
+      {
+        "action": "edit",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "node --experimental-strip-types port.contract.check.mjs",
+        "effect": "allow"
+      },
+      {
+        "action": "external_directory",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "read",
+        "resource": "*.env*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": ".git/*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": ".agents/*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": ".opencode/*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "opencode.json",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "labels.txt",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "test_pagination.py",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "owner-note.txt",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "CONTRACT.md",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "port.contract.check.mjs",
+        "effect": "deny"
+      }
+    ],
+    "location": {
+      "directory": "/private/tmp/native-corrections-followup-20261015/01-implementation-unavailable-check-named-agent-1/workspace"
+    }
+  },
+  "inventory": {
+    "skills": {
+      "accessibility-audit": {
+        "body_sha256": "f04008d2ab23587760f0e030e37e119ee489b86a8499d80fd3eec0ec65dc9720",
+        "utf8_bytes": 2850
+      },
+      "adapter-sync": {
+        "body_sha256": "b63c7bd74471516d54a091e9dfc8f9d1d8001e8fe2b2452532c60e92233470e6",
+        "utf8_bytes": 1602
+      },
+      "adr-management": {
+        "body_sha256": "b10b9f48148dba3d8ca7fbdcc1c9d663a56fe60ed30c73904c0f796703ca77d0",
+        "utf8_bytes": 1530
+      },
+      "agent-security-review": {
+        "body_sha256": "1031d4fb7acee3fa90641e962d402749c72a1861d6a73b296c99a5dee0bd240f",
+        "utf8_bytes": 2210
+      },
+      "agentic-app": {
+        "body_sha256": "175470aba239778967690cec3ca3daab784e22a98075bb991507dd2a6a5573eb",
+        "utf8_bytes": 2971
+      },
+      "agentic-improvement": {
+        "body_sha256": "fa355cdcb8645446a15aca238f08fb97ccd5fd4b95e2bfd9f5e0809fdc157ed2",
+        "utf8_bytes": 3323
+      },
+      "agentic-structure-audit": {
+        "body_sha256": "ba3cdc3597782063f14a1ef560f9a1027c858c9429515f4ac285e0e4966a867f",
+        "utf8_bytes": 1686
+      },
+      "api-design": {
+        "body_sha256": "e4e133d8230c0d86c59b1cf348f6daeace9bab72dfc26a1c758443de8ddebf1f",
+        "utf8_bytes": 1581
+      },
+      "backtest-validation": {
+        "body_sha256": "a77e74ca5842a86855c1ba3c5aaf01ade60fc4ba48a48b1c65c76a7b343eec00",
+        "utf8_bytes": 3251
+      },
+      "change-review": {
+        "body_sha256": "41b0a90b9a7e0b4bdd18d286ef2fc07c0a0b36edc1ffeeda13c4ca54063c0269",
+        "utf8_bytes": 3470
+      },
+      "ci-triage": {
+        "body_sha256": "1409edfa39e1df51bd1ada3550194a4ba850a9d827e827d678c10cdebe0d3b0e",
+        "utf8_bytes": 3063
+      },
+      "code-quality": {
+        "body_sha256": "4e990a164cf180b003b85ab3c017df28e6e8277df1afc4dd983e35832322c0b0",
+        "utf8_bytes": 4247
+      },
+      "codebase-audit": {
+        "body_sha256": "7a81cddb716fb1be663fac879262cc3788d0bc75b3e2d8651f0499940b23b0d8",
+        "utf8_bytes": 4575
+      },
+      "competitive-research": {
+        "body_sha256": "648bcc6092ff4c9fa082de49ea94d16056bb5fc905dd3299686919dd6ee95c5e",
+        "utf8_bytes": 1798
+      },
+      "competitor-monitoring": {
+        "body_sha256": "583a19794abcc0bf33a37adc6e5723f0b789898fce3a0471a7b70d2794688cc2",
+        "utf8_bytes": 2552
+      },
+      "component-resolution": {
+        "body_sha256": "c099863c8a72679ca708499fd34543925eb04b62d64dadf4ce639c3566362507",
+        "utf8_bytes": 2496
+      },
+      "content-brief": {
+        "body_sha256": "01005cf0f0a2a80223f88ef17f6b7c61fe30e450d8b2c302bf6a417b7a841e5a",
+        "utf8_bytes": 1767
+      },
+      "content-repurposing": {
+        "body_sha256": "2d039e79a213c1a659e3a9701855d18b014efd5794c8d746f6ab7acbe33abed5",
+        "utf8_bytes": 1771
+      },
+      "copy-editing": {
+        "body_sha256": "7300f306c39299a2fde9e8db940f57f8c9ea1837dfe12efdf1ce7b2b710d7730",
+        "utf8_bytes": 1673
+      },
+      "database-design": {
+        "body_sha256": "eda2b23048075462458eabb626688bcd5622f2570df1f67799549b4e491f2efa",
+        "utf8_bytes": 1552
+      },
+      "decision-intelligence": {
+        "body_sha256": "8e1f23ccc854fcb10f2762a9e0f823618c02350f4c6250defff2b6d74b47ab1a",
+        "utf8_bytes": 3371
+      },
+      "defi-risk-analysis": {
+        "body_sha256": "0210b70b3ec82468969e6bd5148f92bb7d81e0362a375003e5323ee7345ae46f",
+        "utf8_bytes": 2593
+      },
+      "dependency-upgrade": {
+        "body_sha256": "83eec3abb5fbb2a842a03db86f8082ae8a98b0ae686b9286a342c6b49544db47",
+        "utf8_bytes": 1442
+      },
+      "design-analysis": {
+        "body_sha256": "d2126c2a9d16e3c5116a4462d4bf6e1ed09a18a28a77cf1e5e6be3b439a00904",
+        "utf8_bytes": 3961
+      },
+      "design-extraction": {
+        "body_sha256": "4e9449540f6f855fd942cd8632855d49e02983ef96979fe231a91abbbcd1099c",
+        "utf8_bytes": 4218
+      },
+      "design-intelligence": {
+        "body_sha256": "8245fc43eef685abcb6c3ec4d64add3d9335551e1f6c301de8fd006268098526",
+        "utf8_bytes": 4714
+      },
+      "design-research": {
+        "body_sha256": "6034dd3768c10b06285a581e1f68f0727bf1b1057c96afba76a8656d8d5c2e42",
+        "utf8_bytes": 2531
+      },
+      "design-system": {
+        "body_sha256": "1479135225b1b1448887b3e1662420d7957a06670edb4b19e00409db62abbb17",
+        "utf8_bytes": 2997
+      },
+      "design-system-compliance": {
+        "body_sha256": "76f74a7ee27f729427985470b7ca32c8bbc128265c163c2d61b8902d7c3e1c63",
+        "utf8_bytes": 3507
+      },
+      "documentation": {
+        "body_sha256": "92b321f4503f3da51034d419f2b4202b06097fd6b615f87357d3f457b6edc89e",
+        "utf8_bytes": 1443
+      },
+      "financial-model-review": {
+        "body_sha256": "235f64e495dfd77a8dc202c8b3791850c9168f6121f9061676cbd2f282c7192b",
+        "utf8_bytes": 3025
+      },
+      "forecast-calibration": {
+        "body_sha256": "c98a809a5936901a3308bc004d42e6ba9800cf8f71a4196e4b0c06951854eaa1",
+        "utf8_bytes": 2670
+      },
+      "geo-measurement": {
+        "body_sha256": "35e389b5b4cb4a69d6c4d035391c058761e7752cb8a5e19172c2c1bbec9125f4",
+        "utf8_bytes": 2223
+      },
+      "identity-design": {
+        "body_sha256": "b26eb7ad7ee3dd51059be51e69cf3bbd0bfd7006ac5e83065e5a9b3133920204",
+        "utf8_bytes": 2508
+      },
+      "implementation-plan": {
+        "body_sha256": "4990612a4ef1462cb9cee653fdae058189e4eb59ef5f9b1be0756e0985223ff8",
+        "utf8_bytes": 1464
+      },
+      "incident-review": {
+        "body_sha256": "01cf70d4bbdcc26eac871b46a49634f892c3d5fc1afa75b699f1522bbcab195c",
+        "utf8_bytes": 1617
+      },
+      "market-data-validation": {
+        "body_sha256": "122f9d33f3a0d3845bdaa121463ce69f7460a7bd556a2125f61b2cd08d135af4",
+        "utf8_bytes": 3093
+      },
+      "market-opportunity-research": {
+        "body_sha256": "ca386044cdbff10ba18b740bd15eb11f4a4dd9b4852776403147186a487151d3",
+        "utf8_bytes": 2599
+      },
+      "marketing": {
+        "body_sha256": "c38afffc068ca617a64464be1b9d2e0bc0e4f4c60b6e61fb8cdeeee60a8e4dc3",
+        "utf8_bytes": 1479
+      },
+      "migration": {
+        "body_sha256": "fb10c9107b461320081843354c2163ce40731fe7c48ab3db2664f86b183aad7f",
+        "utf8_bytes": 2110
+      },
+      "model-fit": {
+        "body_sha256": "5350359f198ae135bafbeb57e2d583eb7b6d522dd32e22526efda5b458b8c640",
+        "utf8_bytes": 1645
+      },
+      "native-app-delivery": {
+        "body_sha256": "852f7da6a24f760ffd2261bf492b76fee60901e064db4bf9bae24cd8e13da97d",
+        "utf8_bytes": 2852
+      },
+      "odds-analysis": {
+        "body_sha256": "cc3defc9d76c89895551a317efa6c4cd67206c7b4ea8b17ab5c54b8ef05bf10e",
+        "utf8_bytes": 2550
+      },
+      "onchain-data-analysis": {
+        "body_sha256": "de47a656fa9d53a11f12a94e368d44ddc5e99181211c218daaf545dad19ebdeb",
+        "utf8_bytes": 2438
+      },
+      "performance-audit": {
+        "body_sha256": "d17877e5a452d959f558c8814564491c48e7534630606c648849c46ccb6a3550",
+        "utf8_bytes": 2116
+      },
+      "product-analytics": {
+        "body_sha256": "8b9af1b5016656f3a4139691850d0ce6e8da06c776b8c67e53e8785bd555a8d6",
+        "utf8_bytes": 2242
+      },
+      "product-design": {
+        "body_sha256": "19cab8d0d13615c413a3d63ec121cd5095e8cf7f026cca385fe3fd5ccb833271",
+        "utf8_bytes": 3252
+      },
+      "product-experimentation": {
+        "body_sha256": "d82e0d07a8b2f22545d30dfc5318deb4c6682eaf412b10f13a18d6048f6013a0",
+        "utf8_bytes": 2597
+      },
+      "product-instrumentation": {
+        "body_sha256": "d9f7fc81440785a63687d1ea2ca6448f3432beab65c597441a91f2fc91ecb98f",
+        "utf8_bytes": 2559
+      },
+      "project-memory": {
+        "body_sha256": "ce406d088af0bb7fc01873b690b06444312e6709cdd2923cb253be25691092aa",
+        "utf8_bytes": 2344
+      },
+      "release": {
+        "body_sha256": "8db919e101a32976e4d5e7e751bbcbdcbe4297ee75364545d45ebb906c82a5c2",
+        "utf8_bytes": 1504
+      },
+      "release-review": {
+        "body_sha256": "a3f168550f45fe5c2c9c28cf137fbb309936e5b99c733bc2242a3c2dc7da0e74",
+        "utf8_bytes": 1503
+      },
+      "repository-maintenance": {
+        "body_sha256": "dd0d7f99c4f4890c628e48a0ca85f6a14c28c5f786e99da2fb3b1a8e91b8801a",
+        "utf8_bytes": 3245
+      },
+      "security-review": {
+        "body_sha256": "179e69e6c66d0c03d10b640b97e4be10e0beb4555364277c27007a92fe0c9d35",
+        "utf8_bytes": 3599
+      },
+      "seo-audit": {
+        "body_sha256": "dabe0a8663c362930fd60d85a18b59a5145609e57d6afe700cb93951399203c5",
+        "utf8_bytes": 6341
+      },
+      "settlement-rule-review": {
+        "body_sha256": "11034cb449e0a27f9aec1e7d29a3ce40f49c9f6802888d0c643337ba3faa9f88",
+        "utf8_bytes": 2632
+      },
+      "smart-contract-review": {
+        "body_sha256": "df5c021fae80419255823fc57d2171363f4f168ac7d01db4493b324254cbc3cc",
+        "utf8_bytes": 2649
+      },
+      "structured-reflection": {
+        "body_sha256": "04219f038f22650452d29495bfb842981a222d6a607164e3846ec6abb895a32f",
+        "utf8_bytes": 2131
+      },
+      "systematic-debugging": {
+        "body_sha256": "fead16d712307de6f6a562e97d6ddd0a88f242bac403ea5b2c89aae1c5cf41e6",
+        "utf8_bytes": 2310
+      },
+      "test-engineering": {
+        "body_sha256": "8584ec3c1b56a72d4b830017c07256688ca3290e5ff1656c86f6fd40847140cb",
+        "utf8_bytes": 3935
+      },
+      "threat-model": {
+        "body_sha256": "d94141be0065808e72e83d1435c9b40d1f12187985f2ed9450e6559d6890ed50",
+        "utf8_bytes": 1765
+      },
+      "user-research": {
+        "body_sha256": "1d83b5e697e78aebd14661ff60c9f9eec75314c31ba00246a4eedbb0a0c2d5a4",
+        "utf8_bytes": 2425
+      }
+    },
+    "agents": {
+      "accessibility-specialist": {
+        "body_sha256": "09b22a4598cd98b46a23c80f0d07553fbec98278d88d520a304d8f512d3fe391",
+        "utf8_bytes": 8771
+      },
+      "artist-3d": {
+        "body_sha256": "6c938fcc42073614418579f64a324d55505cef57a8394a471fb67b7377ffe882",
+        "utf8_bytes": 6722
+      },
+      "copywriter": {
+        "body_sha256": "48ec726387e447828541dbe903d5023032035664b86fa03c3c094f4136d0c9b8",
+        "utf8_bytes": 6473
+      },
+      "data-analyst": {
+        "body_sha256": "d391d67ae053238e532defeff78078ab0e427608850e9b8528c000a2fa034db7",
+        "utf8_bytes": 7539
+      },
+      "design-analyst": {
+        "body_sha256": "93d1228631fb4f985d8adefd37293d3ae811c21a30a0bfcd3775dcf32e2bae3b",
+        "utf8_bytes": 8596
+      },
+      "designer": {
+        "body_sha256": "d786144ea59c9dd4cf638ae14deab8c8d831b51502effb7184cee5a9bc226a62",
+        "utf8_bytes": 14267
+      },
+      "evidence-validator": {
+        "body_sha256": "2c2bb0c969f569d0f0ed85ae8a720a89d7b7fe46b671b50287c8b729e7215b47",
+        "utf8_bytes": 8821
+      },
+      "feature-developer": {
+        "body_sha256": "ce1d9478ab39416cc69e89bd754ec7841a8a74f550c856ddfb4a09dc35b2d2f5",
+        "utf8_bytes": 9072
+      },
+      "financial-analyst": {
+        "body_sha256": "94ffad02b3940cbde19ac11d0804253118d1f4325f6e5705bbb5d3388a2245d8",
+        "utf8_bytes": 7543
+      },
+      "game-designer": {
+        "body_sha256": "20a099129fa8c799ff031160b63375fae7c1eb55dfc4c6bae2920ad4de877429",
+        "utf8_bytes": 6745
+      },
+      "geo-specialist": {
+        "body_sha256": "4cbe8bead5ffd0d452a6a1e378d578b919d91e050fa4fc6832f303d3780e1dab",
+        "utf8_bytes": 7155
+      },
+      "gtm-strategist": {
+        "body_sha256": "8f04b0da332228d9339d6e652e74efd68ce97999e6edc544f4c50db0979e80b6",
+        "utf8_bytes": 6483
+      },
+      "iteration-reviewer": {
+        "body_sha256": "1d840afd70e95244de29f284488c49860af08dcf88d3b7914fcbdf547e221c26",
+        "utf8_bytes": 10218
+      },
+      "localization-specialist": {
+        "body_sha256": "9c26ccc05c0a9655298273addbc90b2c484993267978d9f88719247ba1ebe38b",
+        "utf8_bytes": 6472
+      },
+      "marketing-strategist": {
+        "body_sha256": "9f1474ed371d3f67e31c0b661953ba49a2e859bebe205d87a5d6e2ef86d2df03",
+        "utf8_bytes": 6393
+      },
+      "mathematician": {
+        "body_sha256": "88d04754497aa9ecae7e914848c7bbfb3575033d77495010d92383a2a8db8537",
+        "utf8_bytes": 6908
+      },
+      "onchain-analyst": {
+        "body_sha256": "1a3c738126a75592ad6161f165ceee8285b384c0bf33893b1584e51660934df4",
+        "utf8_bytes": 7484
+      },
+      "performance-engineer": {
+        "body_sha256": "eb0bc446dc546bfefbe47dec8068efabbbbbe1ec58092a80c49d4e338dad8591",
+        "utf8_bytes": 8780
+      },
+      "portfolio-risk-analyst": {
+        "body_sha256": "f2574efca8f3a03764c906cbe46b5acb891865bb52135a0d6fa95202293de849",
+        "utf8_bytes": 7579
+      },
+      "probability-analyst": {
+        "body_sha256": "af2d2b5563ba5cb2af863663778803a09680e03ee638042755ea87120844d6cc",
+        "utf8_bytes": 7616
+      },
+      "product-manager": {
+        "body_sha256": "f77316c0bbcf44006e12bdea15698813a2a979e2c49b1367cd8410a853192961",
+        "utf8_bytes": 6525
+      },
+      "project-auditor": {
+        "body_sha256": "91c728a9481aac302a7ac4918ab1799a96f507bf798595efe1b46e065ec36ff4",
+        "utf8_bytes": 8175
+      },
+      "quality-engineer": {
+        "body_sha256": "42addf21b59727dc042b081c2fad7e7adaf0b709087586d097adff79a89da957",
+        "utf8_bytes": 10326
+      },
+      "quant-researcher": {
+        "body_sha256": "d6480eb969543a083c04712b7275e8d7d89dc92c22ec9133502c1458c152fb74",
+        "utf8_bytes": 7841
+      },
+      "release-engineer": {
+        "body_sha256": "3b0275c0dd35ec3a470681fdb6ae8191f87d20fc17cd5db4ae72ab481c8c1e9e",
+        "utf8_bytes": 9248
+      },
+      "researcher": {
+        "body_sha256": "332df3d52f66bd3ebb2a0a9cf6c64797c0c01427dcc1742c88c3b0d30982e499",
+        "utf8_bytes": 8757
+      },
+      "scientist": {
+        "body_sha256": "3aa7ce1a7adeb722d6dd7a6655ae7974eecb9a8c2577abeb4bbc771136553aa8",
+        "utf8_bytes": 7715
+      },
+      "security-auditor": {
+        "body_sha256": "8bd9d63a67cd66016d5811c58e03b4cae4cdb11b9e17c73fdf085b29f82a0826",
+        "utf8_bytes": 8498
+      },
+      "seo-specialist": {
+        "body_sha256": "7edca07a5231580786f33dcf9abf6f27a664d3e212ca61c361b1e95dd4a81fb8",
+        "utf8_bytes": 6665
+      },
+      "system-architect": {
+        "body_sha256": "cd6c094d39f866ad8137e300ee10cc919bdeb089f98e530ab29fbd2df440bd1d",
+        "utf8_bytes": 8457
+      },
+      "team-lead": {
+        "body_sha256": "c74e5b72fbf35b40e5b48effbb3caca4762ca6aa63e700ca9ecdcde0e6d91e59",
+        "utf8_bytes": 17228
+      },
+      "technical-artist": {
+        "body_sha256": "65a4a931b698bc0965306f3f9ff997ba3a612a7b4f46ca2990a62e8ba258e708",
+        "utf8_bytes": 6710
+      },
+      "usability-auditor": {
+        "body_sha256": "daf9b41fb6e977b1d8478e7d1c6f6d2358c446e6dd60339bfef9da4c3219c7c7",
+        "utf8_bytes": 7555
+      },
+      "user-researcher": {
+        "body_sha256": "2d1d08580698596256fb25faafb55fa21b160c0081809dba5d710cc089b8706a",
+        "utf8_bytes": 6993
+      },
+      "ux-designer": {
+        "body_sha256": "0e80e5768b22da93872a0834e15929a15bba074bffc6fbbfb5a4863a3d3eac20",
+        "utf8_bytes": 8332
+      }
+    },
+    "built_in_build": {
+      "registered_system_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "steps": 12,
+      "limits": "Registered fields only; the complete provider prompt is not exposed."
+    }
+  }
+}

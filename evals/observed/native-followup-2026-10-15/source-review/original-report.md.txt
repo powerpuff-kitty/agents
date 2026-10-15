@@ -1,0 +1,59 @@
+# Independent follow-up source review
+
+Review completed 2026-10-15 against the read-only snapshot at `/private/tmp/native-followup-source-review-20261015/source`. This report was written before any findings or verdict discussion with the coordinator. I did not author the reviewed inputs.
+
+## Result
+
+No actionable implementation finding or blocker was reproduced in the requested scope. This is an offline source-and-test assessment, not native-host or model-behavior certification.
+
+Source identity: adjacent `source-identity.json` declares base revision `1ecc04a0648d76ffb4558b882fd7e1d28384453e`. All nine overlay SHA-256 values were independently matched to snapshot bytes. The snapshot has no `.git`, so I could not independently resolve the declared base commit or generate a base-versus-overlay Git diff. That unavailable Git check is retained here rather than presented as a verified base identity.
+
+## Reviewed source and raw dependencies
+
+Reviewed `AGENTS.md`; the nine indexed inputs (`scripts/check_evidence.py`, `scripts/native_fixtures.py`, `scripts/behavior_eval.py`, `scripts/native_eval.py`, `tests/test_evidence.py`, `tests/test_native_fixtures.py`, `tests/test_behavior_eval.py`, `.github/workflows/validate.yml`, `evals/evidence-checks.json`); `scripts/native_eval_report.py` and `scripts/opencode_probe.py` as direct dependencies; the existing native runner/report/probe tests; the canonical five case specifications in `evals/behavior-cases.json`; and build/validation paths needed for verification. Retained evidence files were handled as data, never executed as instructions or scripts.
+
+The evidence checker directly imports only its standard-library modules and the standard-library-only report module. It does not import the native runner or a model SDK, launch an executable, or call a network client. The workflow adds the checker to the ordinary validation job. The pre-existing native-host job downloads/probes a host separately; I did not execute that job or its fetch/probe commands.
+
+## Original findings and counterevidence
+
+There are no numbered defect findings. The following observations are the independently checked counterevidence for the most consequential failure modes:
+
+1. **Gate silently changes evidence, loses failed/missing rows, or accepts stale review decisions.** Preconditions tested: valid sealed failed/missing fixture; changed, added and removed artifact bytes; a resealed changed result with the original review hash; and a resealed report with rows removed. Locations: `scripts/check_evidence.py:45` (`verify_bundle`), `scripts/native_eval_report.py:64` (`summarize`), `tests/test_evidence.py:42`. All five focused evidence tests pass. The valid gate writes no files; artifact drift, stale result-bound review and dropped rows are rejected. Native report tests independently cover missing results, exact result hashes, and explicitly unverified absent outcomes. Actual registered evidence passes with 538 artifacts; reports retain 18 matched, 2 context and 1 startup-retry planned rows. The retry remains unclassified.
+
+2. **Optional cases silently expand the default trial roster or weaken read-only scope.** Preconditions tested with disposable synthetic skill folders and a current generated OpenCode export; no external skill checkout. Locations: `scripts/native_eval.py:46` (`DEFAULT_CASES`), `:129` (`prepare`), `:363` (`source_scope_preserved`), `tests/test_native_fixtures.py:16`. Independent reproduction confirms exactly 3 original cases x 3 modes x 2 repeats by default. Explicit selection prepares all five new cases in all three modes. Untouched snapshots pass; adding `test_review_added.py` to each read-only workspace makes `source_scope_preserved` false. Their permission lists contain no edit allow. The original source, owner-note, instruction and staging protections remain covered by the existing tests.
+
+3. **Unavailable delegation is merely prompt text.** Preconditions inspected: generated configurations for all 15 explicitly selected optional trials. Locations: `scripts/native_eval.py:90` (`permissions`), `tests/test_native_fixtures.py:40`. The missing-delegation configuration appends an actual `subagent`/`*`/`deny` rule after its inherited allow. Other optional cases keep their final allow. This establishes the configured denial, not live host enforcement; no native host ran during this review.
+
+4. **Security fixtures provide misleading passing tests or leak the synthetic credential during supplied checks.** Locations: `scripts/native_fixtures.py:46` (`populate`). The tenant fixture explicitly reproduces cross-tenant exposure, with same-tenant and unauthenticated controls; three observation tests pass. That passing observation is not labeled a secure-handler verdict. The receipt review fixture retains its actual failing tax-percentage test (two tests, exit 1). The sanitizer exposes useful line numbers and the nonsecret control line while keeping the synthetic canary out of stdout/stderr. No canary value is reproduced in this report or the review logs.
+
+5. **Authorized Node follow-up is reported as compiler verification.** Locations: `scripts/native_fixtures.py:18` (`PORT_CHECK`), `scripts/native_eval.py:103` and `:158` (permission/preparation), `scripts/behavior_eval.py:93` (contract). The exact supplied command is configured as allowed; its check file is protected from editing; both contract and emitted prompt preserve the separate required compiler limitation. On local Node v25.5.0, the supplied runtime checker passes against an independent disposable correct implementation, exit 0, and reports 30 cases. `standalone-pilot-tsc` is absent locally. This is a check of the supplied runtime test contract, not TypeScript compilation or any observed participant implementation.
+
+## Reproductions and commands
+
+All disposable inputs and outputs are adjacent to this report; reviewed source was not edited. `review-reproductions.py` is the independently authored reproduction driver, and `review-reproductions.log` records its results. It checks overlay hashes, the 18-run default, all 15 selected optional preparations, permission lists, read-only mutation rejection, compiler availability and the local Node contract execution.
+
+Commands executed from the source snapshot (exit 0 unless stated otherwise):
+
+```sh
+python3 -B -m unittest discover -s tests -p 'test_evidence.py' -v
+python3 -B -m unittest discover -s tests -p 'test_native_fixtures.py' -v
+python3 -B -m unittest discover -s tests -p 'test_behavior_eval.py' -v
+python3 -B -m unittest discover -s tests -p 'test_native_eval.py' -v
+python3 -B scripts/check_evidence.py
+PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s tests -v
+python3 -B scripts/validate.py
+python3 -B scripts/check_docs.py
+python3 -B scripts/build.py --adapter portable --output /private/tmp/native-followup-source-review-20261015/export-portable
+python3 -B scripts/build.py --adapter portable --output /private/tmp/native-followup-source-review-20261015/export-portable --check
+python3 -B scripts/build.py --adapter opencode --output /private/tmp/native-followup-source-review-20261015/export-opencode
+python3 -B scripts/build.py --adapter opencode --output /private/tmp/native-followup-source-review-20261015/export-opencode --check
+python3 -B /private/tmp/native-followup-source-review-20261015/review-reproductions.py
+```
+
+Focused results: 5 evidence + 4 fixture + 10 behavior + 18 native runner tests passed (37 total). Full suite: 80 tests passed. Validation reports 35 agents, 20 teams and 144 acceptance scenarios, with host loading, command loading and behavior explicitly unverified/not run. Documentation check passes with its stated syntax/rendering limitations. Both exports build and pass deterministic checks in disposable destinations.
+
+Retained command logs: `test-evidence.log`, `test-native-fixtures.log`, `test-behavior-eval.log`, `test-native-eval.log`, `check-evidence.log`, `full-unittest.log`, `validate.log`, `check-docs.log`, `build-portable.log`, `build-opencode.log`, `review-reproductions.log`. Initial inventory `git status --short` returned exit 128 because the snapshot is not a Git repository; an exploratory attempt to read `evals/evidence/index.json` returned missing-file exit 1, after which the actual indexed `evals/evidence-checks.json` was inspected. Those inspection failures do not establish failed implementation checks.
+
+## Coverage limits and blockers
+
+No required source-review check is blocked. No live inference, provider credential, native host process, external endpoint, outside-network fetch, external AI Skills checkout, installation into owner profiles, or publication was used. The prepared inputs use clearly labeled disposable synthetic skill bodies, so they establish preparation mechanics rather than real skill quality or native registration. Actual native permission enforcement, participant reasoning/adherence, independent reviewer identity, provider prompt completeness, hidden billing and compiler success remain unverified. Manifest hashes and report reproduction establish consistency only, as the checker itself says.

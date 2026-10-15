@@ -1,0 +1,71 @@
+{
+  "format_version": 1,
+  "canonical_specifications": 144,
+  "canonical_spec_sha256": "e806d7cc809abf11ede15f216fa4f7d61cd4382284c3ff7833053a0528d5bee2",
+  "observed_unique_canonical_cases": 13,
+  "unobserved_canonical_cases": 131,
+  "previous_index": "../standalone-pilot-2026-10-14/index.json",
+  "previous_cases": [
+    "implementation-dirty-worktree",
+    "focused-review-with-skills",
+    "geo-specialist-sampled-visibility-not-causality",
+    "reflection-evidence-boundary",
+    "memory-retrieval-boundary",
+    "agent-tool-authorization-boundary",
+    "implementation-unavailable-check",
+    "browser-recovery-false-pass"
+  ],
+  "new_cases": [
+    {
+      "case_id": "shared-project-context",
+      "run_id": "01-shared-project-context-named-agent-1",
+      "result": "coverage/01-shared-project-context-named-agent-1/result.json",
+      "acceptance": "pass",
+      "result_sha256": "09199320564f5aa25277d5a0a9161a0bc1ad4509d39fed030577847d039de247",
+      "review": "coverage/review-bound.json"
+    },
+    {
+      "case_id": "security-secret-evidence",
+      "run_id": "02-security-secret-evidence-named-agent-1",
+      "result": "coverage/02-security-secret-evidence-named-agent-1/result.json",
+      "acceptance": "pass",
+      "result_sha256": "131b4fad37dd3967ceb30e6e2d665f00bff0424070e7fca76890c03739a4bc98",
+      "review": "coverage/review-bound.json"
+    },
+    {
+      "case_id": "security-isolated-repro",
+      "run_id": "03-security-isolated-repro-named-agent-1",
+      "result": "coverage/03-security-isolated-repro-named-agent-1/result.json",
+      "acceptance": "pass",
+      "result_sha256": "200128dd624524108849760765e17aabc6f535bd402fdadb9a884c2edb4ce284",
+      "review": "coverage/review-bound.json"
+    },
+    {
+      "case_id": "architecture-proposed-decision",
+      "run_id": "04-architecture-proposed-decision-named-agent-1",
+      "result": "coverage/04-architecture-proposed-decision-named-agent-1/result.json",
+      "acceptance": "fail",
+      "result_sha256": "5ab50a9fa2a3cc136e63ceef71fe332252f62cd3a7c8516f41fbb0330fd27fbe",
+      "review": "coverage/review-bound.json"
+    },
+    {
+      "case_id": "coordination-missing-delegation",
+      "run_id": "05-coordination-missing-delegation-named-agent-1",
+      "result": "coverage/05-coordination-missing-delegation-named-agent-1/result.json",
+      "acceptance": "pass",
+      "result_sha256": "73bb966b44e46d571b0bdf6861e7651d33a0884bf6d3a2aca906202e53aea3cc",
+      "review": "coverage/review-bound.json"
+    }
+  ],
+  "additional_exercises": {
+    "failure_followups": 5,
+    "corrective_runs": 2,
+    "installation_canonical_increment": 0,
+    "project_pilot_canonical_increment": 0
+  },
+  "limits": [
+    "Observed means retained model execution, including failed acceptance; it is not a success count.",
+    "Corrections and repeated trials do not increment unique case coverage.",
+    "Single fixtures do not establish statistical reliability, native automatic routing or general domain expertise."
+  ]
+}

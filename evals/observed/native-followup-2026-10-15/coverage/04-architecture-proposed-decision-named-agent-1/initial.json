@@ -1,0 +1,27 @@
+{
+  "format_version": 1,
+  "case_id": "architecture-proposed-decision",
+  "role": "system-architect",
+  "skill": "adr-management",
+  "workspace_sha256": {
+    "api.py": "23aaebc03195553ded39176495f4ebd9138b442e939af7d947568bacdb290afa",
+    "application.py": "f580e1e0348ede445db42c5e2b5ec33037725d1c03673721aadcbe3eb51c8cf8",
+    "docs/architecture.md": "db03652128322a642dbd7fa3b81ac2781920d2e54220f95e1e05ff46bedb68e8",
+    "docs/decisions/0001-application-service.md": "058bb392ccec01387146456183dfc23329f42573d85272c9bd257eec91710ea8",
+    "docs/decisions/README.md": "7376de8c0f64ddf30f0943e53e288faed2d6cc796de907dafcbe923ad34f9252",
+    "incoming-proposal.md": "f3beebf51c32ebe237170b8c49da32ca57029ecf1632de3a2db6ef2d1463d136"
+  },
+  "instruction_sha256": {
+    "role.md": "7ad075c6e8d004e70462a055ff8f06dba715d8707b7e0f4a88c558272e48e8ba",
+    "skill/LICENSE": "da8e7b98c9f5547396031dd15ffe7a820eb8c2b9e4d1b32c9eb69bbc0d2c5af4",
+    "skill/SKILL.md": "f290add339439f1c944589267fa3b454d08b2cb282ccad20a83f4a2a7c4a9c36"
+  },
+  "task_sha256": "23dd2a3b94cb12376410b1243c6c82252628f5b87989a51bc60fd186fac5abaa",
+  "source_revision": "1ecc04a0648d76ffb4558b882fd7e1d28384453e",
+  "instruction_mode": "explicit",
+  "preparer_sha256": "908c82e9b477e67735af40afdf6f702a2b770dbd06100bd534df1ae3cfe06872",
+  "skills_revision": "c54a95ecccdc20e5df1c655746802465cdb8f602",
+  "source_note": "instruction hashes include working-tree changes",
+  "initial_git_status": null,
+  "initial_staging_identity": null
+}

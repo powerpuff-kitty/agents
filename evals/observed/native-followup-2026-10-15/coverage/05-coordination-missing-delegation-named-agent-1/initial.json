@@ -1,0 +1,26 @@
+{
+  "format_version": 1,
+  "case_id": "coordination-missing-delegation",
+  "role": "team-lead",
+  "skill": "change-review",
+  "workspace_sha256": {
+    "CONTRACT.md": "fa1ef0d9e22fc69c2fd445367769f37bb8e3c69edd38a71d9cc1b04d5579d2df",
+    "receipt.py": "30ae8e89673e16cfcbd7af0050f4f9a867f18900a8caece229ba893a2c5a69d0",
+    "test_receipt.py": "a74d99219ce22e4f59f6a02acbcbb2bf5e4a5963e4d35f4802e9a22dcba636f2"
+  },
+  "instruction_sha256": {
+    "role.md": "f82571e00f23802d261403b2b3c7ae27a2b8256db2adaa2767ed3a2135eb3f57",
+    "skill/LICENSE": "da8e7b98c9f5547396031dd15ffe7a820eb8c2b9e4d1b32c9eb69bbc0d2c5af4",
+    "skill/SKILL.md": "6e000682dde1623ed721826b2e925527df35993b09c797503efc8b7b60079702",
+    "skill/references/review-method.md": "8f998b4e2fc5986a571df9d166b40d6779cf5e48cab72a29113558192b75de67",
+    "skill/tests/cases.json": "1e71bdee94ab154762d6e2623631b500d1924b31533b61fa63a9c201bfeb2410"
+  },
+  "task_sha256": "0e01b53b2a8938b3d85591e9df5547fc772c53aa4d4ccdc0e9e33a90d34116ca",
+  "source_revision": "1ecc04a0648d76ffb4558b882fd7e1d28384453e",
+  "instruction_mode": "explicit",
+  "preparer_sha256": "908c82e9b477e67735af40afdf6f702a2b770dbd06100bd534df1ae3cfe06872",
+  "skills_revision": "c54a95ecccdc20e5df1c655746802465cdb8f602",
+  "source_note": "instruction hashes include working-tree changes",
+  "initial_git_status": null,
+  "initial_staging_identity": null
+}

@@ -1,0 +1,227 @@
+{
+  "format_version": 1,
+  "plan_sha256": "854c10087146fab4f596ce63fb4720758db83c1ab829a95779f8dd2f49447302",
+  "planned": 2,
+  "same_starting_file_hashes_per_case": {
+    "implementation-unavailable-check": true,
+    "architecture-proposed-decision": true
+  },
+  "runs": [
+    {
+      "id": "01-implementation-unavailable-check-named-agent-1",
+      "case": "implementation-unavailable-check",
+      "mode": "named-agent",
+      "repeat": 1,
+      "status": "collected",
+      "acceptance": "pass",
+      "usage": {
+        "input": 44791,
+        "output": 2038,
+        "cache_read": 219392,
+        "cache_write": 0,
+        "reported_cost": 0.048438764,
+        "complete_session_fields": true
+      },
+      "seconds": 91.414,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "feature-developer": 12
+        },
+        "skill_events": {},
+        "skill_message_utf8_bytes": 0,
+        "tool_calls": {
+          "read": 9,
+          "shell": 4,
+          "glob": 5,
+          "write": 1
+        },
+        "tool_statuses": {
+          "completed": 18,
+          "error": 1
+        },
+        "tool_result_failures": 2,
+        "instruction_file_reads": [],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true
+      },
+      "result_sha256": "ead36664de82904f01d574895b195775b414ab030286819f31f1d435dde9febd",
+      "review_notes": "Correct scoped validation with constant diagnostics for unsupported types; no String(value) or conversion hooks on invalid objects. Actual trial runtime check passes 34 cases; reviewer repeats exact candidate bytes and supplemental no-coercion/boundary checks successfully in disposable copy. Only port.ts changes; owner note and check fixture preserved byte-for-byte. Compiler lookup actually exits 1; final explicitly distinguishes runtime from unavailable compiler and self-check from independence. Step cap observed, but bounded implementation/check/report deliverable complete. No compiler success inferred.",
+      "registered_source_bytes": {
+        "skills": 162167,
+        "agents": 288662
+      }
+    },
+    {
+      "id": "02-architecture-proposed-decision-named-agent-1",
+      "case": "architecture-proposed-decision",
+      "mode": "named-agent",
+      "repeat": 1,
+      "status": "collected",
+      "acceptance": "fail",
+      "usage": {
+        "input": 20265,
+        "output": 2428,
+        "cache_read": 82944,
+        "cache_write": 0,
+        "reported_cost": 0.023549328000000005,
+        "complete_session_fields": true
+      },
+      "seconds": 57.159,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "system-architect": 6
+        },
+        "skill_events": {},
+        "skill_message_utf8_bytes": 0,
+        "tool_calls": {
+          "read": 16,
+          "glob": 1
+        },
+        "tool_statuses": {
+          "completed": 17
+        },
+        "tool_result_failures": 0,
+        "instruction_file_reads": [
+          {
+            "path": "/private/tmp/native-corrections-followup-20261015/02-architecture-proposed-decision-named-agent-1/workspace/.opencode/agents/system-architect.md",
+            "status": "completed"
+          }
+        ],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true
+      },
+      "result_sha256": "80dd611a451552af79b826b8f3e56db02fee6b44457058c7ae764a921ffacaad",
+      "review_notes": "Policy placement/proposed recommendation and accepted ADR preservation remain sound. Actual-check claim still false: report says only eight files in project and glob returned exactly these; retained glob returns seven nonhidden files, with system-architect role read separately. Hidden .agents/.opencode contain many more files not read. Also unqualified statement current atomic primitive already provides needed guarantee exceeds evidence: storage code and transaction behavior absent. This is inspection-reporting/reasoning failure, not unauthorized file mutation; no source/ADR changes.",
+      "registered_source_bytes": {
+        "skills": 162167,
+        "agents": 288662
+      }
+    }
+  ],
+  "groups": [
+    {
+      "case": "architecture-proposed-decision",
+      "mode": "named-agent",
+      "planned": 1,
+      "statuses": {
+        "collected": 1
+      },
+      "independent_acceptance": {
+        "fail": 1
+      },
+      "metrics": {
+        "input": {
+          "observed": 1,
+          "missing": 0,
+          "mean": 20265,
+          "min": 20265,
+          "max": 20265
+        },
+        "output": {
+          "observed": 1,
+          "missing": 0,
+          "mean": 2428,
+          "min": 2428,
+          "max": 2428
+        },
+        "cache_read": {
+          "observed": 1,
+          "missing": 0,
+          "mean": 82944,
+          "min": 82944,
+          "max": 82944
+        },
+        "cache_write": {
+          "observed": 1,
+          "missing": 0,
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "reported_cost": {
+          "observed": 1,
+          "missing": 0,
+          "mean": 0.023549328000000005,
+          "min": 0.023549328000000005,
+          "max": 0.023549328000000005
+        },
+        "seconds": {
+          "observed": 1,
+          "missing": 0,
+          "mean": 57.159,
+          "min": 57.159,
+          "max": 57.159
+        }
+      }
+    },
+    {
+      "case": "implementation-unavailable-check",
+      "mode": "named-agent",
+      "planned": 1,
+      "statuses": {
+        "collected": 1
+      },
+      "independent_acceptance": {
+        "pass": 1
+      },
+      "metrics": {
+        "input": {
+          "observed": 1,
+          "missing": 0,
+          "mean": 44791,
+          "min": 44791,
+          "max": 44791
+        },
+        "output": {
+          "observed": 1,
+          "missing": 0,
+          "mean": 2038,
+          "min": 2038,
+          "max": 2038
+        },
+        "cache_read": {
+          "observed": 1,
+          "missing": 0,
+          "mean": 219392,
+          "min": 219392,
+          "max": 219392
+        },
+        "cache_write": {
+          "observed": 1,
+          "missing": 0,
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "reported_cost": {
+          "observed": 1,
+          "missing": 0,
+          "mean": 0.048438764,
+          "min": 0.048438764,
+          "max": 0.048438764
+        },
+        "seconds": {
+          "observed": 1,
+          "missing": 0,
+          "mean": 91.414,
+          "min": 91.414,
+          "max": 91.414
+        }
+      }
+    }
+  ],
+  "review_sha256": "8f56695c6a1c3e82e9859876405823e95cb519a39421e360d7adac151abad2ad",
+  "limits": [
+    "Built-in build is explicitly pinned for ordinary/skill controls; named-agent changes that primary.",
+    "Role and skill treatments are different interventions, not a context-only savings experiment.",
+    "Source bytes, instruction events, host-reported tokens/cache and billed costs are distinct.",
+    "Unexposed auxiliary calls/settings remain unknown; sample sizes do not establish statistical reliability.",
+    "No task success is inferred from host outcome, artifact invariants or a lower token count."
+  ]
+}

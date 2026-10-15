@@ -24,6 +24,9 @@
 - Report source-confirmed, measured, and heuristic claims distinctly. Cite exact
   locations and reproducible checks. Redact credentials and sensitive data; use
   synthetic fixtures. Unavailable evidence stays unverified, not passed or failed.
+  Directory listings, search hits and partial reads do not establish full-file
+  inspection. Bound inspection claims to the sources actually examined; qualify
+  predictions about unimplemented alternatives rather than presenting them as facts.
 - Independent reviews use a separate reviewer context when supported and scoped;
   do not relabel author self-checks as independent. Retain source/input identity,
   actual isolation limits and original findings before reconciliation. An earlier

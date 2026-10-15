@@ -1,0 +1,9 @@
+test_capability_denial_is_actual_rule_and_other_cases_keep_delegation (test_native_fixtures.NativeFixtureTests.test_capability_denial_is_actual_rule_and_other_cases_keep_delegation) ... ok
+test_cases_are_canonical_and_readonly_scope_rejects_added_tests (test_native_fixtures.NativeFixtureTests.test_cases_are_canonical_and_readonly_scope_rejects_added_tests) ... ok
+test_local_security_controls_and_coordinator_failure (test_native_fixtures.NativeFixtureTests.test_local_security_controls_and_coordinator_failure) ... ok
+test_sanitizer_preserves_useful_locations_without_printing_canary (test_native_fixtures.NativeFixtureTests.test_sanitizer_preserves_useful_locations_without_printing_canary) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.465s
+
+OK

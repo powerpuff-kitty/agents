@@ -1,0 +1,88 @@
+# Independent installation exercise review
+
+Reviewed 2026-10-15. This is separate from `original-report.md`. Inputs were read-only originals at `/private/tmp/installation-followup-20261015` and `/private/tmp/installation-followup-recheck-20261015`; I did not author the exercises or original records. Reproductions modify only adjacent disposable copies.
+
+## Assessment
+
+The recheck and independent replay support all requested installation-target safety behaviors: dry-run target preservation, edited-profile conflict protection, explicit replacement with an exact backup and preserved mode, preservation of unrelated profiles, repeated-update idempotence, and preservation of previously selected profile bytes/mode when a different role is selected.
+
+Two qualifications must remain visible: the first exercise has a tautological preservation assertion that is corrected in the recheck, and the recorded plain `python3` invocation does create source bytecode caches on a cold dry run. Consequently, a literal filesystem-wide “dry runs write nothing” claim is false for that invocation. No failure of the installation-target safety behavior was reproduced. If global no-write behavior is required, use the independently verified `python3 -B` invocation or equivalent bytecode suppression and retain that boundary explicitly.
+
+## Source and script identities
+
+Both records declare source revision `1ecc04a0648d76ffb4558b882fd7e1d28384453e`. Both actual installer files have SHA-256 `b63f271916165db8c26fc63bc65f9660d54fe630f0c08df375d3b19f75b1e592`, matching their records. The complete retained authored-source file maps, excluding Python caches, are identical between both inputs. Their map identity is SHA-256 `b041ed90f7d31d6ca6c7e86d13ac92d3a777c7ca2b147469b1bdd22d2e63b6c7`, computed over UTF-8 `json.dumps(map, sort_keys=True, separators=(',', ':'))` of relative path to actual file SHA-256. The complete maps are retained in `installation-review-checks.json`.
+
+| Input | Actual exercise.py SHA-256 | Actual records.json SHA-256 |
+| --- | --- | --- |
+| installation-followup-20261015 | `7b1cb3f1cdb8639c6416e5b62f5062213a1746f8c9296d466de207e287b374f9` | `58b6dd0d1c9a017aed0adc770d417350148622ab0ca565d806d434c4d1f07e6e` |
+| installation-followup-recheck-20261015 | `cf682bbc1c10955ab5725f07c0c374e2d20a952114cee3d80024123a25037c19` | `a2adf05f2fcd1ff8a32a63a69d08f5b6360ff51a96201facd2fe3feace7fe53c` |
+
+The source copies intentionally contain a synthetic appended designer instruction used to simulate an upstream update; they are not pristine base archives. No `.git` exists in those copies, so the declared base commit was not independently resolved. The installer bytes, exercise bytes and actual retained full source maps were independently checked. `AGENTS.md` and `source/scripts/install.py` were read; the renderer/build dependencies were inspected in the preceding source review and included in these recorded maps.
+
+## Findings
+
+### I1. Original partial-selection assertion cannot establish prior-profile preservation; recheck fixes it
+
+Location: `/private/tmp/installation-followup-20261015/exercise.py:29`.
+
+Precondition: run the final different-role installation, then evaluate the original `smaller_different_selection_keeps_prior_profile` expression. `designer` is `target/'designer.md'`, while `target.parent/'agents/designer.md'` is the same file. Comparing their bytes therefore compares the file to itself. It remains true for changed bytes and does not compare the prior mode. `unrelated.exists()` checks presence only.
+
+The original recorded `true` is insufficient evidence for the claimed preservation. This is an exercise assertion defect, not a reproduced installer deletion or overwrite.
+
+Counterevidence: `/private/tmp/installation-followup-recheck-20261015/exercise.py:29` compares the current designer and unrelated hash/mode records to `before`, captured at line 26 before the repeated update and final partial selection; the intervening repeat is itself checked for snapshot equality. It also requires the new quality-engineer profile. My independent replay captures designer/unrelated identity immediately before the different selection and verifies the designer hash, mode and modification time afterwards. All pass. Thus the separate recheck and independent replay resolve this evidence gap; the original exercise should remain recorded with its limitation.
+
+### I2. Plain Python cold dry run writes source caches outside the measured installation subtree
+
+Locations: both `exercise.py:7-8` (`snap` only traverses `target.parent`), `:11-12` (plain `python3` subprocess); `source/scripts/install.py:13` (imports build), `:98` (compiles profiles before checking dry-run), `:125` (correctly avoids applying targets on dry-run).
+
+Preconditions: writable source copy with no `__pycache__`, normal Python bytecode generation enabled, then execute the exercise's installer command shape:
+
+```sh
+python3 scripts/install.py --agent designer --target /disposable/installed/agents --dry-run
+```
+
+Independent reproduction on Python 3.14 creates these four source nodes while preserving the complete installation subtree:
+
+```text
+scripts/__pycache__
+scripts/__pycache__/build.cpython-314.pyc
+adapters/opencode/__pycache__
+adapters/opencode/__pycache__/render.cpython-314.pyc
+```
+
+Both retained original source directories also contain those two bytecode files. The originals' `dry_run_no_writes` snapshot cannot see them because it only measures `installed/` files, and cannot detect added empty directories, timestamps, transient writes or same-byte rewrites. Therefore its boolean establishes a narrower file-content/mode result, not a global absence of writes.
+
+Counterevidence: the installer source plans all target changes and calls `apply_target` only when `dry_run` is false. My replay verifies no directory/file inventory, content, mode, modification-time or change-time differences in the installation subtree during the first dry run. A separate cold dry run with `python3 -B` and a nonexistent installation destination passes with no such differences anywhere in the complete bounded reproduction tree, including source. This is the concrete verified command variant for a strict no-write exercise.
+
+## Independent checks and observed artifacts
+
+`installation-review-checks.py` reads both originals, validates their artifacts and source identities, then independently recreates the sequence using a copied source. It does not execute either original `exercise.py` or consult the real repository path hard-coded there. For reproduction only, it removes bytecode caches from the copy and removes the exact synthetic instruction suffix to reconstruct the pre-update fixture, then appends the same suffix at the update step.
+
+Observed checks (all pass except the intentionally falsified global cold-dry no-write claim):
+
+- Both retained final snapshots exactly match the current files' hashes and modes, independently recomputed.
+- Managed-state hashes match the actual designer, quality-engineer and license files; the unrelated profile is outside the managed roster.
+- Both retained backups contain exactly the old rendered profile plus the owner customization; removing the exact customization suffix yields the designer hash recorded in the backed-up prior management state. Backup designer mode is `0640`.
+- Actual installed designer mode is `0640`; unrelated owner bytes and mode `0600` survive; the updated designer contains the synthetic upstream change.
+- Initial dry run: exit 0, no installation-tree inventory/content/mode/mtime/ctime changes; source cache creation is separately recorded.
+- Initial install: exit 0.
+- Ordinary update after upstream and owner edits: exit 1 with the locally-edited-output message; no bounded source/target tree inventory/content/mode/mtime/ctime changes.
+- Replacement preview: exit 0, no bounded tree changes.
+- Explicit replacement: exit 0, backup bytes exactly equal customized pre-replacement bytes, backup and replacement modes both `0640`.
+- Repeated update: exit 0, `changed: []`, no bounded tree changes including backups and management state.
+- Different partial selection: exit 0, new quality-engineer exists, prior designer bytes/mode/mtime and unrelated bytes/mode remain identical.
+- Both complete original trees remain unchanged in content, file/directory inventory and mode after review.
+- Separate cold `python3 -B` dry run against a nonexistent target: exit 0, full bounded source/target tree unchanged.
+
+## Commands and retained actual results
+
+```sh
+python3 -B /private/tmp/native-followup-source-review-20261015/installation-review-checks.py
+python3 -B /private/tmp/native-followup-source-review-20261015/installation-cold-dry-check.py
+```
+
+Both commands exited 0. Exact child argument arrays, executable path, working directories, exit codes, stdout and stderr are retained in `installation-review-checks.json` (seven installer invocations) and `installation-cold-dry-check.json` (one additional invocation). Their top-level execution logs are `installation-review-checks.log` and `installation-cold-dry-check.log`. The independently authored scripts are retained adjacent to this report; reproduction trees are `installation-independent-reproduction/` and `installation-cold-dry-reproduction/`.
+
+## Limits and completion boundary
+
+No actual host configuration, existing owner profile directory, provider credential, native host, inference, live service or network was used. Every subprocess installer target is explicit and under a disposable reproduction directory. This verifies local installer behavior for the supplied role-update cases, not native profile/command loading or model outcomes; canonical behavioral coverage remains unchanged. No universal crash/concurrency/rollback guarantee follows from these exercises. Snapshots omit access times and cannot prove absence of transient or outside-tree writes; bytecode behavior is reported explicitly rather than hidden by an installation-only snapshot. No installer target-safety blocker remains for the tested cases; the global no-write wording requires the invocation/boundary qualification described above.

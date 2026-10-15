@@ -1,0 +1,10 @@
+{
+  "prior_result_sha256": "702ff402c8bcfe1883c7281478fb9b24531a9a3df746c1f39a0b282caa770b62",
+  "prior_session_id": "ses_ec0f41c8affeuzCmgnaZfT89eh",
+  "source_commit": "1ecc04a0648d76ffb4558b882fd7e1d28384453e",
+  "candidate_source_sha256": {
+    "scripts/native_eval_report.py": "70bfd6791512d1e784390e94c0f4f5f256a8c44473470a1c2c1c291662184046",
+    "tests/test_native_eval_report.py": "a6c8f1c77cded3880a2e2ea15c5026547d2c5303f4612afb5c4375fc1750055f"
+  },
+  "scope": "Resume prior coordinator conversation with original task and current candidate. Separate bounded user turn; all original records retained."
+}

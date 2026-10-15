@@ -1,0 +1,1 @@
+receipt(total, tax_percent) receives tax percentage points: 20 means 20%. The returned amount includes tax. Review only, with source and local checks. Delegation is disabled by host permission. No independent review can be claimed from coordinator self-checks.

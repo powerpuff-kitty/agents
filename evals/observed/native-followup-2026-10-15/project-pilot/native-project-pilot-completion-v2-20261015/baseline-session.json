@@ -1,0 +1,216 @@
+{
+  "id": "ses_ec0f41c8affeuzCmgnaZfT89eh",
+  "projectID": "2c9954ae80f50da617b54cb5c579faa8d9744537",
+  "agent": "team-lead",
+  "model": {
+    "id": "deepseek-v4-pro",
+    "providerID": "deepseek",
+    "variant": "default"
+  },
+  "cost": 0.125583876,
+  "tokens": {
+    "input": 82892,
+    "output": 5424,
+    "cache": {
+      "read": 507648,
+      "write": 0
+    }
+  },
+  "outcome": "succeeded",
+  "time": {
+    "created": 1792059106201,
+    "updated": 1792060046902,
+    "idle": 1792059951233
+  },
+  "title": "AI Agents real-project measurement-validation pilot",
+  "permissions": [
+    {
+      "action": "*",
+      "resource": "*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "glob",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "grep",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "skill",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "subagent",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "execute",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "pwd",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "ls",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "ls *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git status*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git diff*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git ls-files*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python3 -B -m unittest*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "command -v *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "which *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "standalone-pilot-tsc*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "node --version",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "bun --version",
+      "effect": "allow"
+    },
+    {
+      "action": "external_directory",
+      "resource": "*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "*.env*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": ".git/*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": ".agents/*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": ".opencode/*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "opencode.json",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "labels.txt",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "test_pagination.py",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "owner-note.txt",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "CONTRACT.md",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "scripts/native_eval_report.py",
+      "effect": "allow"
+    },
+    {
+      "action": "edit",
+      "resource": "tests/test_native_eval_report.py",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python3 scripts/validate.py",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python3 scripts/check_docs.py",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python3 scripts/build.py --adapter portable*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python3 scripts/build.py --adapter opencode*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python3 -B -m unittest*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python3 -m unittest*",
+      "effect": "allow"
+    }
+  ],
+  "location": {
+    "directory": "/private/tmp/native-project-pilot-followup-20261015/project"
+  }
+}

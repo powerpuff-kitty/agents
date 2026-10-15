@@ -1,0 +1,36 @@
+{
+  "entry": {
+    "id": "02-architecture-proposed-decision-named-agent-1",
+    "case": "architecture-proposed-decision",
+    "mode": "named-agent",
+    "repeat": 1,
+    "agent": "system-architect",
+    "skill": null,
+    "prompt_sha256": "d8b8c98dfc6454b25391a089d489e4839a38c2a9a54f89d3c7abd375dcbce563",
+    "fixture_sha256": "bf9b2cff031a357a2d75200af3b8866d73bf92eb238110d405413456f7422147"
+  },
+  "model_requested": {
+    "providerID": "deepseek",
+    "id": "deepseek-v4-pro"
+  },
+  "timeout_seconds": 300,
+  "max_reported_cost": 0.2,
+  "task_acceptance": "needs_independent_review",
+  "status": "collected",
+  "runner_sha256": "d241d5cb980eb07387b234a9b1ab23699b81a090ce6e9930a9efdd6c423bdf3b",
+  "usage_limits": "Host session totals, including discovered descendants. Hidden auxiliary calls/billing remain unknown; reported-cost interrupt can overshoot.",
+  "host_version": "opencode v2.0.27",
+  "seconds": 57.159,
+  "usage": {
+    "input": 20265,
+    "output": 2428,
+    "cache_read": 82944,
+    "cache_write": 0,
+    "reported_cost": 0.023549328000000005,
+    "complete_session_fields": true
+  },
+  "invariants": {
+    "source_scope_preserved": true,
+    "staging_entries_preserved": true
+  }
+}

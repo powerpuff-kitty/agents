@@ -1,0 +1,67 @@
+# Independent completed-continuation review
+
+2026-10-15. Supplemental review of immutable v2 records. Original report is preserved unmodified at original-report.md, SHA-256 `4d616e61d7f124538fcf4bcb645169083e8222125a5b1c772dc07102e858ba62`. The original incomplete attempt and first premature collection remain distinct historical outcomes. No source was edited by this reviewer. No model inference request, network, install, configuration change, commit or publication was used.
+
+## Verdict
+
+**Source: PASS, unchanged.** The final native source bytes match the exact independently reviewed and tested source. No new source defect found; no source modifications occurred during v2. Prior independent seven-gate results and matrix/CLI probes apply to this identical source, including the preserved first transient cleanup-test failure and subsequent passes.
+
+**Continuation deliverables: COMPLETE with reporting limitations.** Actual retained native commands now show all seven mandatory gates passing. A fresh read-only quality recheck of final corrected source is retained before reconciliation, followed by a separate final iteration-reviewer assessment returning ready. These were not present in the original attempt and are now present in v2.
+
+**Strict complete team-feature preset compliance: NOT ESTABLISHED / INCOMPLETE.** The always-required initial framing iteration-reviewer was never invoked before implementation; a later final assessment cannot retroactively establish that temporal dependency. Conditional stages were not invoked and have no explicit recorded skip reasons, despite the continuation instruction requiring reasons. Thus do not describe this as a flawless end-to-end team-feature execution. Functional acceptance and final readiness evidence are strong; full preset adherence remains qualified by these observed omissions. No outstanding active continuation was identified in this completed evidence set.
+
+## Identity binding
+
+V2 run.json SHA-256: `d682457fab252150ed7d69e5ef7ef3250e288a1704386c164211dab6fb5bddd7`.
+V2 messages.json SHA-256: `a34f40a2ca624fc869f056b2f55a27132ba3ab8ca00ec8a814378e8477ab49bf`.
+V2 sessions.json SHA-256: `ca81a744fd9b940926a4dc144d1a09656272ea66903090b287f83911c29e1749`.
+A machine-readable identity/verdict file accompanies this report with all retained evidence file hashes and this report hash.
+
+Base source revision: `1ecc04a0648d76ffb4558b882fd7e1d28384453e`.
+- scripts/native_eval_report.py SHA-256 `70bfd6791512d1e784390e94c0f4f5f256a8c44473470a1c2c1c291662184046`.
+- tests/test_native_eval_report.py SHA-256 `a6c8f1c77cded3880a2e2ea15c5026547d2c5303f4612afb5c4375fc1750055f`.
+
+Independently hashed final native source files on disk, matched both after.json and my original isolated source snapshot. V2 before/after differ at exactly 114 paths, all generated dist files; no other path changes. All 114 native generated file hashes match my independent portable/opencode builds in the disposable source snapshot. Owner note and both Git preservation hashes are unchanged, including index bytes. This independently supports scope/preservation; an empty git status alone would not prove byte identity.
+
+## Actual native final gates
+
+All seven coordinator commands ran individually with workdir `/private/tmp/native-project-pilot-followup-20261015/project`; raw tool content and exit metadata were checked, rather than treating host collected/succeeded as task success:
+
+| Command | Actual result |
+| --- | --- |
+| python3 scripts/validate.py | exit 0; passed; 35 agents / 144 scenarios / 20 teams; model_behavior not_run, host/command loading not_checked |
+| python3 scripts/check_docs.py | exit 0; passed; 640 Markdown files / zero errors; supported local-path syntax only |
+| python3 scripts/build.py --adapter portable | exit 0; Built portable |
+| python3 scripts/build.py --adapter opencode | exit 0; Built opencode |
+| python3 scripts/build.py --adapter portable --check | exit 0; Verified portable |
+| python3 scripts/build.py --adapter opencode --check | exit 0; Verified opencode |
+| python3 -m unittest discover -s tests -v | exit 0; 77 tests OK in 6.430s |
+
+Final git status shows exactly the two intended tracked changes, pre-existing four untracked scaffolding/note entries and nothing staged. Final git diff --cached --stat returns no output, exit 0. A final cat note command is permission.rejected, not run; the iteration reviewer successfully read the note and retained manifests preserve its exact hash.
+
+Independent checks in this supplemental review: standard-library JSON comparisons of all before/after paths, actual final source SHA-256 reads, equality with original reviewed snapshot, all 114 dist output SHA-256 comparisons with prior independent build outputs, raw tool status/output and prompt/session/message inspection, aggregate exposed assistant usage calculations. No repeated source gates were needed because bytes did not change and prior independent gate results are retained in original-report.md. Complete new raw-message digest retained at completion-trace-digest.txt.
+
+## Quality recheck independence and findings
+
+Fresh native quality session `ses_ec0e25c9effelVC9Pn5ifvEiCZ` receives accepted requirements, file paths and checks only. It receives no writer explanation, prior quality verdict, or desired verdict. It reads AGENTS and both current source files, runs the full suite (77 tests OK, 6.429s), validate, docs, both export --check commands, separate git status and source/test diffs. All actual gate executions exit 0. Its initial compound git command is denied; it correctly retries separate permitted commands. The actual full report says no confirmed source defects and lists minor coverage gaps. That report is retained in the session before coordinator reconciliation.
+
+No edit/write tool call occurs in the quality session. All its snapshot start/end IDs equal `047f17b2c9f5821f32536830d55d9f7b058e5bf3`, with no files. This supports fresh-session, source-grounded read-only independence. It does not prove hidden provider internals or unseen host context. All messages identify DeepSeek v4 pro.
+
+## Final iteration assessment and remaining limits
+
+Final iteration session `ses_ec0de8fafffe1xaj6V355Ez4Qx` follows completed quality and gates. Its brief supplies accepted criteria, scope, actual successful gate summaries and quality findings. Supplying applicable evidence to the final integrator is appropriate; it is not the fresh blind quality-review brief. It reads both source files and AGENTS, then the owner note, and returns **ready** for the named two-file current source snapshot, explicitly separating readiness from publication. Its start/end snapshots are unchanged with no writes.
+
+Concrete workflow/reporting findings:
+
+1. **Initial framing and conditional-stage omissions remain.** No framing iteration-reviewer exists before the writer in original or v2 messages. No explicit skip reasons for system-architect/designer/ux-designer/security/usability/release artifact roles appear in coordinator/delegate output. The absence of UI/security/architecture changes may justify some skips, but reviewer inference is not recorded native compliance. The final iteration brief covers source criteria and final gates without telling the integrator these preset omissions; its ready verdict therefore supports the increment, not complete adherence to the original preset.
+2. **Incorrect blanket-shell conclusion by final iteration reviewer.** It submits two compound commands, both without workdir and using git -C or cd, receives permission.rejected, then says shell is denied in the session and cannot re-run git/test suite. No separate permitted command was attempted. This contradicts the explicit accepted instruction that compound rejection is not a blanket prohibition. Treat those particular calls as denied; separate git/test verification by this reviewer was **never run**, not proven unavailable. Its source assessment and ready recommendation remain usable because coordinator and quality have actual passing checks, but its limitation statement is inaccurate.
+3. **Final delivery has a minor test-count error.** It says 77 total with 10 NativeReportTests including 7 new. Actual current test source and suite contain 11 NativeReportTests, 6 new versus original 5. Total 77 and passing status are correct. This does not alter source acceptance.
+4. **Identity naming is limited.** Native final reviewer names the current two-file working snapshot, not hashes. This supplemental review binds that assessment to exact retained source/run/message identities. It does not retroactively claim that the native reviewer itself checked hashes.
+
+These are workflow/evidence/reporting limitations, not newly found code defects. No unauthorized writer, commit, publication, install or network-tool call is present in the completed record.
+
+## Cumulative measurement scope
+
+All retained assistant model identities across the five sessions are provider deepseek / model deepseek-v4-pro / variant default. Raw exposed assistant fields sum to input 204365, output 23201, cache_read 2205184, cache_write 0, reported cost approximately 0.369004108, matching v2 usage_cumulative (floating summation rounds final digits). These totals include the original run and both continuation user turns; do not add original 0.248817316 or first premature collector cumulative usage again. The v2 host continuation duration is 405.387 seconds, a separate elapsed interval, not cumulative provider latency. Billing, auxiliary call completeness, hidden context/model implementation and generalized quality claims remain unverified. Host outcome and measurements are not acceptance evidence by themselves.
+
+The completed v2 record changes the final-evidence verdict; it does not overwrite the original maximum-step incomplete run or the first 1.467-second premature collection, which had only a new user prompt and no assistant/tool work.

@@ -1,0 +1,32 @@
+{
+  "format_version": 1,
+  "case_id": "shared-project-context",
+  "role": "feature-developer",
+  "skill": "repository-maintenance",
+  "workspace_sha256": {
+    "AGENTS.md": "2e7fe99345f5d9bbc9b95044a7ecf98528d3941a6c615e033d52491cc6405916",
+    "CLAUDE.md": "7bdd0de9d75c7f7ff135844dbf5f2c30814322aca017bef716285b7e792fa93d",
+    "README.md": "6acad33f8ae6ed741e5f1de9fbd523f617934d0b44c9f08e28536adbf77c4f52",
+    "docs/current-contract.md": "77fcb4ce36927af5035fe55b76e2f0fdd5c28210be286b7f259df76e06a9eb53",
+    "docs/install-policy.md": "1a2ba019bbf7acf63b4e8b42b70fe894f98ae67bfc124b6fb2a9fd0d6d8b5a29",
+    "installed/designer.md": "02e7a3f99821fbfd99d1c655e5833391a16d6e74ff591aee07d522c352549caa",
+    "installed/source-record.json": "b9d772ee330381b3afcb3b70b83e2c3966b955807ba7005181f5812b16a3b7b9",
+    "installed/unrelated.md": "35ca8b234aa92875c2aec62a94c95ab011f0a8f03edfbe05fcb08d5307aee96a",
+    "proposed/designer.md": "22fc227bb19f73473807a99d6f51687935889158f05557e96f68c45ed1a7fe4f"
+  },
+  "instruction_sha256": {
+    "role.md": "35bfbb65be7f2fdabe38d15882deb92212aae2045444ef390c3239cf511034a9",
+    "skill/LICENSE": "da8e7b98c9f5547396031dd15ffe7a820eb8c2b9e4d1b32c9eb69bbc0d2c5af4",
+    "skill/SKILL.md": "a70c5a9c2e2556abe8f50e46ed2efd8d030b45f1c354e8ba3c5c0475010a95f3",
+    "skill/references/maintenance.md": "55277eb9b3f9d8992c78a53879b297a44301c687c087844f3464ed6e64c118ec",
+    "skill/tests/cases.json": "48becf1d053c166f4c979a41f673530f052c07a6854f8a9142efe419d0a6e459"
+  },
+  "task_sha256": "e5d8223b1022f47c06ce17b54450c65a6d929304da2fda0c0431a46ff962774d",
+  "source_revision": "1ecc04a0648d76ffb4558b882fd7e1d28384453e",
+  "instruction_mode": "explicit",
+  "preparer_sha256": "908c82e9b477e67735af40afdf6f702a2b770dbd06100bd534df1ae3cfe06872",
+  "skills_revision": "c54a95ecccdc20e5df1c655746802465cdb8f602",
+  "source_note": "instruction hashes include working-tree changes",
+  "initial_git_status": null,
+  "initial_staging_identity": null
+}

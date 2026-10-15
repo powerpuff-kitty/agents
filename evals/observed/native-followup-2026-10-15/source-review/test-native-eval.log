@@ -1,0 +1,23 @@
+test_cleanup_stops_owned_process_group (test_native_eval.NativeEvalTests.test_cleanup_stops_owned_process_group) ... ok
+test_deadline_watchdog_stops_owned_server_without_a_response (test_native_eval.NativeEvalTests.test_deadline_watchdog_stops_owned_server_without_a_response) ... ok
+test_deleted_git_metadata_is_not_preservation (test_native_eval.NativeEvalTests.test_deleted_git_metadata_is_not_preservation) ... ok
+test_expired_setup_cannot_submit_prompt (test_native_eval.NativeEvalTests.test_expired_setup_cannot_submit_prompt) ... ok
+test_fixture_drift_never_starts_a_host_and_retains_failure (test_native_eval.NativeEvalTests.test_fixture_drift_never_starts_a_host_and_retains_failure) ... ok
+test_host_disables_optional_git_index_refresh (test_native_eval.NativeEvalTests.test_host_disables_optional_git_index_refresh) ... ok
+test_instruction_content_and_path_are_checked (test_native_eval.NativeEvalTests.test_instruction_content_and_path_are_checked) ... ok
+test_meaningful_new_verification_file_does_not_mask_owner_changes (test_native_eval.NativeEvalTests.test_meaningful_new_verification_file_does_not_mask_owner_changes) ... ok
+test_missing_usage_is_unknown_not_zero (test_native_eval.NativeEvalTests.test_missing_usage_is_unknown_not_zero) ... ok
+test_pagination_retains_order_and_detects_repeated_cursor (test_native_eval.NativeEvalTests.test_pagination_retains_order_and_detects_repeated_cursor) ... ok
+test_partial_preflight_is_never_overwritten (test_native_eval.NativeEvalTests.test_partial_preflight_is_never_overwritten) ... ok
+test_planned_missing_run_stays_visible_and_plan_drift_refuses (test_native_eval.NativeEvalTests.test_planned_missing_run_stays_visible_and_plan_drift_refuses) ... ok
+test_read_only_index_bytes_are_a_separate_invariant (test_native_eval.NativeEvalTests.test_read_only_index_bytes_are_a_separate_invariant) ... ok
+test_readiness_retries_service_starting_but_not_bad_requests (test_native_eval.NativeEvalTests.test_readiness_retries_service_starting_but_not_bad_requests) ... ok
+test_reasoning_excluded_but_tool_failure_kept (test_native_eval.NativeEvalTests.test_reasoning_excluded_but_tool_failure_kept) ... ok
+test_response_crossing_deadline_is_not_accepted (test_native_eval.NativeEvalTests.test_response_crossing_deadline_is_not_accepted) ... ok
+test_wrong_native_project_stops_before_inventory_or_prompt (test_native_eval.NativeEvalTests.test_wrong_native_project_stops_before_inventory_or_prompt) ... ok
+test_wrong_project_and_model_cannot_be_accepted (test_native_eval.NativeEvalTests.test_wrong_project_and_model_cannot_be_accepted) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.709s
+
+OK

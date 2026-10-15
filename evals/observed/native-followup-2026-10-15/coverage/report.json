@@ -1,0 +1,187 @@
+{
+  "plan_sha256": "e44377fe86c616d53f8981547154f9da68b1c4f735308615ce5120e9f01de4dc",
+  "planned": 5,
+  "runs": [
+    {
+      "entry": {
+        "id": "01-shared-project-context-named-agent-1",
+        "case": "shared-project-context",
+        "mode": "named-agent",
+        "repeat": 1,
+        "agent": "feature-developer",
+        "skill": null,
+        "prompt_sha256": "8829d09f0f5e2400fbcf01e9f5232b2de8b51e0760f238e10fea051429a03291",
+        "fixture_sha256": "19eaff1a557e68af6ea4e0aa4a0e3a1af7867ec20586b8fa41784cc33b895c4e"
+      },
+      "model_requested": {
+        "providerID": "deepseek",
+        "id": "deepseek-v4-pro"
+      },
+      "timeout_seconds": 240,
+      "max_reported_cost": 0.2,
+      "task_acceptance": "needs_independent_review",
+      "status": "collected",
+      "runner_sha256": "d241d5cb980eb07387b234a9b1ab23699b81a090ce6e9930a9efdd6c423bdf3b",
+      "usage_limits": "Host session totals, including discovered descendants. Hidden auxiliary calls/billing remain unknown; reported-cost interrupt can overshoot.",
+      "host_version": "opencode v2.0.27",
+      "seconds": 78.139,
+      "usage": {
+        "input": 10078,
+        "output": 2290,
+        "cache_read": 124032,
+        "cache_write": 0,
+        "reported_cost": 0.020616684,
+        "complete_session_fields": true
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true
+      }
+    },
+    {
+      "entry": {
+        "id": "02-security-secret-evidence-named-agent-1",
+        "case": "security-secret-evidence",
+        "mode": "named-agent",
+        "repeat": 1,
+        "agent": "security-auditor",
+        "skill": null,
+        "prompt_sha256": "329b7491c890cced8ee8ef89e83d1ac258a1bab6f007861b3cde723a36598f34",
+        "fixture_sha256": "a4959fd5631b6b583ac817c41c8910a19e8b03b750eac822b07ffa147fcc7d51"
+      },
+      "model_requested": {
+        "providerID": "deepseek",
+        "id": "deepseek-v4-pro"
+      },
+      "timeout_seconds": 240,
+      "max_reported_cost": 0.2,
+      "task_acceptance": "needs_independent_review",
+      "status": "collected",
+      "runner_sha256": "d241d5cb980eb07387b234a9b1ab23699b81a090ce6e9930a9efdd6c423bdf3b",
+      "usage_limits": "Host session totals, including discovered descendants. Hidden auxiliary calls/billing remain unknown; reported-cost interrupt can overshoot.",
+      "host_version": "opencode v2.0.27",
+      "seconds": 43.424,
+      "usage": {
+        "input": 14111,
+        "output": 1280,
+        "cache_read": 41984,
+        "cache_write": 0,
+        "reported_cost": 0.015707648,
+        "complete_session_fields": true
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true
+      }
+    },
+    {
+      "entry": {
+        "id": "03-security-isolated-repro-named-agent-1",
+        "case": "security-isolated-repro",
+        "mode": "named-agent",
+        "repeat": 1,
+        "agent": "security-auditor",
+        "skill": null,
+        "prompt_sha256": "4751419539278588bb12c0d7203bd3c886012a646460f0d9adcd8947afd4cb35",
+        "fixture_sha256": "4627b061106a288f33073a0b2d4e32af61d75eaa2a1b27fe1304c78de8d30fbc"
+      },
+      "model_requested": {
+        "providerID": "deepseek",
+        "id": "deepseek-v4-pro"
+      },
+      "timeout_seconds": 240,
+      "max_reported_cost": 0.2,
+      "task_acceptance": "needs_independent_review",
+      "status": "collected",
+      "runner_sha256": "d241d5cb980eb07387b234a9b1ab23699b81a090ce6e9930a9efdd6c423bdf3b",
+      "usage_limits": "Host session totals, including discovered descendants. Hidden auxiliary calls/billing remain unknown; reported-cost interrupt can overshoot.",
+      "host_version": "opencode v2.0.27",
+      "seconds": 110.188,
+      "usage": {
+        "input": 22963,
+        "output": 2749,
+        "cache_read": 172288,
+        "cache_write": 0,
+        "reported_cost": 0.034065196000000006,
+        "complete_session_fields": true
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true
+      }
+    },
+    {
+      "entry": {
+        "id": "04-architecture-proposed-decision-named-agent-1",
+        "case": "architecture-proposed-decision",
+        "mode": "named-agent",
+        "repeat": 1,
+        "agent": "system-architect",
+        "skill": null,
+        "prompt_sha256": "d8b8c98dfc6454b25391a089d489e4839a38c2a9a54f89d3c7abd375dcbce563",
+        "fixture_sha256": "6db02ce360a087f733ff698d37b4bc82a276fcbae06f54e64bd936a058f1d1c8"
+      },
+      "model_requested": {
+        "providerID": "deepseek",
+        "id": "deepseek-v4-pro"
+      },
+      "timeout_seconds": 240,
+      "max_reported_cost": 0.2,
+      "task_acceptance": "needs_independent_review",
+      "status": "collected",
+      "runner_sha256": "d241d5cb980eb07387b234a9b1ab23699b81a090ce6e9930a9efdd6c423bdf3b",
+      "usage_limits": "Host session totals, including discovered descendants. Hidden auxiliary calls/billing remain unknown; reported-cost interrupt can overshoot.",
+      "host_version": "opencode v2.0.27",
+      "seconds": 89.091,
+      "usage": {
+        "input": 20316,
+        "output": 2682,
+        "cache_read": 86144,
+        "cache_write": 0,
+        "reported_cost": 0.027949988,
+        "complete_session_fields": true
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true
+      }
+    },
+    {
+      "entry": {
+        "id": "05-coordination-missing-delegation-named-agent-1",
+        "case": "coordination-missing-delegation",
+        "mode": "named-agent",
+        "repeat": 1,
+        "agent": "team-lead",
+        "skill": null,
+        "prompt_sha256": "d8dd39a316d8554d0bc6c26d4e988716e99a6850e623d3968e5990cfeacaabb1",
+        "fixture_sha256": "08522dbe690b387247c31511b1302c37e22a97d2c49fd862b698c9c86fb3147e"
+      },
+      "model_requested": {
+        "providerID": "deepseek",
+        "id": "deepseek-v4-pro"
+      },
+      "timeout_seconds": 240,
+      "max_reported_cost": 0.2,
+      "task_acceptance": "needs_independent_review",
+      "status": "collected",
+      "runner_sha256": "d241d5cb980eb07387b234a9b1ab23699b81a090ce6e9930a9efdd6c423bdf3b",
+      "usage_limits": "Host session totals, including discovered descendants. Hidden auxiliary calls/billing remain unknown; reported-cost interrupt can overshoot.",
+      "host_version": "opencode v2.0.27",
+      "seconds": 75.263,
+      "usage": {
+        "input": 19381,
+        "output": 1988,
+        "cache_read": 177536,
+        "cache_write": 0,
+        "reported_cost": 0.026327971999999998,
+        "complete_session_fields": true
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true
+      }
+    }
+  ],
+  "limits": "No aggregate success rate or savings claim without independent acceptance and matched comparable outcomes. Usage fields exclude unexposed auxiliary calls."
+}

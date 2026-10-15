@@ -8,8 +8,36 @@ import argparse
 from collections import Counter, defaultdict
 import hashlib
 import json
+import math
 from pathlib import Path
 import statistics
+
+
+def _is_valid_observation(x):
+    """True only for finite, non-negative, non-boolean numeric values."""
+    if isinstance(x, bool):
+        return False
+    if isinstance(x, int):
+        return x >= 0
+    if isinstance(x, float):
+        return math.isfinite(x) and x >= 0
+    return False
+
+
+def _sanitize_nonfinite(obj):
+    """Recursively replace non-finite floats with None so JSON stays valid."""
+    if isinstance(obj, float):
+        return obj if math.isfinite(obj) else None
+    if isinstance(obj, dict):
+        return {key: _sanitize_nonfinite(value) for key, value in obj.items()}
+    if isinstance(obj, list):
+        return [_sanitize_nonfinite(value) for value in obj]
+    return obj
+
+
+def _usage_dict(value):
+    """Return value as a dict, treating any non-dict usage as missing ({})."""
+    return value if isinstance(value, dict) else {}
 
 
 def sha(path):
@@ -108,21 +136,22 @@ def summarize(root, review_path=None):
                 'statuses': dict(Counter(v['status'] for v in values)),
                 'independent_acceptance': dict(Counter(v['acceptance'] for v in values)), 'metrics': {}}
         for key in ['input', 'output', 'cache_read', 'cache_write', 'reported_cost', 'seconds']:
-            samples = [v['seconds'] if key == 'seconds' else (v.get('usage') or {}).get(key) for v in values]
-            observed = [x for x in samples if isinstance(x, (int, float))]
+            samples = [v['seconds'] if key == 'seconds' else _usage_dict(v.get('usage')).get(key) for v in values]
+            observed = [x for x in samples if _is_valid_observation(x)]
             item['metrics'][key] = {'observed': len(observed), 'missing': len(samples) - len(observed),
                                     'mean': statistics.mean(observed) if observed else None,
                                     'min': min(observed) if observed else None,
                                     'max': max(observed) if observed else None}
         stats.append(item)
-    return {'format_version': 1, 'plan_sha256': sha(root / 'plan.json'), 'planned': len(rows),
-            'same_starting_file_hashes_per_case': {k: len(v) == 1 for k, v in fixtures.items()},
-            'runs': rows, 'groups': stats, 'review_sha256': sha(Path(review_path)) if review_path else None,
-            'limits': ['Built-in build is explicitly pinned for ordinary/skill controls; named-agent changes that primary.',
-                       'Role and skill treatments are different interventions, not a context-only savings experiment.',
-                       'Source bytes, instruction events, host-reported tokens/cache and billed costs are distinct.',
-                       'Unexposed auxiliary calls/settings remain unknown; sample sizes do not establish statistical reliability.',
-                       'No task success is inferred from host outcome, artifact invariants or a lower token count.']}
+    report = {'format_version': 1, 'plan_sha256': sha(root / 'plan.json'), 'planned': len(rows),
+              'same_starting_file_hashes_per_case': {k: len(v) == 1 for k, v in fixtures.items()},
+              'runs': rows, 'groups': stats, 'review_sha256': sha(Path(review_path)) if review_path else None,
+              'limits': ['Built-in build is explicitly pinned for ordinary/skill controls; named-agent changes that primary.',
+                         'Role and skill treatments are different interventions, not a context-only savings experiment.',
+                         'Source bytes, instruction events, host-reported tokens/cache and billed costs are distinct.',
+                         'Unexposed auxiliary calls/settings remain unknown; sample sizes do not establish statistical reliability.',
+                         'No task success is inferred from host outcome, artifact invariants or a lower token count.']}
+    return _sanitize_nonfinite(report)
 
 
 def markdown(report):
@@ -143,7 +172,7 @@ def main():
     p.add_argument('--review', type=Path)
     args = p.parse_args()
     report = summarize(args.output, args.review)
-    (args.output / 'measurements.json').write_text(json.dumps(report, indent=2) + '\n')
+    (args.output / 'measurements.json').write_text(json.dumps(report, indent=2, allow_nan=False) + '\n')
     (args.output / 'measurements.md').write_text(markdown(report))
     print(json.dumps({'planned': report['planned'], 'groups': len(report['groups']),
                       'decision_records_attached': len(json.loads(args.review.read_text())['runs']) if args.review else 0,

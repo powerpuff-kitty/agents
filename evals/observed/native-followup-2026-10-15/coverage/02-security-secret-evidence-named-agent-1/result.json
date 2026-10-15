@@ -1,0 +1,36 @@
+{
+  "entry": {
+    "id": "02-security-secret-evidence-named-agent-1",
+    "case": "security-secret-evidence",
+    "mode": "named-agent",
+    "repeat": 1,
+    "agent": "security-auditor",
+    "skill": null,
+    "prompt_sha256": "329b7491c890cced8ee8ef89e83d1ac258a1bab6f007861b3cde723a36598f34",
+    "fixture_sha256": "a4959fd5631b6b583ac817c41c8910a19e8b03b750eac822b07ffa147fcc7d51"
+  },
+  "model_requested": {
+    "providerID": "deepseek",
+    "id": "deepseek-v4-pro"
+  },
+  "timeout_seconds": 240,
+  "max_reported_cost": 0.2,
+  "task_acceptance": "needs_independent_review",
+  "status": "collected",
+  "runner_sha256": "d241d5cb980eb07387b234a9b1ab23699b81a090ce6e9930a9efdd6c423bdf3b",
+  "usage_limits": "Host session totals, including discovered descendants. Hidden auxiliary calls/billing remain unknown; reported-cost interrupt can overshoot.",
+  "host_version": "opencode v2.0.27",
+  "seconds": 43.424,
+  "usage": {
+    "input": 14111,
+    "output": 1280,
+    "cache_read": 41984,
+    "cache_write": 0,
+    "reported_cost": 0.015707648,
+    "complete_session_fields": true
+  },
+  "invariants": {
+    "source_scope_preserved": true,
+    "staging_entries_preserved": true
+  }
+}

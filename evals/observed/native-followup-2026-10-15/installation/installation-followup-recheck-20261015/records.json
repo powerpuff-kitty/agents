@@ -1,0 +1,151 @@
+{
+  "source_revision": "1ecc04a0648d76ffb4558b882fd7e1d28384453e",
+  "installer_sha256": "b63f271916165db8c26fc63bc65f9660d54fe630f0c08df375d3b19f75b1e592",
+  "checks": {
+    "dry_run_no_writes": true,
+    "conflict_preserves_all_bytes_and_modes": true,
+    "replacement_preview_no_writes": true,
+    "backup_customized_original": true,
+    "replacement_keeps_mode": true,
+    "replacement_uses_updated_source": true,
+    "unrelated_preserved": true,
+    "repeat_idempotent": true,
+    "smaller_different_selection_keeps_prior_profile": true
+  },
+  "commands": [
+    {
+      "step": "initial dry run",
+      "argv": [
+        "python3",
+        "scripts/install.py",
+        "--agent",
+        "designer",
+        "--target",
+        "/private/tmp/installation-followup-recheck-20261015/installed/agents",
+        "--dry-run"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"tool\": \"opencode\",\n  \"packs\": [],\n  \"target\": \"/private/tmp/installation-followup-recheck-20261015/installed/agents\",\n  \"commands_target\": null,\n  \"changed\": [\n    \"agents/designer.md\",\n    \"agents/.agents-LICENSE\"\n  ],\n  \"unchanged\": [],\n  \"dry_run\": true,\n  \"backup\": null,\n  \"backups\": {}\n}\n",
+      "stderr": ""
+    },
+    {
+      "step": "initial partial install",
+      "argv": [
+        "python3",
+        "scripts/install.py",
+        "--agent",
+        "designer",
+        "--target",
+        "/private/tmp/installation-followup-recheck-20261015/installed/agents"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"tool\": \"opencode\",\n  \"packs\": [],\n  \"target\": \"/private/tmp/installation-followup-recheck-20261015/installed/agents\",\n  \"commands_target\": null,\n  \"changed\": [\n    \"agents/designer.md\",\n    \"agents/.agents-LICENSE\"\n  ],\n  \"unchanged\": [],\n  \"dry_run\": false,\n  \"backup\": null,\n  \"backups\": {}\n}\n",
+      "stderr": ""
+    },
+    {
+      "step": "local edit conflict",
+      "argv": [
+        "python3",
+        "scripts/install.py",
+        "--agent",
+        "designer",
+        "--target",
+        "/private/tmp/installation-followup-recheck-20261015/installed/agents"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Installation failed: Unmanaged or locally edited outputs in /private/tmp/installation-followup-recheck-20261015/installed/agents: designer.md; use --replace to back up and replace these files\n"
+    },
+    {
+      "step": "replacement dry run",
+      "argv": [
+        "python3",
+        "scripts/install.py",
+        "--agent",
+        "designer",
+        "--target",
+        "/private/tmp/installation-followup-recheck-20261015/installed/agents",
+        "--replace",
+        "--dry-run"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"tool\": \"opencode\",\n  \"packs\": [],\n  \"target\": \"/private/tmp/installation-followup-recheck-20261015/installed/agents\",\n  \"commands_target\": null,\n  \"changed\": [\n    \"agents/designer.md\"\n  ],\n  \"unchanged\": [\n    \"agents/.agents-LICENSE\"\n  ],\n  \"dry_run\": true,\n  \"backup\": null,\n  \"backups\": {}\n}\n",
+      "stderr": ""
+    },
+    {
+      "step": "authorized disposable replacement",
+      "argv": [
+        "python3",
+        "scripts/install.py",
+        "--agent",
+        "designer",
+        "--target",
+        "/private/tmp/installation-followup-recheck-20261015/installed/agents",
+        "--replace"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"tool\": \"opencode\",\n  \"packs\": [],\n  \"target\": \"/private/tmp/installation-followup-recheck-20261015/installed/agents\",\n  \"commands_target\": null,\n  \"changed\": [\n    \"agents/designer.md\"\n  ],\n  \"unchanged\": [\n    \"agents/.agents-LICENSE\"\n  ],\n  \"dry_run\": false,\n  \"backup\": \"/private/tmp/installation-followup-recheck-20261015/installed/backups/reusable-agents-20261015T101837840069Z\",\n  \"backups\": {\n    \"agents\": \"/private/tmp/installation-followup-recheck-20261015/installed/backups/reusable-agents-20261015T101837840069Z\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "step": "repeat same update",
+      "argv": [
+        "python3",
+        "scripts/install.py",
+        "--agent",
+        "designer",
+        "--target",
+        "/private/tmp/installation-followup-recheck-20261015/installed/agents"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"tool\": \"opencode\",\n  \"packs\": [],\n  \"target\": \"/private/tmp/installation-followup-recheck-20261015/installed/agents\",\n  \"commands_target\": null,\n  \"changed\": [],\n  \"unchanged\": [\n    \"agents/.agents-LICENSE\",\n    \"agents/designer.md\"\n  ],\n  \"dry_run\": false,\n  \"backup\": null,\n  \"backups\": {}\n}\n",
+      "stderr": ""
+    },
+    {
+      "step": "add different partial selection",
+      "argv": [
+        "python3",
+        "scripts/install.py",
+        "--agent",
+        "quality-engineer",
+        "--target",
+        "/private/tmp/installation-followup-recheck-20261015/installed/agents"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"tool\": \"opencode\",\n  \"packs\": [],\n  \"target\": \"/private/tmp/installation-followup-recheck-20261015/installed/agents\",\n  \"commands_target\": null,\n  \"changed\": [\n    \"agents/quality-engineer.md\"\n  ],\n  \"unchanged\": [\n    \"agents/.agents-LICENSE\"\n  ],\n  \"dry_run\": false,\n  \"backup\": null,\n  \"backups\": {}\n}\n",
+      "stderr": ""
+    }
+  ],
+  "final_snapshot": {
+    "agents/.agents-LICENSE": {
+      "sha256": "d887a78e09605d06673b694b8412dba2ecdd68941204496a0725a3962b13462b",
+      "mode": "0o644"
+    },
+    "agents/.agents-managed.json": {
+      "sha256": "ab2e97f3a2f888fca64c1fe6ecd550d224727e2997abbd8cee2c84a6204bff05",
+      "mode": "0o644"
+    },
+    "agents/designer.md": {
+      "sha256": "48a6c752492c578890945e1134041a08763236f678898fe7de6a5abf31b8b310",
+      "mode": "0o640"
+    },
+    "agents/quality-engineer.md": {
+      "sha256": "5341d3386c7f88bf1d237a574d30a911501aeccdbc04939adc7af2dca5b082da",
+      "mode": "0o644"
+    },
+    "agents/unrelated.md": {
+      "sha256": "7cd27c1b937dbe5effaf016dca34bace8ba85aa6b09d89c96927a514b480693e",
+      "mode": "0o600"
+    },
+    "backups/reusable-agents-20261015T101837840069Z/.agents-managed.json": {
+      "sha256": "13d568a234cfb3838b68f670093da4802b158b7c45a079ce6ad3cd7c228a2f67",
+      "mode": "0o644"
+    },
+    "backups/reusable-agents-20261015T101837840069Z/designer.md": {
+      "sha256": "d33e23981abd79097f113c55f2f236983022d91445a5cc4bc24ab4cfcbbed2c1",
+      "mode": "0o640"
+    }
+  },
+  "canonical_coverage_increment": 0,
+  "limits": "Disposable local exercise, no actual host configuration or installed user profiles changed; no model behavior inferred."
+}

@@ -1,0 +1,63 @@
+{
+  "format_version": 1,
+  "seed": 17,
+  "repetitions": 2,
+  "agents_revision": "1ecc04a0648d76ffb4558b882fd7e1d28384453e",
+  "skills_revision": "c54a95ecccdc20e5df1c655746802465cdb8f602",
+  "runner_sha256": "d241d5cb980eb07387b234a9b1ab23699b81a090ce6e9930a9efdd6c423bdf3b",
+  "model": "deepseek/deepseek-v4-pro",
+  "runs": [
+    {
+      "id": "02-focused-review-with-skills-ordinary-1",
+      "case": "focused-review-with-skills",
+      "mode": "ordinary",
+      "repeat": 1,
+      "agent": null,
+      "skill": null,
+      "prompt_sha256": "f974e114e6ce0e8cbc3eedb3788e4f15ec5911ba7e45aae65be3ee0af2105210",
+      "fixture_sha256": "15da6b571d6dc10cfefdb3ebfb355432ba856e3fbbf9cf990b1782755b19bc80"
+    },
+    {
+      "id": "03-implementation-unavailable-check-skill-2",
+      "case": "implementation-unavailable-check",
+      "mode": "skill",
+      "repeat": 2,
+      "agent": null,
+      "skill": "systematic-debugging",
+      "prompt_sha256": "d730e813e86e40a19ebd3ece04e76665b773bb4ba44831021f2249e9c6c0b8de",
+      "fixture_sha256": "32590d1d11653337a733a29e80b4659e40cb4af813a5a36319c8f0438a147424"
+    },
+    {
+      "id": "04-implementation-unavailable-check-ordinary-1",
+      "case": "implementation-unavailable-check",
+      "mode": "ordinary",
+      "repeat": 1,
+      "agent": null,
+      "skill": null,
+      "prompt_sha256": "c485c4968f758bb2bf987aec8dbdd71f25d15e60e3e099f2d75341e01d3beef7",
+      "fixture_sha256": "32590d1d11653337a733a29e80b4659e40cb4af813a5a36319c8f0438a147424"
+    },
+    {
+      "id": "05-implementation-unavailable-check-skill-1",
+      "case": "implementation-unavailable-check",
+      "mode": "skill",
+      "repeat": 1,
+      "agent": null,
+      "skill": "systematic-debugging",
+      "prompt_sha256": "d730e813e86e40a19ebd3ece04e76665b773bb4ba44831021f2249e9c6c0b8de",
+      "fixture_sha256": "32590d1d11653337a733a29e80b4659e40cb4af813a5a36319c8f0438a147424"
+    },
+    {
+      "id": "18-implementation-unavailable-check-named-agent-1",
+      "case": "implementation-unavailable-check",
+      "mode": "named-agent",
+      "repeat": 1,
+      "agent": "feature-developer",
+      "skill": null,
+      "prompt_sha256": "c485c4968f758bb2bf987aec8dbdd71f25d15e60e3e099f2d75341e01d3beef7",
+      "fixture_sha256": "32590d1d11653337a733a29e80b4659e40cb4af813a5a36319c8f0438a147424"
+    }
+  ],
+  "purpose": "Remediation follow-ups, not matched replacements. Current instructions plus supplied readonly Node runtime check and explicit shell permission; required compiler still absent.",
+  "prior_plan_sha256": "921353cf7ef97738eb231fcc328b9a10c44a2101ac59b1f4f32359f9ba9aa002"
+}

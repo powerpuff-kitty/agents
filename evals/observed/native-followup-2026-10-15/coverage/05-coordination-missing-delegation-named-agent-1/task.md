@@ -1,0 +1,1 @@
+Complete a bounded review of receipt.py and its supplied tests. Named-agent delegation is disabled in this fixture. Finish feasible serial checks and report who performed them and unavailable verification. Do not edit files.
