@@ -1,0 +1,72 @@
+# Final independent review of original 18 native trials
+
+2026-10-15. All original18 records under `/private/tmp/native-matched-2026-10-15-v3` are final and were independently inspected. Frozen plan SHA-256 `921353cf7ef97738eb231fcc328b9a10c44a2101ac59b1f4f32359f9ba9aa002` matches `plan.sha256`. `final-decisions.json` retains every roster ID and binds each verdict to the exact current `result.json` SHA-256. Original/interim reports, decisions and context review remain unchanged; retry/context runs are additional observations and do not replace an original failure.
+
+**Scoped task decisions: 12 pass, 5 fail, 1 blocked.** All five original timeouts and original startup503 remain retained with their actual statuses. This count happens to match the collector's12 collected outcomes, but each task was assessed from the prompt, contract, actual response/activity and independent source checks. In particular, some step-bound responses already fulfill the raw task despite calling themselves unfinished, and correct partial implementations with no requested report are failures. A pass for unavailable-compiler work means the feasible task and truthful gap report were delivered; it does not mean compilation or all acceptance gates passed.
+
+## Acceptance decisions
+
+Numbers below identify the exact ordered IDs in the frozen plan; full IDs and result hashes are in `final-decisions.json`.
+
+| ID | Task / mode | Decision | Evidence and material limits |
+| --- | --- | --- | --- |
+| 01 | Review / ordinary2 | pass | Correct staged percentage and unstaged scaling defects, concrete counterexamples and new caller/masked-input explanation; source/index preserved, static and denied-command limits reported. |
+| 02 | Review / ordinary1 | fail | Both main defects are identified, but retained response ends mid-caller discussion and lacks completed checks/failures/limits reporting. Source/index preserved. Failure is incomplete delivery, not simply the timeout label. |
+| 03 | Port / skill2 | fail | Implemented source is correct under inspection and independent runtime probes. Added check file is authorized task-related verification, despite collector scope=false. Native test commands denied, added test has a BigInt-label crash, no final verification-gap report delivered. |
+| 04 | Port / ordinary1 | fail | Correct source and preserved owner/contract, but no final report. Compiler actually exits127; execute test returns a Symbol-unavailable error despite workflow status completed. No native passing runtime/compiler check established. |
+| 05 | Port / skill1 | fail | Remains `Number(value)` with no required rejection logic; independent runtime cases fail. No implementation/report delivery despite attached skill/support reads. Owner preserved. |
+| 06 | Pagination / skill2 | pass | Correct guard removal, native two-failure reproduction then five original tests pass; independently repeated; owner/tests/staging/index bytes preserved and actual checks reported. |
+| 07 | Review / named1 | blocked | Readiness503 before preflight/session/prompt; no model task execution or usage established. Original result is preserved and is not replaced by the separate retry. |
+| 08 | Pagination / ordinary1 | pass, reporting weakness | Correct minimal fix and supported five-test pass, owner/tests/index preserved. Final “No failures” is too broad: raw trace retains an initial rejected compound shell request. The subsequent actual checks pass; no failed test is falsely reported as passed. |
+| 09 | Pagination / ordinary2 | pass | Correct minimal fix, native original failures then all five pass, accurate report, preserved owner/tests/index; independent pass. |
+| 10 | Port / named2 | pass for scoped delivery | Correct source, preserved owner/contract and explicit step-bound report of absent compiler/denied runtime checks; no compiler/runtime pass invented. Required compiler acceptance remains blocked. Independent source runtime probes pass. |
+| 11 | Review / skill1 | pass for delivered content | Its step-bound text already supplies both concrete contract defects, counterexamples, new caller/masking, actual zero-test result and limits. Raw task did not require a formal/prioritized report format; its self-label “not yet written up” does not erase delivered findings. Source/index preserved. |
+| 12 | Review / named2 | pass | Correct defects, examples and caller impact, static-versus-runtime limits and preserved source/index. Explicit quality-engineer primary makes a real change-review skill call; caller consequence is derived, not another root cause. |
+| 13 | Pagination / skill1 | pass | Correct minimal fix, supported before/after tests and complete report; preserved owner/tests/index; independent pass. |
+| 14 | Pagination / named1 | pass, reporting omission | Step-bound final still gives correct diagnosis/change, actual original failures and five-test pass; all preserved-state checks pass. Initial denied compound/echo probes are not enumerated in final. |
+| 15 | Pagination / named2 | pass | Correct fix/tests/preservation and report. Rejected compound git-log attempt remains visible in raw trace and never executed; final enumerates the permitted executed commands. |
+| 16 | Review / skill2 | pass, arithmetic-impact correction | Both concrete mechanisms, examples and fixes are correct, caller masking understood, source/index preserved and static limits explicit. Impact prose reverses overcharge/undercharge: subtotal50 gives40 vs45 (undercharge), subtotal150 gives140 vs135 (overcharge). This does not negate the proved defects but must be corrected if reused. |
+| 17 | Port / ordinary2 | pass for scoped delivery | Correct source and preserved owner/contract; final accurately reports the failed transcribed execute harness (BigInt unsupported) and missing compiler, with no claimed test/type-check pass. Its final itself provides the requested gaps despite listing a formal report as remaining. Independent runtime probes pass; compiler remains blocked. |
+| 18 | Port / named1 | fail | Correct partial source passes independent runtime probes, but trace has no assistant textual report at all. Actual check/permission/compiler limits were not delivered before timeout; source correctness alone does not complete the task. |
+
+Nonblocking reporting weaknesses are retained explicitly, not silently treated as perfect compliance. Pass means the actual requested scoped output is established; it is not general profile reliability or certification. The stricter failed-delivery decisions above involve missing required output or absent implementation, not an arbitrary report-format preference.
+
+## Task correctness and preservation
+
+The pagination fix in all six pagination trials removes only `if start + size == len(items): break`, allowing every range-produced slice to be appended. All six final implementations match the correct simple fixture behavior. Original empty/exact-first/exact-last/partial-last/invalid-size tests remain byte-identical and pass in six independent disposable copies. Owner label bytes, staged entries and captured index bytes remain preserved in every original pagination trial. This establishes this local defect and test surface, not an arbitrary pagination API.
+
+For the port task, runs03/04/10/17/18 implement the stated integer-number/ASCII-digit-string1..65535 contract; direct execution of unchanged copied TypeScript source via reviewer Node v24.21.0 passes seven accepted and33 rejected cases in each. Cases include boundary values, leading zeros, whitespace/line endings, fractions/sign/exponent forms, non-ASCII digits, booleans/null/undefined, NaN/infinities, objects/arrays/Symbol/BigInt. Run05's unchanged Number conversion fails32 of33 rejection cases. These reviewer runtime checks do not substitute for `standalone-pilot-tsc`, do not prove type-checking, and do not retroactively become native model checks. Native trials discovered Node v25.5.0; runtime availability and permission to run a file are separate from the mandatory compiler gate.
+
+Run03's new `port.check.ts` is legitimate within the raw task's implementation/verification authorization. The task protects owner-note/contract but does not prohibit a supporting test. The old collector's `{port.ts}` allowlist is over-narrow; its scope=false is retained historically, not adopted as an independent authorization verdict. Independently running that added test fails while `JSON.stringify(1n)` constructs its case label, before its final all-pass summary. Current source adds a broader filename heuristic, which still cannot establish semantic authorization or test quality by itself.
+
+For all review fixtures, independent disposable arithmetic confirms the two regressions: quote(1,50,10)=40 rather than45, quote(3,50,10)=140 rather than135, dollars(90)=$0.90 rather than$90.00; checkout's subtotal100 masks the percentage formula defect but exposes scaling. Findings are assessed against that contract, not the author/collector's summary.
+
+Across all original18, before/after manifests show only authorized task source changes plus run03's supporting test. Owner label/note, contract and original-test hashes are preserved wherever present. Copied task files match recorded after hashes. Every original Git-state before/after object matches, including index-byte hashes where present; non-Git port fixtures remain null. Source snapshots and Git hashes establish observed state, not an authenticated history of every transient or unexposed side effect.
+
+## Actual primary roles and skill exposure
+
+All17 captured original inference sessions resolve the expected workspace and requested DeepSeek model. Ordinary and explicit-skill controls resolve `build`; completed named-role preflights resolve `feature-developer` or `quality-engineer` as requested. Assistant message agents agree. Original07 has no preflight/session evidence. These are controlled-primary arms, not ambient automatic primary-agent selection.
+
+All registered staged skill/custom-role bodies checked against preflight hashes match. Registration of62 skills and35 custom roles does not establish loading all of them. The actual observations are:
+
+- Skill arms03/05/06/13 attach systematic-debugging text;11/16 attach change-review text. Each actual attachment contains the matching installed body. No automatic primary-role inference follows from this explicit treatment.
+- Named quality-engineer run12 makes a completed native change-review skill call, and the returned text contains its matching installed body. This is actual skill selection under an explicitly requested primary. The separate retry does likewise, reported separately.
+- No other original run shows a skill tool call, and there are no subagent calls/discovered child sessions. Each of the17 exposed original sessions is a root session.
+
+The known built-in registered-system digest is an empty-string fingerprint with12 registered steps and an express complete-provider-prompt limit. Full provider/host/global/project instruction identity is not exposed or authenticated by this inventory. No private configuration was inspected to infer its absence. Actual instruction text visibility is not proof of adherence.
+
+## Exposed usage and collector provenance
+
+For all17 captured original sessions, input/output/cache-read/cache-write/cost values exactly reconcile with sums of assistant rows containing numeric fields (cost with floating-point tolerance). Result usage also aggregates those exposed sessions. There are no discovered descendants to add in this dataset; this does not establish absence of hidden auxiliary calls. Complete per-session numbers and reconciliation are retained in `final-evidence/summary.json` and `identity-and-accounting-checks.json`.
+
+Timeout runs02/03/04/05/18 each have a partial or aborted assistant row without usage. Their session's numeric `complete_session_fields: true` does not mean every generated token or billed request is captured. Run02's retained session has no terminal outcome field. Original07 has unknown usage, not zero. Host-reported cost remains distinct from invoiced charges, source bytes, skill-event counts and provider tokens/cache. No general savings claim is supported by two repetitions per arm, differing interventions/task outcomes, unknown auxiliary accounting and changed collector bytes.
+
+The frozen roster/preparation plan records runner `da6479b...`. Actual results01–07 use that version;08–18 use `ae7467ff...`, the separately retained readiness503 fix. Their results record the actual source hash. This preserves provenance but means the full batch is not a single immutable collector version. Current runner `f135d136...` is newer still and did not generate the original trial records. Adapter prose about rejected compound commands/failed wrappers is a later source change, separate from the frozen trial instruction inputs; it is not evaluated by these old observations.
+
+## Retained evidence and commands
+
+`final-evidence/original/` contains copied plans, exact completed result/preflight/session/messages/prompt/state records, task sources, readable assistant text/tool extracts, independent verification outputs and a read-only helper summary with attached exact-hash decisions. The earlier seven-run interim report/decisions remain unchanged. Context and retry reviews remain separate.
+
+Commands used read-only JSON/hash/text inspection and copies of completed records. Runtime commands were `python3 -B -m unittest -v` in six disposable pagination workspaces; `node review-probe.mjs` importing copied unchanged port source in six port workspaces; and pure Python arithmetic imports in copied review fixtures. Each subprocess had a ten-second bound. No original Git/test commands were run; originals were not modified. No provider/native-host invocation, external network, credentials/private configuration inspection occurred. Final result hashes were rechecked against originals before decisions were attached; current report helper `summarize` was invoked only against evidence copies, without its original-writing CLI.
+
+Current focused source/test review is retained separately in `final-runner-review.md`:19 focused tests pass, with remaining whole-body deadline and strict index-immutability qualifications. Parent-reported broader suite results were not independently rerun here and are not claimed as this review's validation.

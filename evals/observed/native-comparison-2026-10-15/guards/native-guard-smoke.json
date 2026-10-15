@@ -1,0 +1,10 @@
+{
+  "host_version": "opencode v2.0.27",
+  "deadline_seconds": 1,
+  "elapsed_seconds": 1.044,
+  "watchdog_expired": true,
+  "owned_host_exit": 130,
+  "optional_git_locks": "0",
+  "model_calls": 0,
+  "scope": "Temporary project, actual OpenCode server readiness and deadline process cleanup only; no prompt/session submitted."
+}

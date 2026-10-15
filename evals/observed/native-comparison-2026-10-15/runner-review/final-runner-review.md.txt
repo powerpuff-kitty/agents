@@ -1,0 +1,42 @@
+# Final focused runner/report source review
+
+2026-10-15. Read-only review of current `scripts/native_eval.py`, `scripts/native_eval_report.py`, relevant dependencies and focused tests. Frozen reviewed copies are in `final-runner/scripts/` and `final-runner/tests/`. Earlier reports remain unchanged.
+
+Exact reviewed SHA-256 values:
+
+| File | SHA-256 |
+| --- | --- |
+| native_eval.py | f135d136769ecc9bc85d4eb1fd9c75fab119e60e0237eb97e113ac4e73af5e69 |
+| native_eval_report.py | 01bf3bb696d365ecdd7e5e25df763a24be877449318709eaaa86f09f431fc2c6 |
+| test_native_eval.py | f6be5093cc6c00406caa34966fb30d1578fd8a130ae03d713ae5601d9d2142a8 |
+| test_native_eval_report.py | da0b93817c49139f324af86a364bfc7ea47521abaec48bfe1c8c53fe2ad4b9f9 |
+
+Live runner/report hashes matched these frozen copies at the final hash check. This source version is newer than the trial runners; it must not be described as the version that produced every retained result.
+
+## Changes and verification
+
+Since the earlier reviewed `da6479b...` runner, source adds a typed native HTTP error and retries only startup HTTP503, resolves the supplied executable path before use, and allows newly added top-level test/check files for implementation fixtures while protecting existing files and instructions. The latter addresses the specific false scope failure for authorized `port.check.ts` without rewriting that historical result. Names alone do not prove meaningful verification or task authorization; independent review remains necessary, and legitimate verification files in other locations can still be outside this collector's mechanical allowlist.
+
+The report helper now permits explicitly unverified/null-hash entries for missing results, while rejecting certification of absent results; it validates result entries against the frozen plan and binds attached decisions to exact result hashes. It distinguishes tool lifecycle completion from returned nonzero exit/error metadata, and counts skill attachments only where actual text is present. Native skill calls and attached skill text are observed events, not distinct tokenizer loads or proof of adherence. Failed skill requests remain failed events. All planned failed/missing rows remain visible.
+
+Command run against frozen copies:
+
+```sh
+GIT_CONFIG_NOSYSTEM=1 GIT_CONFIG_GLOBAL=/dev/null python3 -B -m unittest discover -s /private/tmp/native-runner-independent-20261015/final-runner/tests -v
+```
+
+Result: **19 tests, 0 failures, 0 errors**. Tests include the prior project/model/content/drift/partial-attempt/deadline/process-group checks plus startup503-specific retry behavior, owner/instruction preservation with a new verification file, report missing/failure/unknown-usage retention, exact-result review binding, missing-result unverified decisions, returned check failures and actual skill text/event accounting. Full repository build/test validation and actual host/provider calls were not run in this source review.
+
+The prior fixes remain present: explicit controlled primary selection and resolution checks; pre-host fixture/prompt/Git drift checks; exclusive attempt marker and refusal to overwrite partial artifacts; disappeared-Git failure; owned process-group bounded TERM/KILL cleanup; independent task acceptance. Standard-library-only tooling is retained.
+
+## Remaining concrete limits
+
+1. **P2 — Absolute request-body deadline remains unenforced.** Host.request computes the remaining time before `opener.open` and uses it as an I/O timeout, then reads the response body without an absolute deadline/watchdog. The current frozen-source offline probe returned successfully after advancing time by 10 seconds during read with a 1-second deadline; only the next request was refused. Evidence: `final-runner/deadline-probe.json`. This does not involve a socket or provider. A socket operation timeout is not proof of a total-body wall-clock cutoff for a continuing slow stream. Startup/version checking, cleanup and invariant tests also have separate allowances. This remains a blocking qualification for any claim of a hard end-to-end time bound; it does not invalidate the actual recorded bounded executions. Describe the implementation as request/deadline checks with best-effort interruption and separate cleanup/check overhead unless a true whole-operation deadline is enforced.
+
+2. **P2 — Strict read-only index preservation is not the checked invariant.** Final staging checks compare `git ls-files --stage` hashes, not captured `index_bytes_sha256`. The host environment does not set `GIT_OPTIONAL_LOCKS=0` for its allowed Git status commands (only the runner's own git_state helper does). The separate read-only retry supplies concrete evidence: its index-byte hash changes while `staging_entries_preserved` is true. Parsing retained original07 index bytes (matching retry's before hash) and retry's final index shows only tracked-file ctime/inode stat-cache fields plus checksum changed; staged object IDs, modes and flags are unchanged. Thus semantic staging preservation is supported, but literal index immutability is not. This blocks certifying the retry's explicit no-index-edit constraint under a strict interpretation. Preventing optional index refresh and/or checking/reporting the expected invariant explicitly would avoid conflating the two. No deliberate staging edit is alleged.
+
+3. **Instruction/accounting visibility is still narrower than full inference identity.** The exposed built-in `build` fingerprint can be the empty-string digest when the registered system field is absent; it is not a verified complete provider prompt. Requested/resolved primary IDs, staged custom bodies and actual skill text are evidenced, but ambient/host-injected prompt contributions and unexposed auxiliary usage remain unknown. Numeric session/message reconciliation does not establish invoice completeness, especially with usage-free partial/aborted assistant rows. Existing report disclaimers correctly limit these claims; do not remove them.
+
+No additional newly introduced blocker was found in the inspected changes for the limited offline preparation, retention and reporting workflow. The remaining time/read-only guarantee gaps above prevent stronger certification. Passing focused tests is not a proof of complete host permission enforcement, semantic task correctness, detached-descendant containment, or production readiness.
+
+Original trial runners are recorded per result: `da6479b...` for 01–07 and `ae7467ff...` for 08–18; the latter adds the startup503 fix. Current `f135d136...` adds later changes. Frozen plan identity is preserved, but it is a preparation/roster identity, not evidence that every later execution used the plan's original runner bytes. Reports must use actual result runner hashes when describing collection provenance.

@@ -1,0 +1,176 @@
+{
+  "ses_ec1540542ffe00SGeM4qytg2ex": {
+    "id": "ses_ec1540542ffe00SGeM4qytg2ex",
+    "projectID": "f8b7d4028453ca38a032b50362ddcadf5ba00230",
+    "agent": "build",
+    "model": {
+      "id": "deepseek-v4-pro",
+      "providerID": "deepseek",
+      "variant": "default"
+    },
+    "cost": 0.02730794,
+    "tokens": {
+      "input": 9872,
+      "output": 1217,
+      "cache": {
+        "read": 139520,
+        "write": 0
+      }
+    },
+    "time": {
+      "created": 1792052820707,
+      "updated": 1792052975796
+    },
+    "title": "Native evaluation 02-focused-review-with-skills-ordinary-1",
+    "permissions": [
+      {
+        "action": "*",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "read",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "glob",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "grep",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "skill",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "subagent",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "execute",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "pwd",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "ls",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "ls *",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "git status*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "git diff*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "git ls-files*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "python3 -B -m unittest*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "command -v *",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "which *",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "standalone-pilot-tsc*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "node --version",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "bun --version",
+        "effect": "allow"
+      },
+      {
+        "action": "external_directory",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "read",
+        "resource": "*.env*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": ".git/*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": ".agents/*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": ".opencode/*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "opencode.json",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "labels.txt",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "test_pagination.py",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "owner-note.txt",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "CONTRACT.md",
+        "effect": "deny"
+      }
+    ],
+    "location": {
+      "directory": "/private/tmp/native-matched-2026-10-15-v3/02-focused-review-with-skills-ordinary-1/workspace"
+    }
+  }
+}

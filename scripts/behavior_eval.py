@@ -31,6 +31,12 @@ def snapshot(root):
 
 def git(work,*args):return subprocess.check_output(['git','-C',str(work),*args],text=True)
 
+def staged_identity(work):
+ """Hash staged modes, blobs, stages and paths, excluding index stat cache."""
+ entries=subprocess.check_output(['git','-C',str(work),'ls-files','--stage','-z'],
+                                 env={**os.environ,'GIT_OPTIONAL_LOCKS':'0'})
+ return hashlib.sha256(entries).hexdigest()
+
 def prepare(case,output,skills,discovery=False):
  if output.exists():raise ValueError('Choose an empty evaluation output path')
  output.mkdir(parents=True);work=output/'workspace';work.mkdir()
@@ -112,7 +118,7 @@ class Pages(unittest.TestCase):
   task=task.replace('using the supplied role and optional skill', 'using relevant procedures/roles selected from instructions/catalog.md').replace('Use the supplied role and optional skill;', 'Choose relevant procedures/roles from instructions/catalog.md;').replace('using the supplied quality role and change-review skill', 'using relevant procedures/roles selected from instructions/catalog.md').replace('using the supplied GEO role and skill', 'using relevant procedures/roles selected from instructions/catalog.md')
   task+=' Read instructions/operating-contract.md before selecting optional roles/procedures. Record which instructions you selected and why. Do not read initial.json, grader source, other trials or author/reviewer notes.'
  (output/'task.md').write_text(task+'\n', encoding="utf-8")
- initial={'format_version':1,'case_id':case,'role':role,'skill':skill,'workspace_sha256':snapshot(work),'instruction_sha256':snapshot(output/'instructions'),'task_sha256':hashlib.sha256((output/'task.md').read_bytes()).hexdigest(),'source_revision':git(ROOT,'rev-parse','HEAD').strip() if (ROOT/'.git').exists() else None,'instruction_mode':'discovery' if discovery else 'explicit','preparer_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'skills_revision':git(skills,'rev-parse','HEAD').strip() if (skills/'.git').exists() else None,'source_note':'instruction hashes include working-tree changes','initial_git_status':git(work,'status','--porcelain') if (work/'.git').exists() else None}
+ initial={'format_version':1,'case_id':case,'role':role,'skill':skill,'workspace_sha256':snapshot(work),'instruction_sha256':snapshot(output/'instructions'),'task_sha256':hashlib.sha256((output/'task.md').read_bytes()).hexdigest(),'source_revision':git(ROOT,'rev-parse','HEAD').strip() if (ROOT/'.git').exists() else None,'instruction_mode':'discovery' if discovery else 'explicit','preparer_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'skills_revision':git(skills,'rev-parse','HEAD').strip() if (skills/'.git').exists() else None,'source_note':'instruction hashes include working-tree changes','initial_git_status':git(work,'status','--porcelain') if (work/'.git').exists() else None,'initial_staging_identity':staged_identity(work) if (work/'.git').exists() else None}
  (output/'initial.json').write_text(json.dumps(initial,indent=2)+'\n', encoding="utf-8")
  return initial
 
@@ -131,7 +137,11 @@ def grade(output):
   checks['only_port_source_changed']={p:h for p,h in current.items() if p!='port.ts'}=={p:h for p,h in initial['workspace_sha256'].items() if p!='port.ts'}
   checks['port_source_present']='port.ts' in current
  else:checks['workspace_unchanged']=snapshot(work)==initial['workspace_sha256']
- if case=='focused-review-with-skills':checks['git_selection_unchanged']=git(work,'status','--porcelain')==initial['initial_git_status']
+ if case=='focused-review-with-skills':
+  has_git=(work/'.git').is_dir()
+  checks['git_selection_unchanged']=has_git and git(work,'status','--porcelain')==initial['initial_git_status']
+  expected=initial.get('initial_staging_identity')
+  checks['staging_identity_unchanged']=(staged_identity(work)==expected if has_git else False) if expected is not None else None
  checks['instructions_unchanged']=snapshot(output/'instructions')==initial['instruction_sha256']
  result={'format_version':1,'case_id':case,'deterministic_checks':checks,'commands':commands,'review_verdict':'unverified','review_note':'Artifact invariants do not grade reasoning or authenticate all actions. Review actual retained response and available action evidence separately.'}
  (output/'checks.json').write_text(json.dumps(result,indent=2)+'\n', encoding="utf-8");return result

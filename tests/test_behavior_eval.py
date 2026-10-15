@@ -1,5 +1,8 @@
 import importlib.util
 import json
+import os
+import subprocess
+import shutil
 from pathlib import Path
 import tempfile
 import unittest
@@ -26,6 +29,41 @@ class BehaviorEval(unittest.TestCase):
    self.assertTrue(all(module.grade(out)['deterministic_checks'].values()))
    (out/'workspace/pricing.py').write_text('unauthorized edit')
    self.assertFalse(module.grade(out)['deterministic_checks']['workspace_unchanged'])
+ def test_changed_staging_is_detected_when_status_and_source_match(self):
+  with tempfile.TemporaryDirectory() as raw:
+   root=Path(raw);self.make_skills(root/'skills');out=root/'evaluation';module.prepare('focused-review-with-skills',out,root/'skills');work=out/'workspace'
+   status=module.git(work,'status','--porcelain');source=module.snapshot(work)
+   blob=subprocess.check_output(['git','-C',str(work),'hash-object','-w','--stdin'],input=b'def quote(*args):\n    return 999\n').decode().strip()
+   module.git(work,'update-index','--cacheinfo','100644,'+blob+',pricing.py')
+   module.git(work,'update-index','--assume-unchanged','pricing.py')
+   self.assertEqual(module.git(work,'status','--porcelain'),status)
+   self.assertEqual(module.snapshot(work),source)
+   checks=module.grade(out)['deterministic_checks']
+   self.assertTrue(checks['git_selection_unchanged'])
+   self.assertTrue(checks['workspace_unchanged'])
+   self.assertFalse(checks['staging_identity_unchanged'])
+   self.assertFalse(all(checks.values()))
+
+ def test_legacy_staging_evidence_is_unknown_not_truthy(self):
+  with tempfile.TemporaryDirectory() as raw:
+   root=Path(raw);self.make_skills(root/'skills');out=root/'evaluation';initial=module.prepare('focused-review-with-skills',out,root/'skills')
+   initial.pop('initial_staging_identity');(out/'initial.json').write_text(json.dumps(initial))
+   result=module.grade(out)
+   self.assertIsNone(result['deterministic_checks']['staging_identity_unchanged'])
+   self.assertFalse(all(result['deterministic_checks'].values()))
+   self.assertEqual(result['review_verdict'],'unverified')
+
+ def test_stat_refresh_preserves_semantic_staging_and_deleted_git_fails(self):
+  with tempfile.TemporaryDirectory() as raw:
+   root=Path(raw);self.make_skills(root/'skills');out=root/'evaluation';module.prepare('focused-review-with-skills',out,root/'skills');work=out/'workspace'
+   before=module.staged_identity(work)
+   path=work/'CONTRACT.md';stat=path.stat();os.utime(path,ns=(stat.st_atime_ns,stat.st_mtime_ns+1000000000))
+   module.git(work,'status','--porcelain')
+   self.assertEqual(module.staged_identity(work),before)
+   self.assertTrue(module.grade(out)['deterministic_checks']['staging_identity_unchanged'])
+   shutil.rmtree(work/'.git')
+   self.assertFalse(module.grade(out)['deterministic_checks']['staging_identity_unchanged'])
+
  def test_no_overwrite_of_an_existing_evaluation(self):
   with tempfile.TemporaryDirectory() as raw:
    with self.assertRaises(ValueError):module.prepare('implementation-dirty-worktree',Path(raw),Path(raw))

@@ -1,0 +1,29 @@
+{
+  "command": [
+    "git",
+    "-C",
+    "/var/folders/k9/0mqqtyn90j31qcqvltrlmww00000gn/T/independent-cache-w1qsqtnf/case/workspace",
+    "update-index",
+    "--refresh"
+  ],
+  "exit": 1,
+  "stdout": "display.py: needs update\n",
+  "stderr": "",
+  "index_before_sha256": "9828975f423e7ffeee2621ce465fea2c8553832a1c199d9125c40fef56435321",
+  "index_after_sha256": "e8aa999c54d091c5d87253c7bb37547a9c2fc7aac4f2a78631c546fcf25fde7f",
+  "index_bytes_changed": true,
+  "semantic_staging_unchanged": true,
+  "grade": {
+    "format_version": 1,
+    "case_id": "focused-review-with-skills",
+    "deterministic_checks": {
+      "workspace_unchanged": true,
+      "git_selection_unchanged": true,
+      "staging_identity_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "commands": [],
+    "review_verdict": "unverified",
+    "review_note": "Artifact invariants do not grade reasoning or authenticate all actions. Review actual retained response and available action evidence separately."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "entry": {
+    "id": "01-focused-review-with-skills-ordinary-2",
+    "case": "focused-review-with-skills",
+    "mode": "ordinary",
+    "repeat": 2,
+    "agent": null,
+    "skill": null,
+    "prompt_sha256": "f974e114e6ce0e8cbc3eedb3788e4f15ec5911ba7e45aae65be3ee0af2105210",
+    "fixture_sha256": "c9837471b57e064f6a08d7057225f558b02bad21c67e37d777cfeaf44624836b"
+  },
+  "model_requested": {
+    "providerID": "deepseek",
+    "id": "deepseek-v4-pro"
+  },
+  "timeout_seconds": 180.0,
+  "max_reported_cost": 0.15,
+  "task_acceptance": "needs_independent_review",
+  "status": "setup_failed",
+  "runner_sha256": "29f16887df71ea1d6a8b36707f9e07d51a2c67ed52efb122b98c6612f401688d",
+  "usage_limits": "Host session totals, including discovered descendants. Hidden auxiliary calls/billing remain unknown; reported-cost interrupt can overshoot.",
+  "host_version": "opencode v2.0.27",
+  "error": {
+    "type": "HTTPError",
+    "message": "HTTP Error 400: Bad Request"
+  },
+  "final_capture_error": "HTTPError",
+  "seconds": 1.334,
+  "usage": null,
+  "invariants": {
+    "source_scope_preserved": true,
+    "staging_entries_preserved": true
+  }
+}

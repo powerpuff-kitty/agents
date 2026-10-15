@@ -125,7 +125,7 @@ Use a [release tag](https://github.com/powerpuff-kitty/ai-agents/releases) when 
 reviewed snapshot is preferable to the moving default branch:
 
 ```sh
-git clone --branch v0.1.1-beta.1 --depth 1 https://github.com/powerpuff-kitty/ai-agents.git
+git clone --branch v0.1.2-beta.1 --depth 1 https://github.com/powerpuff-kitty/ai-agents.git
 cd ai-agents
 git rev-parse HEAD
 python3 scripts/install.py --pack core --dry-run

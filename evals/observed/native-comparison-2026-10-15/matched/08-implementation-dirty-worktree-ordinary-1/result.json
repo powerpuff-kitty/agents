@@ -1,0 +1,37 @@
+{
+  "entry": {
+    "id": "08-implementation-dirty-worktree-ordinary-1",
+    "case": "implementation-dirty-worktree",
+    "mode": "ordinary",
+    "repeat": 1,
+    "agent": null,
+    "skill": null,
+    "prompt_sha256": "f5eda016d7d99f45ec15ae8ee1f28d39c2fc26726ace64b19959075d77564339",
+    "fixture_sha256": "9fc4fee16365a8239b3f2b64a70efac84ee035c257628f5d5cc1387ce091fe3c"
+  },
+  "model_requested": {
+    "providerID": "deepseek",
+    "id": "deepseek-v4-pro"
+  },
+  "timeout_seconds": 180.0,
+  "max_reported_cost": 0.15,
+  "task_acceptance": "needs_independent_review",
+  "status": "collected",
+  "runner_sha256": "ae7467ff9c476ea556d402e250f6a1843f65c38dbed5727bb34ca3ce21b4ed83",
+  "usage_limits": "Host session totals, including discovered descendants. Hidden auxiliary calls/billing remain unknown; reported-cost interrupt can overshoot.",
+  "host_version": "opencode v2.0.27",
+  "seconds": 55.068,
+  "usage": {
+    "input": 9064,
+    "output": 1158,
+    "cache_read": 100608,
+    "cache_write": 0,
+    "reported_cost": 0.014648435999999999,
+    "complete_session_fields": true
+  },
+  "invariants": {
+    "source_scope_preserved": true,
+    "staging_entries_preserved": true,
+    "boundary_tests": true
+  }
+}

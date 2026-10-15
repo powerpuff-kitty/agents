@@ -1,0 +1,61 @@
+# Independent initial review — native_eval.py
+
+Date: 2026-10-15. Review scope: source and disposable offline probes only. No native host inference, provider/model discovery, network call, configuration inspection, or secret inspection was performed. Source repository was not edited.
+
+Reviewed source: `/Users/tcsntcsn/TCSN/agents/scripts/native_eval.py`.
+Frozen tested copy: `source/native_eval.py` in this report directory.
+SHA-256: `29f16887df71ea1d6a8b36707f9e07d51a2c67ed52efb122b98c6612f401688d`.
+The first source-hash read earlier in the review was `735ba4f91f40110c6a003a3c7baead461a2d9fa3e1140f80d30d407474684701`; the source changed before the disposable copy was taken. All executable probes use the frozen `29f16887...` copy. At the end of testing, live source and frozen copy both hashed to `29f16887...`. This report is about that frozen version, not a future working-tree state.
+
+Dependencies inspected: `behavior_eval.py` (SHA-256 `18af07d976f36516e34697a6771d4ee737d883c8379e8b2d06b24bd721108470`) and `opencode_probe.py` (`f14fbe1a969a3076322df8d8b5d54b27f66529fd3ff7d6762116828545295f7d`). Relevant repository instructions/documentation read: agents/AGENTS.md, README.md, docs/ARCHITECTURE.md, evals/README.md, tests/test_native_probe.py; supplied workspace `.agentic/README.md` and manifest were also read. The source was untracked at the initial `git status --short scripts/native_eval.py` check.
+
+## Findings
+
+1. **P1 — Time budget can expire before prompting, yet inference is still submitted.** `execute` starts its clock at line 316 but first tests it at lines 365–370, after the prompt request and a complete recursive capture. Host readiness, inventory retries, session creation, and the prompt request have no remaining-budget check. Each capture can perform many separately bounded requests, so an active inference may also run substantially past the requested timeout before the next check. The offline fake host advanced the monotonic clock to 10 seconds during readiness with a 1-second budget; `/api/session/root/prompt` was nevertheless submitted at second 10 and the result was subsequently `timed_out`. This is a definite admission-bound failure even without claiming a hard invoice cap. Check the deadline before prompting and carry the remaining deadline through I/O, polling, and cleanup; test the exhausted-preflight path.
+
+2. **P1 — Active default-agent instructions are not verified or retained.** `verify_inventory` (lines 165–184) validates staged custom agents/skills, and only the `steps` field of built-in `build`. `execute` validates the resolved agent ID only for named-agent mode (lines 345–353). Ordinary and skill mode can therefore resolve any ambient default agent, including one with a different step limit and unknown system instructions. The probe returned an `ambient-agent` with 99 steps and an unverified system body; the preflight retained only the two staged custom agent identities and still submitted the prompt. Even the expected built-in `build` system body is not included in the inventory identity. Verify the actual resolved active agent, record its loaded instruction identity and bounds, and state the remaining limits around host-injected/project/global instructions. A custom-catalog inventory alone is not the active prompt identity.
+
+3. **P1 — Partial prior attempts are overwritten and simultaneous attempts are unclaimed.** Lines 308–309 reject only an existing final `result.json`. A killed/crashed process can already have `preflight.json`, `submitted-prompt.json`, `sessions.json`, and `messages.json` but no result. The next invocation writes those same paths at lines 354, 358, 362–363 and 388–389. The probe seeded prior-attempt preflight/prompt records without a result; both were overwritten. There is also no exclusive attempt marker/lock to prevent two invocations from passing the guard and starting paid calls for one roster slot. Preserve attempts in separate exclusively created directories, or fail closed on any existing execution evidence and require an explicit new attempt identity. Final-result preservation does not satisfy preservation of all attempted executions.
+
+4. **P2 — Staging drift is omitted from preflight and deleting Git metadata passes the preservation check.** `snapshot` excludes `.git` (lines 53–54); preflight compares only that snapshot and prompt identity (lines 319–323), ignoring captured `git-before.json`. Resetting the staged `pricing.py` entry left the snapshot match true while changing the captured staged hash. After removing the disposable `.git`, `invariant_checks` (lines 289–291) returned both `source_scope_preserved: true` and `staging_entries_preserved: true` because `git_state(project) is None` is accepted unconditionally. Require the expected Git-repository presence and captured staged-entry identity before inference and after execution. Preserve the distinction between expected absence and disappearance. Actual index bytes are retained but are not checked; staged-entry equality alone does not prove all index metadata remained unchanged.
+
+5. **P2 — Cleanup does not cover owned descendant processes.** `Host.close` (lines 224–230) terminates/kills only the server PID; the server is not started in an owned process group/session (lines 202–203). Session interrupts may help during normal host operation but are not a process-ownership cleanup boundary when a host is unresponsive or exits first. An actual local parent/child probe passed the parent Popen object to `Host.close`: the parent exited, while its owned sleeping child remained alive. The probe explicitly terminated that known child afterward. Establish and bound cleanup of the owned process tree/group without targeting unrelated host processes. This test establishes the runner's gap, not a claim that OpenCode always leaves its children behind.
+
+## Confirmed strengths and limits
+
+The runner and directly imported helpers use the Python standard library. Preparation contains no Host construction or provider call. The offline synthetic preparation produced nine roster entries (three cases × three modes), nine explicit `not_run` report rows, and one identical workspace snapshot hash per case across modes. `report` preserves missing slots; task acceptance remains separately marked `needs_independent_review`/`unverified`. Explicit host/model/positive finite time/reported-cost options are required by the CLI. Resolved project/model checks occur before prompting, and custom staged skill/agent content is checked against host inventory. Descendant sessions are traversed and usage is summed when API fields are present. Reported cost is expressly a host-reported interrupt threshold with unknown hidden calls and possible overshoot, not complete billing.
+
+No actual OpenCode API compatibility, native permission enforcement, native child-session discovery, tool trace completeness, real usage accounting, compiler behavior, or model outcome was established by this review. Mock responses demonstrate runner control flow only. Artifact invariants and host `succeeded` do not establish task semantic correctness. Native trial evidence remains pending a later followup. A full repository build/test suite was not run because this was a read-only focused runner review, not a repository modification.
+
+## Retained evidence and commands
+
+`offline_checks.py` is the exact probe harness, `offline-results.json` its final JSON output, and `source/` the frozen directly imported source copies. `disposable/` and `disposable-2/` retain synthetic fixture/evidence state from the two probe passes. Both passes completed with exit code 0. No OpenCode executable was invoked. The fake host used literal `synthetic/offline` identifiers and no provider discovery.
+
+Source inspection commands included:
+
+```sh
+pwd
+rg --files -g AGENTS.md -g SKILL.md -g native_eval.py -g README.md -g manifest.yaml /Users/tcsntcsn/TCSN/agents /Users/tcsntcsn/TCSN/tcsn.io/.agentic /Users/tcsntcsn/TCSN/tcsn.io/.agents/skills/tcsn-change
+cat .agentic/README.md .agentic/manifest.yaml /Users/tcsntcsn/TCSN/agents/AGENTS.md /Users/tcsntcsn/TCSN/agents/README.md
+wc -l scripts/native_eval.py
+nl -ba scripts/native_eval.py
+cat docs/ARCHITECTURE.md evals/README.md
+rg -n 'native_eval|native.eval|def stage_export' scripts tests docs evals/README.md
+cat scripts/opencode_probe.py
+cat scripts/behavior_eval.py
+cat tests/test_native_probe.py
+rg --files tests
+git status --short scripts/native_eval.py
+shasum -a 256 scripts/native_eval.py scripts/behavior_eval.py scripts/opencode_probe.py
+```
+
+Source was copied with `cp` into this report directory, then probes were run twice after creating the harness with the patch tool:
+
+```sh
+GIT_CONFIG_NOSYSTEM=1 GIT_CONFIG_GLOBAL=/dev/null python3 -B /private/tmp/native-runner-independent-20261015/offline_checks.py
+shasum -a 256 /Users/tcsntcsn/TCSN/agents/scripts/native_eval.py /private/tmp/native-runner-independent-20261015/source/native_eval.py
+```
+
+The harness itself runs only fixture-local `git init/add/commit/reset`, local fixture file operations, mocked host calls, and a known local parent/child process pair for cleanup verification. It does not construct a real Host instance; `Host.close` is called on an object containing only the probe's Popen process. Git global/system configuration loading was disabled for the probe invocation. Fixture test execution was not used as a semantic model verdict.
+
+Initial assessment: the retained version needs fixes to the above safety/evidence guarantees before it should be treated as satisfying the accepted runner requirements. Keep this initial report unchanged when later run evidence or revised source is reviewed.

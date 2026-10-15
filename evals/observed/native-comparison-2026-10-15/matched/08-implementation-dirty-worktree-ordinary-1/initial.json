@@ -1,0 +1,25 @@
+{
+  "format_version": 1,
+  "case_id": "implementation-dirty-worktree",
+  "role": "feature-developer",
+  "skill": "systematic-debugging",
+  "workspace_sha256": {
+    "labels.txt": "305acd098d197015b990421d4289436941e05a24d7cba35415127e8656da64a5",
+    "pagination.py": "b7b6b38c5afe160fe82c30eed5ea999e7256c0a41b78055f543e6ed7993ffdaf",
+    "test_pagination.py": "7a4c6202edabff0858d9bfd17b4ad5789f0eca9552ef6751e95d964d3ee1feff"
+  },
+  "instruction_sha256": {
+    "role.md": "35bfbb65be7f2fdabe38d15882deb92212aae2045444ef390c3239cf511034a9",
+    "skill/LICENSE": "da8e7b98c9f5547396031dd15ffe7a820eb8c2b9e4d1b32c9eb69bbc0d2c5af4",
+    "skill/SKILL.md": "e01c99c7b7a65c3eb249c0abbd3196132a51a3d3cba44b5809d6b19e0e8d6957",
+    "skill/references/investigation.md": "8ae2b90c87e4de6de9015b8c848a6274b94ba7ceeb2b7e5e67e6a9fc12ba65a4",
+    "skill/tests/cases.json": "4e40b8e96a2fa7a63396ba59fac2e2c6dc8c5ae353f5b2ba46579eef22914e5e"
+  },
+  "task_sha256": "1b0cf26ab16de1d6c0d5094d26a11d00f57c46d4d8abc52c366b1ce8bdcf5bed",
+  "source_revision": "cbf7c53fe3f83b438a7d47945760fa38d6f3499c",
+  "instruction_mode": "explicit",
+  "preparer_sha256": "18af07d976f36516e34697a6771d4ee737d883c8379e8b2d06b24bd721108470",
+  "skills_revision": "aed7e19f426c315b142111ef846f84d7680f3df3",
+  "source_note": "instruction hashes include working-tree changes",
+  "initial_git_status": " M labels.txt\n"
+}

@@ -1,0 +1,42 @@
+{
+  "prepared_runs": 9,
+  "not_run_rows": 9,
+  "matched_workspaces": {
+    "implementation-dirty-worktree": 1,
+    "focused-review-with-skills": 1,
+    "implementation-unavailable-check": 1
+  },
+  "index_drift": {
+    "snapshot_still_matches": true,
+    "staged_hash_changed": true
+  },
+  "deleted_git_checks": {
+    "source_scope_preserved": true,
+    "staging_entries_preserved": true
+  },
+  "expired_timeout": {
+    "status": "timed_out",
+    "prompt_requests": [
+      {
+        "at": 10.0,
+        "path": "/api/session/root/prompt"
+      }
+    ]
+  },
+  "prior_attempt_overwritten": {
+    "preflight.json": true,
+    "submitted-prompt.json": true
+  },
+  "unverified_default_agent": {
+    "resolved_agent": "ambient-agent",
+    "inventoried_agent_ids": [
+      "feature-developer",
+      "quality-engineer"
+    ],
+    "prompt_still_submitted": true
+  },
+  "host_close": {
+    "parent_exited": true,
+    "owned_descendant_still_alive": true
+  }
+}

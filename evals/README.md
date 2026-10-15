@@ -75,6 +75,12 @@ workspace does not establish compilation or recovery success. From a source arch
 without Git metadata, the harness records a null source revision and retains input
 and preparer hashes; it never substitutes an unrelated parent repository's commit.
 
+Current focused-review fixtures also retain a semantic staging hash (modes, blobs,
+stages and NUL-delimited paths). Grading compares it separately from porcelain
+status, so a changed staged blob cannot hide behind identical status text.
+Stat-cache byte refreshes do not change that identity. Legacy inputs without the
+hash report a null preservation check; they do not produce a truthy pass.
+
 ## Design extraction exercises
 
 The [source-only and DTCG exercises](observed/design-extraction-2026-10-14/README.md)
@@ -99,3 +105,19 @@ separate explicit-skill exercises. They do not count as canonical role-case runs
 [Installation verification](../docs/INSTALLATION-VERIFICATION.md) covers registry
 loading, which is separate from model behavior. Preserve raw records as historical
 evidence even when current instructions or counts change.
+
+## Matched native comparisons and project pilot
+
+The [2026-10-15 comparison](observed/native-comparison-2026-10-15/README.md) retains
+18 planned DeepSeek runs across 3 fixtures, 3 usage modes and 2 repetitions, plus
+a separately recorded startup retry, 2 context candidates and a real AI Agents
+project pilot. Built-in controls, explicit skill-body attachments and named primary
+profiles are distinguished. Failures/timeouts remain in the roster, and task
+acceptance comes from independent review rather than host completion.
+
+The pilot's incomplete native change is separate from the coordinator's tested,
+independently reviewed staging-identity correction. The shorter debugging skill
+retains scoped before/after outcomes; source bytes and provider measurements remain
+distinct. These repeat already observed cases, so unique coverage stays 8/144.
+Use [the native evaluation guide](../docs/NATIVE-EVALUATIONS.md) to prepare offline,
+run only explicitly authorized inference, and produce result-bound review reports.

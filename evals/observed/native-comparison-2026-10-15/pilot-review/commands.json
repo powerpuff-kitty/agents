@@ -1,0 +1,31 @@
+[
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_behavior_eval.py",
+      "-v"
+    ],
+    "cwd": "/private/tmp/native-project-pilot-independent-20261015/baseline",
+    "exit": 0,
+    "log": "baseline-tests.log",
+    "time_utc": "2026-10-15T08:35:33.382549+00:00"
+  },
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "/private/tmp/native-project-pilot-independent-20261015/probe.py",
+      "/private/tmp/native-project-pilot-independent-20261015/baseline",
+      "/private/tmp/native-project-pilot-independent-20261015/baseline-probe.json"
+    ],
+    "exit": 0,
+    "result": "baseline-probe.json"
+  }
+]

@@ -13,6 +13,9 @@ changes, external actions, or an unlimited expansion of work.
    paths and context references, available verification, and output expectations.
    Treat preset conditions as contextual judgments; explain included and skipped
    assignments rather than claiming an automatic routing classifier selected them.
+   Separate actual host policy from inferred capability limits. Pass failed
+   invocations and results accurately; do not expand them into unsupported tool
+   prohibitions in a delegate's brief.
 3. For each applicable assignment, provide the relevant brief directly. Specialists
    may have isolated context: do not assume they know this conversation or another
    delegate's results. Include stage dependencies, ownership, permitted actions,

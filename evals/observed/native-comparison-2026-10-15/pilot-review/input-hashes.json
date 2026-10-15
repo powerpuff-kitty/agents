@@ -1,0 +1,12 @@
+{
+  "captured_utc": "2026-10-15T08:36:08.090517+00:00",
+  "files": {
+    "source.json": "f547e531cc1c642713f1f97aa6a59be106675051e404f91ffc7a4b215a640460",
+    "prompt.txt": "5922452289f28563396a9dda61e2363d8cec54ec61bd4a486082857f5d2de24d",
+    "before.json": "9c004169bbe21dc949a849cd33b7382bf188a5d3e3472088957db9a28a28c32a",
+    "git-before.json": "36b0b15377a28eecf387c43976c922d60d723919848ef820d6bd068915e7fcbc",
+    "submitted-command.json": "84c858e92d94fb40f4e6eb2582c5a245f797121ffc13ab8efb7af47d59cab244",
+    "command-registered.json": "f4d6f0e90640ff54b01c1cde2b33f0c0debbd51ac80450e172458b2d1f941271",
+    "preflight.json": "4438c56ab94353f715791372714fdad9a9199bc49edbff98e78abe4daaac36fa"
+  }
+}

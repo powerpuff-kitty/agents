@@ -1,0 +1,12 @@
+test_boundary_fixture_fails_then_detects_fix_and_owner_edit (test_behavior_eval.BehaviorEval.test_boundary_fixture_fails_then_detects_fix_and_owner_edit) ... ok
+test_discovery_stages_candidates_without_assigned_instructions (test_behavior_eval.BehaviorEval.test_discovery_stages_candidates_without_assigned_instructions) ... ok
+test_new_cases_route_both_modes_and_keep_reasoning_ungraded (test_behavior_eval.BehaviorEval.test_new_cases_route_both_modes_and_keep_reasoning_ungraded) ... ok
+test_no_overwrite_of_an_existing_evaluation (test_behavior_eval.BehaviorEval.test_no_overwrite_of_an_existing_evaluation) ... ok
+test_readonly_fixture_detects_source_mutation (test_behavior_eval.BehaviorEval.test_readonly_fixture_detects_source_mutation) ... ok
+test_source_archive_can_prepare_without_inventing_git_revision (test_behavior_eval.BehaviorEval.test_source_archive_can_prepare_without_inventing_git_revision) ... ok
+test_unavailable_checks_and_recovery_keep_behavior_unverified (test_behavior_eval.BehaviorEval.test_unavailable_checks_and_recovery_keep_behavior_unverified) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.055s
+
+OK

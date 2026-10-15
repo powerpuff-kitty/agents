@@ -1,0 +1,11 @@
+# Baseline independent assessment (pre-completion)
+
+The tracked baseline was extracted using `git archive HEAD` from the isolated pilot project. Both permitted implementation files and AGENTS.md match their before.json SHA-256 hashes. No changing final implementation was treated as completed. All writes were to this independent artifact directory or synthetic temporary fixtures.
+
+`python3 -B -m unittest discover -s tests -p test_behavior_eval.py -v` passed all 7 baseline tests in the extracted source archive.
+
+`python3 -B probe.py baseline baseline-probe.json` reproduced a false preservation result. A synthetic focused-review fixture was prepared, the staged pricing.py blob was replaced through git hash-object/update-index, and its assume-unchanged flag set. The resulting porcelain output and workspace hashes were identical to the prepared fixture, but `git ls-files --stage -z` changed. Baseline grading still returned true for git_selection_unchanged. This explicitly uses an index flag to retain the original porcelain state and makes no assertion that all possible staging operations leave status unchanged. The full original fixture remains review_verdict=unverified, so the false positive concerns the staging-preservation invariant, not an overall authenticated reasoning verdict.
+
+The baseline legacy input similarly reports git_selection_unchanged=true because it lacks semantic staging evidence. Accepted behavior requires this preservation claim to remain unverified instead.
+
+No probe results or correction guidance were supplied to the native run. Await run.json before reviewing final source, workflow completion, and verification claims.

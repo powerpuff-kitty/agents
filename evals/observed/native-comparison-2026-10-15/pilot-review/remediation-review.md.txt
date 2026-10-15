@@ -1,0 +1,58 @@
+# Independent coordinator remediation review
+
+Reviewed 2026-10-15 after preserving the initial native-attempt report. This is a separate review of coordinator remediation in `/Users/tcsntcsn/TCSN/agents/scripts/behavior_eval.py` and `tests/test_behavior_eval.py`. It does not revise or relabel the timed-out native attempt or attribute these later tests to that attempt.
+
+**Verdict: accepted for the focused staging-identity feature; no blocking finding in the reviewed scope.**
+
+## Scope and provenance
+
+Both originals were read only and copied into a disposable source tree. To keep this assessment within scope, the supporting tree is the previously verified pilot source archive with only these two coordinator files overlaid. Optional new runner/report scripts and other current-repository additions are outside this review. Thus the broad checks below validate this isolated remediation against the accepted pilot context; they are not a complete check of every current repository change.
+
+Reviewed SHA-256 values:
+
+- `scripts/behavior_eval.py`: `582416ee34370ab1d81315c695c094b0fb007f6ddcc698c128861c6250bcc8c9`.
+- `tests/test_behavior_eval.py`: `6c0f44618cdc0563b928cbd217ce114aaedf504331d0d6e91727e0886b55d40c`.
+
+`source-hashes.json` holds the actual captured values; `original-readonly-check.json` verifies both originals still match after review. The initial native source snapshots, report, and findings remain separately retained and unchanged.
+
+## Implementation assessment
+
+The helper now hashes raw `git ls-files --stage -z` output. The records include mode, blob object ID, stage, and path; NUL-delimited bytes avoid filename quoting/line ambiguities and decoding dependencies. SHA-256 compactly preserves this semantic identity. The helper explicitly supplies `GIT_OPTIONAL_LOCKS=0` and does not compare raw index stat-cache bytes.
+
+Preparation captures the identity for Git fixtures while source archives still keep null source revisions. Grading retains the porcelain status check separately and compares the prepared semantic identity for the focused-review case. A missing or null initial identity produces Python `None` / JSON null, which is unknown and falsey. Consequently the repository's `all(checks.values())` idiom cannot turn this missing evidence into a pass. Existing `review_verdict='unverified'` remains intact.
+
+If the fixture `.git` directory is deleted, grading returns false for the porcelain-preservation check and false for known semantic staging evidence, rather than falling through to an enclosing repository or raising merely because the directory is missing. When initial identity is also missing, the semantic result remains unknown; neither combination becomes passing evidence. This assessment verifies deletion of the fixture Git directory, not arbitrary corruption or unsupported replacement of its internal Git structures.
+
+## Meaningful regression evidence
+
+The added staging regression changes the staged blob directly through hash-object/update-index, sets assume-unchanged, and asserts both porcelain output and workspace hashes remain identical. It then checks that the former status/source checks remain true while the new staging check and aggregate truthiness fail. This establishes the required status-only false-pass condition without relying on a workspace-source mutation already caught by the old hash check. The independently retained baseline probe previously demonstrated that the old implementation passed every deterministic check for this same condition.
+
+The added legacy test removes the metadata key, requires a null preservation result, verifies aggregate falseyness, and keeps the reasoning verdict unverified. The third added test checks semantic identity through a timestamp refresh and catches deletion of fixture Git metadata. Existing source-archive and other-fixture behavior tests remain present and passing.
+
+The timestamp regression by itself does not assert that raw index bytes changed; this review's independent stat-cache probe supplies that stronger evidence. It changes mtime, refreshes the synthetic index, records changed raw index hashes, and obtains unchanged semantic identity plus true preservation checks. `git update-index --refresh` exits 1 with `display.py: needs update` because that fixture deliberately contains an unstaged edit; the nonzero result is retained rather than reported as a successful Git command.
+
+## Actual independent commands and outcomes
+
+`python3 -B -m unittest discover -s tests -p test_behavior_eval.py -v` passed all 10 focused tests in the disposable source tree.
+
+All seven required repository checks then exited 0 in that same copy:
+
+- `python3 scripts/validate.py`.
+- `python3 scripts/check_docs.py`.
+- `python3 scripts/build.py --adapter portable`.
+- `python3 scripts/build.py --adapter opencode`.
+- `python3 scripts/build.py --adapter portable --check`.
+- `python3 scripts/build.py --adapter opencode --check`.
+- `python3 -B -m unittest discover -s tests -v` (48 tests, 5.349s).
+
+The unittest command adds only `-B` to suppress bytecode. `remediation/commands.json` records exact argv, cwd, exits, and the corresponding log files.
+
+Additional independent probes exited 0:
+
+- `python3 -B probe.py remediation/source remediation/staging-probe.json`: unchanged fixtures preserve staging; same-status, same-workspace staged changes fail the semantic check; legacy values become null.
+- `python3 -B remediation/stat-cache-probe.py`: changed raw index bytes preserve semantic identity and grading.
+- `python3 -B remediation/metadata-probe.py`: helper reads preserve raw index bytes; missing and explicit-null initial evidence are falsey unknowns; deleted Git metadata fails preservation safely; legacy-plus-deleted-Git remains nonpassing.
+
+## Limits
+
+These are independent offline reviewer checks of coordinator source, not native-run verification, hosted model behavior, provider connectivity, a complete current-checkout test, publication approval, or production readiness. Validation itself reports host loading and command loading not checked and model behavior not run; docs checks cover supported local links/counts. No provider/network/configuration/secret reads or original source edits were performed. Broader optional runner/report changes were not reviewed.

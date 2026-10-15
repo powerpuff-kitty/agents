@@ -1,0 +1,182 @@
+{
+  "format_version": 1,
+  "plan_sha256": "6c87d14ebc116c262787553937674a7d7de55dc037767e60155893594e617a24",
+  "planned": 2,
+  "same_starting_file_hashes_per_case": {
+    "implementation-dirty-worktree": true
+  },
+  "runs": [
+    {
+      "id": "context-candidate-1",
+      "case": "implementation-dirty-worktree",
+      "mode": "skill",
+      "repeat": 1,
+      "status": "collected",
+      "acceptance": "pass",
+      "usage": {
+        "input": 10073,
+        "output": 1588,
+        "cache_read": 139136,
+        "cache_write": 0,
+        "reported_cost": 0.014938351999999998,
+        "complete_session_fields": true
+      },
+      "seconds": 47.668,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "build": 9
+        },
+        "skill_events": {
+          "systematic-debugging": 1
+        },
+        "skill_message_utf8_bytes": 3091,
+        "tool_calls": {
+          "read": 6,
+          "shell": 5,
+          "edit": 1
+        },
+        "tool_statuses": {
+          "completed": 11,
+          "error": 1
+        },
+        "tool_result_failures": 2,
+        "instruction_file_reads": [],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true,
+        "boundary_tests": true
+      },
+      "result_sha256": "773ee0838faf8782ff0b5af4a7104e6580d90bdf2b77163e6f9210a40d4762e9",
+      "review_notes": "Correct minimal boundary fix; native trace reproduces two original failures then five original tests pass, independently repeated in disposable copy. Owner label and original test bytes/staged entries preserved; raw Git index bytes changed, so no byte-identical-index claim. Matching candidate body is present in user attachment and preflight fingerprint. Actual denied shell combination and recovery are reported.",
+      "registered_source_bytes": {
+        "skills": 162167,
+        "agents": 267012
+      }
+    },
+    {
+      "id": "context-candidate-2",
+      "case": "implementation-dirty-worktree",
+      "mode": "skill",
+      "repeat": 2,
+      "status": "collected",
+      "acceptance": "pass",
+      "usage": {
+        "input": 11230,
+        "output": 1962,
+        "cache_read": 133632,
+        "cache_write": 0,
+        "reported_cost": 0.019447824,
+        "complete_session_fields": true
+      },
+      "seconds": 73.069,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "build": 8
+        },
+        "skill_events": {
+          "systematic-debugging": 1
+        },
+        "skill_message_utf8_bytes": 3091,
+        "tool_calls": {
+          "read": 10,
+          "shell": 8,
+          "edit": 1
+        },
+        "tool_statuses": {
+          "completed": 18,
+          "error": 1
+        },
+        "tool_result_failures": 2,
+        "instruction_file_reads": [
+          {
+            "path": "/private/tmp/native-context-20261015/context-candidate-2/workspace/.agents/skills/systematic-debugging/references/investigation.md",
+            "status": "completed"
+          },
+          {
+            "path": "/private/tmp/native-context-20261015/context-candidate-2/workspace/.agents/skills/systematic-debugging/tests/cases.json",
+            "status": "completed"
+          }
+        ],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true,
+        "boundary_tests": true
+      },
+      "result_sha256": "5eec2fe060ecd5f04c3123f59ebdf06ed3d7685707180c861718e1080839ec4a",
+      "review_notes": "Correct minimal boundary fix; native trace reproduces two original failures then five original tests pass, independently repeated in disposable copy. Owner label and test bytes/staged entries preserved; raw Git index bytes changed, so no byte-identical-index claim. Matching candidate skill body is present in user attachment and preflight fingerprint. Candidate2 omits its initial denied compound shell attempt from final limits, a minor reporting weakness; no forbidden command executed.",
+      "registered_source_bytes": {
+        "skills": 162167,
+        "agents": 267012
+      }
+    }
+  ],
+  "groups": [
+    {
+      "case": "implementation-dirty-worktree",
+      "mode": "skill",
+      "planned": 2,
+      "statuses": {
+        "collected": 2
+      },
+      "independent_acceptance": {
+        "pass": 2
+      },
+      "metrics": {
+        "input": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 10651.5,
+          "min": 10073,
+          "max": 11230
+        },
+        "output": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 1775,
+          "min": 1588,
+          "max": 1962
+        },
+        "cache_read": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 136384,
+          "min": 133632,
+          "max": 139136
+        },
+        "cache_write": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "reported_cost": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 0.017193088,
+          "min": 0.014938351999999998,
+          "max": 0.019447824
+        },
+        "seconds": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 60.3685,
+          "min": 47.668,
+          "max": 73.069
+        }
+      }
+    }
+  ],
+  "review_sha256": "20d7dfef970f7c3a6c244bd72f933a47d7a0b0b91e43191ac000ec2b9503d4b6",
+  "limits": [
+    "Built-in build is explicitly pinned for ordinary/skill controls; named-agent changes that primary.",
+    "Role and skill treatments are different interventions, not a context-only savings experiment.",
+    "Source bytes, instruction events, host-reported tokens/cache and billed costs are distinct.",
+    "Unexposed auxiliary calls/settings remain unknown; sample sizes do not establish statistical reliability.",
+    "No task success is inferred from host outcome, artifact invariants or a lower token count."
+  ]
+}

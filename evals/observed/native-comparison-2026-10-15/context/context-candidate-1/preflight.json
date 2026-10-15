@@ -1,0 +1,588 @@
+{
+  "location": {
+    "directory": "/private/tmp/native-context-20261015/context-candidate-1/workspace",
+    "project": {
+      "id": "b891bc76ce96fd24f19636dd9816823d9ca81c16",
+      "directory": "/private/tmp/native-context-20261015/context-candidate-1/workspace",
+      "canonical": "/private/tmp/native-context-20261015/context-candidate-1/workspace"
+    }
+  },
+  "session": {
+    "id": "ses_ec14860b3ffewjZC9V3Y5ZaqMp",
+    "projectID": "b891bc76ce96fd24f19636dd9816823d9ca81c16",
+    "agent": "build",
+    "model": {
+      "id": "deepseek-v4-pro",
+      "providerID": "deepseek",
+      "variant": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 0,
+      "output": 0,
+      "cache": {
+        "read": 0,
+        "write": 0
+      }
+    },
+    "time": {
+      "created": 1792053583718,
+      "updated": 1792053583718
+    },
+    "title": "Native evaluation context-candidate-1",
+    "permissions": [
+      {
+        "action": "*",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "read",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "glob",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "grep",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "skill",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "subagent",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "execute",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "pwd",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "ls",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "ls *",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "git status*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "git diff*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "git ls-files*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "python3 -B -m unittest*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "command -v *",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "which *",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "standalone-pilot-tsc*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "node --version",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "bun --version",
+        "effect": "allow"
+      },
+      {
+        "action": "edit",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "external_directory",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "read",
+        "resource": "*.env*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": ".git/*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": ".agents/*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": ".opencode/*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "opencode.json",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "labels.txt",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "test_pagination.py",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "owner-note.txt",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "CONTRACT.md",
+        "effect": "deny"
+      }
+    ],
+    "location": {
+      "directory": "/private/tmp/native-context-20261015/context-candidate-1/workspace"
+    }
+  },
+  "inventory": {
+    "skills": {
+      "accessibility-audit": {
+        "body_sha256": "f04008d2ab23587760f0e030e37e119ee489b86a8499d80fd3eec0ec65dc9720",
+        "utf8_bytes": 2850
+      },
+      "adapter-sync": {
+        "body_sha256": "b63c7bd74471516d54a091e9dfc8f9d1d8001e8fe2b2452532c60e92233470e6",
+        "utf8_bytes": 1602
+      },
+      "adr-management": {
+        "body_sha256": "b10b9f48148dba3d8ca7fbdcc1c9d663a56fe60ed30c73904c0f796703ca77d0",
+        "utf8_bytes": 1530
+      },
+      "agent-security-review": {
+        "body_sha256": "1031d4fb7acee3fa90641e962d402749c72a1861d6a73b296c99a5dee0bd240f",
+        "utf8_bytes": 2210
+      },
+      "agentic-app": {
+        "body_sha256": "175470aba239778967690cec3ca3daab784e22a98075bb991507dd2a6a5573eb",
+        "utf8_bytes": 2971
+      },
+      "agentic-improvement": {
+        "body_sha256": "fa355cdcb8645446a15aca238f08fb97ccd5fd4b95e2bfd9f5e0809fdc157ed2",
+        "utf8_bytes": 3323
+      },
+      "agentic-structure-audit": {
+        "body_sha256": "ba3cdc3597782063f14a1ef560f9a1027c858c9429515f4ac285e0e4966a867f",
+        "utf8_bytes": 1686
+      },
+      "api-design": {
+        "body_sha256": "e4e133d8230c0d86c59b1cf348f6daeace9bab72dfc26a1c758443de8ddebf1f",
+        "utf8_bytes": 1581
+      },
+      "backtest-validation": {
+        "body_sha256": "a77e74ca5842a86855c1ba3c5aaf01ade60fc4ba48a48b1c65c76a7b343eec00",
+        "utf8_bytes": 3251
+      },
+      "change-review": {
+        "body_sha256": "41b0a90b9a7e0b4bdd18d286ef2fc07c0a0b36edc1ffeeda13c4ca54063c0269",
+        "utf8_bytes": 3470
+      },
+      "ci-triage": {
+        "body_sha256": "1409edfa39e1df51bd1ada3550194a4ba850a9d827e827d678c10cdebe0d3b0e",
+        "utf8_bytes": 3063
+      },
+      "code-quality": {
+        "body_sha256": "4e990a164cf180b003b85ab3c017df28e6e8277df1afc4dd983e35832322c0b0",
+        "utf8_bytes": 4247
+      },
+      "codebase-audit": {
+        "body_sha256": "7a81cddb716fb1be663fac879262cc3788d0bc75b3e2d8651f0499940b23b0d8",
+        "utf8_bytes": 4575
+      },
+      "competitive-research": {
+        "body_sha256": "648bcc6092ff4c9fa082de49ea94d16056bb5fc905dd3299686919dd6ee95c5e",
+        "utf8_bytes": 1798
+      },
+      "competitor-monitoring": {
+        "body_sha256": "583a19794abcc0bf33a37adc6e5723f0b789898fce3a0471a7b70d2794688cc2",
+        "utf8_bytes": 2552
+      },
+      "component-resolution": {
+        "body_sha256": "c099863c8a72679ca708499fd34543925eb04b62d64dadf4ce639c3566362507",
+        "utf8_bytes": 2496
+      },
+      "content-brief": {
+        "body_sha256": "01005cf0f0a2a80223f88ef17f6b7c61fe30e450d8b2c302bf6a417b7a841e5a",
+        "utf8_bytes": 1767
+      },
+      "content-repurposing": {
+        "body_sha256": "2d039e79a213c1a659e3a9701855d18b014efd5794c8d746f6ab7acbe33abed5",
+        "utf8_bytes": 1771
+      },
+      "copy-editing": {
+        "body_sha256": "7300f306c39299a2fde9e8db940f57f8c9ea1837dfe12efdf1ce7b2b710d7730",
+        "utf8_bytes": 1673
+      },
+      "database-design": {
+        "body_sha256": "eda2b23048075462458eabb626688bcd5622f2570df1f67799549b4e491f2efa",
+        "utf8_bytes": 1552
+      },
+      "decision-intelligence": {
+        "body_sha256": "8e1f23ccc854fcb10f2762a9e0f823618c02350f4c6250defff2b6d74b47ab1a",
+        "utf8_bytes": 3371
+      },
+      "defi-risk-analysis": {
+        "body_sha256": "0210b70b3ec82468969e6bd5148f92bb7d81e0362a375003e5323ee7345ae46f",
+        "utf8_bytes": 2593
+      },
+      "dependency-upgrade": {
+        "body_sha256": "83eec3abb5fbb2a842a03db86f8082ae8a98b0ae686b9286a342c6b49544db47",
+        "utf8_bytes": 1442
+      },
+      "design-analysis": {
+        "body_sha256": "d2126c2a9d16e3c5116a4462d4bf6e1ed09a18a28a77cf1e5e6be3b439a00904",
+        "utf8_bytes": 3961
+      },
+      "design-extraction": {
+        "body_sha256": "4e9449540f6f855fd942cd8632855d49e02983ef96979fe231a91abbbcd1099c",
+        "utf8_bytes": 4218
+      },
+      "design-intelligence": {
+        "body_sha256": "8245fc43eef685abcb6c3ec4d64add3d9335551e1f6c301de8fd006268098526",
+        "utf8_bytes": 4714
+      },
+      "design-research": {
+        "body_sha256": "6034dd3768c10b06285a581e1f68f0727bf1b1057c96afba76a8656d8d5c2e42",
+        "utf8_bytes": 2531
+      },
+      "design-system": {
+        "body_sha256": "1479135225b1b1448887b3e1662420d7957a06670edb4b19e00409db62abbb17",
+        "utf8_bytes": 2997
+      },
+      "design-system-compliance": {
+        "body_sha256": "76f74a7ee27f729427985470b7ca32c8bbc128265c163c2d61b8902d7c3e1c63",
+        "utf8_bytes": 3507
+      },
+      "documentation": {
+        "body_sha256": "92b321f4503f3da51034d419f2b4202b06097fd6b615f87357d3f457b6edc89e",
+        "utf8_bytes": 1443
+      },
+      "financial-model-review": {
+        "body_sha256": "235f64e495dfd77a8dc202c8b3791850c9168f6121f9061676cbd2f282c7192b",
+        "utf8_bytes": 3025
+      },
+      "forecast-calibration": {
+        "body_sha256": "c98a809a5936901a3308bc004d42e6ba9800cf8f71a4196e4b0c06951854eaa1",
+        "utf8_bytes": 2670
+      },
+      "geo-measurement": {
+        "body_sha256": "35e389b5b4cb4a69d6c4d035391c058761e7752cb8a5e19172c2c1bbec9125f4",
+        "utf8_bytes": 2223
+      },
+      "identity-design": {
+        "body_sha256": "b26eb7ad7ee3dd51059be51e69cf3bbd0bfd7006ac5e83065e5a9b3133920204",
+        "utf8_bytes": 2508
+      },
+      "implementation-plan": {
+        "body_sha256": "4990612a4ef1462cb9cee653fdae058189e4eb59ef5f9b1be0756e0985223ff8",
+        "utf8_bytes": 1464
+      },
+      "incident-review": {
+        "body_sha256": "01cf70d4bbdcc26eac871b46a49634f892c3d5fc1afa75b699f1522bbcab195c",
+        "utf8_bytes": 1617
+      },
+      "market-data-validation": {
+        "body_sha256": "122f9d33f3a0d3845bdaa121463ce69f7460a7bd556a2125f61b2cd08d135af4",
+        "utf8_bytes": 3093
+      },
+      "market-opportunity-research": {
+        "body_sha256": "ca386044cdbff10ba18b740bd15eb11f4a4dd9b4852776403147186a487151d3",
+        "utf8_bytes": 2599
+      },
+      "marketing": {
+        "body_sha256": "c38afffc068ca617a64464be1b9d2e0bc0e4f4c60b6e61fb8cdeeee60a8e4dc3",
+        "utf8_bytes": 1479
+      },
+      "migration": {
+        "body_sha256": "fb10c9107b461320081843354c2163ce40731fe7c48ab3db2664f86b183aad7f",
+        "utf8_bytes": 2110
+      },
+      "model-fit": {
+        "body_sha256": "5350359f198ae135bafbeb57e2d583eb7b6d522dd32e22526efda5b458b8c640",
+        "utf8_bytes": 1645
+      },
+      "native-app-delivery": {
+        "body_sha256": "852f7da6a24f760ffd2261bf492b76fee60901e064db4bf9bae24cd8e13da97d",
+        "utf8_bytes": 2852
+      },
+      "odds-analysis": {
+        "body_sha256": "cc3defc9d76c89895551a317efa6c4cd67206c7b4ea8b17ab5c54b8ef05bf10e",
+        "utf8_bytes": 2550
+      },
+      "onchain-data-analysis": {
+        "body_sha256": "de47a656fa9d53a11f12a94e368d44ddc5e99181211c218daaf545dad19ebdeb",
+        "utf8_bytes": 2438
+      },
+      "performance-audit": {
+        "body_sha256": "d17877e5a452d959f558c8814564491c48e7534630606c648849c46ccb6a3550",
+        "utf8_bytes": 2116
+      },
+      "product-analytics": {
+        "body_sha256": "8b9af1b5016656f3a4139691850d0ce6e8da06c776b8c67e53e8785bd555a8d6",
+        "utf8_bytes": 2242
+      },
+      "product-design": {
+        "body_sha256": "19cab8d0d13615c413a3d63ec121cd5095e8cf7f026cca385fe3fd5ccb833271",
+        "utf8_bytes": 3252
+      },
+      "product-experimentation": {
+        "body_sha256": "d82e0d07a8b2f22545d30dfc5318deb4c6682eaf412b10f13a18d6048f6013a0",
+        "utf8_bytes": 2597
+      },
+      "product-instrumentation": {
+        "body_sha256": "d9f7fc81440785a63687d1ea2ca6448f3432beab65c597441a91f2fc91ecb98f",
+        "utf8_bytes": 2559
+      },
+      "project-memory": {
+        "body_sha256": "ce406d088af0bb7fc01873b690b06444312e6709cdd2923cb253be25691092aa",
+        "utf8_bytes": 2344
+      },
+      "release": {
+        "body_sha256": "8db919e101a32976e4d5e7e751bbcbdcbe4297ee75364545d45ebb906c82a5c2",
+        "utf8_bytes": 1504
+      },
+      "release-review": {
+        "body_sha256": "a3f168550f45fe5c2c9c28cf137fbb309936e5b99c733bc2242a3c2dc7da0e74",
+        "utf8_bytes": 1503
+      },
+      "repository-maintenance": {
+        "body_sha256": "dd0d7f99c4f4890c628e48a0ca85f6a14c28c5f786e99da2fb3b1a8e91b8801a",
+        "utf8_bytes": 3245
+      },
+      "security-review": {
+        "body_sha256": "179e69e6c66d0c03d10b640b97e4be10e0beb4555364277c27007a92fe0c9d35",
+        "utf8_bytes": 3599
+      },
+      "seo-audit": {
+        "body_sha256": "dabe0a8663c362930fd60d85a18b59a5145609e57d6afe700cb93951399203c5",
+        "utf8_bytes": 6341
+      },
+      "settlement-rule-review": {
+        "body_sha256": "11034cb449e0a27f9aec1e7d29a3ce40f49c9f6802888d0c643337ba3faa9f88",
+        "utf8_bytes": 2632
+      },
+      "smart-contract-review": {
+        "body_sha256": "df5c021fae80419255823fc57d2171363f4f168ac7d01db4493b324254cbc3cc",
+        "utf8_bytes": 2649
+      },
+      "structured-reflection": {
+        "body_sha256": "04219f038f22650452d29495bfb842981a222d6a607164e3846ec6abb895a32f",
+        "utf8_bytes": 2131
+      },
+      "systematic-debugging": {
+        "body_sha256": "fead16d712307de6f6a562e97d6ddd0a88f242bac403ea5b2c89aae1c5cf41e6",
+        "utf8_bytes": 2310
+      },
+      "test-engineering": {
+        "body_sha256": "8584ec3c1b56a72d4b830017c07256688ca3290e5ff1656c86f6fd40847140cb",
+        "utf8_bytes": 3935
+      },
+      "threat-model": {
+        "body_sha256": "d94141be0065808e72e83d1435c9b40d1f12187985f2ed9450e6559d6890ed50",
+        "utf8_bytes": 1765
+      },
+      "user-research": {
+        "body_sha256": "1d83b5e697e78aebd14661ff60c9f9eec75314c31ba00246a4eedbb0a0c2d5a4",
+        "utf8_bytes": 2425
+      }
+    },
+    "agents": {
+      "accessibility-specialist": {
+        "body_sha256": "a9fe032a7a492909cf8d2b88ba32baebd349bafb7b16fa3810a06f39c6612af7",
+        "utf8_bytes": 8158
+      },
+      "artist-3d": {
+        "body_sha256": "7c276717ff29fa3faebb1e32b8996e8b2048130fe7d1627c90da42c5f4afc354",
+        "utf8_bytes": 6109
+      },
+      "copywriter": {
+        "body_sha256": "bd242efc3f030fcaa8d5620f0891e4d025db8d6cf8b5e42cc5b82c9427fc4296",
+        "utf8_bytes": 5860
+      },
+      "data-analyst": {
+        "body_sha256": "0d0dd8d53cf7185102a32b4dd566a99f7c50ed0264ee2b1fc425e34aa552dcb0",
+        "utf8_bytes": 6926
+      },
+      "design-analyst": {
+        "body_sha256": "dd423e3ab22da3c63728115aaf8de1a2ae250dde3157adbe31f550b55d612db0",
+        "utf8_bytes": 7983
+      },
+      "designer": {
+        "body_sha256": "9984fe21ecd53452b949b49a5a055dbb859baf9c840c62e59315990087b3745a",
+        "utf8_bytes": 13654
+      },
+      "evidence-validator": {
+        "body_sha256": "3a581e03adb1e3728e6383fa69602774323b62f670c6d9f9587f4c67607cd7fc",
+        "utf8_bytes": 8208
+      },
+      "feature-developer": {
+        "body_sha256": "842450e2830b982a06739a700a7a926804a1a1672605d9315bc67fd39d2fc86c",
+        "utf8_bytes": 8459
+      },
+      "financial-analyst": {
+        "body_sha256": "3a5aaa75ea7f4f1550c5b63b7f975513d78a7c57f5d59a7385db875fc1765a5e",
+        "utf8_bytes": 6930
+      },
+      "game-designer": {
+        "body_sha256": "fdd50a750842ef37880d1f8cef6c890ba8621e0b8e6502d0b657cc92910d2fd6",
+        "utf8_bytes": 6132
+      },
+      "geo-specialist": {
+        "body_sha256": "b4ec0398c775f42134fc637500983bde73de4feac0f4658b74b2b504edb9c463",
+        "utf8_bytes": 6542
+      },
+      "gtm-strategist": {
+        "body_sha256": "ceb0b9250d3a0dadf478485d02e786cd4348732602a84f10adc5955685d22019",
+        "utf8_bytes": 5870
+      },
+      "iteration-reviewer": {
+        "body_sha256": "37190070ffe60f55ca61ff81a55b18b7b03747397b8eb62d46283668b463a72f",
+        "utf8_bytes": 9605
+      },
+      "localization-specialist": {
+        "body_sha256": "77f85133a216e85c4678deff1b2f5f16dbff6fb898cf2eda9e1bf03140a84639",
+        "utf8_bytes": 5859
+      },
+      "marketing-strategist": {
+        "body_sha256": "36f05a42de15d7efb025b6850640f92f2e955e475b0fab70851e3f14bae73612",
+        "utf8_bytes": 5780
+      },
+      "mathematician": {
+        "body_sha256": "70fc55586bb5a01d11b916390520d1e189c7b1f5f7db11657b287a94a9aebe2b",
+        "utf8_bytes": 6295
+      },
+      "onchain-analyst": {
+        "body_sha256": "f1636d308dfa19d0874b8eefab10fffa1296b43d16edcee301389414eea08a29",
+        "utf8_bytes": 6871
+      },
+      "performance-engineer": {
+        "body_sha256": "73e02ce2bb23d312402bad1ea21e9c47dbd9fa9f39f384efd5299dadf12356cd",
+        "utf8_bytes": 8167
+      },
+      "portfolio-risk-analyst": {
+        "body_sha256": "526dc51e719c0f28d3b2bbef73d5b73e78af460984182f2b8f6681feae26c9f0",
+        "utf8_bytes": 6966
+      },
+      "probability-analyst": {
+        "body_sha256": "34fb76582b32ee1c18bcf9761ce139163075036223e0ac2cbf92465f06477b09",
+        "utf8_bytes": 7003
+      },
+      "product-manager": {
+        "body_sha256": "d703487da9b928dbce7c7825cf43634d3aa7d001862c964e8bc786b7f25ec2f4",
+        "utf8_bytes": 5912
+      },
+      "project-auditor": {
+        "body_sha256": "a7aef70de8e3833fac95664e3835dfafd824daa5c2cddafccd3805c2b2976527",
+        "utf8_bytes": 7562
+      },
+      "quality-engineer": {
+        "body_sha256": "d94c1a2cc38ee4b5c57d202a55639a14f3f5e019a898319d35f957e4181917d4",
+        "utf8_bytes": 9713
+      },
+      "quant-researcher": {
+        "body_sha256": "ec6fa516da215a08ef27b5d0cb5fbc02b3478c6ceb5a4504d53055dd1d02e851",
+        "utf8_bytes": 7228
+      },
+      "release-engineer": {
+        "body_sha256": "a076dc2167b64e53d3ad3d31fbd4d3c06956ac5f66e2d07dbb9374f3d4ccebe3",
+        "utf8_bytes": 8635
+      },
+      "researcher": {
+        "body_sha256": "4c5552250a09d9dd2169049ec2ea2eae9376a6a75450106afbf3495898a929e7",
+        "utf8_bytes": 8144
+      },
+      "scientist": {
+        "body_sha256": "7634d86d6f132cf7fe84d4285e98cee2e7811616e1a97013e0a45c8a268a1c69",
+        "utf8_bytes": 7102
+      },
+      "security-auditor": {
+        "body_sha256": "8de43a07a5c353fb735ddaab7dfc3f708880bd960904390497bab5688210ef20",
+        "utf8_bytes": 7885
+      },
+      "seo-specialist": {
+        "body_sha256": "3f122312d0e7e7cf0cf0a5157124c68c2615aeaec7df6ef032fcbd79e6665831",
+        "utf8_bytes": 6052
+      },
+      "system-architect": {
+        "body_sha256": "ed5578ec4580100a29bf69073c2e24c2ce4e3b98d3b8927a7452ab07165361c3",
+        "utf8_bytes": 7844
+      },
+      "team-lead": {
+        "body_sha256": "1e88e0120b70188325d51e1323befa5594f7b26d076dbd7b15366ddff61d7624",
+        "utf8_bytes": 16420
+      },
+      "technical-artist": {
+        "body_sha256": "52146a8395766ff19dd6c5d5a98c5557f88db998079e80717d21d56b11efbb76",
+        "utf8_bytes": 6097
+      },
+      "usability-auditor": {
+        "body_sha256": "2487ad49449fb15ba0f7e96fd4868245fb5d61801183a68b459f8e11984ece2c",
+        "utf8_bytes": 6942
+      },
+      "user-researcher": {
+        "body_sha256": "0c82e6b838dcc09f9b84482be630c31068a97d0d0efc7162440b3578db7e482e",
+        "utf8_bytes": 6380
+      },
+      "ux-designer": {
+        "body_sha256": "1815b81136927ba869da356597803e75d030b9399d16f8961f1cdb31a567fc10",
+        "utf8_bytes": 7719
+      }
+    },
+    "built_in_build": {
+      "registered_system_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "steps": 12,
+      "limits": "Registered fields only; the complete provider prompt is not exposed."
+    }
+  }
+}

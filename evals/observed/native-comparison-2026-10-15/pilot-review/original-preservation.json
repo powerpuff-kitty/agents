@@ -1,0 +1,9 @@
+{
+  "owner_note_sha256": "ad194beab679cd2d8582c9b7d953c8830867d47a2fb46abd791d0ccf34b42aee",
+  "owner_note_before_sha256": "ad194beab679cd2d8582c9b7d953c8830867d47a2fb46abd791d0ccf34b42aee",
+  "index_bytes_sha256": "26a4254b26caa94f604c6a6a91d8bf1c8f868fa88641a2c672bcca86976aba78",
+  "index_bytes_before_sha256": "26a4254b26caa94f604c6a6a91d8bf1c8f868fa88641a2c672bcca86976aba78",
+  "ls-files --stage sha256": "889d06ee0bf76a5acb109134c1b8f3ea15998426d070c3886393eb259a161e2e",
+  "ls-files --stage -z sha256": "c72fc4c55cfe18f88b7e192bc2a8890c7c6713fbd95480b4fe1f0f39c49b52d4",
+  "staged_entries_before_sha256": "c72fc4c55cfe18f88b7e192bc2a8890c7c6713fbd95480b4fe1f0f39c49b52d4"
+}

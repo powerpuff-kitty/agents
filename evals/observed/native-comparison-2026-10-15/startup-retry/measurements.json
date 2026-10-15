@@ -1,0 +1,123 @@
+{
+  "format_version": 1,
+  "plan_sha256": "4d59ba39392908611823a42fcf389cfdc95b58bd4b93a54971b447103f91780e",
+  "planned": 1,
+  "same_starting_file_hashes_per_case": {
+    "focused-review-with-skills": true
+  },
+  "runs": [
+    {
+      "id": "retry07-focused-review-with-skills-named-agent-1",
+      "case": "focused-review-with-skills",
+      "mode": "named-agent",
+      "repeat": 1,
+      "status": "collected",
+      "acceptance": "unverified",
+      "usage": {
+        "input": 22956,
+        "output": 2093,
+        "cache_read": 194048,
+        "cache_write": 0,
+        "reported_cost": 0.038437916,
+        "complete_session_fields": true
+      },
+      "seconds": 159.323,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "quality-engineer": 10
+        },
+        "skill_events": {
+          "change-review": 1
+        },
+        "skill_message_utf8_bytes": 0,
+        "tool_calls": {
+          "shell": 11,
+          "read": 6,
+          "skill": 1
+        },
+        "tool_statuses": {
+          "error": 4,
+          "completed": 14
+        },
+        "tool_result_failures": 5,
+        "instruction_file_reads": [],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true
+      },
+      "result_sha256": "98aaabc0acbf6212cec7f8bf6954dd1470e682db9e63aab2121f3a5a1a77d423",
+      "review_notes": "Correct review findings, caller masking, static checks and0-tests/exit5 report are established; resolved quality-engineer and actual change-review skill output verified. Overall read-only acceptance remains unverified because prompt explicitly says do not edit files or index and index-byte hash changed. Parser comparison against retained original07 index (matching retry before hash) shows only ctime/inode stat-cache fields and checksum changed: source, object IDs/modes/flags and staged selection preserved, but strict index immutability is not established. No deliberate staging edit is alleged. Retry is separate; blocked original07 remains retained.",
+      "registered_source_bytes": {
+        "skills": 162636,
+        "agents": 267012
+      }
+    }
+  ],
+  "groups": [
+    {
+      "case": "focused-review-with-skills",
+      "mode": "named-agent",
+      "planned": 1,
+      "statuses": {
+        "collected": 1
+      },
+      "independent_acceptance": {
+        "unverified": 1
+      },
+      "metrics": {
+        "input": {
+          "observed": 1,
+          "missing": 0,
+          "mean": 22956,
+          "min": 22956,
+          "max": 22956
+        },
+        "output": {
+          "observed": 1,
+          "missing": 0,
+          "mean": 2093,
+          "min": 2093,
+          "max": 2093
+        },
+        "cache_read": {
+          "observed": 1,
+          "missing": 0,
+          "mean": 194048,
+          "min": 194048,
+          "max": 194048
+        },
+        "cache_write": {
+          "observed": 1,
+          "missing": 0,
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "reported_cost": {
+          "observed": 1,
+          "missing": 0,
+          "mean": 0.038437916,
+          "min": 0.038437916,
+          "max": 0.038437916
+        },
+        "seconds": {
+          "observed": 1,
+          "missing": 0,
+          "mean": 159.323,
+          "min": 159.323,
+          "max": 159.323
+        }
+      }
+    }
+  ],
+  "review_sha256": "caab71c020dd417000a7e100a158936660e9c87006267e4ec351d2bbca0f04f9",
+  "limits": [
+    "Built-in build is explicitly pinned for ordinary/skill controls; named-agent changes that primary.",
+    "Role and skill treatments are different interventions, not a context-only savings experiment.",
+    "Source bytes, instruction events, host-reported tokens/cache and billed costs are distinct.",
+    "Unexposed auxiliary calls/settings remain unknown; sample sizes do not establish statistical reliability.",
+    "No task success is inferred from host outcome, artifact invariants or a lower token count."
+  ]
+}

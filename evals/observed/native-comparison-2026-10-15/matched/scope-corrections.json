@@ -1,0 +1,12 @@
+{
+  "corrections": [
+    {
+      "id": "03-implementation-unavailable-check-skill-2",
+      "original_scope_flag": false,
+      "corrected_scope_flag": true,
+      "reason": "Meaningful new root verification file is within implementation scope; original record retained."
+    }
+  ],
+  "checker_source_sha256": "f135d136769ecc9bc85d4eb1fd9c75fab119e60e0237eb97e113ac4e73af5e69",
+  "does_not_change": "Original result/check files or independent task acceptance."
+}

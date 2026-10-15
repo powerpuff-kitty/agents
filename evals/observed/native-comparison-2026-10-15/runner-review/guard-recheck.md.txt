@@ -1,0 +1,51 @@
+# Independent deadline/index guard recheck
+
+2026-10-15. Separate read-only recheck of the two concrete qualifications in `final-runner-review.md`. Earlier source reviews, trial/context/retry reports and result-bound decisions remain unchanged. No new model evaluation, native OpenCode/provider call, network request, private configuration or credential inspection was performed. All execution used frozen source copies and synthetic local processes/files in `guard-recheck-evidence/`.
+
+Reviewed runner SHA-256: **`9d37c7866b7ce8cf6346fadf60c090a4c577d48c46ea7b22f4770b53ca050c60`**.
+Reviewed native-eval test SHA-256: **`3f29f60334ab877e9f098c20d235aae4cbe8931f16fc13f84056dba800e7b4e6`**.
+Copied report helper SHA-256 is `dd5a1e6db66a234a5e9724258407f82051af417263901100918aae9fcd7695cb`; its tests remain `da0b93817c49139f324af86a364bfc7ea47521abaec48bfe1c8c53fe2ad4b9f9`. Live runner/test hashes matched frozen copies at the final check. The report-helper diff changes only CLI summary labels/counts (`decision_records_attached` and `classified_outcomes`); its summarization logic and tests are unchanged.
+
+**Assessment:** the previous delayed-successful-response acceptance and strict focused-review index-detection gaps are addressed by the reviewed source. Independent probes also establish constructor-armed deadline termination of an unresponsive owned server/process group and actual suppression of optional Git index refresh. No additional blocking defect was established in this focused recheck. These are guard results, not new behavioral evaluation outcomes or a retroactive repair of earlier evidence.
+
+## Deadline guard
+
+Actual source now starts a daemon `threading.Timer` immediately after the server is launched in its owned new session/process group. Expiration marks `deadline_expired` and calls the same lock-protected/idempotent close method. Close cancels its timer, sends TERM to that owned group, waits up to3 seconds, sends KILL to the group and waits up to3 more. Response success is independently rejected after body read if the absolute deadline has passed. Exceptions after watchdog expiry are classified timed_out rather than collection/setup failure.
+
+The repository's delayed-response and no-response watchdog regressions pass. I also exercised the following paths independently against frozen source:
+
+- **Delayed body:** a fake opener advances monotonic time by10 seconds during a body read with a1-second deadline. The call now raises `TimeoutError: Native response exceeded deadline`; it no longer returns parsed JSON successfully. No socket or request was used.
+- **Real constructor arming without any response:** a disposable executable prints the required version for the version check, and its synthetic serve process starts a sleeping child that ignores TERM. Host construction itself arms the watchdog; no manual timer construction is used in this independent probe. With a1.5-second deadline, the expiry flag is true, the parent exits, the child is no longer running, and observed cleanup completes at about1.563 seconds from the probe start. No Host.ready/API request/provider was called; socket selection was mocked, and the subprocess environment was cleared of ambient values.
+- Repeated close calls after watchdog cleanup return safely, exercising the idempotence path.
+
+The initial independent integration probe used a0.4-second total deadline and assumed the child marker would appear before expiry; it failed that fixture assumption (`Synthetic child was not started`). A separate direct synthetic-executable sanity check succeeded, and the constructor probe was rerun in a new disposable directory with1.5 seconds to allow setup. This is not retained as a successful short-startup measurement or an OpenCode result. The failed first probe's disposable files remain available; the final harness and successful JSON results are retained.
+
+The watchdog bounds the lifetime of the owned server group independently of whether the caller has received a response. It does **not** prove a hard total Python-runner return time: a synchronous reader can still take time to return before the late-response check runs. Version checking has its independent10-second allowance; process startup/readiness, cleanup/capture attempts and final invariant tests have their own costs. The deadline can be followed by TERM/KILL grace, up to the close waits and a20-second pagination test timeout, plus ordinary filesystem/scheduling overhead. This source must therefore not be described as a zero-overhead exact wall-clock cutoff for every operation. A provider request already sent upstream may have unexposed completion/billing even after the local group is stopped.
+
+Cleanup remains restricted to the newly owned server process group. Intentionally detached/new-session descendants are outside that group; unrelated processes must not be targeted to compensate. This probe verifies an ordinary owned child, not arbitrary descendant containment, host permission enforcement or every possible blocked OS operation.
+
+## Git index guard
+
+Actual Host environment now sets `GIT_OPTIONAL_LOCKS=0`; this applies to the host and normally inherited Git tool subprocesses. The runner's own git_state helper already disabled optional locks. Focused-review invariant checks now retain **both** semantic staged-entry preservation and a separate literal `index_bytes_preserved` comparison. Implementation fixtures retain their different staging contract.
+
+Both new repository regressions pass. Independent behavioral checks also confirm:
+
+- After changing only a disposable tracked file's filesystem timestamp, `git status --porcelain` with optional locks disabled preserves the raw index hash. An ordinary control invocation without that setting changes the index hash while file content is unchanged. This verifies the setting's intended behavior rather than merely asserting the environment value.
+- A disposable `git update-index --assume-unchanged` mutation preserves `git ls-files --stage` identity but changes index bytes. Current focused-review checks return `source_scope_preserved: true`, `staging_entries_preserved: true`, **`index_bytes_preserved: false`**. Thus index-only mutation no longer receives an all-green focused-review invariant result.
+
+The environment setting suppresses optional refresh; it is not a sandbox preventing an explicit writer, altered environment or other host action. The separate final-byte comparison detects observed byte mutation, not an authenticated history of transient changes. Correct task authorization and semantic acceptance still require independent review. The separate historical retry did change raw index bytes, so its original unverified strict-index decision remains unchanged; a new guard cannot be credited to that old run.
+
+## Commands, evidence and remaining visibility limits
+
+Frozen source/tests are under `guard-recheck-evidence/scripts/` and `tests/`. `regression-tests.log` retains the focused regression command result: **23 tests,0 failures,0 errors, exit0**, including the four added guards and the previously reviewed runner/report tests. No broader suite result is claimed here.
+
+Commands used a cleared environment and disabled global/system Git configuration:
+
+```sh
+env -i PATH=/opt/homebrew/bin:/usr/bin:/bin GIT_CONFIG_NOSYSTEM=1 GIT_CONFIG_GLOBAL=/dev/null python3 -B -m unittest discover -s /private/tmp/native-runner-independent-20261015/guard-recheck-evidence/tests -v
+env -i PATH=/opt/homebrew/bin:/usr/bin:/bin GIT_CONFIG_NOSYSTEM=1 GIT_CONFIG_GLOBAL=/dev/null python3 -B /private/tmp/native-runner-independent-20261015/guard-recheck-evidence/independent_checks.py
+```
+
+The unit-test command was invoked by a capturing subprocess wrapper to retain its exact output. Independent harness source and `independent-results.json` retain fake-body, actual constructor/watchdog/owned-child, optional Git refresh/control and index-only-mutation results. Tests use only synthetic Git repositories/processes; the fake host does not read host configuration or perform inference. Original trial/source files were read or copied only.
+
+Complete host/provider/global/project prompt identity remains unexposed, including the known empty registered-build-system fingerprint limit. Captured session/message usage can be reconciled without proving hidden auxiliary calls, partial-generation usage or invoice completeness; watchdog termination may reduce the ability to capture a final in-flight usage update. These visibility limits remain explicit and are not resolved by stronger local guards. No prior task verdict, usage value, failure or timeout was changed.

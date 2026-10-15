@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "workspace_unchanged": true,
+    "git_selection_unchanged": true,
+    "staging_identity_unchanged": "unverified",
+    "instructions_unchanged": true
+  },
+  "all_checks_truthy": true,
+  "missing_staging_evidence": true,
+  "note": "Reproduces repository test idiom all(deterministic_checks.values()); native grade exposes no aggregate passed result."
+}

@@ -1,0 +1,183 @@
+{
+  "ses_ec15141f3ffeQF3cqQ7pqe2qkM": {
+    "id": "ses_ec15141f3ffeQF3cqQ7pqe2qkM",
+    "projectID": "77675a3fbc23046c0ddbfc30737b7f6e87c6d91e",
+    "agent": "build",
+    "model": {
+      "id": "deepseek-v4-pro",
+      "providerID": "deepseek",
+      "variant": "default"
+    },
+    "cost": 0.008312744,
+    "tokens": {
+      "input": 8823,
+      "output": 563,
+      "cache": {
+        "read": 33152,
+        "write": 0
+      }
+    },
+    "outcome": "interrupted",
+    "time": {
+      "created": 1792053001741,
+      "updated": 1792053181829,
+      "idle": 1792053181833
+    },
+    "title": "Native evaluation 05-implementation-unavailable-check-skill-1",
+    "permissions": [
+      {
+        "action": "*",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "read",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "glob",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "grep",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "skill",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "subagent",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "execute",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "pwd",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "ls",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "ls *",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "git status*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "git diff*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "git ls-files*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "python3 -B -m unittest*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "command -v *",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "which *",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "standalone-pilot-tsc*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "node --version",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "bun --version",
+        "effect": "allow"
+      },
+      {
+        "action": "edit",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "external_directory",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "read",
+        "resource": "*.env*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": ".git/*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": ".agents/*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": ".opencode/*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "opencode.json",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "labels.txt",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "test_pagination.py",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "owner-note.txt",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "CONTRACT.md",
+        "effect": "deny"
+      }
+    ],
+    "location": {
+      "directory": "/private/tmp/native-matched-2026-10-15-v3/05-implementation-unavailable-check-skill-1/workspace"
+    }
+  }
+}

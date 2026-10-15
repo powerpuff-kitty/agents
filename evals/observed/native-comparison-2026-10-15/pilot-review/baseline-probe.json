@@ -1,0 +1,159 @@
+{
+  "source": "/private/tmp/native-project-pilot-independent-20261015/baseline",
+  "source_sha256": "18af07d976f36516e34697a6771d4ee737d883c8379e8b2d06b24bd721108470",
+  "status_before": " M display.py\nM  pricing.py\n?? checkout.py\n",
+  "status_after": " M display.py\nM  pricing.py\n?? checkout.py\n",
+  "same_status": true,
+  "semantic_staging_changed": true,
+  "workspace_unchanged": true,
+  "initial": {
+    "format_version": 1,
+    "case_id": "focused-review-with-skills",
+    "role": "quality-engineer",
+    "skill": "change-review",
+    "workspace_sha256": {
+      "CONTRACT.md": "fac861030f4da6b98d497b01ef94616e07a1d6947ff6bac935e3a9b49d81f396",
+      "checkout.py": "b49388b7d04697b9797cc389932444c83b9b4205d889f08d3db97b85fc12a2c7",
+      "display.py": "7db76a85e790a7e57707e97fd019a117599d09e02fe427e5fd67a7c3347ebb66",
+      "pricing.py": "928d5452e18fca86c3401bbcf288c6814d85a59a17ae4bf274eb6ad57a2497e0"
+    },
+    "instruction_sha256": {
+      "role.md": "2bf9f14f8754afcf3de4db983f7481420cb5d3d70b6c83bf98feec4017d9a830",
+      "skill/SKILL.md": "a2e4df58e8a33f8bc9183c5c977da2bdbe0b089f5ce280e290e059eaf2ba5e4f"
+    },
+    "task_sha256": "87328c12b67aeb446ee1356e313d0b35cbdef64c42ff8721dc78a51dcf97b3b2",
+    "source_revision": null,
+    "instruction_mode": "explicit",
+    "preparer_sha256": "18af07d976f36516e34697a6771d4ee737d883c8379e8b2d06b24bd721108470",
+    "skills_revision": null,
+    "source_note": "instruction hashes include working-tree changes",
+    "initial_git_status": " M display.py\nM  pricing.py\n?? checkout.py\n"
+  },
+  "baseline_grade": {
+    "format_version": 1,
+    "case_id": "focused-review-with-skills",
+    "deterministic_checks": {
+      "workspace_unchanged": true,
+      "git_selection_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "commands": [],
+    "review_verdict": "unverified",
+    "review_note": "Artifact invariants do not grade reasoning or authenticate all actions. Review actual retained response and available action evidence separately."
+  },
+  "changed_index_grade": {
+    "format_version": 1,
+    "case_id": "focused-review-with-skills",
+    "deterministic_checks": {
+      "workspace_unchanged": true,
+      "git_selection_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "commands": [],
+    "review_verdict": "unverified",
+    "review_note": "Artifact invariants do not grade reasoning or authenticate all actions. Review actual retained response and available action evidence separately."
+  },
+  "legacy_grade": {
+    "format_version": 1,
+    "case_id": "focused-review-with-skills",
+    "deterministic_checks": {
+      "workspace_unchanged": true,
+      "git_selection_unchanged": true,
+      "instructions_unchanged": true
+    },
+    "commands": [],
+    "review_verdict": "unverified",
+    "review_note": "Artifact invariants do not grade reasoning or authenticate all actions. Review actual retained response and available action evidence separately."
+  },
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/var/folders/k9/0mqqtyn90j31qcqvltrlmww00000gn/T/independent-staging-fwjkdsjc/case/workspace",
+        "status",
+        "--porcelain"
+      ],
+      "exit": 0,
+      "stdout": " M display.py\nM  pricing.py\n?? checkout.py\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/var/folders/k9/0mqqtyn90j31qcqvltrlmww00000gn/T/independent-staging-fwjkdsjc/case/workspace",
+        "ls-files",
+        "--stage",
+        "-z"
+      ],
+      "exit": 0,
+      "stdout": "100644 6bc2bc5a7a4979aa0bc35d5077f8a6b1e55d4544 0\tCONTRACT.md\u0000100644 f1155eb7cd026b93c14de819703b2be0493ab0d0 0\tdisplay.py\u0000100644 6bca0dc20f8757b07ab40a2cbb2b99a94fbf805f 0\tpricing.py\u0000",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/var/folders/k9/0mqqtyn90j31qcqvltrlmww00000gn/T/independent-staging-fwjkdsjc/case/workspace",
+        "hash-object",
+        "-w",
+        "--stdin"
+      ],
+      "exit": 0,
+      "stdout": "0f23744c121e7661f22be0161fb4de5f429dc1a4\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/var/folders/k9/0mqqtyn90j31qcqvltrlmww00000gn/T/independent-staging-fwjkdsjc/case/workspace",
+        "update-index",
+        "--cacheinfo",
+        "100644,0f23744c121e7661f22be0161fb4de5f429dc1a4,pricing.py"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/var/folders/k9/0mqqtyn90j31qcqvltrlmww00000gn/T/independent-staging-fwjkdsjc/case/workspace",
+        "update-index",
+        "--assume-unchanged",
+        "pricing.py"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/var/folders/k9/0mqqtyn90j31qcqvltrlmww00000gn/T/independent-staging-fwjkdsjc/case/workspace",
+        "status",
+        "--porcelain"
+      ],
+      "exit": 0,
+      "stdout": " M display.py\nM  pricing.py\n?? checkout.py\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/var/folders/k9/0mqqtyn90j31qcqvltrlmww00000gn/T/independent-staging-fwjkdsjc/case/workspace",
+        "ls-files",
+        "--stage",
+        "-z"
+      ],
+      "exit": 0,
+      "stdout": "100644 6bc2bc5a7a4979aa0bc35d5077f8a6b1e55d4544 0\tCONTRACT.md\u0000100644 f1155eb7cd026b93c14de819703b2be0493ab0d0 0\tdisplay.py\u0000100644 0f23744c121e7661f22be0161fb4de5f429dc1a4 0\tpricing.py\u0000",
+      "stderr": ""
+    }
+  ]
+}

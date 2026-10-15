@@ -1,0 +1,431 @@
+{
+  "ses_ec153399dffeUV3Isq5tFP5MAs": {
+    "id": "ses_ec153399dffeUV3Isq5tFP5MAs",
+    "projectID": "b2fd0a0659c637f0e1eb121c95ed2d8abd998ac9",
+    "agent": "team-lead",
+    "model": {
+      "id": "deepseek-v4-pro",
+      "providerID": "deepseek",
+      "variant": "default"
+    },
+    "cost": 0.09389978399999999,
+    "tokens": {
+      "input": 50549,
+      "output": 1198,
+      "cache": {
+        "read": 102912,
+        "write": 0
+      }
+    },
+    "time": {
+      "created": 1792052872830,
+      "updated": 1792053387589
+    },
+    "title": "AI Agents real-project staging-identity pilot",
+    "permissions": [
+      {
+        "action": "*",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "read",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "glob",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "grep",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "skill",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "subagent",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "execute",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "pwd",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "ls",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "ls *",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "git status*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "git diff*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "git ls-files*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "python3 -B -m unittest*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "command -v *",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "which *",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "standalone-pilot-tsc*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "node --version",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "bun --version",
+        "effect": "allow"
+      },
+      {
+        "action": "external_directory",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "read",
+        "resource": "*.env*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": ".git/*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": ".agents/*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": ".opencode/*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "opencode.json",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "labels.txt",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "test_pagination.py",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "owner-note.txt",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "CONTRACT.md",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "scripts/behavior_eval.py",
+        "effect": "allow"
+      },
+      {
+        "action": "edit",
+        "resource": "tests/test_behavior_eval.py",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "python3 scripts/validate.py",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "python3 scripts/check_docs.py",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "python3 scripts/build.py --adapter portable*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "python3 scripts/build.py --adapter opencode*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "python3 -B -m unittest*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "python3 -m unittest*",
+        "effect": "allow"
+      }
+    ],
+    "location": {
+      "directory": "/private/tmp/native-project-pilot-20261015/project"
+    }
+  },
+  "ses_ec14af352ffevhlXC3Hc1QgRy9": {
+    "id": "ses_ec14af352ffevhlXC3Hc1QgRy9",
+    "parentID": "ses_ec153399dffeUV3Isq5tFP5MAs",
+    "projectID": "b2fd0a0659c637f0e1eb121c95ed2d8abd998ac9",
+    "agent": "feature-developer",
+    "model": {
+      "id": "deepseek-v4-pro",
+      "providerID": "deepseek",
+      "variant": "default"
+    },
+    "cost": 0.024652804,
+    "tokens": {
+      "input": 22622,
+      "output": 1810,
+      "cache": {
+        "read": 136192,
+        "write": 0
+      }
+    },
+    "time": {
+      "created": 1792053415131,
+      "updated": 1792053466354
+    },
+    "title": "Implement staging-identity fixture fix",
+    "permissions": [
+      {
+        "action": "*",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "read",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "glob",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "grep",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "skill",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "subagent",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "execute",
+        "resource": "*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "pwd",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "ls",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "ls *",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "git status*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "git diff*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "git ls-files*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "python3 -B -m unittest*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "command -v *",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "which *",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "standalone-pilot-tsc*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "node --version",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "bun --version",
+        "effect": "allow"
+      },
+      {
+        "action": "external_directory",
+        "resource": "*",
+        "effect": "deny"
+      },
+      {
+        "action": "read",
+        "resource": "*.env*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": ".git/*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": ".agents/*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": ".opencode/*",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "opencode.json",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "labels.txt",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "test_pagination.py",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "owner-note.txt",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "CONTRACT.md",
+        "effect": "deny"
+      },
+      {
+        "action": "edit",
+        "resource": "scripts/behavior_eval.py",
+        "effect": "allow"
+      },
+      {
+        "action": "edit",
+        "resource": "tests/test_behavior_eval.py",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "python3 scripts/validate.py",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "python3 scripts/check_docs.py",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "python3 scripts/build.py --adapter portable*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "python3 scripts/build.py --adapter opencode*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "python3 -B -m unittest*",
+        "effect": "allow"
+      },
+      {
+        "action": "shell",
+        "resource": "python3 -m unittest*",
+        "effect": "allow"
+      }
+    ],
+    "location": {
+      "directory": "/private/tmp/native-project-pilot-20261015/project"
+    }
+  }
+}

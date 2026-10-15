@@ -1,0 +1,18 @@
+[
+  {
+    "id": "msg_13ea8b40f001fLOhoNltWpx7kJ",
+    "time": {
+      "created": 1792052605980
+    },
+    "text": "Review all pending staged, unstaged and relevant new code for concrete defects. Do not edit files or the index. Work only within this project. Do not install tools, commit, publish or use web/network tools. Report actual checks, failures and limits. Existing executable availability and permission to use it are separate questions.",
+    "type": "user"
+  },
+  {
+    "id": "msg_13ea8b4340012yuFQb3lnPytCq",
+    "time": {
+      "created": 1792052606004
+    },
+    "type": "idle",
+    "outcome": "interrupted"
+  }
+]

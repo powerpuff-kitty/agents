@@ -12,3 +12,8 @@
 - Profile instructions do not enforce a read-only sandbox. Respect configured
   permissions and current task authorization. Selecting a profile does not itself
   authorize publication, deployment, tracker changes, or other external actions.
+- A denied compound shell command does not establish that its executables are
+  unavailable. Use the supported working-directory field and separate already
+  permitted checks when appropriate; keep denied operations denied. Interpret
+  tool completion together with result errors and process exits: a completed
+  wrapper can still contain a failed or unexecuted check.

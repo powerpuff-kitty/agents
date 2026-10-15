@@ -1,0 +1,8 @@
+{
+  "text": "Fix the pagination boundary bug and verify the change. Preserve my pending labels.txt edit. Work only within this project. Do not install tools, commit, publish or use web/network tools. Report actual checks, failures and limits. Existing executable availability and permission to use it are separate questions. Use the installed systematic-debugging skill for this task.",
+  "skills": [
+    {
+      "id": "systematic-debugging"
+    }
+  ]
+}

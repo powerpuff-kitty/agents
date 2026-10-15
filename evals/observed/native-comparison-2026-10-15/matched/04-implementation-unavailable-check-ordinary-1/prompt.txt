@@ -1,0 +1,1 @@
+Implement the input-validation contract in port.ts. Preserve owner-note.txt. Run feasible checks and report remaining verification gaps. Work only within this project. Do not install tools, commit, publish or use web/network tools. Report actual checks, failures and limits. Existing executable availability and permission to use it are separate questions.

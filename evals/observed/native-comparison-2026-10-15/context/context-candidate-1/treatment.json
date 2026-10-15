@@ -1,0 +1,9 @@
+{
+  "baseline_fixture_sha256": "9fc4fee16365a8239b3f2b64a70efac84ee035c257628f5d5cc1387ce091fe3c",
+  "changed_files": [
+    ".agents/skills/systematic-debugging/SKILL.md"
+  ],
+  "baseline_skill_bytes": 3137,
+  "candidate_skill_bytes": 2668,
+  "candidate_sha256": "de1be21daed80af51ea99f1523bef2653f6388aa3bc8ec41b7bf39d0f8019202"
+}

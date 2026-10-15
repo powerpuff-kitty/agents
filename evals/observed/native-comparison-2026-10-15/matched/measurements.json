@@ -1,0 +1,1396 @@
+{
+  "format_version": 1,
+  "plan_sha256": "921353cf7ef97738eb231fcc328b9a10c44a2101ac59b1f4f32359f9ba9aa002",
+  "planned": 18,
+  "same_starting_file_hashes_per_case": {
+    "focused-review-with-skills": true,
+    "implementation-unavailable-check": true,
+    "implementation-dirty-worktree": true
+  },
+  "runs": [
+    {
+      "id": "01-focused-review-with-skills-ordinary-2",
+      "case": "focused-review-with-skills",
+      "mode": "ordinary",
+      "repeat": 2,
+      "status": "collected",
+      "acceptance": "pass",
+      "usage": {
+        "input": 10361,
+        "output": 2312,
+        "cache_read": 174464,
+        "cache_write": 0,
+        "reported_cost": 0.026338268,
+        "complete_session_fields": true
+      },
+      "seconds": 134.299,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "build": 11
+        },
+        "skill_events": {},
+        "skill_message_utf8_bytes": 0,
+        "tool_calls": {
+          "shell": 11,
+          "read": 11,
+          "glob": 2
+        },
+        "tool_statuses": {
+          "completed": 20,
+          "error": 4
+        },
+        "tool_result_failures": 4,
+        "instruction_file_reads": [],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true
+      },
+      "result_sha256": "e3096abb54939e1e3974e961576d21c483b14ec2ee2f165d93c62d9a8dcb57d6",
+      "review_notes": "Both staged discount-percentage and unstaged dollar-scaling defects are correctly established with concrete examples; checkout caller is reviewed and its masked pricing input is explained. Static-vs-runtime limits and denied commands are reported. Files and staged entries/index bytes remain preserved.",
+      "registered_source_bytes": {
+        "skills": 162636,
+        "agents": 267012
+      }
+    },
+    {
+      "id": "02-focused-review-with-skills-ordinary-1",
+      "case": "focused-review-with-skills",
+      "mode": "ordinary",
+      "repeat": 1,
+      "status": "timed_out",
+      "acceptance": "fail",
+      "usage": {
+        "input": 9872,
+        "output": 1217,
+        "cache_read": 139520,
+        "cache_write": 0,
+        "reported_cost": 0.02730794,
+        "complete_session_fields": true
+      },
+      "seconds": 180.926,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "build": 10
+        },
+        "skill_events": {},
+        "skill_message_utf8_bytes": 0,
+        "tool_calls": {
+          "shell": 8,
+          "read": 11,
+          "glob": 3
+        },
+        "tool_statuses": {
+          "error": 2,
+          "completed": 20
+        },
+        "tool_result_failures": 2,
+        "instruction_file_reads": [],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true
+      },
+      "result_sha256": "c19ae18e5e38a1d386c96cb4c4c467b8fb659b679f6dde35e342ad9b9694d5f6",
+      "review_notes": "The two core defects are correctly identified and source/index are preserved, but the retained response cuts off mid-checkout analysis at `quote` and has no completed report of actual failed checks/limits. This is incomplete delivery, not failure inferred from timed_out alone.",
+      "registered_source_bytes": {
+        "skills": 162636,
+        "agents": 267012
+      }
+    },
+    {
+      "id": "03-implementation-unavailable-check-skill-2",
+      "case": "implementation-unavailable-check",
+      "mode": "skill",
+      "repeat": 2,
+      "status": "timed_out",
+      "acceptance": "fail",
+      "usage": {
+        "input": 11208,
+        "output": 2127,
+        "cache_read": 163328,
+        "cache_write": 0,
+        "reported_cost": 0.026586956,
+        "complete_session_fields": true
+      },
+      "seconds": 180.882,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "build": 10
+        },
+        "skill_events": {
+          "systematic-debugging": 1
+        },
+        "skill_message_utf8_bytes": 3676,
+        "tool_calls": {
+          "read": 12,
+          "shell": 4,
+          "write": 2
+        },
+        "tool_statuses": {
+          "completed": 16,
+          "error": 2
+        },
+        "tool_result_failures": 2,
+        "instruction_file_reads": [
+          {
+            "path": "/private/tmp/native-matched-2026-10-15-v3/03-implementation-unavailable-check-skill-2/workspace/.agents/skills/systematic-debugging/tests/cases.json",
+            "status": "completed"
+          },
+          {
+            "path": "/private/tmp/native-matched-2026-10-15-v3/03-implementation-unavailable-check-skill-2/workspace/.agents/skills/systematic-debugging/references/investigation.md",
+            "status": "completed"
+          }
+        ],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": false,
+        "staging_entries_preserved": true
+      },
+      "result_sha256": "7e1784392cceb9018e1aa771f82f538e98fb9e78464451bf10e0f9d0923635ea",
+      "review_notes": "port.ts satisfies inspected contract and independent runtime matrix (7 accepted,33 rejected) in a disposable copy. Added port.check.ts is authorized task-related verification; collector source_scope_preserved=false is an over-narrow collector rule, not an unauthorized edit. Its test crashes on JSON.stringify(1n) in independent execution. Host denied node/bun runs; no final report of remaining gaps was delivered before interruption. Owner/contract preserved; compiler not verified.",
+      "registered_source_bytes": {
+        "skills": 162636,
+        "agents": 267012
+      }
+    },
+    {
+      "id": "04-implementation-unavailable-check-ordinary-1",
+      "case": "implementation-unavailable-check",
+      "mode": "ordinary",
+      "repeat": 1,
+      "status": "timed_out",
+      "acceptance": "fail",
+      "usage": {
+        "input": 14288,
+        "output": 2331,
+        "cache_read": 213376,
+        "cache_write": 0,
+        "reported_cost": 0.034783671999999995,
+        "complete_session_fields": true
+      },
+      "seconds": 180.183,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "build": 12
+        },
+        "skill_events": {},
+        "skill_message_utf8_bytes": 0,
+        "tool_calls": {
+          "read": 9,
+          "shell": 21,
+          "glob": 1,
+          "write": 1,
+          "execute": 1
+        },
+        "tool_statuses": {
+          "completed": 22,
+          "error": 11
+        },
+        "tool_result_failures": 15,
+        "instruction_file_reads": [],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true
+      },
+      "result_sha256": "3f72ed751c9e23b0c1ecd251555445fe428a1729bbde10c79c45001b87f47e51",
+      "review_notes": "port.ts satisfies inspected contract and independent runtime matrix (7 accepted,33 rejected); owner/contract preserved. Required compiler command actually exits127. Attempted execute test is workflow-completed but metadata.error=true (Symbol unavailable), not a passing runtime test. Interrupted before delivering required actual-checks/limits report. No TypeScript compiler verification.",
+      "registered_source_bytes": {
+        "skills": 162636,
+        "agents": 267012
+      }
+    },
+    {
+      "id": "05-implementation-unavailable-check-skill-1",
+      "case": "implementation-unavailable-check",
+      "mode": "skill",
+      "repeat": 1,
+      "status": "timed_out",
+      "acceptance": "fail",
+      "usage": {
+        "input": 8823,
+        "output": 563,
+        "cache_read": 33152,
+        "cache_write": 0,
+        "reported_cost": 0.008312744,
+        "complete_session_fields": true
+      },
+      "seconds": 181.175,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "build": 4
+        },
+        "skill_events": {
+          "systematic-debugging": 1
+        },
+        "skill_message_utf8_bytes": 3676,
+        "tool_calls": {
+          "read": 8
+        },
+        "tool_statuses": {
+          "completed": 8
+        },
+        "tool_result_failures": 0,
+        "instruction_file_reads": [
+          {
+            "path": "/private/tmp/native-matched-2026-10-15-v3/05-implementation-unavailable-check-skill-1/workspace/.agents/skills/systematic-debugging/references/investigation.md",
+            "status": "completed"
+          },
+          {
+            "path": "/private/tmp/native-matched-2026-10-15-v3/05-implementation-unavailable-check-skill-1/workspace/.agents/skills/systematic-debugging/tests/cases.json",
+            "status": "completed"
+          },
+          {
+            "path": "/private/tmp/native-matched-2026-10-15-v3/05-implementation-unavailable-check-skill-1/workspace/.agents/skills/systematic-debugging",
+            "status": "completed"
+          }
+        ],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true
+      },
+      "result_sha256": "3eac11e8598f7bcd85fe314459031098c4dcd9045076661afd541ac1f4b810b0",
+      "review_notes": "Implementation was never changed from Number(value); it accepts forbidden booleans/null/empty/fractional/signed/exponent/out-of-range values. Independent runtime probe confirms 32 of33 rejected-input cases are incorrectly accepted. Owner preserved; skill attachment/support reads occurred, but no implementation/check report was delivered.",
+      "registered_source_bytes": {
+        "skills": 162636,
+        "agents": 267012
+      }
+    },
+    {
+      "id": "06-implementation-dirty-worktree-skill-2",
+      "case": "implementation-dirty-worktree",
+      "mode": "skill",
+      "repeat": 2,
+      "status": "collected",
+      "acceptance": "pass",
+      "usage": {
+        "input": 10166,
+        "output": 1589,
+        "cache_read": 107520,
+        "cache_write": 0,
+        "reported_cost": 0.01482492,
+        "complete_session_fields": true
+      },
+      "seconds": 48.928,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "build": 7
+        },
+        "skill_events": {
+          "systematic-debugging": 1
+        },
+        "skill_message_utf8_bytes": 3664,
+        "tool_calls": {
+          "read": 5,
+          "shell": 5,
+          "edit": 1
+        },
+        "tool_statuses": {
+          "completed": 10,
+          "error": 1
+        },
+        "tool_result_failures": 2,
+        "instruction_file_reads": [],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true,
+        "boundary_tests": true
+      },
+      "result_sha256": "2e0a144d2eae3c43afdb88ec624c34acfc11736e3220f4cde73739077cb496c5",
+      "review_notes": "Removed only the erroneous exact-division break; unchanged original five tests pass in native trace and independently in a disposable copy. Exact-boundary behavior correct by source inspection. Owner labels, tests, staged entries and index bytes preserved. Actual before/after tests and verification limits are reported.",
+      "registered_source_bytes": {
+        "skills": 162636,
+        "agents": 267012
+      }
+    },
+    {
+      "id": "07-focused-review-with-skills-named-agent-1",
+      "case": "focused-review-with-skills",
+      "mode": "named-agent",
+      "repeat": 1,
+      "status": "setup_failed",
+      "acceptance": "blocked",
+      "usage": null,
+      "seconds": 0.309,
+      "instruction_events": null,
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true
+      },
+      "result_sha256": "42b4e75424a8108acb8241069d2a571fc816b1e9a8c5167cc1fff2f3c16ca73b",
+      "review_notes": "Host readiness returned HTTP503 service_starting before preflight/session/prompt evidence; fixture/index preserved. No model task execution or usage is established. This is a collector/host setup block, not evidence of quality-engineer task failure."
+    },
+    {
+      "id": "08-implementation-dirty-worktree-ordinary-1",
+      "case": "implementation-dirty-worktree",
+      "mode": "ordinary",
+      "repeat": 1,
+      "status": "collected",
+      "acceptance": "pass",
+      "usage": {
+        "input": 9064,
+        "output": 1158,
+        "cache_read": 100608,
+        "cache_write": 0,
+        "reported_cost": 0.014648435999999999,
+        "complete_session_fields": true
+      },
+      "seconds": 55.068,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "build": 7
+        },
+        "skill_events": {},
+        "skill_message_utf8_bytes": 0,
+        "tool_calls": {
+          "shell": 7,
+          "read": 6,
+          "edit": 1
+        },
+        "tool_statuses": {
+          "error": 1,
+          "completed": 13
+        },
+        "tool_result_failures": 1,
+        "instruction_file_reads": [],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true,
+        "boundary_tests": true
+      },
+      "result_sha256": "f87294b563709cce1a56e656b205a5f33fe962b151b6ac67436d4491e816ea06",
+      "review_notes": "Correct minimal boundary fix; five unchanged tests pass natively and independently; owner/tests/staged entries/index bytes preserved. Reporting weakness: final No failures omits an initial rejected compound shell command. Subsequent permitted checks and actual test pass are supported.",
+      "registered_source_bytes": {
+        "skills": 162636,
+        "agents": 267012
+      }
+    },
+    {
+      "id": "09-implementation-dirty-worktree-ordinary-2",
+      "case": "implementation-dirty-worktree",
+      "mode": "ordinary",
+      "repeat": 2,
+      "status": "collected",
+      "acceptance": "pass",
+      "usage": {
+        "input": 9613,
+        "output": 1517,
+        "cache_read": 138368,
+        "cache_write": 0,
+        "reported_cost": 0.015087115999999996,
+        "complete_session_fields": true
+      },
+      "seconds": 48.792,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "build": 9
+        },
+        "skill_events": {},
+        "skill_message_utf8_bytes": 0,
+        "tool_calls": {
+          "read": 6,
+          "shell": 5,
+          "edit": 1
+        },
+        "tool_statuses": {
+          "completed": 12
+        },
+        "tool_result_failures": 1,
+        "instruction_file_reads": [],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true,
+        "boundary_tests": true
+      },
+      "result_sha256": "f3563dbc50dc230c1ba7341d9da18953430c749fa2c4c33eea2aab3fb2c37130",
+      "review_notes": "Correct minimal boundary fix, actual native before2fail/after5pass reproduction and report; independent five-test copy passes. Owner/tests/staged entries/index bytes preserved.",
+      "registered_source_bytes": {
+        "skills": 162636,
+        "agents": 267012
+      }
+    },
+    {
+      "id": "10-implementation-unavailable-check-named-agent-2",
+      "case": "implementation-unavailable-check",
+      "mode": "named-agent",
+      "repeat": 2,
+      "status": "collected",
+      "acceptance": "pass",
+      "usage": {
+        "input": 32038,
+        "output": 3565,
+        "cache_read": 227200,
+        "cache_write": 0,
+        "reported_cost": 0.04804030000000001,
+        "complete_session_fields": true
+      },
+      "seconds": 177.127,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "feature-developer": 12
+        },
+        "skill_events": {},
+        "skill_message_utf8_bytes": 0,
+        "tool_calls": {
+          "read": 9,
+          "shell": 17,
+          "write": 1
+        },
+        "tool_statuses": {
+          "completed": 20,
+          "error": 7
+        },
+        "tool_result_failures": 11,
+        "instruction_file_reads": [],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true
+      },
+      "result_sha256": "779d2c34b23baf2d03b6f4880952a1af501c4a6f4d8cdea3c3bc254f90f1bcb8",
+      "review_notes": "Scoped task delivery accepted: correct implementation passes independent7accept/33reject runtime cases; owner/contract preserved. Step-bound final reports actual missing required compiler and denied runtime attempts, explicitly claims no compiler/runtime test pass. Compiler/type-check acceptance remains blocked; scoped task pass does not certify compilation.",
+      "registered_source_bytes": {
+        "skills": 162636,
+        "agents": 267012
+      }
+    },
+    {
+      "id": "11-focused-review-with-skills-skill-1",
+      "case": "focused-review-with-skills",
+      "mode": "skill",
+      "repeat": 1,
+      "status": "collected",
+      "acceptance": "pass",
+      "usage": {
+        "input": 18808,
+        "output": 2847,
+        "cache_read": 184192,
+        "cache_write": 0,
+        "reported_cost": 0.035855644,
+        "complete_session_fields": true
+      },
+      "seconds": 167.646,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "build": 12
+        },
+        "skill_events": {
+          "change-review": 1
+        },
+        "skill_message_utf8_bytes": 4301,
+        "tool_calls": {
+          "read": 10,
+          "shell": 12,
+          "glob": 1
+        },
+        "tool_statuses": {
+          "completed": 17,
+          "error": 6
+        },
+        "tool_result_failures": 7,
+        "instruction_file_reads": [
+          {
+            "path": "/private/tmp/native-matched-2026-10-15-v3/11-focused-review-with-skills-skill-1/workspace/.agents/skills/change-review/references/review-method.md",
+            "status": "completed"
+          },
+          {
+            "path": "/private/tmp/native-matched-2026-10-15-v3/11-focused-review-with-skills-skill-1/workspace/.agents/skills/change-review/tests/cases.json",
+            "status": "completed"
+          }
+        ],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true
+      },
+      "result_sha256": "257c5fc2be3790339a1c30378e62d5224f54c1e28eb020f97434ba56d1eff781",
+      "review_notes": "Despite self-label that formal writeup remained, delivered text contains both concrete contract defects with counterexamples, staged/unstaged/new-caller scope, numeric masking explanation, actual0-tests/exit5 and remaining verification gaps. Source/index preserved. Raw prompt did not require a particular report format; completed content meets requested defect review, with minor wording/organization limitations.",
+      "registered_source_bytes": {
+        "skills": 162636,
+        "agents": 267012
+      }
+    },
+    {
+      "id": "12-focused-review-with-skills-named-agent-2",
+      "case": "focused-review-with-skills",
+      "mode": "named-agent",
+      "repeat": 2,
+      "status": "collected",
+      "acceptance": "pass",
+      "usage": {
+        "input": 22943,
+        "output": 2103,
+        "cache_read": 88704,
+        "cache_write": 0,
+        "reported_cost": 0.035872188,
+        "complete_session_fields": true
+      },
+      "seconds": 156.375,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "quality-engineer": 6
+        },
+        "skill_events": {
+          "change-review": 1
+        },
+        "skill_message_utf8_bytes": 0,
+        "tool_calls": {
+          "skill": 1,
+          "shell": 7,
+          "read": 6,
+          "glob": 2
+        },
+        "tool_statuses": {
+          "completed": 15,
+          "error": 1
+        },
+        "tool_result_failures": 1,
+        "instruction_file_reads": [],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true
+      },
+      "result_sha256": "25803afda53bf17b31c6815db85017af4c875ed2bce8b565364bc61aa6172bad",
+      "review_notes": "Both concrete staged/unstaged regressions and new caller are correctly reviewed with counterexamples and static-vs-runtime limits; source/index preserved. Primary quality-engineer is resolved and actual native change-review skill tool output matches installed body. Caller consequence is not a third independent root defect.",
+      "registered_source_bytes": {
+        "skills": 162636,
+        "agents": 267012
+      }
+    },
+    {
+      "id": "13-implementation-dirty-worktree-skill-1",
+      "case": "implementation-dirty-worktree",
+      "mode": "skill",
+      "repeat": 1,
+      "status": "collected",
+      "acceptance": "pass",
+      "usage": {
+        "input": 11285,
+        "output": 2207,
+        "cache_read": 140416,
+        "cache_write": 0,
+        "reported_cost": 0.022894432,
+        "complete_session_fields": true
+      },
+      "seconds": 96.535,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "build": 8
+        },
+        "skill_events": {
+          "systematic-debugging": 1
+        },
+        "skill_message_utf8_bytes": 3664,
+        "tool_calls": {
+          "read": 10,
+          "shell": 7,
+          "edit": 1
+        },
+        "tool_statuses": {
+          "completed": 17,
+          "error": 1
+        },
+        "tool_result_failures": 2,
+        "instruction_file_reads": [
+          {
+            "path": "/private/tmp/native-matched-2026-10-15-v3/13-implementation-dirty-worktree-skill-1/workspace/.agents/skills/systematic-debugging/references/investigation.md",
+            "status": "completed"
+          },
+          {
+            "path": "/private/tmp/native-matched-2026-10-15-v3/13-implementation-dirty-worktree-skill-1/workspace/.agents/skills/systematic-debugging/tests/cases.json",
+            "status": "completed"
+          }
+        ],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true,
+        "boundary_tests": true
+      },
+      "result_sha256": "1487d3260c7da2b6a23e4bec1d7a437d4c21c6c93ace840d250f2cbd8f6b4753",
+      "review_notes": "Correct minimal boundary fix; actual before2fail/after5pass trace and complete report; independent five-test copy passes. Owner/tests/staged entries/index bytes preserved.",
+      "registered_source_bytes": {
+        "skills": 162636,
+        "agents": 267012
+      }
+    },
+    {
+      "id": "14-implementation-dirty-worktree-named-agent-1",
+      "case": "implementation-dirty-worktree",
+      "mode": "named-agent",
+      "repeat": 1,
+      "status": "collected",
+      "acceptance": "pass",
+      "usage": {
+        "input": 16106,
+        "output": 2111,
+        "cache_read": 187904,
+        "cache_write": 0,
+        "reported_cost": 0.023974808,
+        "complete_session_fields": true
+      },
+      "seconds": 80.041,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "feature-developer": 12
+        },
+        "skill_events": {},
+        "skill_message_utf8_bytes": 0,
+        "tool_calls": {
+          "read": 9,
+          "shell": 8,
+          "execute": 1,
+          "edit": 1
+        },
+        "tool_statuses": {
+          "completed": 17,
+          "error": 2
+        },
+        "tool_result_failures": 3,
+        "instruction_file_reads": [],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true,
+        "boundary_tests": true
+      },
+      "result_sha256": "f37f13d33ec95041b5690d1a67e58c64fff916675bc4908d3a62fc4fa0414a1d",
+      "review_notes": "Step-bound final nevertheless delivers correct diagnosis/change and actual before2fail/after5pass checks. Independent five-test copy passes; owner/tests/staged entries/index bytes preserved. Minor reporting omission: initial denied compound command and echo probe are not enumerated in final summary.",
+      "registered_source_bytes": {
+        "skills": 162636,
+        "agents": 267012
+      }
+    },
+    {
+      "id": "15-implementation-dirty-worktree-named-agent-2",
+      "case": "implementation-dirty-worktree",
+      "mode": "named-agent",
+      "repeat": 2,
+      "status": "collected",
+      "acceptance": "pass",
+      "usage": {
+        "input": 9932,
+        "output": 1830,
+        "cache_read": 148864,
+        "cache_write": 0,
+        "reported_cost": 0.016049307999999998,
+        "complete_session_fields": true
+      },
+      "seconds": 52.527,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "feature-developer": 9
+        },
+        "skill_events": {},
+        "skill_message_utf8_bytes": 0,
+        "tool_calls": {
+          "read": 8,
+          "shell": 7,
+          "edit": 1
+        },
+        "tool_statuses": {
+          "completed": 15,
+          "error": 1
+        },
+        "tool_result_failures": 2,
+        "instruction_file_reads": [],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true,
+        "boundary_tests": true
+      },
+      "result_sha256": "af64d8486cf3e0eee9580f6cbd3d1da8acdb925dba52fd569359b772aef07e2f",
+      "review_notes": "Correct minimal boundary fix, supported before2fail/after5pass report and independently repeated five-test pass; owner/tests/staged entries/index bytes preserved. Initial rejected compound git-log request remains in raw trace, not executed; final enumerates executed permitted commands.",
+      "registered_source_bytes": {
+        "skills": 162636,
+        "agents": 267012
+      }
+    },
+    {
+      "id": "16-focused-review-with-skills-skill-2",
+      "case": "focused-review-with-skills",
+      "mode": "skill",
+      "repeat": 2,
+      "status": "collected",
+      "acceptance": "pass",
+      "usage": {
+        "input": 15775,
+        "output": 2510,
+        "cache_read": 162048,
+        "cache_write": 0,
+        "reported_cost": 0.031459956,
+        "complete_session_fields": true
+      },
+      "seconds": 139.651,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "build": 8
+        },
+        "skill_events": {
+          "change-review": 1
+        },
+        "skill_message_utf8_bytes": 4301,
+        "tool_calls": {
+          "shell": 10,
+          "read": 12,
+          "glob": 4
+        },
+        "tool_statuses": {
+          "error": 3,
+          "completed": 23
+        },
+        "tool_result_failures": 3,
+        "instruction_file_reads": [
+          {
+            "path": "/private/tmp/native-matched-2026-10-15-v3/16-focused-review-with-skills-skill-2/workspace/.agents/skills/change-review/references/review-method.md",
+            "status": "completed"
+          },
+          {
+            "path": "/private/tmp/native-matched-2026-10-15-v3/16-focused-review-with-skills-skill-2/workspace/.agents/skills/change-review/tests/cases.json",
+            "status": "completed"
+          }
+        ],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true
+      },
+      "result_sha256": "8de1f145302681eda0119cfa7d03c94b1837b843aefe23c03508dabf56b353e3",
+      "review_notes": "Both concrete regressions are proved with correct examples, caller masking is recognized, actual static/runtime limits reported, source/index preserved. Nonblocking report defect: overcharge/undercharge directions are reversed in impact prose; examples/mechanisms and correction are correct (subtotal50 gives40vs45:undercharge; subtotal150 gives140vs135:overcharge).",
+      "registered_source_bytes": {
+        "skills": 162636,
+        "agents": 267012
+      }
+    },
+    {
+      "id": "17-implementation-unavailable-check-ordinary-2",
+      "case": "implementation-unavailable-check",
+      "mode": "ordinary",
+      "repeat": 2,
+      "status": "collected",
+      "acceptance": "pass",
+      "usage": {
+        "input": 25883,
+        "output": 3634,
+        "cache_read": 205696,
+        "cache_write": 0,
+        "reported_cost": 0.04418405200000001,
+        "complete_session_fields": true
+      },
+      "seconds": 176.141,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "build": 12
+        },
+        "skill_events": {},
+        "skill_message_utf8_bytes": 0,
+        "tool_calls": {
+          "read": 9,
+          "shell": 14,
+          "glob": 3,
+          "write": 1,
+          "execute": 1
+        },
+        "tool_statuses": {
+          "completed": 25,
+          "error": 3
+        },
+        "tool_result_failures": 10,
+        "instruction_file_reads": [],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true
+      },
+      "result_sha256": "311d774f7a205a715846f91c36634669c03245cb9f36472294e1be0457712fe4",
+      "review_notes": "Scoped task delivery accepted: correct source passes independent7accept/33reject runtime cases and preserves owner/contract. Step-bound final accurately discloses failed execute test (BigInt unsupported), missing compiler and no type-check pass; final text itself contains required verification-gap report despite listing formal report as remaining. No native passing behavior test or compiler success is established. Available Node/Bun should not be described as absent; permission and compiler limitations remain separate.",
+      "registered_source_bytes": {
+        "skills": 162636,
+        "agents": 267012
+      }
+    },
+    {
+      "id": "18-implementation-unavailable-check-named-agent-1",
+      "case": "implementation-unavailable-check",
+      "mode": "named-agent",
+      "repeat": 1,
+      "status": "timed_out",
+      "acceptance": "fail",
+      "usage": {
+        "input": 16290,
+        "output": 1516,
+        "cache_read": 148096,
+        "cache_write": 0,
+        "reported_cost": 0.031514692,
+        "complete_session_fields": true
+      },
+      "seconds": 180.51,
+      "instruction_events": {
+        "assistant_messages_by_agent": {
+          "feature-developer": 10
+        },
+        "skill_events": {},
+        "skill_message_utf8_bytes": 0,
+        "tool_calls": {
+          "read": 10,
+          "shell": 9,
+          "glob": 2,
+          "edit": 1
+        },
+        "tool_statuses": {
+          "completed": 19,
+          "error": 3
+        },
+        "tool_result_failures": 6,
+        "instruction_file_reads": [],
+        "limits": "Events can overlap attachments and skill calls; not distinct token loads or proof of adherence."
+      },
+      "invariants": {
+        "source_scope_preserved": true,
+        "staging_entries_preserved": true
+      },
+      "result_sha256": "f9467046bace61ee888326b2a26476310b1b9b7503c08cd6eefecca4da8c8abe",
+      "review_notes": "Implemented source passes independent7accept/33reject runtime cases and preserves owner/contract, but timed-out trace contains no assistant textual report at all: actual checks, permission failures and mandatory compiler gap were not delivered. Correct partial source does not complete the requested task.",
+      "registered_source_bytes": {
+        "skills": 162636,
+        "agents": 267012
+      }
+    }
+  ],
+  "groups": [
+    {
+      "case": "focused-review-with-skills",
+      "mode": "named-agent",
+      "planned": 2,
+      "statuses": {
+        "setup_failed": 1,
+        "collected": 1
+      },
+      "independent_acceptance": {
+        "blocked": 1,
+        "pass": 1
+      },
+      "metrics": {
+        "input": {
+          "observed": 1,
+          "missing": 1,
+          "mean": 22943,
+          "min": 22943,
+          "max": 22943
+        },
+        "output": {
+          "observed": 1,
+          "missing": 1,
+          "mean": 2103,
+          "min": 2103,
+          "max": 2103
+        },
+        "cache_read": {
+          "observed": 1,
+          "missing": 1,
+          "mean": 88704,
+          "min": 88704,
+          "max": 88704
+        },
+        "cache_write": {
+          "observed": 1,
+          "missing": 1,
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "reported_cost": {
+          "observed": 1,
+          "missing": 1,
+          "mean": 0.035872188,
+          "min": 0.035872188,
+          "max": 0.035872188
+        },
+        "seconds": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 78.342,
+          "min": 0.309,
+          "max": 156.375
+        }
+      }
+    },
+    {
+      "case": "focused-review-with-skills",
+      "mode": "ordinary",
+      "planned": 2,
+      "statuses": {
+        "collected": 1,
+        "timed_out": 1
+      },
+      "independent_acceptance": {
+        "pass": 1,
+        "fail": 1
+      },
+      "metrics": {
+        "input": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 10116.5,
+          "min": 9872,
+          "max": 10361
+        },
+        "output": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 1764.5,
+          "min": 1217,
+          "max": 2312
+        },
+        "cache_read": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 156992,
+          "min": 139520,
+          "max": 174464
+        },
+        "cache_write": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "reported_cost": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 0.026823104,
+          "min": 0.026338268,
+          "max": 0.02730794
+        },
+        "seconds": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 157.6125,
+          "min": 134.299,
+          "max": 180.926
+        }
+      }
+    },
+    {
+      "case": "focused-review-with-skills",
+      "mode": "skill",
+      "planned": 2,
+      "statuses": {
+        "collected": 2
+      },
+      "independent_acceptance": {
+        "pass": 2
+      },
+      "metrics": {
+        "input": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 17291.5,
+          "min": 15775,
+          "max": 18808
+        },
+        "output": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 2678.5,
+          "min": 2510,
+          "max": 2847
+        },
+        "cache_read": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 173120,
+          "min": 162048,
+          "max": 184192
+        },
+        "cache_write": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "reported_cost": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 0.0336578,
+          "min": 0.031459956,
+          "max": 0.035855644
+        },
+        "seconds": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 153.6485,
+          "min": 139.651,
+          "max": 167.646
+        }
+      }
+    },
+    {
+      "case": "implementation-dirty-worktree",
+      "mode": "named-agent",
+      "planned": 2,
+      "statuses": {
+        "collected": 2
+      },
+      "independent_acceptance": {
+        "pass": 2
+      },
+      "metrics": {
+        "input": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 13019,
+          "min": 9932,
+          "max": 16106
+        },
+        "output": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 1970.5,
+          "min": 1830,
+          "max": 2111
+        },
+        "cache_read": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 168384,
+          "min": 148864,
+          "max": 187904
+        },
+        "cache_write": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "reported_cost": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 0.020012058,
+          "min": 0.016049307999999998,
+          "max": 0.023974808
+        },
+        "seconds": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 66.28399999999999,
+          "min": 52.527,
+          "max": 80.041
+        }
+      }
+    },
+    {
+      "case": "implementation-dirty-worktree",
+      "mode": "ordinary",
+      "planned": 2,
+      "statuses": {
+        "collected": 2
+      },
+      "independent_acceptance": {
+        "pass": 2
+      },
+      "metrics": {
+        "input": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 9338.5,
+          "min": 9064,
+          "max": 9613
+        },
+        "output": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 1337.5,
+          "min": 1158,
+          "max": 1517
+        },
+        "cache_read": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 119488,
+          "min": 100608,
+          "max": 138368
+        },
+        "cache_write": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "reported_cost": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 0.014867775999999997,
+          "min": 0.014648435999999999,
+          "max": 0.015087115999999996
+        },
+        "seconds": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 51.93,
+          "min": 48.792,
+          "max": 55.068
+        }
+      }
+    },
+    {
+      "case": "implementation-dirty-worktree",
+      "mode": "skill",
+      "planned": 2,
+      "statuses": {
+        "collected": 2
+      },
+      "independent_acceptance": {
+        "pass": 2
+      },
+      "metrics": {
+        "input": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 10725.5,
+          "min": 10166,
+          "max": 11285
+        },
+        "output": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 1898,
+          "min": 1589,
+          "max": 2207
+        },
+        "cache_read": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 123968,
+          "min": 107520,
+          "max": 140416
+        },
+        "cache_write": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "reported_cost": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 0.018859676,
+          "min": 0.01482492,
+          "max": 0.022894432
+        },
+        "seconds": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 72.7315,
+          "min": 48.928,
+          "max": 96.535
+        }
+      }
+    },
+    {
+      "case": "implementation-unavailable-check",
+      "mode": "named-agent",
+      "planned": 2,
+      "statuses": {
+        "collected": 1,
+        "timed_out": 1
+      },
+      "independent_acceptance": {
+        "pass": 1,
+        "fail": 1
+      },
+      "metrics": {
+        "input": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 24164,
+          "min": 16290,
+          "max": 32038
+        },
+        "output": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 2540.5,
+          "min": 1516,
+          "max": 3565
+        },
+        "cache_read": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 187648,
+          "min": 148096,
+          "max": 227200
+        },
+        "cache_write": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "reported_cost": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 0.039777496,
+          "min": 0.031514692,
+          "max": 0.04804030000000001
+        },
+        "seconds": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 178.8185,
+          "min": 177.127,
+          "max": 180.51
+        }
+      }
+    },
+    {
+      "case": "implementation-unavailable-check",
+      "mode": "ordinary",
+      "planned": 2,
+      "statuses": {
+        "timed_out": 1,
+        "collected": 1
+      },
+      "independent_acceptance": {
+        "fail": 1,
+        "pass": 1
+      },
+      "metrics": {
+        "input": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 20085.5,
+          "min": 14288,
+          "max": 25883
+        },
+        "output": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 2982.5,
+          "min": 2331,
+          "max": 3634
+        },
+        "cache_read": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 209536,
+          "min": 205696,
+          "max": 213376
+        },
+        "cache_write": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "reported_cost": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 0.039483862,
+          "min": 0.034783671999999995,
+          "max": 0.04418405200000001
+        },
+        "seconds": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 178.16199999999998,
+          "min": 176.141,
+          "max": 180.183
+        }
+      }
+    },
+    {
+      "case": "implementation-unavailable-check",
+      "mode": "skill",
+      "planned": 2,
+      "statuses": {
+        "timed_out": 2
+      },
+      "independent_acceptance": {
+        "fail": 2
+      },
+      "metrics": {
+        "input": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 10015.5,
+          "min": 8823,
+          "max": 11208
+        },
+        "output": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 1345,
+          "min": 563,
+          "max": 2127
+        },
+        "cache_read": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 98240,
+          "min": 33152,
+          "max": 163328
+        },
+        "cache_write": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 0,
+          "min": 0,
+          "max": 0
+        },
+        "reported_cost": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 0.01744985,
+          "min": 0.008312744,
+          "max": 0.026586956
+        },
+        "seconds": {
+          "observed": 2,
+          "missing": 0,
+          "mean": 181.0285,
+          "min": 180.882,
+          "max": 181.175
+        }
+      }
+    }
+  ],
+  "review_sha256": "25a09984d0daf6c1b59798a408506e02360b26f476466649ab16057f05a4c7e0",
+  "limits": [
+    "Built-in build is explicitly pinned for ordinary/skill controls; named-agent changes that primary.",
+    "Role and skill treatments are different interventions, not a context-only savings experiment.",
+    "Source bytes, instruction events, host-reported tokens/cache and billed costs are distinct.",
+    "Unexposed auxiliary calls/settings remain unknown; sample sizes do not establish statistical reliability.",
+    "No task success is inferred from host outcome, artifact invariants or a lower token count."
+  ]
+}

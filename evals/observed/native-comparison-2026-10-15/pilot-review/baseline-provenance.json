@@ -1,0 +1,17 @@
+{
+  "method": "git archive HEAD from pilot project before completed native run; tracked source hash compared with before.json",
+  "checks": {
+    "AGENTS.md": {
+      "sha256": "641b1a72d01ac9d23bfed7f004329a7a87125e61e3dc785a138c4d65612457cd",
+      "matches_before": true
+    },
+    "scripts/behavior_eval.py": {
+      "sha256": "18af07d976f36516e34697a6771d4ee737d883c8379e8b2d06b24bd721108470",
+      "matches_before": true
+    },
+    "tests/test_behavior_eval.py": {
+      "sha256": "03155f98cd8066eab9af7450f93eaf2a10870e0a12a92b60ea445b8c4cc9a4a2",
+      "matches_before": true
+    }
+  }
+}

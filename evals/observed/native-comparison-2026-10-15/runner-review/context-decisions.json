@@ -1,0 +1,41 @@
+{
+  "format_version": 1,
+  "trial_root": "/private/tmp/native-context-20261015",
+  "plan_sha256": "6c87d14ebc116c262787553937674a7d7de55dc037767e60155893594e617a24",
+  "candidate_sha256": "de1be21daed80af51ea99f1523bef2653f6388aa3bc8ec41b7bf39d0f8019202",
+  "content_acceptance": "pass",
+  "content_notes": "Preserves unchanged trigger metadata, investigation-vs-edit authorization, local guide link/resources, bounded evidence-driven diagnosis, sensitive/destructive boundaries, smallest authorized fix/preserved edits/regression tests, actual repeat checks and explicit unresolved/blocker reporting. Exact repeated-environment comparison caveat is less explicit, but relevant runtime/context and uncertainty/check-gap reporting remain. Small two-run pagination observation does not validate all skill domains.",
+  "runs": [
+    {
+      "id": "context-candidate-1",
+      "result_sha256": "773ee0838faf8782ff0b5af4a7104e6580d90bdf2b77163e6f9210a40d4762e9",
+      "acceptance": "pass",
+      "notes": "Correct minimal boundary fix; native trace reproduces two original failures then five original tests pass, independently repeated in disposable copy. Owner label and original test bytes/staged entries preserved; raw Git index bytes changed, so no byte-identical-index claim. Matching candidate body is present in user attachment and preflight fingerprint. Actual denied shell combination and recovery are reported."
+    },
+    {
+      "id": "context-candidate-2",
+      "result_sha256": "5eec2fe060ecd5f04c3123f59ebdf06ed3d7685707180c861718e1080839ec4a",
+      "acceptance": "pass",
+      "notes": "Correct minimal boundary fix; native trace reproduces two original failures then five original tests pass, independently repeated in disposable copy. Owner label and test bytes/staged entries preserved; raw Git index bytes changed, so no byte-identical-index claim. Matching candidate skill body is present in user attachment and preflight fingerprint. Candidate2 omits its initial denied compound shell attempt from final limits, a minor reporting weakness; no forbidden command executed."
+    }
+  ],
+  "baseline_comparison_runs": [
+    {
+      "id": "06-implementation-dirty-worktree-skill-2",
+      "result_sha256": "2e0a144d2eae3c43afdb88ec624c34acfc11736e3220f4cde73739077cb496c5",
+      "acceptance": "pass",
+      "notes": "Baseline comparison only: same correct minimal source fix, preserved owner/tests/staged entries/index bytes, actual before/after test trace and complete task report; independent five-test disposable run passes. This decision does not replace any original batch result."
+    },
+    {
+      "id": "13-implementation-dirty-worktree-skill-1",
+      "result_sha256": "1487d3260c7da2b6a23e4bec1d7a437d4c21c6c93ace840d250f2cbd8f6b4753",
+      "acceptance": "pass",
+      "notes": "Baseline comparison only: same correct minimal source fix, preserved owner/tests/staged entries/index bytes, actual before/after test trace and complete task report; independent five-test disposable run passes. This decision does not replace any original batch result."
+    }
+  ],
+  "limits": [
+    "Context trials are additional observations, not replacements for original failed/missing attempts.",
+    "Source/body/attachment bytes differ from provider token/cache/cost accounting.",
+    "No causal or reliable savings/quality-equivalence claim from two runs per text, changing paths, uncontrolled caches, and collector-version difference against baseline06."
+  ]
+}

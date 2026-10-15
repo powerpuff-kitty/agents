@@ -1,0 +1,191 @@
+{
+  "format_version": 1,
+  "seed": 17,
+  "repetitions": 2,
+  "agents_revision": "cbf7c53fe3f83b438a7d47945760fa38d6f3499c",
+  "skills_revision": "aed7e19f426c315b142111ef846f84d7680f3df3",
+  "runner_sha256": "29f16887df71ea1d6a8b36707f9e07d51a2c67ed52efb122b98c6612f401688d",
+  "model": "deepseek/deepseek-v4-pro",
+  "runs": [
+    {
+      "id": "01-focused-review-with-skills-ordinary-2",
+      "case": "focused-review-with-skills",
+      "mode": "ordinary",
+      "repeat": 2,
+      "agent": null,
+      "skill": null,
+      "prompt_sha256": "f974e114e6ce0e8cbc3eedb3788e4f15ec5911ba7e45aae65be3ee0af2105210",
+      "fixture_sha256": "c9837471b57e064f6a08d7057225f558b02bad21c67e37d777cfeaf44624836b"
+    },
+    {
+      "id": "02-focused-review-with-skills-ordinary-1",
+      "case": "focused-review-with-skills",
+      "mode": "ordinary",
+      "repeat": 1,
+      "agent": null,
+      "skill": null,
+      "prompt_sha256": "f974e114e6ce0e8cbc3eedb3788e4f15ec5911ba7e45aae65be3ee0af2105210",
+      "fixture_sha256": "c9837471b57e064f6a08d7057225f558b02bad21c67e37d777cfeaf44624836b"
+    },
+    {
+      "id": "03-implementation-unavailable-check-skill-2",
+      "case": "implementation-unavailable-check",
+      "mode": "skill",
+      "repeat": 2,
+      "agent": null,
+      "skill": "systematic-debugging",
+      "prompt_sha256": "5cd6c9b8d237ddfc6b62e023789a064927b1a38c4dd1258eb3d532eb66daaec2",
+      "fixture_sha256": "823d08071d22a6bdb72e0b0d1bbb12f81564aaf51a5416309254e700ee31505a"
+    },
+    {
+      "id": "04-implementation-unavailable-check-ordinary-1",
+      "case": "implementation-unavailable-check",
+      "mode": "ordinary",
+      "repeat": 1,
+      "agent": null,
+      "skill": null,
+      "prompt_sha256": "38b7333c70de9e1fa9f0f211916d66fcc4e99147099020a8b12c9983669206bc",
+      "fixture_sha256": "823d08071d22a6bdb72e0b0d1bbb12f81564aaf51a5416309254e700ee31505a"
+    },
+    {
+      "id": "05-implementation-unavailable-check-skill-1",
+      "case": "implementation-unavailable-check",
+      "mode": "skill",
+      "repeat": 1,
+      "agent": null,
+      "skill": "systematic-debugging",
+      "prompt_sha256": "5cd6c9b8d237ddfc6b62e023789a064927b1a38c4dd1258eb3d532eb66daaec2",
+      "fixture_sha256": "823d08071d22a6bdb72e0b0d1bbb12f81564aaf51a5416309254e700ee31505a"
+    },
+    {
+      "id": "06-implementation-dirty-worktree-skill-2",
+      "case": "implementation-dirty-worktree",
+      "mode": "skill",
+      "repeat": 2,
+      "agent": null,
+      "skill": "systematic-debugging",
+      "prompt_sha256": "ca36cee3c44ac480205b09156f762369fbf5cfc252fe798547949c5900c60980",
+      "fixture_sha256": "6f6d441c2c88bb96a7c787af0cf0121cfc76372c85d165a22b8994e095f3d9f8"
+    },
+    {
+      "id": "07-focused-review-with-skills-named-agent-1",
+      "case": "focused-review-with-skills",
+      "mode": "named-agent",
+      "repeat": 1,
+      "agent": "quality-engineer",
+      "skill": null,
+      "prompt_sha256": "f974e114e6ce0e8cbc3eedb3788e4f15ec5911ba7e45aae65be3ee0af2105210",
+      "fixture_sha256": "c9837471b57e064f6a08d7057225f558b02bad21c67e37d777cfeaf44624836b"
+    },
+    {
+      "id": "08-implementation-dirty-worktree-ordinary-1",
+      "case": "implementation-dirty-worktree",
+      "mode": "ordinary",
+      "repeat": 1,
+      "agent": null,
+      "skill": null,
+      "prompt_sha256": "f5eda016d7d99f45ec15ae8ee1f28d39c2fc26726ace64b19959075d77564339",
+      "fixture_sha256": "6f6d441c2c88bb96a7c787af0cf0121cfc76372c85d165a22b8994e095f3d9f8"
+    },
+    {
+      "id": "09-implementation-dirty-worktree-ordinary-2",
+      "case": "implementation-dirty-worktree",
+      "mode": "ordinary",
+      "repeat": 2,
+      "agent": null,
+      "skill": null,
+      "prompt_sha256": "f5eda016d7d99f45ec15ae8ee1f28d39c2fc26726ace64b19959075d77564339",
+      "fixture_sha256": "6f6d441c2c88bb96a7c787af0cf0121cfc76372c85d165a22b8994e095f3d9f8"
+    },
+    {
+      "id": "10-implementation-unavailable-check-named-agent-2",
+      "case": "implementation-unavailable-check",
+      "mode": "named-agent",
+      "repeat": 2,
+      "agent": "feature-developer",
+      "skill": null,
+      "prompt_sha256": "38b7333c70de9e1fa9f0f211916d66fcc4e99147099020a8b12c9983669206bc",
+      "fixture_sha256": "823d08071d22a6bdb72e0b0d1bbb12f81564aaf51a5416309254e700ee31505a"
+    },
+    {
+      "id": "11-focused-review-with-skills-skill-1",
+      "case": "focused-review-with-skills",
+      "mode": "skill",
+      "repeat": 1,
+      "agent": null,
+      "skill": "change-review",
+      "prompt_sha256": "2e195317fe1b9c4681bf3c51d74b4b02f93fb34669c1f4fbad40cf65471c4464",
+      "fixture_sha256": "c9837471b57e064f6a08d7057225f558b02bad21c67e37d777cfeaf44624836b"
+    },
+    {
+      "id": "12-focused-review-with-skills-named-agent-2",
+      "case": "focused-review-with-skills",
+      "mode": "named-agent",
+      "repeat": 2,
+      "agent": "quality-engineer",
+      "skill": null,
+      "prompt_sha256": "f974e114e6ce0e8cbc3eedb3788e4f15ec5911ba7e45aae65be3ee0af2105210",
+      "fixture_sha256": "c9837471b57e064f6a08d7057225f558b02bad21c67e37d777cfeaf44624836b"
+    },
+    {
+      "id": "13-implementation-dirty-worktree-skill-1",
+      "case": "implementation-dirty-worktree",
+      "mode": "skill",
+      "repeat": 1,
+      "agent": null,
+      "skill": "systematic-debugging",
+      "prompt_sha256": "ca36cee3c44ac480205b09156f762369fbf5cfc252fe798547949c5900c60980",
+      "fixture_sha256": "6f6d441c2c88bb96a7c787af0cf0121cfc76372c85d165a22b8994e095f3d9f8"
+    },
+    {
+      "id": "14-implementation-dirty-worktree-named-agent-1",
+      "case": "implementation-dirty-worktree",
+      "mode": "named-agent",
+      "repeat": 1,
+      "agent": "feature-developer",
+      "skill": null,
+      "prompt_sha256": "f5eda016d7d99f45ec15ae8ee1f28d39c2fc26726ace64b19959075d77564339",
+      "fixture_sha256": "6f6d441c2c88bb96a7c787af0cf0121cfc76372c85d165a22b8994e095f3d9f8"
+    },
+    {
+      "id": "15-implementation-dirty-worktree-named-agent-2",
+      "case": "implementation-dirty-worktree",
+      "mode": "named-agent",
+      "repeat": 2,
+      "agent": "feature-developer",
+      "skill": null,
+      "prompt_sha256": "f5eda016d7d99f45ec15ae8ee1f28d39c2fc26726ace64b19959075d77564339",
+      "fixture_sha256": "6f6d441c2c88bb96a7c787af0cf0121cfc76372c85d165a22b8994e095f3d9f8"
+    },
+    {
+      "id": "16-focused-review-with-skills-skill-2",
+      "case": "focused-review-with-skills",
+      "mode": "skill",
+      "repeat": 2,
+      "agent": null,
+      "skill": "change-review",
+      "prompt_sha256": "2e195317fe1b9c4681bf3c51d74b4b02f93fb34669c1f4fbad40cf65471c4464",
+      "fixture_sha256": "c9837471b57e064f6a08d7057225f558b02bad21c67e37d777cfeaf44624836b"
+    },
+    {
+      "id": "17-implementation-unavailable-check-ordinary-2",
+      "case": "implementation-unavailable-check",
+      "mode": "ordinary",
+      "repeat": 2,
+      "agent": null,
+      "skill": null,
+      "prompt_sha256": "38b7333c70de9e1fa9f0f211916d66fcc4e99147099020a8b12c9983669206bc",
+      "fixture_sha256": "823d08071d22a6bdb72e0b0d1bbb12f81564aaf51a5416309254e700ee31505a"
+    },
+    {
+      "id": "18-implementation-unavailable-check-named-agent-1",
+      "case": "implementation-unavailable-check",
+      "mode": "named-agent",
+      "repeat": 1,
+      "agent": "feature-developer",
+      "skill": null,
+      "prompt_sha256": "38b7333c70de9e1fa9f0f211916d66fcc4e99147099020a8b12c9983669206bc",
+      "fixture_sha256": "823d08071d22a6bdb72e0b0d1bbb12f81564aaf51a5416309254e700ee31505a"
+    }
+  ]
+}

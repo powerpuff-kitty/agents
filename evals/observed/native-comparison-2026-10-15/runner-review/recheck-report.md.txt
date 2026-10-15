@@ -1,0 +1,51 @@
+# Independent runner recheck
+
+Date: 2026-10-15. This is a new report; `initial-report.md` remains unchanged. Scope: revised runner source, its focused regression tests, and disposable offline probes. No provider calls, actual OpenCode invocation, network requests, configuration inspection, or secret inspection were performed. No source repository files were edited.
+
+Final frozen runner reviewed/tested: `recheck-latest/scripts/native_eval.py`, copied from `/Users/tcsntcsn/TCSN/agents/scripts/native_eval.py`.
+SHA-256: `da6479b12156a29328dea1b671bffb1fb0100fc8ea542404d00b837a0795bcf1`.
+Focused tests SHA-256: `314cfaefec465497bd9bb03f7d24a40be201e877066ce86704831643ab888568`.
+The live source changed during this review: initial reread was `4f5936a1...`, first frozen/tested copy was `c59d7ceb...`, and the final snapshot is `da6479b...`. Both frozen snapshots, test outputs, and independent probe outputs are retained in `recheck/` and `recheck-latest/`. Conclusions below refer to `da6479b...`. This version incorporates the additional four regression tests and cursor-query change observed during the review.
+
+## Disposition of initial five findings
+
+| Initial finding | Recheck result | Evidence |
+| --- | --- | --- |
+| Expired preflight still starts inference | Original reproduction repaired | Deadline checks now occur after readiness, before session creation, and immediately before prompting; Host requests use remaining time. Independent fake readiness consumed 10 seconds against a 1-second budget: status `timed_out`, no prompt. See remaining request-read limitation below. |
+| Active ambient agent can be used without identity verification | Ambient-primary loophole repaired for the narrower controlled-primary experiment; complete instruction identity remains limited | Preparation pins `default_agent: build`; creation explicitly sends `entry.agent or build`; resolved session agent must match. Independent fake resolving `ambient-agent` was rejected before prompting. Successful control requested/resolved `build`. `built_in_build` now records a registered-system digest and 12 steps with an express complete-prompt limitation. |
+| Partial prior execution evidence overwritten | Repaired | Existing execution artifacts reject the call. An exclusively created `attempt.started.json` prevents simultaneous ownership through the normal runner path. Seeded preflight bytes were preserved and no host started. Marker-only failed/crashed attempts remain retained; report status for such a missing final result is still `not_run`, so inspect the marker before describing it as never attempted. |
+| Git staging drift ignored / disappeared Git passes | Repaired for captured repository/staged-entry identity | Preflight compares captured Git state including index-byte hash; staged-index drift blocked host startup. Deleting fixture `.git` now sets `staging_entries_preserved: false`. Final checks compare staged entries, not full index bytes: they establish the documented staged-entry invariant rather than complete index-byte preservation. |
+| Owned descendants survive Host.close | Repaired for the owned process-group case | Host starts a new session/process group, sends bounded TERM/KILL to that group, then waits. The actual local owned parent/child probe found parent exited and child gone. This establishes ordinary process-group cleanup; it does not prove containment or cleanup of deliberately detached descendants. |
+
+## Remaining findings and evidence limits
+
+1. **P2 — Registered `build` system fingerprint does not establish complete loaded-instruction identity.** `verify_inventory` line 185 hashes `str(loaded_agents['build'].get('system', ''))`; absent, null, and actual body states are not retained as distinct raw registry evidence. A missing `system` field is accepted and recorded as SHA-256 of the empty string. This was reproduced: a valid controlled run with no `build.system` field was collected and preflight retained `e3b0c442...`, 12 steps, and the stated complete-provider-prompt limit. Unlike staged custom profiles, no expected built-in instruction body is compared. The revised evidence is sufficient to support “session requested and resolved agent ID build with registered step bound 12 and recorded registry fingerprint,” when actual host records agree. It is not sufficient to claim all active instructions were verified, that no ambient instruction/override contributed, or that the original built-in body was authenticated. The complete provider prompt is expressly unavailable. Preserve that limit in trial reporting; recording the actual registry field presence/type/body or a host-native identity flag where available would make the fingerprint easier to audit.
+
+2. **P2 — Request deadline remains an I/O admission/timeout control, not an absolute request-body wall-clock cutoff.** `Host.request` lines 212–223 checks the remaining time before `opener.open`, passes it as the socket timeout, then performs `response.read(20_000_001)` without a deadline recheck or independent stop during the body read. A fake response that advanced the clock by 10 seconds with a 1-second budget returned `{}` successfully; the next request was refused. The mock proves this control-flow behavior, not that OpenCode actually streams slowly. In real socket terms a timeout on blocking I/O is not a proof of an absolute whole-body deadline, particularly for a response that continues delivering data. Version checking also has its independent 10-second timeout, and cleanup/invariant checks have separate bounded allowances. Therefore describe `--timeout` as an inference deadline checked around requests with best-effort interruption and disclosed cleanup/check overhead; do not claim a hard total process-runtime bound from this implementation. The original paid-call admission after expired preflight is fixed.
+
+## Controlled-primary claim and pre-prompt evidence
+
+This experiment deliberately controls the primary role: ordinary and skill modes explicitly request `build`; named-agent mode explicitly requests the case's custom role. The `skill` arm additionally requests a named installed skill. It does not measure ambient automatic selection of the primary agent. Child selection and actual skill calls still require retained native activity evidence; passing an explicit `skills` request is not itself proof of invocation.
+
+For this narrower claim, the source now produces the useful pre-prompt chain: frozen roster/model/fixture/prompt hashes; preserved before snapshot and Git state; explicit requested agent/model/project; resolved project/model/agent check; verified staged skill path/body and custom agent body/step bound; registered `build` fingerprint/step bound with a complete-prompt limit; preflight session record; intended submitted prompt. The explicit requested agent is not separately repeated in `preflight.json`, but is derivable from the frozen entry and runner implementation and is checked against the recorded resolved session. A deadline may expire after `submitted-prompt.json` is written but before the request: that filename is an intended request record, and actual submission/completion needs the outcome/error plus native messages.
+
+Registered built-in identity is narrower than a fully observed provider prompt. No configuration inspection was performed to infer absent ambient contributions. No API/permission compatibility or actual model behavior was established. The fixed roster and separate `needs_independent_review` task acceptance remain useful boundaries. Artifact checks and host `succeeded` remain insufficient for semantic task acceptance.
+
+## Tests and retained commands
+
+Final focused repository regression result: **12 tests, 0 failures, 0 errors**, retained in `recheck-latest/regression-tests.log`. The four new tests directly cover expired setup, partial preflight preservation, disappeared Git metadata, and owned process-group cleanup. Existing tests cover project/model mismatch, staged instruction content/path/steps, fixture drift, unknown usage, cursor handling, missing roster rows/plan drift, and trace filtering. They do not directly test the full successful controlled-primary flow, unexpected primary rejection, preflight index drift, concurrent claims, complete provider prompt identity, or absolute response-body deadlines; the independent probes supplement some of these paths. No broad build or full repository suite was run for this focused read-only recheck.
+
+Independent probe result `recheck-latest/results.json`: nine synthetic prepared runs; expired setup no prompt; controlled `build` requested/resolved; ambient primary rejected; partial attempt refused and bytes preserved; index drift refused before host; deleted Git staging invariant false; owned child no longer running; request-body deadline limitation reproduced; 12 focused tests passed.
+
+Exact final probe harness: `recheck_latest_checks.py`; frozen source/tests: `recheck-latest/scripts/` and `recheck-latest/tests/`. Earlier recheck evidence remains under `recheck/` and `recheck_checks.py`.
+
+Commands included source hashing, numbered reads, focused text searches, source/test diffs, disposable copies, and:
+
+```sh
+GIT_CONFIG_NOSYSTEM=1 GIT_CONFIG_GLOBAL=/dev/null python3 -B -m unittest discover -s /private/tmp/native-runner-independent-20261015/recheck/tests -v
+GIT_CONFIG_NOSYSTEM=1 GIT_CONFIG_GLOBAL=/dev/null python3 -B /private/tmp/native-runner-independent-20261015/recheck_checks.py
+GIT_CONFIG_NOSYSTEM=1 GIT_CONFIG_GLOBAL=/dev/null python3 -B /private/tmp/native-runner-independent-20261015/recheck_latest_checks.py
+shasum -a 256 /private/tmp/native-runner-independent-20261015/recheck-latest/scripts/native_eval.py /private/tmp/native-runner-independent-20261015/recheck-latest/tests/test_native_eval.py
+```
+
+The harness invokes only fixture-local Git operations with global/system Git configuration disabled, mocked host API methods, an owned local parent/child pair, `ps` for that known child PID, and the frozen focused unit tests. The request-read probe uses a fake opener with no socket. Actual native trial evidence remains pending a later followup.

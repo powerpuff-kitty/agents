@@ -1,0 +1,37 @@
+{
+  "entry": {
+    "id": "retry07-focused-review-with-skills-named-agent-1",
+    "case": "focused-review-with-skills",
+    "mode": "named-agent",
+    "repeat": 1,
+    "agent": "quality-engineer",
+    "skill": null,
+    "prompt_sha256": "f974e114e6ce0e8cbc3eedb3788e4f15ec5911ba7e45aae65be3ee0af2105210",
+    "fixture_sha256": "2e54d284bbc8b52c425d3f2f8ec45e6edf3a772dacf58a25f9e4084caf05208c",
+    "retry_of": "07-focused-review-with-skills-named-agent-1"
+  },
+  "model_requested": {
+    "providerID": "deepseek",
+    "id": "deepseek-v4-pro"
+  },
+  "timeout_seconds": 180.0,
+  "max_reported_cost": 0.15,
+  "task_acceptance": "needs_independent_review",
+  "status": "collected",
+  "runner_sha256": "ae7467ff9c476ea556d402e250f6a1843f65c38dbed5727bb34ca3ce21b4ed83",
+  "usage_limits": "Host session totals, including discovered descendants. Hidden auxiliary calls/billing remain unknown; reported-cost interrupt can overshoot.",
+  "host_version": "opencode v2.0.27",
+  "seconds": 159.323,
+  "usage": {
+    "input": 22956,
+    "output": 2093,
+    "cache_read": 194048,
+    "cache_write": 0,
+    "reported_cost": 0.038437916,
+    "complete_session_fields": true
+  },
+  "invariants": {
+    "source_scope_preserved": true,
+    "staging_entries_preserved": true
+  }
+}

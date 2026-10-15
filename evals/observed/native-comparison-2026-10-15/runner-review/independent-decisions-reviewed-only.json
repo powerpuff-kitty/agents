@@ -1,0 +1,56 @@
+{
+  "format_version": 1,
+  "review_state": "interim",
+  "trial_root": "/private/tmp/native-matched-2026-10-15-v3",
+  "plan_sha256": "921353cf7ef97738eb231fcc328b9a10c44a2101ac59b1f4f32359f9ba9aa002",
+  "reviewed_completed_runs": 7,
+  "runs": [
+    {
+      "id": "01-focused-review-with-skills-ordinary-2",
+      "result_sha256": "e3096abb54939e1e3974e961576d21c483b14ec2ee2f165d93c62d9a8dcb57d6",
+      "acceptance": "pass",
+      "notes": "Both staged discount-percentage and unstaged dollar-scaling defects are correctly established with concrete examples; checkout caller is reviewed and its masked pricing input is explained. Static-vs-runtime limits and denied commands are reported. Files and staged entries/index bytes remain preserved."
+    },
+    {
+      "id": "02-focused-review-with-skills-ordinary-1",
+      "result_sha256": "c19ae18e5e38a1d386c96cb4c4c467b8fb659b679f6dde35e342ad9b9694d5f6",
+      "acceptance": "fail",
+      "notes": "The two core defects are correctly identified and source/index are preserved, but the retained response cuts off mid-checkout analysis at `quote` and has no completed report of actual failed checks/limits. This is incomplete delivery, not failure inferred from timed_out alone."
+    },
+    {
+      "id": "03-implementation-unavailable-check-skill-2",
+      "result_sha256": "7e1784392cceb9018e1aa771f82f538e98fb9e78464451bf10e0f9d0923635ea",
+      "acceptance": "fail",
+      "notes": "port.ts satisfies inspected contract and independent runtime matrix (7 accepted,33 rejected) in a disposable copy. Added port.check.ts is authorized task-related verification; collector source_scope_preserved=false is an over-narrow collector rule, not an unauthorized edit. Its test crashes on JSON.stringify(1n) in independent execution. Host denied node/bun runs; no final report of remaining gaps was delivered before interruption. Owner/contract preserved; compiler not verified."
+    },
+    {
+      "id": "04-implementation-unavailable-check-ordinary-1",
+      "result_sha256": "3f72ed751c9e23b0c1ecd251555445fe428a1729bbde10c79c45001b87f47e51",
+      "acceptance": "fail",
+      "notes": "port.ts satisfies inspected contract and independent runtime matrix (7 accepted,33 rejected); owner/contract preserved. Required compiler command actually exits127. Attempted execute test is workflow-completed but metadata.error=true (Symbol unavailable), not a passing runtime test. Interrupted before delivering required actual-checks/limits report. No TypeScript compiler verification."
+    },
+    {
+      "id": "05-implementation-unavailable-check-skill-1",
+      "result_sha256": "3eac11e8598f7bcd85fe314459031098c4dcd9045076661afd541ac1f4b810b0",
+      "acceptance": "fail",
+      "notes": "Implementation was never changed from Number(value); it accepts forbidden booleans/null/empty/fractional/signed/exponent/out-of-range values. Independent runtime probe confirms 32 of33 rejected-input cases are incorrectly accepted. Owner preserved; skill attachment/support reads occurred, but no implementation/check report was delivered."
+    },
+    {
+      "id": "06-implementation-dirty-worktree-skill-2",
+      "result_sha256": "2e0a144d2eae3c43afdb88ec624c34acfc11736e3220f4cde73739077cb496c5",
+      "acceptance": "pass",
+      "notes": "Removed only the erroneous exact-division break; unchanged original five tests pass in native trace and independently in a disposable copy. Exact-boundary behavior correct by source inspection. Owner labels, tests, staged entries and index bytes preserved. Actual before/after tests and verification limits are reported."
+    },
+    {
+      "id": "07-focused-review-with-skills-named-agent-1",
+      "result_sha256": "42b4e75424a8108acb8241069d2a571fc816b1e9a8c5167cc1fff2f3c16ca73b",
+      "acceptance": "blocked",
+      "notes": "Host readiness returned HTTP503 service_starting before preflight/session/prompt evidence; fixture/index preserved. No model task execution or usage is established. This is a collector/host setup block, not evidence of quality-engineer task failure."
+    }
+  ],
+  "limits": [
+    "Only completed records selected at the interim cutoff were inspected. Later-completing roster slots remain unverified until followup.",
+    "Task acceptance is independent of host/collector status.",
+    "Usage equality covers exposed numeric message fields, not unexposed auxiliary/billed work."
+  ]
+}

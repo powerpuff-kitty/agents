@@ -1,0 +1,40 @@
+{
+  "entry": {
+    "id": "04-implementation-unavailable-check-ordinary-1",
+    "case": "implementation-unavailable-check",
+    "mode": "ordinary",
+    "repeat": 1,
+    "agent": null,
+    "skill": null,
+    "prompt_sha256": "38b7333c70de9e1fa9f0f211916d66fcc4e99147099020a8b12c9983669206bc",
+    "fixture_sha256": "a247cdf83561549992dc3c73031363f890e883f897b7c9d0f0b05c95f1a5c854"
+  },
+  "model_requested": {
+    "providerID": "deepseek",
+    "id": "deepseek-v4-pro"
+  },
+  "timeout_seconds": 180.0,
+  "max_reported_cost": 0.15,
+  "task_acceptance": "needs_independent_review",
+  "status": "timed_out",
+  "runner_sha256": "da6479b12156a29328dea1b671bffb1fb0100fc8ea542404d00b837a0795bcf1",
+  "usage_limits": "Host session totals, including discovered descendants. Hidden auxiliary calls/billing remain unknown; reported-cost interrupt can overshoot.",
+  "host_version": "opencode v2.0.27",
+  "error": {
+    "type": "TimeoutError",
+    "message": "Native request deadline expired"
+  },
+  "seconds": 180.183,
+  "usage": {
+    "input": 14288,
+    "output": 2331,
+    "cache_read": 213376,
+    "cache_write": 0,
+    "reported_cost": 0.034783671999999995,
+    "complete_session_fields": true
+  },
+  "invariants": {
+    "source_scope_preserved": true,
+    "staging_entries_preserved": true
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "autoupdate": false,
+  "model": "deepseek/deepseek-v4-pro",
+  "default_agent": "build",
+  "permissions": [
+    {
+      "action": "*",
+      "resource": "*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "glob",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "grep",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "skill",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "subagent",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "execute",
+      "resource": "*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "pwd",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "ls",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "ls *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git status*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git diff*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git ls-files*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "python3 -B -m unittest*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "command -v *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "which *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "standalone-pilot-tsc*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "node --version",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "bun --version",
+      "effect": "allow"
+    },
+    {
+      "action": "external_directory",
+      "resource": "*",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": "*.env*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": ".git/*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": ".agents/*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": ".opencode/*",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "opencode.json",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "labels.txt",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "test_pagination.py",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "owner-note.txt",
+      "effect": "deny"
+    },
+    {
+      "action": "edit",
+      "resource": "CONTRACT.md",
+      "effect": "deny"
+    }
+  ],
+  "agents": {
+    "gtm-strategist": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "evidence-validator": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "release-engineer": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "scientist": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "data-analyst": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "performance-engineer": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "project-auditor": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "geo-specialist": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "user-researcher": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "designer": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "localization-specialist": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "technical-artist": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "seo-specialist": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "marketing-strategist": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "ux-designer": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "artist-3d": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "iteration-reviewer": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "quality-engineer": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "feature-developer": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "researcher": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "copywriter": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "product-manager": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "security-auditor": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "game-designer": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "accessibility-specialist": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "portfolio-risk-analyst": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "probability-analyst": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "system-architect": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "team-lead": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "quant-researcher": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "mathematician": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "usability-auditor": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "onchain-analyst": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "financial-analyst": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "design-analyst": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "build": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "general": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    },
+    "explore": {
+      "steps": 12,
+      "model": "deepseek/deepseek-v4-pro"
+    }
+  }
+}

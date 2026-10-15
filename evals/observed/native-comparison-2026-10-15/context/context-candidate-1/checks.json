@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "source_scope_preserved": true,
+    "staging_entries_preserved": true,
+    "boundary_tests": true
+  },
+  "changed_files": [
+    "pagination.py"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "-m",
+        "unittest",
+        "-v"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_empty (test_pagination.Pages.test_empty) ... ok\ntest_exact_first (test_pagination.Pages.test_exact_first) ... ok\ntest_exact_last (test_pagination.Pages.test_exact_last) ... ok\ntest_invalid_size (test_pagination.Pages.test_invalid_size) ... ok\ntest_partial_last (test_pagination.Pages.test_partial_last) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.000s\n\nOK\n"
+    }
+  ],
+  "task_acceptance": "needs_independent_review",
+  "limits": "Artifact checks do not grade review reasoning, compiler success or authenticated side effects."
+}

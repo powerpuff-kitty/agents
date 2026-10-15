@@ -1,0 +1,122 @@
+{
+  "format_version": 1,
+  "review_state": "final",
+  "trial_root": "/private/tmp/native-matched-2026-10-15-v3",
+  "plan_sha256": "921353cf7ef97738eb231fcc328b9a10c44a2101ac59b1f4f32359f9ba9aa002",
+  "runs": [
+    {
+      "id": "01-focused-review-with-skills-ordinary-2",
+      "result_sha256": "e3096abb54939e1e3974e961576d21c483b14ec2ee2f165d93c62d9a8dcb57d6",
+      "acceptance": "pass",
+      "notes": "Both staged discount-percentage and unstaged dollar-scaling defects are correctly established with concrete examples; checkout caller is reviewed and its masked pricing input is explained. Static-vs-runtime limits and denied commands are reported. Files and staged entries/index bytes remain preserved."
+    },
+    {
+      "id": "02-focused-review-with-skills-ordinary-1",
+      "result_sha256": "c19ae18e5e38a1d386c96cb4c4c467b8fb659b679f6dde35e342ad9b9694d5f6",
+      "acceptance": "fail",
+      "notes": "The two core defects are correctly identified and source/index are preserved, but the retained response cuts off mid-checkout analysis at `quote` and has no completed report of actual failed checks/limits. This is incomplete delivery, not failure inferred from timed_out alone."
+    },
+    {
+      "id": "03-implementation-unavailable-check-skill-2",
+      "result_sha256": "7e1784392cceb9018e1aa771f82f538e98fb9e78464451bf10e0f9d0923635ea",
+      "acceptance": "fail",
+      "notes": "port.ts satisfies inspected contract and independent runtime matrix (7 accepted,33 rejected) in a disposable copy. Added port.check.ts is authorized task-related verification; collector source_scope_preserved=false is an over-narrow collector rule, not an unauthorized edit. Its test crashes on JSON.stringify(1n) in independent execution. Host denied node/bun runs; no final report of remaining gaps was delivered before interruption. Owner/contract preserved; compiler not verified."
+    },
+    {
+      "id": "04-implementation-unavailable-check-ordinary-1",
+      "result_sha256": "3f72ed751c9e23b0c1ecd251555445fe428a1729bbde10c79c45001b87f47e51",
+      "acceptance": "fail",
+      "notes": "port.ts satisfies inspected contract and independent runtime matrix (7 accepted,33 rejected); owner/contract preserved. Required compiler command actually exits127. Attempted execute test is workflow-completed but metadata.error=true (Symbol unavailable), not a passing runtime test. Interrupted before delivering required actual-checks/limits report. No TypeScript compiler verification."
+    },
+    {
+      "id": "05-implementation-unavailable-check-skill-1",
+      "result_sha256": "3eac11e8598f7bcd85fe314459031098c4dcd9045076661afd541ac1f4b810b0",
+      "acceptance": "fail",
+      "notes": "Implementation was never changed from Number(value); it accepts forbidden booleans/null/empty/fractional/signed/exponent/out-of-range values. Independent runtime probe confirms 32 of33 rejected-input cases are incorrectly accepted. Owner preserved; skill attachment/support reads occurred, but no implementation/check report was delivered."
+    },
+    {
+      "id": "06-implementation-dirty-worktree-skill-2",
+      "result_sha256": "2e0a144d2eae3c43afdb88ec624c34acfc11736e3220f4cde73739077cb496c5",
+      "acceptance": "pass",
+      "notes": "Removed only the erroneous exact-division break; unchanged original five tests pass in native trace and independently in a disposable copy. Exact-boundary behavior correct by source inspection. Owner labels, tests, staged entries and index bytes preserved. Actual before/after tests and verification limits are reported."
+    },
+    {
+      "id": "07-focused-review-with-skills-named-agent-1",
+      "result_sha256": "42b4e75424a8108acb8241069d2a571fc816b1e9a8c5167cc1fff2f3c16ca73b",
+      "acceptance": "blocked",
+      "notes": "Host readiness returned HTTP503 service_starting before preflight/session/prompt evidence; fixture/index preserved. No model task execution or usage is established. This is a collector/host setup block, not evidence of quality-engineer task failure."
+    },
+    {
+      "id": "08-implementation-dirty-worktree-ordinary-1",
+      "result_sha256": "f87294b563709cce1a56e656b205a5f33fe962b151b6ac67436d4491e816ea06",
+      "acceptance": "pass",
+      "notes": "Correct minimal boundary fix; five unchanged tests pass natively and independently; owner/tests/staged entries/index bytes preserved. Reporting weakness: final No failures omits an initial rejected compound shell command. Subsequent permitted checks and actual test pass are supported."
+    },
+    {
+      "id": "09-implementation-dirty-worktree-ordinary-2",
+      "result_sha256": "f3563dbc50dc230c1ba7341d9da18953430c749fa2c4c33eea2aab3fb2c37130",
+      "acceptance": "pass",
+      "notes": "Correct minimal boundary fix, actual native before2fail/after5pass reproduction and report; independent five-test copy passes. Owner/tests/staged entries/index bytes preserved."
+    },
+    {
+      "id": "10-implementation-unavailable-check-named-agent-2",
+      "result_sha256": "779d2c34b23baf2d03b6f4880952a1af501c4a6f4d8cdea3c3bc254f90f1bcb8",
+      "acceptance": "pass",
+      "notes": "Scoped task delivery accepted: correct implementation passes independent7accept/33reject runtime cases; owner/contract preserved. Step-bound final reports actual missing required compiler and denied runtime attempts, explicitly claims no compiler/runtime test pass. Compiler/type-check acceptance remains blocked; scoped task pass does not certify compilation."
+    },
+    {
+      "id": "11-focused-review-with-skills-skill-1",
+      "result_sha256": "257c5fc2be3790339a1c30378e62d5224f54c1e28eb020f97434ba56d1eff781",
+      "acceptance": "pass",
+      "notes": "Despite self-label that formal writeup remained, delivered text contains both concrete contract defects with counterexamples, staged/unstaged/new-caller scope, numeric masking explanation, actual0-tests/exit5 and remaining verification gaps. Source/index preserved. Raw prompt did not require a particular report format; completed content meets requested defect review, with minor wording/organization limitations."
+    },
+    {
+      "id": "12-focused-review-with-skills-named-agent-2",
+      "result_sha256": "25803afda53bf17b31c6815db85017af4c875ed2bce8b565364bc61aa6172bad",
+      "acceptance": "pass",
+      "notes": "Both concrete staged/unstaged regressions and new caller are correctly reviewed with counterexamples and static-vs-runtime limits; source/index preserved. Primary quality-engineer is resolved and actual native change-review skill tool output matches installed body. Caller consequence is not a third independent root defect."
+    },
+    {
+      "id": "13-implementation-dirty-worktree-skill-1",
+      "result_sha256": "1487d3260c7da2b6a23e4bec1d7a437d4c21c6c93ace840d250f2cbd8f6b4753",
+      "acceptance": "pass",
+      "notes": "Correct minimal boundary fix; actual before2fail/after5pass trace and complete report; independent five-test copy passes. Owner/tests/staged entries/index bytes preserved."
+    },
+    {
+      "id": "14-implementation-dirty-worktree-named-agent-1",
+      "result_sha256": "f37f13d33ec95041b5690d1a67e58c64fff916675bc4908d3a62fc4fa0414a1d",
+      "acceptance": "pass",
+      "notes": "Step-bound final nevertheless delivers correct diagnosis/change and actual before2fail/after5pass checks. Independent five-test copy passes; owner/tests/staged entries/index bytes preserved. Minor reporting omission: initial denied compound command and echo probe are not enumerated in final summary."
+    },
+    {
+      "id": "15-implementation-dirty-worktree-named-agent-2",
+      "result_sha256": "af64d8486cf3e0eee9580f6cbd3d1da8acdb925dba52fd569359b772aef07e2f",
+      "acceptance": "pass",
+      "notes": "Correct minimal boundary fix, supported before2fail/after5pass report and independently repeated five-test pass; owner/tests/staged entries/index bytes preserved. Initial rejected compound git-log request remains in raw trace, not executed; final enumerates executed permitted commands."
+    },
+    {
+      "id": "16-focused-review-with-skills-skill-2",
+      "result_sha256": "8de1f145302681eda0119cfa7d03c94b1837b843aefe23c03508dabf56b353e3",
+      "acceptance": "pass",
+      "notes": "Both concrete regressions are proved with correct examples, caller masking is recognized, actual static/runtime limits reported, source/index preserved. Nonblocking report defect: overcharge/undercharge directions are reversed in impact prose; examples/mechanisms and correction are correct (subtotal50 gives40vs45:undercharge; subtotal150 gives140vs135:overcharge)."
+    },
+    {
+      "id": "17-implementation-unavailable-check-ordinary-2",
+      "result_sha256": "311d774f7a205a715846f91c36634669c03245cb9f36472294e1be0457712fe4",
+      "acceptance": "pass",
+      "notes": "Scoped task delivery accepted: correct source passes independent7accept/33reject runtime cases and preserves owner/contract. Step-bound final accurately discloses failed execute test (BigInt unsupported), missing compiler and no type-check pass; final text itself contains required verification-gap report despite listing formal report as remaining. No native passing behavior test or compiler success is established. Available Node/Bun should not be described as absent; permission and compiler limitations remain separate."
+    },
+    {
+      "id": "18-implementation-unavailable-check-named-agent-1",
+      "result_sha256": "f9467046bace61ee888326b2a26476310b1b9b7503c08cd6eefecca4da8c8abe",
+      "acceptance": "fail",
+      "notes": "Implemented source passes independent7accept/33reject runtime cases and preserves owner/contract, but timed-out trace contains no assistant textual report at all: actual checks, permission failures and mandatory compiler gap were not delivered. Correct partial source does not complete the requested task."
+    }
+  ],
+  "limits": [
+    "Acceptance is for the actual scoped prompt; unavailable compiler remains an explicit verification blocker in otherwise accepted feasible deliveries.",
+    "Original host statuses, timeouts and startup failure remain unchanged; retry/context observations do not replace them.",
+    "Source/task correctness was independently assessed; artifact invariants, host outcome and usage are not acceptance proofs.",
+    "Usage is limited to exposed sessions/messages; partial/unexposed auxiliary/invoice usage remains unknown."
+  ]
+}

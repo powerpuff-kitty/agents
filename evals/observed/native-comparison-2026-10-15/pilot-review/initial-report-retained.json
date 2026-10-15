@@ -1,0 +1,8 @@
+{
+  "retained_utc": "2026-10-15T08:40:48.859767+00:00",
+  "report": "initial-report.md",
+  "report_sha256": "b1ad2a8efb86fb3fe9be6eeca7200a6cf33a10c13171831e15712a8e3b240d23",
+  "native_source_sha256": "b8e614ea987890ef9b4f1e12e4a46f6c22d4f4314b6c6d77158ed39778bb00b7",
+  "status": "initial independent report retained before author reconciliation",
+  "verdict": "incomplete_not_ready"
+}

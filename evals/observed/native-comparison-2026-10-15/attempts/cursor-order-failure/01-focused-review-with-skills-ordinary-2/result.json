@@ -1,0 +1,34 @@
+{
+  "entry": {
+    "id": "01-focused-review-with-skills-ordinary-2",
+    "case": "focused-review-with-skills",
+    "mode": "ordinary",
+    "repeat": 2,
+    "agent": null,
+    "skill": null,
+    "prompt_sha256": "f974e114e6ce0e8cbc3eedb3788e4f15ec5911ba7e45aae65be3ee0af2105210",
+    "fixture_sha256": "2e54d284bbc8b52c425d3f2f8ec45e6edf3a772dacf58a25f9e4084caf05208c"
+  },
+  "model_requested": {
+    "providerID": "deepseek",
+    "id": "deepseek-v4-pro"
+  },
+  "timeout_seconds": 180.0,
+  "max_reported_cost": 0.15,
+  "task_acceptance": "needs_independent_review",
+  "status": "collection_failed",
+  "runner_sha256": "c59d7ceb17dcae5efa34fccc1f54e8eda9acd74e07d163adf4a4212d9989e773",
+  "usage_limits": "Host session totals, including discovered descendants. Hidden auxiliary calls/billing remain unknown; reported-cost interrupt can overshoot.",
+  "host_version": "opencode v2.0.27",
+  "error": {
+    "type": "ValueError",
+    "message": "Native API /api/session/ses_ec1574c13ffeTyQi0uVMzu9kfc/message HTTP 400: {\"_tag\":\"InvalidCursorError\",\"message\":\"Cursor cannot be combined with order\"}"
+  },
+  "final_capture_error": "ValueError",
+  "seconds": 1.26,
+  "usage": null,
+  "invariants": {
+    "source_scope_preserved": true,
+    "staging_entries_preserved": true
+  }
+}

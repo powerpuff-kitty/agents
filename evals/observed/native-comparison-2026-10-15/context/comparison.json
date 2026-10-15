@@ -1,0 +1,82 @@
+{
+  "baseline_run_ids": [
+    "06-implementation-dirty-worktree-skill-2",
+    "13-implementation-dirty-worktree-skill-1"
+  ],
+  "candidate_run_ids": [
+    "context-candidate-1",
+    "context-candidate-2"
+  ],
+  "source_entrypoint_utf8_bytes": {
+    "before": 3137,
+    "after": 2668,
+    "removed": 469
+  },
+  "measurements": {
+    "input": {
+      "before": [
+        10166,
+        11285
+      ],
+      "after": [
+        10073,
+        11230
+      ],
+      "before_mean": 10725.5,
+      "after_mean": 10651.5
+    },
+    "output": {
+      "before": [
+        1589,
+        2207
+      ],
+      "after": [
+        1588,
+        1962
+      ],
+      "before_mean": 1898,
+      "after_mean": 1775
+    },
+    "cache_read": {
+      "before": [
+        107520,
+        140416
+      ],
+      "after": [
+        139136,
+        133632
+      ],
+      "before_mean": 123968,
+      "after_mean": 136384
+    },
+    "cache_write": {
+      "before": [
+        0,
+        0
+      ],
+      "after": [
+        0,
+        0
+      ],
+      "before_mean": 0,
+      "after_mean": 0
+    },
+    "reported_cost": {
+      "before": [
+        0.01482492,
+        0.022894432
+      ],
+      "after": [
+        0.014938351999999998,
+        0.019447824
+      ],
+      "before_mean": 0.018859676,
+      "after_mean": 0.017193088
+    }
+  },
+  "limits": [
+    "2 trials per source variant on 1 small fixture; different paths, cache state and overlapping execution.",
+    "Host-reported observed totals do not establish complete billing or causal savings.",
+    "Quality claims apply only to reviewed fixture tasks and preserved instruction scope."
+  ]
+}

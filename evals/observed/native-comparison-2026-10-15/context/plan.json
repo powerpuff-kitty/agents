@@ -1,0 +1,33 @@
+{
+  "format_version": 1,
+  "seed": 17,
+  "repetitions": 2,
+  "agents_revision": "cbf7c53fe3f83b438a7d47945760fa38d6f3499c",
+  "skills_revision": "aed7e19f426c315b142111ef846f84d7680f3df3",
+  "runner_sha256": "ae7467ff9c476ea556d402e250f6a1843f65c38dbed5727bb34ca3ce21b4ed83",
+  "model": "deepseek/deepseek-v4-pro",
+  "runs": [
+    {
+      "id": "context-candidate-1",
+      "case": "implementation-dirty-worktree",
+      "mode": "skill",
+      "repeat": 1,
+      "agent": null,
+      "skill": "systematic-debugging",
+      "prompt_sha256": "ca36cee3c44ac480205b09156f762369fbf5cfc252fe798547949c5900c60980",
+      "fixture_sha256": "aad34264241ce47dbcc1f9fe49fdc2105c3039de65f3d2b412c080bdc594f2e0"
+    },
+    {
+      "id": "context-candidate-2",
+      "case": "implementation-dirty-worktree",
+      "mode": "skill",
+      "repeat": 2,
+      "agent": null,
+      "skill": "systematic-debugging",
+      "prompt_sha256": "ca36cee3c44ac480205b09156f762369fbf5cfc252fe798547949c5900c60980",
+      "fixture_sha256": "aad34264241ce47dbcc1f9fe49fdc2105c3039de65f3d2b412c080bdc594f2e0"
+    }
+  ],
+  "context_treatment": "Only systematic-debugging/SKILL.md body shortened; same description, resources, task and permissions. Fresh project paths differ.",
+  "baseline_plan_sha256": "921353cf7ef97738eb231fcc328b9a10c44a2101ac59b1f4f32359f9ba9aa002"
+}

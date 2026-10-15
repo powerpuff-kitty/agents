@@ -1,0 +1,20 @@
+{
+  "format_version": 1,
+  "review_state": "final",
+  "trial_root": "/private/tmp/native-startup-retry-20261015",
+  "plan_sha256": "4d59ba39392908611823a42fcf389cfdc95b58bd4b93a54971b447103f91780e",
+  "original_run_retained": "07-focused-review-with-skills-named-agent-1",
+  "runs": [
+    {
+      "id": "retry07-focused-review-with-skills-named-agent-1",
+      "result_sha256": "98aaabc0acbf6212cec7f8bf6954dd1470e682db9e63aab2121f3a5a1a77d423",
+      "acceptance": "unverified",
+      "notes": "Correct review findings, caller masking, static checks and0-tests/exit5 report are established; resolved quality-engineer and actual change-review skill output verified. Overall read-only acceptance remains unverified because prompt explicitly says do not edit files or index and index-byte hash changed. Parser comparison against retained original07 index (matching retry before hash) shows only ctime/inode stat-cache fields and checksum changed: source, object IDs/modes/flags and staged selection preserved, but strict index immutability is not established. No deliberate staging edit is alleged. Retry is separate; blocked original07 remains retained."
+    }
+  ],
+  "limits": [
+    "Additional bounded retry only; original07 remains startup-blocked.",
+    "Semantic source/staged entries preserved; index bytes are not identical.",
+    "Exposed usage is not invoice-complete accounting."
+  ]
+}

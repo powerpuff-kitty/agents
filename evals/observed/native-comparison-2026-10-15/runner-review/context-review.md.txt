@@ -1,0 +1,71 @@
+# Independent context-candidate review
+
+2026-10-15. Reviewed two completed additional trials in `/private/tmp/native-context-20261015`, candidate `/private/tmp/systematic-debugging-candidate-20261015.md`, original skill folder from baseline run 06, and completed baseline pagination explicit-skill runs 06 and 13. Original results/failures were not replaced or edited. This report and `context-decisions.json` are separate from the primary-batch interim decisions. No provider/native-host invocation, network operation, credentials/private configuration inspection, or original modification was performed.
+
+Context plan SHA-256 `6c87d14ebc116c262787553937674a7d7de55dc037767e60155893594e617a24` matches its `plan.sha256`; it retains the baseline plan identity `921353cf...`. Candidate SHA-256 `de1be21daed80af51ea99f1523bef2653f6388aa3bc8ec41b7bf39d0f8019202`; original skill SHA-256 `e01c99c7b7a65c3eb249c0abbd3196132a51a3d3cba44b5809d6b19e0e8d6957`. Copied raw evidence, source comparison and disposable test outputs are under `context-evidence/`.
+
+**Assessment:** the candidate is a substantively faithful shorter entrypoint. Both additional pagination task outcomes pass independent review; the two baseline comparison outcomes also pass. This supports a precise prose-byte reduction and two successful candidate task observations. It does not establish reliable or causal provider-token/cost savings, general skill quality equivalence, or replacement of any failed original trial.
+
+## Content preservation
+
+The trigger/name/description frontmatter is byte-identical, so the declared use and non-use cases are unchanged. The candidate merges the objective, context, seven procedure steps, output and completion sections into fewer sections/steps. It retains the accepted constraints:
+
+| Requirement | Retained candidate behavior |
+| --- | --- |
+| Trigger/scope | Same specific-defect/root-cause/regression description and exclusions; investigation alone does not authorize edits. |
+| Evidence and reproducibility | Observed versus intended contract, smallest local reproduction, original failure, baseline/regression distinction, truthful unavailable reproduction, relevant revision/runtime/local edits. |
+| Diagnosis | Trace the owning boundary, competing explanations and discriminating checks, one relevant variable, working/prior comparison where useful, separate triggers/causes/environment and revise contradicted hypotheses. |
+| Authorization/privacy | No destructive production reproduction or credential reads merely to investigate; protect diagnostics; repeated failed fixes do not widen access. |
+| Correction | Authorized smallest demonstrated cause, preserve unrelated edits and accepted behavior, meaningful regression check where warranted, no symptom patching/failure swallowing/test weakening. |
+| Verification/completion | Repeat original and relevant neighboring/project-required checks; actual inputs/commands/results; distinguish missing executable, denied operation, failed and unrun checks; unresolved contract/evidence escalation; explicit uncertainty/blocker and proposed/executed distinction. |
+| Local resources | Same `references/investigation.md` link; guide, `tests/cases.json` and LICENSE all match original bytes. No new framework/provider/sibling dependency. |
+
+The original explicitly said changed environments/skipped checks limit comparison, and warned against labeling a plausible story as root cause. Those exact sentences are compressed away; the candidate still requires relevant runtime/context, discriminating evidence, a supported demonstrated cause, actual check-gap distinctions and remaining uncertainty. I did not identify a material authorization or verification relaxation for the accepted goal, but the small pagination exercise does not validate those safeguards across complex investigations.
+
+## Source bytes and actual instruction exposure
+
+| Measure | Original | Candidate | Difference |
+| --- | ---: | ---: | ---: |
+| Full SKILL.md UTF-8 bytes | 3,137 | 2,668 | 469 fewer (14.95%) |
+| Trimmed body after frontmatter | 2,779 | 2,310 | 469 fewer (16.88%) |
+| Observed attached skill text | 3,664 in each baseline | 3,091 in each candidate | 573 fewer; includes wrapper/path differences |
+
+Only the skill entrypoint differs between baseline 06 and either candidate **initial workspace file manifest**. Raw prompts and observed session permission rules are equal across all four trials. The candidate file equals the candidate staged SKILL.md; its body hash matches preflight inventory and its body occurs in the actual user skill attachment. Thus this is an observed explicit-skill text treatment with a controlled `build` primary and the same requested/resolved DeepSeek model/variant. Registration of other profiles/skills is not a claim that all were loaded.
+
+The attachment reduction exceeds the source-body reduction by 104 bytes because attachment wrappers contain differing fresh-project paths. Treat neither number as a provider tokenizer measurement. Candidate 1 and baseline 06 did not read additional skill resources; candidate 2 and baseline 13 read the investigation guide and cases fixture. Those extra reads remain part of actual context exposure and activity. There are no exposed child sessions/subagent calls; each trial exposes one root `build` session. The known built-in registry fingerprint still has the prior complete-provider-prompt limitation.
+
+The collector version also differs: baseline 06 uses runner `da6479b...`; baseline 13 and both candidates use `ae7467ff9c476ea556d402e250f6a1843f65c38dbed5727bb34ca3ce21b4ed83`. Inspection of the retained frozen runner diff shows an HTTP-error subtype plus retry of readiness HTTP503; no other runner change in that diff. The file treatment is narrow, but claiming the whole four-run experiment changed literally one variable would overstate control.
+
+## Independent task outcomes
+
+| Trial | Independent task acceptance | Evidence |
+| --- | --- | --- |
+| context-candidate-1 | pass | Correctly reproduces the two exact-boundary failures, removes only the offending break, repeats five original tests successfully, preserves label/test bytes and staged entries, and reports its denied compound shell command and permitted recovery. |
+| context-candidate-2 | pass, minor reporting weakness | Same correct minimal fix and before/after test evidence; owner/test/staged entries preserved. Its final limits omit the initial rejected compound command containing `git log`, although no forbidden command executed. The raw trace retains the denial. |
+| baseline 06 skill repeat 2 | pass | Same correct change and complete reproduction/fix/report; original tests and owner edit preserved. Previously accepted in the independent interim review and independently verified again for this comparison. |
+| baseline 13 skill repeat 1 | pass | Same correct change, two baseline failures then five passes, complete report including initial denied compound command, preserved owner/tests/staged entries/index bytes. This is a comparison decision here, not an overwrite of the primary interim roster. |
+
+All four final `pagination.py` implementations are the same correct two-line-guard removal. Every final task-source file matches its retained after hash. Only pagination.py changes relative to each before manifest. The unchanged original five tests pass with `python3 -B -m unittest -v` in **four separate disposable copies**. This verifies the local stated boundary defect and neighboring empty/partial/invalid-size cases, not arbitrary pagination APIs or general debugging reliability.
+
+Both candidate Git index-byte hashes differ from their before hashes, while staged-entry hashes are unchanged. Raw index-byte identity must therefore not be claimed. The pagination task asks to preserve the pending owner edit and does not contain the review task's prohibition on editing the index. Ordinary Git status can refresh metadata; the evidence establishes preserved staged entries and owner contents without proving the exact cause of the index-byte change. This is not sufficient grounds to fail the authorized pagination task.
+
+## Provider-exposed measurements and claims
+
+| Trial | Input | Output | Cache read | Cache write | Host-reported cost | Seconds |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Baseline 06 | 10,166 | 1,589 | 107,520 | 0 | 0.014824920 | 48.928 |
+| Baseline 13 | 11,285 | 2,207 | 140,416 | 0 | 0.022894432 | 96.535 |
+| Candidate 1 | 10,073 | 1,588 | 139,136 | 0 | 0.014938352 | 47.668 |
+| Candidate 2 | 11,230 | 1,962 | 133,632 | 0 | 0.019447824 | 73.069 |
+
+All four numeric session totals reconcile with sums of exposed assistant-message usage/cost; no assistant rows lack usage. With one exposed session each, descendant aggregation currently equals the primary session totals. Auxiliary/unexposed calls and invoice completeness remain unknown; host-reported cost is not a billing proof.
+
+Descriptively, candidate means are 10,651.5 input, 1,775 output, 136,384 cache-read, cost 0.017193088 and 60.3685 seconds. Baseline means are 10,725.5 input, 1,898 output, 123,968 cache-read, cost 0.018859676 and 72.7315 seconds. Observed mean changes are input -0.69%, output -6.48%, cache-read +10.02%, host-reported cost -8.84%, and elapsed time -17.00%. These percentages describe these four records only. Candidate 1's cost is slightly higher than baseline 06 despite fewer input tokens, illustrating that source bytes and cost do not map directly.
+
+There are only two observations per text on one very small task; runs were not randomized paired replays under fixed caches. Candidate sessions began 20 milliseconds apart and overlap; baseline 13 started before candidate 2 finished. Paths/wrappers, execution paths/resource reads, provider caches/traffic and a collector revision differ. The evidence therefore supports **469 fewer source-body bytes with the reviewed safeguards retained, and two successful candidate pagination observations**. It does not support a causal 8.84% savings claim, a reliable token/latency improvement, statistical noninferiority, or broad quality equivalence. Cache-read tokens must not be silently counted as the same thing as uncached input or byte context.
+
+## Retained records and commands
+
+`context-decisions.json` binds each candidate verdict to its exact `result.json` SHA-256 and separately lists baseline comparison verdicts with exact hashes. `context-evidence/summary.json` records source/attachment bytes, actual body/resource identities, initial-manifest differences, preservation checks, tool/resource events, session/message reconciliation and disposable test exits. `mean-metrics.json` retains arithmetic. Copied raw plans, results, preflight/session/message/prompt and state manifests remain per trial; baseline skill resources and candidate text remain separate. Original failures and prior audit/interim reports are unchanged.
+
+Commands consisted of read-only JSON/hash/text inspections, the frozen runner source diff, disposable copies of known task sources, and `python3 -B -m unittest -v` in each copied workspace (exit 0, five tests OK, ten-second subprocess limit). No model/provider inference, external network, private configuration or credential access was performed. Final result hashes were rechecked against originals before writing decisions.

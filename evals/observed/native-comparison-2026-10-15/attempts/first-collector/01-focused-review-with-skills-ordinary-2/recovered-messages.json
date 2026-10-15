@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "id": "msg_13ea62d71001dmGq5dMDCeP7f9",
+      "time": {
+        "created": 1792052440449
+      },
+      "text": "Review all pending staged, unstaged and relevant new code for concrete defects. Do not edit files or the index. Work only within this project. Do not install tools, commit, publish or use web/network tools. Report actual checks, failures and limits. Existing executable availability and permission to use it are separate questions.",
+      "type": "user"
+    },
+    {
+      "id": "msg_13ea62da5001VICjuWwpYRoW3e",
+      "time": {
+        "created": 1792052440485
+      },
+      "type": "idle",
+      "outcome": "interrupted"
+    }
+  ],
+  "cursor": {
+    "previous": "eyJpZCI6Im1zZ18xM2VhNjJkNzEwMDFkbUdxNWRNRENlUDdmOSIsIm9yZGVyIjoiYXNjIiwiZGlyZWN0aW9uIjoicHJldmlvdXMifQ",
+    "next": "eyJpZCI6Im1zZ18xM2VhNjJkYTUwMDFWSUNqdVd3cFlSb1czZSIsIm9yZGVyIjoiYXNjIiwiZGlyZWN0aW9uIjoibmV4dCJ9"
+  }
+}

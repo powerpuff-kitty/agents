@@ -1,0 +1,85 @@
+{
+  "time_utc": "2026-10-15T08:39:02.596882+00:00",
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/validate.py"
+      ],
+      "cwd": "/private/tmp/native-project-pilot-independent-20261015/completed-source",
+      "exit": 0,
+      "log": "completed-check-01.log"
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/check_docs.py"
+      ],
+      "cwd": "/private/tmp/native-project-pilot-independent-20261015/completed-source",
+      "exit": 0,
+      "log": "completed-check-02.log"
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/build.py",
+        "--adapter",
+        "portable"
+      ],
+      "cwd": "/private/tmp/native-project-pilot-independent-20261015/completed-source",
+      "exit": 0,
+      "log": "completed-check-03.log"
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/build.py",
+        "--adapter",
+        "opencode"
+      ],
+      "cwd": "/private/tmp/native-project-pilot-independent-20261015/completed-source",
+      "exit": 0,
+      "log": "completed-check-04.log"
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/build.py",
+        "--adapter",
+        "portable",
+        "--check"
+      ],
+      "cwd": "/private/tmp/native-project-pilot-independent-20261015/completed-source",
+      "exit": 0,
+      "log": "completed-check-05.log"
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/build.py",
+        "--adapter",
+        "opencode",
+        "--check"
+      ],
+      "cwd": "/private/tmp/native-project-pilot-independent-20261015/completed-source",
+      "exit": 0,
+      "log": "completed-check-06.log"
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "/private/tmp/native-project-pilot-independent-20261015/completed-source",
+      "exit": 0,
+      "log": "completed-check-07.log"
+    }
+  ],
+  "scope": "Independent offline disposable source copy. These are reviewer checks, not checks run by native task."
+}

@@ -1,0 +1,64 @@
+# Independent interim native trial review
+
+2026-10-15. Trial root: `/private/tmp/native-matched-2026-10-15-v3`. This is an interim assessment of the first seven completed `result.json` records selected at review start. The remaining eleven roster slots were not inspected, including any that completed during this review. Their acceptance remains unverified until a requested followup. No inference/provider calls, network actions, credential inspection, host configuration inspection, or original trial/source modifications were performed. Prior runner audit reports remain preserved.
+
+Frozen roster: 18 runs, two repetitions of three cases across ordinary/skill/named-agent arms. `plan.json` SHA-256 `921353cf7ef97738eb231fcc328b9a10c44a2101ac59b1f4f32359f9ba9aa002` matches `plan.sha256`. Reviewed result records report runner `da6479b12156a29328dea1b671bffb1fb0100fc8ea542404d00b837a0795bcf1` and OpenCode v2.0.27. For all seven, prompt hashes and before-manifest fixture hashes match the frozen roster. Result hashes were rechecked against the originals after review.
+
+Decisions are retained in `independent-decisions.json`, with all 18 roster slots and exact result hashes for seven reviewed results. Interim totals: **2 pass, 4 fail, 1 blocked, 11 unverified**. These are task-delivery decisions, not labels copied from collector status. `independent-decisions-reviewed-only.json` provides the same seven decisions in the form accepted by the current report helper, which rejects null-hash decisions for absent results. The helper still leaves other roster slots unverified. All evidence copies and runtime results are under `trials-interim/`.
+
+## Trial decisions
+
+| Run | Collector | Independent acceptance | Evidence and limits |
+| --- | --- | --- | --- |
+| 01 focused review, ordinary, repeat 2 | collected | pass | Finds the staged discount arithmetic and unstaged dollar scaling regressions, with concrete counterexamples. Reviews new checkout caller, correctly explains why its $100 subtotal masks the percentage defect, and calculates `$0.90` versus `$90.00`. Reports static analysis, relevant denied commands, and no application test suite. No source/index changes. |
+| 02 focused review, ordinary, repeat 1 | timed_out | fail | Correctly identifies both core defects and preserves source/index. The retained final text ends mid-new-caller section at `` `quote `` (`msg_13eae53ef0016ZegvJdR0n63AI`), without completing its promised actual-checks/limits report. It is an incomplete delivery; correct substantive findings are retained and are not erased by the timeout label. |
+| 03 unavailable compiler, skill, repeat 2 | timed_out; scope invariant false | fail | Implemented source passes independent runtime probes. Added `port.check.ts` is relevant authorized verification, not an unauthorized scope expansion. Native node/bun test commands were permission-rejected and there is no final limitations/report deliverable before abortion. Independent execution of the added test crashes while serializing BigInt in its label formatter. Owner note/contract preserved. Compiler success unverified. |
+| 04 unavailable compiler, ordinary, repeat 1 | timed_out | fail | Implemented source passes independent runtime probes and preserves owner note/contract. Required compiler command exits 127. Its execute-tool test fails before its test loop because that host execution environment does not allow callable `Symbol`; there is no final report of the actual failures and remaining gaps before interruption. Neither compiler success nor a passing native runtime check is established. |
+| 05 unavailable compiler, skill, repeat 1 | timed_out | fail | Source remains `return Number(value)`, so required rejection behavior is absent. Independent probes confirm forbidden values are accepted. Skill attachment and support-file reads occurred, but no implementation or report was delivered. Owner note/contract preserved. |
+| 06 pagination, skill, repeat 2 | collected | pass | Minimal removal of the exact-division break is correct for the stated boundary defect. Actual trace reproduces two failures, then shows all five original tests passing. Independent execution of the unchanged test file also passes all five. Owner label edit, original tests, staged entries and index bytes are preserved. Actual correction/checks are described. |
+| 07 focused review, named quality-engineer, repeat 1 | setup_failed | blocked | `/openapi.json` returned HTTP503 `service_starting` before preflight/session/prompt evidence. No model execution or usage is established; fixture and index are preserved. This is a host/collector setup block, not evidence that the quality-engineer profile failed the task. |
+
+Run 03 is a concrete distinction between task authorization and the collector's assumptions. Its prompt asks to implement validation and run feasible checks; its contract preserves only the owner note and does not prohibit adding a relevant test. The collector's hardcoded allowed set `{port.ts}` incorrectly treats that test addition as a scope failure. I did not base the acceptance failure on that boolean. The added test's own crash and the absent final actual-checks/limitations report are separate defects.
+
+Run 04 also distinguishes a tool invocation finishing from its check succeeding. `msg_13eb10481001W4XbLOTlGdtO1T` has a shell state `completed`, but `standalone-pilot-tsc port.ts` exits 127. `msg_13eb121e6001u2NnLhYWwO1Wfi` has execute state `completed` while `metadata.error` is true and the returned content says `TypeError: Symbol is not callable; only Symbol.asyncIterator and Symbol.iterator are available.` Its manually restated JavaScript test did not yield passing assertions. A report that counts workflow `completed` as a successful check would be wrong; the current report helper's tool-status counts should be interpreted as invocation lifecycle counts only.
+
+## Source, owner and staging preservation
+
+Independent comparison of `before.json` and `after.json` shows no changes for 01, 02, 05 or 07; only `port.ts` and added `port.check.ts` for 03; only `port.ts` for 04; only `pagination.py` for 06. Copied top-level task sources and owner files match the after hashes. Owner note, contract, labels and original tests match their before hashes wherever present. All seven `git-before.json` and `git-after.json` objects are equal, including index-byte hashes where Git exists; unavailable-compiler fixtures have null Git state. This corroborates the captured state, not an authenticated history of every possible transient side effect. No original Git commands or test runs were used for verification.
+
+## Actually observed instructions and primary role
+
+For 01–06, preflight records resolve the expected workspace and `deepseek/deepseek-v4-pro`, and record primary `build`. Submitted text matches each raw prompt after its intentional whitespace trim. Thus these are **controlled build-primary** ordinary/skill arms, not ambient automatic primary-agent selection. Run 07 has no preflight or session evidence and cannot establish loaded named-role behavior.
+
+Each successful preflight reports 62 registered skills and 35 registered custom profiles; all retained body hashes match the corresponding staged instruction files on independent reread. Registration does not mean all these bodies entered the model prompt. Ordinary runs 01, 02 and 04 have no skill attachments/events or custom-primary selection in the retained activity. Skill runs 03, 05 and 06 carry a `systematic-debugging` user attachment whose text contains the matching staged skill body; attachment sizes are 3,676, 3,676 and 3,664 UTF-8 bytes respectively, including host wrapper/path context. These bytes are neither provider token counts nor distinct repeated loads. Runs 03/05 additionally read the skill's investigation reference and fixture case file; run 06 uses the attached instructions without additional skill-file reads. No captured run among 01–06 invokes a `skill` or `subagent` tool, and each exposes one primary session only.
+
+Preflight's built-in registered-system hash is the empty-string digest with 12 registered steps and an explicit complete-provider-prompt limitation. It records the known primary ID and exposed registry fingerprint; it does not authenticate all active host/provider/global/project instructions. No ambient configuration was inspected to infer their absence. Actual attachments and profile registration do not prove instruction adherence.
+
+## Usage reconciliation
+
+For each exposed session below, the session's input/output/cache-read/cache-write/cost values equal the sum of assistant messages that actually contain numeric usage fields (cost compared with floating-point tolerance). Each reviewed inference has one exposed root session and **no discovered descendants**, so adding exposed descendants currently changes nothing. This does not establish absence of hidden auxiliary requests, retries, partial-generation usage, or billed amounts.
+
+| Run | Input | Output | Cache read | Cache write | Host-reported cost | Assistant rows without usage |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+| 01 | 10,361 | 2,312 | 174,464 | 0 | 0.026338268 | none |
+| 02 | 9,872 | 1,217 | 139,520 | 0 | 0.02730794 | partial final row |
+| 03 | 11,208 | 2,127 | 163,328 | 0 | 0.026586956 | aborted row |
+| 04 | 14,288 | 2,331 | 213,376 | 0 | 0.034783672 | aborted row |
+| 05 | 8,823 | 563 | 33,152 | 0 | 0.008312744 | aborted row |
+| 06 | 10,166 | 1,589 | 107,520 | 0 | 0.014824920 | none |
+| 07 | unknown | unknown | unknown | unknown | unknown | no sessions/messages |
+
+The collector's `complete_session_fields: true` only means its captured session objects have numeric fields. In 02–05 it does not mean every final/aborted assistant row has usage or that the invoice is complete. Run 02's final session has no terminal outcome field in the retained capture. Missing setup usage in 07 is unknown, not zero. No savings claim or mode-quality rate is supported by this small incomplete snapshot, differing task outcomes, and unexposed accounting.
+
+## Disposable verification and retained evidence
+
+Only reviewed task sources were copied for execution, without host configuration or credentials. Runtime artifacts are in `trials-interim/runtime-probes/<run>/verification.json`.
+
+- Runs 03/04: copied unchanged `port.ts` was imported by an independent `probe.mjs` using reviewer Node v24.21.0; seven accepted cases and 33 rejected cases all behave as required. Inputs include boundary numbers/digit strings, leading zeros, booleans, null/undefined, fractional/signed/exponent strings, non-ASCII digits, trailing/leading whitespace and line separators, NaN/infinities, objects/arrays/Symbol/BigInt. Static inspection also supports the implemented contract. This runtime check does not compile with unavailable `standalone-pilot-tsc` and does not establish full TypeScript type-checking. Native trial version discovery recorded Node v25.5.0; the review runtime differs.
+- Run 03 added test: `node port.check.ts` in the disposable copy exits 1 at line 22 `JSON.stringify(value)` for the final `rejects(1n)` case (call at line 99). Earlier test cases print OK, but the suite never prints its intended all-pass summary. This is a test harness defect, independent of the source's validation logic.
+- Run 05: the same independent matrix shows 32 of 33 rejection cases return a value instead of throwing TypeError, confirming the unchanged source is incorrect.
+- Run 06: `python3 -B -m unittest -v` in a disposable copy exits 0 with five tests OK; test bytes match the original fixture before hash.
+
+Relevant raw message IDs are identified above; complete copied JSON evidence and readable transcripts are retained per trial under `trials-interim/<id>/`. `evidence-summary.json` records exact result hashes, changed-file hashes, Git-state equality, numeric session/message reconciliation and instruction events; `identity-checks.json` records prompt/fixture/project/model/primary/attachment checks. `helper-summary.json` was produced by read-only invocation of `native_eval_report.summarize` against the frozen evidence copy and seven exact-hash decisions. The helper CLI was not run against the original directory.
+
+Actual commands used Python standard-library JSON/hash/file inspection and subprocess runtime calls only. Runtime calls were `node probe.mjs`, run 03's `node port.check.ts`, and `python3 -B -m unittest -v`, each in a fresh evidence copy with a ten-second subprocess timeout. Evidence copying excluded `opencode.json` and host settings; raw captured session permissions were treated as observations. All 18 roster slots remain present, and newly completed trials await final followup review.
